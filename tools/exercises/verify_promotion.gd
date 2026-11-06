@@ -43,7 +43,7 @@ func _initialize() -> void:
 	require(not blocked.get("ok", true), "promotion must be refused before the council accepts")
 
 	Store.save_vote(hash, "human_owner", {"decision": "accept", "summary": "verified"})
-	Store.save_vote(hash, "openai_reviewer", {"decision": "accept", "summary": "verified"})
+	Store.save_vote(hash, Store.MODEL_MEMBER, {"decision": "accept", "summary": "verified"})
 	require(Store.load_review(hash).get("status") == "accepted", "two accepts must produce 'accepted'")
 	require(not Store.promote(tampered).get("ok", true), "a tampered revision must not be promotable")
 

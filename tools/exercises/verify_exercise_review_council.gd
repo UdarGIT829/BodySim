@@ -1,7 +1,7 @@
 extends SceneTree
 
 const COUNCIL_SCENE := preload("res://scenes/exercises/exercise_review_council.tscn")
-const PROVIDER_SCENE := preload("res://scenes/exercises/openai_review_provider.tscn")
+const PROVIDER_SCENE := preload("res://scenes/exercises/claude_provider.tscn")
 const ReviewRevisionStoreScript := preload("res://src/exercises/review/review_revision_store.gd")
 var failures: Array[String] = []
 
@@ -11,26 +11,26 @@ func verify() -> void:
 	var council = COUNCIL_SCENE.instantiate()
 	root.add_child(council)
 	await process_frame
-	require(council.openai_api_key is String, "Council root must expose its internal API key")
-	require(council.openai_model is String and not council.openai_model.is_empty(), "Council root must expose the review model")
+	require(council.model_id is String and council.model_id.begins_with("claude-"), "Council must select a Claude review model")
+	require(council.provider is ClaudeProvider, "Council must use the Claude provider")
 	require(council.schema.get("$id") == "bodysim.kinematic_review_response.v1", "Council must load the strict review schema")
-	require(council.model_option.item_count == 5, "Council must offer named model presets plus a custom model")
+	require(council.model_option.item_count == ClaudeSettings.MODEL_PRESETS.size(), "Council must offer the Claude model presets plus a custom model")
 	require(council.get_node_or_null("Margin/Column/Workspace/BrowserPanel") != null, "Review queue must be editor-authored")
 	require(council.get_node_or_null("Margin/Column/Workspace/EvidenceAndCouncil/Evidence/EvidenceTabs/Candidate heatmap/CandidateHeatmap") != null, "Candidate heatmap must be editor-authored")
 	require(council.get_node_or_null("Margin/Column/Workspace/EvidenceAndCouncil/Council") != null, "Council decision panel must be editor-authored")
 	require(council.reject_button is Button, "Council must expose an explicit candidate rejection action")
 	require(ReviewRevisionStoreScript.council_status({}) == "review_pending", "No votes must remain pending")
-	require(ReviewRevisionStoreScript.council_status({"human_owner": {"decision": "accept"}, "openai_reviewer": {"decision": "accept"}}) == "accepted", "Two accepts must satisfy unanimity")
-	require(ReviewRevisionStoreScript.council_status({"human_owner": {"decision": "accept"}, "openai_reviewer": {"decision": "reject"}}) == "changes_requested", "Any rejection must request changes")
+	require(ReviewRevisionStoreScript.council_status({"human_owner": {"decision": "accept"}, "model_reviewer": {"decision": "accept"}}) == "accepted", "Two accepts must satisfy unanimity")
+	require(ReviewRevisionStoreScript.council_status({"human_owner": {"decision": "accept"}, "model_reviewer": {"decision": "reject"}}) == "changes_requested", "Any rejection must request changes")
+	require(ReviewRevisionStoreScript.council_status({"human_owner": {"decision": "accept"}, "openai_reviewer": {"decision": "accept"}}) == "review_pending", "A legacy OpenAI accept must not satisfy the Claude council")
+	require(ReviewRevisionStoreScript.council_status({"human_owner": {"decision": "accept"}, "openai_reviewer": {"decision": "reject"}}) == "changes_requested", "Legacy rejections must still request changes")
+	require(ReviewRevisionStoreScript.model_vote({"openai_reviewer": {"decision": "reject"}}).get("decision") == "reject", "Legacy model votes must still display")
 	var ineligible := {"status": "definition_candidate", "validation_errors": [], "candidate_trace_report": {}}
 	require(not ReviewRevisionStoreScript.validate_eligibility(ineligible).is_empty(), "Draft without saved Phase 2C trace must not freeze")
 	var provider = PROVIDER_SCENE.instantiate(); root.add_child(provider); await process_frame
-	var body: Dictionary = provider.build_request_body("gpt-5.6-terra", "review", "frozen", {"type": "object"}, "data:image/jpeg;base64,AA==")
-	require(body.get("text", {}).get("format", {}).get("strict") == true, "Review request must use strict Structured Outputs")
-	require(body.get("text", {}).get("format", {}).get("name") == "bodysim_kinematic_review_response", "Review request must use its own schema name")
-	require(body.get("input", [])[0].get("content", []).size() == 2, "Review request must send one contact-sheet image")
-	var parsed: Dictionary = provider.extract_structured_output({"status": "completed", "output": [{"content": [{"type": "output_text", "text": "{\"decision\":\"accept\"}"}]}]})
-	require(parsed.get("value", {}).get("decision") == "accept", "Review provider must parse structured output")
+	var request: Dictionary = provider.build_request("review", "claude-sonnet-5-5", {"revision": {"revision_sha256": "abc"}, "review_context": "ctx", "image_data_url": "data:image/jpeg;base64,AA=="})
+	require(request.get("task") == "review" and request.get("model") == "claude-sonnet-5-5", "Review request must name the task and chosen model")
+	require(request.get("revision", {}).get("revision_sha256") == "abc", "Review request must carry the exact frozen revision")
 	council.queue_free(); provider.queue_free()
 	if failures.is_empty():
 		print("Phase 2D council passed: authored scene, frozen-revision policy, strict reviewer, and unanimous votes")

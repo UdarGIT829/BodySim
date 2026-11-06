@@ -4,7 +4,7 @@ canonical exercise catalog.
 Promotion is a deterministic, all-or-nothing transaction:
 
 1. The review record must reference this exact frozen revision hash, and the
-   council (human owner + OpenAI reviewer) must both have voted ``accept``.
+   council (human owner + Claude reviewer) must both have voted ``accept``.
 2. The candidate gate is re-run against today's anatomy and catalog. The
    regenerated 466-muscle profile must be identical to the one the council
    reviewed; otherwise the revision must be re-frozen and re-reviewed.
@@ -35,7 +35,7 @@ from typing import Any, Callable, Dict, List, Optional
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 PROMOTER_VERSION = "promotion_v1"
-REQUIRED_VOTERS = ("human_owner", "openai_reviewer")
+REQUIRED_VOTERS = ("human_owner", "model_reviewer")
 TOTAL_MUSCLES = 466
 
 REL_EXERCISES = "data/exercises/exercises.json"

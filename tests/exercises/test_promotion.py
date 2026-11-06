@@ -58,8 +58,8 @@ def sandbox(tmp_path: Path) -> Path:
         "status": "accepted",
         "votes": {
             "human_owner": {"decision": "accept", "summary": "ok"},
-            "openai_reviewer": {"decision": "accept", "summary": "ok",
-                                "provider_metadata": {"provider": "openai", "model": "test-model"}},
+            "model_reviewer": {"decision": "accept", "summary": "ok",
+                                "provider_metadata": {"provider": "anthropic", "model": "claude-opus-5-5"}},
         },
     })
     return tmp_path
@@ -91,7 +91,7 @@ def test_promotes_accepted_revision(sandbox):
                      if c["catalog_id"] == "catalog.free_exercise_db.Barbell_Curl")
     assert candidate["status"] == "promoted"
     assert candidate["body_sim_exercise_ids"] == [EXERCISE_ID]
-    assert candidate["promotions"][0]["review_models"]["openai_reviewer"] == {"provider": "openai", "model": "test-model"}
+    assert candidate["promotions"][0]["review_models"]["model_reviewer"] == {"provider": "anthropic", "model": "claude-opus-5-5"}
     media = json.loads((sandbox / promotion.REL_MEDIA).read_text())
     assert any(m["exercise_id"] == EXERCISE_ID for m in media)
     assert (sandbox / promotion.REL_PROMOTIONS / f"{HASH}.json").exists()
@@ -119,7 +119,7 @@ def test_promoting_twice_is_idempotent(sandbox):
     assert _snapshot(sandbox) == before
 
 
-@pytest.mark.parametrize("member", ["human_owner", "openai_reviewer"])
+@pytest.mark.parametrize("member", ["human_owner", "model_reviewer"])
 def test_requires_unanimous_accept(sandbox, member):
     _set_vote(sandbox, member, "reject")
     before = _snapshot(sandbox)
@@ -131,7 +131,7 @@ def test_requires_unanimous_accept(sandbox, member):
 def test_missing_vote_blocks_promotion(sandbox):
     path = sandbox / promotion.REL_REVIEWS / f"{HASH}.json"
     review = json.loads(path.read_text())
-    del review["votes"]["openai_reviewer"]
+    del review["votes"]["model_reviewer"]
     path.write_text(json.dumps(review))
     assert not promote_revision(HASH, root=sandbox)["ok"]
 

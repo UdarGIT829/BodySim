@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dkdf5py3mofap"]
 
 [ext_resource type="Script" uid="uid://bwpew5xjdmm1t" path="res://src/exercises/authoring/definition_studio_controller.gd" id="1_studio"]
-[ext_resource type="PackedScene" path="res://scenes/exercises/openai_authoring_provider.tscn" id="2_provider"]
+[ext_resource type="PackedScene" path="res://scenes/exercises/claude_provider.tscn" id="2_provider"]
 [ext_resource type="PackedScene" path="res://scenes/exercises/candidate_trace_gate.tscn" id="3_gate"]
 
 [node name="KinematicDefinitionStudio" type="Control" unique_id=274420018]
@@ -59,7 +59,7 @@ text = "Phase 2B · LLM proposals remain editable drafts until the deterministic
 [node name="KeyNotice" type="Label" parent="Margin/Column/Header" unique_id=485282217]
 modulate = Color(0.9, 0.67, 0.34, 1)
 layout_mode = 2
-text = "OpenAI key: OPENAI_API_KEY or user settings
+text = "Claude key: ANTHROPIC_API_KEY or user settings
 Never stored in the project."
 horizontal_alignment = 2
 
@@ -80,7 +80,7 @@ layout_mode = 2
 unique_name_in_owner = true
 custom_minimum_size = Vector2(230, 0)
 layout_mode = 2
-placeholder_text = "Exact OpenAI model ID"
+placeholder_text = "Exact Claude model ID"
 
 [node name="ActiveModelLabel" type="Label" parent="Margin/Column/ModelRow"]
 unique_name_in_owner = true
@@ -470,6 +470,6 @@ layout_mode = 2
 disabled = true
 text = "Submit definition candidate"
 
-[node name="OpenAIAuthoringProvider" parent="." unique_id=89833761 instance=ExtResource("2_provider")]
+[node name="ClaudeProvider" parent="." unique_id=89833761 instance=ExtResource("2_provider")]
 
 [node name="CandidateTraceGate" parent="." instance=ExtResource("3_gate")]

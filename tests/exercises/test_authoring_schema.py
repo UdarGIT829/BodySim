@@ -27,14 +27,14 @@ def _walk(value):
             yield from _walk(child)
 
 
-def test_api_schema_uses_openai_structured_outputs_subset():
+def test_api_schema_uses_structured_outputs_subset():
     schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
     found = {
         keyword
         for node in _walk(schema)
         for keyword in UNSUPPORTED_STRUCTURED_OUTPUT_KEYWORDS.intersection(node)
     }
-    assert not found, f"Unsupported OpenAI Structured Outputs keywords: {sorted(found)}"
+    assert not found, f"Unsupported structured-output keywords: {sorted(found)}"
 
 
 def test_every_object_is_closed_and_all_properties_are_required():

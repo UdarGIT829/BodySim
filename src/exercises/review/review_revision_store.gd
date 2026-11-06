@@ -4,6 +4,12 @@ extends RefCounted
 const REVISION_DIRECTORY := "res://data/exercises/authoring/revisions"
 const REVIEW_DIRECTORY := "res://data/exercises/authoring/reviews"
 const PROMOTION_DIRECTORY := "res://data/exercises/authoring/promotions"
+## Council members. Votes recorded before the switch to Claude used
+## "openai_reviewer"; they are still read (rejections stay visible) but can
+## no longer satisfy acceptance.
+const HUMAN_MEMBER := "human_owner"
+const MODEL_MEMBER := "model_reviewer"
+const LEGACY_MODEL_MEMBERS := ["openai_reviewer"]
 const PROMOTION_BRIDGE := "res://tools/exercises/run_promotion.py"
 const PAYLOAD_KEYS := ["format_version", "source_id", "catalog_id", "source_snapshot_sha256", "source",
 	"additional_context", "authoring_response", "authoring_provider_metadata", "candidate_trace_report"]
@@ -102,10 +108,20 @@ static func council_status(votes: Dictionary) -> String:
 	for vote in votes.values():
 		if vote is Dictionary and vote.get("decision", "") == "reject":
 			return "changes_requested"
-	if votes.has("human_owner") and votes.has("openai_reviewer"):
-		if votes["human_owner"].get("decision") == "accept" and votes["openai_reviewer"].get("decision") == "accept":
+	if votes.has(HUMAN_MEMBER) and votes.has(MODEL_MEMBER):
+		if votes[HUMAN_MEMBER].get("decision") == "accept" and votes[MODEL_MEMBER].get("decision") == "accept":
 			return "accepted"
 	return "review_pending"
+
+
+## The model member's vote, falling back to a pre-Claude vote for display.
+static func model_vote(votes: Dictionary) -> Dictionary:
+	if votes.get(MODEL_MEMBER) is Dictionary:
+		return votes[MODEL_MEMBER]
+	for legacy in LEGACY_MODEL_MEMBERS:
+		if votes.get(legacy) is Dictionary:
+			return votes[legacy]
+	return {}
 
 
 ## True when a frozen revision still hashes to the value it was stored

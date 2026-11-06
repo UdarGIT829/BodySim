@@ -1,7 +1,7 @@
 extends SceneTree
 
 const STUDIO_SCENE := preload("res://scenes/exercises/kinematic_definition_studio.tscn")
-const PROVIDER_SCENE := preload("res://scenes/exercises/openai_authoring_provider.tscn")
+const PROVIDER_SCENE := preload("res://scenes/exercises/claude_provider.tscn")
 
 var failures: Array[String] = []
 
@@ -14,10 +14,10 @@ func run_verification() -> void:
 	var studio = STUDIO_SCENE.instantiate()
 	root.add_child(studio)
 	await process_frame
-	require(studio.openai_api_key is String, "Studio root must expose the internal API key field")
-	require(studio.openai_model is String and not studio.openai_model.is_empty(), "Studio must expose a selected Structured Outputs model")
-	require(studio.model_option.item_count == 5, "Studio must provide four model presets and a custom model option")
-	require(studio.active_model_label.text.contains(studio.openai_model), "Studio must show the exact active model ID")
+	require(studio.model_id is String and studio.model_id.begins_with("claude-"), "Studio must select a Claude model")
+	require(studio.model_option.item_count == ClaudeSettings.MODEL_PRESETS.size(), "Studio must offer the Claude model presets plus a custom model option")
+	require(studio.active_model_label.text.contains(studio.model_id), "Studio must show the exact active model ID")
+	require(studio.provider is ClaudeProvider, "Studio must use the Claude provider")
 	require(studio.get_node_or_null("Margin/Column/Workspace/CatalogPanel") != null, "Catalog panel must be editor-authored")
 	require(studio.get_node_or_null("Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel") != null, "Visual definition panel must be editor-authored")
 	require(studio.get_node_or_null("Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs/Advanced JSON/JsonEditor") is TextEdit, "Advanced JSON editor must be editor-authored")
@@ -27,22 +27,26 @@ func run_verification() -> void:
 	var provider = PROVIDER_SCENE.instantiate()
 	root.add_child(provider)
 	await process_frame
-	var body: Dictionary = provider.build_request_body("gpt-5-mini", "system", "source", {"type": "object"})
-	require(body.get("text", {}).get("format", {}).get("type") == "json_schema", "Responses request must use Structured Outputs")
-	require(body.get("text", {}).get("format", {}).get("strict") == true, "Responses request schema must be strict")
-	var vision_body: Dictionary = provider.build_request_body("gpt-5-mini", "system", "source", {"type": "object"}, "data:image/jpeg;base64,AA==")
-	var vision_content: Array = vision_body.get("input", [])[0].get("content", [])
-	require(vision_content.size() == 2, "Vision request must contain one text input and one image input")
-	require(vision_content[1].get("type") == "input_image", "Contact sheet must use the Responses input_image type")
-	require(vision_content[1].get("detail") == "high", "Exercise contact sheet must request high image detail")
+	var request: Dictionary = provider.build_request("author", "claude-opus-5-5", {"context": "source", "image_data_url": "data:image/jpeg;base64,AA=="})
+	require(request.get("task") == "author" and request.get("model") == "claude-opus-5-5", "Authoring request must name the task and model")
+	require(request.get("context") == "source" and String(request.get("image_data_url")).begins_with("data:image/jpeg"), "Authoring request must carry the source text and contact sheet")
+	require(String(request.get("settings_path")).ends_with("bodysim_authoring_settings.cfg"), "Bridge must be told where the key settings live")
+	require(not JSON.stringify(request).contains("sk-"), "Requests must never carry an API key")
 	var sheet: Image = studio.build_contact_sheet_image(studio.catalog[0])
 	require(not sheet.is_empty(), "Studio must compose imported source images into a contact sheet")
 	require(sheet.get_width() > sheet.get_height(), "Two-frame contact sheet must place frames in a horizontal row")
 	require(studio.build_contact_sheet_data_url(studio.catalog[0]).begins_with("data:image/jpeg;base64,"), "Studio must encode the contact sheet as one JPEG data URL")
-	var output := {"status": "completed", "output": [{"content": [{"type": "output_text", "text": "{\"classification\":\"unsupported\"}"}]}]}
-	require(provider.extract_structured_output(output).get("value", {}).get("classification") == "unsupported", "Provider must parse Responses output_text")
-	var refusal := {"status": "completed", "output": [{"content": [{"type": "refusal", "refusal": "cannot comply"}]}]}
-	require(not provider.extract_structured_output(refusal).get("ok", false), "Provider must reject refusals")
+	# Real thread + Python bridge round trip, rejected before any API call.
+	var failures_seen: Array[String] = []
+	provider.review_failed.connect(func(message: String) -> void: failures_seen.append(message))
+	provider.review("claude-opus-5-5", {}, "")
+	require(provider.is_busy(), "Provider must run the bridge on a worker thread")
+	var waited := 0
+	while failures_seen.is_empty() and waited < 600:
+		await process_frame
+		waited += 1
+	require(failures_seen.size() == 1 and failures_seen[0].contains("frozen revision"), "Bridge errors must come back through the failure signal: %s" % [failures_seen])
+	require(not provider.is_busy(), "Provider must release its worker thread")
 
 	var supported: Dictionary = studio.default_supported_response()
 	supported["proposed_definition"] = {

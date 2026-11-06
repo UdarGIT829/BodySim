@@ -1,26 +1,17 @@
 class_name ExerciseReviewCouncil
 extends Control
 
-@export_category("Internal OpenAI")
-@export_multiline var openai_api_key: String = ""
-@export var openai_model: String = "gpt-5.6-terra"
-
-const MODEL_PRESETS := [
-	{"label": "GPT-5.6 Sol · highest quality", "id": "gpt-5.6-sol"},
-	{"label": "GPT-5.6 Terra · balanced", "id": "gpt-5.6-terra"},
-	{"label": "GPT-5.6 Luna · economical", "id": "gpt-5.6-luna"},
-	{"label": "GPT-5 mini · legacy economical", "id": "gpt-5-mini"},
-	{"label": "Custom model ID…", "id": "custom"},
-]
+## Claude model used by the council's model member (saved as [anthropic] review_model).
+var model_id: String = ClaudeSettings.DEFAULT_MODEL
 const CATALOG_PATH := "res://data/exercises/catalog/candidates.json"
 const DRAFT_DIR := "res://data/exercises/authoring/drafts"
 const SCHEMA_PATH := "res://data/exercises/authoring/schemas/kinematic_review_response.schema.json"
-const PROMPT_PATH := "res://data/exercises/authoring/prompts/review_openai_v1.md"
+const PROMPT_PATH := "res://data/exercises/authoring/prompts/review_v2.md"
 const MEDIA_ROOT := "res://assets/exercises/free_exercise_db"
 const SETTINGS_PATH := "user://bodysim_authoring_settings.cfg"
 const ReviewRevisionStoreScript := preload("res://src/exercises/review/review_revision_store.gd")
 
-@onready var provider: Node = $OpenAIReviewProvider
+@onready var provider: ClaudeProvider = $ClaudeProvider
 @onready var candidate_tree: Tree = %CandidateTree
 @onready var source_title: Label = %SourceTitle
 @onready var source_meta: Label = %SourceMetadata
@@ -55,14 +46,15 @@ var system_prompt := ""
 var pending_model_vote: Dictionary = {}
 
 func _ready() -> void:
-	openai_api_key = OpenAIKey.resolve(openai_api_key)
 	configure_ui()
 	load_support_files()
 	load_model_preference()
 	configure_model_selector()
 	reload_entries()
 	provider.review_succeeded.connect(_on_model_review_succeeded)
-	provider.review_failed.connect(func(message: String) -> void: set_status(message, true))
+	provider.review_failed.connect(func(message: String) -> void:
+		request_review_button.disabled = false
+		set_status(message, true))
 	candidate_tree.item_selected.connect(_on_candidate_selected)
 	freeze_button.pressed.connect(freeze_selected_draft)
 	reject_button.pressed.connect(reject_selected_candidate)
@@ -247,16 +239,17 @@ func populate_muscles(entries_to_show: Array) -> void:
 
 func request_model_review() -> void:
 	if current_revision.is_empty(): return
+	if not ClaudeSettings.has_api_key(): return set_status(ClaudeSettings.missing_key_message(), true)
 	request_review_button.disabled = true
-	set_status("OpenAI council member is reviewing the frozen revision…", false)
-	provider.review(openai_api_key, openai_model, system_prompt, build_review_context(), schema, build_contact_sheet_data_url(current_revision.get("source", {})))
+	set_status("Claude (%s) is reviewing the frozen revision…" % model_id, false)
+	provider.review(model_id, current_revision, review_context.text, build_contact_sheet_data_url(current_revision.get("source", {})))
 
 func _on_model_review_succeeded(response: Dictionary, metadata: Dictionary) -> void:
 	pending_model_vote = response.duplicate(true); pending_model_vote["provider_metadata"] = metadata
-	var result: Dictionary = ReviewRevisionStoreScript.save_vote(current_revision.get("revision_sha256", ""), "openai_reviewer", pending_model_vote, review_context.text)
+	var result: Dictionary = ReviewRevisionStoreScript.save_vote(current_revision.get("revision_sha256", ""), ReviewRevisionStoreScript.MODEL_MEMBER, pending_model_vote, review_context.text)
 	request_review_button.disabled = false
 	if not result.get("ok", false): return set_status(result.get("error", "Could not save model vote."), true)
-	load_votes(result["record"]); set_status("OpenAI vote recorded against this exact revision hash.", false)
+	load_votes(result["record"]); set_status("Claude vote recorded against this exact revision hash.", false)
 
 func record_human_vote() -> void:
 	if current_revision.is_empty(): return set_status("Freeze a revision before voting.", true)
@@ -268,8 +261,8 @@ func record_human_vote() -> void:
 
 func load_votes(review: Dictionary) -> void:
 	var votes: Dictionary = review.get("votes", {})
-	var model: Dictionary = votes.get("openai_reviewer", {})
-	model_result.text = "No model vote yet." if model.is_empty() else format_vote("OpenAI reviewer", model)
+	var model: Dictionary = ReviewRevisionStoreScript.model_vote(votes)
+	model_result.text = "No model vote yet." if model.is_empty() else format_vote("Claude reviewer (%s)" % model.get("provider_metadata", {}).get("model", "legacy vote"), model)
 	prior_feedback_text.text = format_prior_feedback(current_revision.get("revision_sha256", "")) if not current_revision.is_empty() else prior_feedback_text.text
 	var status: String = String(review.get("status", "review_pending"))
 	var promotion: Dictionary = ReviewRevisionStoreScript.load_promotion(String(current_revision.get("revision_sha256", ""))) if not current_revision.is_empty() else {}
@@ -306,9 +299,6 @@ func format_prior_feedback(hash: String) -> String:
 		if vote.get("decision") == "reject": output = format_vote(String(member), vote)
 	return output
 
-func build_review_context() -> String:
-	return "FROZEN REVISION SHA-256: %s\nCONTROLLED REVIEW CONTEXT (not authoring evidence):\n%s\n\nFROZEN REVISION JSON:\n%s" % [current_revision.get("revision_sha256", ""), review_context.text, JSON.stringify(current_revision, "  ")]
-
 func build_contact_sheet_data_url(source: Dictionary) -> String:
 	var images: Array = source.get("source_images", [])
 	var loaded: Array[Image] = []
@@ -325,25 +315,21 @@ func build_contact_sheet_data_url(source: Dictionary) -> String:
 	return "data:image/jpeg;base64,%s" % Marshalls.raw_to_base64(sheet.save_jpg_to_buffer(0.9))
 
 func configure_model_selector() -> void:
-	model_option.clear(); var selected := MODEL_PRESETS.size() - 1
-	for index in MODEL_PRESETS.size():
-		model_option.add_item(MODEL_PRESETS[index]["label"]); model_option.set_item_metadata(index, MODEL_PRESETS[index]["id"])
-		if MODEL_PRESETS[index]["id"] == openai_model: selected = index
-	model_option.select(selected); custom_model_input.visible = model_option.get_selected_metadata() == "custom"; custom_model_input.text = openai_model if custom_model_input.visible else ""
+	custom_model_input.visible = ClaudeSettings.fill_model_option(model_option, model_id)
+	custom_model_input.text = model_id if custom_model_input.visible else ""
 
 func load_model_preference() -> void:
-	var settings := ConfigFile.new()
-	if settings.load(SETTINGS_PATH) == OK: openai_model = settings.get_value("openai", "review_model", openai_model)
+	model_id = ClaudeSettings.load_model("review_model")
 
 func save_model_preference() -> void:
-	var settings := ConfigFile.new(); settings.load(SETTINGS_PATH); settings.set_value("openai", "review_model", openai_model); settings.save(SETTINGS_PATH)
+	ClaudeSettings.save_model("review_model", model_id)
 
 func _on_model_selected(_index: int) -> void:
 	var value := String(model_option.get_selected_metadata()); custom_model_input.visible = value == "custom"
-	if value != "custom": openai_model = value; save_model_preference()
+	if value != "custom": model_id = value; save_model_preference()
 
 func _on_custom_model_changed(value: String) -> void:
-	if model_option.get_selected_metadata() == "custom": openai_model = value.strip_edges(); save_model_preference()
+	if model_option.get_selected_metadata() == "custom": model_id = value.strip_edges(); save_model_preference()
 
 func set_image(view: TextureRect, relative: String) -> void:
 	view.texture = load("%s/%s" % [MEDIA_ROOT, relative]) if not relative.is_empty() else null

@@ -36,9 +36,14 @@ Set `GODOT=/path/to/godot` if Godot 4.7 isn't at the default location.
 
 ## Authoring tools (desktop only)
 
-The Kinematic Definition Studio and Review Council call the OpenAI API. The key
-is never stored in the project: set `OPENAI_API_KEY`, or put it in
-`user://bodysim_authoring_settings.cfg` under `[openai] api_key="..."`.
+The Kinematic Definition Studio and Review Council call Claude through the
+Python bridge `tools/exercises/run_claude.py` (official `anthropic` SDK; install
+with `python3 -m pip install --user -r requirements.txt`). Pick the model in
+either tool; Claude Opus 5.5 is the default. The system prompt is cached (1-hour
+TTL) and reviews send only the muscles the tracer engaged, to keep costs down.
+
+The API key is never stored in the project: set `ANTHROPIC_API_KEY`, or put it
+in `user://bodysim_authoring_settings.cfg` under `[anthropic] api_key="..."`.
 
 ## License
 

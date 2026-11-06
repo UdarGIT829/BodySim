@@ -62,7 +62,7 @@ say "Verifying the build"
 python3 -I - "$OUT" <<'PY'
 import pathlib, re, sys
 root = pathlib.Path(sys.argv[1])
-key = re.compile(rb"sk-proj-|sk-[A-Za-z0-9_-]{20,}")
+key = re.compile(rb"sk-proj-|sk-ant-|sk-[A-Za-z0-9_-]{20,}")
 problems = []
 for p in root.rglob("*"):
     if not p.is_file():
@@ -73,7 +73,7 @@ for p in root.rglob("*"):
     if len(data) > 100 * 1024 * 1024:
         problems.append(f"{p} is over GitHub's 100 MB file limit")
 pck = (root / "index.pck").read_bytes()
-for marker in (b"kinematic_definition_studio", b"exercise_review_council", b"openai_authoring_provider"):
+for marker in (b"kinematic_definition_studio", b"exercise_review_council", b"claude_provider", b"run_claude"):
     if marker in pck:
         problems.append(f"authoring/review tool found in index.pck ({marker.decode()})")
 if problems:

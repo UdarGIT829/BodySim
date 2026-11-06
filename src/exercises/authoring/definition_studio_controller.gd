@@ -1,26 +1,17 @@
 class_name KinematicDefinitionStudio
 extends Control
 
-@export_category("Internal OpenAI")
-@export_multiline var openai_api_key: String = ""
-@export var openai_model: String = "gpt-5.6-terra"
-
-const OPENAI_MODEL_PRESETS := [
-	{"label": "GPT-5.6 Sol · highest quality", "id": "gpt-5.6-sol"},
-	{"label": "GPT-5.6 Terra · balanced", "id": "gpt-5.6-terra"},
-	{"label": "GPT-5.6 Luna · economical", "id": "gpt-5.6-luna"},
-	{"label": "GPT-5 mini · legacy economical", "id": "gpt-5-mini"},
-	{"label": "Custom model ID…", "id": "custom"},
-]
+## Claude model used for authoring (saved as [anthropic] authoring_model).
+var model_id: String = ClaudeSettings.DEFAULT_MODEL
 
 const CATALOG_PATH := "res://data/exercises/catalog/candidates.json"
 const CANONICAL_PATH := "res://data/exercises/exercises.json"
 const SCHEMA_PATH := "res://data/exercises/authoring/schemas/kinematic_authoring_response.schema.json"
-const PROMPT_PATH := "res://data/exercises/authoring/prompts/authoring_openai_v1.md"
+const PROMPT_PATH := "res://data/exercises/authoring/prompts/authoring_v2.md"
 const MEDIA_ROOT := "res://assets/exercises/free_exercise_db"
 const SETTINGS_PATH := "user://bodysim_authoring_settings.cfg"
 
-@onready var provider: OpenAIAuthoringProvider = $OpenAIAuthoringProvider
+@onready var provider: ClaudeProvider = $ClaudeProvider
 @onready var candidate_trace_gate: Node = $CandidateTraceGate
 @onready var model_option: OptionButton = %ModelOption
 @onready var custom_model_input: LineEdit = %CustomModelInput
@@ -74,7 +65,6 @@ var joint_actions: Array[Dictionary] = []
 
 
 func _ready() -> void:
-	openai_api_key = OpenAIKey.resolve(openai_api_key)
 	configure_controls()
 	load_model_preference()
 	configure_model_selector()
@@ -123,33 +113,17 @@ func configure_controls() -> void:
 
 
 func load_model_preference() -> void:
-	var settings := ConfigFile.new()
-	if settings.load(SETTINGS_PATH) == OK:
-		openai_model = String(settings.get_value("openai", "authoring_model", openai_model)).strip_edges()
+	model_id = ClaudeSettings.load_model("authoring_model")
 
 
 func save_model_preference() -> void:
-	if openai_model.strip_edges().is_empty():
-		return
-	var settings := ConfigFile.new()
-	settings.load(SETTINGS_PATH)   # keep the API key and other settings in this file
-	settings.set_value("openai", "authoring_model", openai_model)
-	settings.save(SETTINGS_PATH)
+	ClaudeSettings.save_model("authoring_model", model_id)
 
 
 func configure_model_selector() -> void:
-	model_option.clear()
-	var selected_index := OPENAI_MODEL_PRESETS.size() - 1
-	for index in OPENAI_MODEL_PRESETS.size():
-		var preset: Dictionary = OPENAI_MODEL_PRESETS[index]
-		model_option.add_item(String(preset["label"]))
-		model_option.set_item_metadata(index, preset["id"])
-		if preset["id"] == openai_model:
-			selected_index = index
-	model_option.select(selected_index)
-	var custom_selected := String(model_option.get_selected_metadata()) == "custom"
+	var custom_selected := ClaudeSettings.fill_model_option(model_option, model_id)
 	custom_model_input.visible = custom_selected
-	custom_model_input.text = openai_model if custom_selected else ""
+	custom_model_input.text = model_id if custom_selected else ""
 	update_active_model_label()
 
 
@@ -157,7 +131,7 @@ func _on_model_selected(_index: int) -> void:
 	var model_id := String(model_option.get_selected_metadata())
 	custom_model_input.visible = model_id == "custom"
 	if model_id != "custom":
-		openai_model = model_id
+		model_id = model_id
 		save_model_preference()
 	elif custom_model_input.text.strip_edges().is_empty():
 		custom_model_input.grab_focus()
@@ -167,14 +141,14 @@ func _on_model_selected(_index: int) -> void:
 
 func _on_custom_model_changed(value: String) -> void:
 	if String(model_option.get_selected_metadata()) == "custom":
-		openai_model = value.strip_edges()
+		model_id = value.strip_edges()
 		save_model_preference()
 		update_active_model_label()
 		refresh_action_state()
 
 
 func update_active_model_label() -> void:
-	active_model_label.text = "Requests will use: %s" % (openai_model if not openai_model.is_empty() else "no model selected")
+	active_model_label.text = "Requests will use: %s" % (model_id if not model_id.is_empty() else "no model selected")
 
 
 func fill_option(control: OptionButton, values: Array) -> void:
@@ -445,16 +419,16 @@ func generate_proposal() -> void:
 	if selected_source.is_empty():
 		set_status("Select a catalog exercise first.", true)
 		return
-	if openai_api_key.strip_edges().is_empty():
-		set_status("No OpenAI API key: set OPENAI_API_KEY or [openai] api_key in user://bodysim_authoring_settings.cfg.", true)
+	if not ClaudeSettings.has_api_key():
+		set_status(ClaudeSettings.missing_key_message(), true)
 		return
 	var contact_sheet_data_url := build_contact_sheet_data_url(selected_source)
 	if contact_sheet_data_url.is_empty():
 		set_status("Could not build the two-frame source contact sheet; request not sent.", true)
 		return
 	generate_button.disabled = true
-	set_status("Generating with source text and one two-frame contact sheet…", false)
-	provider.generate(openai_api_key, openai_model, system_prompt, build_source_context(), schema, contact_sheet_data_url)
+	set_status("Claude (%s) is drafting from the source text and the two-frame contact sheet…" % model_id, false)
+	provider.generate(model_id, build_source_context(), contact_sheet_data_url)
 
 
 func build_source_context() -> String:
@@ -730,7 +704,7 @@ func submit_candidate() -> void:
 
 
 func refresh_action_state() -> void:
-	generate_button.disabled = selected_source.is_empty() or openai_api_key.strip_edges().is_empty() or openai_model.strip_edges().is_empty()
+	generate_button.disabled = selected_source.is_empty() or not ClaudeSettings.has_api_key() or model_id.strip_edges().is_empty() or provider.is_busy()
 
 
 func show_diff() -> void:
