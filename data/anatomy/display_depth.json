@@ -1,0 +1,2819 @@
+{
+  "catalog_sha256": "7c8cb6813422b84e113472709875169407c1f54a1230170b766de9cebfde7746",
+  "confidence_counts": {
+    "conservative_visualization_default": 268,
+    "curated_visualization_rule": 68,
+    "source_explicit": 130
+  },
+  "depth_counts": {
+    "deep": 306,
+    "superficial": 160
+  },
+  "limitations": [
+    "Display depth is a viewing aid, not a universal anatomical or surgical plane.",
+    "Explicit Z-Anatomy depth labels take precedence over curated family rules.",
+    "The conservative default assigns uncertain muscles to deep so they remain available when the superficial layer is hidden."
+  ],
+  "medical_use": false,
+  "schema_version": 1,
+  "scope": "skeletal_muscle_visualization_only",
+  "structure_count": 466,
+  "structures": [
+    {
+      "basis": "Curated surface-family rule: pectoralis major.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.abdominal_part_of_pectoralis_major.left"
+    },
+    {
+      "basis": "Curated surface-family rule: pectoralis major.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.abdominal_part_of_pectoralis_major.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.abductor_digiti_minimi_of_foot.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.abductor_digiti_minimi_of_foot.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.abductor_digiti_minimi_of_hand.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.abductor_digiti_minimi_of_hand.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.abductor_hallucis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.abductor_hallucis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.abductor_pollicis_brevis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.abductor_pollicis_brevis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.abductor_pollicis_longus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.abductor_pollicis_longus.right"
+    },
+    {
+      "basis": "Curated surface-family rule: deltoid.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.acromial_part_of_deltoid.left"
+    },
+    {
+      "basis": "Curated surface-family rule: deltoid.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.acromial_part_of_deltoid.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.adductor_brevis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.adductor_brevis.right"
+    },
+    {
+      "basis": "Curated surface-family rule: adductor longus.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.adductor_longus.left"
+    },
+    {
+      "basis": "Curated surface-family rule: adductor longus.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.adductor_longus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.adductor_magnus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.adductor_magnus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.adductor_minimus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.adductor_minimus.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.anconeus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.anconeus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.anterior_belly_of_digastric.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.anterior_belly_of_digastric.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.ary_epiglottic_part_of_oblique_arytenoid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.ary_epiglottic_part_of_oblique_arytenoid.right"
+    },
+    {
+      "basis": "Curated surface-family rule: trapezius.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.ascending_part_of_trapezius.left"
+    },
+    {
+      "basis": "Curated surface-family rule: trapezius.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.ascending_part_of_trapezius.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.brachialis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.brachialis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.brachioradialis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.brachioradialis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.bucinator.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.bucinator.right"
+    },
+    {
+      "basis": "Curated surface-family rule: pectoralis major.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.clavicular_head_of_pectoralis_major.left"
+    },
+    {
+      "basis": "Curated surface-family rule: pectoralis major.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.clavicular_head_of_pectoralis_major.right"
+    },
+    {
+      "basis": "Curated surface-family rule: deltoid.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.clavicular_part_of_deltoid.left"
+    },
+    {
+      "basis": "Curated surface-family rule: deltoid.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.clavicular_part_of_deltoid.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.coccygeus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.coccygeus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.coracobrachialis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.coracobrachialis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.corrugator_supercilii.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.corrugator_supercilii.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.deep_head_of_flexor_pollicis_brevis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.deep_head_of_flexor_pollicis_brevis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.deep_head_of_pronator_teres.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.deep_head_of_pronator_teres.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.deep_part_of_masseter.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.deep_part_of_masseter.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.depressor_anguli_oris.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.depressor_anguli_oris.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.depressor_labii_inferioris.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.depressor_labii_inferioris.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.depressor_septi_nasi.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.depressor_septi_nasi.right"
+    },
+    {
+      "basis": "Curated surface-family rule: trapezius.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.descending_part_of_trapezius.left"
+    },
+    {
+      "basis": "Curated surface-family rule: trapezius.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.descending_part_of_trapezius.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.diaphragm"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.dorsal_interossei_muscles_of_foot.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.dorsal_interossei_muscles_of_foot.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.dorsal_interossei_muscles_of_hand.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.dorsal_interossei_muscles_of_hand.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.dorsal_parts_of_lateral_intertransversarii_lumborum.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.dorsal_parts_of_lateral_intertransversarii_lumborum.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.extensor_carpi_radialis_brevis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.extensor_carpi_radialis_brevis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.extensor_carpi_radialis_longus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.extensor_carpi_radialis_longus.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.extensor_digiti_minimi.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.extensor_digiti_minimi.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.extensor_digitorum.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.extensor_digitorum.right"
+    },
+    {
+      "basis": "Curated surface-family rule: extensor digitorum.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.extensor_digitorum_brevis.left"
+    },
+    {
+      "basis": "Curated surface-family rule: extensor digitorum.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.extensor_digitorum_brevis.right"
+    },
+    {
+      "basis": "Curated surface-family rule: extensor digitorum.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.extensor_digitorum_longus.left"
+    },
+    {
+      "basis": "Curated surface-family rule: extensor digitorum.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.extensor_digitorum_longus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.extensor_hallucis_brevis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.extensor_hallucis_brevis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.extensor_hallucis_longus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.extensor_hallucis_longus.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.extensor_indicis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.extensor_indicis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.extensor_pollicis_brevis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.extensor_pollicis_brevis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.extensor_pollicis_longus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.extensor_pollicis_longus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.external_abdominal_oblique.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.external_abdominal_oblique.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.external_anal_sphincter.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.external_anal_sphincter.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.external_intercostal.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.external_intercostal.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.external_part_of_thyro_arytenoid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.external_part_of_thyro_arytenoid.right"
+    },
+    {
+      "basis": "Curated surface-family rule: fibularis brevis.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.fibularis_brevis.left"
+    },
+    {
+      "basis": "Curated surface-family rule: fibularis brevis.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.fibularis_brevis.right"
+    },
+    {
+      "basis": "Curated surface-family rule: fibularis longus.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.fibularis_longus.left"
+    },
+    {
+      "basis": "Curated surface-family rule: fibularis longus.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.fibularis_longus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.fibularis_tertius.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.fibularis_tertius.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.flexor_carpi_radialis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.flexor_carpi_radialis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.flexor_digiti_minimi_of_foot.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.flexor_digiti_minimi_of_foot.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.flexor_digiti_minimi_of_hand.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.flexor_digiti_minimi_of_hand.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.flexor_digitorum_brevis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.flexor_digitorum_brevis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.flexor_digitorum_longus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.flexor_digitorum_longus.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.flexor_digitorum_profundus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.flexor_digitorum_profundus.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.flexor_hallucis_longus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.flexor_hallucis_longus.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.flexor_pollicis_longus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.flexor_pollicis_longus.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.frontalis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.frontalis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.genioglossus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.genioglossus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.geniohyoid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.geniohyoid.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.gluteus_maximus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.gluteus_maximus.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.gluteus_medius.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.gluteus_medius.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.gluteus_minimus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.gluteus_minimus.right"
+    },
+    {
+      "basis": "Curated surface-family rule: gracilis.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.gracilis.left"
+    },
+    {
+      "basis": "Curated surface-family rule: gracilis.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.gracilis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.humeral_head_of_extensor_carpi_ulnaris.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.humeral_head_of_extensor_carpi_ulnaris.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.humeral_head_of_flexor_carpi_ulnaris.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.humeral_head_of_flexor_carpi_ulnaris.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.humero_ulnar_head_of_flexor_digitorum_superficialis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.humero_ulnar_head_of_flexor_digitorum_superficialis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.hyoglossus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.hyoglossus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.iliacus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.iliacus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.iliococcygeus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.iliococcygeus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.iliocostalis_colli.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.iliocostalis_colli.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.iliocostalis_lumborum.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.iliocostalis_lumborum.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.iliocostalis_thoracis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.iliocostalis_thoracis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.iliopectineal_arch.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.iliopectineal_arch.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.inferior_gemellus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.inferior_gemellus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.inferior_head_of_lateral_pterygoid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.inferior_head_of_lateral_pterygoid.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.inferior_oblique.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.inferior_oblique.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.inferior_pharyngeal_constrictor.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.inferior_pharyngeal_constrictor.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.inferior_rectus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.inferior_rectus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.infraspinatus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.infraspinatus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.innermost_intercostal.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.innermost_intercostal.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.internal_abdominal_oblique.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.internal_abdominal_oblique.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.internal_intercostal.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.internal_intercostal.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.interspinales_colli.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.interspinales_colli.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.interspinales_lumborum.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.interspinales_lumborum.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.interspinales_thoracis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.interspinales_thoracis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.lateral_crico_arytenoid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.lateral_crico_arytenoid.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.lateral_head_of_flexor_hallucis_brevis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.lateral_head_of_flexor_hallucis_brevis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.lateral_head_of_gastrocnemius.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.lateral_head_of_gastrocnemius.right"
+    },
+    {
+      "basis": "Curated surface-family rule: triceps brachii.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.lateral_head_of_triceps_brachii.left"
+    },
+    {
+      "basis": "Curated surface-family rule: triceps brachii.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.lateral_head_of_triceps_brachii.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.lateral_rectus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.lateral_rectus.right"
+    },
+    {
+      "basis": "Curated surface-family rule: latissimus dorsi.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.latissimus_dorsi.left"
+    },
+    {
+      "basis": "Curated surface-family rule: latissimus dorsi.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.latissimus_dorsi.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.levator_anguli_oris.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.levator_anguli_oris.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.levator_labii_superioris.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.levator_labii_superioris.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.levator_nasolabialis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.levator_nasolabialis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.levator_palpebrae_superioris.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.levator_palpebrae_superioris.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.levator_scapulae.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.levator_scapulae.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.levatores_breves_costarum.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.levatores_breves_costarum.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.levatores_longi_costarum.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.levatores_longi_costarum.right"
+    },
+    {
+      "basis": "Curated surface-family rule: biceps brachii.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.long_head_of_biceps_brachii.left"
+    },
+    {
+      "basis": "Curated surface-family rule: biceps brachii.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.long_head_of_biceps_brachii.right"
+    },
+    {
+      "basis": "Curated surface-family rule: biceps femoris.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.long_head_of_biceps_femoris.left"
+    },
+    {
+      "basis": "Curated surface-family rule: biceps femoris.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.long_head_of_biceps_femoris.right"
+    },
+    {
+      "basis": "Curated surface-family rule: triceps brachii.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.long_head_of_triceps_brachii.left"
+    },
+    {
+      "basis": "Curated surface-family rule: triceps brachii.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.long_head_of_triceps_brachii.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.longissimus_capitis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.longissimus_capitis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.longissimus_colli.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.longissimus_colli.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.longissimus_thoracis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.longissimus_thoracis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.longus_capitis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.longus_capitis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.longus_colli.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.longus_colli.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.lumbrical_muscles_of_foot.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.lumbrical_muscles_of_foot.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.lumbrical_muscles_of_hand.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.lumbrical_muscles_of_hand.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.medial_head_of_flexor_hallucis_brevis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.medial_head_of_flexor_hallucis_brevis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.medial_head_of_gastrocnemius.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.medial_head_of_gastrocnemius.right"
+    },
+    {
+      "basis": "Curated surface-family rule: triceps brachii.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.medial_head_of_triceps_brachii.left"
+    },
+    {
+      "basis": "Curated surface-family rule: triceps brachii.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.medial_head_of_triceps_brachii.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.medial_pterygoid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.medial_pterygoid.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.medial_rectus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.medial_rectus.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.mentalis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.mentalis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.middle_pharyngeal_constrictor.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.middle_pharyngeal_constrictor.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.multifidus_colli.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.multifidus_colli.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.multifidus_lumborum.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.multifidus_lumborum.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.multifidus_thoracis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.multifidus_thoracis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.mylohyoid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.mylohyoid.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.nasalis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.nasalis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.oblique_head_of_adductor_hallucis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.oblique_head_of_adductor_hallucis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.oblique_head_of_adductor_pollicis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.oblique_head_of_adductor_pollicis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.oblique_part_of_cricothyroid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.oblique_part_of_cricothyroid.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.obliquus_inferior_capitis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.obliquus_inferior_capitis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.obliquus_superior_capitis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.obliquus_superior_capitis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.obturator_externus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.obturator_externus.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.obturator_internus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.obturator_internus.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.occipitalis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.occipitalis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.omohyoid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.omohyoid.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.opponens_digiti_minimi_muscle_of_foot.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.opponens_digiti_minimi_muscle_of_foot.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.opponens_digiti_minimi_muscle_of_hand.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.opponens_digiti_minimi_muscle_of_hand.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.opponens_pollicis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.opponens_pollicis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.orbicularis_oris.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.orbicularis_oris.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.orbital_part_of_orbicularis_oculi.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.orbital_part_of_orbicularis_oculi.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.palatopharyngeus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.palatopharyngeus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.palmar_interossei.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.palmar_interossei.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.palmaris_longus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.palmaris_longus.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.palpebral_part_of_orbicularis_oculi.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.palpebral_part_of_orbicularis_oculi.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.pectineus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.pectineus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.pectoralis_minor.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.pectoralis_minor.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.piriformis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.piriformis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.plantar_interossei.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.plantar_interossei.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.plantaris.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.plantaris.right"
+    },
+    {
+      "basis": "Curated surface-family rule: platysma.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.platysma.left"
+    },
+    {
+      "basis": "Curated surface-family rule: platysma.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.platysma.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.popliteus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.popliteus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.posterior_belly_of_digastric.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.posterior_belly_of_digastric.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.posterior_crico_arytenoid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.posterior_crico_arytenoid.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.procerus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.procerus.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.pronator_quadratus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.pronator_quadratus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.psoas_major.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.psoas_major.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.pubo_analis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.pubo_analis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.pubococcygeus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.pubococcygeus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.pyramidalis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.pyramidalis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.quadratus_femoris.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.quadratus_femoris.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.quadratus_lumborum.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.quadratus_lumborum.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.quadratus_plantae.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.quadratus_plantae.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.radial_head_of_flexor_digitorum_superficialis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.radial_head_of_flexor_digitorum_superficialis.right"
+    },
+    {
+      "basis": "Curated surface-family rule: rectus abdominis.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.rectus_abdominis.left"
+    },
+    {
+      "basis": "Curated surface-family rule: rectus abdominis.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.rectus_abdominis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.rectus_anterior_capitis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.rectus_anterior_capitis.right"
+    },
+    {
+      "basis": "Curated surface-family rule: rectus femoris.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.rectus_femoris.left"
+    },
+    {
+      "basis": "Curated surface-family rule: rectus femoris.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.rectus_femoris.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.rectus_lateralis_capitis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.rectus_lateralis_capitis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.rectus_posterior_major_capitis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.rectus_posterior_major_capitis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.rectus_posterior_minor_capitis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.rectus_posterior_minor_capitis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.rhomboid_major.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.rhomboid_major.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.rhomboid_minor.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.rhomboid_minor.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.risorius.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.risorius.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.rotatores.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.rotatores.right"
+    },
+    {
+      "basis": "Curated surface-family rule: sartorius.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.sartorius.left"
+    },
+    {
+      "basis": "Curated surface-family rule: sartorius.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.sartorius.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.scalenus_anterior.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.scalenus_anterior.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.scalenus_medius.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.scalenus_medius.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.scalenus_posterior.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.scalenus_posterior.right"
+    },
+    {
+      "basis": "Curated surface-family rule: deltoid.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.scapular_spinal_part_of_deltoid.left"
+    },
+    {
+      "basis": "Curated surface-family rule: deltoid.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.scapular_spinal_part_of_deltoid.right"
+    },
+    {
+      "basis": "Curated surface-family rule: semimembranosus.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.semimembranosus.left"
+    },
+    {
+      "basis": "Curated surface-family rule: semimembranosus.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.semimembranosus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.semispinalis_colli.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.semispinalis_colli.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.semispinalis_thoracis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.semispinalis_thoracis.right"
+    },
+    {
+      "basis": "Curated surface-family rule: semitendinosus.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.semitendinosus.left"
+    },
+    {
+      "basis": "Curated surface-family rule: semitendinosus.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.semitendinosus.right"
+    },
+    {
+      "basis": "Curated surface-family rule: serratus anterior.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.serratus_anterior.left"
+    },
+    {
+      "basis": "Curated surface-family rule: serratus anterior.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.serratus_anterior.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.serratus_posterior_inferior.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.serratus_posterior_inferior.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.serratus_posterior_superior.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.serratus_posterior_superior.right"
+    },
+    {
+      "basis": "Curated surface-family rule: biceps brachii.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.short_head_of_biceps_brachii.left"
+    },
+    {
+      "basis": "Curated surface-family rule: biceps brachii.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.short_head_of_biceps_brachii.right"
+    },
+    {
+      "basis": "Curated surface-family rule: biceps femoris.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.short_head_of_biceps_femoris.left"
+    },
+    {
+      "basis": "Curated surface-family rule: biceps femoris.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.short_head_of_biceps_femoris.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.soleus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.soleus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.spinalis_capitis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.spinalis_capitis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.spinalis_colli.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.spinalis_colli.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.spinalis_thoracis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.spinalis_thoracis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.splenius_capitis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.splenius_capitis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.splenius_colli.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.splenius_colli.right"
+    },
+    {
+      "basis": "Curated surface-family rule: sternocleidomastoid.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.sternocleidomastoid.left"
+    },
+    {
+      "basis": "Curated surface-family rule: sternocleidomastoid.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.sternocleidomastoid.right"
+    },
+    {
+      "basis": "Curated surface-family rule: pectoralis major.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.sternocostal_head_of_pectoralis_major.left"
+    },
+    {
+      "basis": "Curated surface-family rule: pectoralis major.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.sternocostal_head_of_pectoralis_major.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.sternohyoid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.sternohyoid.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.sternothyroid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.sternothyroid.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.straight_part_of_cricothyroid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.straight_part_of_cricothyroid.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.stylohyoid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.stylohyoid.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.stylopharyngeus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.stylopharyngeus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.subclavius.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.subclavius.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.subscapularis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.subscapularis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.superficial_head_of_flexor_pollicis_brevis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.superficial_head_of_flexor_pollicis_brevis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.superficial_head_of_pronator_teres.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.superficial_head_of_pronator_teres.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.superficial_part_of_masseter.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.superficial_part_of_masseter.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.superior_gemellus.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.superior_gemellus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.superior_head_of_lateral_pterygoid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.superior_head_of_lateral_pterygoid.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.superior_oblique.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.superior_oblique.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.superior_pharyngeal_constrictor.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.superior_pharyngeal_constrictor.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.superior_rectus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.superior_rectus.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.supinator.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.supinator.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.supraspinatus.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.supraspinatus.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.temporalis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.temporalis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.temporoparietalis.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.temporoparietalis.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.tensor_fasciae_latae.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.tensor_fasciae_latae.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.teres_major.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.teres_major.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.teres_minor.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.teres_minor.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.thyro_epiglottic_part_of_thyro_arytenoid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.thyro_epiglottic_part_of_thyro_arytenoid.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.thyrohyoid.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.thyrohyoid.right"
+    },
+    {
+      "basis": "Curated surface-family rule: tibialis anterior.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.tibialis_anterior.left"
+    },
+    {
+      "basis": "Curated surface-family rule: tibialis anterior.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.tibialis_anterior.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.tibialis_posterior.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a deep layer.",
+      "confidence": "source_explicit",
+      "display_depth": "deep",
+      "id": "muscle.tibialis_posterior.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.transverse_arytenoid"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.transverse_head_of_adductor_hallucis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.transverse_head_of_adductor_hallucis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.transverse_head_of_adductor_pollicis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.transverse_head_of_adductor_pollicis.right"
+    },
+    {
+      "basis": "Curated surface-family rule: trapezius.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.transverse_part_of_trapezius.left"
+    },
+    {
+      "basis": "Curated surface-family rule: trapezius.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.transverse_part_of_trapezius.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.transversus_abdominis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.transversus_abdominis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.transversus_thoracis.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.transversus_thoracis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.trochlea_of_superior_oblique.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.trochlea_of_superior_oblique.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.ulnar_head_of_extensor_carpi_ulnaris.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.ulnar_head_of_extensor_carpi_ulnaris.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.ulnar_head_of_flexor_carpi_ulnaris.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.ulnar_head_of_flexor_carpi_ulnaris.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.vastus_intermedius.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.vastus_intermedius.right"
+    },
+    {
+      "basis": "Curated surface-family rule: vastus lateralis.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.vastus_lateralis.left"
+    },
+    {
+      "basis": "Curated surface-family rule: vastus lateralis.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.vastus_lateralis.right"
+    },
+    {
+      "basis": "Curated surface-family rule: vastus medialis.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.vastus_medialis.left"
+    },
+    {
+      "basis": "Curated surface-family rule: vastus medialis.",
+      "confidence": "curated_visualization_rule",
+      "display_depth": "superficial",
+      "id": "muscle.vastus_medialis.right"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.ventral_parts_of_lateral_intertransversarii_lumborum.left"
+    },
+    {
+      "basis": "Not explicitly identified as superficial; retained in the deep display layer so anatomy is never omitted.",
+      "confidence": "conservative_visualization_default",
+      "display_depth": "deep",
+      "id": "muscle.ventral_parts_of_lateral_intertransversarii_lumborum.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.zygomaticus_major.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.zygomaticus_major.right"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.zygomaticus_minor.left"
+    },
+    {
+      "basis": "Z-Anatomy name or collection explicitly identifies a superficial layer.",
+      "confidence": "source_explicit",
+      "display_depth": "superficial",
+      "id": "muscle.zygomaticus_minor.right"
+    }
+  ]
+}

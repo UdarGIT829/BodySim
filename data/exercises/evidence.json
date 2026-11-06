@@ -1,0 +1,17 @@
+[
+  {
+    "id": "rule.knee_extension.primary_mover",
+    "source_type": "kinematic_rule",
+    "description": "Muscles with primary knee extension action vector are primary movers during leg extension and squat extension phases."
+  },
+  {
+    "id": "rule.hip_extension.primary_mover",
+    "source_type": "kinematic_rule",
+    "description": "Muscles spanning hip joint with posterior moment arms are primary/synergist movers during hip extension."
+  },
+  {
+    "id": "evidence.opensim.rajagopal_2016.squat",
+    "source_type": "simulation_paper",
+    "description": "Rajagopal et al. 2016 full-body lower-extremity musculoskeletal model dynamic force outputs."
+  }
+]

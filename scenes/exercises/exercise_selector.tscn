@@ -1,0 +1,81 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/exercises/exercise_selector.gd" id="1_selector"]
+[ext_resource type="PackedScene" path="res://scenes/exercises/exercise_image_modal.tscn" id="2_modal"]
+
+[node name="ExerciseSelector" type="PanelContainer"]
+custom_minimum_size = Vector2(570, 0)
+script = ExtResource("1_selector")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 12
+
+[node name="Column" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Title" type="Label" parent="Margin/Column"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Exercise Visualizer"
+
+[node name="Subtitle" type="Label" parent="Margin/Column"]
+layout_mode = 2
+modulate = Color(0.72549, 0.780392, 0.835294, 1)
+text = "Browse the complete catalog. Green variants have heatmaps; amber records are catalog only."
+autowrap_mode = 2
+
+[node name="SearchInput" type="LineEdit" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Search 874 exercises, variants, instructions, or equipment…"
+clear_button_enabled = true
+
+[node name="ResultLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+modulate = Color(0.572549, 0.654902, 0.72549, 1)
+
+[node name="ExerciseTree" type="Tree" parent="Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(540, 260)
+layout_mode = 2
+columns = 2
+column_titles_visible = true
+hide_root = true
+allow_rmb_select = true
+
+[node name="DetailsLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(540, 82)
+layout_mode = 2
+text = "Select an exercise to render its normalized muscle exposure."
+autowrap_mode = 2
+
+[node name="AffectedSeparator" type="HSeparator" parent="Margin/Column"]
+layout_mode = 2
+
+[node name="AffectedHeading" type="Label" parent="Margin/Column"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Affected structures"
+
+[node name="AffectedSummaryLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+modulate = Color(0.572549, 0.654902, 0.72549, 1)
+text = "Select an exercise to inspect its engagement profile."
+
+[node name="AffectedTree" type="Tree" parent="Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(540, 245)
+layout_mode = 2
+columns = 3
+column_titles_visible = true
+hide_root = true
+
+[node name="ExerciseImageModal" parent="." instance=ExtResource("2_modal")]

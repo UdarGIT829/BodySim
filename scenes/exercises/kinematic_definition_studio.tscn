@@ -1,0 +1,469 @@
+[gd_scene format=3 uid="uid://dkdf5py3mofap"]
+
+[ext_resource type="Script" uid="uid://bwpew5xjdmm1t" path="res://src/exercises/authoring/definition_studio_controller.gd" id="1_studio"]
+[ext_resource type="PackedScene" path="res://scenes/exercises/openai_authoring_provider.tscn" id="2_provider"]
+[ext_resource type="PackedScene" path="res://scenes/exercises/candidate_trace_gate.tscn" id="3_gate"]
+
+[node name="KinematicDefinitionStudio" type="Control" unique_id=274420018]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_studio")
+
+[node name="Background" type="ColorRect" parent="." unique_id=319425830]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.035, 0.047, 0.065, 1)
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=2083744294]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 14
+
+[node name="Column" type="VBoxContainer" parent="Margin" unique_id=1342187421]
+layout_mode = 2
+theme_override_constants/separation = 9
+
+[node name="Header" type="HBoxContainer" parent="Margin/Column" unique_id=258716084]
+layout_mode = 2
+
+[node name="Titles" type="VBoxContainer" parent="Margin/Column/Header" unique_id=2004757343]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="Margin/Column/Header/Titles" unique_id=1028654787]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Kinematic Definition Studio"
+
+[node name="Subtitle" type="Label" parent="Margin/Column/Header/Titles" unique_id=810356261]
+modulate = Color(0.65, 0.72, 0.8, 1)
+layout_mode = 2
+text = "Phase 2B · LLM proposals remain editable drafts until the deterministic candidate gate passes."
+
+[node name="KeyNotice" type="Label" parent="Margin/Column/Header" unique_id=485282217]
+modulate = Color(0.9, 0.67, 0.34, 1)
+layout_mode = 2
+text = "Internal key: Inspector → scene root
+Clear it before sharing or committing."
+horizontal_alignment = 2
+
+[node name="ModelRow" type="HBoxContainer" parent="Margin/Column"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ModelLabel" type="Label" parent="Margin/Column/ModelRow"]
+layout_mode = 2
+text = "Authoring model"
+
+[node name="ModelOption" type="OptionButton" parent="Margin/Column/ModelRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+
+[node name="CustomModelInput" type="LineEdit" parent="Margin/Column/ModelRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(230, 0)
+layout_mode = 2
+placeholder_text = "Exact OpenAI model ID"
+
+[node name="ActiveModelLabel" type="Label" parent="Margin/Column/ModelRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+modulate = Color(0.55, 0.73, 0.86, 1)
+text = "Requests will use:"
+
+[node name="Workspace" type="HSplitContainer" parent="Margin/Column" unique_id=610365272]
+layout_mode = 2
+size_flags_vertical = 3
+split_offsets = PackedInt32Array(345)
+split_offset = 345
+
+[node name="CatalogPanel" type="PanelContainer" parent="Margin/Column/Workspace" unique_id=1022068306]
+custom_minimum_size = Vector2(330, 0)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="Margin/Column/Workspace/CatalogPanel" unique_id=1194967742]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Column" type="VBoxContainer" parent="Margin/Column/Workspace/CatalogPanel/Margin" unique_id=269344316]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Heading" type="Label" parent="Margin/Column/Workspace/CatalogPanel/Margin/Column" unique_id=474924358]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "1 · Source catalog"
+
+[node name="SearchInput" type="LineEdit" parent="Margin/Column/Workspace/CatalogPanel/Margin/Column" unique_id=1914951418]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Search catalog-only exercises…"
+clear_button_enabled = true
+
+[node name="CatalogCount" type="Label" parent="Margin/Column/Workspace/CatalogPanel/Margin/Column" unique_id=1614777828]
+unique_name_in_owner = true
+modulate = Color(0.6, 0.68, 0.76, 1)
+layout_mode = 2
+
+[node name="CatalogTree" type="Tree" parent="Margin/Column/Workspace/CatalogPanel/Margin/Column" unique_id=1221982847]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(310, 255)
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+column_titles_visible = true
+hide_root = true
+
+[node name="SourceTitle" type="Label" parent="Margin/Column/Workspace/CatalogPanel/Margin/Column" unique_id=1592256950]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "No source selected"
+autowrap_mode = 2
+
+[node name="SourceMetadata" type="Label" parent="Margin/Column/Workspace/CatalogPanel/Margin/Column" unique_id=273782771]
+unique_name_in_owner = true
+modulate = Color(0.6, 0.68, 0.76, 1)
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="Images" type="HBoxContainer" parent="Margin/Column/Workspace/CatalogPanel/Margin/Column" unique_id=1155722196]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="SourceImageA" type="TextureRect" parent="Margin/Column/Workspace/CatalogPanel/Margin/Column/Images" unique_id=1835806288]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 145)
+layout_mode = 2
+size_flags_horizontal = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SourceImageB" type="TextureRect" parent="Margin/Column/Workspace/CatalogPanel/Margin/Column/Images" unique_id=1341492042]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 145)
+layout_mode = 2
+size_flags_horizontal = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="InstructionsLabel" type="Label" parent="Margin/Column/Workspace/CatalogPanel/Margin/Column" unique_id=1605445307]
+layout_mode = 2
+text = "Numbered source instructions"
+
+[node name="SourceInstructions" type="RichTextLabel" parent="Margin/Column/Workspace/CatalogPanel/Margin/Column" unique_id=1847730489]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 145)
+layout_mode = 2
+bbcode_enabled = true
+
+[node name="DefinitionAndEvidence" type="VSplitContainer" parent="Margin/Column/Workspace" unique_id=1598885865]
+layout_mode = 2
+size_flags_horizontal = 3
+split_offsets = PackedInt32Array(610)
+split_offset = 610
+
+[node name="DefinitionPanel" type="PanelContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence" unique_id=2082533745]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel" unique_id=1575296530]
+layout_mode = 2
+theme_override_constants/margin_left = 11
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 11
+theme_override_constants/margin_bottom = 10
+
+[node name="Column" type="VBoxContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin" unique_id=2011522340]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Heading" type="Label" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column" unique_id=9151248]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "2 · Editable BodySim definition"
+
+[node name="IdentityGrid" type="GridContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column" unique_id=1061218834]
+layout_mode = 2
+columns = 4
+
+[node name="IdLabel" type="Label" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=1635371560]
+layout_mode = 2
+text = "Canonical ID"
+
+[node name="IdInput" type="LineEdit" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=751458909]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(245, 0)
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=2055199283]
+layout_mode = 2
+text = "Display name"
+
+[node name="NameInput" type="LineEdit" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=1382193052]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+
+[node name="VariantLabel" type="Label" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=1922088065]
+layout_mode = 2
+text = "Variant"
+
+[node name="VariantInput" type="LineEdit" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=1035034065]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="AliasesLabel" type="Label" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=2076851400]
+layout_mode = 2
+text = "Aliases"
+
+[node name="AliasesInput" type="LineEdit" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=1802273438]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "comma separated"
+
+[node name="FamiliesLabel" type="Label" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=1140960603]
+layout_mode = 2
+text = "Movement families"
+
+[node name="FamiliesInput" type="LineEdit" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=1924849161]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "e.g. squat, hip_hinge"
+
+[node name="LateralityLabel" type="Label" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=976299424]
+layout_mode = 2
+text = "Laterality"
+
+[node name="LateralityOption" type="OptionButton" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=830831903]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="InputLabel" type="Label" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=726896852]
+layout_mode = 2
+text = "Input mode"
+
+[node name="InputModeOption" type="OptionButton" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=386747843]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ChainLabel" type="Label" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=1698052289]
+layout_mode = 2
+text = "Kinetic chain"
+
+[node name="ChainOption" type="OptionButton" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid" unique_id=686210756]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Mechanics" type="HSplitContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column" unique_id=1121504376]
+layout_mode = 2
+size_flags_vertical = 3
+split_offsets = PackedInt32Array(480)
+split_offset = 480
+
+[node name="ActionColumn" type="VBoxContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/Mechanics" unique_id=207162125]
+layout_mode = 2
+
+[node name="ActionHeading" type="Label" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/Mechanics/ActionColumn" unique_id=84960870]
+layout_mode = 2
+text = "Primary joint actions · exertion phase"
+
+[node name="ActionPicker" type="HBoxContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/Mechanics/ActionColumn" unique_id=1111969118]
+layout_mode = 2
+
+[node name="JointOption" type="OptionButton" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/Mechanics/ActionColumn/ActionPicker" unique_id=324355438]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MovementOption" type="OptionButton" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/Mechanics/ActionColumn/ActionPicker" unique_id=1942574266]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AddActionButton" type="Button" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/Mechanics/ActionColumn/ActionPicker" unique_id=69457510]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Add"
+
+[node name="RemoveActionButton" type="Button" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/Mechanics/ActionColumn/ActionPicker" unique_id=1370839791]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Remove"
+
+[node name="ActionsTree" type="Tree" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/Mechanics/ActionColumn" unique_id=1355924488]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 155)
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+column_titles_visible = true
+hide_root = true
+
+[node name="DemandColumn" type="VBoxContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/Mechanics" unique_id=1008227257]
+layout_mode = 2
+
+[node name="StabilizationLabel" type="Label" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/Mechanics/DemandColumn" unique_id=1254401268]
+layout_mode = 2
+text = "Stabilization demands · multi-select"
+
+[node name="StabilizationList" type="ItemList" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/Mechanics/DemandColumn" unique_id=892244347]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 175)
+layout_mode = 2
+size_flags_vertical = 3
+select_mode = 1
+
+[node name="ContextLabel" type="Label" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column" unique_id=1319087084]
+layout_mode = 2
+text = "Additional context · setup clarifications or feedback from a failed review"
+
+[node name="ContextInput" type="TextEdit" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column" unique_id=407986056]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+placeholder_text = "Explain grip, stance, apparatus, range of motion, reviewer corrections, or ambiguity here…"
+wrap_mode = 1
+
+[node name="EvidencePanel" type="PanelContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence" unique_id=2010999025]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+
+[node name="Tabs" type="TabContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel" unique_id=611383659]
+unique_name_in_owner = true
+layout_mode = 2
+current_tab = 0
+
+[node name="Interpretation" type="VBoxContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs" unique_id=2096585344]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ClassificationLabel" type="Label" parent="Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs/Interpretation" unique_id=292629634]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Not generated"
+
+[node name="RationaleText" type="RichTextLabel" parent="Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs/Interpretation" unique_id=1124098233]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Generate a proposal or build the definition manually."
+
+[node name="Advanced JSON" type="VBoxContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs" unique_id=574720194]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="JsonEditor" type="TextEdit" parent="Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs/Advanced JSON" unique_id=1578305220]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="JsonActions" type="HBoxContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs/Advanced JSON" unique_id=213723843]
+layout_mode = 2
+
+[node name="SyncJsonButton" type="Button" parent="Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs/Advanced JSON/JsonActions" unique_id=1077698639]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Form → JSON"
+
+[node name="ApplyJsonButton" type="Button" parent="Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs/Advanced JSON/JsonActions" unique_id=1958469632]
+unique_name_in_owner = true
+layout_mode = 2
+text = "JSON → form"
+
+[node name="CandidateGate" type="VBoxContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs" unique_id=896388019]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="TraceSummaryLabel" type="Label" parent="Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs/CandidateGate"]
+unique_name_in_owner = true
+layout_mode = 2
+modulate = Color(0.55, 0.73, 0.86, 1)
+text = "Tracer has not run for this draft."
+autowrap_mode = 2
+
+[node name="ValidationTree" type="Tree" parent="Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs/CandidateGate" unique_id=757057192]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+column_titles_visible = true
+hide_root = true
+
+[node name="Draft diff" type="VBoxContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs" unique_id=1759869141]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="DiffText" type="RichTextLabel" parent="Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs/Draft diff" unique_id=340072590]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "No saved revision exists for this source."
+
+[node name="Footer" type="HBoxContainer" parent="Margin/Column" unique_id=2061743902]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="GenerateButton" type="Button" parent="Margin/Column/Footer" unique_id=695083419]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Generate / Regenerate"
+
+[node name="ValidateButton" type="Button" parent="Margin/Column/Footer" unique_id=834361767]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Validate"
+
+[node name="SaveDraftButton" type="Button" parent="Margin/Column/Footer" unique_id=1935840250]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save draft"
+
+[node name="DiscardButton" type="Button" parent="Margin/Column/Footer" unique_id=1575740148]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Discard changes"
+
+[node name="StatusLabel" type="Label" parent="Margin/Column/Footer" unique_id=1327873113]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Select a catalog-only exercise to begin."
+horizontal_alignment = 1
+
+[node name="SubmitButton" type="Button" parent="Margin/Column/Footer" unique_id=1937587813]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Submit definition candidate"
+
+[node name="OpenAIAuthoringProvider" parent="." unique_id=89833761 instance=ExtResource("2_provider")]
+
+[node name="CandidateTraceGate" parent="." instance=ExtResource("3_gate")]

@@ -1,0 +1,22 @@
+{
+  "asset_role": "monolithic_catalog_extraction_check",
+  "canonical_glb_bytes": 30410776,
+  "canonical_glb_path": "build/anatomy/preview/canonical_preview.glb",
+  "canonical_glb_sha256": "2152726ab0365e792043b931c3b780bd628ff2f6d36aafcac1738c884b6a3498",
+  "canonical_mesh_nodes": 960,
+  "canonical_structure_nodes": 960,
+  "canonical_unique_meshes": 511,
+  "catalog_structures": 960,
+  "catalog_system_counts": {
+    "bone": 209,
+    "cartilage": 31,
+    "dental_structure": 28,
+    "musculoskeletal_connective_tissue": 217,
+    "skeletal_feature": 9,
+    "skeletal_muscle": 466
+  },
+  "runtime_pipeline": "phase0b_regional_glbs",
+  "schema_version": 1,
+  "scope_exclusion_status": "approved_non_blocking_scope_exclusions",
+  "scope_exclusions": 42
+}

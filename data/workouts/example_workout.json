@@ -1,0 +1,24 @@
+{
+  "session_id": "session_2026_08_10_legs_and_pull",
+  "name": "Lower Body & Vertical Pull Strength Session",
+  "date": "2026-08-10T12:00:00Z",
+  "notes": "MVP sample workout for testing Kinematic Tracer exposure aggregation.",
+  "exercises": [
+    {
+      "exercise_id": "exercise.barbell_back_squat.high_bar",
+      "sets": [
+        {"repetitions": 8, "load_kg": 100.0, "rpe": 8.0},
+        {"repetitions": 8, "load_kg": 100.0, "rpe": 8.5},
+        {"repetitions": 6, "load_kg": 105.0, "rpe": 9.0}
+      ]
+    },
+    {
+      "exercise_id": "exercise.pull_up.pronated",
+      "sets": [
+        {"repetitions": 10, "load_kg": 0.0, "rpe": 8.0},
+        {"repetitions": 8, "load_kg": 0.0, "rpe": 8.5},
+        {"repetitions": 7, "load_kg": 0.0, "rpe": 9.0}
+      ]
+    }
+  ]
+}

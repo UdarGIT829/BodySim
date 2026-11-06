@@ -1,0 +1,25 @@
+{
+  "$id": "bodysim.kinematic_review_response.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decision", "summary", "blocking_findings", "non_blocking_findings", "confidence"],
+  "properties": {
+    "decision": {"type": "string", "enum": ["accept", "reject"]},
+    "summary": {"type": "string"},
+    "blocking_findings": {"type": "array", "items": {"$ref": "#/$defs/finding"}},
+    "non_blocking_findings": {"type": "array", "items": {"$ref": "#/$defs/finding"}},
+    "confidence": {"type": "string", "enum": ["high", "medium", "low"]}
+  },
+  "$defs": {
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["field_path", "finding", "suggested_correction"],
+      "properties": {
+        "field_path": {"type": "string"},
+        "finding": {"type": "string"},
+        "suggested_correction": {"type": "string"}
+      }
+    }
+  }
+}

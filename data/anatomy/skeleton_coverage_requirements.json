@@ -1,0 +1,45 @@
+{
+  "requirements": [
+    {
+      "id": "skull_22_bones",
+      "required_ids": [
+        "bone.ethmoid_bone", "bone.frontal_bone", "bone.occipital_bone", "bone.sphenoid_bone",
+        "bone.parietal_bone.left", "bone.parietal_bone.right", "bone.temporal_bone.left", "bone.temporal_bone.right",
+        "bone.mandible", "bone.vomer", "bone.inferior_nasal_concha_bone.left", "bone.inferior_nasal_concha_bone.right",
+        "bone.lacrimal_bone.left", "bone.lacrimal_bone.right", "bone.maxilla.left", "bone.maxilla.right",
+        "bone.nasal_bone.left", "bone.nasal_bone.right", "bone.palatine_bone.left", "bone.palatine_bone.right",
+        "bone.zygomatic_bone.left", "bone.zygomatic_bone.right"
+      ]
+    },
+    {
+      "id": "auditory_ossicles",
+      "required_ids": ["bone.incus.left", "bone.incus.right", "bone.malleus.left", "bone.malleus.right", "bone.stapes.left", "bone.stapes.right"]
+    },
+    {"id": "hyoid", "required_ids": ["bone.hyoid_bone"]},
+    {"exact_count": 24, "id": "presacral_vertebrae", "id_regex": "^bone\\.(atlas_c1|axis_c2|vertebra_[ctl][0-9]+)$"},
+    {"id": "sacrum_and_coccyx", "required_ids": ["bone.sacrum", "bone.coccyx"]},
+    {"exact_count": 24, "id": "ribs", "id_regex": "^bone\\..+_rib\\.(left|right)$"},
+    {"id": "sternum_components", "required_ids": ["bone.manubrium_of_sternum", "bone.body_of_sternum", "skeletal_feature.xiphoid_process"]},
+    {"id": "pectoral_girdles", "required_ids": ["bone.clavicle.left", "bone.clavicle.right", "bone.scapula.left", "bone.scapula.right"]},
+    {"id": "upper_limb_long_bones", "required_ids": ["bone.humerus.left", "bone.humerus.right", "bone.radius.left", "bone.radius.right", "bone.ulna.left", "bone.ulna.right"]},
+    {"exact_count": 16, "id": "carpal_bones", "id_regex": "^bone\\.(capitate|hamate|lunate|pisiform|scaphoid|trapezium|trapezoid|triquetrum)_bone\\.(left|right)$"},
+    {"exact_count": 10, "id": "metacarpal_bones", "id_regex": "^bone\\..+_metacarpal_bone\\.(left|right)$"},
+    {"exact_count": 28, "id": "hand_phalanges", "id_regex": "^bone\\..+_phalanx_of_.+_finger_of_hand\\.(left|right)$"},
+    {"id": "pelvic_girdle", "required_ids": ["bone.hip_bone.left", "bone.hip_bone.right"]},
+    {"id": "lower_limb_long_bones", "required_ids": ["bone.femur.left", "bone.femur.right", "bone.patella.left", "bone.patella.right", "bone.tibia.left", "bone.tibia.right", "bone.fibula.left", "bone.fibula.right"]},
+    {"exact_count": 14, "id": "tarsal_bones", "id_regex": "^bone\\.(calcaneus|cuboid_bone|intermediate_cuneiform_bone|lateral_cuneiform_bone|medial_cuneiform_bone|navicular_bone|talus)\\.(left|right)$"},
+    {"exact_count": 10, "id": "metatarsal_bones", "id_regex": "^bone\\..+_metatarsal_bone\\.(left|right)$"},
+    {"exact_count": 28, "id": "foot_phalanges", "id_regex": "^bone\\..+_phalanx_of_.+_finger_of_foot\\.(left|right)$"}
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "citation": "FIPAT. Terminologia Anatomica. 2nd ed. FIPAT, 2019.",
+      "url": "https://fipat.library.dal.ca/wp-content/uploads/2020/09/FIPAT-TA2-Part-2.pdf"
+    },
+    {
+      "citation": "OpenStax, Anatomy and Physiology, 7.1 Divisions of the Skeletal System.",
+      "url": "https://openstax.org/books/anatomy-and-physiology/pages/7-1-divisions-of-the-skeletal-system"
+    }
+  ]
+}

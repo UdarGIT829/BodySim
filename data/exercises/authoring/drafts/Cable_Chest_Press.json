@@ -1,0 +1,151 @@
+{
+  "additional_context": "This is back-supported",
+  "authoring_response": {
+    "assumptions": [
+      "The demonstrated and requested variant is the bilateral, seated, back-supported cable chest press; the explicitly mentioned incline, decline, unsupported-back, and alternating-hand alternatives are excluded.",
+      "The concentric phase is from the elbows-flexed start position to handles pressed forward and together, as shown.",
+      "The shoulders move primarily through horizontal adduction during the press; the required retracted-scapula instruction is represented as scapular anchoring rather than an unsupported scapular joint-action substitution."
+    ],
+    "classification": "supported",
+    "classification_reasons": [
+      "The instructions, back-supported context, and contact sheet consistently show a seated bilateral cable press with two independently handled cables, elbows extending while the hands converge in front of the torso.",
+      "All primary concentric joint actions and required stabilization demands are representable by the supplied vocabulary."
+    ],
+    "field_confidence": {
+      "input_mode": "high",
+      "kinetic_chain_type": "high",
+      "laterality": "high",
+      "primary_joint_actions": "high",
+      "stabilization_demands": "high",
+      "variant": "high"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "cable_chest_press",
+        "seated_back-supported_cable_chest_press"
+      ],
+      "id": "exercise.cable_chest_press.seated_back_supported_bilateral",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "primary_joint_actions": [
+          {
+            "joint": "glenohumeral_joint",
+            "movement": "horizontal_adduction"
+          },
+          {
+            "joint": "elbow_joint",
+            "movement": "extension"
+          }
+        ],
+        "stabilization_demands": [
+          "postural_stabilization",
+          "scapular_anchoring",
+          "scapular_retraction_stability"
+        ]
+      },
+      "laterality": "bilateral",
+      "movement_families": [
+        "horizontal_push",
+        "elbow_extension"
+      ],
+      "name": "Cable Chest Press",
+      "variant": "seated_back_supported_bilateral"
+    },
+    "questions_requiring_context": []
+  },
+  "catalog_id": "catalog.free_exercise_db.Cable_Chest_Press",
+  "format_version": 1.0,
+  "provider_metadata": {
+    "input_contact_sheet": {
+      "api_image_inputs": 1.0,
+      "frame_count": 2.0,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Cable_Chest_Press/0.jpg",
+        "Cable_Chest_Press/1.jpg"
+      ]
+    },
+    "model": "gpt-5.6-terra",
+    "provider": "openai",
+    "raw_authoring_response": {
+      "assumptions": [
+        "The demonstrated and requested variant is the bilateral, seated, back-supported cable chest press; the explicitly mentioned incline, decline, unsupported-back, and alternating-hand alternatives are excluded.",
+        "The concentric phase is from the elbows-flexed start position to handles pressed forward and together, as shown.",
+        "The shoulders move primarily through horizontal adduction during the press; the required retracted-scapula instruction is represented as scapular anchoring rather than an unsupported scapular joint-action substitution."
+      ],
+      "classification": "supported",
+      "classification_reasons": [
+        "The instructions, back-supported context, and contact sheet consistently show a seated bilateral cable press with two independently handled cables, elbows extending while the hands converge in front of the torso.",
+        "All primary concentric joint actions and required stabilization demands are representable by the supplied vocabulary."
+      ],
+      "field_confidence": {
+        "input_mode": "high",
+        "kinetic_chain_type": "high",
+        "laterality": "high",
+        "primary_joint_actions": "high",
+        "stabilization_demands": "high",
+        "variant": "high"
+      },
+      "proposed_definition": {
+        "additional_movement_families": [
+          "elbow_extension"
+        ],
+        "aliases": [
+          "Cable Chest Press",
+          "Seated Back-Supported Cable Chest Press"
+        ],
+        "id": "exercise.cable_chest_press.seated_back_supported_bilateral",
+        "input_mode": "repetitions",
+        "kinematic_profile": {
+          "kinetic_chain_type": "open_chain",
+          "primary_joint_actions": [
+            {
+              "joint": "glenohumeral_joint",
+              "movement": "horizontal_adduction"
+            },
+            {
+              "joint": "elbow_joint",
+              "movement": "extension"
+            }
+          ],
+          "stabilization_demands": [
+            "scapular_anchoring",
+            "scapular_retraction_stability",
+            "postural_stabilization"
+          ]
+        },
+        "laterality": "bilateral",
+        "name": "Cable Chest Press",
+        "primary_movement_family": "horizontal_push",
+        "variant": "seated_back_supported_bilateral"
+      },
+      "questions_requiring_context": []
+    },
+    "response_id": "resp_0381529df92627da006a7a9988c684819a889050ae1c9eb260",
+    "status": "completed",
+    "usage": {
+      "input_tokens": 2803.0,
+      "input_tokens_details": {
+        "cache_write_tokens": 1381.0,
+        "cached_tokens": 1419.0
+      },
+      "output_tokens": 377.0,
+      "output_tokens_details": {
+        "reasoning_tokens": 0.0
+      },
+      "total_tokens": 3180.0
+    }
+  },
+  "rejection": {
+    "member": "human_owner",
+    "recorded_at_unix": 1786423963.73938,
+    "stage": "unfrozen_candidate",
+    "summary": "Made prior to Phase 2C."
+  },
+  "saved_at_unix": 1786419610.41014,
+  "source_id": "Cable_Chest_Press",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "review_rejected",
+  "validation_errors": []
+}

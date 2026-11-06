@@ -1,0 +1,88 @@
+{
+  "dispositions": {
+    "A04.1.03.032": {
+      "evidence_ids": ["muscle.levator_nasolabialis.left", "muscle.levator_nasolabialis.right"],
+      "note": "Catalog uses the official regularized synonym levator nasolabialis.",
+      "status": "represented"
+    },
+    "A04.1.03.002": {
+      "evidence_ids": ["muscle.frontalis.left", "muscle.frontalis.right", "muscle.occipitalis.left", "muscle.occipitalis.right", "muscle.temporoparietalis.left", "muscle.temporoparietalis.right"],
+      "note": "Composite epicranial muscle is represented by its selectable components.",
+      "status": "represented_by_components"
+    },
+    "A04.1.03.003": {
+      "evidence_ids": ["muscle.frontalis.left", "muscle.frontalis.right", "muscle.occipitalis.left", "muscle.occipitalis.right"],
+      "note": "Occipitofrontalis is represented by its frontal and occipital bellies.",
+      "status": "represented_by_components"
+    },
+    "A04.1.03.019": {"note": "No candidate or alternate source object exists in the complete Z-Anatomy object index.", "status": "excluded_phase0_reference_only"},
+    "A04.1.03.020": {"note": "No candidate or alternate source object exists in the complete Z-Anatomy object index.", "status": "excluded_phase0_reference_only"},
+    "A04.1.03.021": {"note": "No candidate or alternate source object exists in the complete Z-Anatomy object index.", "status": "excluded_phase0_reference_only"},
+    "A04.1.03.022": {"note": "No candidate or alternate source object exists in the complete Z-Anatomy object index.", "status": "excluded_phase0_reference_only"},
+    "A04.1.03.027": {"note": "No candidate or alternate source object exists in the complete Z-Anatomy object index.", "status": "excluded_phase0_reference_only"},
+    "A04.1.03.036": {"note": "No candidate or alternate source object exists in the complete Z-Anatomy object index.", "status": "excluded_phase0_reference_only"},
+    "A04.3.01.012": {"note": "The source has no independently selectable anterior cervical intertransversarii.", "status": "excluded_phase0_reference_only"},
+    "A04.3.01.013": {"note": "The source has no independently selectable lateral posterior cervical intertransversarii.", "status": "excluded_phase0_reference_only"},
+    "A04.3.01.014": {
+      "evidence_ids": ["muscle.dorsal_parts_of_lateral_intertransversarii_lumborum.left", "muscle.dorsal_parts_of_lateral_intertransversarii_lumborum.right", "muscle.ventral_parts_of_lateral_intertransversarii_lumborum.left", "muscle.ventral_parts_of_lateral_intertransversarii_lumborum.right"],
+      "note": "The lateral lumbar group is represented at finer dorsal/ventral granularity.",
+      "status": "represented_by_components"
+    },
+    "A04.3.02.209": {"note": "Spinalis capitis exists, but the distinct semispinalis capitis does not.", "status": "excluded_phase0_reference_only"},
+    "A04.3.02.212": {
+      "evidence_ids": ["muscle.rotatores.left", "muscle.rotatores.right"],
+      "note": "Z-Anatomy combines regional rotatores into one selectable structure per side.",
+      "status": "represented_lower_granularity"
+    },
+    "A04.3.02.213": {
+      "evidence_ids": ["muscle.rotatores.left", "muscle.rotatores.right"],
+      "note": "Z-Anatomy combines regional rotatores into one selectable structure per side.",
+      "status": "represented_lower_granularity"
+    },
+    "A04.3.02.402": {"note": "Only lateral lumbar intertransversarii are present in the source.", "status": "excluded_phase0_reference_only"},
+    "A04.3.02.403": {"note": "No thoracic intertransversarii candidate exists in the source.", "status": "excluded_phase0_reference_only"},
+    "A04.3.02.404": {"note": "No medial posterior cervical intertransversarii candidate exists in the source.", "status": "excluded_phase0_reference_only"},
+    "A04.4.01.015": {"note": "No subcostales muscle object exists; similarly named source objects are blood vessels.", "status": "excluded_phase0_reference_only"},
+    "A04.5.01.018": {"note": "Sex-specific skeletal muscle is absent from the selected baseline and excluded from Phase 0.", "status": "excluded_phase0_reference_only"},
+    "A04.5.03.017": {"note": "Pelvic visceral smooth/fibromuscular structure is outside BodySim's skeletal-muscle scope.", "status": "out_of_scope_non_skeletal"},
+    "A04.5.03.014": {"note": "No pubovesicalis mesh exists in the complete source index; retain as a gap pending definitive tissue-scope review.", "status": "excluded_phase0_reference_only"},
+    "A04.5.04.002": {
+      "evidence_ids": ["muscle.iliococcygeus.left", "muscle.iliococcygeus.right", "muscle.pubo_analis.left", "muscle.pubo_analis.right", "muscle.pubococcygeus.left", "muscle.pubococcygeus.right"],
+      "note": "The levator ani composite is represented by available subdivisions; separately missing official subdivisions remain explicit gaps.",
+      "status": "represented_by_components"
+    },
+    "A04.5.04.004": {"note": "Named levator ani subdivision is absent from the source.", "status": "excluded_phase0_reference_only"},
+    "A04.5.04.005": {"note": "Sex-specific levator ani subdivision is absent from the source.", "status": "excluded_phase0_reference_only"},
+    "A04.5.04.007": {"note": "Named levator ani subdivision is absent from the source.", "status": "excluded_phase0_reference_only"},
+    "A04.5.05.001": {"note": "Taxonomic group redirected to individually audited perineal structures; it is not a separate mesh requirement.", "status": "not_separate_structure"},
+    "A04.6.02.024": {"note": "No articularis cubiti object exists in the complete source index.", "status": "excluded_phase0_reference_only"},
+    "A04.6.02.053": {"note": "No palmaris brevis object exists in the complete source index.", "status": "excluded_phase0_reference_only"},
+    "A04.6.02.063": {
+      "evidence_ids": ["muscle.flexor_digiti_minimi_of_hand.left", "muscle.flexor_digiti_minimi_of_hand.right"],
+      "note": "Catalog uses a region-qualified name for the hand muscle.",
+      "status": "represented"
+    },
+    "A04.7.02.002": {
+      "evidence_ids": ["muscle.iliacus.left", "muscle.iliacus.right", "muscle.psoas_major.left", "muscle.psoas_major.right"],
+      "note": "Iliopsoas is represented by its iliacus and psoas major components.",
+      "status": "represented_by_components"
+    },
+    "A04.7.02.017": {
+      "evidence_ids": ["muscle.rectus_femoris.left", "muscle.rectus_femoris.right", "muscle.vastus_intermedius.left", "muscle.vastus_intermedius.right", "muscle.vastus_lateralis.left", "muscle.vastus_lateralis.right", "muscle.vastus_medialis.left", "muscle.vastus_medialis.right"],
+      "note": "Quadriceps femoris is represented by all four component muscles.",
+      "status": "represented_by_components"
+    },
+    "A04.7.02.024": {"note": "Only attachment overlays exist; there is no selectable muscle mesh.", "status": "excluded_phase0_reference_only"},
+    "A04.7.02.066": {
+      "evidence_ids": ["muscle.flexor_digiti_minimi_of_foot.left", "muscle.flexor_digiti_minimi_of_foot.right"],
+      "note": "Catalog uses a region-qualified name for the foot muscle.",
+      "status": "represented"
+    },
+    "A04.7.02.043": {
+      "evidence_ids": ["muscle.lateral_head_of_gastrocnemius.left", "muscle.lateral_head_of_gastrocnemius.right", "muscle.medial_head_of_gastrocnemius.left", "muscle.medial_head_of_gastrocnemius.right", "muscle.soleus.left", "muscle.soleus.right"],
+      "note": "Triceps surae is represented by gastrocnemius heads and soleus.",
+      "status": "represented_by_components"
+    }
+  },
+  "schema_version": 1
+}

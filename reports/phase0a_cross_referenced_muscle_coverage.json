@@ -1,0 +1,801 @@
+{
+  "catalog_sha256": "7c8cb6813422b84e113472709875169407c1f54a1230170b766de9cebfde7746",
+  "reference_source": {
+    "citation": "FIPAT/IFAA Terminologia Anatomica TA98 online partonomic chapters",
+    "terms_license": "public_domain",
+    "urls": [
+      "https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/TA98%20EN/05%20TA98%20EN.htm",
+      "https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/TA98%20EN/06%20TA98%20EN.htm",
+      "https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/TA98%20EN/09%20TA98%20EN.htm",
+      "https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/TA98%20EN/15%20TA98%20EN.htm"
+    ]
+  },
+  "release_blocking_gaps": 0,
+  "results": [
+    {
+      "code": "A05.1.04.101",
+      "english": "Genioglossus",
+      "english_aliases": [
+        "Genioglossus"
+      ],
+      "evidence_ids": [
+        "muscle.genioglossus.left",
+        "muscle.genioglossus.right"
+      ],
+      "group": "tongue",
+      "latin": "M. genioglossus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A05.1.04.102",
+      "english": "Hyoglossus",
+      "english_aliases": [
+        "Hyoglossus"
+      ],
+      "evidence_ids": [
+        "muscle.hyoglossus.left",
+        "muscle.hyoglossus.right"
+      ],
+      "group": "tongue",
+      "latin": "M. hyoglossus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A05.1.04.103",
+      "english": "Chondroglossus",
+      "english_aliases": [
+        "Chondroglossus"
+      ],
+      "evidence_ids": [
+        "muscle.hyoglossus.left",
+        "muscle.hyoglossus.right"
+      ],
+      "group": "tongue",
+      "latin": "M. chondroglossus",
+      "note": "Chondroglossus is represented within the source's undivided hyoglossus mesh.",
+      "optional_or_variable": false,
+      "status": "represented_lower_granularity"
+    },
+    {
+      "code": "A05.1.04.104",
+      "english": "Ceratoglossus",
+      "english_aliases": [
+        "Ceratoglossus"
+      ],
+      "evidence_ids": [
+        "muscle.hyoglossus.left",
+        "muscle.hyoglossus.right"
+      ],
+      "group": "tongue",
+      "latin": "M. ceratoglossus",
+      "note": "Ceratoglossus is represented within the source's undivided hyoglossus mesh.",
+      "optional_or_variable": false,
+      "status": "represented_lower_granularity"
+    },
+    {
+      "code": "A05.1.04.105",
+      "english": "Styloglossus",
+      "english_aliases": [
+        "Styloglossus"
+      ],
+      "evidence_ids": [],
+      "group": "tongue",
+      "latin": "M. styloglossus",
+      "note": "No styloglossus object exists in the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A05.1.04.106",
+      "english": "Superior longitudinal muscle",
+      "english_aliases": [
+        "Superior longitudinal muscle"
+      ],
+      "evidence_ids": [],
+      "group": "tongue",
+      "latin": "M. longitudinalis superior",
+      "note": "No superior longitudinal tongue muscle object exists in the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A05.1.04.107",
+      "english": "Inferior longitudinal muscle",
+      "english_aliases": [
+        "Inferior longitudinal muscle"
+      ],
+      "evidence_ids": [],
+      "group": "tongue",
+      "latin": "M. longitudinalis inferior",
+      "note": "No inferior longitudinal tongue muscle object exists in the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A05.1.04.108",
+      "english": "Transverse muscle",
+      "english_aliases": [
+        "Transverse muscle"
+      ],
+      "evidence_ids": [
+        "muscle.transverse_arytenoid",
+        "muscle.transverse_head_of_adductor_hallucis.left",
+        "muscle.transverse_head_of_adductor_hallucis.right",
+        "muscle.transverse_head_of_adductor_pollicis.left",
+        "muscle.transverse_head_of_adductor_pollicis.right",
+        "muscle.transverse_part_of_trapezius.left",
+        "muscle.transverse_part_of_trapezius.right"
+      ],
+      "group": "tongue",
+      "latin": "M. transversus linguae",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A05.1.04.109",
+      "english": "Vertical muscle",
+      "english_aliases": [
+        "Vertical muscle"
+      ],
+      "evidence_ids": [],
+      "group": "tongue",
+      "latin": "M. verticalis linguae",
+      "note": "No vertical tongue muscle object exists in the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A05.1.04.110",
+      "english": "Palatoglossus",
+      "english_aliases": [
+        "Palatoglossus"
+      ],
+      "evidence_ids": [],
+      "group": "tongue",
+      "latin": "M. palatoglossus",
+      "note": "No palatoglossus object exists in the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A05.2.01.102",
+      "english": "Levator veli palatini",
+      "english_aliases": [
+        "Levator veli palatini"
+      ],
+      "evidence_ids": [],
+      "group": "soft_palate",
+      "latin": "M. levator veli palatini",
+      "note": "No levator veli palatini object exists in the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A05.2.01.103",
+      "english": "Tensor veli palatini",
+      "english_aliases": [
+        "Tensor veli palatini"
+      ],
+      "evidence_ids": [],
+      "group": "soft_palate",
+      "latin": "M. tensor veli palatini",
+      "note": "No tensor veli palatini object exists in the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A05.2.01.104",
+      "english": "Musculus uvulae",
+      "english_aliases": [
+        "Musculus uvulae"
+      ],
+      "evidence_ids": [],
+      "group": "soft_palate",
+      "latin": "M. uvulae",
+      "note": "The uvula surface exists, but no musculus uvulae mesh exists.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A05.2.01.105",
+      "english": "Palatopharyngeus",
+      "english_aliases": [
+        "Palatopharyngeus"
+      ],
+      "evidence_ids": [
+        "muscle.palatopharyngeus.left",
+        "muscle.palatopharyngeus.right"
+      ],
+      "group": "soft_palate",
+      "latin": "M. palatopharyngeus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A05.2.01.107",
+      "english": "Posterior fascicle",
+      "english_aliases": [
+        "Posterior fascicle",
+        "Palatopharyngeal sphincter"
+      ],
+      "evidence_ids": [
+        "muscle.palatopharyngeus.left",
+        "muscle.palatopharyngeus.right"
+      ],
+      "group": "soft_palate",
+      "latin": "Fasciculus posterior; M. sphincter palatopharyngeus",
+      "note": "Posterior fascicle is included in the undivided palatopharyngeus meshes.",
+      "optional_or_variable": false,
+      "status": "represented_lower_granularity"
+    },
+    {
+      "code": "A05.3.01.103",
+      "english": "Superior constrictor",
+      "english_aliases": [
+        "Superior constrictor"
+      ],
+      "evidence_ids": [
+        "muscle.superior_pharyngeal_constrictor.left",
+        "muscle.superior_pharyngeal_constrictor.right"
+      ],
+      "group": "pharynx",
+      "latin": "M. constrictor pharyngis superior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A05.3.01.108",
+      "english": "Middle constrictor",
+      "english_aliases": [
+        "Middle constrictor"
+      ],
+      "evidence_ids": [
+        "muscle.middle_pharyngeal_constrictor.left",
+        "muscle.middle_pharyngeal_constrictor.right"
+      ],
+      "group": "pharynx",
+      "latin": "M. constrictor pharyngis medius",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A05.3.01.111",
+      "english": "Inferior constrictor",
+      "english_aliases": [
+        "Inferior constrictor"
+      ],
+      "evidence_ids": [
+        "muscle.inferior_pharyngeal_constrictor.left",
+        "muscle.inferior_pharyngeal_constrictor.right"
+      ],
+      "group": "pharynx",
+      "latin": "M. constrictor pharyngis inferior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A05.3.01.112",
+      "english": "Thyropharyngeal part",
+      "english_aliases": [
+        "Thyropharyngeal part",
+        "Thyropharyngeus"
+      ],
+      "evidence_ids": [
+        "muscle.inferior_pharyngeal_constrictor.left",
+        "muscle.inferior_pharyngeal_constrictor.right"
+      ],
+      "group": "pharynx",
+      "latin": "Pars thyropharyngea; M. thyropharyngeus",
+      "note": "Thyropharyngeal part is included in the undivided inferior constrictor.",
+      "optional_or_variable": false,
+      "status": "represented_lower_granularity"
+    },
+    {
+      "code": "A05.3.01.113",
+      "english": "Cricopharyngeal part",
+      "english_aliases": [
+        "Cricopharyngeal part",
+        "Cricopharyngeus"
+      ],
+      "evidence_ids": [
+        "muscle.inferior_pharyngeal_constrictor.left",
+        "muscle.inferior_pharyngeal_constrictor.right"
+      ],
+      "group": "pharynx",
+      "latin": "Pars cricopharyngea; M. cricopharyngeus",
+      "note": "Cricopharyngeal part is included in the undivided inferior constrictor.",
+      "optional_or_variable": false,
+      "status": "represented_lower_granularity"
+    },
+    {
+      "code": "A05.3.01.114",
+      "english": "Stylopharyngeus",
+      "english_aliases": [
+        "Stylopharyngeus"
+      ],
+      "evidence_ids": [
+        "muscle.stylopharyngeus.left",
+        "muscle.stylopharyngeus.right"
+      ],
+      "group": "pharynx",
+      "latin": "M. stylopharyngeus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A05.3.01.115",
+      "english": "Salpingopharyngeus",
+      "english_aliases": [
+        "Salpingopharyngeus"
+      ],
+      "evidence_ids": [],
+      "group": "pharynx",
+      "latin": "M. salpingopharyngeus",
+      "note": "No salpingopharyngeus object exists in the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A06.2.08.001",
+      "english": "Cricothyroid",
+      "english_aliases": [
+        "Cricothyroid"
+      ],
+      "evidence_ids": [
+        "muscle.oblique_part_of_cricothyroid.left",
+        "muscle.oblique_part_of_cricothyroid.right",
+        "muscle.straight_part_of_cricothyroid.left",
+        "muscle.straight_part_of_cricothyroid.right"
+      ],
+      "group": "larynx",
+      "latin": "M. cricothyroideus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A06.2.08.004",
+      "english": "Posterior crico-arytenoid",
+      "english_aliases": [
+        "Posterior crico-arytenoid"
+      ],
+      "evidence_ids": [
+        "muscle.posterior_crico_arytenoid.left",
+        "muscle.posterior_crico_arytenoid.right"
+      ],
+      "group": "larynx",
+      "latin": "M. cricoarytenoideus posterior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A06.2.08.005",
+      "english": "Ceratocricoid",
+      "english_aliases": [
+        "Ceratocricoid"
+      ],
+      "evidence_ids": [],
+      "group": "larynx",
+      "latin": "M. ceratocricoideus",
+      "note": null,
+      "optional_or_variable": true,
+      "status": "optional_not_represented"
+    },
+    {
+      "code": "A06.2.08.006",
+      "english": "Lateral crico-arytenoid",
+      "english_aliases": [
+        "Lateral crico-arytenoid"
+      ],
+      "evidence_ids": [
+        "muscle.lateral_crico_arytenoid.left",
+        "muscle.lateral_crico_arytenoid.right"
+      ],
+      "group": "larynx",
+      "latin": "M. cricoarytenoideus lateralis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A06.2.08.007",
+      "english": "Vocalis",
+      "english_aliases": [
+        "Vocalis"
+      ],
+      "evidence_ids": [],
+      "group": "larynx",
+      "latin": "M. vocalis",
+      "note": "No separately selectable vocalis or internal thyro-arytenoid mesh exists.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A06.2.08.008",
+      "english": "Thyro-arytenoid",
+      "english_aliases": [
+        "Thyro-arytenoid"
+      ],
+      "evidence_ids": [
+        "muscle.external_part_of_thyro_arytenoid.left",
+        "muscle.external_part_of_thyro_arytenoid.right",
+        "muscle.thyro_epiglottic_part_of_thyro_arytenoid.left",
+        "muscle.thyro_epiglottic_part_of_thyro_arytenoid.right"
+      ],
+      "group": "larynx",
+      "latin": "M. thyroarytenoideus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A06.2.08.010",
+      "english": "Oblique arytenoid",
+      "english_aliases": [
+        "Oblique arytenoid"
+      ],
+      "evidence_ids": [
+        "muscle.ary_epiglottic_part_of_oblique_arytenoid.left",
+        "muscle.ary_epiglottic_part_of_oblique_arytenoid.right"
+      ],
+      "group": "larynx",
+      "latin": "M. arytenoideus obliquus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A06.2.08.012",
+      "english": "Transverse arytenoid",
+      "english_aliases": [
+        "Transverse arytenoid"
+      ],
+      "evidence_ids": [
+        "muscle.transverse_arytenoid"
+      ],
+      "group": "larynx",
+      "latin": "M. arytenoideus transversus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A09.2.03.006",
+      "english": "External urethral sphincter ♀",
+      "english_aliases": [
+        "External urethral sphincter ♀"
+      ],
+      "evidence_ids": [],
+      "group": "perineum",
+      "latin": "M. sphincter urethrae externus ♀",
+      "note": "Female external urethral sphincter is absent from the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A09.4.02.016",
+      "english": "External urethral sphincter ♂",
+      "english_aliases": [
+        "External urethral sphincter ♂"
+      ],
+      "evidence_ids": [],
+      "group": "perineum",
+      "latin": "M. sphincter urethrae externus ♂",
+      "note": "Male external urethral sphincter is absent from the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A09.5.00.003",
+      "english": "Muscle of anal triangle",
+      "english_aliases": [
+        "Muscle of anal triangle"
+      ],
+      "evidence_ids": [
+        "muscle.external_anal_sphincter.left",
+        "muscle.external_anal_sphincter.right"
+      ],
+      "group": "perineum",
+      "latin": "M. regionis analis",
+      "note": "Anal-triangle group is represented by its cataloged skeletal muscle.",
+      "optional_or_variable": false,
+      "status": "represented_by_components"
+    },
+    {
+      "code": "A09.5.00.004",
+      "english": "Muscles of urogenital triangle",
+      "english_aliases": [
+        "Muscles of urogenital triangle"
+      ],
+      "evidence_ids": [],
+      "group": "perineum",
+      "latin": "Mm. regionis urogenitalis",
+      "note": "Taxonomic group; its individual urogenital muscles are audited separately.",
+      "optional_or_variable": false,
+      "status": "not_separate_structure"
+    },
+    {
+      "code": "A09.5.02.003",
+      "english": "Superficial transverse perineal muscle",
+      "english_aliases": [
+        "Superficial transverse perineal muscle"
+      ],
+      "evidence_ids": [],
+      "group": "perineum",
+      "latin": "M. transversus superficialis perinei",
+      "note": "No superficial transverse perineal muscle object exists.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A09.5.02.004",
+      "english": "Ischiocavernosus",
+      "english_aliases": [
+        "Ischiocavernosus"
+      ],
+      "evidence_ids": [],
+      "group": "perineum",
+      "latin": "M. ischiocavernosus",
+      "note": "No ischiocavernosus object exists in the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A09.5.02.005",
+      "english": "Bulbospongiosus",
+      "english_aliases": [
+        "Bulbospongiosus"
+      ],
+      "evidence_ids": [],
+      "group": "perineum",
+      "latin": "M. bulbospongiosus",
+      "note": "No bulbospongiosus object exists in the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A09.5.03.004",
+      "english": "Deep transverse perineal muscle ♂",
+      "english_aliases": [
+        "Deep transverse perineal muscle ♂"
+      ],
+      "evidence_ids": [],
+      "group": "perineum",
+      "latin": "M. transversus perinei profundus ♂",
+      "note": "Male deep transverse perineal muscle is absent from the source.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A09.5.03.005",
+      "english": "Compressor urethrae ♀",
+      "english_aliases": [
+        "Compressor urethrae ♀"
+      ],
+      "evidence_ids": [],
+      "group": "perineum",
+      "latin": "M. compressor urethrae ♀",
+      "note": "Female compressor urethrae is absent from the source.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A09.5.03.006",
+      "english": "Sphincter urethrovaginalis ♀",
+      "english_aliases": [
+        "Sphincter urethrovaginalis ♀"
+      ],
+      "evidence_ids": [],
+      "group": "perineum",
+      "latin": "M. sphincter urethrovaginalis ♀",
+      "note": "Female sphincter urethrovaginalis is absent from the source.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A15.2.07.009",
+      "english": "Orbitalis",
+      "english_aliases": [
+        "Orbitalis",
+        "Orbital muscle"
+      ],
+      "evidence_ids": [
+        "muscle.orbital_part_of_orbicularis_oculi.left",
+        "muscle.orbital_part_of_orbicularis_oculi.right"
+      ],
+      "group": "extraocular",
+      "latin": "M. orbitalis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A15.2.07.010",
+      "english": "Superior rectus",
+      "english_aliases": [
+        "Superior rectus"
+      ],
+      "evidence_ids": [
+        "muscle.superior_rectus.left",
+        "muscle.superior_rectus.right"
+      ],
+      "group": "extraocular",
+      "latin": "M. rectus superior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A15.2.07.011",
+      "english": "Inferior rectus",
+      "english_aliases": [
+        "Inferior rectus"
+      ],
+      "evidence_ids": [
+        "muscle.inferior_rectus.left",
+        "muscle.inferior_rectus.right"
+      ],
+      "group": "extraocular",
+      "latin": "M. rectus inferior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A15.2.07.012",
+      "english": "Medial rectus",
+      "english_aliases": [
+        "Medial rectus"
+      ],
+      "evidence_ids": [
+        "muscle.medial_rectus.left",
+        "muscle.medial_rectus.right"
+      ],
+      "group": "extraocular",
+      "latin": "M. rectus medialis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A15.2.07.013",
+      "english": "Lateral rectus",
+      "english_aliases": [
+        "Lateral rectus"
+      ],
+      "evidence_ids": [
+        "muscle.lateral_rectus.left",
+        "muscle.lateral_rectus.right"
+      ],
+      "group": "extraocular",
+      "latin": "M. rectus lateralis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A15.2.07.016",
+      "english": "Superior oblique",
+      "english_aliases": [
+        "Superior oblique"
+      ],
+      "evidence_ids": [
+        "muscle.superior_oblique.left",
+        "muscle.superior_oblique.right",
+        "muscle.trochlea_of_superior_oblique.left",
+        "muscle.trochlea_of_superior_oblique.right"
+      ],
+      "group": "extraocular",
+      "latin": "M. obliquus superior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A15.2.07.019",
+      "english": "Inferior oblique",
+      "english_aliases": [
+        "Inferior oblique"
+      ],
+      "evidence_ids": [
+        "muscle.inferior_oblique.left",
+        "muscle.inferior_oblique.right"
+      ],
+      "group": "extraocular",
+      "latin": "M. obliquus inferior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A15.2.07.020",
+      "english": "Levator palpebrae superioris",
+      "english_aliases": [
+        "Levator palpebrae superioris"
+      ],
+      "evidence_ids": [
+        "muscle.levator_palpebrae_superioris.left",
+        "muscle.levator_palpebrae_superioris.right"
+      ],
+      "group": "extraocular",
+      "latin": "M. levator palpebrae superioris",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A15.2.07.045",
+      "english": "Superior tarsal muscle",
+      "english_aliases": [
+        "Superior tarsal muscle"
+      ],
+      "evidence_ids": [],
+      "group": "extraocular",
+      "latin": "M. tarsalis superior",
+      "note": "Superior tarsal muscle is smooth muscle and outside skeletal-muscle scope.",
+      "optional_or_variable": false,
+      "status": "out_of_scope_non_skeletal"
+    },
+    {
+      "code": "A15.2.07.046",
+      "english": "Inferior tarsal muscle",
+      "english_aliases": [
+        "Inferior tarsal muscle"
+      ],
+      "evidence_ids": [],
+      "group": "extraocular",
+      "latin": "M. tarsalis inferior",
+      "note": "Inferior tarsal muscle is smooth muscle and outside skeletal-muscle scope.",
+      "optional_or_variable": false,
+      "status": "out_of_scope_non_skeletal"
+    },
+    {
+      "code": "A15.3.02.061",
+      "english": "Tensor tympani",
+      "english_aliases": [
+        "Tensor tympani"
+      ],
+      "evidence_ids": [],
+      "group": "auditory_ossicles",
+      "latin": "M. tensor tympani",
+      "note": "No tensor tympani muscle mesh exists in the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A15.3.02.062",
+      "english": "Stapedius",
+      "english_aliases": [
+        "Stapedius"
+      ],
+      "evidence_ids": [],
+      "group": "auditory_ossicles",
+      "latin": "M. stapedius",
+      "note": "No stapedius muscle mesh exists in the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    }
+  ],
+  "schema_version": 1,
+  "status_counts": {
+    "excluded_phase0_reference_only": 20,
+    "not_separate_structure": 1,
+    "optional_not_represented": 1,
+    "out_of_scope_non_skeletal": 2,
+    "represented": 22,
+    "represented_by_components": 1,
+    "represented_lower_granularity": 5
+  },
+  "terms_audited": 52
+}

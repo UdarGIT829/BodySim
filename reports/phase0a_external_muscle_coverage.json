@@ -1,0 +1,3476 @@
+{
+  "catalog_sha256": "7c8cb6813422b84e113472709875169407c1f54a1230170b766de9cebfde7746",
+  "reference_source": {
+    "citation": "FIPAT. Terminologia Anatomica. 2nd ed. FIPAT, 2019.",
+    "reference_edition": "TA98 online partonomic chapter",
+    "terms_license": "public_domain",
+    "url": "https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/TA98%20EN/04%20TA98%20EN.htm"
+  },
+  "release_blocking_gaps": 0,
+  "results": [
+    {
+      "code": "A04.1.03.002",
+      "english": "Epicranius",
+      "english_aliases": [
+        "Epicranius"
+      ],
+      "evidence_ids": [
+        "muscle.frontalis.left",
+        "muscle.frontalis.right",
+        "muscle.occipitalis.left",
+        "muscle.occipitalis.right",
+        "muscle.temporoparietalis.left",
+        "muscle.temporoparietalis.right"
+      ],
+      "latin": "M. epicranius",
+      "note": "Composite epicranial muscle is represented by its selectable components.",
+      "optional_or_variable": false,
+      "status": "represented_by_components"
+    },
+    {
+      "code": "A04.1.03.003",
+      "english": "Occipitofrontalis",
+      "english_aliases": [
+        "Occipitofrontalis"
+      ],
+      "evidence_ids": [
+        "muscle.frontalis.left",
+        "muscle.frontalis.right",
+        "muscle.occipitalis.left",
+        "muscle.occipitalis.right"
+      ],
+      "latin": "M. occipitofrontalis",
+      "note": "Occipitofrontalis is represented by its frontal and occipital bellies.",
+      "optional_or_variable": false,
+      "status": "represented_by_components"
+    },
+    {
+      "code": "A04.1.03.006",
+      "english": "Temporoparietalis",
+      "english_aliases": [
+        "Temporoparietalis"
+      ],
+      "evidence_ids": [
+        "muscle.temporoparietalis.left",
+        "muscle.temporoparietalis.right"
+      ],
+      "latin": "M. temporoparietalis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.03.008",
+      "english": "Procerus",
+      "english_aliases": [
+        "Procerus"
+      ],
+      "evidence_ids": [
+        "muscle.procerus.left",
+        "muscle.procerus.right"
+      ],
+      "latin": "M. procerus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.03.009",
+      "english": "Nasalis",
+      "english_aliases": [
+        "Nasalis"
+      ],
+      "evidence_ids": [
+        "muscle.nasalis.left",
+        "muscle.nasalis.right"
+      ],
+      "latin": "M. nasalis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.03.012",
+      "english": "Depressor septi nasi",
+      "english_aliases": [
+        "Depressor septi nasi"
+      ],
+      "evidence_ids": [
+        "muscle.depressor_septi_nasi.left",
+        "muscle.depressor_septi_nasi.right"
+      ],
+      "latin": "M. depressor septi nasi",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.03.013",
+      "english": "Orbicularis oculi",
+      "english_aliases": [
+        "Orbicularis oculi"
+      ],
+      "evidence_ids": [
+        "muscle.orbital_part_of_orbicularis_oculi.left",
+        "muscle.orbital_part_of_orbicularis_oculi.right",
+        "muscle.palpebral_part_of_orbicularis_oculi.left",
+        "muscle.palpebral_part_of_orbicularis_oculi.right"
+      ],
+      "latin": "M. orbicularis oculi",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.03.018",
+      "english": "Corrugator supercilii",
+      "english_aliases": [
+        "Corrugator supercilii"
+      ],
+      "evidence_ids": [
+        "muscle.corrugator_supercilii.left",
+        "muscle.corrugator_supercilii.right"
+      ],
+      "latin": "M. corrugator supercilii",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.03.019",
+      "english": "Depressor supercilii",
+      "english_aliases": [
+        "Depressor supercilii"
+      ],
+      "evidence_ids": [],
+      "latin": "M. depressor supercilii",
+      "note": "No candidate or alternate source object exists in the complete Z-Anatomy object index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.1.03.020",
+      "english": "Auricularis anterior",
+      "english_aliases": [
+        "Auricularis anterior"
+      ],
+      "evidence_ids": [],
+      "latin": "M. auricularis anterior",
+      "note": "No candidate or alternate source object exists in the complete Z-Anatomy object index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.1.03.021",
+      "english": "Auricularis superior",
+      "english_aliases": [
+        "Auricularis superior"
+      ],
+      "evidence_ids": [],
+      "latin": "M. auricularis superior",
+      "note": "No candidate or alternate source object exists in the complete Z-Anatomy object index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.1.03.022",
+      "english": "Auricularis posterior",
+      "english_aliases": [
+        "Auricularis posterior"
+      ],
+      "evidence_ids": [],
+      "latin": "M. auricularis posterior",
+      "note": "No candidate or alternate source object exists in the complete Z-Anatomy object index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.1.03.023",
+      "english": "Orbicularis oris",
+      "english_aliases": [
+        "Orbicularis oris"
+      ],
+      "evidence_ids": [
+        "muscle.orbicularis_oris.left",
+        "muscle.orbicularis_oris.right"
+      ],
+      "latin": "M. orbicularis oris",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.03.026",
+      "english": "Depressor anguli oris",
+      "english_aliases": [
+        "Depressor anguli oris"
+      ],
+      "evidence_ids": [
+        "muscle.depressor_anguli_oris.left",
+        "muscle.depressor_anguli_oris.right"
+      ],
+      "latin": "M. depressor anguli oris",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.03.027",
+      "english": "Transversus menti",
+      "english_aliases": [
+        "Transversus menti"
+      ],
+      "evidence_ids": [],
+      "latin": "M. transversus menti",
+      "note": "No candidate or alternate source object exists in the complete Z-Anatomy object index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.1.03.028",
+      "english": "Risorius",
+      "english_aliases": [
+        "Risorius"
+      ],
+      "evidence_ids": [
+        "muscle.risorius.left",
+        "muscle.risorius.right"
+      ],
+      "latin": "M. risorius",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.03.029",
+      "english": "Zygomaticus major",
+      "english_aliases": [
+        "Zygomaticus major"
+      ],
+      "evidence_ids": [
+        "muscle.zygomaticus_major.left",
+        "muscle.zygomaticus_major.right"
+      ],
+      "latin": "M. zygomaticus major",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.03.030",
+      "english": "Zygomaticus minor",
+      "english_aliases": [
+        "Zygomaticus minor"
+      ],
+      "evidence_ids": [
+        "muscle.zygomaticus_minor.left",
+        "muscle.zygomaticus_minor.right"
+      ],
+      "latin": "M. zygomaticus minor",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.03.031",
+      "english": "Levator labii superioris",
+      "english_aliases": [
+        "Levator labii superioris"
+      ],
+      "evidence_ids": [
+        "muscle.levator_labii_superioris.left",
+        "muscle.levator_labii_superioris.right"
+      ],
+      "latin": "M. levator labii superioris",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.03.032",
+      "english": "Levator labii superioris alaeque nasi",
+      "english_aliases": [
+        "Levator labii superioris alaeque nasi"
+      ],
+      "evidence_ids": [
+        "muscle.levator_nasolabialis.left",
+        "muscle.levator_nasolabialis.right"
+      ],
+      "latin": "M. levator nasolabialis",
+      "note": "Catalog uses the official regularized synonym levator nasolabialis.",
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.03.033",
+      "english": "Depressor labii inferioris",
+      "english_aliases": [
+        "Depressor labii inferioris"
+      ],
+      "evidence_ids": [
+        "muscle.depressor_labii_inferioris.left",
+        "muscle.depressor_labii_inferioris.right"
+      ],
+      "latin": "M. depressor labii inferioris",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.03.034",
+      "english": "Levator anguli oris",
+      "english_aliases": [
+        "Levator anguli oris"
+      ],
+      "evidence_ids": [
+        "muscle.levator_anguli_oris.left",
+        "muscle.levator_anguli_oris.right"
+      ],
+      "latin": "M. levator anguli oris",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.03.036",
+      "english": "Buccinator",
+      "english_aliases": [
+        "Buccinator"
+      ],
+      "evidence_ids": [],
+      "latin": "M. buccinator",
+      "note": "No candidate or alternate source object exists in the complete Z-Anatomy object index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.1.03.037",
+      "english": "Mentalis",
+      "english_aliases": [
+        "Mentalis"
+      ],
+      "evidence_ids": [
+        "muscle.mentalis.left",
+        "muscle.mentalis.right"
+      ],
+      "latin": "M. mentalis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.04.002",
+      "english": "Masseter",
+      "english_aliases": [
+        "Masseter"
+      ],
+      "evidence_ids": [
+        "muscle.deep_part_of_masseter.left",
+        "muscle.deep_part_of_masseter.right",
+        "muscle.superficial_part_of_masseter.left",
+        "muscle.superficial_part_of_masseter.right"
+      ],
+      "latin": "M. masseter",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.04.005",
+      "english": "Temporalis",
+      "english_aliases": [
+        "Temporalis",
+        "Temporal muscle"
+      ],
+      "evidence_ids": [
+        "muscle.temporalis.left",
+        "muscle.temporalis.right"
+      ],
+      "latin": "M. temporalis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.04.006",
+      "english": "Lateral pterygoid",
+      "english_aliases": [
+        "Lateral pterygoid"
+      ],
+      "evidence_ids": [
+        "muscle.inferior_head_of_lateral_pterygoid.left",
+        "muscle.inferior_head_of_lateral_pterygoid.right",
+        "muscle.superior_head_of_lateral_pterygoid.left",
+        "muscle.superior_head_of_lateral_pterygoid.right"
+      ],
+      "latin": "M. pterygoideus lateralis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.1.04.009",
+      "english": "Medial pterygoid",
+      "english_aliases": [
+        "Medial pterygoid"
+      ],
+      "evidence_ids": [
+        "muscle.medial_pterygoid.left",
+        "muscle.medial_pterygoid.right"
+      ],
+      "latin": "M. pterygoideus medialis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.01.001",
+      "english": "Platysma",
+      "english_aliases": [
+        "Platysma"
+      ],
+      "evidence_ids": [
+        "muscle.platysma.left",
+        "muscle.platysma.right"
+      ],
+      "latin": "Platysma",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.01.002",
+      "english": "Longus colli",
+      "english_aliases": [
+        "Longus colli"
+      ],
+      "evidence_ids": [
+        "muscle.longus_colli.left",
+        "muscle.longus_colli.right"
+      ],
+      "latin": "M. longus colli; M. longus cervicis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.01.003",
+      "english": "Longus capitis",
+      "english_aliases": [
+        "Longus capitis"
+      ],
+      "evidence_ids": [
+        "muscle.longus_capitis.left",
+        "muscle.longus_capitis.right"
+      ],
+      "latin": "M. longus capitis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.01.004",
+      "english": "Scalenus anterior",
+      "english_aliases": [
+        "Scalenus anterior",
+        "Anterior scalene"
+      ],
+      "evidence_ids": [
+        "muscle.scalenus_anterior.left",
+        "muscle.scalenus_anterior.right"
+      ],
+      "latin": "M. scalenus anterior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.01.005",
+      "english": "Scalenus medius",
+      "english_aliases": [
+        "Scalenus medius",
+        "Middle scalene"
+      ],
+      "evidence_ids": [
+        "muscle.scalenus_medius.left",
+        "muscle.scalenus_medius.right"
+      ],
+      "latin": "M. scalenus medius",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.01.006",
+      "english": "Scalenus posterior",
+      "english_aliases": [
+        "Scalenus posterior",
+        "Posterior scalene"
+      ],
+      "evidence_ids": [
+        "muscle.scalenus_posterior.left",
+        "muscle.scalenus_posterior.right"
+      ],
+      "latin": "M. scalenus posterior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.01.007",
+      "english": "Scalenus minimus",
+      "english_aliases": [
+        "Scalenus minimus"
+      ],
+      "evidence_ids": [],
+      "latin": "M. scalenus minimus",
+      "note": null,
+      "optional_or_variable": true,
+      "status": "optional_not_represented"
+    },
+    {
+      "code": "A04.2.01.008",
+      "english": "Sternocleidomastoid",
+      "english_aliases": [
+        "Sternocleidomastoid"
+      ],
+      "evidence_ids": [
+        "muscle.sternocleidomastoid.left",
+        "muscle.sternocleidomastoid.right"
+      ],
+      "latin": "M. sternocleidomastoideus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.02.002",
+      "english": "Rectus capitis anterior",
+      "english_aliases": [
+        "Rectus capitis anterior"
+      ],
+      "evidence_ids": [
+        "muscle.rectus_anterior_capitis.left",
+        "muscle.rectus_anterior_capitis.right"
+      ],
+      "latin": "M. rectus capitis anterior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.02.003",
+      "english": "Rectus capitis lateralis",
+      "english_aliases": [
+        "Rectus capitis lateralis"
+      ],
+      "evidence_ids": [
+        "muscle.rectus_lateralis_capitis.left",
+        "muscle.rectus_lateralis_capitis.right"
+      ],
+      "latin": "M. rectus lateralis capitis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.02.004",
+      "english": "Rectus capitis posterior major",
+      "english_aliases": [
+        "Rectus capitis posterior major"
+      ],
+      "evidence_ids": [
+        "muscle.rectus_posterior_major_capitis.left",
+        "muscle.rectus_posterior_major_capitis.right"
+      ],
+      "latin": "M. rectus capitis posterior major",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.02.005",
+      "english": "Rectus capitis posterior minor",
+      "english_aliases": [
+        "Rectus capitis posterior minor"
+      ],
+      "evidence_ids": [
+        "muscle.rectus_posterior_minor_capitis.left",
+        "muscle.rectus_posterior_minor_capitis.right"
+      ],
+      "latin": "M. rectus capitis posterior minor",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.02.006",
+      "english": "Obliquus capitis superior",
+      "english_aliases": [
+        "Obliquus capitis superior"
+      ],
+      "evidence_ids": [
+        "muscle.obliquus_superior_capitis.left",
+        "muscle.obliquus_superior_capitis.right"
+      ],
+      "latin": "M. obliquus capitis superior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.02.007",
+      "english": "Obliquus capitis inferior",
+      "english_aliases": [
+        "Obliquus capitis inferior"
+      ],
+      "evidence_ids": [
+        "muscle.obliquus_inferior_capitis.left",
+        "muscle.obliquus_inferior_capitis.right"
+      ],
+      "latin": "M. obliquus capitis inferior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.03.002",
+      "english": "Digastric",
+      "english_aliases": [
+        "Digastric"
+      ],
+      "evidence_ids": [
+        "muscle.anterior_belly_of_digastric.left",
+        "muscle.anterior_belly_of_digastric.right",
+        "muscle.posterior_belly_of_digastric.left",
+        "muscle.posterior_belly_of_digastric.right"
+      ],
+      "latin": "M. digastricus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.03.005",
+      "english": "Stylohyoid",
+      "english_aliases": [
+        "Stylohyoid"
+      ],
+      "evidence_ids": [
+        "muscle.stylohyoid.left",
+        "muscle.stylohyoid.right"
+      ],
+      "latin": "M. stylohyoideus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.03.006",
+      "english": "Mylohyoid",
+      "english_aliases": [
+        "Mylohyoid"
+      ],
+      "evidence_ids": [
+        "muscle.mylohyoid.left",
+        "muscle.mylohyoid.right"
+      ],
+      "latin": "M. mylohyoideus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.03.007",
+      "english": "Geniohyoid",
+      "english_aliases": [
+        "Geniohyoid"
+      ],
+      "evidence_ids": [
+        "muscle.geniohyoid.left",
+        "muscle.geniohyoid.right"
+      ],
+      "latin": "M. geniohyoideus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.04.002",
+      "english": "Sternohyoid",
+      "english_aliases": [
+        "Sternohyoid"
+      ],
+      "evidence_ids": [
+        "muscle.sternohyoid.left",
+        "muscle.sternohyoid.right"
+      ],
+      "latin": "M. sternohyoideus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.04.003",
+      "english": "Omohyoid",
+      "english_aliases": [
+        "Omohyoid"
+      ],
+      "evidence_ids": [
+        "muscle.omohyoid.left",
+        "muscle.omohyoid.right"
+      ],
+      "latin": "M. omohyoideus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.04.006",
+      "english": "Sternothyroid",
+      "english_aliases": [
+        "Sternothyroid"
+      ],
+      "evidence_ids": [
+        "muscle.sternothyroid.left",
+        "muscle.sternothyroid.right"
+      ],
+      "latin": "M. sternothyroideus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.04.007",
+      "english": "Thyrohyoid",
+      "english_aliases": [
+        "Thyrohyoid"
+      ],
+      "evidence_ids": [
+        "muscle.thyrohyoid.left",
+        "muscle.thyrohyoid.right"
+      ],
+      "latin": "M. thyrohyoideus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.2.04.008",
+      "english": "Levator glandulae thyroideae",
+      "english_aliases": [
+        "Levator glandulae thyroideae"
+      ],
+      "evidence_ids": [],
+      "latin": "M. levator glandulae thyroideae",
+      "note": null,
+      "optional_or_variable": true,
+      "status": "optional_not_represented"
+    },
+    {
+      "code": "A04.3.01.001",
+      "english": "Trapezius",
+      "english_aliases": [
+        "Trapezius"
+      ],
+      "evidence_ids": [
+        "muscle.ascending_part_of_trapezius.left",
+        "muscle.ascending_part_of_trapezius.right",
+        "muscle.descending_part_of_trapezius.left",
+        "muscle.descending_part_of_trapezius.right",
+        "muscle.transverse_part_of_trapezius.left",
+        "muscle.transverse_part_of_trapezius.right"
+      ],
+      "latin": "M. trapezius",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.01.005",
+      "english": "Transversus nuchae",
+      "english_aliases": [
+        "Transversus nuchae"
+      ],
+      "evidence_ids": [],
+      "latin": "M. transversus nuchae",
+      "note": null,
+      "optional_or_variable": true,
+      "status": "optional_not_represented"
+    },
+    {
+      "code": "A04.3.01.006",
+      "english": "Latissimus dorsi",
+      "english_aliases": [
+        "Latissimus dorsi"
+      ],
+      "evidence_ids": [
+        "muscle.latissimus_dorsi.left",
+        "muscle.latissimus_dorsi.right"
+      ],
+      "latin": "M. latissimus dorsi",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.01.007",
+      "english": "Rhomboid major",
+      "english_aliases": [
+        "Rhomboid major"
+      ],
+      "evidence_ids": [
+        "muscle.rhomboid_major.left",
+        "muscle.rhomboid_major.right"
+      ],
+      "latin": "M. rhomboideus major",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.01.008",
+      "english": "Rhomboid minor",
+      "english_aliases": [
+        "Rhomboid minor"
+      ],
+      "evidence_ids": [
+        "muscle.rhomboid_minor.left",
+        "muscle.rhomboid_minor.right"
+      ],
+      "latin": "M. rhomboideus minor",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.01.009",
+      "english": "Levator scapulae",
+      "english_aliases": [
+        "Levator scapulae"
+      ],
+      "evidence_ids": [
+        "muscle.levator_scapulae.left",
+        "muscle.levator_scapulae.right"
+      ],
+      "latin": "M. levator scapulae",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.01.010",
+      "english": "Serratus posterior inferior",
+      "english_aliases": [
+        "Serratus posterior inferior"
+      ],
+      "evidence_ids": [
+        "muscle.serratus_posterior_inferior.left",
+        "muscle.serratus_posterior_inferior.right"
+      ],
+      "latin": "M. serratus posterior inferior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.01.011",
+      "english": "Serratus posterior superior",
+      "english_aliases": [
+        "Serratus posterior superior"
+      ],
+      "evidence_ids": [
+        "muscle.serratus_posterior_superior.left",
+        "muscle.serratus_posterior_superior.right"
+      ],
+      "latin": "M. serratus posterior superior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.01.012",
+      "english": "Anterior cervical intertransversarii",
+      "english_aliases": [
+        "Anterior cervical intertransversarii"
+      ],
+      "evidence_ids": [],
+      "latin": "Mm. intertransversarii anteriores cervicis; Mm. intertransversarii anteriores colli",
+      "note": "The source has no independently selectable anterior cervical intertransversarii.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.3.01.013",
+      "english": "Lateral posterior cervical intertransversarii",
+      "english_aliases": [
+        "Lateral posterior cervical intertransversarii"
+      ],
+      "evidence_ids": [],
+      "latin": "Mm. intertransversarii posteriores laterales cervicis; Mm. intertransversarii posteriores laterales colli",
+      "note": "The source has no independently selectable lateral posterior cervical intertransversarii.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.3.01.014",
+      "english": "Intertransversarii laterales lumborum",
+      "english_aliases": [
+        "Intertransversarii laterales lumborum"
+      ],
+      "evidence_ids": [
+        "muscle.dorsal_parts_of_lateral_intertransversarii_lumborum.left",
+        "muscle.dorsal_parts_of_lateral_intertransversarii_lumborum.right",
+        "muscle.ventral_parts_of_lateral_intertransversarii_lumborum.left",
+        "muscle.ventral_parts_of_lateral_intertransversarii_lumborum.right"
+      ],
+      "latin": "Mm. intertransversarii laterales lumborum",
+      "note": "The lateral lumbar group is represented at finer dorsal/ventral granularity.",
+      "optional_or_variable": false,
+      "status": "represented_by_components"
+    },
+    {
+      "code": "A04.3.02.005",
+      "english": "Iliocostalis",
+      "english_aliases": [
+        "Iliocostalis"
+      ],
+      "evidence_ids": [
+        "muscle.iliocostalis_colli.left",
+        "muscle.iliocostalis_colli.right",
+        "muscle.iliocostalis_lumborum.left",
+        "muscle.iliocostalis_lumborum.right",
+        "muscle.iliocostalis_thoracis.left",
+        "muscle.iliocostalis_thoracis.right"
+      ],
+      "latin": "M. iliocostalis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.006",
+      "english": "Iliocostalis lumborum",
+      "english_aliases": [
+        "Iliocostalis lumborum"
+      ],
+      "evidence_ids": [
+        "muscle.iliocostalis_lumborum.left",
+        "muscle.iliocostalis_lumborum.right"
+      ],
+      "latin": "M. iliocostalis lumborum",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.009",
+      "english": "Iliocostalis cervicis",
+      "english_aliases": [
+        "Iliocostalis cervicis"
+      ],
+      "evidence_ids": [
+        "muscle.iliocostalis_colli.left",
+        "muscle.iliocostalis_colli.right"
+      ],
+      "latin": "M. iliocostalis cervicis; M. iliocostalis colli",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.010",
+      "english": "Longissimus",
+      "english_aliases": [
+        "Longissimus"
+      ],
+      "evidence_ids": [
+        "muscle.longissimus_capitis.left",
+        "muscle.longissimus_capitis.right",
+        "muscle.longissimus_colli.left",
+        "muscle.longissimus_colli.right",
+        "muscle.longissimus_thoracis.left",
+        "muscle.longissimus_thoracis.right"
+      ],
+      "latin": "M. longissimus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.011",
+      "english": "Longissimus thoracis",
+      "english_aliases": [
+        "Longissimus thoracis"
+      ],
+      "evidence_ids": [
+        "muscle.longissimus_thoracis.left",
+        "muscle.longissimus_thoracis.right"
+      ],
+      "latin": "M. longissimus thoracis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.013",
+      "english": "Longissimus cervicis",
+      "english_aliases": [
+        "Longissimus cervicis"
+      ],
+      "evidence_ids": [
+        "muscle.longissimus_colli.left",
+        "muscle.longissimus_colli.right"
+      ],
+      "latin": "M. longissimus cervicis; M. longissimus colli",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.014",
+      "english": "Longissimus capitis",
+      "english_aliases": [
+        "Longissimus capitis"
+      ],
+      "evidence_ids": [
+        "muscle.longissimus_capitis.left",
+        "muscle.longissimus_capitis.right"
+      ],
+      "latin": "M. longissimus capitis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.015",
+      "english": "Spinalis",
+      "english_aliases": [
+        "Spinalis"
+      ],
+      "evidence_ids": [
+        "muscle.spinalis_capitis.left",
+        "muscle.spinalis_capitis.right",
+        "muscle.spinalis_colli.left",
+        "muscle.spinalis_colli.right",
+        "muscle.spinalis_thoracis.left",
+        "muscle.spinalis_thoracis.right"
+      ],
+      "latin": "M. spinalis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.016",
+      "english": "Spinalis thoracis",
+      "english_aliases": [
+        "Spinalis thoracis"
+      ],
+      "evidence_ids": [
+        "muscle.spinalis_thoracis.left",
+        "muscle.spinalis_thoracis.right"
+      ],
+      "latin": "M. spinalis thoracis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.017",
+      "english": "Spinalis cervicis",
+      "english_aliases": [
+        "Spinalis cervicis"
+      ],
+      "evidence_ids": [
+        "muscle.spinalis_colli.left",
+        "muscle.spinalis_colli.right"
+      ],
+      "latin": "M. spinalis cervicis; M. spinalis colli",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.018",
+      "english": "Spinalis capitis",
+      "english_aliases": [
+        "Spinalis capitis"
+      ],
+      "evidence_ids": [
+        "muscle.spinalis_capitis.left",
+        "muscle.spinalis_capitis.right"
+      ],
+      "latin": "M. spinalis capitis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.102",
+      "english": "Splenius",
+      "english_aliases": [
+        "Splenius"
+      ],
+      "evidence_ids": [
+        "muscle.splenius_capitis.left",
+        "muscle.splenius_capitis.right",
+        "muscle.splenius_colli.left",
+        "muscle.splenius_colli.right"
+      ],
+      "latin": "M. splenius",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.103",
+      "english": "Splenius capitis",
+      "english_aliases": [
+        "Splenius capitis"
+      ],
+      "evidence_ids": [
+        "muscle.splenius_capitis.left",
+        "muscle.splenius_capitis.right"
+      ],
+      "latin": "M. splenius capitis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.104",
+      "english": "Splenius cervicis",
+      "english_aliases": [
+        "Splenius cervicis"
+      ],
+      "evidence_ids": [
+        "muscle.splenius_colli.left",
+        "muscle.splenius_colli.right"
+      ],
+      "latin": "M. splenius cervicis; M. splenius colli",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.202",
+      "english": "Multifidus",
+      "english_aliases": [
+        "Multifidus"
+      ],
+      "evidence_ids": [
+        "muscle.multifidus_colli.left",
+        "muscle.multifidus_colli.right",
+        "muscle.multifidus_lumborum.left",
+        "muscle.multifidus_lumborum.right",
+        "muscle.multifidus_thoracis.left",
+        "muscle.multifidus_thoracis.right"
+      ],
+      "latin": "Mm. multifidi",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.203",
+      "english": "Multifidus lumborum",
+      "english_aliases": [
+        "Multifidus lumborum"
+      ],
+      "evidence_ids": [
+        "muscle.multifidus_lumborum.left",
+        "muscle.multifidus_lumborum.right"
+      ],
+      "latin": "M. multifidus lumborum",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.204",
+      "english": "Multifidus thoracis",
+      "english_aliases": [
+        "Multifidus thoracis"
+      ],
+      "evidence_ids": [
+        "muscle.multifidus_thoracis.left",
+        "muscle.multifidus_thoracis.right"
+      ],
+      "latin": "M. multifidus thoracis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.205",
+      "english": "Multifidus cervicis",
+      "english_aliases": [
+        "Multifidus cervicis"
+      ],
+      "evidence_ids": [
+        "muscle.multifidus_colli.left",
+        "muscle.multifidus_colli.right"
+      ],
+      "latin": "M. multifidus cervicis; M. multifidus colli",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.206",
+      "english": "Semispinalis",
+      "english_aliases": [
+        "Semispinalis"
+      ],
+      "evidence_ids": [
+        "muscle.semispinalis_colli.left",
+        "muscle.semispinalis_colli.right",
+        "muscle.semispinalis_thoracis.left",
+        "muscle.semispinalis_thoracis.right"
+      ],
+      "latin": "M. semispinalis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.207",
+      "english": "Semispinalis thoracis",
+      "english_aliases": [
+        "Semispinalis thoracis"
+      ],
+      "evidence_ids": [
+        "muscle.semispinalis_thoracis.left",
+        "muscle.semispinalis_thoracis.right"
+      ],
+      "latin": "M. semispinalis thoracis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.208",
+      "english": "Semispinalis cervicis",
+      "english_aliases": [
+        "Semispinalis cervicis"
+      ],
+      "evidence_ids": [
+        "muscle.semispinalis_colli.left",
+        "muscle.semispinalis_colli.right"
+      ],
+      "latin": "M. semispinalis cervicis; M. semispinalis colli",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.209",
+      "english": "Semispinalis capitis",
+      "english_aliases": [
+        "Semispinalis capitis"
+      ],
+      "evidence_ids": [],
+      "latin": "M. semispinalis capitis",
+      "note": "Spinalis capitis exists, but the distinct semispinalis capitis does not.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.3.02.210",
+      "english": "Rotatores",
+      "english_aliases": [
+        "Rotatores"
+      ],
+      "evidence_ids": [
+        "muscle.rotatores.left",
+        "muscle.rotatores.right"
+      ],
+      "latin": "Mm. rotatores",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.211",
+      "english": "Rotatores lumborum",
+      "english_aliases": [
+        "Rotatores lumborum"
+      ],
+      "evidence_ids": [],
+      "latin": "Mm. rotatores lumborum",
+      "note": null,
+      "optional_or_variable": true,
+      "status": "optional_not_represented"
+    },
+    {
+      "code": "A04.3.02.212",
+      "english": "Rotatores thoracis",
+      "english_aliases": [
+        "Rotatores thoracis"
+      ],
+      "evidence_ids": [
+        "muscle.rotatores.left",
+        "muscle.rotatores.right"
+      ],
+      "latin": "Mm. rotatores thoracis",
+      "note": "Z-Anatomy combines regional rotatores into one selectable structure per side.",
+      "optional_or_variable": false,
+      "status": "represented_lower_granularity"
+    },
+    {
+      "code": "A04.3.02.213",
+      "english": "Rotatores cervicis",
+      "english_aliases": [
+        "Rotatores cervicis"
+      ],
+      "evidence_ids": [
+        "muscle.rotatores.left",
+        "muscle.rotatores.right"
+      ],
+      "latin": "Mm. rotatores cervicis; Mm. rotatores colli",
+      "note": "Z-Anatomy combines regional rotatores into one selectable structure per side.",
+      "optional_or_variable": false,
+      "status": "represented_lower_granularity"
+    },
+    {
+      "code": "A04.3.02.302",
+      "english": "Interspinales lumborum",
+      "english_aliases": [
+        "Interspinales lumborum"
+      ],
+      "evidence_ids": [
+        "muscle.interspinales_lumborum.left",
+        "muscle.interspinales_lumborum.right"
+      ],
+      "latin": "Mm. interspinales lumborum",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.303",
+      "english": "Interspinales thoracis",
+      "english_aliases": [
+        "Interspinales thoracis"
+      ],
+      "evidence_ids": [
+        "muscle.interspinales_thoracis.left",
+        "muscle.interspinales_thoracis.right"
+      ],
+      "latin": "Mm. interspinales thoracis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.304",
+      "english": "Interspinales cervicis",
+      "english_aliases": [
+        "Interspinales cervicis"
+      ],
+      "evidence_ids": [
+        "muscle.interspinales_colli.left",
+        "muscle.interspinales_colli.right"
+      ],
+      "latin": "Mm. interspinales cervicis; Mm. interspinales colli",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.3.02.402",
+      "english": "Medial lumbar intertransversarii",
+      "english_aliases": [
+        "Medial lumbar intertransversarii"
+      ],
+      "evidence_ids": [],
+      "latin": "Mm. intertransversarii mediales lumborum",
+      "note": "Only lateral lumbar intertransversarii are present in the source.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.3.02.403",
+      "english": "Thoracic intertransversarii",
+      "english_aliases": [
+        "Thoracic intertransversarii"
+      ],
+      "evidence_ids": [],
+      "latin": "Mm. intertransversarii thoracis",
+      "note": "No thoracic intertransversarii candidate exists in the source.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.3.02.404",
+      "english": "Medial posterior cervical intertransversarii",
+      "english_aliases": [
+        "Medial posterior cervical intertransversarii"
+      ],
+      "evidence_ids": [],
+      "latin": "Mm. intertransversarii posteriores mediales cervicis; Mm. intertransversarii posteriores mediales colli",
+      "note": "No medial posterior cervical intertransversarii candidate exists in the source.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.4.01.001",
+      "english": "Sternalis",
+      "english_aliases": [
+        "Sternalis"
+      ],
+      "evidence_ids": [],
+      "latin": "M. sternalis",
+      "note": null,
+      "optional_or_variable": true,
+      "status": "optional_not_represented"
+    },
+    {
+      "code": "A04.4.01.002",
+      "english": "Pectoralis major",
+      "english_aliases": [
+        "Pectoralis major"
+      ],
+      "evidence_ids": [
+        "muscle.abdominal_part_of_pectoralis_major.left",
+        "muscle.abdominal_part_of_pectoralis_major.right",
+        "muscle.clavicular_head_of_pectoralis_major.left",
+        "muscle.clavicular_head_of_pectoralis_major.right",
+        "muscle.sternocostal_head_of_pectoralis_major.left",
+        "muscle.sternocostal_head_of_pectoralis_major.right"
+      ],
+      "latin": "M. pectoralis major",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.4.01.006",
+      "english": "Pectoralis minor",
+      "english_aliases": [
+        "Pectoralis minor"
+      ],
+      "evidence_ids": [
+        "muscle.pectoralis_minor.left",
+        "muscle.pectoralis_minor.right"
+      ],
+      "latin": "M. pectoralis minor",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.4.01.007",
+      "english": "Subclavius",
+      "english_aliases": [
+        "Subclavius"
+      ],
+      "evidence_ids": [
+        "muscle.subclavius.left",
+        "muscle.subclavius.right"
+      ],
+      "latin": "M. subclavius",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.4.01.008",
+      "english": "Serratus anterior",
+      "english_aliases": [
+        "Serratus anterior"
+      ],
+      "evidence_ids": [
+        "muscle.serratus_anterior.left",
+        "muscle.serratus_anterior.right"
+      ],
+      "latin": "M. serratus anterior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.4.01.009",
+      "english": "Levatores costarum",
+      "english_aliases": [
+        "Levatores costarum"
+      ],
+      "evidence_ids": [
+        "muscle.levatores_breves_costarum.left",
+        "muscle.levatores_breves_costarum.right",
+        "muscle.levatores_longi_costarum.left",
+        "muscle.levatores_longi_costarum.right"
+      ],
+      "latin": "Mm. levatores costarum",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.4.01.010",
+      "english": "Levatores costarum longi",
+      "english_aliases": [
+        "Levatores costarum longi"
+      ],
+      "evidence_ids": [
+        "muscle.levatores_longi_costarum.left",
+        "muscle.levatores_longi_costarum.right"
+      ],
+      "latin": "Mm. levatores costarum longi",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.4.01.011",
+      "english": "Levatores costarum breves",
+      "english_aliases": [
+        "Levatores costarum breves"
+      ],
+      "evidence_ids": [
+        "muscle.levatores_breves_costarum.left",
+        "muscle.levatores_breves_costarum.right"
+      ],
+      "latin": "Mm. levatores costarum breves",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.4.01.012",
+      "english": "External intercostal muscle",
+      "english_aliases": [
+        "External intercostal muscle"
+      ],
+      "evidence_ids": [
+        "muscle.external_intercostal.left",
+        "muscle.external_intercostal.right"
+      ],
+      "latin": "Mm. intercostales externi",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.4.01.013",
+      "english": "Internal intercostal muscle",
+      "english_aliases": [
+        "Internal intercostal muscle"
+      ],
+      "evidence_ids": [
+        "muscle.internal_intercostal.left",
+        "muscle.internal_intercostal.right"
+      ],
+      "latin": "Mm. intercostales interni",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.4.01.014",
+      "english": "Innermost intercostal muscle",
+      "english_aliases": [
+        "Innermost intercostal muscle"
+      ],
+      "evidence_ids": [
+        "muscle.innermost_intercostal.left",
+        "muscle.innermost_intercostal.right"
+      ],
+      "latin": "Mm. intercostales intimi",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.4.01.015",
+      "english": "Subcostales",
+      "english_aliases": [
+        "Subcostales"
+      ],
+      "evidence_ids": [],
+      "latin": "Mm. subcostales",
+      "note": "No subcostales muscle object exists; similarly named source objects are blood vessels.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.4.01.016",
+      "english": "Transversus thoracis",
+      "english_aliases": [
+        "Transversus thoracis"
+      ],
+      "evidence_ids": [
+        "muscle.transversus_thoracis.left",
+        "muscle.transversus_thoracis.right"
+      ],
+      "latin": "M. transversus thoracis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.4.02.001",
+      "english": "Diaphragm",
+      "english_aliases": [
+        "Diaphragm"
+      ],
+      "evidence_ids": [
+        "muscle.diaphragm"
+      ],
+      "latin": "Diaphragma",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.5.01.001",
+      "english": "Rectus abdominis",
+      "english_aliases": [
+        "Rectus abdominis"
+      ],
+      "evidence_ids": [
+        "muscle.rectus_abdominis.left",
+        "muscle.rectus_abdominis.right"
+      ],
+      "latin": "M. rectus abdominis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.5.01.007",
+      "english": "Pyramidalis",
+      "english_aliases": [
+        "Pyramidalis"
+      ],
+      "evidence_ids": [
+        "muscle.pyramidalis.left",
+        "muscle.pyramidalis.right"
+      ],
+      "latin": "M. pyramidalis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.5.01.008",
+      "english": "External oblique",
+      "english_aliases": [
+        "External oblique"
+      ],
+      "evidence_ids": [
+        "muscle.external_abdominal_oblique.left",
+        "muscle.external_abdominal_oblique.right"
+      ],
+      "latin": "M. obliquus externus abdominis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.5.01.017",
+      "english": "Internal oblique",
+      "english_aliases": [
+        "Internal oblique"
+      ],
+      "evidence_ids": [
+        "muscle.internal_abdominal_oblique.left",
+        "muscle.internal_abdominal_oblique.right"
+      ],
+      "latin": "M. obliquus internus abdominis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.5.01.018",
+      "english": "Cremaster ♂",
+      "english_aliases": [
+        "Cremaster ♂"
+      ],
+      "evidence_ids": [],
+      "latin": "M. cremaster ♂",
+      "note": "Sex-specific skeletal muscle is absent from the selected baseline and excluded from Phase 0.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.5.01.019",
+      "english": "Transversus abdominis",
+      "english_aliases": [
+        "Transversus abdominis",
+        "Transverse abdominal"
+      ],
+      "evidence_ids": [
+        "muscle.transversus_abdominis.left",
+        "muscle.transversus_abdominis.right"
+      ],
+      "latin": "M. transversus abdominis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.5.01.027",
+      "english": "Quadratus lumborum",
+      "english_aliases": [
+        "Quadratus lumborum"
+      ],
+      "evidence_ids": [
+        "muscle.quadratus_lumborum.left",
+        "muscle.quadratus_lumborum.right"
+      ],
+      "latin": "M. quadratus lumborum",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.5.03.014",
+      "english": "Pubovesicalis",
+      "english_aliases": [
+        "Pubovesicalis"
+      ],
+      "evidence_ids": [],
+      "latin": "M. pubovesicalis",
+      "note": "No pubovesicalis mesh exists in the complete source index; retain as a gap pending definitive tissue-scope review.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.5.03.017",
+      "english": "Rectovesicalis",
+      "english_aliases": [
+        "Rectovesicalis"
+      ],
+      "evidence_ids": [],
+      "latin": "M. rectovesicalis",
+      "note": "Pelvic visceral smooth/fibromuscular structure is outside BodySim's skeletal-muscle scope.",
+      "optional_or_variable": false,
+      "status": "out_of_scope_non_skeletal"
+    },
+    {
+      "code": "A04.5.04.002",
+      "english": "Levator ani",
+      "english_aliases": [
+        "Levator ani"
+      ],
+      "evidence_ids": [
+        "muscle.iliococcygeus.left",
+        "muscle.iliococcygeus.right",
+        "muscle.pubo_analis.left",
+        "muscle.pubo_analis.right",
+        "muscle.pubococcygeus.left",
+        "muscle.pubococcygeus.right"
+      ],
+      "latin": "M. levator ani",
+      "note": "The levator ani composite is represented by available subdivisions; separately missing official subdivisions remain explicit gaps.",
+      "optional_or_variable": false,
+      "status": "represented_by_components"
+    },
+    {
+      "code": "A04.5.04.003",
+      "english": "Pubococcygeus",
+      "english_aliases": [
+        "Pubococcygeus"
+      ],
+      "evidence_ids": [
+        "muscle.pubococcygeus.left",
+        "muscle.pubococcygeus.right"
+      ],
+      "latin": "M. pubococcygeus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.5.04.004",
+      "english": "Puboperinealis",
+      "english_aliases": [
+        "Puboperinealis"
+      ],
+      "evidence_ids": [],
+      "latin": "M. puboperinealis",
+      "note": "Named levator ani subdivision is absent from the source.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.5.04.005",
+      "english": "Pubovaginalis ♀",
+      "english_aliases": [
+        "Pubovaginalis ♀"
+      ],
+      "evidence_ids": [],
+      "latin": "M. pubovaginalis ♀",
+      "note": "Sex-specific levator ani subdivision is absent from the source.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.5.04.005",
+      "english": "Puboprostaticus",
+      "english_aliases": [
+        "Puboprostaticus",
+        "Levator prostatae ♂"
+      ],
+      "evidence_ids": [],
+      "latin": "M. puboprostaticus; M. levator prostatae ♂",
+      "note": "Sex-specific levator ani subdivision is absent from the source.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.5.04.006",
+      "english": "Pubo-analis",
+      "english_aliases": [
+        "Pubo-analis"
+      ],
+      "evidence_ids": [
+        "muscle.pubo_analis.left",
+        "muscle.pubo_analis.right"
+      ],
+      "latin": "M. puboanalis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.5.04.007",
+      "english": "Puborectalis",
+      "english_aliases": [
+        "Puborectalis"
+      ],
+      "evidence_ids": [],
+      "latin": "M. puborectalis",
+      "note": "Named levator ani subdivision is absent from the source.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.5.04.008",
+      "english": "Iliococcygeus",
+      "english_aliases": [
+        "Iliococcygeus"
+      ],
+      "evidence_ids": [
+        "muscle.iliococcygeus.left",
+        "muscle.iliococcygeus.right"
+      ],
+      "latin": "M. iliococcygeus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.5.04.011",
+      "english": "Ischiococcygeus",
+      "english_aliases": [
+        "Ischiococcygeus",
+        "Coccygeus"
+      ],
+      "evidence_ids": [
+        "muscle.coccygeus.left",
+        "muscle.coccygeus.right"
+      ],
+      "latin": "M. ischiococcygeus; M. coccygeus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.5.04.012",
+      "english": "External anal sphincter",
+      "english_aliases": [
+        "External anal sphincter"
+      ],
+      "evidence_ids": [
+        "muscle.external_anal_sphincter.left",
+        "muscle.external_anal_sphincter.right"
+      ],
+      "latin": "M. sphincter ani externus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.5.05.001",
+      "english": "Perineal muscles",
+      "english_aliases": [
+        "Perineal muscles"
+      ],
+      "evidence_ids": [],
+      "latin": "Mm. perinei",
+      "note": "Taxonomic group redirected to individually audited perineal structures; it is not a separate mesh requirement.",
+      "optional_or_variable": false,
+      "status": "not_separate_structure"
+    },
+    {
+      "code": "A04.6.02.002",
+      "english": "Deltoid",
+      "english_aliases": [
+        "Deltoid"
+      ],
+      "evidence_ids": [
+        "muscle.acromial_part_of_deltoid.left",
+        "muscle.acromial_part_of_deltoid.right",
+        "muscle.clavicular_part_of_deltoid.left",
+        "muscle.clavicular_part_of_deltoid.right",
+        "muscle.scapular_spinal_part_of_deltoid.left",
+        "muscle.scapular_spinal_part_of_deltoid.right"
+      ],
+      "latin": "M. deltoideus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.006",
+      "english": "Supraspinatus",
+      "english_aliases": [
+        "Supraspinatus"
+      ],
+      "evidence_ids": [
+        "muscle.supraspinatus.left",
+        "muscle.supraspinatus.right"
+      ],
+      "latin": "M. supraspinatus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.008",
+      "english": "Infraspinatus",
+      "english_aliases": [
+        "Infraspinatus"
+      ],
+      "evidence_ids": [
+        "muscle.infraspinatus.left",
+        "muscle.infraspinatus.right"
+      ],
+      "latin": "M. infraspinatus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.010",
+      "english": "Teres minor",
+      "english_aliases": [
+        "Teres minor"
+      ],
+      "evidence_ids": [
+        "muscle.teres_minor.left",
+        "muscle.teres_minor.right"
+      ],
+      "latin": "M. teres minor",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.011",
+      "english": "Teres major",
+      "english_aliases": [
+        "Teres major"
+      ],
+      "evidence_ids": [
+        "muscle.teres_major.left",
+        "muscle.teres_major.right"
+      ],
+      "latin": "M. teres major",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.012",
+      "english": "Subscapularis",
+      "english_aliases": [
+        "Subscapularis"
+      ],
+      "evidence_ids": [
+        "muscle.subscapularis.left",
+        "muscle.subscapularis.right"
+      ],
+      "latin": "M. subscapularis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.013",
+      "english": "Biceps brachii",
+      "english_aliases": [
+        "Biceps brachii"
+      ],
+      "evidence_ids": [
+        "muscle.long_head_of_biceps_brachii.left",
+        "muscle.long_head_of_biceps_brachii.right",
+        "muscle.short_head_of_biceps_brachii.left",
+        "muscle.short_head_of_biceps_brachii.right"
+      ],
+      "latin": "M. biceps brachii",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.017",
+      "english": "Coracobrachialis",
+      "english_aliases": [
+        "Coracobrachialis"
+      ],
+      "evidence_ids": [
+        "muscle.coracobrachialis.left",
+        "muscle.coracobrachialis.right"
+      ],
+      "latin": "M. coracobrachialis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.018",
+      "english": "Brachialis",
+      "english_aliases": [
+        "Brachialis"
+      ],
+      "evidence_ids": [
+        "muscle.brachialis.left",
+        "muscle.brachialis.right"
+      ],
+      "latin": "M. brachialis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.019",
+      "english": "Triceps brachii",
+      "english_aliases": [
+        "Triceps brachii"
+      ],
+      "evidence_ids": [
+        "muscle.lateral_head_of_triceps_brachii.left",
+        "muscle.lateral_head_of_triceps_brachii.right",
+        "muscle.long_head_of_triceps_brachii.left",
+        "muscle.long_head_of_triceps_brachii.right",
+        "muscle.medial_head_of_triceps_brachii.left",
+        "muscle.medial_head_of_triceps_brachii.right"
+      ],
+      "latin": "M. triceps brachii",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.023",
+      "english": "Anconeus",
+      "english_aliases": [
+        "Anconeus"
+      ],
+      "evidence_ids": [
+        "muscle.anconeus.left",
+        "muscle.anconeus.right"
+      ],
+      "latin": "M. anconeus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.024",
+      "english": "Articularis cubiti",
+      "english_aliases": [
+        "Articularis cubiti"
+      ],
+      "evidence_ids": [],
+      "latin": "M. articularis cubiti",
+      "note": "No articularis cubiti object exists in the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.6.02.025",
+      "english": "Pronator teres",
+      "english_aliases": [
+        "Pronator teres"
+      ],
+      "evidence_ids": [
+        "muscle.deep_head_of_pronator_teres.left",
+        "muscle.deep_head_of_pronator_teres.right",
+        "muscle.superficial_head_of_pronator_teres.left",
+        "muscle.superficial_head_of_pronator_teres.right"
+      ],
+      "latin": "M. pronator teres",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.028",
+      "english": "Flexor carpi radialis",
+      "english_aliases": [
+        "Flexor carpi radialis"
+      ],
+      "evidence_ids": [
+        "muscle.flexor_carpi_radialis.left",
+        "muscle.flexor_carpi_radialis.right"
+      ],
+      "latin": "M. radialis flexor carpi",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.029",
+      "english": "Palmaris longus",
+      "english_aliases": [
+        "Palmaris longus"
+      ],
+      "evidence_ids": [
+        "muscle.palmaris_longus.left",
+        "muscle.palmaris_longus.right"
+      ],
+      "latin": "M. palmaris longus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.030",
+      "english": "Flexor carpi ulnaris",
+      "english_aliases": [
+        "Flexor carpi ulnaris"
+      ],
+      "evidence_ids": [
+        "muscle.humeral_head_of_flexor_carpi_ulnaris.left",
+        "muscle.humeral_head_of_flexor_carpi_ulnaris.right",
+        "muscle.ulnar_head_of_flexor_carpi_ulnaris.left",
+        "muscle.ulnar_head_of_flexor_carpi_ulnaris.right"
+      ],
+      "latin": "M. flexor carpi ulnaris",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.033",
+      "english": "Flexor digitorum superficialis",
+      "english_aliases": [
+        "Flexor digitorum superficialis"
+      ],
+      "evidence_ids": [
+        "muscle.humero_ulnar_head_of_flexor_digitorum_superficialis.left",
+        "muscle.humero_ulnar_head_of_flexor_digitorum_superficialis.right",
+        "muscle.radial_head_of_flexor_digitorum_superficialis.left",
+        "muscle.radial_head_of_flexor_digitorum_superficialis.right"
+      ],
+      "latin": "M. flexor digitorum superficialis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.036",
+      "english": "Flexor digitorum profundus",
+      "english_aliases": [
+        "Flexor digitorum profundus"
+      ],
+      "evidence_ids": [
+        "muscle.flexor_digitorum_profundus.left",
+        "muscle.flexor_digitorum_profundus.right"
+      ],
+      "latin": "M. flexor digitorum profundus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.037",
+      "english": "Flexor pollicis longus",
+      "english_aliases": [
+        "Flexor pollicis longus"
+      ],
+      "evidence_ids": [
+        "muscle.flexor_pollicis_longus.left",
+        "muscle.flexor_pollicis_longus.right"
+      ],
+      "latin": "M. flexor pollicis longus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.038",
+      "english": "Pronator quadratus",
+      "english_aliases": [
+        "Pronator quadratus"
+      ],
+      "evidence_ids": [
+        "muscle.pronator_quadratus.left",
+        "muscle.pronator_quadratus.right"
+      ],
+      "latin": "M. pronator quadratus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.039",
+      "english": "Brachioradialis",
+      "english_aliases": [
+        "Brachioradialis"
+      ],
+      "evidence_ids": [
+        "muscle.brachioradialis.left",
+        "muscle.brachioradialis.right"
+      ],
+      "latin": "M. brachioradialis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.040",
+      "english": "Extensor carpi radialis longus",
+      "english_aliases": [
+        "Extensor carpi radialis longus"
+      ],
+      "evidence_ids": [
+        "muscle.extensor_carpi_radialis_longus.left",
+        "muscle.extensor_carpi_radialis_longus.right"
+      ],
+      "latin": "M. radialis longus extensor carpi",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.041",
+      "english": "Extensor carpi radialis brevis",
+      "english_aliases": [
+        "Extensor carpi radialis brevis"
+      ],
+      "evidence_ids": [
+        "muscle.extensor_carpi_radialis_brevis.left",
+        "muscle.extensor_carpi_radialis_brevis.right"
+      ],
+      "latin": "M. radialis brevis extensor carpi",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.042",
+      "english": "Extensor digitorum",
+      "english_aliases": [
+        "Extensor digitorum"
+      ],
+      "evidence_ids": [
+        "muscle.extensor_digitorum.left",
+        "muscle.extensor_digitorum.right",
+        "muscle.extensor_digitorum_brevis.left",
+        "muscle.extensor_digitorum_brevis.right",
+        "muscle.extensor_digitorum_longus.left",
+        "muscle.extensor_digitorum_longus.right"
+      ],
+      "latin": "M. extensor digitorum",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.044",
+      "english": "Extensor digiti minimi",
+      "english_aliases": [
+        "Extensor digiti minimi"
+      ],
+      "evidence_ids": [
+        "muscle.extensor_digiti_minimi.left",
+        "muscle.extensor_digiti_minimi.right"
+      ],
+      "latin": "M. extensor digiti minimi",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.045",
+      "english": "Extensor carpi ulnaris",
+      "english_aliases": [
+        "Extensor carpi ulnaris"
+      ],
+      "evidence_ids": [
+        "muscle.humeral_head_of_extensor_carpi_ulnaris.left",
+        "muscle.humeral_head_of_extensor_carpi_ulnaris.right",
+        "muscle.ulnar_head_of_extensor_carpi_ulnaris.left",
+        "muscle.ulnar_head_of_extensor_carpi_ulnaris.right"
+      ],
+      "latin": "M. extensor carpi ulnaris",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.048",
+      "english": "Supinator",
+      "english_aliases": [
+        "Supinator"
+      ],
+      "evidence_ids": [
+        "muscle.supinator.left",
+        "muscle.supinator.right"
+      ],
+      "latin": "M. supinator",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.049",
+      "english": "Abductor pollicis longus",
+      "english_aliases": [
+        "Abductor pollicis longus"
+      ],
+      "evidence_ids": [
+        "muscle.abductor_pollicis_longus.left",
+        "muscle.abductor_pollicis_longus.right"
+      ],
+      "latin": "M. abductor pollicis longus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.050",
+      "english": "Extensor pollicis brevis",
+      "english_aliases": [
+        "Extensor pollicis brevis"
+      ],
+      "evidence_ids": [
+        "muscle.extensor_pollicis_brevis.left",
+        "muscle.extensor_pollicis_brevis.right"
+      ],
+      "latin": "M. brevis extensor pollicis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.051",
+      "english": "Extensor pollicis longus",
+      "english_aliases": [
+        "Extensor pollicis longus"
+      ],
+      "evidence_ids": [
+        "muscle.extensor_pollicis_longus.left",
+        "muscle.extensor_pollicis_longus.right"
+      ],
+      "latin": "M. extensor pollicis longus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.052",
+      "english": "Extensor indicis",
+      "english_aliases": [
+        "Extensor indicis"
+      ],
+      "evidence_ids": [
+        "muscle.extensor_indicis.left",
+        "muscle.extensor_indicis.right"
+      ],
+      "latin": "M. extensor indicis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.053",
+      "english": "Palmaris brevis",
+      "english_aliases": [
+        "Palmaris brevis"
+      ],
+      "evidence_ids": [],
+      "latin": "M. palmaris brevis",
+      "note": "No palmaris brevis object exists in the complete source index.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.6.02.054",
+      "english": "Abductor pollicis brevis",
+      "english_aliases": [
+        "Abductor pollicis brevis"
+      ],
+      "evidence_ids": [
+        "muscle.abductor_pollicis_brevis.left",
+        "muscle.abductor_pollicis_brevis.right"
+      ],
+      "latin": "M. brevis abductor pollicis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.055",
+      "english": "Flexor pollicis brevis",
+      "english_aliases": [
+        "Flexor pollicis brevis"
+      ],
+      "evidence_ids": [
+        "muscle.deep_head_of_flexor_pollicis_brevis.left",
+        "muscle.deep_head_of_flexor_pollicis_brevis.right",
+        "muscle.superficial_head_of_flexor_pollicis_brevis.left",
+        "muscle.superficial_head_of_flexor_pollicis_brevis.right"
+      ],
+      "latin": "M. brevis flexor pollicis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.058",
+      "english": "Opponens pollicis",
+      "english_aliases": [
+        "Opponens pollicis"
+      ],
+      "evidence_ids": [
+        "muscle.opponens_pollicis.left",
+        "muscle.opponens_pollicis.right"
+      ],
+      "latin": "M. opponens pollicis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.059",
+      "english": "Adductor pollicis",
+      "english_aliases": [
+        "Adductor pollicis"
+      ],
+      "evidence_ids": [
+        "muscle.oblique_head_of_adductor_pollicis.left",
+        "muscle.oblique_head_of_adductor_pollicis.right",
+        "muscle.transverse_head_of_adductor_pollicis.left",
+        "muscle.transverse_head_of_adductor_pollicis.right"
+      ],
+      "latin": "M. adductor pollicis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.062",
+      "english": "Abductor digiti minimi",
+      "english_aliases": [
+        "Abductor digiti minimi"
+      ],
+      "evidence_ids": [
+        "muscle.abductor_digiti_minimi_of_foot.left",
+        "muscle.abductor_digiti_minimi_of_foot.right",
+        "muscle.abductor_digiti_minimi_of_hand.left",
+        "muscle.abductor_digiti_minimi_of_hand.right"
+      ],
+      "latin": "M. abductor digiti minimi",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.063",
+      "english": "Flexor digiti minimi brevis",
+      "english_aliases": [
+        "Flexor digiti minimi brevis"
+      ],
+      "evidence_ids": [
+        "muscle.flexor_digiti_minimi_of_hand.left",
+        "muscle.flexor_digiti_minimi_of_hand.right"
+      ],
+      "latin": "M. brevis flexor digiti minimi",
+      "note": "Catalog uses a region-qualified name for the hand muscle.",
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.064",
+      "english": "Opponens digiti minimi",
+      "english_aliases": [
+        "Opponens digiti minimi"
+      ],
+      "evidence_ids": [
+        "muscle.opponens_digiti_minimi_muscle_of_foot.left",
+        "muscle.opponens_digiti_minimi_muscle_of_foot.right",
+        "muscle.opponens_digiti_minimi_muscle_of_hand.left",
+        "muscle.opponens_digiti_minimi_muscle_of_hand.right"
+      ],
+      "latin": "M. opponens digiti minimi",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.065",
+      "english": "Lumbricals",
+      "english_aliases": [
+        "Lumbricals"
+      ],
+      "evidence_ids": [
+        "muscle.lumbrical_muscles_of_foot.left",
+        "muscle.lumbrical_muscles_of_foot.right",
+        "muscle.lumbrical_muscles_of_hand.left",
+        "muscle.lumbrical_muscles_of_hand.right"
+      ],
+      "latin": "Mm. lumbricales",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.066",
+      "english": "Dorsal interossei",
+      "english_aliases": [
+        "Dorsal interossei"
+      ],
+      "evidence_ids": [
+        "muscle.dorsal_interossei_muscles_of_foot.left",
+        "muscle.dorsal_interossei_muscles_of_foot.right",
+        "muscle.dorsal_interossei_muscles_of_hand.left",
+        "muscle.dorsal_interossei_muscles_of_hand.right"
+      ],
+      "latin": "Mm. interossei dorsales",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.6.02.067",
+      "english": "Palmar interossei",
+      "english_aliases": [
+        "Palmar interossei"
+      ],
+      "evidence_ids": [
+        "muscle.palmar_interossei.left",
+        "muscle.palmar_interossei.right"
+      ],
+      "latin": "Mm. interossei palmares",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.002",
+      "english": "Iliopsoas",
+      "english_aliases": [
+        "Iliopsoas"
+      ],
+      "evidence_ids": [
+        "muscle.iliacus.left",
+        "muscle.iliacus.right",
+        "muscle.psoas_major.left",
+        "muscle.psoas_major.right"
+      ],
+      "latin": "M. iliopsoas",
+      "note": "Iliopsoas is represented by its iliacus and psoas major components.",
+      "optional_or_variable": false,
+      "status": "represented_by_components"
+    },
+    {
+      "code": "A04.7.02.003",
+      "english": "Iliacus",
+      "english_aliases": [
+        "Iliacus"
+      ],
+      "evidence_ids": [
+        "muscle.iliacus.left",
+        "muscle.iliacus.right"
+      ],
+      "latin": "M. iliacus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.004",
+      "english": "Psoas major",
+      "english_aliases": [
+        "Psoas major"
+      ],
+      "evidence_ids": [
+        "muscle.psoas_major.left",
+        "muscle.psoas_major.right"
+      ],
+      "latin": "M. psoas major",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.005",
+      "english": "Psoas minor",
+      "english_aliases": [
+        "Psoas minor"
+      ],
+      "evidence_ids": [],
+      "latin": "M. psoas minor",
+      "note": null,
+      "optional_or_variable": true,
+      "status": "optional_not_represented"
+    },
+    {
+      "code": "A04.7.02.006",
+      "english": "Gluteus maximus",
+      "english_aliases": [
+        "Gluteus maximus"
+      ],
+      "evidence_ids": [
+        "muscle.gluteus_maximus.left",
+        "muscle.gluteus_maximus.right"
+      ],
+      "latin": "M. gluteus maximus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.007",
+      "english": "Gluteus medius",
+      "english_aliases": [
+        "Gluteus medius"
+      ],
+      "evidence_ids": [
+        "muscle.gluteus_medius.left",
+        "muscle.gluteus_medius.right"
+      ],
+      "latin": "M. gluteus medius",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.008",
+      "english": "Gluteus minimus",
+      "english_aliases": [
+        "Gluteus minimus"
+      ],
+      "evidence_ids": [
+        "muscle.gluteus_minimus.left",
+        "muscle.gluteus_minimus.right"
+      ],
+      "latin": "M. gluteus minimus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.010",
+      "english": "Tensor fasciae latae",
+      "english_aliases": [
+        "Tensor fasciae latae",
+        "Tensor of fascia lata"
+      ],
+      "evidence_ids": [
+        "muscle.tensor_fasciae_latae.left",
+        "muscle.tensor_fasciae_latae.right"
+      ],
+      "latin": "M. tensor fasciae latae",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.011",
+      "english": "Piriformis",
+      "english_aliases": [
+        "Piriformis"
+      ],
+      "evidence_ids": [
+        "muscle.piriformis.left",
+        "muscle.piriformis.right"
+      ],
+      "latin": "M. piriformis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.012",
+      "english": "Obturator internus",
+      "english_aliases": [
+        "Obturator internus"
+      ],
+      "evidence_ids": [
+        "muscle.obturator_internus.left",
+        "muscle.obturator_internus.right"
+      ],
+      "latin": "M. obturatorius internus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.013",
+      "english": "Gemellus superior",
+      "english_aliases": [
+        "Gemellus superior",
+        "Superior gemellus"
+      ],
+      "evidence_ids": [
+        "muscle.superior_gemellus.left",
+        "muscle.superior_gemellus.right"
+      ],
+      "latin": "M. gemellus superior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.014",
+      "english": "Gemellus inferior",
+      "english_aliases": [
+        "Gemellus inferior",
+        "Inferior gemellus"
+      ],
+      "evidence_ids": [
+        "muscle.inferior_gemellus.left",
+        "muscle.inferior_gemellus.right"
+      ],
+      "latin": "M. gemellus inferior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.015",
+      "english": "Quadratus femoris",
+      "english_aliases": [
+        "Quadratus femoris"
+      ],
+      "evidence_ids": [
+        "muscle.quadratus_femoris.left",
+        "muscle.quadratus_femoris.right"
+      ],
+      "latin": "M. quadratus femoris",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.016",
+      "english": "Sartorius",
+      "english_aliases": [
+        "Sartorius"
+      ],
+      "evidence_ids": [
+        "muscle.sartorius.left",
+        "muscle.sartorius.right"
+      ],
+      "latin": "M. sartorius",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.017",
+      "english": "Quadriceps femoris",
+      "english_aliases": [
+        "Quadriceps femoris"
+      ],
+      "evidence_ids": [
+        "muscle.rectus_femoris.left",
+        "muscle.rectus_femoris.right",
+        "muscle.vastus_intermedius.left",
+        "muscle.vastus_intermedius.right",
+        "muscle.vastus_lateralis.left",
+        "muscle.vastus_lateralis.right",
+        "muscle.vastus_medialis.left",
+        "muscle.vastus_medialis.right"
+      ],
+      "latin": "M. quadriceps femoris",
+      "note": "Quadriceps femoris is represented by all four component muscles.",
+      "optional_or_variable": false,
+      "status": "represented_by_components"
+    },
+    {
+      "code": "A04.7.02.018",
+      "english": "Rectus femoris",
+      "english_aliases": [
+        "Rectus femoris"
+      ],
+      "evidence_ids": [
+        "muscle.rectus_femoris.left",
+        "muscle.rectus_femoris.right"
+      ],
+      "latin": "M. rectus femoris",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.021",
+      "english": "Vastus lateralis",
+      "english_aliases": [
+        "Vastus lateralis"
+      ],
+      "evidence_ids": [
+        "muscle.vastus_lateralis.left",
+        "muscle.vastus_lateralis.right"
+      ],
+      "latin": "M. vastus lateralis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.022",
+      "english": "Vastus intermedius",
+      "english_aliases": [
+        "Vastus intermedius"
+      ],
+      "evidence_ids": [
+        "muscle.vastus_intermedius.left",
+        "muscle.vastus_intermedius.right"
+      ],
+      "latin": "M. vastus intermedius",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.023",
+      "english": "Vastus medialis",
+      "english_aliases": [
+        "Vastus medialis"
+      ],
+      "evidence_ids": [
+        "muscle.vastus_medialis.left",
+        "muscle.vastus_medialis.right"
+      ],
+      "latin": "M. vastus medialis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.024",
+      "english": "Articularis genus",
+      "english_aliases": [
+        "Articularis genus",
+        "Articular muscle of knee"
+      ],
+      "evidence_ids": [],
+      "latin": "M. articularis genus",
+      "note": "Only attachment overlays exist; there is no selectable muscle mesh.",
+      "optional_or_variable": false,
+      "status": "excluded_phase0_reference_only"
+    },
+    {
+      "code": "A04.7.02.025",
+      "english": "Pectineus",
+      "english_aliases": [
+        "Pectineus"
+      ],
+      "evidence_ids": [
+        "muscle.pectineus.left",
+        "muscle.pectineus.right"
+      ],
+      "latin": "M. pectineus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.026",
+      "english": "Adductor longus",
+      "english_aliases": [
+        "Adductor longus"
+      ],
+      "evidence_ids": [
+        "muscle.adductor_longus.left",
+        "muscle.adductor_longus.right"
+      ],
+      "latin": "M. adductor longus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.027",
+      "english": "Adductor brevis",
+      "english_aliases": [
+        "Adductor brevis"
+      ],
+      "evidence_ids": [
+        "muscle.adductor_brevis.left",
+        "muscle.adductor_brevis.right"
+      ],
+      "latin": "M. adductor brevis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.028",
+      "english": "Adductor magnus",
+      "english_aliases": [
+        "Adductor magnus"
+      ],
+      "evidence_ids": [
+        "muscle.adductor_magnus.left",
+        "muscle.adductor_magnus.right"
+      ],
+      "latin": "M. adductor magnus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.029",
+      "english": "Adductor minimus",
+      "english_aliases": [
+        "Adductor minimus"
+      ],
+      "evidence_ids": [
+        "muscle.adductor_minimus.left",
+        "muscle.adductor_minimus.right"
+      ],
+      "latin": "M. adductor minimus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.030",
+      "english": "Gracilis",
+      "english_aliases": [
+        "Gracilis"
+      ],
+      "evidence_ids": [
+        "muscle.gracilis.left",
+        "muscle.gracilis.right"
+      ],
+      "latin": "M. gracilis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.031",
+      "english": "Obturator externus",
+      "english_aliases": [
+        "Obturator externus"
+      ],
+      "evidence_ids": [
+        "muscle.obturator_externus.left",
+        "muscle.obturator_externus.right"
+      ],
+      "latin": "M. obturatorius externus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.032",
+      "english": "Biceps femoris",
+      "english_aliases": [
+        "Biceps femoris"
+      ],
+      "evidence_ids": [
+        "muscle.long_head_of_biceps_femoris.left",
+        "muscle.long_head_of_biceps_femoris.right",
+        "muscle.short_head_of_biceps_femoris.left",
+        "muscle.short_head_of_biceps_femoris.right"
+      ],
+      "latin": "M. biceps femoris",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.035",
+      "english": "Semitendinosus",
+      "english_aliases": [
+        "Semitendinosus"
+      ],
+      "evidence_ids": [
+        "muscle.semitendinosus.left",
+        "muscle.semitendinosus.right"
+      ],
+      "latin": "M. semitendinosus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.036",
+      "english": "Semimembranosus",
+      "english_aliases": [
+        "Semimembranosus"
+      ],
+      "evidence_ids": [
+        "muscle.semimembranosus.left",
+        "muscle.semimembranosus.right"
+      ],
+      "latin": "M. semimembranosus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.037",
+      "english": "Tibialis anterior",
+      "english_aliases": [
+        "Tibialis anterior"
+      ],
+      "evidence_ids": [
+        "muscle.tibialis_anterior.left",
+        "muscle.tibialis_anterior.right"
+      ],
+      "latin": "M. tibialis anterior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.038",
+      "english": "Extensor digitorum longus",
+      "english_aliases": [
+        "Extensor digitorum longus"
+      ],
+      "evidence_ids": [
+        "muscle.extensor_digitorum_longus.left",
+        "muscle.extensor_digitorum_longus.right"
+      ],
+      "latin": "M. extensor digitorum longus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.039",
+      "english": "Fibularis tertius",
+      "english_aliases": [
+        "Fibularis tertius",
+        "Peroneus tertius"
+      ],
+      "evidence_ids": [
+        "muscle.fibularis_tertius.left",
+        "muscle.fibularis_tertius.right"
+      ],
+      "latin": "M. fibularis tertius; M. peroneus tertius",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.040",
+      "english": "Extensor hallucis longus",
+      "english_aliases": [
+        "Extensor hallucis longus"
+      ],
+      "evidence_ids": [
+        "muscle.extensor_hallucis_longus.left",
+        "muscle.extensor_hallucis_longus.right"
+      ],
+      "latin": "M. extensor hallucis longus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.041",
+      "english": "Fibularis longus",
+      "english_aliases": [
+        "Fibularis longus",
+        "Peroneus longus"
+      ],
+      "evidence_ids": [
+        "muscle.fibularis_longus.left",
+        "muscle.fibularis_longus.right"
+      ],
+      "latin": "M. fibularis longus; M. peroneus longus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.042",
+      "english": "Fibularis brevis",
+      "english_aliases": [
+        "Fibularis brevis",
+        "Peroneus brevis"
+      ],
+      "evidence_ids": [
+        "muscle.fibularis_brevis.left",
+        "muscle.fibularis_brevis.right"
+      ],
+      "latin": "M. fibularis brevis; M. peroneus brevis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.043",
+      "english": "Triceps surae",
+      "english_aliases": [
+        "Triceps surae"
+      ],
+      "evidence_ids": [
+        "muscle.lateral_head_of_gastrocnemius.left",
+        "muscle.lateral_head_of_gastrocnemius.right",
+        "muscle.medial_head_of_gastrocnemius.left",
+        "muscle.medial_head_of_gastrocnemius.right",
+        "muscle.soleus.left",
+        "muscle.soleus.right"
+      ],
+      "latin": "M. triceps surae",
+      "note": "Triceps surae is represented by gastrocnemius heads and soleus.",
+      "optional_or_variable": false,
+      "status": "represented_by_components"
+    },
+    {
+      "code": "A04.7.02.044",
+      "english": "Gastrocnemius",
+      "english_aliases": [
+        "Gastrocnemius"
+      ],
+      "evidence_ids": [
+        "muscle.lateral_head_of_gastrocnemius.left",
+        "muscle.lateral_head_of_gastrocnemius.right",
+        "muscle.medial_head_of_gastrocnemius.left",
+        "muscle.medial_head_of_gastrocnemius.right"
+      ],
+      "latin": "M. gastrocnemius",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.047",
+      "english": "Soleus",
+      "english_aliases": [
+        "Soleus"
+      ],
+      "evidence_ids": [
+        "muscle.soleus.left",
+        "muscle.soleus.right"
+      ],
+      "latin": "M. soleus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.049",
+      "english": "Plantaris",
+      "english_aliases": [
+        "Plantaris"
+      ],
+      "evidence_ids": [
+        "muscle.plantaris.left",
+        "muscle.plantaris.right"
+      ],
+      "latin": "M. plantaris",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.050",
+      "english": "Popliteus",
+      "english_aliases": [
+        "Popliteus"
+      ],
+      "evidence_ids": [
+        "muscle.popliteus.left",
+        "muscle.popliteus.right"
+      ],
+      "latin": "M. popliteus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.051",
+      "english": "Tibialis posterior",
+      "english_aliases": [
+        "Tibialis posterior"
+      ],
+      "evidence_ids": [
+        "muscle.tibialis_posterior.left",
+        "muscle.tibialis_posterior.right"
+      ],
+      "latin": "M. tibialis posterior",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.052",
+      "english": "Flexor digitorum longus",
+      "english_aliases": [
+        "Flexor digitorum longus"
+      ],
+      "evidence_ids": [
+        "muscle.flexor_digitorum_longus.left",
+        "muscle.flexor_digitorum_longus.right"
+      ],
+      "latin": "M. flexor digitorum longus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.053",
+      "english": "Flexor hallucis longus",
+      "english_aliases": [
+        "Flexor hallucis longus"
+      ],
+      "evidence_ids": [
+        "muscle.flexor_hallucis_longus.left",
+        "muscle.flexor_hallucis_longus.right"
+      ],
+      "latin": "M. flexor hallucis longus",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.054",
+      "english": "Extensor hallucis brevis",
+      "english_aliases": [
+        "Extensor hallucis brevis"
+      ],
+      "evidence_ids": [
+        "muscle.extensor_hallucis_brevis.left",
+        "muscle.extensor_hallucis_brevis.right"
+      ],
+      "latin": "M. brevis extensor hallucis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.055",
+      "english": "Extensor digitorum brevis",
+      "english_aliases": [
+        "Extensor digitorum brevis"
+      ],
+      "evidence_ids": [
+        "muscle.extensor_digitorum_brevis.left",
+        "muscle.extensor_digitorum_brevis.right"
+      ],
+      "latin": "M. extensor digitorum brevis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.056",
+      "english": "Abductor hallucis",
+      "english_aliases": [
+        "Abductor hallucis"
+      ],
+      "evidence_ids": [
+        "muscle.abductor_hallucis.left",
+        "muscle.abductor_hallucis.right"
+      ],
+      "latin": "M. abductor hallucis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.057",
+      "english": "Flexor hallucis brevis",
+      "english_aliases": [
+        "Flexor hallucis brevis"
+      ],
+      "evidence_ids": [
+        "muscle.lateral_head_of_flexor_hallucis_brevis.left",
+        "muscle.lateral_head_of_flexor_hallucis_brevis.right",
+        "muscle.medial_head_of_flexor_hallucis_brevis.left",
+        "muscle.medial_head_of_flexor_hallucis_brevis.right"
+      ],
+      "latin": "M. brevis flexor hallucis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.060",
+      "english": "Adductor hallucis",
+      "english_aliases": [
+        "Adductor hallucis"
+      ],
+      "evidence_ids": [
+        "muscle.oblique_head_of_adductor_hallucis.left",
+        "muscle.oblique_head_of_adductor_hallucis.right",
+        "muscle.transverse_head_of_adductor_hallucis.left",
+        "muscle.transverse_head_of_adductor_hallucis.right"
+      ],
+      "latin": "M. adductor hallucis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.063",
+      "english": "Abductor digiti minimi",
+      "english_aliases": [
+        "Abductor digiti minimi"
+      ],
+      "evidence_ids": [
+        "muscle.abductor_digiti_minimi_of_foot.left",
+        "muscle.abductor_digiti_minimi_of_foot.right",
+        "muscle.abductor_digiti_minimi_of_hand.left",
+        "muscle.abductor_digiti_minimi_of_hand.right"
+      ],
+      "latin": "M. abductor digiti minimi",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.064",
+      "english": "Abductor of fifth metatarsal",
+      "english_aliases": [
+        "Abductor of fifth metatarsal"
+      ],
+      "evidence_ids": [],
+      "latin": "M. abductor metatarsi quinti",
+      "note": null,
+      "optional_or_variable": true,
+      "status": "optional_not_represented"
+    },
+    {
+      "code": "A04.7.02.065",
+      "english": "Opponens digiti minimi",
+      "english_aliases": [
+        "Opponens digiti minimi"
+      ],
+      "evidence_ids": [
+        "muscle.opponens_digiti_minimi_muscle_of_foot.left",
+        "muscle.opponens_digiti_minimi_muscle_of_foot.right",
+        "muscle.opponens_digiti_minimi_muscle_of_hand.left",
+        "muscle.opponens_digiti_minimi_muscle_of_hand.right"
+      ],
+      "latin": "M. opponens digiti minimi",
+      "note": null,
+      "optional_or_variable": true,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.066",
+      "english": "Flexor digiti minimi brevis",
+      "english_aliases": [
+        "Flexor digiti minimi brevis"
+      ],
+      "evidence_ids": [
+        "muscle.flexor_digiti_minimi_of_foot.left",
+        "muscle.flexor_digiti_minimi_of_foot.right"
+      ],
+      "latin": "M. brevis flexor digiti minimi",
+      "note": "Catalog uses a region-qualified name for the foot muscle.",
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.067",
+      "english": "Flexor digitorum brevis",
+      "english_aliases": [
+        "Flexor digitorum brevis"
+      ],
+      "evidence_ids": [
+        "muscle.flexor_digitorum_brevis.left",
+        "muscle.flexor_digitorum_brevis.right"
+      ],
+      "latin": "M. flexor digitorum brevis",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.068",
+      "english": "Quadratus plantae",
+      "english_aliases": [
+        "Quadratus plantae",
+        "Flexor accessorius"
+      ],
+      "evidence_ids": [
+        "muscle.quadratus_plantae.left",
+        "muscle.quadratus_plantae.right"
+      ],
+      "latin": "M. quadratus plantae; M. flexor accessorius",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.069",
+      "english": "Lumbricals",
+      "english_aliases": [
+        "Lumbricals"
+      ],
+      "evidence_ids": [
+        "muscle.lumbrical_muscles_of_foot.left",
+        "muscle.lumbrical_muscles_of_foot.right",
+        "muscle.lumbrical_muscles_of_hand.left",
+        "muscle.lumbrical_muscles_of_hand.right"
+      ],
+      "latin": "Mm. lumbricales",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.070",
+      "english": "Dorsal interossei",
+      "english_aliases": [
+        "Dorsal interossei"
+      ],
+      "evidence_ids": [
+        "muscle.dorsal_interossei_muscles_of_foot.left",
+        "muscle.dorsal_interossei_muscles_of_foot.right",
+        "muscle.dorsal_interossei_muscles_of_hand.left",
+        "muscle.dorsal_interossei_muscles_of_hand.right"
+      ],
+      "latin": "Mm. interossei dorsales",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    },
+    {
+      "code": "A04.7.02.071",
+      "english": "Plantar interossei",
+      "english_aliases": [
+        "Plantar interossei"
+      ],
+      "evidence_ids": [
+        "muscle.plantar_interossei.left",
+        "muscle.plantar_interossei.right"
+      ],
+      "latin": "Mm. interossei plantares",
+      "note": null,
+      "optional_or_variable": false,
+      "status": "represented"
+    }
+  ],
+  "schema_version": 1,
+  "status_counts": {
+    "excluded_phase0_reference_only": 22,
+    "not_separate_structure": 1,
+    "optional_not_represented": 7,
+    "out_of_scope_non_skeletal": 1,
+    "represented": 188,
+    "represented_by_components": 7,
+    "represented_lower_granularity": 2
+  },
+  "terms_audited": 228
+}

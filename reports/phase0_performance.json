@@ -1,0 +1,54 @@
+{
+  "budgets": {
+    "average_fps_min": 30.0,
+    "incremental_static_memory_bytes_max": 1073741824,
+    "load_to_ready_ms_max": 3000.0,
+    "p95_frame_ms_max": 33.34
+  },
+  "checks": {
+    "average_fps": true,
+    "canonical_coverage": true,
+    "incremental_memory": true,
+    "load_time": true,
+    "p95_frame_time": true
+  },
+  "engine": {
+    "build": "official",
+    "hash": "a13da4feb8d8aefc283c3763d33a2f170a18d541",
+    "hex": 263937,
+    "major": 4,
+    "minor": 7,
+    "patch": 1,
+    "status": "stable",
+    "string": "4.7.1-stable (official)",
+    "timestamp": 0
+  },
+  "measured_at_utc": "2026-08-10T21:28:47",
+  "measurements": {
+    "average_fps": 144.942007092496,
+    "average_frame_ms": 6.89931111111111,
+    "canonical_meshes": 960,
+    "draw_calls": 0,
+    "incremental_static_memory_bytes": 126122479,
+    "load_to_ready_ms": 272.782,
+    "p95_frame_ms": 6.917,
+    "rendered_objects": 0,
+    "rendered_primitives": 0,
+    "sample_frames": 180,
+    "static_memory_after_bytes": 151200573,
+    "static_memory_before_bytes": 25078094
+  },
+  "platform": {
+    "display_server": "headless",
+    "os": "Linux",
+    "processor": "AMD Ryzen 9 7950X 16-Core Processor",
+    "rendering_driver": "vulkan",
+    "rendering_method": "forward_plus",
+    "window_size": {
+      "height": 64,
+      "width": 64
+    }
+  },
+  "schema_version": 1,
+  "status": "passed"
+}

@@ -1,0 +1,20 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Generated anatomy: the seven regional GLBs are committed (the app needs them
+# and their licensing is verified, see docs/anatomy-licensing.md); the single
+# whole-body preview is a tooling artefact and can be regenerated.
+/build/anatomy/preview/
+
+# Web export output (deployed separately; regenerate with the Web preset +
+# tools/web/stage_web_photos.py)
+/build/web/
+
+# Local backups and caches (the backup folder contains a secret)
+/.backup-before-web/
+__pycache__/
+*.pyc
+.pytest_cache/
+/.agents/
+/.codex/

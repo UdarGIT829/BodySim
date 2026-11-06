@@ -1,0 +1,31 @@
+{
+  "candidate_structures": 960,
+  "catalog_status": "curated_pending_external_review",
+  "inventory_objects": 3817,
+  "regions": {
+    "head_neck": 288,
+    "lower_limb": 276,
+    "pelvis": 16,
+    "torso": 186,
+    "upper_limb": 194
+  },
+  "review_flag_counts": {},
+  "review_items": [],
+  "schema_version": 1,
+  "source_roles": {
+    "aggregate_mesh": 727,
+    "attachment_overlay": 705,
+    "feature_overlay": 344,
+    "group_mesh": 2,
+    "label": 1079,
+    "structure_candidate": 960
+  },
+  "systems": {
+    "bone": 209,
+    "cartilage": 31,
+    "dental_structure": 28,
+    "musculoskeletal_connective_tissue": 217,
+    "skeletal_feature": 9,
+    "skeletal_muscle": 466
+  }
+}

@@ -1,0 +1,2079 @@
+{
+  "schema_version": 1,
+  "selection": "A04.1-A04.7 rows whose Latin term denotes an individual muscle",
+  "source": {
+    "citation": "FIPAT. Terminologia Anatomica. 2nd ed. FIPAT, 2019.",
+    "reference_edition": "TA98 online partonomic chapter",
+    "terms_license": "public_domain",
+    "url": "https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/TA98%20EN/04%20TA98%20EN.htm"
+  },
+  "terms": [
+    {
+      "code": "A04.1.03.002",
+      "english": "Epicranius",
+      "english_aliases": [
+        "Epicranius"
+      ],
+      "latin": "M. epicranius",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.003",
+      "english": "Occipitofrontalis",
+      "english_aliases": [
+        "Occipitofrontalis"
+      ],
+      "latin": "M. occipitofrontalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.006",
+      "english": "Temporoparietalis",
+      "english_aliases": [
+        "Temporoparietalis"
+      ],
+      "latin": "M. temporoparietalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.008",
+      "english": "Procerus",
+      "english_aliases": [
+        "Procerus"
+      ],
+      "latin": "M. procerus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.009",
+      "english": "Nasalis",
+      "english_aliases": [
+        "Nasalis"
+      ],
+      "latin": "M. nasalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.012",
+      "english": "Depressor septi nasi",
+      "english_aliases": [
+        "Depressor septi nasi"
+      ],
+      "latin": "M. depressor septi nasi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.013",
+      "english": "Orbicularis oculi",
+      "english_aliases": [
+        "Orbicularis oculi"
+      ],
+      "latin": "M. orbicularis oculi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.018",
+      "english": "Corrugator supercilii",
+      "english_aliases": [
+        "Corrugator supercilii"
+      ],
+      "latin": "M. corrugator supercilii",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.019",
+      "english": "Depressor supercilii",
+      "english_aliases": [
+        "Depressor supercilii"
+      ],
+      "latin": "M. depressor supercilii",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.020",
+      "english": "Auricularis anterior",
+      "english_aliases": [
+        "Auricularis anterior"
+      ],
+      "latin": "M. auricularis anterior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.021",
+      "english": "Auricularis superior",
+      "english_aliases": [
+        "Auricularis superior"
+      ],
+      "latin": "M. auricularis superior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.022",
+      "english": "Auricularis posterior",
+      "english_aliases": [
+        "Auricularis posterior"
+      ],
+      "latin": "M. auricularis posterior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.023",
+      "english": "Orbicularis oris",
+      "english_aliases": [
+        "Orbicularis oris"
+      ],
+      "latin": "M. orbicularis oris",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.026",
+      "english": "Depressor anguli oris",
+      "english_aliases": [
+        "Depressor anguli oris"
+      ],
+      "latin": "M. depressor anguli oris",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.027",
+      "english": "Transversus menti",
+      "english_aliases": [
+        "Transversus menti"
+      ],
+      "latin": "M. transversus menti",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.028",
+      "english": "Risorius",
+      "english_aliases": [
+        "Risorius"
+      ],
+      "latin": "M. risorius",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.029",
+      "english": "Zygomaticus major",
+      "english_aliases": [
+        "Zygomaticus major"
+      ],
+      "latin": "M. zygomaticus major",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.030",
+      "english": "Zygomaticus minor",
+      "english_aliases": [
+        "Zygomaticus minor"
+      ],
+      "latin": "M. zygomaticus minor",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.031",
+      "english": "Levator labii superioris",
+      "english_aliases": [
+        "Levator labii superioris"
+      ],
+      "latin": "M. levator labii superioris",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.032",
+      "english": "Levator labii superioris alaeque nasi",
+      "english_aliases": [
+        "Levator labii superioris alaeque nasi"
+      ],
+      "latin": "M. levator nasolabialis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.033",
+      "english": "Depressor labii inferioris",
+      "english_aliases": [
+        "Depressor labii inferioris"
+      ],
+      "latin": "M. depressor labii inferioris",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.034",
+      "english": "Levator anguli oris",
+      "english_aliases": [
+        "Levator anguli oris"
+      ],
+      "latin": "M. levator anguli oris",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.036",
+      "english": "Buccinator",
+      "english_aliases": [
+        "Buccinator"
+      ],
+      "latin": "M. buccinator",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.03.037",
+      "english": "Mentalis",
+      "english_aliases": [
+        "Mentalis"
+      ],
+      "latin": "M. mentalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.04.002",
+      "english": "Masseter",
+      "english_aliases": [
+        "Masseter"
+      ],
+      "latin": "M. masseter",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.04.005",
+      "english": "Temporalis",
+      "english_aliases": [
+        "Temporalis",
+        "Temporal muscle"
+      ],
+      "latin": "M. temporalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.04.006",
+      "english": "Lateral pterygoid",
+      "english_aliases": [
+        "Lateral pterygoid"
+      ],
+      "latin": "M. pterygoideus lateralis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.1.04.009",
+      "english": "Medial pterygoid",
+      "english_aliases": [
+        "Medial pterygoid"
+      ],
+      "latin": "M. pterygoideus medialis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.01.001",
+      "english": "Platysma",
+      "english_aliases": [
+        "Platysma"
+      ],
+      "latin": "Platysma",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.01.002",
+      "english": "Longus colli",
+      "english_aliases": [
+        "Longus colli"
+      ],
+      "latin": "M. longus colli; M. longus cervicis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.01.003",
+      "english": "Longus capitis",
+      "english_aliases": [
+        "Longus capitis"
+      ],
+      "latin": "M. longus capitis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.01.004",
+      "english": "Scalenus anterior",
+      "english_aliases": [
+        "Scalenus anterior",
+        "Anterior scalene"
+      ],
+      "latin": "M. scalenus anterior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.01.005",
+      "english": "Scalenus medius",
+      "english_aliases": [
+        "Scalenus medius",
+        "Middle scalene"
+      ],
+      "latin": "M. scalenus medius",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.01.006",
+      "english": "Scalenus posterior",
+      "english_aliases": [
+        "Scalenus posterior",
+        "Posterior scalene"
+      ],
+      "latin": "M. scalenus posterior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.01.007",
+      "english": "Scalenus minimus",
+      "english_aliases": [
+        "Scalenus minimus"
+      ],
+      "latin": "M. scalenus minimus",
+      "optional_or_variable": true
+    },
+    {
+      "code": "A04.2.01.008",
+      "english": "Sternocleidomastoid",
+      "english_aliases": [
+        "Sternocleidomastoid"
+      ],
+      "latin": "M. sternocleidomastoideus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.02.002",
+      "english": "Rectus capitis anterior",
+      "english_aliases": [
+        "Rectus capitis anterior"
+      ],
+      "latin": "M. rectus capitis anterior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.02.003",
+      "english": "Rectus capitis lateralis",
+      "english_aliases": [
+        "Rectus capitis lateralis"
+      ],
+      "latin": "M. rectus lateralis capitis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.02.004",
+      "english": "Rectus capitis posterior major",
+      "english_aliases": [
+        "Rectus capitis posterior major"
+      ],
+      "latin": "M. rectus capitis posterior major",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.02.005",
+      "english": "Rectus capitis posterior minor",
+      "english_aliases": [
+        "Rectus capitis posterior minor"
+      ],
+      "latin": "M. rectus capitis posterior minor",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.02.006",
+      "english": "Obliquus capitis superior",
+      "english_aliases": [
+        "Obliquus capitis superior"
+      ],
+      "latin": "M. obliquus capitis superior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.02.007",
+      "english": "Obliquus capitis inferior",
+      "english_aliases": [
+        "Obliquus capitis inferior"
+      ],
+      "latin": "M. obliquus capitis inferior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.03.002",
+      "english": "Digastric",
+      "english_aliases": [
+        "Digastric"
+      ],
+      "latin": "M. digastricus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.03.005",
+      "english": "Stylohyoid",
+      "english_aliases": [
+        "Stylohyoid"
+      ],
+      "latin": "M. stylohyoideus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.03.006",
+      "english": "Mylohyoid",
+      "english_aliases": [
+        "Mylohyoid"
+      ],
+      "latin": "M. mylohyoideus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.03.007",
+      "english": "Geniohyoid",
+      "english_aliases": [
+        "Geniohyoid"
+      ],
+      "latin": "M. geniohyoideus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.04.002",
+      "english": "Sternohyoid",
+      "english_aliases": [
+        "Sternohyoid"
+      ],
+      "latin": "M. sternohyoideus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.04.003",
+      "english": "Omohyoid",
+      "english_aliases": [
+        "Omohyoid"
+      ],
+      "latin": "M. omohyoideus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.04.006",
+      "english": "Sternothyroid",
+      "english_aliases": [
+        "Sternothyroid"
+      ],
+      "latin": "M. sternothyroideus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.04.007",
+      "english": "Thyrohyoid",
+      "english_aliases": [
+        "Thyrohyoid"
+      ],
+      "latin": "M. thyrohyoideus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.2.04.008",
+      "english": "Levator glandulae thyroideae",
+      "english_aliases": [
+        "Levator glandulae thyroideae"
+      ],
+      "latin": "M. levator glandulae thyroideae",
+      "optional_or_variable": true
+    },
+    {
+      "code": "A04.3.01.001",
+      "english": "Trapezius",
+      "english_aliases": [
+        "Trapezius"
+      ],
+      "latin": "M. trapezius",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.01.005",
+      "english": "Transversus nuchae",
+      "english_aliases": [
+        "Transversus nuchae"
+      ],
+      "latin": "M. transversus nuchae",
+      "optional_or_variable": true
+    },
+    {
+      "code": "A04.3.01.006",
+      "english": "Latissimus dorsi",
+      "english_aliases": [
+        "Latissimus dorsi"
+      ],
+      "latin": "M. latissimus dorsi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.01.007",
+      "english": "Rhomboid major",
+      "english_aliases": [
+        "Rhomboid major"
+      ],
+      "latin": "M. rhomboideus major",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.01.008",
+      "english": "Rhomboid minor",
+      "english_aliases": [
+        "Rhomboid minor"
+      ],
+      "latin": "M. rhomboideus minor",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.01.009",
+      "english": "Levator scapulae",
+      "english_aliases": [
+        "Levator scapulae"
+      ],
+      "latin": "M. levator scapulae",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.01.010",
+      "english": "Serratus posterior inferior",
+      "english_aliases": [
+        "Serratus posterior inferior"
+      ],
+      "latin": "M. serratus posterior inferior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.01.011",
+      "english": "Serratus posterior superior",
+      "english_aliases": [
+        "Serratus posterior superior"
+      ],
+      "latin": "M. serratus posterior superior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.01.012",
+      "english": "Anterior cervical intertransversarii",
+      "english_aliases": [
+        "Anterior cervical intertransversarii"
+      ],
+      "latin": "Mm. intertransversarii anteriores cervicis; Mm. intertransversarii anteriores colli",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.01.013",
+      "english": "Lateral posterior cervical intertransversarii",
+      "english_aliases": [
+        "Lateral posterior cervical intertransversarii"
+      ],
+      "latin": "Mm. intertransversarii posteriores laterales cervicis; Mm. intertransversarii posteriores laterales colli",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.01.014",
+      "english": "Intertransversarii laterales lumborum",
+      "english_aliases": [
+        "Intertransversarii laterales lumborum"
+      ],
+      "latin": "Mm. intertransversarii laterales lumborum",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.005",
+      "english": "Iliocostalis",
+      "english_aliases": [
+        "Iliocostalis"
+      ],
+      "latin": "M. iliocostalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.006",
+      "english": "Iliocostalis lumborum",
+      "english_aliases": [
+        "Iliocostalis lumborum"
+      ],
+      "latin": "M. iliocostalis lumborum",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.009",
+      "english": "Iliocostalis cervicis",
+      "english_aliases": [
+        "Iliocostalis cervicis"
+      ],
+      "latin": "M. iliocostalis cervicis; M. iliocostalis colli",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.010",
+      "english": "Longissimus",
+      "english_aliases": [
+        "Longissimus"
+      ],
+      "latin": "M. longissimus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.011",
+      "english": "Longissimus thoracis",
+      "english_aliases": [
+        "Longissimus thoracis"
+      ],
+      "latin": "M. longissimus thoracis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.013",
+      "english": "Longissimus cervicis",
+      "english_aliases": [
+        "Longissimus cervicis"
+      ],
+      "latin": "M. longissimus cervicis; M. longissimus colli",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.014",
+      "english": "Longissimus capitis",
+      "english_aliases": [
+        "Longissimus capitis"
+      ],
+      "latin": "M. longissimus capitis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.015",
+      "english": "Spinalis",
+      "english_aliases": [
+        "Spinalis"
+      ],
+      "latin": "M. spinalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.016",
+      "english": "Spinalis thoracis",
+      "english_aliases": [
+        "Spinalis thoracis"
+      ],
+      "latin": "M. spinalis thoracis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.017",
+      "english": "Spinalis cervicis",
+      "english_aliases": [
+        "Spinalis cervicis"
+      ],
+      "latin": "M. spinalis cervicis; M. spinalis colli",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.018",
+      "english": "Spinalis capitis",
+      "english_aliases": [
+        "Spinalis capitis"
+      ],
+      "latin": "M. spinalis capitis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.102",
+      "english": "Splenius",
+      "english_aliases": [
+        "Splenius"
+      ],
+      "latin": "M. splenius",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.103",
+      "english": "Splenius capitis",
+      "english_aliases": [
+        "Splenius capitis"
+      ],
+      "latin": "M. splenius capitis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.104",
+      "english": "Splenius cervicis",
+      "english_aliases": [
+        "Splenius cervicis"
+      ],
+      "latin": "M. splenius cervicis; M. splenius colli",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.202",
+      "english": "Multifidus",
+      "english_aliases": [
+        "Multifidus"
+      ],
+      "latin": "Mm. multifidi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.203",
+      "english": "Multifidus lumborum",
+      "english_aliases": [
+        "Multifidus lumborum"
+      ],
+      "latin": "M. multifidus lumborum",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.204",
+      "english": "Multifidus thoracis",
+      "english_aliases": [
+        "Multifidus thoracis"
+      ],
+      "latin": "M. multifidus thoracis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.205",
+      "english": "Multifidus cervicis",
+      "english_aliases": [
+        "Multifidus cervicis"
+      ],
+      "latin": "M. multifidus cervicis; M. multifidus colli",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.206",
+      "english": "Semispinalis",
+      "english_aliases": [
+        "Semispinalis"
+      ],
+      "latin": "M. semispinalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.207",
+      "english": "Semispinalis thoracis",
+      "english_aliases": [
+        "Semispinalis thoracis"
+      ],
+      "latin": "M. semispinalis thoracis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.208",
+      "english": "Semispinalis cervicis",
+      "english_aliases": [
+        "Semispinalis cervicis"
+      ],
+      "latin": "M. semispinalis cervicis; M. semispinalis colli",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.209",
+      "english": "Semispinalis capitis",
+      "english_aliases": [
+        "Semispinalis capitis"
+      ],
+      "latin": "M. semispinalis capitis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.210",
+      "english": "Rotatores",
+      "english_aliases": [
+        "Rotatores"
+      ],
+      "latin": "Mm. rotatores",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.211",
+      "english": "Rotatores lumborum",
+      "english_aliases": [
+        "Rotatores lumborum"
+      ],
+      "latin": "Mm. rotatores lumborum",
+      "optional_or_variable": true
+    },
+    {
+      "code": "A04.3.02.212",
+      "english": "Rotatores thoracis",
+      "english_aliases": [
+        "Rotatores thoracis"
+      ],
+      "latin": "Mm. rotatores thoracis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.213",
+      "english": "Rotatores cervicis",
+      "english_aliases": [
+        "Rotatores cervicis"
+      ],
+      "latin": "Mm. rotatores cervicis; Mm. rotatores colli",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.302",
+      "english": "Interspinales lumborum",
+      "english_aliases": [
+        "Interspinales lumborum"
+      ],
+      "latin": "Mm. interspinales lumborum",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.303",
+      "english": "Interspinales thoracis",
+      "english_aliases": [
+        "Interspinales thoracis"
+      ],
+      "latin": "Mm. interspinales thoracis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.304",
+      "english": "Interspinales cervicis",
+      "english_aliases": [
+        "Interspinales cervicis"
+      ],
+      "latin": "Mm. interspinales cervicis; Mm. interspinales colli",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.402",
+      "english": "Medial lumbar intertransversarii",
+      "english_aliases": [
+        "Medial lumbar intertransversarii"
+      ],
+      "latin": "Mm. intertransversarii mediales lumborum",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.403",
+      "english": "Thoracic intertransversarii",
+      "english_aliases": [
+        "Thoracic intertransversarii"
+      ],
+      "latin": "Mm. intertransversarii thoracis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.3.02.404",
+      "english": "Medial posterior cervical intertransversarii",
+      "english_aliases": [
+        "Medial posterior cervical intertransversarii"
+      ],
+      "latin": "Mm. intertransversarii posteriores mediales cervicis; Mm. intertransversarii posteriores mediales colli",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.4.01.001",
+      "english": "Sternalis",
+      "english_aliases": [
+        "Sternalis"
+      ],
+      "latin": "M. sternalis",
+      "optional_or_variable": true
+    },
+    {
+      "code": "A04.4.01.002",
+      "english": "Pectoralis major",
+      "english_aliases": [
+        "Pectoralis major"
+      ],
+      "latin": "M. pectoralis major",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.4.01.006",
+      "english": "Pectoralis minor",
+      "english_aliases": [
+        "Pectoralis minor"
+      ],
+      "latin": "M. pectoralis minor",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.4.01.007",
+      "english": "Subclavius",
+      "english_aliases": [
+        "Subclavius"
+      ],
+      "latin": "M. subclavius",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.4.01.008",
+      "english": "Serratus anterior",
+      "english_aliases": [
+        "Serratus anterior"
+      ],
+      "latin": "M. serratus anterior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.4.01.009",
+      "english": "Levatores costarum",
+      "english_aliases": [
+        "Levatores costarum"
+      ],
+      "latin": "Mm. levatores costarum",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.4.01.010",
+      "english": "Levatores costarum longi",
+      "english_aliases": [
+        "Levatores costarum longi"
+      ],
+      "latin": "Mm. levatores costarum longi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.4.01.011",
+      "english": "Levatores costarum breves",
+      "english_aliases": [
+        "Levatores costarum breves"
+      ],
+      "latin": "Mm. levatores costarum breves",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.4.01.012",
+      "english": "External intercostal muscle",
+      "english_aliases": [
+        "External intercostal muscle"
+      ],
+      "latin": "Mm. intercostales externi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.4.01.013",
+      "english": "Internal intercostal muscle",
+      "english_aliases": [
+        "Internal intercostal muscle"
+      ],
+      "latin": "Mm. intercostales interni",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.4.01.014",
+      "english": "Innermost intercostal muscle",
+      "english_aliases": [
+        "Innermost intercostal muscle"
+      ],
+      "latin": "Mm. intercostales intimi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.4.01.015",
+      "english": "Subcostales",
+      "english_aliases": [
+        "Subcostales"
+      ],
+      "latin": "Mm. subcostales",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.4.01.016",
+      "english": "Transversus thoracis",
+      "english_aliases": [
+        "Transversus thoracis"
+      ],
+      "latin": "M. transversus thoracis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.4.02.001",
+      "english": "Diaphragm",
+      "english_aliases": [
+        "Diaphragm"
+      ],
+      "latin": "Diaphragma",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.01.001",
+      "english": "Rectus abdominis",
+      "english_aliases": [
+        "Rectus abdominis"
+      ],
+      "latin": "M. rectus abdominis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.01.007",
+      "english": "Pyramidalis",
+      "english_aliases": [
+        "Pyramidalis"
+      ],
+      "latin": "M. pyramidalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.01.008",
+      "english": "External oblique",
+      "english_aliases": [
+        "External oblique"
+      ],
+      "latin": "M. obliquus externus abdominis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.01.017",
+      "english": "Internal oblique",
+      "english_aliases": [
+        "Internal oblique"
+      ],
+      "latin": "M. obliquus internus abdominis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.01.018",
+      "english": "Cremaster ♂",
+      "english_aliases": [
+        "Cremaster ♂"
+      ],
+      "latin": "M. cremaster ♂",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.01.019",
+      "english": "Transversus abdominis",
+      "english_aliases": [
+        "Transversus abdominis",
+        "Transverse abdominal"
+      ],
+      "latin": "M. transversus abdominis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.01.027",
+      "english": "Quadratus lumborum",
+      "english_aliases": [
+        "Quadratus lumborum"
+      ],
+      "latin": "M. quadratus lumborum",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.03.014",
+      "english": "Pubovesicalis",
+      "english_aliases": [
+        "Pubovesicalis"
+      ],
+      "latin": "M. pubovesicalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.03.017",
+      "english": "Rectovesicalis",
+      "english_aliases": [
+        "Rectovesicalis"
+      ],
+      "latin": "M. rectovesicalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.04.002",
+      "english": "Levator ani",
+      "english_aliases": [
+        "Levator ani"
+      ],
+      "latin": "M. levator ani",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.04.003",
+      "english": "Pubococcygeus",
+      "english_aliases": [
+        "Pubococcygeus"
+      ],
+      "latin": "M. pubococcygeus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.04.004",
+      "english": "Puboperinealis",
+      "english_aliases": [
+        "Puboperinealis"
+      ],
+      "latin": "M. puboperinealis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.04.005",
+      "english": "Pubovaginalis ♀",
+      "english_aliases": [
+        "Pubovaginalis ♀"
+      ],
+      "latin": "M. pubovaginalis ♀",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.04.005",
+      "english": "Puboprostaticus",
+      "english_aliases": [
+        "Puboprostaticus",
+        "Levator prostatae ♂"
+      ],
+      "latin": "M. puboprostaticus; M. levator prostatae ♂",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.04.006",
+      "english": "Pubo-analis",
+      "english_aliases": [
+        "Pubo-analis"
+      ],
+      "latin": "M. puboanalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.04.007",
+      "english": "Puborectalis",
+      "english_aliases": [
+        "Puborectalis"
+      ],
+      "latin": "M. puborectalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.04.008",
+      "english": "Iliococcygeus",
+      "english_aliases": [
+        "Iliococcygeus"
+      ],
+      "latin": "M. iliococcygeus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.04.011",
+      "english": "Ischiococcygeus",
+      "english_aliases": [
+        "Ischiococcygeus",
+        "Coccygeus"
+      ],
+      "latin": "M. ischiococcygeus; M. coccygeus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.04.012",
+      "english": "External anal sphincter",
+      "english_aliases": [
+        "External anal sphincter"
+      ],
+      "latin": "M. sphincter ani externus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.5.05.001",
+      "english": "Perineal muscles",
+      "english_aliases": [
+        "Perineal muscles"
+      ],
+      "latin": "Mm. perinei",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.002",
+      "english": "Deltoid",
+      "english_aliases": [
+        "Deltoid"
+      ],
+      "latin": "M. deltoideus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.006",
+      "english": "Supraspinatus",
+      "english_aliases": [
+        "Supraspinatus"
+      ],
+      "latin": "M. supraspinatus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.008",
+      "english": "Infraspinatus",
+      "english_aliases": [
+        "Infraspinatus"
+      ],
+      "latin": "M. infraspinatus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.010",
+      "english": "Teres minor",
+      "english_aliases": [
+        "Teres minor"
+      ],
+      "latin": "M. teres minor",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.011",
+      "english": "Teres major",
+      "english_aliases": [
+        "Teres major"
+      ],
+      "latin": "M. teres major",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.012",
+      "english": "Subscapularis",
+      "english_aliases": [
+        "Subscapularis"
+      ],
+      "latin": "M. subscapularis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.013",
+      "english": "Biceps brachii",
+      "english_aliases": [
+        "Biceps brachii"
+      ],
+      "latin": "M. biceps brachii",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.017",
+      "english": "Coracobrachialis",
+      "english_aliases": [
+        "Coracobrachialis"
+      ],
+      "latin": "M. coracobrachialis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.018",
+      "english": "Brachialis",
+      "english_aliases": [
+        "Brachialis"
+      ],
+      "latin": "M. brachialis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.019",
+      "english": "Triceps brachii",
+      "english_aliases": [
+        "Triceps brachii"
+      ],
+      "latin": "M. triceps brachii",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.023",
+      "english": "Anconeus",
+      "english_aliases": [
+        "Anconeus"
+      ],
+      "latin": "M. anconeus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.024",
+      "english": "Articularis cubiti",
+      "english_aliases": [
+        "Articularis cubiti"
+      ],
+      "latin": "M. articularis cubiti",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.025",
+      "english": "Pronator teres",
+      "english_aliases": [
+        "Pronator teres"
+      ],
+      "latin": "M. pronator teres",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.028",
+      "english": "Flexor carpi radialis",
+      "english_aliases": [
+        "Flexor carpi radialis"
+      ],
+      "latin": "M. radialis flexor carpi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.029",
+      "english": "Palmaris longus",
+      "english_aliases": [
+        "Palmaris longus"
+      ],
+      "latin": "M. palmaris longus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.030",
+      "english": "Flexor carpi ulnaris",
+      "english_aliases": [
+        "Flexor carpi ulnaris"
+      ],
+      "latin": "M. flexor carpi ulnaris",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.033",
+      "english": "Flexor digitorum superficialis",
+      "english_aliases": [
+        "Flexor digitorum superficialis"
+      ],
+      "latin": "M. flexor digitorum superficialis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.036",
+      "english": "Flexor digitorum profundus",
+      "english_aliases": [
+        "Flexor digitorum profundus"
+      ],
+      "latin": "M. flexor digitorum profundus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.037",
+      "english": "Flexor pollicis longus",
+      "english_aliases": [
+        "Flexor pollicis longus"
+      ],
+      "latin": "M. flexor pollicis longus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.038",
+      "english": "Pronator quadratus",
+      "english_aliases": [
+        "Pronator quadratus"
+      ],
+      "latin": "M. pronator quadratus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.039",
+      "english": "Brachioradialis",
+      "english_aliases": [
+        "Brachioradialis"
+      ],
+      "latin": "M. brachioradialis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.040",
+      "english": "Extensor carpi radialis longus",
+      "english_aliases": [
+        "Extensor carpi radialis longus"
+      ],
+      "latin": "M. radialis longus extensor carpi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.041",
+      "english": "Extensor carpi radialis brevis",
+      "english_aliases": [
+        "Extensor carpi radialis brevis"
+      ],
+      "latin": "M. radialis brevis extensor carpi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.042",
+      "english": "Extensor digitorum",
+      "english_aliases": [
+        "Extensor digitorum"
+      ],
+      "latin": "M. extensor digitorum",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.044",
+      "english": "Extensor digiti minimi",
+      "english_aliases": [
+        "Extensor digiti minimi"
+      ],
+      "latin": "M. extensor digiti minimi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.045",
+      "english": "Extensor carpi ulnaris",
+      "english_aliases": [
+        "Extensor carpi ulnaris"
+      ],
+      "latin": "M. extensor carpi ulnaris",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.048",
+      "english": "Supinator",
+      "english_aliases": [
+        "Supinator"
+      ],
+      "latin": "M. supinator",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.049",
+      "english": "Abductor pollicis longus",
+      "english_aliases": [
+        "Abductor pollicis longus"
+      ],
+      "latin": "M. abductor pollicis longus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.050",
+      "english": "Extensor pollicis brevis",
+      "english_aliases": [
+        "Extensor pollicis brevis"
+      ],
+      "latin": "M. brevis extensor pollicis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.051",
+      "english": "Extensor pollicis longus",
+      "english_aliases": [
+        "Extensor pollicis longus"
+      ],
+      "latin": "M. extensor pollicis longus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.052",
+      "english": "Extensor indicis",
+      "english_aliases": [
+        "Extensor indicis"
+      ],
+      "latin": "M. extensor indicis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.053",
+      "english": "Palmaris brevis",
+      "english_aliases": [
+        "Palmaris brevis"
+      ],
+      "latin": "M. palmaris brevis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.054",
+      "english": "Abductor pollicis brevis",
+      "english_aliases": [
+        "Abductor pollicis brevis"
+      ],
+      "latin": "M. brevis abductor pollicis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.055",
+      "english": "Flexor pollicis brevis",
+      "english_aliases": [
+        "Flexor pollicis brevis"
+      ],
+      "latin": "M. brevis flexor pollicis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.058",
+      "english": "Opponens pollicis",
+      "english_aliases": [
+        "Opponens pollicis"
+      ],
+      "latin": "M. opponens pollicis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.059",
+      "english": "Adductor pollicis",
+      "english_aliases": [
+        "Adductor pollicis"
+      ],
+      "latin": "M. adductor pollicis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.062",
+      "english": "Abductor digiti minimi",
+      "english_aliases": [
+        "Abductor digiti minimi"
+      ],
+      "latin": "M. abductor digiti minimi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.063",
+      "english": "Flexor digiti minimi brevis",
+      "english_aliases": [
+        "Flexor digiti minimi brevis"
+      ],
+      "latin": "M. brevis flexor digiti minimi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.064",
+      "english": "Opponens digiti minimi",
+      "english_aliases": [
+        "Opponens digiti minimi"
+      ],
+      "latin": "M. opponens digiti minimi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.065",
+      "english": "Lumbricals",
+      "english_aliases": [
+        "Lumbricals"
+      ],
+      "latin": "Mm. lumbricales",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.066",
+      "english": "Dorsal interossei",
+      "english_aliases": [
+        "Dorsal interossei"
+      ],
+      "latin": "Mm. interossei dorsales",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.6.02.067",
+      "english": "Palmar interossei",
+      "english_aliases": [
+        "Palmar interossei"
+      ],
+      "latin": "Mm. interossei palmares",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.002",
+      "english": "Iliopsoas",
+      "english_aliases": [
+        "Iliopsoas"
+      ],
+      "latin": "M. iliopsoas",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.003",
+      "english": "Iliacus",
+      "english_aliases": [
+        "Iliacus"
+      ],
+      "latin": "M. iliacus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.004",
+      "english": "Psoas major",
+      "english_aliases": [
+        "Psoas major"
+      ],
+      "latin": "M. psoas major",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.005",
+      "english": "Psoas minor",
+      "english_aliases": [
+        "Psoas minor"
+      ],
+      "latin": "M. psoas minor",
+      "optional_or_variable": true
+    },
+    {
+      "code": "A04.7.02.006",
+      "english": "Gluteus maximus",
+      "english_aliases": [
+        "Gluteus maximus"
+      ],
+      "latin": "M. gluteus maximus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.007",
+      "english": "Gluteus medius",
+      "english_aliases": [
+        "Gluteus medius"
+      ],
+      "latin": "M. gluteus medius",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.008",
+      "english": "Gluteus minimus",
+      "english_aliases": [
+        "Gluteus minimus"
+      ],
+      "latin": "M. gluteus minimus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.010",
+      "english": "Tensor fasciae latae",
+      "english_aliases": [
+        "Tensor fasciae latae",
+        "Tensor of fascia lata"
+      ],
+      "latin": "M. tensor fasciae latae",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.011",
+      "english": "Piriformis",
+      "english_aliases": [
+        "Piriformis"
+      ],
+      "latin": "M. piriformis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.012",
+      "english": "Obturator internus",
+      "english_aliases": [
+        "Obturator internus"
+      ],
+      "latin": "M. obturatorius internus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.013",
+      "english": "Gemellus superior",
+      "english_aliases": [
+        "Gemellus superior",
+        "Superior gemellus"
+      ],
+      "latin": "M. gemellus superior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.014",
+      "english": "Gemellus inferior",
+      "english_aliases": [
+        "Gemellus inferior",
+        "Inferior gemellus"
+      ],
+      "latin": "M. gemellus inferior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.015",
+      "english": "Quadratus femoris",
+      "english_aliases": [
+        "Quadratus femoris"
+      ],
+      "latin": "M. quadratus femoris",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.016",
+      "english": "Sartorius",
+      "english_aliases": [
+        "Sartorius"
+      ],
+      "latin": "M. sartorius",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.017",
+      "english": "Quadriceps femoris",
+      "english_aliases": [
+        "Quadriceps femoris"
+      ],
+      "latin": "M. quadriceps femoris",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.018",
+      "english": "Rectus femoris",
+      "english_aliases": [
+        "Rectus femoris"
+      ],
+      "latin": "M. rectus femoris",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.021",
+      "english": "Vastus lateralis",
+      "english_aliases": [
+        "Vastus lateralis"
+      ],
+      "latin": "M. vastus lateralis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.022",
+      "english": "Vastus intermedius",
+      "english_aliases": [
+        "Vastus intermedius"
+      ],
+      "latin": "M. vastus intermedius",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.023",
+      "english": "Vastus medialis",
+      "english_aliases": [
+        "Vastus medialis"
+      ],
+      "latin": "M. vastus medialis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.024",
+      "english": "Articularis genus",
+      "english_aliases": [
+        "Articularis genus",
+        "Articular muscle of knee"
+      ],
+      "latin": "M. articularis genus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.025",
+      "english": "Pectineus",
+      "english_aliases": [
+        "Pectineus"
+      ],
+      "latin": "M. pectineus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.026",
+      "english": "Adductor longus",
+      "english_aliases": [
+        "Adductor longus"
+      ],
+      "latin": "M. adductor longus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.027",
+      "english": "Adductor brevis",
+      "english_aliases": [
+        "Adductor brevis"
+      ],
+      "latin": "M. adductor brevis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.028",
+      "english": "Adductor magnus",
+      "english_aliases": [
+        "Adductor magnus"
+      ],
+      "latin": "M. adductor magnus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.029",
+      "english": "Adductor minimus",
+      "english_aliases": [
+        "Adductor minimus"
+      ],
+      "latin": "M. adductor minimus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.030",
+      "english": "Gracilis",
+      "english_aliases": [
+        "Gracilis"
+      ],
+      "latin": "M. gracilis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.031",
+      "english": "Obturator externus",
+      "english_aliases": [
+        "Obturator externus"
+      ],
+      "latin": "M. obturatorius externus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.032",
+      "english": "Biceps femoris",
+      "english_aliases": [
+        "Biceps femoris"
+      ],
+      "latin": "M. biceps femoris",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.035",
+      "english": "Semitendinosus",
+      "english_aliases": [
+        "Semitendinosus"
+      ],
+      "latin": "M. semitendinosus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.036",
+      "english": "Semimembranosus",
+      "english_aliases": [
+        "Semimembranosus"
+      ],
+      "latin": "M. semimembranosus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.037",
+      "english": "Tibialis anterior",
+      "english_aliases": [
+        "Tibialis anterior"
+      ],
+      "latin": "M. tibialis anterior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.038",
+      "english": "Extensor digitorum longus",
+      "english_aliases": [
+        "Extensor digitorum longus"
+      ],
+      "latin": "M. extensor digitorum longus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.039",
+      "english": "Fibularis tertius",
+      "english_aliases": [
+        "Fibularis tertius",
+        "Peroneus tertius"
+      ],
+      "latin": "M. fibularis tertius; M. peroneus tertius",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.040",
+      "english": "Extensor hallucis longus",
+      "english_aliases": [
+        "Extensor hallucis longus"
+      ],
+      "latin": "M. extensor hallucis longus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.041",
+      "english": "Fibularis longus",
+      "english_aliases": [
+        "Fibularis longus",
+        "Peroneus longus"
+      ],
+      "latin": "M. fibularis longus; M. peroneus longus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.042",
+      "english": "Fibularis brevis",
+      "english_aliases": [
+        "Fibularis brevis",
+        "Peroneus brevis"
+      ],
+      "latin": "M. fibularis brevis; M. peroneus brevis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.043",
+      "english": "Triceps surae",
+      "english_aliases": [
+        "Triceps surae"
+      ],
+      "latin": "M. triceps surae",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.044",
+      "english": "Gastrocnemius",
+      "english_aliases": [
+        "Gastrocnemius"
+      ],
+      "latin": "M. gastrocnemius",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.047",
+      "english": "Soleus",
+      "english_aliases": [
+        "Soleus"
+      ],
+      "latin": "M. soleus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.049",
+      "english": "Plantaris",
+      "english_aliases": [
+        "Plantaris"
+      ],
+      "latin": "M. plantaris",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.050",
+      "english": "Popliteus",
+      "english_aliases": [
+        "Popliteus"
+      ],
+      "latin": "M. popliteus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.051",
+      "english": "Tibialis posterior",
+      "english_aliases": [
+        "Tibialis posterior"
+      ],
+      "latin": "M. tibialis posterior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.052",
+      "english": "Flexor digitorum longus",
+      "english_aliases": [
+        "Flexor digitorum longus"
+      ],
+      "latin": "M. flexor digitorum longus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.053",
+      "english": "Flexor hallucis longus",
+      "english_aliases": [
+        "Flexor hallucis longus"
+      ],
+      "latin": "M. flexor hallucis longus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.054",
+      "english": "Extensor hallucis brevis",
+      "english_aliases": [
+        "Extensor hallucis brevis"
+      ],
+      "latin": "M. brevis extensor hallucis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.055",
+      "english": "Extensor digitorum brevis",
+      "english_aliases": [
+        "Extensor digitorum brevis"
+      ],
+      "latin": "M. extensor digitorum brevis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.056",
+      "english": "Abductor hallucis",
+      "english_aliases": [
+        "Abductor hallucis"
+      ],
+      "latin": "M. abductor hallucis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.057",
+      "english": "Flexor hallucis brevis",
+      "english_aliases": [
+        "Flexor hallucis brevis"
+      ],
+      "latin": "M. brevis flexor hallucis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.060",
+      "english": "Adductor hallucis",
+      "english_aliases": [
+        "Adductor hallucis"
+      ],
+      "latin": "M. adductor hallucis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.063",
+      "english": "Abductor digiti minimi",
+      "english_aliases": [
+        "Abductor digiti minimi"
+      ],
+      "latin": "M. abductor digiti minimi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.064",
+      "english": "Abductor of fifth metatarsal",
+      "english_aliases": [
+        "Abductor of fifth metatarsal"
+      ],
+      "latin": "M. abductor metatarsi quinti",
+      "optional_or_variable": true
+    },
+    {
+      "code": "A04.7.02.065",
+      "english": "Opponens digiti minimi",
+      "english_aliases": [
+        "Opponens digiti minimi"
+      ],
+      "latin": "M. opponens digiti minimi",
+      "optional_or_variable": true
+    },
+    {
+      "code": "A04.7.02.066",
+      "english": "Flexor digiti minimi brevis",
+      "english_aliases": [
+        "Flexor digiti minimi brevis"
+      ],
+      "latin": "M. brevis flexor digiti minimi",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.067",
+      "english": "Flexor digitorum brevis",
+      "english_aliases": [
+        "Flexor digitorum brevis"
+      ],
+      "latin": "M. flexor digitorum brevis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.068",
+      "english": "Quadratus plantae",
+      "english_aliases": [
+        "Quadratus plantae",
+        "Flexor accessorius"
+      ],
+      "latin": "M. quadratus plantae; M. flexor accessorius",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.069",
+      "english": "Lumbricals",
+      "english_aliases": [
+        "Lumbricals"
+      ],
+      "latin": "Mm. lumbricales",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.070",
+      "english": "Dorsal interossei",
+      "english_aliases": [
+        "Dorsal interossei"
+      ],
+      "latin": "Mm. interossei dorsales",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A04.7.02.071",
+      "english": "Plantar interossei",
+      "english_aliases": [
+        "Plantar interossei"
+      ],
+      "latin": "Mm. interossei plantares",
+      "optional_or_variable": false
+    }
+  ]
+}

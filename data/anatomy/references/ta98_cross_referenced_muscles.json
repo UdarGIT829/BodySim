@@ -1,0 +1,540 @@
+{
+  "schema_version": 1,
+  "selection": "Muscle terms in the seven sections redirected from TA98 Chapter 4",
+  "source": {
+    "citation": "FIPAT/IFAA Terminologia Anatomica TA98 online partonomic chapters",
+    "terms_license": "public_domain",
+    "urls": [
+      "https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/TA98%20EN/05%20TA98%20EN.htm",
+      "https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/TA98%20EN/06%20TA98%20EN.htm",
+      "https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/TA98%20EN/09%20TA98%20EN.htm",
+      "https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/TA98%20EN/15%20TA98%20EN.htm"
+    ]
+  },
+  "terms": [
+    {
+      "code": "A05.1.04.101",
+      "english": "Genioglossus",
+      "english_aliases": [
+        "Genioglossus"
+      ],
+      "group": "tongue",
+      "latin": "M. genioglossus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.1.04.102",
+      "english": "Hyoglossus",
+      "english_aliases": [
+        "Hyoglossus"
+      ],
+      "group": "tongue",
+      "latin": "M. hyoglossus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.1.04.103",
+      "english": "Chondroglossus",
+      "english_aliases": [
+        "Chondroglossus"
+      ],
+      "group": "tongue",
+      "latin": "M. chondroglossus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.1.04.104",
+      "english": "Ceratoglossus",
+      "english_aliases": [
+        "Ceratoglossus"
+      ],
+      "group": "tongue",
+      "latin": "M. ceratoglossus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.1.04.105",
+      "english": "Styloglossus",
+      "english_aliases": [
+        "Styloglossus"
+      ],
+      "group": "tongue",
+      "latin": "M. styloglossus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.1.04.106",
+      "english": "Superior longitudinal muscle",
+      "english_aliases": [
+        "Superior longitudinal muscle"
+      ],
+      "group": "tongue",
+      "latin": "M. longitudinalis superior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.1.04.107",
+      "english": "Inferior longitudinal muscle",
+      "english_aliases": [
+        "Inferior longitudinal muscle"
+      ],
+      "group": "tongue",
+      "latin": "M. longitudinalis inferior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.1.04.108",
+      "english": "Transverse muscle",
+      "english_aliases": [
+        "Transverse muscle"
+      ],
+      "group": "tongue",
+      "latin": "M. transversus linguae",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.1.04.109",
+      "english": "Vertical muscle",
+      "english_aliases": [
+        "Vertical muscle"
+      ],
+      "group": "tongue",
+      "latin": "M. verticalis linguae",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.1.04.110",
+      "english": "Palatoglossus",
+      "english_aliases": [
+        "Palatoglossus"
+      ],
+      "group": "tongue",
+      "latin": "M. palatoglossus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.2.01.102",
+      "english": "Levator veli palatini",
+      "english_aliases": [
+        "Levator veli palatini"
+      ],
+      "group": "soft_palate",
+      "latin": "M. levator veli palatini",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.2.01.103",
+      "english": "Tensor veli palatini",
+      "english_aliases": [
+        "Tensor veli palatini"
+      ],
+      "group": "soft_palate",
+      "latin": "M. tensor veli palatini",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.2.01.104",
+      "english": "Musculus uvulae",
+      "english_aliases": [
+        "Musculus uvulae"
+      ],
+      "group": "soft_palate",
+      "latin": "M. uvulae",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.2.01.105",
+      "english": "Palatopharyngeus",
+      "english_aliases": [
+        "Palatopharyngeus"
+      ],
+      "group": "soft_palate",
+      "latin": "M. palatopharyngeus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.2.01.107",
+      "english": "Posterior fascicle",
+      "english_aliases": [
+        "Posterior fascicle",
+        "Palatopharyngeal sphincter"
+      ],
+      "group": "soft_palate",
+      "latin": "Fasciculus posterior; M. sphincter palatopharyngeus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.3.01.103",
+      "english": "Superior constrictor",
+      "english_aliases": [
+        "Superior constrictor"
+      ],
+      "group": "pharynx",
+      "latin": "M. constrictor pharyngis superior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.3.01.108",
+      "english": "Middle constrictor",
+      "english_aliases": [
+        "Middle constrictor"
+      ],
+      "group": "pharynx",
+      "latin": "M. constrictor pharyngis medius",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.3.01.111",
+      "english": "Inferior constrictor",
+      "english_aliases": [
+        "Inferior constrictor"
+      ],
+      "group": "pharynx",
+      "latin": "M. constrictor pharyngis inferior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.3.01.112",
+      "english": "Thyropharyngeal part",
+      "english_aliases": [
+        "Thyropharyngeal part",
+        "Thyropharyngeus"
+      ],
+      "group": "pharynx",
+      "latin": "Pars thyropharyngea; M. thyropharyngeus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.3.01.113",
+      "english": "Cricopharyngeal part",
+      "english_aliases": [
+        "Cricopharyngeal part",
+        "Cricopharyngeus"
+      ],
+      "group": "pharynx",
+      "latin": "Pars cricopharyngea; M. cricopharyngeus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.3.01.114",
+      "english": "Stylopharyngeus",
+      "english_aliases": [
+        "Stylopharyngeus"
+      ],
+      "group": "pharynx",
+      "latin": "M. stylopharyngeus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A05.3.01.115",
+      "english": "Salpingopharyngeus",
+      "english_aliases": [
+        "Salpingopharyngeus"
+      ],
+      "group": "pharynx",
+      "latin": "M. salpingopharyngeus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A06.2.08.001",
+      "english": "Cricothyroid",
+      "english_aliases": [
+        "Cricothyroid"
+      ],
+      "group": "larynx",
+      "latin": "M. cricothyroideus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A06.2.08.004",
+      "english": "Posterior crico-arytenoid",
+      "english_aliases": [
+        "Posterior crico-arytenoid"
+      ],
+      "group": "larynx",
+      "latin": "M. cricoarytenoideus posterior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A06.2.08.005",
+      "english": "Ceratocricoid",
+      "english_aliases": [
+        "Ceratocricoid"
+      ],
+      "group": "larynx",
+      "latin": "M. ceratocricoideus",
+      "optional_or_variable": true
+    },
+    {
+      "code": "A06.2.08.006",
+      "english": "Lateral crico-arytenoid",
+      "english_aliases": [
+        "Lateral crico-arytenoid"
+      ],
+      "group": "larynx",
+      "latin": "M. cricoarytenoideus lateralis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A06.2.08.007",
+      "english": "Vocalis",
+      "english_aliases": [
+        "Vocalis"
+      ],
+      "group": "larynx",
+      "latin": "M. vocalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A06.2.08.008",
+      "english": "Thyro-arytenoid",
+      "english_aliases": [
+        "Thyro-arytenoid"
+      ],
+      "group": "larynx",
+      "latin": "M. thyroarytenoideus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A06.2.08.010",
+      "english": "Oblique arytenoid",
+      "english_aliases": [
+        "Oblique arytenoid"
+      ],
+      "group": "larynx",
+      "latin": "M. arytenoideus obliquus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A06.2.08.012",
+      "english": "Transverse arytenoid",
+      "english_aliases": [
+        "Transverse arytenoid"
+      ],
+      "group": "larynx",
+      "latin": "M. arytenoideus transversus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A09.2.03.006",
+      "english": "External urethral sphincter ♀",
+      "english_aliases": [
+        "External urethral sphincter ♀"
+      ],
+      "group": "perineum",
+      "latin": "M. sphincter urethrae externus ♀",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A09.4.02.016",
+      "english": "External urethral sphincter ♂",
+      "english_aliases": [
+        "External urethral sphincter ♂"
+      ],
+      "group": "perineum",
+      "latin": "M. sphincter urethrae externus ♂",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A09.5.00.003",
+      "english": "Muscle of anal triangle",
+      "english_aliases": [
+        "Muscle of anal triangle"
+      ],
+      "group": "perineum",
+      "latin": "M. regionis analis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A09.5.00.004",
+      "english": "Muscles of urogenital triangle",
+      "english_aliases": [
+        "Muscles of urogenital triangle"
+      ],
+      "group": "perineum",
+      "latin": "Mm. regionis urogenitalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A09.5.02.003",
+      "english": "Superficial transverse perineal muscle",
+      "english_aliases": [
+        "Superficial transverse perineal muscle"
+      ],
+      "group": "perineum",
+      "latin": "M. transversus superficialis perinei",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A09.5.02.004",
+      "english": "Ischiocavernosus",
+      "english_aliases": [
+        "Ischiocavernosus"
+      ],
+      "group": "perineum",
+      "latin": "M. ischiocavernosus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A09.5.02.005",
+      "english": "Bulbospongiosus",
+      "english_aliases": [
+        "Bulbospongiosus"
+      ],
+      "group": "perineum",
+      "latin": "M. bulbospongiosus",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A09.5.03.004",
+      "english": "Deep transverse perineal muscle ♂",
+      "english_aliases": [
+        "Deep transverse perineal muscle ♂"
+      ],
+      "group": "perineum",
+      "latin": "M. transversus perinei profundus ♂",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A09.5.03.005",
+      "english": "Compressor urethrae ♀",
+      "english_aliases": [
+        "Compressor urethrae ♀"
+      ],
+      "group": "perineum",
+      "latin": "M. compressor urethrae ♀",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A09.5.03.006",
+      "english": "Sphincter urethrovaginalis ♀",
+      "english_aliases": [
+        "Sphincter urethrovaginalis ♀"
+      ],
+      "group": "perineum",
+      "latin": "M. sphincter urethrovaginalis ♀",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A15.2.07.009",
+      "english": "Orbitalis",
+      "english_aliases": [
+        "Orbitalis",
+        "Orbital muscle"
+      ],
+      "group": "extraocular",
+      "latin": "M. orbitalis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A15.2.07.010",
+      "english": "Superior rectus",
+      "english_aliases": [
+        "Superior rectus"
+      ],
+      "group": "extraocular",
+      "latin": "M. rectus superior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A15.2.07.011",
+      "english": "Inferior rectus",
+      "english_aliases": [
+        "Inferior rectus"
+      ],
+      "group": "extraocular",
+      "latin": "M. rectus inferior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A15.2.07.012",
+      "english": "Medial rectus",
+      "english_aliases": [
+        "Medial rectus"
+      ],
+      "group": "extraocular",
+      "latin": "M. rectus medialis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A15.2.07.013",
+      "english": "Lateral rectus",
+      "english_aliases": [
+        "Lateral rectus"
+      ],
+      "group": "extraocular",
+      "latin": "M. rectus lateralis",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A15.2.07.016",
+      "english": "Superior oblique",
+      "english_aliases": [
+        "Superior oblique"
+      ],
+      "group": "extraocular",
+      "latin": "M. obliquus superior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A15.2.07.019",
+      "english": "Inferior oblique",
+      "english_aliases": [
+        "Inferior oblique"
+      ],
+      "group": "extraocular",
+      "latin": "M. obliquus inferior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A15.2.07.020",
+      "english": "Levator palpebrae superioris",
+      "english_aliases": [
+        "Levator palpebrae superioris"
+      ],
+      "group": "extraocular",
+      "latin": "M. levator palpebrae superioris",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A15.2.07.045",
+      "english": "Superior tarsal muscle",
+      "english_aliases": [
+        "Superior tarsal muscle"
+      ],
+      "group": "extraocular",
+      "latin": "M. tarsalis superior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A15.2.07.046",
+      "english": "Inferior tarsal muscle",
+      "english_aliases": [
+        "Inferior tarsal muscle"
+      ],
+      "group": "extraocular",
+      "latin": "M. tarsalis inferior",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A15.3.02.061",
+      "english": "Tensor tympani",
+      "english_aliases": [
+        "Tensor tympani"
+      ],
+      "group": "auditory_ossicles",
+      "latin": "M. tensor tympani",
+      "optional_or_variable": false
+    },
+    {
+      "code": "A15.3.02.062",
+      "english": "Stapedius",
+      "english_aliases": [
+        "Stapedius"
+      ],
+      "group": "auditory_ossicles",
+      "latin": "M. stapedius",
+      "optional_or_variable": false
+    }
+  ]
+}

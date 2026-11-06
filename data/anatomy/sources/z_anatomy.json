@@ -1,0 +1,35 @@
+{
+  "archive_entry": "Startup.blend",
+  "archive_sha256": "e029688545627bd0214b269e1063143abb580aad72b2c2445d6d8a9a0d9da736",
+  "archive_url": "https://raw.githubusercontent.com/Z-Anatomy/Models-of-human-anatomy/master/Z-Anatomy.zip",
+  "attribution": "Z-Anatomy - The libre 3D atlas of anatomy - CC BY-SA 4.0; BodyParts3D - The Database Center for Life Science - CC BY-SA 2.1 Japan",
+  "asset_license_status": "verified_for_distribution",
+  "blend_sha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+  "headline_license": "CC BY-SA 4.0",
+  "headline_license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "license_evidence": [
+    {
+      "claim": "All code and content shared by Z-Anatomy is licensed under CC BY-SA 4.0.",
+      "url": "https://github.com/Z-Anatomy/Models-of-human-anatomy/blob/master/Readme.md"
+    },
+    {
+      "claim": "The repository supplies the CC BY-SA 4.0 license text.",
+      "url": "https://github.com/Z-Anatomy/Models-of-human-anatomy/blob/master/License.txt"
+    },
+    {
+      "claim": "The repository requires model attribution to both BodyParts3D and Z-Anatomy.",
+      "url": "https://github.com/Z-Anatomy/Models-of-human-anatomy/blob/master/Readme.md#attributions"
+    }
+  ],
+  "license_scope_note": "Verified for BodySim's pinned musculoskeletal extraction. The Z-Anatomy README separately identifies noncommercial inner-ear and kidney assets; those organ/neural assets are absent from the 960-structure canonical catalog.",
+  "distribution_obligations": [
+    "Provide the recorded Z-Anatomy and BodyParts3D attribution.",
+    "Provide the applicable Creative Commons license notice and link.",
+    "Identify BodySim modifications to the source meshes.",
+    "Distribute adaptations under CC BY-SA 4.0-compatible share-alike terms."
+  ],
+  "id": "z_anatomy_startup_blend",
+  "project_url": "https://github.com/Z-Anatomy/Models-of-human-anatomy",
+  "role": "whole_body_baseline",
+  "source_file": "Startup.blend"
+}

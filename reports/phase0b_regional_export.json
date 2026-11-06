@@ -1,0 +1,61 @@
+{
+  "assets": {
+    "head_neck": {
+      "bytes": 7827036,
+      "path": "build/anatomy/regions/head_neck.glb",
+      "sha256": "adf74d7f5ebbbb59d18dcb906e7c52f06c063ff77de598b157f1a14141f33650",
+      "structure_nodes": 288,
+      "unique_meshes": 155
+    },
+    "lower_limb_left": {
+      "bytes": 5638200,
+      "path": "build/anatomy/regions/lower_limb_left.glb",
+      "sha256": "7196598005d77c76b6ac74c0b3ead4a47da1b02b9030762895fe7d17047f78de",
+      "structure_nodes": 138,
+      "unique_meshes": 138
+    },
+    "lower_limb_right": {
+      "bytes": 5628260,
+      "path": "build/anatomy/regions/lower_limb_right.glb",
+      "sha256": "bfa0eab2401940951cb4b0e04b717d1da5750b283b816f8b0d9efc9f744378f9",
+      "structure_nodes": 138,
+      "unique_meshes": 138
+    },
+    "pelvis": {
+      "bytes": 566188,
+      "path": "build/anatomy/regions/pelvis.glb",
+      "sha256": "316184b0818c40c31a27097bd6523d8f9842cff290665efd12fdcdba83eae0b6",
+      "structure_nodes": 16,
+      "unique_meshes": 9
+    },
+    "torso": {
+      "bytes": 13407100,
+      "path": "build/anatomy/regions/torso.glb",
+      "sha256": "701b05c83dab05bdf804582437ec7bbad684b3d5ad8cd312d11b001dabc99f57",
+      "structure_nodes": 186,
+      "unique_meshes": 105
+    },
+    "upper_limb_left": {
+      "bytes": 2904472,
+      "path": "build/anatomy/regions/upper_limb_left.glb",
+      "sha256": "330eeedb258e72a206a652e712fd7b7ff3ba34b5519bbc2404e8f7e5bb4d3201",
+      "structure_nodes": 97,
+      "unique_meshes": 97
+    },
+    "upper_limb_right": {
+      "bytes": 2895748,
+      "path": "build/anatomy/regions/upper_limb_right.glb",
+      "sha256": "7a6f419ee7d3eadbbc0dbd42e16ccd6d7e330799a49e54da585f6c323fb4de8d",
+      "structure_nodes": 97,
+      "unique_meshes": 97
+    }
+  },
+  "assets_expected": 7,
+  "assets_passed": 7,
+  "catalog_sha256": "7c8cb6813422b84e113472709875169407c1f54a1230170b766de9cebfde7746",
+  "identity_failures": 0,
+  "schema_version": 1,
+  "structures_expected": 960,
+  "structures_found": 960,
+  "total_bytes": 38867004
+}

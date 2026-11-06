@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/exercises/authoring/providers/openai_authoring_provider.gd" id="1_provider"]
+
+[node name="OpenAIAuthoringProvider" type="Node"]
+script = ExtResource("1_provider")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+timeout = 90.0

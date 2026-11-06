@@ -1,0 +1,167 @@
+{
+  "additional_context": "",
+  "authoring_response": {
+    "assumptions": [
+      "The demonstrated standing version is the intended variant; the seated options in the text are not used.",
+      "The loaded arm is the exerciser's right arm, as shown in the contact sheet.",
+      "The exertion phase is the upward press from shoulder height to an overhead position.",
+      "The free left hand holds a second dumbbell at the side, but it is not actively pressed.",
+      "The dumbbell follows a predominantly vertical overhead path under gravity."
+    ],
+    "classification": "supported",
+    "classification_reasons": [
+      "The contact sheet resolves the textual sit-or-stand alternative as standing and shows a unilateral right-arm dumbbell press.",
+      "The start and end frames, together with the instructions, establish an upward overhead press with elbow extension and shoulder elevation/flexion under a vertical dumbbell load.",
+      "All mechanically necessary represented actions and stabilization demands are available in the supplied vocabulary."
+    ],
+    "field_confidence": {
+      "input_mode": "high",
+      "kinetic_chain_type": "high",
+      "laterality": "high",
+      "load_vector": "high",
+      "primary_joint_actions": "high",
+      "stabilization_demands": "medium",
+      "variant": "high"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "single-arm_dumbbell_shoulder_press",
+        "standing_one-arm_dumbbell_shoulder_press",
+        "unilateral_dumbbell_overhead_press"
+      ],
+      "id": "exercise.dumbbell_one_arm_shoulder_press.standing_unilateral",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "load_vector": "overhead_vertical_hands_standing",
+        "primary_joint_actions": [
+          {
+            "joint": "glenohumeral_joint",
+            "movement": "flexion"
+          },
+          {
+            "joint": "elbow_joint",
+            "movement": "extension"
+          }
+        ],
+        "stabilization_demands": [
+          "anti_extension_spine",
+          "anti_rotation_torso",
+          "glenohumeral_stabilization",
+          "postural_stabilization",
+          "scapular_stabilization"
+        ]
+      },
+      "laterality": "right",
+      "movement_families": [
+        "vertical_push",
+        "elbow_extension"
+      ],
+      "name": "Dumbbell One-Arm Shoulder Press",
+      "variant": "standing_unilateral"
+    },
+    "questions_requiring_context": []
+  },
+  "catalog_id": "catalog.free_exercise_db.Dumbbell_One-Arm_Shoulder_Press",
+  "format_version": 1.0,
+  "provider_metadata": {
+    "input_contact_sheet": {
+      "api_image_inputs": 1.0,
+      "frame_count": 2.0,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Dumbbell_One-Arm_Shoulder_Press/0.jpg",
+        "Dumbbell_One-Arm_Shoulder_Press/1.jpg"
+      ]
+    },
+    "model": "gpt-5.6-terra",
+    "provider": "openai",
+    "raw_authoring_response": {
+      "assumptions": [
+        "The demonstrated standing version is the intended variant; the seated options in the text are not used.",
+        "The loaded arm is the exerciser's right arm, as shown in the contact sheet.",
+        "The exertion phase is the upward press from shoulder height to an overhead position.",
+        "The free left hand holds a second dumbbell at the side, but it is not actively pressed.",
+        "The dumbbell follows a predominantly vertical overhead path under gravity."
+      ],
+      "classification": "supported",
+      "classification_reasons": [
+        "The contact sheet resolves the textual sit-or-stand alternative as standing and shows a unilateral right-arm dumbbell press.",
+        "The start and end frames, together with the instructions, establish an upward overhead press with elbow extension and shoulder elevation/flexion under a vertical dumbbell load.",
+        "All mechanically necessary represented actions and stabilization demands are available in the supplied vocabulary."
+      ],
+      "field_confidence": {
+        "input_mode": "high",
+        "kinetic_chain_type": "high",
+        "laterality": "high",
+        "load_vector": "high",
+        "primary_joint_actions": "high",
+        "stabilization_demands": "medium",
+        "variant": "high"
+      },
+      "proposed_definition": {
+        "aliases": [
+          "Single-Arm Dumbbell Shoulder Press",
+          "Standing One-Arm Dumbbell Shoulder Press",
+          "Unilateral Dumbbell Overhead Press"
+        ],
+        "id": "exercise.dumbbell_one_arm_shoulder_press.standing_unilateral",
+        "input_mode": "repetitions",
+        "kinematic_profile": {
+          "kinetic_chain_type": "open_chain",
+          "load_vector": "overhead_vertical_hands_standing",
+          "primary_joint_actions": [
+            {
+              "joint": "glenohumeral_joint",
+              "movement": "flexion"
+            },
+            {
+              "joint": "elbow_joint",
+              "movement": "extension"
+            }
+          ],
+          "stabilization_demands": [
+            "glenohumeral_stabilization",
+            "scapular_stabilization",
+            "anti_extension_spine",
+            "anti_rotation_torso",
+            "postural_stabilization"
+          ]
+        },
+        "laterality": "right",
+        "movement_families": [
+          "vertical_push",
+          "elbow_extension"
+        ],
+        "name": "Dumbbell One-Arm Shoulder Press",
+        "variant": "standing_unilateral"
+      },
+      "questions_requiring_context": []
+    },
+    "response_id": "resp_0ceabc7863e0aa48006a7a82bed6608199acbb9699dd7b6634",
+    "status": "completed",
+    "usage": {
+      "input_tokens": 2873.0,
+      "input_tokens_details": {
+        "cache_write_tokens": 2870.0,
+        "cached_tokens": 0.0
+      },
+      "output_tokens": 419.0,
+      "output_tokens_details": {
+        "reasoning_tokens": 0.0
+      },
+      "total_tokens": 3292.0
+    }
+  },
+  "rejection": {
+    "member": "human_owner",
+    "recorded_at_unix": 1786423969.10802,
+    "stage": "unfrozen_candidate",
+    "summary": "Made prior to Phase 2C."
+  },
+  "saved_at_unix": 1786417395.37233,
+  "source_id": "Dumbbell_One-Arm_Shoulder_Press",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "review_rejected",
+  "validation_errors": []
+}

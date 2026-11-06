@@ -1,0 +1,96 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/exercises/exercise_image_modal.gd" id="1_modal"]
+
+[node name="ExerciseImageModal" type="Window"]
+title = "Exercise demonstration"
+initial_position = 1
+size = Vector2i(1040, 690)
+min_size = Vector2i(820, 560)
+exclusive = true
+transient = true
+visible = false
+script = ExtResource("1_modal")
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 18
+
+[node name="Column" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 9
+
+[node name="HeadingLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Exercise"
+
+[node name="SourceLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+modulate = Color(0.72549, 0.780392, 0.835294, 1)
+text = "Demonstration images"
+
+[node name="Images" type="GridContainer" parent="Margin/Column"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 14
+theme_override_constants/v_separation = 7
+columns = 2
+
+[node name="FirstCaption" type="Label" parent="Margin/Column/Images"]
+layout_mode = 2
+text = "Starting position"
+horizontal_alignment = 1
+
+[node name="SecondCaption" type="Label" parent="Margin/Column/Images"]
+layout_mode = 2
+text = "Movement position"
+horizontal_alignment = 1
+
+[node name="FirstImage" type="TextureRect" parent="Margin/Column/Images"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(480, 480)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SecondImage" type="TextureRect" parent="Margin/Column/Images"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(480, 480)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MessageLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+visible = false
+horizontal_alignment = 1
+
+[node name="Footer" type="HBoxContainer" parent="Margin/Column"]
+layout_mode = 2
+
+[node name="AttributionLabel" type="Label" parent="Margin/Column/Footer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+modulate = Color(0.572549, 0.654902, 0.72549, 1)
+text = "Source: free-exercise-db · Unlicense"
+
+[node name="CloseButton" type="Button" parent="Margin/Column/Footer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Close"

@@ -1,0 +1,376 @@
+[
+  {
+    "id": "exercise.barbell_back_squat.high_bar",
+    "name": "Barbell Back Squat",
+    "variant": "High bar stance",
+    "aliases": ["squat", "back squat", "high bar squat"],
+    "movement_families": ["squat"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "closed_chain",
+      "primary_joint_actions": [
+        {"joint": "hip_joint", "movement": "extension"},
+        {"joint": "knee_joint", "movement": "extension"}
+      ],
+      "load_vector": "axial_compression_c7",
+      "stabilization_demands": ["anti_flexion_spine", "anti_flexion_trunk", "pelvic_alignment", "ankle_stability"]
+    }
+  },
+  {
+    "id": "exercise.barbell_back_squat.low_bar",
+    "name": "Barbell Back Squat",
+    "variant": "Low bar stance",
+    "aliases": ["low bar squat", "powerlifting squat"],
+    "movement_families": ["squat", "hip_hinge"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "closed_chain",
+      "primary_joint_actions": [
+        {"joint": "hip_joint", "movement": "extension"},
+        {"joint": "knee_joint", "movement": "extension"}
+      ],
+      "load_vector": "axial_compression_t2",
+      "stabilization_demands": ["anti_flexion_spine", "anti_flexion_trunk", "pelvic_alignment"]
+    }
+  },
+  {
+    "id": "exercise.front_squat.barbell",
+    "name": "Barbell Front Squat",
+    "variant": "Clean grip",
+    "aliases": ["front squat"],
+    "movement_families": ["squat"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "closed_chain",
+      "primary_joint_actions": [
+        {"joint": "knee_joint", "movement": "extension"},
+        {"joint": "hip_joint", "movement": "extension"}
+      ],
+      "load_vector": "anterior_shoulder_compression",
+      "stabilization_demands": ["anti_flexion_spine", "scapular_retraction_stability", "thoracic_extension_stability"]
+    }
+  },
+  {
+    "id": "exercise.barbell_deadlift.conventional",
+    "name": "Conventional Barbell Deadlift",
+    "variant": "Conventional stance",
+    "aliases": ["deadlift", "conventional deadlift"],
+    "movement_families": ["hip_hinge"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "closed_chain",
+      "primary_joint_actions": [
+        {"joint": "hip_joint", "movement": "extension"},
+        {"joint": "knee_joint", "movement": "extension"}
+      ],
+      "load_vector": "vertical_pull_hands_standing",
+      "stabilization_demands": ["anti_flexion_spine", "lumbar_fascia_tension", "scapular_anchoring"]
+    }
+  },
+  {
+    "id": "exercise.romanian_deadlift.barbell",
+    "name": "Barbell Romanian Deadlift",
+    "variant": "Standard RDL",
+    "aliases": ["rdl", "romanian deadlift"],
+    "movement_families": ["hip_hinge"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "closed_chain",
+      "primary_joint_actions": [
+        {"joint": "hip_joint", "movement": "extension"}
+      ],
+      "load_vector": "vertical_pull_hands_hinge",
+      "stabilization_demands": ["anti_flexion_spine", "knee_joint_stability"]
+    }
+  },
+  {
+    "id": "exercise.hip_thrust.barbell",
+    "name": "Barbell Hip Thrust",
+    "variant": "Bench supported",
+    "aliases": ["hip thrust", "glute bridge"],
+    "movement_families": ["hip_hinge"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "closed_chain",
+      "primary_joint_actions": [
+        {"joint": "hip_joint", "movement": "extension"}
+      ],
+      "load_vector": "pelvic_perpendicular_load",
+      "stabilization_demands": ["pelvic_leveling_frontal", "anti_extension_spine"]
+    }
+  },
+  {
+    "id": "exercise.barbell_bench_press.medium_grip",
+    "name": "Barbell Bench Press",
+    "variant": "Medium grip",
+    "aliases": ["bench press", "flat bench press"],
+    "movement_families": ["horizontal_push"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "glenohumeral_joint", "movement": "horizontal_adduction"},
+        {"joint": "elbow_joint", "movement": "extension"}
+      ],
+      "load_vector": "vertical_push_hands_supine",
+      "stabilization_demands": ["scapular_retraction_stability", "glenohumeral_stabilization"]
+    }
+  },
+  {
+    "id": "exercise.incline_dumbbell_press.standard",
+    "name": "Incline Dumbbell Press",
+    "variant": "30-degree incline",
+    "aliases": ["incline bench press", "incline db press"],
+    "movement_families": ["horizontal_push", "vertical_push"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "glenohumeral_joint", "movement": "flexion"},
+        {"joint": "elbow_joint", "movement": "extension"}
+      ],
+      "load_vector": "angled_push_hands_incline",
+      "stabilization_demands": ["humeral_head_stabilization", "scapular_retraction_stability"]
+    }
+  },
+  {
+    "id": "exercise.push_up.standard",
+    "name": "Standard Push-up",
+    "variant": "Floor bodyweight",
+    "aliases": ["pushup", "pressup"],
+    "movement_families": ["horizontal_push"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "closed_chain",
+      "primary_joint_actions": [
+        {"joint": "glenohumeral_joint", "movement": "horizontal_adduction"},
+        {"joint": "elbow_joint", "movement": "extension"}
+      ],
+      "load_vector": "ground_reaction_hands_plank",
+      "stabilization_demands": ["anti_extension_spine", "scapular_anchoring", "anti_rotation_torso"]
+    }
+  },
+  {
+    "id": "exercise.overhead_press.standing_barbell",
+    "name": "Standing Barbell Overhead Press",
+    "variant": "Strict press",
+    "aliases": ["ohp", "overhead press", "military press"],
+    "movement_families": ["vertical_push"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "glenohumeral_joint", "movement": "abduction"},
+        {"joint": "elbow_joint", "movement": "extension"}
+      ],
+      "load_vector": "overhead_vertical_hands_standing",
+      "stabilization_demands": ["anti_extension_spine", "intra_abdominal_pressure", "scapular_stabilization"]
+    }
+  },
+  {
+    "id": "exercise.pull_up.pronated",
+    "name": "Pull-up",
+    "variant": "Pronated grip",
+    "aliases": ["pullup", "overhand pull-up"],
+    "movement_families": ["vertical_pull"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "closed_chain",
+      "primary_joint_actions": [
+        {"joint": "glenohumeral_joint", "movement": "adduction"},
+        {"joint": "elbow_joint", "movement": "flexion"}
+      ],
+      "load_vector": "vertical_suspension_hands",
+      "stabilization_demands": ["scapular_anchoring", "anti_extension_spine"]
+    }
+  },
+  {
+    "id": "exercise.chin_up.supinated",
+    "name": "Chin-up",
+    "variant": "Supinated grip",
+    "aliases": ["chinup", "underhand pull-up"],
+    "movement_families": ["vertical_pull"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "closed_chain",
+      "primary_joint_actions": [
+        {"joint": "glenohumeral_joint", "movement": "extension"},
+        {"joint": "elbow_joint", "movement": "flexion"}
+      ],
+      "load_vector": "vertical_suspension_hands",
+      "stabilization_demands": ["scapular_anchoring", "glenohumeral_stabilization"]
+    }
+  },
+  {
+    "id": "exercise.bent_over_row.barbell",
+    "name": "Bent-Over Barbell Row",
+    "variant": "Overhand grip",
+    "aliases": ["barbell row", "bent over row"],
+    "movement_families": ["horizontal_pull"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "scapulothoracic_joint", "movement": "retraction"},
+        {"joint": "glenohumeral_joint", "movement": "extension"},
+        {"joint": "elbow_joint", "movement": "flexion"}
+      ],
+      "load_vector": "vertical_pull_hands_bent_over",
+      "stabilization_demands": ["anti_flexion_spine", "lumbar_fascia_tension", "knee_joint_stability"]
+    }
+  },
+  {
+    "id": "exercise.seated_cable_row.neutral_grip",
+    "name": "Seated Cable Row",
+    "variant": "Close neutral grip",
+    "aliases": ["cable row", "seated row"],
+    "movement_families": ["horizontal_pull"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "scapulothoracic_joint", "movement": "retraction"},
+        {"joint": "glenohumeral_joint", "movement": "extension"},
+        {"joint": "elbow_joint", "movement": "flexion"}
+      ],
+      "load_vector": "horizontal_pull_hands_seated",
+      "stabilization_demands": ["anti_flexion_spine", "intra_abdominal_pressure"]
+    }
+  },
+  {
+    "id": "exercise.biceps_curl.dumbbell_standing",
+    "name": "Standing Dumbbell Biceps Curl",
+    "variant": "Alternating / Bilateral",
+    "aliases": ["bicep curl", "dumbbell curl"],
+    "movement_families": ["elbow_flexion"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "elbow_joint", "movement": "flexion"},
+        {"joint": "radioulnar_joint", "movement": "supination"}
+      ],
+      "load_vector": "vertical_load_forearm_rotation",
+      "stabilization_demands": ["postural_stabilization", "scapular_anchoring"]
+    }
+  },
+  {
+    "id": "exercise.triceps_pushdown.cable_rope",
+    "name": "Cable Rope Triceps Pushdown",
+    "variant": "Rope attachment",
+    "aliases": ["tricep pushdown", "rope pushdown"],
+    "movement_families": ["elbow_extension"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "elbow_joint", "movement": "extension"}
+      ],
+      "load_vector": "downward_cable_pull",
+      "stabilization_demands": ["shoulder_joint_integrity", "anti_flexion_trunk"]
+    }
+  },
+  {
+    "id": "exercise.standing_calf_raise.machine",
+    "name": "Standing Calf Raise",
+    "variant": "Machine shoulder loaded",
+    "aliases": ["calf raise", "standing calf raise"],
+    "movement_families": ["ankle_plantarflexion"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "closed_chain",
+      "primary_joint_actions": [
+        {"joint": "ankle_joint", "movement": "plantarflexion"}
+      ],
+      "load_vector": "axial_compression_c7",
+      "stabilization_demands": ["postural_sway_control", "knee_joint_stability"]
+    }
+  },
+  {
+    "id": "exercise.leg_extension.machine",
+    "name": "Seated Leg Extension",
+    "variant": "Machine seated",
+    "aliases": ["leg extension", "quad extension"],
+    "movement_families": ["knee_extension"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "knee_joint", "movement": "extension"}
+      ],
+      "load_vector": "anterior_tibia_load",
+      "stabilization_demands": ["patellar_tracking"]
+    }
+  },
+  {
+    "id": "exercise.seated_leg_curl.machine",
+    "name": "Seated Leg Curl",
+    "variant": "Machine seated",
+    "aliases": ["leg curl", "hamstring curl"],
+    "movement_families": ["knee_flexion"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "knee_joint", "movement": "flexion"}
+      ],
+      "load_vector": "posterior_calcaneus_load",
+      "stabilization_demands": ["knee_joint_stability"]
+    }
+  },
+  {
+    "id": "exercise.farmers_walk.dumbbell",
+    "name": "Dumbbell Farmer's Walk",
+    "variant": "Heavy bilateral carry",
+    "aliases": ["farmers walk", "farmers carry", "loaded carry"],
+    "movement_families": ["loaded_carry"],
+    "laterality": "bilateral",
+    "input_mode": "duration",
+    "kinematic_profile": {
+      "kinetic_chain_type": "closed_chain",
+      "primary_joint_actions": [
+        {"joint": "hip_joint", "movement": "extension"},
+        {"joint": "ankle_joint", "movement": "plantarflexion"}
+      ],
+      "load_vector": "bilateral_hand_suspension_gait",
+      "stabilization_demands": ["anti_flexion_spine", "scapular_anchoring", "pelvic_leveling_frontal", "anti_rotation_torso"]
+    }
+  },
+  {
+    "id": "exercise.ab_wheel_rollout.kneeling",
+    "name": "Kneeling Ab Wheel Rollout",
+    "variant": "Kneeling stance",
+    "aliases": ["ab wheel", "ab rollout"],
+    "movement_families": ["trunk_flexion"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "closed_chain",
+      "primary_joint_actions": [
+        {"joint": "lumbar_spine", "movement": "flexion"},
+        {"joint": "glenohumeral_joint", "movement": "extension"}
+      ],
+      "load_vector": "eccentric_trunk_extension_lever",
+      "stabilization_demands": ["anti_extension_spine", "intra_abdominal_pressure", "scapular_anchoring"]
+    }
+  }
+]

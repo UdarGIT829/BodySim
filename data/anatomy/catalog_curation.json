@@ -1,0 +1,103 @@
+{
+  "sources": [
+    {
+      "title": "Terminologia Anatomica, second edition",
+      "url": "https://fipat.library.dal.ca/wp-content/uploads/2020/09/FIPAT-TA2-Part-2.pdf"
+    },
+    {
+      "title": "IFAA Terminologia Anatomica general terms",
+      "url": "https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/TA98%20EN/01%20TA98%20EN.htm"
+    }
+  ],
+  "parent_overrides": {
+    "skeletal_feature.anterior_cells_of_ethmoid_bone.left": "bone.ethmoid_bone",
+    "skeletal_feature.anterior_cells_of_ethmoid_bone.right": "bone.ethmoid_bone",
+    "skeletal_feature.middle_cells_of_ethmoid_bone.left": "bone.ethmoid_bone",
+    "skeletal_feature.middle_cells_of_ethmoid_bone.right": "bone.ethmoid_bone",
+    "skeletal_feature.posterior_cells_of_ethmoid_bone.left": "bone.ethmoid_bone",
+    "skeletal_feature.posterior_cells_of_ethmoid_bone.right": "bone.ethmoid_bone",
+    "connective.extensor_retinaculum_of_wrist.left": "connective.antebrachial_fascia.left",
+    "connective.extensor_retinaculum_of_wrist.right": "connective.antebrachial_fascia.right",
+    "connective.iliotibial_tract.left": "connective.fascia_lata.left",
+    "connective.iliotibial_tract.right": "connective.fascia_lata.right",
+    "connective.inguinal_ligament.left": "muscle.external_abdominal_oblique.left",
+    "connective.inguinal_ligament.right": "muscle.external_abdominal_oblique.right",
+    "connective.tendon_of_extensor_digitorum_longus.left": "muscle.extensor_digitorum_longus.left",
+    "connective.tendon_of_extensor_digitorum_longus.right": "muscle.extensor_digitorum_longus.right",
+    "muscle.adductor_minimus.left": "muscle.adductor_magnus.left",
+    "muscle.adductor_minimus.right": "muscle.adductor_magnus.right",
+    "skeletal_feature.sinus_of_frontal_bone": "bone.frontal_bone",
+    "skeletal_feature.sinus_of_sphenoid_bone": "bone.sphenoid_bone"
+  },
+  "source_overrides": {
+    "Anterior cells of ethmoid bone.l": {"resolved_flags": ["system_classification_review"]},
+    "Anterior cells of ethmoid bone.r": {"resolved_flags": ["system_classification_review"]},
+    "Atlas (C1)": {"side": "median"},
+    "Axis (C2)": {"side": "median"},
+    "Body of sternum": {"side": "median"},
+    "Coccyx": {"side": "median"},
+    "Cricoid cartilage": {"side": "unpaired"},
+    "Diaphragm": {"side": "unpaired"},
+    "Diaphragmatic fascia": {"side": "median"},
+    "Ethmoid bone": {"side": "unpaired"},
+    "Frontal bone": {"side": "unpaired"},
+    "Hyoid bone": {"side": "median"},
+    "Iliocostalis colli muscle": {
+      "side": "left",
+      "note": "The unsuffixed object is the left counterpart of the linked .r object."
+    },
+    "Linea alba": {"side": "median"},
+    "Mandible": {"side": "unpaired"},
+    "Manubrium of sternum": {"side": "median"},
+    "Middle cells of ethmoid bone.l": {"resolved_flags": ["system_classification_review"]},
+    "Middle cells of ethmoid bone.r": {"resolved_flags": ["system_classification_review"]},
+    "Nasal septal cartilage": {"side": "median"},
+    "Occipital bone": {"side": "unpaired"},
+    "Posterior cells of ethmoid bone.l": {"resolved_flags": ["system_classification_review"]},
+    "Posterior cells of ethmoid bone.r": {"resolved_flags": ["system_classification_review"]},
+    "Sacrum": {"side": "median"},
+    "Sinus of frontal bone": {
+      "resolved_flags": ["system_classification_review"],
+      "side": "unpaired"
+    },
+    "Sinus of sphenoid bone": {
+      "resolved_flags": ["system_classification_review"],
+      "side": "unpaired"
+    },
+    "Sphenoid bone": {"side": "unpaired"},
+    "Thyroid cartilage": {"side": "unpaired"},
+    "Tensor fasciae latae.l": {"system": "skeletal_muscle"},
+    "Tensor fasciae latae.r": {"system": "skeletal_muscle"},
+    "Transversalis fascia": {"side": "median"},
+    "Transverse arytenoid muscle": {"side": "unpaired"},
+    "Vertebra C3": {"side": "median"},
+    "Vertebra C4": {"side": "median"},
+    "Vertebra C5": {"side": "median"},
+    "Vertebra C6": {"side": "median"},
+    "Vertebra C7": {"side": "median"},
+    "Vertebra L1": {"side": "median"},
+    "Vertebra L2": {"side": "median"},
+    "Vertebra L3": {"side": "median"},
+    "Vertebra L4": {"side": "median"},
+    "Vertebra L5": {"side": "median"},
+    "Vertebra T1": {"side": "median"},
+    "Vertebra T10": {"side": "median"},
+    "Vertebra T11": {"side": "median"},
+    "Vertebra T12": {"side": "median"},
+    "Vertebra T2": {"side": "median"},
+    "Vertebra T3": {"side": "median"},
+    "Vertebra T4": {"side": "median"},
+    "Vertebra T5": {"side": "median"},
+    "Vertebra T6": {"side": "median"},
+    "Vertebra T7": {"side": "median"},
+    "Vertebra T8": {"side": "median"},
+    "Vertebra T9": {"side": "median"},
+    "Vomer": {"side": "median"},
+    "Xiphoid process": {
+      "note": "Retained as a separately selectable skeletal feature because its source mesh contains both bone and cartilage materials.",
+      "resolved_flags": ["system_classification_review"],
+      "side": "median"
+    }
+  },
+  "version": 3
+}

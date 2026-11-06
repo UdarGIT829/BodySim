@@ -1,0 +1,5518 @@
+[
+  {
+    "muscle_id": "muscle.abdominal_part_of_pectoralis_major.left",
+    "spanned_joints": [
+      "glenohumeral_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "horizontal_adduction",
+        "type": "primary"
+      },
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "internal_rotation",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anterior_shoulder_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.abdominal_part_of_pectoralis_major.right",
+    "spanned_joints": [
+      "glenohumeral_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "horizontal_adduction",
+        "type": "primary"
+      },
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "internal_rotation",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anterior_shoulder_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.abductor_digiti_minimi_of_foot.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.abductor_digiti_minimi_of_foot.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.abductor_digiti_minimi_of_hand.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.abductor_digiti_minimi_of_hand.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.abductor_hallucis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.abductor_hallucis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.abductor_pollicis_brevis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.abductor_pollicis_brevis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.abductor_pollicis_longus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.abductor_pollicis_longus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.acromial_part_of_deltoid.left",
+    "spanned_joints": [
+      "glenohumeral_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "abduction",
+        "type": "primary"
+      },
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "flexion",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "humeral_head_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.acromial_part_of_deltoid.right",
+    "spanned_joints": [
+      "glenohumeral_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "abduction",
+        "type": "primary"
+      },
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "flexion",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "humeral_head_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.adductor_brevis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.adductor_brevis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.adductor_longus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.adductor_longus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.adductor_magnus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.adductor_magnus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.adductor_minimus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.adductor_minimus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.anconeus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.anconeus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.anterior_belly_of_digastric.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.anterior_belly_of_digastric.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.ary_epiglottic_part_of_oblique_arytenoid.left",
+    "spanned_joints": [
+      "lumbar_spine.left"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.ary_epiglottic_part_of_oblique_arytenoid.right",
+    "spanned_joints": [
+      "lumbar_spine.right"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.ascending_part_of_trapezius.left",
+    "spanned_joints": [
+      "scapulothoracic_joint.left",
+      "cervical_spine.left"
+    ],
+    "actions": [
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "elevation",
+        "type": "primary"
+      },
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "retraction",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "scapular_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.ascending_part_of_trapezius.right",
+    "spanned_joints": [
+      "scapulothoracic_joint.right",
+      "cervical_spine.right"
+    ],
+    "actions": [
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "elevation",
+        "type": "primary"
+      },
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "retraction",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "scapular_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.brachialis.left",
+    "spanned_joints": [
+      "elbow_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "elbow_joint",
+        "movement": "flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "elbow_joint_integrity"
+    ]
+  },
+  {
+    "muscle_id": "muscle.brachialis.right",
+    "spanned_joints": [
+      "elbow_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "elbow_joint",
+        "movement": "flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "elbow_joint_integrity"
+    ]
+  },
+  {
+    "muscle_id": "muscle.brachioradialis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.brachioradialis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.bucinator.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.bucinator.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.clavicular_head_of_pectoralis_major.left",
+    "spanned_joints": [
+      "glenohumeral_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "horizontal_adduction",
+        "type": "primary"
+      },
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "internal_rotation",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anterior_shoulder_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.clavicular_head_of_pectoralis_major.right",
+    "spanned_joints": [
+      "glenohumeral_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "horizontal_adduction",
+        "type": "primary"
+      },
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "internal_rotation",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anterior_shoulder_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.clavicular_part_of_deltoid.left",
+    "spanned_joints": [
+      "glenohumeral_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "abduction",
+        "type": "primary"
+      },
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "flexion",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "humeral_head_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.clavicular_part_of_deltoid.right",
+    "spanned_joints": [
+      "glenohumeral_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "abduction",
+        "type": "primary"
+      },
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "flexion",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "humeral_head_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.coccygeus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.coccygeus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.coracobrachialis.left",
+    "spanned_joints": [
+      "elbow_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "elbow_joint",
+        "movement": "flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "elbow_joint_integrity"
+    ]
+  },
+  {
+    "muscle_id": "muscle.coracobrachialis.right",
+    "spanned_joints": [
+      "elbow_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "elbow_joint",
+        "movement": "flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "elbow_joint_integrity"
+    ]
+  },
+  {
+    "muscle_id": "muscle.corrugator_supercilii.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.corrugator_supercilii.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.deep_head_of_flexor_pollicis_brevis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.deep_head_of_flexor_pollicis_brevis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.deep_head_of_pronator_teres.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.deep_head_of_pronator_teres.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.deep_part_of_masseter.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.deep_part_of_masseter.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.depressor_anguli_oris.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.depressor_anguli_oris.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.depressor_labii_inferioris.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.depressor_labii_inferioris.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.depressor_septi_nasi.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.depressor_septi_nasi.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.descending_part_of_trapezius.left",
+    "spanned_joints": [
+      "scapulothoracic_joint.left",
+      "cervical_spine.left"
+    ],
+    "actions": [
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "elevation",
+        "type": "primary"
+      },
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "retraction",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "scapular_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.descending_part_of_trapezius.right",
+    "spanned_joints": [
+      "scapulothoracic_joint.right",
+      "cervical_spine.right"
+    ],
+    "actions": [
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "elevation",
+        "type": "primary"
+      },
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "retraction",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "scapular_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.diaphragm",
+    "spanned_joints": [
+      "local_joint"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.dorsal_interossei_muscles_of_foot.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.dorsal_interossei_muscles_of_foot.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.dorsal_interossei_muscles_of_hand.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.dorsal_interossei_muscles_of_hand.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.dorsal_parts_of_lateral_intertransversarii_lumborum.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.dorsal_parts_of_lateral_intertransversarii_lumborum.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_carpi_radialis_brevis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_carpi_radialis_brevis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_carpi_radialis_longus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_carpi_radialis_longus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_digiti_minimi.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_digiti_minimi.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_digitorum.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_digitorum.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_digitorum_brevis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_digitorum_brevis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_digitorum_longus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_digitorum_longus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_hallucis_brevis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_hallucis_brevis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_hallucis_longus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_hallucis_longus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_indicis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_indicis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_pollicis_brevis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_pollicis_brevis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_pollicis_longus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.extensor_pollicis_longus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.external_abdominal_oblique.left",
+    "spanned_joints": [
+      "lumbar_spine.left"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.external_abdominal_oblique.right",
+    "spanned_joints": [
+      "lumbar_spine.right"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.external_anal_sphincter.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.external_anal_sphincter.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.external_intercostal.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.external_intercostal.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.external_part_of_thyro_arytenoid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.external_part_of_thyro_arytenoid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.fibularis_brevis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.fibularis_brevis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.fibularis_longus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.fibularis_longus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.fibularis_tertius.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.fibularis_tertius.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_carpi_radialis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_carpi_radialis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_digiti_minimi_of_foot.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_digiti_minimi_of_foot.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_digiti_minimi_of_hand.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_digiti_minimi_of_hand.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_digitorum_brevis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_digitorum_brevis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_digitorum_longus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_digitorum_longus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_digitorum_profundus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_digitorum_profundus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_hallucis_longus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_hallucis_longus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_pollicis_longus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.flexor_pollicis_longus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.frontalis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.frontalis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.genioglossus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.genioglossus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.geniohyoid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.geniohyoid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.gluteus_maximus.left",
+    "spanned_joints": [
+      "hip_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "hip_joint",
+        "movement": "extension",
+        "type": "primary"
+      },
+      {
+        "joint": "hip_joint",
+        "movement": "external_rotation",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "pelvic_alignment"
+    ]
+  },
+  {
+    "muscle_id": "muscle.gluteus_maximus.right",
+    "spanned_joints": [
+      "hip_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "hip_joint",
+        "movement": "extension",
+        "type": "primary"
+      },
+      {
+        "joint": "hip_joint",
+        "movement": "external_rotation",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "pelvic_alignment"
+    ]
+  },
+  {
+    "muscle_id": "muscle.gluteus_medius.left",
+    "spanned_joints": [
+      "hip_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "hip_joint",
+        "movement": "abduction",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "pelvic_leveling_frontal"
+    ]
+  },
+  {
+    "muscle_id": "muscle.gluteus_medius.right",
+    "spanned_joints": [
+      "hip_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "hip_joint",
+        "movement": "abduction",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "pelvic_leveling_frontal"
+    ]
+  },
+  {
+    "muscle_id": "muscle.gluteus_minimus.left",
+    "spanned_joints": [
+      "hip_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "hip_joint",
+        "movement": "abduction",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "femoral_head_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.gluteus_minimus.right",
+    "spanned_joints": [
+      "hip_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "hip_joint",
+        "movement": "abduction",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "femoral_head_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.gracilis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.gracilis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.humeral_head_of_extensor_carpi_ulnaris.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.humeral_head_of_extensor_carpi_ulnaris.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.humeral_head_of_flexor_carpi_ulnaris.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.humeral_head_of_flexor_carpi_ulnaris.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.humero_ulnar_head_of_flexor_digitorum_superficialis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.humero_ulnar_head_of_flexor_digitorum_superficialis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.hyoglossus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.hyoglossus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.iliacus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.iliacus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.iliococcygeus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.iliococcygeus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.iliocostalis_colli.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.iliocostalis_colli.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.iliocostalis_lumborum.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.iliocostalis_lumborum.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.iliocostalis_thoracis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.iliocostalis_thoracis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.iliopectineal_arch.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.iliopectineal_arch.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.inferior_gemellus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.inferior_gemellus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.inferior_head_of_lateral_pterygoid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.inferior_head_of_lateral_pterygoid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.inferior_oblique.left",
+    "spanned_joints": [
+      "lumbar_spine.left"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.inferior_oblique.right",
+    "spanned_joints": [
+      "lumbar_spine.right"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.inferior_pharyngeal_constrictor.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.inferior_pharyngeal_constrictor.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.inferior_rectus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.inferior_rectus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.infraspinatus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.infraspinatus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.innermost_intercostal.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.innermost_intercostal.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.internal_abdominal_oblique.left",
+    "spanned_joints": [
+      "lumbar_spine.left"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.internal_abdominal_oblique.right",
+    "spanned_joints": [
+      "lumbar_spine.right"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.internal_intercostal.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.internal_intercostal.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.interspinales_colli.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.interspinales_colli.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.interspinales_lumborum.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.interspinales_lumborum.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.interspinales_thoracis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.interspinales_thoracis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.lateral_crico_arytenoid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.lateral_crico_arytenoid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.lateral_head_of_flexor_hallucis_brevis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.lateral_head_of_flexor_hallucis_brevis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.lateral_head_of_gastrocnemius.left",
+    "spanned_joints": [
+      "knee_joint.left",
+      "ankle_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "ankle_joint",
+        "movement": "plantarflexion",
+        "type": "primary"
+      },
+      {
+        "joint": "knee_joint",
+        "movement": "flexion",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "ankle_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.lateral_head_of_gastrocnemius.right",
+    "spanned_joints": [
+      "knee_joint.right",
+      "ankle_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "ankle_joint",
+        "movement": "plantarflexion",
+        "type": "primary"
+      },
+      {
+        "joint": "knee_joint",
+        "movement": "flexion",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "ankle_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.lateral_head_of_triceps_brachii.left",
+    "spanned_joints": [
+      "glenohumeral_joint.left",
+      "elbow_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "elbow_joint",
+        "movement": "extension",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "elbow_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.lateral_head_of_triceps_brachii.right",
+    "spanned_joints": [
+      "glenohumeral_joint.right",
+      "elbow_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "elbow_joint",
+        "movement": "extension",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "elbow_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.lateral_rectus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.lateral_rectus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.latissimus_dorsi.left",
+    "spanned_joints": [
+      "glenohumeral_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "adduction",
+        "type": "primary"
+      },
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "extension",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "lumbar_fascia_tension"
+    ]
+  },
+  {
+    "muscle_id": "muscle.latissimus_dorsi.right",
+    "spanned_joints": [
+      "glenohumeral_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "adduction",
+        "type": "primary"
+      },
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "extension",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "lumbar_fascia_tension"
+    ]
+  },
+  {
+    "muscle_id": "muscle.levator_anguli_oris.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.levator_anguli_oris.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.levator_labii_superioris.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.levator_labii_superioris.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.levator_nasolabialis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.levator_nasolabialis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.levator_palpebrae_superioris.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.levator_palpebrae_superioris.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.levator_scapulae.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.levator_scapulae.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.levatores_breves_costarum.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.levatores_breves_costarum.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.levatores_longi_costarum.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.levatores_longi_costarum.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.long_head_of_biceps_brachii.left",
+    "spanned_joints": [
+      "glenohumeral_joint.left",
+      "elbow_joint.left",
+      "radioulnar_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "elbow_joint",
+        "movement": "flexion",
+        "type": "primary"
+      },
+      {
+        "joint": "radioulnar_joint",
+        "movement": "supination",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "glenohumeral_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.long_head_of_biceps_brachii.right",
+    "spanned_joints": [
+      "glenohumeral_joint.right",
+      "elbow_joint.right",
+      "radioulnar_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "elbow_joint",
+        "movement": "flexion",
+        "type": "primary"
+      },
+      {
+        "joint": "radioulnar_joint",
+        "movement": "supination",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "glenohumeral_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.long_head_of_biceps_femoris.left",
+    "spanned_joints": [
+      "hip_joint.left",
+      "knee_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "flexion",
+        "type": "primary"
+      },
+      {
+        "joint": "hip_joint",
+        "movement": "extension",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "knee_joint_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.long_head_of_biceps_femoris.right",
+    "spanned_joints": [
+      "hip_joint.right",
+      "knee_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "flexion",
+        "type": "primary"
+      },
+      {
+        "joint": "hip_joint",
+        "movement": "extension",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "knee_joint_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.long_head_of_triceps_brachii.left",
+    "spanned_joints": [
+      "glenohumeral_joint.left",
+      "elbow_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "elbow_joint",
+        "movement": "extension",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "elbow_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.long_head_of_triceps_brachii.right",
+    "spanned_joints": [
+      "glenohumeral_joint.right",
+      "elbow_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "elbow_joint",
+        "movement": "extension",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "elbow_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.longissimus_capitis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.longissimus_capitis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.longissimus_colli.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.longissimus_colli.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.longissimus_thoracis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.longissimus_thoracis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.longus_capitis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.longus_capitis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.longus_colli.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.longus_colli.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.lumbrical_muscles_of_foot.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.lumbrical_muscles_of_foot.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.lumbrical_muscles_of_hand.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.lumbrical_muscles_of_hand.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.medial_head_of_flexor_hallucis_brevis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.medial_head_of_flexor_hallucis_brevis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.medial_head_of_gastrocnemius.left",
+    "spanned_joints": [
+      "knee_joint.left",
+      "ankle_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "ankle_joint",
+        "movement": "plantarflexion",
+        "type": "primary"
+      },
+      {
+        "joint": "knee_joint",
+        "movement": "flexion",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "ankle_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.medial_head_of_gastrocnemius.right",
+    "spanned_joints": [
+      "knee_joint.right",
+      "ankle_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "ankle_joint",
+        "movement": "plantarflexion",
+        "type": "primary"
+      },
+      {
+        "joint": "knee_joint",
+        "movement": "flexion",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "ankle_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.medial_head_of_triceps_brachii.left",
+    "spanned_joints": [
+      "glenohumeral_joint.left",
+      "elbow_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "elbow_joint",
+        "movement": "extension",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "elbow_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.medial_head_of_triceps_brachii.right",
+    "spanned_joints": [
+      "glenohumeral_joint.right",
+      "elbow_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "elbow_joint",
+        "movement": "extension",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "elbow_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.medial_pterygoid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.medial_pterygoid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.medial_rectus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.medial_rectus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.mentalis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.mentalis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.middle_pharyngeal_constrictor.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.middle_pharyngeal_constrictor.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.multifidus_colli.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.multifidus_colli.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.multifidus_lumborum.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.multifidus_lumborum.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.multifidus_thoracis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.multifidus_thoracis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.mylohyoid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.mylohyoid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.nasalis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.nasalis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.oblique_head_of_adductor_hallucis.left",
+    "spanned_joints": [
+      "lumbar_spine.left"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.oblique_head_of_adductor_hallucis.right",
+    "spanned_joints": [
+      "lumbar_spine.right"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.oblique_head_of_adductor_pollicis.left",
+    "spanned_joints": [
+      "lumbar_spine.left"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.oblique_head_of_adductor_pollicis.right",
+    "spanned_joints": [
+      "lumbar_spine.right"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.oblique_part_of_cricothyroid.left",
+    "spanned_joints": [
+      "lumbar_spine.left"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.oblique_part_of_cricothyroid.right",
+    "spanned_joints": [
+      "lumbar_spine.right"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.obliquus_inferior_capitis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.obliquus_inferior_capitis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.obliquus_superior_capitis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.obliquus_superior_capitis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.obturator_externus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.obturator_externus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.obturator_internus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.obturator_internus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.occipitalis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.occipitalis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.omohyoid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.omohyoid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.opponens_digiti_minimi_muscle_of_foot.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.opponens_digiti_minimi_muscle_of_foot.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.opponens_digiti_minimi_muscle_of_hand.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.opponens_digiti_minimi_muscle_of_hand.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.opponens_pollicis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.opponens_pollicis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.orbicularis_oris.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.orbicularis_oris.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.orbital_part_of_orbicularis_oculi.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.orbital_part_of_orbicularis_oculi.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.palatopharyngeus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.palatopharyngeus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.palmar_interossei.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.palmar_interossei.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.palmaris_longus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.palmaris_longus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.palpebral_part_of_orbicularis_oculi.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.palpebral_part_of_orbicularis_oculi.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.pectineus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.pectineus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.pectoralis_minor.left",
+    "spanned_joints": [
+      "scapulothoracic_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "depression",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "scapular_anchoring"
+    ]
+  },
+  {
+    "muscle_id": "muscle.pectoralis_minor.right",
+    "spanned_joints": [
+      "scapulothoracic_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "depression",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "scapular_anchoring"
+    ]
+  },
+  {
+    "muscle_id": "muscle.piriformis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.piriformis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.plantar_interossei.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.plantar_interossei.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.plantaris.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.plantaris.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.platysma.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.platysma.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.popliteus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.popliteus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.posterior_belly_of_digastric.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.posterior_belly_of_digastric.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.posterior_crico_arytenoid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.posterior_crico_arytenoid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.procerus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.procerus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.pronator_quadratus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.pronator_quadratus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.psoas_major.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.psoas_major.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.pubo_analis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.pubo_analis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.pubococcygeus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.pubococcygeus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.pyramidalis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.pyramidalis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.quadratus_femoris.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.quadratus_femoris.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.quadratus_lumborum.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.quadratus_lumborum.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.quadratus_plantae.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.quadratus_plantae.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.radial_head_of_flexor_digitorum_superficialis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.radial_head_of_flexor_digitorum_superficialis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rectus_abdominis.left",
+    "spanned_joints": [
+      "lumbar_spine.left"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_extension_spine"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rectus_abdominis.right",
+    "spanned_joints": [
+      "lumbar_spine.right"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_extension_spine"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rectus_anterior_capitis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rectus_anterior_capitis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rectus_femoris.left",
+    "spanned_joints": [
+      "hip_joint.left",
+      "knee_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "extension",
+        "type": "primary"
+      },
+      {
+        "joint": "hip_joint",
+        "movement": "flexion",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_extension_hip"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rectus_femoris.right",
+    "spanned_joints": [
+      "hip_joint.right",
+      "knee_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "extension",
+        "type": "primary"
+      },
+      {
+        "joint": "hip_joint",
+        "movement": "flexion",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_extension_hip"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rectus_lateralis_capitis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rectus_lateralis_capitis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rectus_posterior_major_capitis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rectus_posterior_major_capitis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rectus_posterior_minor_capitis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rectus_posterior_minor_capitis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rhomboid_major.left",
+    "spanned_joints": [
+      "scapulothoracic_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "retraction",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "scapular_retraction_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rhomboid_major.right",
+    "spanned_joints": [
+      "scapulothoracic_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "retraction",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "scapular_retraction_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rhomboid_minor.left",
+    "spanned_joints": [
+      "scapulothoracic_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "retraction",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "scapular_retraction_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rhomboid_minor.right",
+    "spanned_joints": [
+      "scapulothoracic_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "retraction",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "scapular_retraction_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.risorius.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.risorius.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rotatores.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.rotatores.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.sartorius.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.sartorius.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.scalenus_anterior.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.scalenus_anterior.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.scalenus_medius.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.scalenus_medius.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.scalenus_posterior.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.scalenus_posterior.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.scapular_spinal_part_of_deltoid.left",
+    "spanned_joints": [
+      "glenohumeral_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "abduction",
+        "type": "primary"
+      },
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "flexion",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "humeral_head_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.scapular_spinal_part_of_deltoid.right",
+    "spanned_joints": [
+      "glenohumeral_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "abduction",
+        "type": "primary"
+      },
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "flexion",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "humeral_head_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.semimembranosus.left",
+    "spanned_joints": [
+      "hip_joint.left",
+      "knee_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "flexion",
+        "type": "primary"
+      },
+      {
+        "joint": "hip_joint",
+        "movement": "extension",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "knee_joint_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.semimembranosus.right",
+    "spanned_joints": [
+      "hip_joint.right",
+      "knee_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "flexion",
+        "type": "primary"
+      },
+      {
+        "joint": "hip_joint",
+        "movement": "extension",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "knee_joint_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.semispinalis_colli.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.semispinalis_colli.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.semispinalis_thoracis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.semispinalis_thoracis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.semitendinosus.left",
+    "spanned_joints": [
+      "hip_joint.left",
+      "knee_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "flexion",
+        "type": "primary"
+      },
+      {
+        "joint": "hip_joint",
+        "movement": "extension",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "knee_joint_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.semitendinosus.right",
+    "spanned_joints": [
+      "hip_joint.right",
+      "knee_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "flexion",
+        "type": "primary"
+      },
+      {
+        "joint": "hip_joint",
+        "movement": "extension",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "knee_joint_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.serratus_anterior.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.serratus_anterior.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.serratus_posterior_inferior.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.serratus_posterior_inferior.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.serratus_posterior_superior.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.serratus_posterior_superior.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.short_head_of_biceps_brachii.left",
+    "spanned_joints": [
+      "glenohumeral_joint.left",
+      "elbow_joint.left",
+      "radioulnar_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "elbow_joint",
+        "movement": "flexion",
+        "type": "primary"
+      },
+      {
+        "joint": "radioulnar_joint",
+        "movement": "supination",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "glenohumeral_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.short_head_of_biceps_brachii.right",
+    "spanned_joints": [
+      "glenohumeral_joint.right",
+      "elbow_joint.right",
+      "radioulnar_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "elbow_joint",
+        "movement": "flexion",
+        "type": "primary"
+      },
+      {
+        "joint": "radioulnar_joint",
+        "movement": "supination",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "glenohumeral_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.short_head_of_biceps_femoris.left",
+    "spanned_joints": [
+      "hip_joint.left",
+      "knee_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "flexion",
+        "type": "primary"
+      },
+      {
+        "joint": "hip_joint",
+        "movement": "extension",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "knee_joint_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.short_head_of_biceps_femoris.right",
+    "spanned_joints": [
+      "hip_joint.right",
+      "knee_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "flexion",
+        "type": "primary"
+      },
+      {
+        "joint": "hip_joint",
+        "movement": "extension",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "knee_joint_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.soleus.left",
+    "spanned_joints": [
+      "ankle_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "ankle_joint",
+        "movement": "plantarflexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "postural_sway_control"
+    ]
+  },
+  {
+    "muscle_id": "muscle.soleus.right",
+    "spanned_joints": [
+      "ankle_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "ankle_joint",
+        "movement": "plantarflexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "postural_sway_control"
+    ]
+  },
+  {
+    "muscle_id": "muscle.spinalis_capitis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.spinalis_capitis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.spinalis_colli.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.spinalis_colli.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.spinalis_thoracis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.spinalis_thoracis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.splenius_capitis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.splenius_capitis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.splenius_colli.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.splenius_colli.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.sternocleidomastoid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.sternocleidomastoid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.left",
+    "spanned_joints": [
+      "glenohumeral_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "horizontal_adduction",
+        "type": "primary"
+      },
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "internal_rotation",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anterior_shoulder_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.right",
+    "spanned_joints": [
+      "glenohumeral_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "horizontal_adduction",
+        "type": "primary"
+      },
+      {
+        "joint": "glenohumeral_joint",
+        "movement": "internal_rotation",
+        "type": "synergist"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anterior_shoulder_stability"
+    ]
+  },
+  {
+    "muscle_id": "muscle.sternohyoid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.sternohyoid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.sternothyroid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.sternothyroid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.straight_part_of_cricothyroid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.straight_part_of_cricothyroid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.stylohyoid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.stylohyoid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.stylopharyngeus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.stylopharyngeus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.subclavius.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.subclavius.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.subscapularis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.subscapularis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superficial_head_of_flexor_pollicis_brevis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superficial_head_of_flexor_pollicis_brevis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superficial_head_of_pronator_teres.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superficial_head_of_pronator_teres.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superficial_part_of_masseter.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superficial_part_of_masseter.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superior_gemellus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superior_gemellus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superior_head_of_lateral_pterygoid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superior_head_of_lateral_pterygoid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superior_oblique.left",
+    "spanned_joints": [
+      "lumbar_spine.left"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superior_oblique.right",
+    "spanned_joints": [
+      "lumbar_spine.right"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superior_pharyngeal_constrictor.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superior_pharyngeal_constrictor.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superior_rectus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.superior_rectus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.supinator.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.supinator.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.supraspinatus.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.supraspinatus.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.temporalis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.temporalis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.temporoparietalis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.temporoparietalis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.tensor_fasciae_latae.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.tensor_fasciae_latae.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.teres_major.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.teres_major.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.teres_minor.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.teres_minor.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.thyro_epiglottic_part_of_thyro_arytenoid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.thyro_epiglottic_part_of_thyro_arytenoid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.thyrohyoid.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.thyrohyoid.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.tibialis_anterior.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.tibialis_anterior.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.tibialis_posterior.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.tibialis_posterior.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.transverse_arytenoid",
+    "spanned_joints": [
+      "local_joint"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.transverse_head_of_adductor_hallucis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.transverse_head_of_adductor_hallucis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.transverse_head_of_adductor_pollicis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.transverse_head_of_adductor_pollicis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.transverse_part_of_trapezius.left",
+    "spanned_joints": [
+      "scapulothoracic_joint.left",
+      "cervical_spine.left"
+    ],
+    "actions": [
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "elevation",
+        "type": "primary"
+      },
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "retraction",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "scapular_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.transverse_part_of_trapezius.right",
+    "spanned_joints": [
+      "scapulothoracic_joint.right",
+      "cervical_spine.right"
+    ],
+    "actions": [
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "elevation",
+        "type": "primary"
+      },
+      {
+        "joint": "scapulothoracic_joint",
+        "movement": "retraction",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "scapular_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.transversus_abdominis.left",
+    "spanned_joints": [
+      "lumbar_spine.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "intra_abdominal_pressure",
+      "anti_flexion_spine",
+      "anti_extension_spine"
+    ]
+  },
+  {
+    "muscle_id": "muscle.transversus_abdominis.right",
+    "spanned_joints": [
+      "lumbar_spine.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "intra_abdominal_pressure",
+      "anti_flexion_spine",
+      "anti_extension_spine"
+    ]
+  },
+  {
+    "muscle_id": "muscle.transversus_thoracis.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.transversus_thoracis.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.trochlea_of_superior_oblique.left",
+    "spanned_joints": [
+      "lumbar_spine.left"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.trochlea_of_superior_oblique.right",
+    "spanned_joints": [
+      "lumbar_spine.right"
+    ],
+    "actions": [
+      {
+        "joint": "lumbar_spine",
+        "movement": "rotation",
+        "type": "primary"
+      },
+      {
+        "joint": "lumbar_spine",
+        "movement": "lateral_flexion",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "anti_rotation_torso"
+    ]
+  },
+  {
+    "muscle_id": "muscle.ulnar_head_of_extensor_carpi_ulnaris.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.ulnar_head_of_extensor_carpi_ulnaris.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.ulnar_head_of_flexor_carpi_ulnaris.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.ulnar_head_of_flexor_carpi_ulnaris.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.vastus_intermedius.left",
+    "spanned_joints": [
+      "knee_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "extension",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "patellar_tracking"
+    ]
+  },
+  {
+    "muscle_id": "muscle.vastus_intermedius.right",
+    "spanned_joints": [
+      "knee_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "extension",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "patellar_tracking"
+    ]
+  },
+  {
+    "muscle_id": "muscle.vastus_lateralis.left",
+    "spanned_joints": [
+      "knee_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "extension",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "patellar_tracking"
+    ]
+  },
+  {
+    "muscle_id": "muscle.vastus_lateralis.right",
+    "spanned_joints": [
+      "knee_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "extension",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "patellar_tracking"
+    ]
+  },
+  {
+    "muscle_id": "muscle.vastus_medialis.left",
+    "spanned_joints": [
+      "knee_joint.left"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "extension",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "patellar_tracking"
+    ]
+  },
+  {
+    "muscle_id": "muscle.vastus_medialis.right",
+    "spanned_joints": [
+      "knee_joint.right"
+    ],
+    "actions": [
+      {
+        "joint": "knee_joint",
+        "movement": "extension",
+        "type": "primary"
+      }
+    ],
+    "stabilization_capabilities": [
+      "patellar_tracking"
+    ]
+  },
+  {
+    "muscle_id": "muscle.ventral_parts_of_lateral_intertransversarii_lumborum.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.ventral_parts_of_lateral_intertransversarii_lumborum.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.zygomaticus_major.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.zygomaticus_major.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.zygomaticus_minor.left",
+    "spanned_joints": [
+      "local_joint.left"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  },
+  {
+    "muscle_id": "muscle.zygomaticus_minor.right",
+    "spanned_joints": [
+      "local_joint.right"
+    ],
+    "actions": [],
+    "stabilization_capabilities": [
+      "postural_stabilization"
+    ]
+  }
+]

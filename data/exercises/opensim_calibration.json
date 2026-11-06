@@ -1,0 +1,18 @@
+[
+  {
+    "exercise_id": "exercise.barbell_back_squat.high_bar",
+    "opensim_model": "rajagopal_2016",
+    "primary_mover_muscle_id": "muscle.rectus_femoris.left",
+    "opensim_force_n": 1420.5,
+    "opensim_activation": 0.88,
+    "confidence": "high"
+  },
+  {
+    "exercise_id": "exercise.pull_up.pronated",
+    "opensim_model": "mobl_arms_v1",
+    "primary_mover_muscle_id": "muscle.latissimus_dorsi.left",
+    "opensim_force_n": 1150.0,
+    "opensim_activation": 0.82,
+    "confidence": "high"
+  }
+]

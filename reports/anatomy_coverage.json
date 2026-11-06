@@ -1,0 +1,47 @@
+{
+  "blocking_structure_ids": {
+    "import_failure": [],
+    "licensing_unresolved": [],
+    "missing_mesh": [],
+    "selection_not_implemented": []
+  },
+  "canonical_structures": 960,
+  "catalog_sha256": "7c8cb6813422b84e113472709875169407c1f54a1230170b766de9cebfde7746",
+  "exercise_mapping_counts": {
+    "not_yet_mapped": 960
+  },
+  "import_failures": 0,
+  "licensing_resolved": 960,
+  "mesh_assigned": 960,
+  "missing_structures": 0,
+  "notes": [
+    "Visible means the audited regional GLB node contains renderable mesh geometry.",
+    "The separate Godot whole-body runtime test verifies that all 960 nodes instantiate.",
+    "Every canonical ID is selectable through the Phase 0D manifest-backed search registry.",
+    "Direct click-on-model selection uses cached physicsless triangle-mesh BVHs.",
+    "The pinned musculoskeletal extraction has verified source licensing and recorded attribution/share-alike obligations."
+  ],
+  "phase0_status": "complete",
+  "region_counts": {
+    "head_neck": 288,
+    "lower_limb": 276,
+    "pelvis": 16,
+    "torso": 186,
+    "upper_limb": 194
+  },
+  "regional_asset_identity_resolved": 960,
+  "release_blocking_conditions": [],
+  "renderable_mesh_nodes": 960,
+  "schema_version": 1,
+  "selectable": 960,
+  "system_counts": {
+    "bone": 209,
+    "cartilage": 31,
+    "dental_structure": 28,
+    "musculoskeletal_connective_tissue": 217,
+    "skeletal_feature": 9,
+    "skeletal_muscle": 466
+  },
+  "unexplained_source_objects": 0,
+  "visible": 960
+}

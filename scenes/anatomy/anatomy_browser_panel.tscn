@@ -1,0 +1,81 @@
+[gd_scene format=3]
+
+[node name="AnatomyBrowserPanel" type="PanelContainer"]
+custom_minimum_size = Vector2(470, 0)
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 12
+
+[node name="Column" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Margin/Column"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "BodySim · Whole-Body Preview"
+
+[node name="StatusLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ControlsLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+modulate = Color(0.72549, 0.780392, 0.835294, 1)
+text = "Click: select/cycle deeper   Left drag: orbit   Right drag: pan   Wheel: zoom\nUse the toolbar below for anatomy layers and camera views."
+
+[node name="Separator" type="HSeparator" parent="Margin/Column"]
+layout_mode = 2
+
+[node name="SearchInput" type="LineEdit" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Search all 960 structures…"
+clear_button_enabled = true
+
+[node name="SearchResults" type="Tree" parent="Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(440, 190)
+layout_mode = 2
+columns = 2
+column_titles_visible = true
+hide_root = true
+
+[node name="DetailsLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(440, 92)
+layout_mode = 2
+text = "Select a structure to inspect its canonical identity and coverage."
+autowrap_mode = 2
+
+[node name="Actions" type="HBoxContainer" parent="Margin/Column"]
+layout_mode = 2
+
+[node name="HideButton" type="Button" parent="Margin/Column/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Hide"
+
+[node name="IsolateButton" type="Button" parent="Margin/Column/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Isolate"
+
+[node name="FadeButton" type="Button" parent="Margin/Column/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Fade others"
+
+[node name="WorkoutToggleButton" type="Button" parent="Margin/Column/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Heatmap: OFF"
+
+[node name="ClearButton" type="Button" parent="Margin/Column/Actions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Clear"

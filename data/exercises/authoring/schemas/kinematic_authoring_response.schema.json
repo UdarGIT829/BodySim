@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bodysim.kinematic_authoring_response.v1",
+  "title": "BodySim kinematic authoring response v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "classification",
+    "classification_reasons",
+    "assumptions",
+    "questions_requiring_context",
+    "field_confidence",
+    "proposed_definition"
+  ],
+  "properties": {
+    "classification": {"type": "string", "enum": ["supported", "ambiguous", "unsupported"]},
+    "classification_reasons": {"type": "array", "items": {"type": "string"}},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "questions_requiring_context": {"type": "array", "items": {"type": "string"}},
+    "field_confidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["variant", "laterality", "input_mode", "kinetic_chain_type", "primary_joint_actions", "stabilization_demands"],
+      "properties": {
+        "variant": {"type": "string", "enum": ["high", "medium", "low"]},
+        "laterality": {"type": "string", "enum": ["high", "medium", "low"]},
+        "input_mode": {"type": "string", "enum": ["high", "medium", "low"]},
+        "kinetic_chain_type": {"type": "string", "enum": ["high", "medium", "low"]},
+        "primary_joint_actions": {"type": "string", "enum": ["high", "medium", "low"]},
+        "stabilization_demands": {"type": "string", "enum": ["high", "medium", "low"]}
+      }
+    },
+    "proposed_definition": {
+      "anyOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "name", "variant", "aliases", "primary_movement_family", "additional_movement_families", "laterality", "input_mode", "kinematic_profile"],
+          "properties": {
+            "id": {"type": "string"},
+            "name": {"type": "string"},
+            "variant": {"type": "string"},
+            "aliases": {"type": "array", "items": {"type": "string"}},
+            "primary_movement_family": {"type": "string", "enum": ["squat", "hip_hinge", "horizontal_push", "vertical_push", "horizontal_pull", "vertical_pull", "loaded_carry", "elbow_flexion", "elbow_extension", "knee_extension", "knee_flexion", "ankle_plantarflexion", "trunk_flexion"]},
+            "additional_movement_families": {"type": "array", "items": {"type": "string", "enum": ["squat", "hip_hinge", "horizontal_push", "vertical_push", "horizontal_pull", "vertical_pull", "loaded_carry", "elbow_flexion", "elbow_extension", "knee_extension", "knee_flexion", "ankle_plantarflexion", "trunk_flexion"]}},
+            "laterality": {"type": "string", "enum": ["bilateral", "left", "right", "unilateral"]},
+            "input_mode": {"type": "string", "enum": ["repetitions", "duration"]},
+            "kinematic_profile": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["kinetic_chain_type", "primary_joint_actions", "stabilization_demands"],
+              "properties": {
+                "kinetic_chain_type": {"type": "string", "enum": ["open_chain", "closed_chain"]},
+                "primary_joint_actions": {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["ankle_joint"]}, "movement": {"type": "string", "enum": ["plantarflexion"]}}},
+                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["elbow_joint"]}, "movement": {"type": "string", "enum": ["extension", "flexion"]}}},
+                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["glenohumeral_joint"]}, "movement": {"type": "string", "enum": ["abduction", "adduction", "extension", "flexion", "horizontal_adduction", "internal_rotation"]}}},
+                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["hip_joint"]}, "movement": {"type": "string", "enum": ["abduction", "extension", "external_rotation", "flexion"]}}},
+                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["knee_joint"]}, "movement": {"type": "string", "enum": ["extension", "flexion"]}}},
+                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["lumbar_spine"]}, "movement": {"type": "string", "enum": ["flexion", "lateral_flexion", "rotation"]}}},
+                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["radioulnar_joint"]}, "movement": {"type": "string", "enum": ["supination"]}}},
+                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["scapulothoracic_joint"]}, "movement": {"type": "string", "enum": ["depression", "elevation", "retraction"]}}}
+                    ]
+                  }
+                },
+                "stabilization_demands": {"type": "array", "items": {"type": "string", "enum": ["ankle_stability", "anterior_shoulder_stability", "anti_extension_hip", "anti_extension_spine", "anti_flexion_spine", "anti_rotation_torso", "elbow_joint_integrity", "elbow_stability", "femoral_head_stabilization", "glenohumeral_stabilization", "humeral_head_stabilization", "intra_abdominal_pressure", "knee_joint_stability", "lumbar_fascia_tension", "patellar_tracking", "pelvic_alignment", "pelvic_leveling_frontal", "postural_stabilization", "postural_sway_control", "scapular_anchoring", "scapular_retraction_stability", "scapular_stabilization"]}}
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

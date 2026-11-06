@@ -1,0 +1,123 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/anatomy/anatomy_toolbar.gd" id="1_toolbar"]
+
+[node name="AnatomyToolbar" type="PanelContainer"]
+custom_minimum_size = Vector2(780, 94)
+script = ExtResource("1_toolbar")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 8
+
+[node name="Rows" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LayerRow" type="HBoxContainer" parent="Margin/Rows"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="BodyButton" type="Button" parent="Margin/Rows/LayerRow"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+text = "Body"
+tooltip_text = "Show or hide the complete canonical body"
+
+[node name="MuscleButton" type="Button" parent="Margin/Rows/LayerRow"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+text = "Muscles"
+tooltip_text = "Show or hide skeletal muscles"
+
+[node name="BoneButton" type="Button" parent="Margin/Rows/LayerRow"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+text = "Bones"
+tooltip_text = "Show or hide bones, teeth, and skeletal features"
+
+[node name="CartilageButton" type="Button" parent="Margin/Rows/LayerRow"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+text = "Cartilage"
+tooltip_text = "Show or hide cartilage"
+
+[node name="ConnectiveButton" type="Button" parent="Margin/Rows/LayerRow"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+text = "Tendons"
+tooltip_text = "Show or hide connective tissue, tendons, and fascia"
+
+[node name="SuperficialButton" type="Button" parent="Margin/Rows/LayerRow"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+text = "Surface"
+tooltip_text = "Show or hide the superficial muscle display layer"
+
+[node name="DeepButton" type="Button" parent="Margin/Rows/LayerRow"]
+unique_name_in_owner = true
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+text = "Deep"
+tooltip_text = "Show or hide the deep muscle display layer"
+
+[node name="ViewRow" type="HBoxContainer" parent="Margin/Rows"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="ViewLabel" type="Label" parent="Margin/Rows/ViewRow"]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+text = "Views"
+
+[node name="WholeButton" type="Button" parent="Margin/Rows/ViewRow"]
+layout_mode = 2
+text = "Whole"
+tooltip_text = "Frame the complete body"
+metadata/preset = "whole"
+
+[node name="HeadButton" type="Button" parent="Margin/Rows/ViewRow"]
+layout_mode = 2
+text = "Head"
+tooltip_text = "Frame the head and neck"
+metadata/preset = "head"
+
+[node name="BackButton" type="Button" parent="Margin/Rows/ViewRow"]
+layout_mode = 2
+text = "Back"
+tooltip_text = "Frame the back"
+metadata/preset = "back"
+
+[node name="PelvisButton" type="Button" parent="Margin/Rows/ViewRow"]
+layout_mode = 2
+text = "Pelvis"
+tooltip_text = "Frame the pelvis"
+metadata/preset = "pelvis"
+
+[node name="HandButton" type="Button" parent="Margin/Rows/ViewRow"]
+layout_mode = 2
+text = "Hand"
+tooltip_text = "Frame the hand"
+metadata/preset = "hand"
+
+[node name="KneeButton" type="Button" parent="Margin/Rows/ViewRow"]
+layout_mode = 2
+text = "Knee"
+tooltip_text = "Frame the knee"
+metadata/preset = "knee"
