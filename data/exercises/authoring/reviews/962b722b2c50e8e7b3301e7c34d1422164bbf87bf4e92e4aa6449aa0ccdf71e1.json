@@ -3,21 +3,21 @@
   "format_version": 1.0,
   "revision_sha256": "962b722b2c50e8e7b3301e7c34d1422164bbf87bf4e92e4aa6449aa0ccdf71e1",
   "status": "changes_requested",
-  "updated_at_unix": 1793993199.21241,
+  "updated_at_unix": 1794000804.76887,
   "votes": {
     "human_owner": {
       "blocking_findings": [
         {
           "field_path": "review.human",
-          "finding": "Stabilization includes facial muscles somehow",
-          "suggested_correction": "Stabilization includes facial muscles somehow"
+          "finding": "Only tracer",
+          "suggested_correction": "Only tracer"
         }
       ],
       "confidence": "high",
       "decision": "reject",
       "non_blocking_findings": [],
-      "recorded_at_unix": 1793993199.21218,
-      "summary": "Stabilization includes facial muscles somehow"
+      "recorded_at_unix": 1794000804.76871,
+      "summary": "Only tracer"
     },
     "openai_reviewer": {
       "blocking_findings": [

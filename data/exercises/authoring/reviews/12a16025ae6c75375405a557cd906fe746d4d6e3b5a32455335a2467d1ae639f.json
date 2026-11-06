@@ -1,0 +1,56 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "12a16025ae6c75375405a557cd906fe746d4d6e3b5a32455335a2467d1ae639f",
+  "status": "accepted",
+  "updated_at_unix": 1794000857.88592,
+  "votes": {
+    "human_owner": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794000857.88579,
+      "summary": "Good"
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization brings in lower-limb extensors (vasti, hamstrings, soleus, gastrocnemius, gluteus maximus) at 0.07-0.28. This is defensible for free standing but is a broad, low-weight spread for a strict isolation curl. The 'medium' field confidence is appropriate.",
+          "suggested_correction": "No change required. A future revision could consider whether the breadth of postural_stabilization is proportionate if the vocabulary offers a narrower trunk-only demand."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "Several earlier reviewer comments (facial stabilizers, missing transversus abdominis, missing finger and wrist flexors, coracobrachialis as primary, brachioradialis only as a stabilizer, long-head triceps as a stabilizer) do not describe this frozen revision. They appear to refer to a prior revision.",
+          "suggested_correction": "Treat those comments as resolved. Check future feedback against the current tracer output before it is relied on."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The top frame shows the upper arms and elbows drifting slightly forward of the torso. This minor shoulder flexion is not counted, which is acceptable for the instructed strict curl.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgnPeT6VzWJ78AhsvtxdY",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 11401.0,
+          "cache_read_input_tokens": 0.0,
+          "input_tokens": 14180.0,
+          "output_tokens": 2713.0
+        }
+      },
+      "summary": "The definition matches the instructions and both frames: a standing, bilateral, open-chain EZ-bar curl with the upper arms held beside the torso and the only exertion action elbow_joint/flexion. The tracer output follows the table. Brachialis, both biceps heads and brachioradialis (0.7) are primary; pronator teres and ECRL are low synergists. Grip, wrist_stability, shoulder_position_hold, glenohumeral_stabilization, scapular_stabilization and postural_stabilization give plausible low-coefficient stabilizers, and I recomputed the coefficients as 0.35 x the table weight. Earlier council objections no longer apply: coracobrachialis is a low stabilizer, not a primary mover; brachioradialis is a primary elbow flexor; transversus abdominis and internal oblique are present; grip and wrist flexors are represented; anterior deltoid is at 0.35; long-head triceps is absent; and no facial, ocular, laryngeal or similar muscles are engaged."
+    }
+  }
+}
