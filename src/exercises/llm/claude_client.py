@@ -266,6 +266,23 @@ def _parse(response: Any, task: str, model: str, effort: str) -> Dict[str, Any]:
     return {"ok": True, "value": value, "metadata": metadata}
 
 
+def call_structured(system_text: str, schema: Dict[str, Any], content: List[Dict[str, Any]], *,
+                    model: str = DEFAULT_MODEL, effort: str = DEFAULT_EFFORT, max_tokens: int = 64000,
+                    client: Any = None, settings_path: Optional[str] = None, label: str = "request") -> Dict[str, Any]:
+    """One structured-output call for offline tools (e.g. drafting the
+    muscle-action table). Same caching, fallback and error handling as the
+    studio tasks. Returns the run_task result shape."""
+    try:
+        if effort not in EFFORT_LEVELS:
+            raise ClaudeTaskError(f"effort must be one of {', '.join(EFFORT_LEVELS)}")
+        params = build_params(model, effort, system_text, schema, content, max_tokens)
+        if client is None:
+            client = make_client(settings_path)
+        return _parse(_call(client, params), label, model, effort)
+    except ClaudeTaskError as exc:
+        return {"ok": False, "error": str(exc)}
+
+
 def models_payload() -> Dict[str, Any]:
     return {"models": MODELS, "default_model": DEFAULT_MODEL,
             "efforts": list(EFFORT_LEVELS), "default_effort": DEFAULT_EFFORT}
