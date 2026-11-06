@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "53b8f0f26cb0b2f8500a2ab08d4471b2b4f534b3a9fb5d73b5b45572be0fa0c0",
+  "status": "changes_requested",
+  "updated_at_unix": 1793993356.86363,
+  "votes": {
+    "human_owner": {
+      "blocking_findings": [
+        {
+          "field_path": "review.human",
+          "finding": "Stabilization includes facial muscles somehow",
+          "suggested_correction": "Stabilization includes facial muscles somehow"
+        }
+      ],
+      "confidence": "high",
+      "decision": "reject",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1793993356.86347,
+      "summary": "Stabilization includes facial muscles somehow"
+    },
+    "openai_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "candidate_trace_report.profile.muscles[muscle_id=\"muscle.zygomaticus_major.left\"]",
+          "finding": "The tracer assigns a stabilizer role (0.25) to facial musculature. The demonstrated one-arm push-up and its stated anti-extension, anti-rotation, shoulder, elbow, scapular, and postural demands do not biomechanically support zygomaticus major as a movement stabilizer.",
+          "suggested_correction": "In a future revision, constrain stabilization tracing to muscles anatomically relevant to the stated joint and trunk/limb stabilization demands; exclude facial, ocular, laryngeal, and other unrelated muscles."
+        },
+        {
+          "field_path": "candidate_trace_report.profile.muscles[muscle_id=\"muscle.ary_epiglottic_part_of_oblique_arytenoid.left\"]",
+          "finding": "The tracer assigns a stabilizer role (0.25) to laryngeal musculature, an anatomically unrelated pattern that is not supported by the exercise instructions or frames. This is representative of the materially overbroad profile: 408 of 466 muscles are labeled stabilizers, including unrelated facial, ocular, pharyngeal, pelvic, and distal muscles.",
+          "suggested_correction": "In a future revision, repair the postural-stabilization mapping so it does not indiscriminately activate the broad anatomical catalog."
+        },
+        {
+          "field_path": "candidate_trace_report.profile.muscles[muscle_id=\"muscle.lateral_head_of_triceps_brachii.left\"]",
+          "finding": "The unilateral one-hand-supported movement is traced with equal primary activation for both left and right triceps heads (and likewise for both sides of pectoralis major). A single repetition uses one working arm; the source does not support simultaneous bilateral primary upper-limb recruitment.",
+          "suggested_correction": "In a future revision, make primary-mover output conditional on the selected working side, or represent an unspecified-side exercise without labeling both sides as concurrently primary."
+        }
+      ],
+      "confidence": "high",
+      "decision": "reject",
+      "non_blocking_findings": [],
+      "provider_metadata": {
+        "model": "gpt-5.6-terra",
+        "provider": "openai",
+        "response_id": "resp_0770224bfc39b01b006aee2a732bc887d082a11c23a1567abf",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 47335.0,
+          "input_tokens_details": {
+            "cache_write_tokens": 47332.0,
+            "cached_tokens": 0.0
+          },
+          "output_tokens": 836.0,
+          "output_tokens_details": {
+            "reasoning_tokens": 339.0
+          },
+          "total_tokens": 48171.0
+        }
+      },
+      "summary": "The proposed exercise identity and main closed-chain horizontal-push mechanics are supported by the instructions and frames, but the resulting tracer profile is materially invalid: it labels an anatomically indiscriminate set of muscles as stabilizers and represents a unilateral push-up as bilateral primary upper-limb activation."
+    }
+  }
+}

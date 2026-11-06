@@ -2,15 +2,15 @@
   "additional_context": "",
   "authoring_response": {
     "assumptions": [
-      "The demonstration shows a standing bilateral EZ-bar curl with both feet supporting the body on the floor.",
-      "The wide outer angled handles are gripped with a supinated, slightly inward-angled hand position.",
-      "The upper arms remain close to the torso and substantially stationary during the concentric phase.",
-      "The requested trace represents repetitions, with elbow flexion as the exertion/concentric action."
+      "The EZ curl bar is freely held rather than constrained by a rack or cable.",
+      "Both arms perform the curl simultaneously through the demonstrated standing range.",
+      "The prescribed slight inward hand angle is an EZ-bar grip configuration and does not require a modeled radioulnar action during the concentric phase.",
+      "Upper arms remain approximately stationary beside the torso, as instructed."
     ],
     "classification": "supported",
     "classification_reasons": [
-      "The instructions and contact sheet consistently show a standing, bilateral EZ-bar curl from arms extended to the bar near shoulder height.",
-      "The primary concentric motion is bilateral elbow flexion; the supplied vocabulary can represent this exercise faithfully."
+      "The instructions and contact sheet consistently depict a bilateral standing EZ-bar curl, with the bar moving from thigh level to shoulder level while the upper arms remain near the torso.",
+      "The concentric movement is faithfully represented by bilateral elbow flexion within the available vocabulary."
     ],
     "field_confidence": {
       "input_mode": "high",
@@ -5226,11 +5226,11 @@
     "warnings": []
   },
   "catalog_id": "catalog.free_exercise_db.EZ-Bar_Curl",
-  "format_version": 1,
+  "format_version": 1.0,
   "provider_metadata": {
     "input_contact_sheet": {
-      "api_image_inputs": 1,
-      "frame_count": 2,
+      "api_image_inputs": 1.0,
+      "frame_count": 2.0,
       "layout": "chronological_left_to_right",
       "source_images": [
         "EZ-Bar_Curl/0.jpg",
@@ -5241,15 +5241,15 @@
     "provider": "openai",
     "raw_authoring_response": {
       "assumptions": [
-        "The demonstration shows a standing bilateral EZ-bar curl with both feet supporting the body on the floor.",
-        "The wide outer angled handles are gripped with a supinated, slightly inward-angled hand position.",
-        "The upper arms remain close to the torso and substantially stationary during the concentric phase.",
-        "The requested trace represents repetitions, with elbow flexion as the exertion/concentric action."
+        "The EZ curl bar is freely held rather than constrained by a rack or cable.",
+        "Both arms perform the curl simultaneously through the demonstrated standing range.",
+        "The prescribed slight inward hand angle is an EZ-bar grip configuration and does not require a modeled radioulnar action during the concentric phase.",
+        "Upper arms remain approximately stationary beside the torso, as instructed."
       ],
       "classification": "supported",
       "classification_reasons": [
-        "The instructions and contact sheet consistently show a standing, bilateral EZ-bar curl from arms extended to the bar near shoulder height.",
-        "The primary concentric motion is bilateral elbow flexion; the supplied vocabulary can represent this exercise faithfully."
+        "The instructions and contact sheet consistently depict a bilateral standing EZ-bar curl, with the bar moving from thigh level to shoulder level while the upper arms remain near the torso.",
+        "The concentric movement is faithfully represented by bilateral elbow flexion within the available vocabulary."
       ],
       "field_confidence": {
         "input_mode": "high",
@@ -5277,8 +5277,8 @@
             }
           ],
           "stabilization_demands": [
-            "elbow_stability",
-            "postural_stabilization"
+            "postural_stabilization",
+            "elbow_stability"
           ]
         },
         "laterality": "bilateral",
@@ -5288,24 +5288,30 @@
       },
       "questions_requiring_context": []
     },
-    "response_id": "resp_0400c4ea9e0dad42006a7d428c753081988434f7fb0cadd5ea",
+    "response_id": "resp_0ef116d0e5be2147006aee290736f487d09751970d57f97983",
     "status": "completed",
     "usage": {
       "input_tokens": 2810.0,
       "input_tokens_details": {
-        "cache_write_tokens": 2807.0,
-        "cached_tokens": 0.0
+        "cache_write_tokens": 1388.0,
+        "cached_tokens": 1419.0
       },
-      "output_tokens": 318.0,
+      "output_tokens": 319.0,
       "output_tokens_details": {
         "reasoning_tokens": 0.0
       },
-      "total_tokens": 3128.0
+      "total_tokens": 3129.0
     }
   },
-  "saved_at_unix": 1786594029.43247,
+  "rejection": {
+    "member": "human_owner",
+    "recorded_at_unix": 1793993203.12982,
+    "stage": "unfrozen_candidate",
+    "summary": "Stabilization includes facial muscles somehow"
+  },
+  "saved_at_unix": 1793993019.29391,
   "source_id": "EZ-Bar_Curl",
   "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
-  "status": "definition_candidate",
+  "status": "review_rejected",
   "validation_errors": []
 }

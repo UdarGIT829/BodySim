@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "b3748d98babd304998fd4cd959fde4b04836144b7eb6a318c198e8a3ce63da49",
+  "status": "changes_requested",
+  "updated_at_unix": 1793993118.5616,
+  "votes": {
+    "human_owner": {
+      "blocking_findings": [
+        {
+          "field_path": "review.human",
+          "finding": "Stabilization includes facial muscles somehow",
+          "suggested_correction": "Stabilization includes facial muscles somehow"
+        }
+      ],
+      "confidence": "high",
+      "decision": "reject",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1793993118.56145,
+      "summary": "Stabilization includes facial muscles somehow"
+    },
+    "openai_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "candidate_trace_report.profile.muscles",
+          "finding": "The tracer profile is materially non-biomechanical: it assigns a nonzero stabilizer coefficient (0.25) to 408 of 466 mapped muscles, including unrelated facial, ocular, laryngeal, pelvic-floor, intrinsic foot, and other muscles with no evidenced stabilization role in a standing cable overhead press. This makes the resulting activation profile unusable despite the otherwise supported exercise identity and broad movement classification.",
+          "suggested_correction": "In a future revision, constrain stabilization mapping to muscles plausibly required by the evidenced standing unilateral overhead cable press (local shoulder/scapular stabilizers, trunk anti-extension/anti-rotation contributors, grip/forearm stabilizers, and stance-related lower-limb muscles where warranted), rather than mapping generic postural stabilization to nearly all anatomical structures."
+        },
+        {
+          "field_path": "candidate_trace_report.profile.muscles[muscle_id=muscle.scapular_spinal_part_of_deltoid.left]",
+          "finding": "The posterior (scapular-spinal) deltoid is assigned the same 0.85 primary-mover coefficient as the anterior and middle deltoid for the represented overhead abduction press. The demonstrated and instructed press does not support treating posterior deltoid as an equal primary agonist; its contribution is at most context-dependent assistance/stabilization relative to the shoulder-elevation action.",
+          "suggested_correction": "In a future revision, revise the action-to-muscle mapping so the primary profile reflects the principal shoulder-elevation agonists without assigning the posterior deltoid equal primary status solely from glenohumeral abduction."
+        },
+        {
+          "field_path": "candidate_trace_report.profile.muscles[muscle_id=muscle.scapular_spinal_part_of_deltoid.right]",
+          "finding": "The posterior (scapular-spinal) deltoid is assigned the same 0.85 primary-mover coefficient as the anterior and middle deltoid for the represented overhead abduction press. The demonstrated and instructed press does not support treating posterior deltoid as an equal primary agonist; its contribution is at most context-dependent assistance/stabilization relative to the shoulder-elevation action.",
+          "suggested_correction": "In a future revision, revise the action-to-muscle mapping so the primary profile reflects the principal shoulder-elevation agonists without assigning the posterior deltoid equal primary status solely from glenohumeral abduction."
+        }
+      ],
+      "confidence": "high",
+      "decision": "reject",
+      "non_blocking_findings": [],
+      "provider_metadata": {
+        "model": "gpt-5.6-terra",
+        "provider": "openai",
+        "response_id": "resp_009e6451def49724006aee295d289087d08717558e1b28a2be",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 46801.0,
+          "input_tokens_details": {
+            "cache_write_tokens": 46798.0,
+            "cached_tokens": 0.0
+          },
+          "output_tokens": 1014.0,
+          "output_tokens_details": {
+            "reasoning_tokens": 413.0
+          },
+          "total_tokens": 47815.0
+        }
+      },
+      "summary": "The source instructions and frames support a standing, alternating unilateral cable overhead press with vertical-push mechanics, elbow extension, shoulder elevation, and substantial trunk/scapular stabilization. However, the frozen revision's tracer output is materially invalid because it assigns generalized stabilization to nearly the entire musculature and materially overstates posterior-deltoid primary involvement."
+    }
+  }
+}

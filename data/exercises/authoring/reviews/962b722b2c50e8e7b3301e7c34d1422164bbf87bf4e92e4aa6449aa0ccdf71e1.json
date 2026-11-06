@@ -1,0 +1,84 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "962b722b2c50e8e7b3301e7c34d1422164bbf87bf4e92e4aa6449aa0ccdf71e1",
+  "status": "changes_requested",
+  "updated_at_unix": 1793993199.21241,
+  "votes": {
+    "human_owner": {
+      "blocking_findings": [
+        {
+          "field_path": "review.human",
+          "finding": "Stabilization includes facial muscles somehow",
+          "suggested_correction": "Stabilization includes facial muscles somehow"
+        }
+      ],
+      "confidence": "high",
+      "decision": "reject",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1793993199.21218,
+      "summary": "Stabilization includes facial muscles somehow"
+    },
+    "openai_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "candidate_trace_report.profile.muscles",
+          "finding": "The tracer assigns 0.25 stabilizer coefficients to a near-global set of anatomically unrelated muscles, including facial, ocular, laryngeal, intrinsic foot, pelvic-floor, and hip muscles. These muscles are not material stabilization requirements of the demonstrated bilateral standing EZ-bar curl, so the resulting tracer profile is biomechanically invalid.",
+          "suggested_correction": "For a future revision, constrain stabilization output to muscles plausibly required for loaded-bar grip/wrist control, elbow and glenohumeral stability, and upright trunk/postural control; do not assign generalized stabilization to unrelated regional muscles."
+        },
+        {
+          "field_path": "candidate_trace_report.profile.muscles[muscle_id=muscle.coracobrachialis.left]",
+          "finding": "Coracobrachialis is assigned as a coefficient-1.0 primary mover despite the instructions and frames specifying that the upper arms remain stationary beside the torso. The demonstrated primary motion is elbow flexion, not shoulder flexion.",
+          "suggested_correction": "For a future revision, remove coracobrachialis as a primary mover for this strict upper-arm-stationary curl, or at most represent it as a low-level shoulder stabilizer if supported by the tracer model."
+        },
+        {
+          "field_path": "candidate_trace_report.profile.muscles[muscle_id=muscle.coracobrachialis.right]",
+          "finding": "Coracobrachialis is assigned as a coefficient-1.0 primary mover despite the instructions and frames specifying that the upper arms remain stationary beside the torso. The demonstrated primary motion is elbow flexion, not shoulder flexion.",
+          "suggested_correction": "For a future revision, remove coracobrachialis as a primary mover for this strict upper-arm-stationary curl, or at most represent it as a low-level shoulder stabilizer if supported by the tracer model."
+        },
+        {
+          "field_path": "candidate_trace_report.profile.muscles[muscle_id=muscle.brachioradialis.left]",
+          "finding": "Brachioradialis is labeled only as a low-coefficient stabilizer, although it is an elbow flexor contributing to the demonstrated loaded elbow-flexion action, particularly with the EZ-bar's partially pronated/neutral grip orientation.",
+          "suggested_correction": "For a future revision, classify brachioradialis as an elbow-flexion synergist or otherwise give it action-derived rather than generic stabilization-derived representation."
+        },
+        {
+          "field_path": "candidate_trace_report.profile.muscles[muscle_id=muscle.brachioradialis.right]",
+          "finding": "Brachioradialis is labeled only as a low-coefficient stabilizer, although it is an elbow flexor contributing to the demonstrated loaded elbow-flexion action, particularly with the EZ-bar's partially pronated/neutral grip orientation.",
+          "suggested_correction": "For a future revision, classify brachioradialis as an elbow-flexion synergist or otherwise give it action-derived rather than generic stabilization-derived representation."
+        },
+        {
+          "field_path": "candidate_trace_report.profile.muscles[muscle_id=muscle.transversus_abdominis.left]",
+          "finding": "Transversus abdominis is marked as no involvement despite the proposed definition explicitly requiring postural stabilization in a standing, freely held loaded-bar exercise. This contradicts the stabilization demand and materially distorts the trunk-stabilization pattern.",
+          "suggested_correction": "For a future revision, represent appropriate trunk stabilizers consistently with the stated postural-stabilization demand."
+        },
+        {
+          "field_path": "candidate_trace_report.profile.muscles[muscle_id=muscle.transversus_abdominis.right]",
+          "finding": "Transversus abdominis is marked as no involvement despite the proposed definition explicitly requiring postural stabilization in a standing, freely held loaded-bar exercise. This contradicts the stabilization demand and materially distorts the trunk-stabilization pattern.",
+          "suggested_correction": "For a future revision, represent appropriate trunk stabilizers consistently with the stated postural-stabilization demand."
+        }
+      ],
+      "confidence": "high",
+      "decision": "reject",
+      "non_blocking_findings": [],
+      "provider_metadata": {
+        "model": "gpt-5.6-terra",
+        "provider": "openai",
+        "response_id": "resp_097d8a2a2a38ce71006aee29b1f6e487d08e2f14198f26e42d",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 47027.0,
+          "input_tokens_details": {
+            "cache_write_tokens": 47024.0,
+            "cached_tokens": 0.0
+          },
+          "output_tokens": 1034.0,
+          "output_tokens_details": {
+            "reasoning_tokens": 137.0
+          },
+          "total_tokens": 48061.0
+        }
+      },
+      "summary": "The proposed exercise identity, standing bilateral laterality, open-chain classification, and primary elbow-flexion movement are supported by the instructions and demonstration frames. However, the candidate tracer output contains materially incorrect primary and stabilization assignments, requiring rejection of this frozen revision."
+    }
+  }
+}

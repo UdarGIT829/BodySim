@@ -5249,11 +5249,11 @@
     "warnings": []
   },
   "catalog_id": "catalog.free_exercise_db.Alternating_Cable_Shoulder_Press",
-  "format_version": 1,
+  "format_version": 1.0,
   "provider_metadata": {
     "input_contact_sheet": {
-      "api_image_inputs": 1,
-      "frame_count": 2,
+      "api_image_inputs": 1.0,
+      "frame_count": 2.0,
       "layout": "chronological_left_to_right",
       "source_images": [
         "Alternating_Cable_Shoulder_Press/0.jpg",
@@ -5332,9 +5332,15 @@
       "total_tokens": 3276.0
     }
   },
+  "rejection": {
+    "member": "human_owner",
+    "recorded_at_unix": 1793993124.91277,
+    "stage": "unfrozen_candidate",
+    "summary": "Stabilization includes facial muscles somehow"
+  },
   "saved_at_unix": 1786563229.12638,
   "source_id": "Alternating_Cable_Shoulder_Press",
   "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
-  "status": "definition_candidate",
+  "status": "review_rejected",
   "validation_errors": []
 }
