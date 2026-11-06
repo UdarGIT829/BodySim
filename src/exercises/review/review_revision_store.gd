@@ -3,6 +3,10 @@ extends RefCounted
 
 const REVISION_DIRECTORY := "res://data/exercises/authoring/revisions"
 const REVIEW_DIRECTORY := "res://data/exercises/authoring/reviews"
+const PROMOTION_DIRECTORY := "res://data/exercises/authoring/promotions"
+const PROMOTION_BRIDGE := "res://tools/exercises/run_promotion.py"
+const PAYLOAD_KEYS := ["format_version", "source_id", "catalog_id", "source_snapshot_sha256", "source",
+	"additional_context", "authoring_response", "authoring_provider_metadata", "candidate_trace_report"]
 
 
 static func freeze_draft(draft: Dictionary, source: Dictionary) -> Dictionary:
@@ -102,6 +106,53 @@ static func council_status(votes: Dictionary) -> String:
 		if votes["human_owner"].get("decision") == "accept" and votes["openai_reviewer"].get("decision") == "accept":
 			return "accepted"
 	return "review_pending"
+
+
+## True when a frozen revision still hashes to the value it was stored
+## under, using the same canonical serialization as freeze_draft().
+static func verify_revision_hash(revision: Dictionary) -> bool:
+	var payload := {}
+	for key in PAYLOAD_KEYS:
+		payload[key] = revision.get(key)
+	# freeze_draft() hashes format_version as the int literal 1; JSON read back
+	# from disk turns every number into a float, which serializes as "1.0".
+	payload["format_version"] = int(revision.get("format_version", 0))
+	var expected := String(revision.get("revision_sha256", ""))
+	return not expected.is_empty() and JSON.stringify(sort_json(payload)).sha256_text() == expected
+
+
+static func load_promotion(hash: String) -> Dictionary:
+	return read_json("%s/%s.json" % [PROMOTION_DIRECTORY, hash])
+
+
+## Phase 2E: verify the revision, then run the Python promotion transaction.
+static func promote(revision: Dictionary, python_executable := "python3") -> Dictionary:
+	var hash := String(revision.get("revision_sha256", ""))
+	if not verify_revision_hash(revision):
+		return {"ok": false, "errors": ["Frozen revision content no longer matches its hash; it cannot be promoted."]}
+	if load_review(hash).get("status", "") != "accepted":
+		return {"ok": false, "errors": ["Only a unanimously accepted revision can be promoted."]}
+	var nonce := "%d" % Time.get_ticks_usec()
+	var input_path := "user://promotion_%s_input.json" % nonce
+	var output_path := "user://promotion_%s_output.json" % nonce
+	var input_file := FileAccess.open(input_path, FileAccess.WRITE)
+	if input_file == null:
+		return {"ok": false, "errors": ["Could not create the promotion request file."]}
+	input_file.store_string(JSON.stringify({"revision_sha256": hash, "dry_run": false}))
+	input_file.close()
+	var console_output: Array = []
+	var exit_code := OS.execute(python_executable, PackedStringArray([
+		ProjectSettings.globalize_path(PROMOTION_BRIDGE),
+		"--input", ProjectSettings.globalize_path(input_path),
+		"--output", ProjectSettings.globalize_path(output_path),
+	]), console_output, true)
+	var report := read_json(output_path)
+	for path in [input_path, output_path]:
+		if FileAccess.file_exists(path):
+			DirAccess.remove_absolute(ProjectSettings.globalize_path(path))
+	if report.is_empty():
+		return {"ok": false, "errors": ["Promotion exited with code %d without a report. %s" % [exit_code, " ".join(console_output)]]}
+	return report
 
 
 static func list_revisions() -> Array[Dictionary]:

@@ -2,7 +2,7 @@
 
 ## Status
 
-**In progress.** Phases 2A, 2B, 2C, and 2D are complete. Phase 1 supplies the canonical anatomy, kinematic tracer, engagement
+**In progress.** Phases 2A, 2B, 2C, 2D, and 2E are complete (see [`phase-2e-completion.md`](phase-2e-completion.md)). Phase 1 supplies the canonical anatomy, kinematic tracer, engagement
 profiles, scoring, exercise selector, heatmap, and imported demonstration-media
 foundation. Phase 2 scales the supported catalog without treating unreviewed LLM
 output as biomechanical truth.
@@ -197,6 +197,8 @@ Studio. Council policy is configuration, allowing future majority rules, additio
 system prompts, repeated model reviewers, or providers such as Gemini.
 
 ## Phase 2E: Promotion
+
+**Status: Complete (2026-11-06).** See [`phase-2e-completion.md`](phase-2e-completion.md).
 
 Promotion is a deterministic transaction:
 

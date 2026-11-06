@@ -68,6 +68,7 @@ func _ready() -> void:
 	reject_button.pressed.connect(reject_selected_candidate)
 	request_review_button.pressed.connect(request_model_review)
 	%RecordHumanVoteButton.pressed.connect(record_human_vote)
+	%PromoteButton.pressed.connect(promote_current_revision)
 	model_option.item_selected.connect(_on_model_selected)
 	custom_model_input.text_changed.connect(_on_custom_model_changed)
 	set_status("Select a passing candidate draft or frozen revision.", false)
@@ -122,7 +123,8 @@ func populate_tree() -> void:
 				item.set_text(1, "Ready to freeze" if eligible else "Needs Phase 2C save")
 		else:
 			var review: Dictionary = ReviewRevisionStoreScript.load_review(data.get("revision_sha256", ""))
-			item.set_text(1, review.get("status", "review_pending"))
+			var promoted := not ReviewRevisionStoreScript.load_promotion(String(data.get("revision_sha256", ""))).is_empty()
+			item.set_text(1, "promoted" if promoted else review.get("status", "review_pending"))
 		item.set_metadata(0, index)
 	drafts.collapsed = false; revisions.collapsed = false
 
@@ -270,7 +272,24 @@ func load_votes(review: Dictionary) -> void:
 	model_result.text = "No model vote yet." if model.is_empty() else format_vote("OpenAI reviewer", model)
 	prior_feedback_text.text = format_prior_feedback(current_revision.get("revision_sha256", "")) if not current_revision.is_empty() else prior_feedback_text.text
 	var status: String = String(review.get("status", "review_pending"))
+	var promotion: Dictionary = ReviewRevisionStoreScript.load_promotion(String(current_revision.get("revision_sha256", ""))) if not current_revision.is_empty() else {}
+	if not promotion.is_empty():
+		status = "promoted"
 	%CouncilOutcome.text = "Council outcome: %s" % String(status).replace("_", " ").capitalize()
+	%PromoteButton.disabled = current_revision.is_empty() or status != "accepted"
+
+func promote_current_revision() -> void:
+	if current_revision.is_empty(): return set_status("Select an accepted frozen revision first.", true)
+	set_status("Promoting… re-running validators against the current catalog.", false)
+	var report: Dictionary = ReviewRevisionStoreScript.promote(current_revision)
+	if not report.get("ok", false):
+		return set_status("Promotion blocked: %s" % " ".join(report.get("errors", [])), true)
+	load_votes(ReviewRevisionStoreScript.load_review(current_revision.get("revision_sha256", "")))
+	reload_entries()
+	if report.get("already_promoted", false):
+		return set_status("Already promoted as %s." % report.get("exercise_id", ""), false)
+	set_status("Promoted %s (%s muscles mapped). It is now visualizable in the exercise selector." % [report.get("exercise_id", ""), report.get("mapped_muscles", "?")], false)
+
 
 func format_vote(member: String, vote: Dictionary) -> String:
 	var text := "[b]%s: %s[/b] (%s confidence)\n%s" % [member, String(vote.get("decision", "")).to_upper(), vote.get("confidence", ""), vote.get("summary", "")]
