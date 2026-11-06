@@ -1,0 +1,268 @@
+{
+  "format_version": 2,
+  "group": "foot",
+  "title": "Foot intrinsics",
+  "drafted_with": {
+    "provider": "anthropic",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "response_id": "msg_011CgnMGVxHtit8Trwqazgjx"
+  },
+  "drafted_at_unix": 1793998966.7453854,
+  "entries": [
+    {
+      "base_id": "muscle.abductor_digiti_minimi_of_foot",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "flexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "Mainly abducts the fifth toe, which the vocabulary lacks (omitted), and weakly flexes the fifth MTP joint. It supports the lateral longitudinal arch, but no ankle or subtalar demand fits that role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.abductor_hallucis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "flexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "Abducts the hallux, an action missing from the vocabulary (omitted), and assists hallux MTP flexion. It supports the medial arch, but this is foot-arch support, not ankle/subtalar stability, so no demand is listed.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.dorsal_interossei_muscles_of_foot",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "flexion",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "Primary action is abduction of toes 2-4 about the second-toe axis, which is not in the vocabulary (omitted). They weakly flex the MTP joints.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.extensor_digitorum_brevis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "extension",
+          "weight": 0.4
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Extends toes 2-4 via the extensor expansions as a clear synergist to extensor digitorum longus, which is the prime mover.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.extensor_hallucis_brevis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "extension",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Extends the hallux at the MTP joint only, assisting extensor hallucis longus.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.flexor_digiti_minimi_of_foot",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "flexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Flexes the fifth MTP joint, a small contribution to toe flexion compared with the long flexors.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.flexor_digitorum_brevis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "flexion",
+          "weight": 0.6
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Flexes the PIP and MTP joints of toes 2-5, making it the main intrinsic assistant to flexor digitorum longus. It supports the arch, but no fitting demand exists for that role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.lateral_head_of_flexor_hallucis_brevis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "flexion",
+          "weight": 0.4
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Flexes the hallux MTP joint via the lateral sesamoid, assisting flexor hallucis longus. It blends with adductor hallucis.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.lumbrical_muscles_of_foot",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "flexion",
+          "weight": 0.2
+        },
+        {
+          "joint": "toe_joints",
+          "movement": "extension",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "Flex the MTP joints and extend the interphalangeal joints of toes 2-5 via the extensor expansions. Both contributions are minor.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.medial_head_of_flexor_hallucis_brevis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "flexion",
+          "weight": 0.4
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Flexes the hallux MTP joint via the medial sesamoid, assisting flexor hallucis longus. It blends with abductor hallucis.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.oblique_head_of_adductor_hallucis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "flexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "Adducts the hallux, which the vocabulary lacks (omitted), and assists hallux MTP flexion. It helps maintain the transverse arch.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.opponens_digiti_minimi_muscle_of_foot",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "flexion",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "low",
+      "rationale": "An inconstant slip of flexor digiti minimi that draws the fifth metatarsal plantarward and medially, an action absent from the vocabulary. At most it contributes trivially to fifth-toe flexion.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.plantar_interossei",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "flexion",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "Adduct toes 3-5 toward the second toe, which is not in the vocabulary (omitted). They weakly flex the MTP joints.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.quadratus_plantae",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "flexion",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Straightens the oblique pull of the flexor digitorum longus tendons, assisting flexion of toes 2-5. It has no independent attachment to the toes.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.transverse_head_of_adductor_hallucis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "flexion",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "Adducts the hallux and supports the transverse metatarsal arch; neither action is in the vocabulary (omitted). Its contribution to hallux flexion is minimal.",
+      "status": "reviewed"
+    }
+  ],
+  "approvals": [
+    {
+      "approved_by": "project_owner",
+      "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+      "entries": [
+        "muscle.abductor_digiti_minimi_of_foot",
+        "muscle.abductor_hallucis",
+        "muscle.dorsal_interossei_muscles_of_foot",
+        "muscle.extensor_digitorum_brevis",
+        "muscle.extensor_hallucis_brevis",
+        "muscle.flexor_digiti_minimi_of_foot",
+        "muscle.flexor_digitorum_brevis",
+        "muscle.lateral_head_of_flexor_hallucis_brevis",
+        "muscle.lumbrical_muscles_of_foot",
+        "muscle.medial_head_of_flexor_hallucis_brevis",
+        "muscle.oblique_head_of_adductor_hallucis",
+        "muscle.opponens_digiti_minimi_muscle_of_foot",
+        "muscle.plantar_interossei",
+        "muscle.quadratus_plantae",
+        "muscle.transverse_head_of_adductor_hallucis"
+      ],
+      "approved_at_unix": 1793999070.2643197
+    }
+  ]
+}

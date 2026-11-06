@@ -2,10 +2,12 @@
 
 Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in the JSON once it is right.
 
+**Approved** (11 entries): accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed.
+
 **Rule checks:** all passed
 
 ## Acromial part of deltoid muscle  `muscle.acromial_part_of_deltoid`
-*draft · confidence high*
+*reviewed · confidence high*
 
 - glenohumeral_joint / abduction: **1.00**
 - glenohumeral_joint / horizontal_abduction: **0.30**
@@ -14,7 +16,7 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 > The multipennate middle deltoid is the prime abductor, with supraspinatus as its main partner. It assists horizontal abduction and contributes to flexion only when the arm is elevated in the scapular plane.
 
 ## Ascending part of trapezius muscle  `muscle.ascending_part_of_trapezius`
-*draft · confidence high*
+*reviewed · confidence high*
 
 - scapulothoracic_joint / depression: **0.80**
 - scapulothoracic_joint / upward_rotation: **0.70**
@@ -26,7 +28,7 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 > Lower trapezius fibres pull the scapular spine medially and downward, so they depress and retract the scapula. Paired with serratus anterior and upper trapezius, they form the upward-rotation force couple that is critical during overhead elevation.
 
 ## Clavicular part of deltoid muscle  `muscle.clavicular_part_of_deltoid`
-*draft · confidence high*
+*reviewed · confidence high*
 
 - glenohumeral_joint / flexion: **1.00**
 - glenohumeral_joint / horizontal_adduction: **0.60**
@@ -36,7 +38,7 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 > The anterior deltoid is the prime shoulder flexor, alongside clavicular pectoralis major, and assists horizontal adduction and internal rotation. It contributes to abduction mainly above about 60 degrees and in the scapular plane.
 
 ## Descending part of trapezius muscle  `muscle.descending_part_of_trapezius`
-*draft · confidence high*
+*reviewed · confidence high*
 
 - scapulothoracic_joint / elevation: **1.00**
 - scapulothoracic_joint / upward_rotation: **0.70**
@@ -50,7 +52,7 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 > Upper trapezius is the prime scapular elevator with levator scapulae and is part of the upward-rotation force couple. With the scapula fixed, it extends the neck, flexes it laterally to the same side and rotates the head to the opposite side.
 
 ## Infraspinatus muscle  `muscle.infraspinatus`
-*draft · confidence high*
+*reviewed · confidence high*
 
 - glenohumeral_joint / external_rotation: **1.00**
 - glenohumeral_joint / horizontal_abduction: **0.50**
@@ -60,7 +62,7 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 > Infraspinatus is the prime external rotator and assists horizontal abduction. As a posterior cuff muscle it compresses the humeral head into the glenoid and pulls it inferiorly during elevation.
 
 ## Scapular spinal part of deltoid muscle  `muscle.scapular_spinal_part_of_deltoid`
-*draft · confidence high*
+*reviewed · confidence high*
 
 - glenohumeral_joint / horizontal_abduction: **1.00**
 - glenohumeral_joint / extension: **0.70**
@@ -69,7 +71,7 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 > The posterior deltoid is the prime horizontal abductor, a major extensor alongside latissimus dorsi, and assists external rotation. Its abduction contribution is negligible, so that action is omitted.
 
 ## Subscapularis muscle  `muscle.subscapularis`
-*draft · confidence high*
+*reviewed · confidence high*
 
 - glenohumeral_joint / internal_rotation: **1.00**
 - glenohumeral_joint / adduction: **0.20**
@@ -80,7 +82,7 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 > Subscapularis is the prime internal rotator and the main dynamic restraint against anterior humeral head translation. It gives only minor adduction from an abducted position.
 
 ## Supraspinatus muscle  `muscle.supraspinatus`
-*draft · confidence high*
+*reviewed · confidence high*
 
 - glenohumeral_joint / abduction: **0.70**
 - stabilizes glenohumeral_stabilization: 0.90
@@ -89,7 +91,7 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 > Supraspinatus initiates abduction and works with the acromial deltoid throughout the range, mainly by compressing and centring the humeral head. Its slight external rotation contribution is negligible and omitted.
 
 ## Teres major muscle  `muscle.teres_major`
-*draft · confidence high*
+*reviewed · confidence high*
 
 - glenohumeral_joint / extension: **0.70**
 - glenohumeral_joint / adduction: **0.70**
@@ -98,7 +100,7 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 > Teres major acts with latissimus dorsi to extend, adduct and internally rotate the humerus. It is most active against resistance and when the scapula is stabilized by the rhomboids. It is not a rotator cuff muscle.
 
 ## Teres minor muscle  `muscle.teres_minor`
-*draft · confidence high*
+*reviewed · confidence high*
 
 - glenohumeral_joint / external_rotation: **0.70**
 - glenohumeral_joint / horizontal_abduction: **0.30**
@@ -109,7 +111,7 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 > Teres minor is a major external rotator alongside infraspinatus and assists horizontal abduction, with weak adduction. It is a posterior cuff stabilizer that depresses and centres the humeral head.
 
 ## Transverse part of trapezius muscle  `muscle.transverse_part_of_trapezius`
-*draft · confidence high*
+*reviewed · confidence high*
 
 - scapulothoracic_joint / retraction: **1.00**
 - scapulothoracic_joint / upward_rotation: **0.30**

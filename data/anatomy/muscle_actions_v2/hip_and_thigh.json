@@ -1,0 +1,885 @@
+{
+  "format_version": 2,
+  "group": "hip_and_thigh",
+  "title": "Hip and thigh",
+  "drafted_with": {
+    "provider": "anthropic",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "response_id": "msg_011CgnM989BF758K1eK81S7p"
+  },
+  "drafted_at_unix": 1793998909.9928064,
+  "entries": [
+    {
+      "base_id": "muscle.adductor_brevis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "adduction",
+          "weight": 0.7
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "flexion",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "A strong hip adductor that assists hip flexion mainly from an extended hip position. Its contribution to rotation is disputed and small, so rotation is omitted.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.adductor_longus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "adduction",
+          "weight": 0.8
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "flexion",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "A major hip adductor. Hip flexion is position-dependent: it flexes from extension, but beyond roughly 60-70 degrees of hip flexion it tends to act as an extensor.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.adductor_magnus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "adduction",
+          "weight": 1.0
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "extension",
+          "weight": 0.6
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "internal_rotation",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "postural_stabilization",
+          "weight": 0.2
+        }
+      ],
+      "confidence": "high",
+      "rationale": "The largest adductor and the prime mover of hip adduction. Its ischiocondylar (hamstring) part is a clear hip extensor, especially from deep flexion, and weakly rotates the hip internally.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.adductor_minimus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "adduction",
+          "weight": 0.5
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "external_rotation",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "The superior part of adductor magnus. It adducts the hip and weakly rotates it externally because of its proximal, horizontal fibre orientation.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.gluteus_maximus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "extension",
+          "weight": 1.0
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "external_rotation",
+          "weight": 0.9
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "abduction",
+          "weight": 0.3
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "adduction",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "postural_stabilization",
+          "weight": 0.8
+        },
+        {
+          "demand": "pelvic_alignment",
+          "weight": 0.6
+        },
+        {
+          "demand": "lumbar_fascia_tension",
+          "weight": 0.4
+        },
+        {
+          "demand": "pelvic_leveling_frontal",
+          "weight": 0.3
+        },
+        {
+          "demand": "knee_joint_stability",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "high",
+      "rationale": "The prime hip extensor and a powerful external rotator. Upper fibres abduct the hip and lower fibres adduct it. Its attachments to the thoracolumbar fascia and iliotibial tract give it roles in fascial tension, pelvic control and knee valgus control.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.gluteus_medius",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "abduction",
+          "weight": 1.0
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "internal_rotation",
+          "weight": 0.6
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "external_rotation",
+          "weight": 0.2
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "flexion",
+          "weight": 0.2
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "extension",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "pelvic_leveling_frontal",
+          "weight": 1.0
+        },
+        {
+          "demand": "postural_sway_control",
+          "weight": 0.5
+        },
+        {
+          "demand": "femoral_head_stabilization",
+          "weight": 0.4
+        },
+        {
+          "demand": "knee_joint_stability",
+          "weight": 0.4
+        }
+      ],
+      "confidence": "high",
+      "rationale": "The prime hip abductor and the main frontal-plane pelvic stabilizer in single-leg stance. Anterior fibres internally rotate and flex the hip, while posterior fibres weakly extend it and rotate it externally.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.gluteus_minimus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "abduction",
+          "weight": 0.7
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "internal_rotation",
+          "weight": 0.7
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "flexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "femoral_head_stabilization",
+          "weight": 0.7
+        },
+        {
+          "demand": "pelvic_leveling_frontal",
+          "weight": 0.6
+        }
+      ],
+      "confidence": "high",
+      "rationale": "Abducts the hip and is a major internal rotator through its anterior fibres. Its capsular attachment and deep position make it an important centrer of the femoral head.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.gracilis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "adduction",
+          "weight": 0.4
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "flexion",
+          "weight": 0.2
+        },
+        {
+          "joint": "knee_joint",
+          "movement": "flexion",
+          "weight": 0.3
+        },
+        {
+          "joint": "knee_joint",
+          "movement": "internal_rotation",
+          "weight": 0.4
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "knee_joint_stability",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "high",
+      "rationale": "A two-joint adductor that assists knee flexion and internal rotation of the flexed knee through the pes anserinus. That attachment also gives it a medial knee-stabilizing role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.iliacus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "flexion",
+          "weight": 0.9
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "anti_extension_hip",
+          "weight": 0.6
+        },
+        {
+          "demand": "pelvic_alignment",
+          "weight": 0.4
+        },
+        {
+          "demand": "femoral_head_stabilization",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "high",
+      "rationale": "Part of iliopsoas, the main hip flexor, so it gets a major flexion weight. Any rotational action is negligible or disputed and is omitted. It pulls the pelvis into anterior tilt and resists hip extension.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.iliopectineal_arch",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "The iliopectineal arch is a fascial band separating the muscular and vascular lacunae, not a contractile muscle. It therefore performs no joint actions.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.inferior_gemellus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "external_rotation",
+          "weight": 0.4
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "femoral_head_stabilization",
+          "weight": 0.4
+        }
+      ],
+      "confidence": "high",
+      "rationale": "A small deep external rotator acting with obturator internus that helps seat the femoral head. Its weak abduction of the flexed hip is negligible and is omitted.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.long_head_of_biceps_femoris",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "extension",
+          "weight": 0.7
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "external_rotation",
+          "weight": 0.2
+        },
+        {
+          "joint": "knee_joint",
+          "movement": "flexion",
+          "weight": 0.8
+        },
+        {
+          "joint": "knee_joint",
+          "movement": "external_rotation",
+          "weight": 0.8
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "pelvic_alignment",
+          "weight": 0.4
+        },
+        {
+          "demand": "postural_stabilization",
+          "weight": 0.4
+        },
+        {
+          "demand": "knee_joint_stability",
+          "weight": 0.4
+        }
+      ],
+      "confidence": "high",
+      "rationale": "A biarticular hamstring that extends the hip and flexes the knee, and is a principal external rotator of the flexed knee. It resists anterior pelvic tilt.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.obturator_externus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "external_rotation",
+          "weight": 0.6
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "adduction",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "femoral_head_stabilization",
+          "weight": 0.5
+        }
+      ],
+      "confidence": "medium",
+      "rationale": "A deep external rotator that weakly adducts the hip. Its course beneath the femoral neck helps centre the femoral head.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.obturator_internus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "external_rotation",
+          "weight": 0.6
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "abduction",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "femoral_head_stabilization",
+          "weight": 0.5
+        }
+      ],
+      "confidence": "high",
+      "rationale": "The strongest of the short external rotators in the extended hip. It abducts only when the hip is flexed, which is why that weight is minor. It is an important dynamic hip-joint stabilizer.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.pectineus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "adduction",
+          "weight": 0.5
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "flexion",
+          "weight": 0.5
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "Both adducts and flexes the hip, with roughly equal contributions. Its rotational effect is disputed and small, so rotation is omitted.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.piriformis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "external_rotation",
+          "weight": 0.6
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "abduction",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "femoral_head_stabilization",
+          "weight": 0.4
+        }
+      ],
+      "confidence": "medium",
+      "rationale": "Externally rotates the extended hip and abducts the flexed hip. Above about 60 degrees of flexion its rotation reverses to internal rotation, which is why confidence is medium.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.psoas_major",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "flexion",
+          "weight": 1.0
+        },
+        {
+          "joint": "lumbar_spine",
+          "movement": "lateral_flexion",
+          "weight": 0.3
+        },
+        {
+          "joint": "lumbar_spine",
+          "movement": "flexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "anti_extension_hip",
+          "weight": 0.6
+        },
+        {
+          "demand": "pelvic_alignment",
+          "weight": 0.3
+        },
+        {
+          "demand": "femoral_head_stabilization",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "medium",
+      "rationale": "Prime hip flexor with iliacus. It laterally flexes the lumbar spine ipsilaterally and only weakly flexes it, since its lumbar flexion effect is small and disputed.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.quadratus_femoris",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "external_rotation",
+          "weight": 0.6
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "adduction",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "femoral_head_stabilization",
+          "weight": 0.4
+        }
+      ],
+      "confidence": "high",
+      "rationale": "A strong short external rotator that weakly adducts the hip. It helps stabilize the femoral head posteriorly.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.rectus_femoris",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "knee_joint",
+          "movement": "extension",
+          "weight": 0.8
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "flexion",
+          "weight": 0.7
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "anti_extension_hip",
+          "weight": 0.3
+        },
+        {
+          "demand": "patellar_tracking",
+          "weight": 0.3
+        },
+        {
+          "demand": "postural_stabilization",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "high",
+      "rationale": "The only quadriceps head that crosses the hip, so it both extends the knee and flexes the hip. Its knee extension is weaker when the hip is flexed (active insufficiency). Minor hip abduction is omitted.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.sartorius",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "flexion",
+          "weight": 0.4
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "abduction",
+          "weight": 0.3
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "external_rotation",
+          "weight": 0.4
+        },
+        {
+          "joint": "knee_joint",
+          "movement": "flexion",
+          "weight": 0.3
+        },
+        {
+          "joint": "knee_joint",
+          "movement": "internal_rotation",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "knee_joint_stability",
+          "weight": 0.2
+        }
+      ],
+      "confidence": "high",
+      "rationale": "A long two-joint muscle that flexes, abducts and externally rotates the hip while flexing the knee. Via the pes anserinus it internally rotates the flexed knee. Each contribution is a synergist role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.semimembranosus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "extension",
+          "weight": 0.7
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "internal_rotation",
+          "weight": 0.2
+        },
+        {
+          "joint": "knee_joint",
+          "movement": "flexion",
+          "weight": 0.8
+        },
+        {
+          "joint": "knee_joint",
+          "movement": "internal_rotation",
+          "weight": 0.8
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "pelvic_alignment",
+          "weight": 0.4
+        },
+        {
+          "demand": "postural_stabilization",
+          "weight": 0.4
+        },
+        {
+          "demand": "knee_joint_stability",
+          "weight": 0.4
+        }
+      ],
+      "confidence": "high",
+      "rationale": "A medial hamstring that extends the hip, flexes the knee and is a principal internal rotator of the flexed knee. Its expansions to the posterior capsule and medial meniscus support knee stability.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.semitendinosus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "extension",
+          "weight": 0.7
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "internal_rotation",
+          "weight": 0.2
+        },
+        {
+          "joint": "knee_joint",
+          "movement": "flexion",
+          "weight": 0.8
+        },
+        {
+          "joint": "knee_joint",
+          "movement": "internal_rotation",
+          "weight": 0.7
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "pelvic_alignment",
+          "weight": 0.4
+        },
+        {
+          "demand": "postural_stabilization",
+          "weight": 0.4
+        },
+        {
+          "demand": "knee_joint_stability",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "high",
+      "rationale": "A medial hamstring that extends the hip and flexes the knee, and internally rotates the flexed knee via the pes anserinus. It resists anterior pelvic tilt.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.short_head_of_biceps_femoris",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "knee_joint",
+          "movement": "flexion",
+          "weight": 0.6
+        },
+        {
+          "joint": "knee_joint",
+          "movement": "external_rotation",
+          "weight": 0.8
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "knee_joint_stability",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "high",
+      "rationale": "A single-joint head that does not cross the hip. It flexes the knee and is a principal external rotator of the flexed knee.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.superior_gemellus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "external_rotation",
+          "weight": 0.4
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "femoral_head_stabilization",
+          "weight": 0.4
+        }
+      ],
+      "confidence": "high",
+      "rationale": "A small deep external rotator acting with obturator internus that helps seat the femoral head. Its weak abduction of the flexed hip is negligible and is omitted.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.tensor_fasciae_latae",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "hip_joint",
+          "movement": "flexion",
+          "weight": 0.5
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "abduction",
+          "weight": 0.5
+        },
+        {
+          "joint": "hip_joint",
+          "movement": "internal_rotation",
+          "weight": 0.5
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "pelvic_leveling_frontal",
+          "weight": 0.4
+        },
+        {
+          "demand": "knee_joint_stability",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "medium",
+      "rationale": "Flexes, abducts and internally rotates the hip as a synergist. Through the iliotibial tract it assists pelvic levelling and lateral knee stability, but its direct knee action is small and position-dependent, so it is omitted.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.vastus_intermedius",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "knee_joint",
+          "movement": "extension",
+          "weight": 0.9
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "postural_stabilization",
+          "weight": 0.5
+        }
+      ],
+      "confidence": "high",
+      "rationale": "A deep single-joint quadriceps head that is a major knee extensor. It provides antigravity knee control in stance and squatting.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.vastus_lateralis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "knee_joint",
+          "movement": "extension",
+          "weight": 1.0
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "postural_stabilization",
+          "weight": 0.6
+        },
+        {
+          "demand": "patellar_tracking",
+          "weight": 0.4
+        },
+        {
+          "demand": "knee_joint_stability",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "high",
+      "rationale": "The largest quadriceps head and the prime knee extensor. Its lateral pull on the patella must be balanced by vastus medialis for normal tracking.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.vastus_medialis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "knee_joint",
+          "movement": "extension",
+          "weight": 0.9
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "patellar_tracking",
+          "weight": 0.8
+        },
+        {
+          "demand": "postural_stabilization",
+          "weight": 0.5
+        },
+        {
+          "demand": "knee_joint_stability",
+          "weight": 0.4
+        }
+      ],
+      "confidence": "high",
+      "rationale": "A major knee extensor throughout the range. Its oblique distal fibres are the key medial stabilizer of patellar tracking.",
+      "status": "reviewed"
+    }
+  ],
+  "approvals": [
+    {
+      "approved_by": "project_owner",
+      "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+      "entries": [
+        "muscle.adductor_brevis",
+        "muscle.adductor_longus",
+        "muscle.adductor_magnus",
+        "muscle.adductor_minimus",
+        "muscle.gluteus_maximus",
+        "muscle.gluteus_medius",
+        "muscle.gluteus_minimus",
+        "muscle.gracilis",
+        "muscle.iliacus",
+        "muscle.iliopectineal_arch",
+        "muscle.inferior_gemellus",
+        "muscle.long_head_of_biceps_femoris",
+        "muscle.obturator_externus",
+        "muscle.obturator_internus",
+        "muscle.pectineus",
+        "muscle.piriformis",
+        "muscle.psoas_major",
+        "muscle.quadratus_femoris",
+        "muscle.rectus_femoris",
+        "muscle.sartorius",
+        "muscle.semimembranosus",
+        "muscle.semitendinosus",
+        "muscle.short_head_of_biceps_femoris",
+        "muscle.superior_gemellus",
+        "muscle.tensor_fasciae_latae",
+        "muscle.vastus_intermedius",
+        "muscle.vastus_lateralis",
+        "muscle.vastus_medialis"
+      ],
+      "approved_at_unix": 1793999070.179372
+    }
+  ]
+}

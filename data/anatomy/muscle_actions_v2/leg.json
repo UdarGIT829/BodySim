@@ -1,0 +1,411 @@
+{
+  "format_version": 2,
+  "group": "leg",
+  "title": "Leg (below the knee)",
+  "drafted_with": {
+    "provider": "anthropic",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "response_id": "msg_011CgnME5rfNXX2Dndnd5aw1"
+  },
+  "drafted_at_unix": 1793998942.7752564,
+  "entries": [
+    {
+      "base_id": "muscle.extensor_digitorum_longus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "extension",
+          "weight": 1.0
+        },
+        {
+          "joint": "ankle_joint",
+          "movement": "dorsiflexion",
+          "weight": 0.5
+        },
+        {
+          "joint": "subtalar_joint",
+          "movement": "eversion",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "It is the prime extensor of the lateral four toes and a clear assistant to tibialis anterior in dorsiflexion. Its lateral tendon line gives a modest eversion moment.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.extensor_hallucis_longus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "extension",
+          "weight": 0.8
+        },
+        {
+          "joint": "ankle_joint",
+          "movement": "dorsiflexion",
+          "weight": 0.4
+        },
+        {
+          "joint": "subtalar_joint",
+          "movement": "inversion",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "It is the prime extensor of the hallux, weighted 0.8 because toe_joints is pooled with EDL covering four toes, and it assists dorsiflexion. Its inversion contribution is weak and depends on foot position.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.fibularis_brevis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "subtalar_joint",
+          "movement": "eversion",
+          "weight": 0.9
+        },
+        {
+          "joint": "ankle_joint",
+          "movement": "plantarflexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "ankle_stability",
+          "weight": 0.6
+        }
+      ],
+      "confidence": "high",
+      "rationale": "It is a major evertor alongside fibularis longus, and it has only a minor plantarflexion moment because it passes close behind the lateral malleolus. It is important for resisting inversion sprain in stance.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.fibularis_longus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "subtalar_joint",
+          "movement": "eversion",
+          "weight": 1.0
+        },
+        {
+          "joint": "ankle_joint",
+          "movement": "plantarflexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "ankle_stability",
+          "weight": 0.6
+        },
+        {
+          "demand": "postural_sway_control",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "high",
+      "rationale": "It is the prime evertor and a weak plantarflexor. It controls mediolateral ankle stability and sway in stance. It also depresses the first ray and supports the transverse arch, but the vocabulary has no action for this.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.fibularis_tertius",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "subtalar_joint",
+          "movement": "eversion",
+          "weight": 0.3
+        },
+        {
+          "joint": "ankle_joint",
+          "movement": "dorsiflexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "It is a small, variably present slip of EDL that assists eversion and dorsiflexion. It is minor relative to the fibularis longus and brevis and to tibialis anterior.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.flexor_digitorum_longus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "flexion",
+          "weight": 1.0
+        },
+        {
+          "joint": "subtalar_joint",
+          "movement": "inversion",
+          "weight": 0.3
+        },
+        {
+          "joint": "ankle_joint",
+          "movement": "plantarflexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "ankle_stability",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "high",
+      "rationale": "It is the prime flexor of the lateral four toes. It assists inversion and contributes only minor plantarflexion compared with the triceps surae, and it helps support the medial arch in stance.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.flexor_hallucis_longus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "toe_joints",
+          "movement": "flexion",
+          "weight": 0.8
+        },
+        {
+          "joint": "ankle_joint",
+          "movement": "plantarflexion",
+          "weight": 0.2
+        },
+        {
+          "joint": "subtalar_joint",
+          "movement": "inversion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "ankle_stability",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "high",
+      "rationale": "It is the prime flexor of the hallux, which is important in push-off, and is weighted 0.8 within the pooled toe_joints. It contributes minor plantarflexion and inversion and helps support the medial arch.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.lateral_head_of_gastrocnemius",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "ankle_joint",
+          "movement": "plantarflexion",
+          "weight": 0.7
+        },
+        {
+          "joint": "knee_joint",
+          "movement": "flexion",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "postural_sway_control",
+          "weight": 0.4
+        },
+        {
+          "demand": "postural_stabilization",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "high",
+      "rationale": "It is a major plantarflexor, smaller than the medial head, and its plantarflexion output falls as the knee flexes because the muscle is two-joint. It assists knee flexion, mainly when the ankle is dorsiflexed.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.medial_head_of_gastrocnemius",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "ankle_joint",
+          "movement": "plantarflexion",
+          "weight": 0.8
+        },
+        {
+          "joint": "knee_joint",
+          "movement": "flexion",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "postural_sway_control",
+          "weight": 0.4
+        },
+        {
+          "demand": "postural_stabilization",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "high",
+      "rationale": "It is the larger gastrocnemius head and a major plantarflexor, most effective with the knee extended because it is two-joint. It assists knee flexion and contributes to standing sway control.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.plantaris",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "ankle_joint",
+          "movement": "plantarflexion",
+          "weight": 0.1
+        },
+        {
+          "joint": "knee_joint",
+          "movement": "flexion",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "It is a small, often absent muscle with a negligible cross-section. It gives only minor assistance to gastrocnemius in plantarflexion and knee flexion.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.popliteus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "knee_joint",
+          "movement": "internal_rotation",
+          "weight": 0.7
+        },
+        {
+          "joint": "knee_joint",
+          "movement": "flexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "knee_joint_stability",
+          "weight": 0.5
+        }
+      ],
+      "confidence": "high",
+      "rationale": "It unlocks the extended knee by internally rotating the tibia, or laterally rotating the femur when the foot is fixed, and is a major internal rotator alongside the medial hamstrings. Its flexion contribution is weak, and it resists posterolateral tibial rotation and translation.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.soleus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "ankle_joint",
+          "movement": "plantarflexion",
+          "weight": 1.0
+        },
+        {
+          "joint": "subtalar_joint",
+          "movement": "inversion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "postural_stabilization",
+          "weight": 0.8
+        },
+        {
+          "demand": "postural_sway_control",
+          "weight": 0.9
+        },
+        {
+          "demand": "ankle_stability",
+          "weight": 0.5
+        }
+      ],
+      "confidence": "high",
+      "rationale": "It is the prime plantarflexor, being single-joint and effective at any knee angle, and the main tonic antigravity muscle controlling forward sway in standing. Its insertion via the Achilles tendon gives slight inversion.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.tibialis_anterior",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "ankle_joint",
+          "movement": "dorsiflexion",
+          "weight": 1.0
+        },
+        {
+          "joint": "subtalar_joint",
+          "movement": "inversion",
+          "weight": 0.6
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "ankle_stability",
+          "weight": 0.4
+        },
+        {
+          "demand": "postural_sway_control",
+          "weight": 0.5
+        }
+      ],
+      "confidence": "high",
+      "rationale": "It is the prime dorsiflexor and a clear inverter, second to tibialis posterior. It controls backward sway and stabilizes the ankle in stance.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.tibialis_posterior",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "subtalar_joint",
+          "movement": "inversion",
+          "weight": 1.0
+        },
+        {
+          "joint": "ankle_joint",
+          "movement": "plantarflexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "ankle_stability",
+          "weight": 0.7
+        }
+      ],
+      "confidence": "high",
+      "rationale": "It is the prime inverter and a weak plantarflexor because its moment arm is small. It is the key dynamic support of the medial longitudinal arch and controls pronation under load.",
+      "status": "reviewed"
+    }
+  ],
+  "approvals": [
+    {
+      "approved_by": "project_owner",
+      "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+      "entries": [
+        "muscle.extensor_digitorum_longus",
+        "muscle.extensor_hallucis_longus",
+        "muscle.fibularis_brevis",
+        "muscle.fibularis_longus",
+        "muscle.fibularis_tertius",
+        "muscle.flexor_digitorum_longus",
+        "muscle.flexor_hallucis_longus",
+        "muscle.lateral_head_of_gastrocnemius",
+        "muscle.medial_head_of_gastrocnemius",
+        "muscle.plantaris",
+        "muscle.popliteus",
+        "muscle.soleus",
+        "muscle.tibialis_anterior",
+        "muscle.tibialis_posterior"
+      ],
+      "approved_at_unix": 1793999070.2216406
+    }
+  ]
+}

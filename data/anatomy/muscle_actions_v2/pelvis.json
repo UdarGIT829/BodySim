@@ -1,0 +1,93 @@
+{
+  "format_version": 2,
+  "group": "pelvis",
+  "title": "Pelvis and pelvic floor",
+  "drafted_with": {
+    "provider": "anthropic",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "response_id": "msg_011CgnM7zSYpqJikVT5MH8dg"
+  },
+  "drafted_at_unix": 1793998842.7619936,
+  "entries": [
+    {
+      "base_id": "muscle.coccygeus",
+      "movement_muscle": true,
+      "actions": [],
+      "stabilizes": [
+        {
+          "demand": "intra_abdominal_pressure",
+          "weight": 0.2
+        }
+      ],
+      "confidence": "medium",
+      "rationale": "Forms the posterior pelvic diaphragm and gives a minor contribution to the pelvic floor's support during bracing. It flexes the coccyx and stabilises the sacrococcygeal joint, but the vocabulary has no joint for either action, so neither is listed.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.external_anal_sphincter",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "A continence sphincter with no joint action and no meaningful role in trunk bracing, so it is treated as a non-movement muscle. Its reflex contraction during straining is not modelled.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.iliococcygeus",
+      "movement_muscle": true,
+      "actions": [],
+      "stabilizes": [
+        {
+          "demand": "intra_abdominal_pressure",
+          "weight": 0.4
+        }
+      ],
+      "confidence": "medium",
+      "rationale": "As part of levator ani, it co-contracts with the diaphragm and transversus abdominis to form the floor of the pressurised abdominal canister during bracing, a clear assistant role. It has no vocabulary joint action; coccygeal flexion is omitted.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.pubo_analis",
+      "movement_muscle": true,
+      "actions": [],
+      "stabilizes": [
+        {
+          "demand": "intra_abdominal_pressure",
+          "weight": 0.2
+        }
+      ],
+      "confidence": "low",
+      "rationale": "These medial levator ani fibres act mainly on the anorectal junction for continence, giving only a minor share of pelvic floor support during bracing. It has no joint action in the vocabulary.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.pubococcygeus",
+      "movement_muscle": true,
+      "actions": [],
+      "stabilizes": [
+        {
+          "demand": "intra_abdominal_pressure",
+          "weight": 0.4
+        }
+      ],
+      "confidence": "medium",
+      "rationale": "As the main levator ani component, it supports the pelvic viscera and co-contracts during trunk bracing to contain intra-abdominal pressure, a clear assistant role. It has no joint action in the vocabulary.",
+      "status": "reviewed"
+    }
+  ],
+  "approvals": [
+    {
+      "approved_by": "project_owner",
+      "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+      "entries": [
+        "muscle.coccygeus",
+        "muscle.external_anal_sphincter",
+        "muscle.iliococcygeus",
+        "muscle.pubo_analis",
+        "muscle.pubococcygeus"
+      ],
+      "approved_at_unix": 1793999070.1379564
+    }
+  ]
+}

@@ -1,0 +1,551 @@
+{
+  "format_version": 2,
+  "group": "forearm",
+  "title": "Forearm (wrist, finger and forearm-rotation muscles)",
+  "drafted_with": {
+    "provider": "anthropic",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "response_id": "msg_011CgnLnGmm1i1UJhQBuDprv"
+  },
+  "drafted_at_unix": 1793998613.330768,
+  "entries": [
+    {
+      "base_id": "muscle.abductor_pollicis_longus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "thumb_joints",
+          "movement": "abduction",
+          "weight": 0.9
+        },
+        {
+          "joint": "thumb_joints",
+          "movement": "extension",
+          "weight": 0.3
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "radial_deviation",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Abducts the thumb at the carpometacarpal joint, alongside abductor pollicis brevis, and assists carpometacarpal extension. Its tendon crosses the radial wrist, so it clearly assists radial deviation.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.anconeus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "elbow_joint",
+          "movement": "extension",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "elbow_stability",
+          "weight": 0.3
+        },
+        {
+          "demand": "elbow_joint_integrity",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "medium",
+      "rationale": "A small muscle that gives minor help to triceps in elbow extension. Its main role is tensing the posterior capsule and stabilizing the humeroulnar joint. The ulnar abduction it produces during pronation is not in the vocabulary.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.brachioradialis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "elbow_joint",
+          "movement": "flexion",
+          "weight": 0.7
+        },
+        {
+          "joint": "radioulnar_joint",
+          "movement": "supination",
+          "weight": 0.2
+        },
+        {
+          "joint": "radioulnar_joint",
+          "movement": "pronation",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "elbow_stability",
+          "weight": 0.2
+        }
+      ],
+      "confidence": "medium",
+      "rationale": "A major elbow flexor, strongest with the forearm in neutral (hammer position). It rotates the forearm only back toward mid-position, from pronation or from supination, so both rotation weights are minor and position-dependent.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.deep_head_of_pronator_teres",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "radioulnar_joint",
+          "movement": "pronation",
+          "weight": 0.4
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "The small ulnar (coronoid) head pulls the radius into pronation. Because it arises distal to the humerus, it adds essentially no elbow flexion.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.extensor_carpi_radialis_brevis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "wrist_joint",
+          "movement": "extension",
+          "weight": 1.0
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "radial_deviation",
+          "weight": 0.4
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Its central insertion on the third metacarpal makes it the prime wrist extensor, especially during gripping. It is less radially placed than the longus, so radial deviation is a secondary action.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.extensor_carpi_radialis_longus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "wrist_joint",
+          "movement": "extension",
+          "weight": 0.8
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "radial_deviation",
+          "weight": 0.9
+        },
+        {
+          "joint": "elbow_joint",
+          "movement": "flexion",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "It inserts on the second metacarpal, which makes it a major wrist extensor and a leading radial deviator. Its origin on the supracondylar ridge gives it only a minor elbow flexion moment.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.extensor_digiti_minimi",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "finger_joints",
+          "movement": "extension",
+          "weight": 0.3
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "extension",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "It extends only the little finger, so its share of overall finger extension is small. It contributes only minor wrist extension.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.extensor_digitorum",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "finger_joints",
+          "movement": "extension",
+          "weight": 1.0
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "extension",
+          "weight": 0.5
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "The prime extensor of the medial four fingers at the metacarpophalangeal joints, acting through the extensor expansion. It crosses the wrist dorsally and clearly assists wrist extension.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.extensor_indicis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "finger_joints",
+          "movement": "extension",
+          "weight": 0.3
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "extension",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "It extends only the index finger, giving independent pointing, so its share of finger extension is small. It contributes only minor wrist extension.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.extensor_pollicis_brevis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "thumb_joints",
+          "movement": "extension",
+          "weight": 0.6
+        },
+        {
+          "joint": "thumb_joints",
+          "movement": "abduction",
+          "weight": 0.3
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "radial_deviation",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "It extends the thumb at the metacarpophalangeal and carpometacarpal joints and assists thumb abduction. Its course gives it a small radial deviation moment at the wrist.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.extensor_pollicis_longus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "thumb_joints",
+          "movement": "extension",
+          "weight": 1.0
+        },
+        {
+          "joint": "thumb_joints",
+          "movement": "adduction",
+          "weight": 0.2
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "extension",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "The prime thumb extensor, and the only one that extends the interphalangeal joint. Its pull around Lister's tubercle also retropositions (adducts) the thumb and slightly assists wrist extension.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.flexor_carpi_radialis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "wrist_joint",
+          "movement": "flexion",
+          "weight": 0.9
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "radial_deviation",
+          "weight": 0.6
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "A major wrist flexor that also clearly assists radial deviation together with the radial extensors. Its weak elbow flexion and pronation are negligible and omitted.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.flexor_digitorum_profundus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "finger_joints",
+          "movement": "flexion",
+          "weight": 1.0
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "flexion",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "The only flexor of the distal interphalangeal joints, and the prime mover of finger flexion in gripping. It crosses the wrist and assists wrist flexion.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.flexor_pollicis_longus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "thumb_joints",
+          "movement": "flexion",
+          "weight": 1.0
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "flexion",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "The prime thumb flexor, and the only flexor of the thumb interphalangeal joint. It gives minor assistance to wrist flexion.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.humeral_head_of_extensor_carpi_ulnaris",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "wrist_joint",
+          "movement": "ulnar_deviation",
+          "weight": 0.8
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "extension",
+          "weight": 0.5
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "The main belly of extensor carpi ulnaris. Its insertion on the fifth metacarpal gives a large ulnar deviation moment and a moderate extension moment. The extension moment falls in pronation, which is position-dependent.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.humeral_head_of_flexor_carpi_ulnaris",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "wrist_joint",
+          "movement": "flexion",
+          "weight": 0.7
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "ulnar_deviation",
+          "weight": 0.7
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "elbow_stability",
+          "weight": 0.2
+        }
+      ],
+      "confidence": "medium",
+      "rationale": "With the ulnar head, it forms the strongest wrist flexor and ulnar deviator, so the whole-muscle weight is split between the two heads. Its medial epicondyle origin gives a minor dynamic restraint against elbow valgus.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.humero_ulnar_head_of_flexor_digitorum_superficialis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "finger_joints",
+          "movement": "flexion",
+          "weight": 0.7
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "flexion",
+          "weight": 0.4
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "The larger head of flexor digitorum superficialis. It flexes the proximal interphalangeal and metacarpophalangeal joints as a major helper to flexor digitorum profundus and assists wrist flexion. Its elbow flexion moment is negligible and omitted.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.palmaris_longus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "wrist_joint",
+          "movement": "flexion",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "A small and often absent muscle that weakly flexes the wrist and tenses the palmar aponeurosis. Tensing the aponeurosis is not a vocabulary action.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.pronator_quadratus",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "radioulnar_joint",
+          "movement": "pronation",
+          "weight": 1.0
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "The prime pronator in every elbow position, assisted by pronator teres under load or at speed. It also binds the distal radioulnar joint, which is not a listed stabilization demand.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.radial_head_of_flexor_digitorum_superficialis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "finger_joints",
+          "movement": "flexion",
+          "weight": 0.4
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "flexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "This thin head from the anterior radius joins the superficialis belly, so it flexes the fingers at the proximal interphalangeal joints and assists wrist flexion on a smaller scale than the humero-ulnar head.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.superficial_head_of_pronator_teres",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "radioulnar_joint",
+          "movement": "pronation",
+          "weight": 0.8
+        },
+        {
+          "joint": "elbow_joint",
+          "movement": "flexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "elbow_stability",
+          "weight": 0.2
+        }
+      ],
+      "confidence": "high",
+      "rationale": "The humeral head is the main bulk of pronator teres and a major pronator, especially against resistance. Because it crosses the elbow, it weakly flexes it and gives minor valgus restraint.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.supinator",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "radioulnar_joint",
+          "movement": "supination",
+          "weight": 0.8
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "The main supinator during slow or unresisted movement and with the elbow extended. Biceps brachii takes over as prime mover against load with the elbow flexed.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.ulnar_head_of_extensor_carpi_ulnaris",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "wrist_joint",
+          "movement": "ulnar_deviation",
+          "weight": 0.5
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "extension",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "The smaller head arising from the posterior ulna joins the common tendon to the fifth metacarpal. It gives clear help with ulnar deviation and a moderate extension moment that depends on forearm rotation.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.ulnar_head_of_flexor_carpi_ulnaris",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "wrist_joint",
+          "movement": "flexion",
+          "weight": 0.7
+        },
+        {
+          "joint": "wrist_joint",
+          "movement": "ulnar_deviation",
+          "weight": 0.7
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "With the humeral head, it forms the strongest wrist flexor and ulnar deviator, inserting via the pisiform on the hamate and fifth metacarpal. It arises from the olecranon and ulna, so it does not act at the elbow.",
+      "status": "reviewed"
+    }
+  ],
+  "approvals": [
+    {
+      "approved_by": "project_owner",
+      "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+      "entries": [
+        "muscle.abductor_pollicis_longus",
+        "muscle.anconeus",
+        "muscle.brachioradialis",
+        "muscle.deep_head_of_pronator_teres",
+        "muscle.extensor_carpi_radialis_brevis",
+        "muscle.extensor_carpi_radialis_longus",
+        "muscle.extensor_digiti_minimi",
+        "muscle.extensor_digitorum",
+        "muscle.extensor_indicis",
+        "muscle.extensor_pollicis_brevis",
+        "muscle.extensor_pollicis_longus",
+        "muscle.flexor_carpi_radialis",
+        "muscle.flexor_digitorum_profundus",
+        "muscle.flexor_pollicis_longus",
+        "muscle.humeral_head_of_extensor_carpi_ulnaris",
+        "muscle.humeral_head_of_flexor_carpi_ulnaris",
+        "muscle.humero_ulnar_head_of_flexor_digitorum_superficialis",
+        "muscle.palmaris_longus",
+        "muscle.pronator_quadratus",
+        "muscle.radial_head_of_flexor_digitorum_superficialis",
+        "muscle.superficial_head_of_pronator_teres",
+        "muscle.supinator",
+        "muscle.ulnar_head_of_extensor_carpi_ulnaris",
+        "muscle.ulnar_head_of_flexor_carpi_ulnaris"
+      ],
+      "approved_at_unix": 1793999069.9290626
+    }
+  ]
+}

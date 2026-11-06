@@ -1,0 +1,227 @@
+{
+  "format_version": 2,
+  "group": "abdomen",
+  "title": "Abdominal wall",
+  "drafted_with": {
+    "provider": "anthropic",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "response_id": "msg_011CgnLxPikX8fyduqzrr1xj"
+  },
+  "drafted_at_unix": 1793998723.873656,
+  "entries": [
+    {
+      "base_id": "muscle.external_abdominal_oblique",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "lumbar_spine",
+          "movement": "rotation",
+          "weight": 0.9
+        },
+        {
+          "joint": "lumbar_spine",
+          "movement": "lateral_flexion",
+          "weight": 0.7
+        },
+        {
+          "joint": "lumbar_spine",
+          "movement": "flexion",
+          "weight": 0.6
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "anti_rotation_torso",
+          "weight": 1.0
+        },
+        {
+          "demand": "anti_extension_spine",
+          "weight": 0.8
+        },
+        {
+          "demand": "intra_abdominal_pressure",
+          "weight": 0.6
+        },
+        {
+          "demand": "pelvic_alignment",
+          "weight": 0.4
+        }
+      ],
+      "confidence": "high",
+      "rationale": "Acting unilaterally it rotates the trunk to the opposite side together with the contralateral internal oblique, and it flexes the trunk to its own side. Acting bilaterally it assists rectus abdominis in trunk flexion. It is a key anti-rotation and anti-extension brace and contributes to posterior pelvic tilt.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.internal_abdominal_oblique",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "lumbar_spine",
+          "movement": "rotation",
+          "weight": 0.9
+        },
+        {
+          "joint": "lumbar_spine",
+          "movement": "lateral_flexion",
+          "weight": 0.7
+        },
+        {
+          "joint": "lumbar_spine",
+          "movement": "flexion",
+          "weight": 0.6
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "anti_rotation_torso",
+          "weight": 0.9
+        },
+        {
+          "demand": "intra_abdominal_pressure",
+          "weight": 0.8
+        },
+        {
+          "demand": "anti_extension_spine",
+          "weight": 0.7
+        },
+        {
+          "demand": "lumbar_fascia_tension",
+          "weight": 0.5
+        },
+        {
+          "demand": "pelvic_alignment",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "high",
+      "rationale": "Acting unilaterally it rotates the trunk to the same side, paired with the contralateral external oblique, and laterally flexes the trunk. Acting bilaterally it assists trunk flexion. Its deep transverse fibres and its attachment to the thoracolumbar fascia give it a larger bracing and fascia-tensioning role than the external oblique.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.pyramidalis",
+      "movement_muscle": true,
+      "actions": [],
+      "stabilizes": [
+        {
+          "demand": "intra_abdominal_pressure",
+          "weight": 0.1
+        }
+      ],
+      "confidence": "low",
+      "rationale": "This small, often absent muscle only tenses the linea alba and has no joint action. Its stabilizing contribution to abdominal wall bracing is at most minor.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.quadratus_lumborum",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "lumbar_spine",
+          "movement": "lateral_flexion",
+          "weight": 0.9
+        },
+        {
+          "joint": "lumbar_spine",
+          "movement": "extension",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "pelvic_leveling_frontal",
+          "weight": 0.6
+        },
+        {
+          "demand": "postural_stabilization",
+          "weight": 0.4
+        },
+        {
+          "demand": "anti_flexion_spine",
+          "weight": 0.3
+        },
+        {
+          "demand": "lumbar_fascia_tension",
+          "weight": 0.2
+        }
+      ],
+      "confidence": "medium",
+      "rationale": "Acting unilaterally it is a major lateral flexor of the lumbar spine and hikes the ipsilateral pelvis; pelvic elevation is not in the vocabulary and is covered by frontal pelvic leveling. Acting bilaterally it assists lumbar extension. It also fixes the 12th rib during inspiration, which is likewise not in the vocabulary.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.rectus_abdominis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "lumbar_spine",
+          "movement": "flexion",
+          "weight": 1.0
+        },
+        {
+          "joint": "lumbar_spine",
+          "movement": "lateral_flexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "anti_extension_spine",
+          "weight": 1.0
+        },
+        {
+          "demand": "pelvic_alignment",
+          "weight": 0.6
+        },
+        {
+          "demand": "intra_abdominal_pressure",
+          "weight": 0.4
+        }
+      ],
+      "confidence": "high",
+      "rationale": "It is the prime mover of trunk flexion and the main resister of lumbar extension, for example in planks. It tilts the pelvis posteriorly. Its unilateral lateral flexion is minor.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.transversus_abdominis",
+      "movement_muscle": true,
+      "actions": [],
+      "stabilizes": [
+        {
+          "demand": "intra_abdominal_pressure",
+          "weight": 1.0
+        },
+        {
+          "demand": "lumbar_fascia_tension",
+          "weight": 0.9
+        },
+        {
+          "demand": "anti_rotation_torso",
+          "weight": 0.3
+        },
+        {
+          "demand": "anti_extension_spine",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "high",
+      "rationale": "Its horizontal fibres compress the abdomen and tension the thoracolumbar fascia, making it the primary muscle for raising intra-abdominal pressure. Its direct spinal joint actions are negligible, so no joint actions are listed.",
+      "status": "reviewed"
+    }
+  ],
+  "approvals": [
+    {
+      "approved_by": "project_owner",
+      "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+      "entries": [
+        "muscle.external_abdominal_oblique",
+        "muscle.internal_abdominal_oblique",
+        "muscle.pyramidalis",
+        "muscle.quadratus_lumborum",
+        "muscle.rectus_abdominis",
+        "muscle.transversus_abdominis"
+      ],
+      "approved_at_unix": 1793999070.0542402
+    }
+  ]
+}

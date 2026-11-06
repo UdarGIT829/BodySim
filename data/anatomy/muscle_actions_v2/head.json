@@ -1,0 +1,393 @@
+{
+  "format_version": 2,
+  "group": "head",
+  "title": "Head, face, eye, jaw, tongue and palate",
+  "drafted_with": {
+    "provider": "anthropic",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "response_id": "msg_011CgnMM7ovU2k8GeyzufUbe"
+  },
+  "drafted_at_unix": 1793999032.0891156,
+  "entries": [
+    {
+      "base_id": "muscle.bucinator",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial expression muscle that compresses the cheek against the teeth. It has no role in exercise movement or trunk/limb stabilization.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.corrugator_supercilii",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial muscle that draws the eyebrows medially and down (frowning). It does not contribute to exercise movement.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.deep_part_of_masseter",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Jaw muscle that elevates and retracts the mandible. The vocabulary has no temporomandibular joint, and jaw clenching is not modelled as exercise stabilization.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.depressor_anguli_oris",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial muscle that depresses the corner of the mouth. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.depressor_labii_inferioris",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial muscle that depresses the lower lip. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.depressor_septi_nasi",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial muscle that pulls the nasal septum down. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.frontalis",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Epicranial muscle that elevates the eyebrows and wrinkles the forehead. It does not cross any vocabulary joint.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.genioglossus",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Extrinsic tongue muscle that protrudes and depresses the tongue. Tongue muscles are excluded from exercise movement.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.hyoglossus",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Extrinsic tongue muscle that depresses and retracts the tongue. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.inferior_head_of_lateral_pterygoid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Masticatory muscle that protrudes the mandible and opens the jaw. The temporomandibular joint is not in the vocabulary.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.inferior_oblique",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Extra-ocular muscle that extorts, elevates and abducts the eye. Eye muscles are excluded from exercise movement.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.inferior_rectus",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Extra-ocular muscle that depresses the eye. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.lateral_rectus",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Extra-ocular muscle that abducts the eye. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.levator_anguli_oris",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial muscle that elevates the corner of the mouth. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.levator_labii_superioris",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial muscle that elevates the upper lip. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.levator_nasolabialis",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial muscle (levator labii superioris alaeque nasi) that elevates the upper lip and dilates the nostril. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.levator_palpebrae_superioris",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Orbital muscle that elevates the upper eyelid. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.medial_pterygoid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Masticatory muscle that elevates the mandible and moves it side to side. The temporomandibular joint is not in the vocabulary.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.medial_rectus",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Extra-ocular muscle that adducts the eye. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.mentalis",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial muscle that elevates and protrudes the lower lip and wrinkles the chin. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.nasalis",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial muscle that compresses or flares the nostrils. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.occipitalis",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Epicranial muscle that retracts the scalp. It does not act on the cervical spine.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.orbicularis_oris",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Sphincter of the mouth that closes and purses the lips. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.orbital_part_of_orbicularis_oculi",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial muscle that forcibly closes the eyelids. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.palatopharyngeus",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Palatal and pharyngeal muscle that elevates the pharynx and closes the oropharyngeal isthmus during swallowing. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.palpebral_part_of_orbicularis_oculi",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial muscle that gently closes the eyelids (blinking). It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.procerus",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial muscle that draws the medial eyebrows down and wrinkles the nasal bridge. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.risorius",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial muscle that retracts the corner of the mouth laterally. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.superficial_part_of_masseter",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Masticatory muscle that elevates and slightly protrudes the mandible. The temporomandibular joint is not in the vocabulary.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.superior_head_of_lateral_pterygoid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Masticatory muscle that stabilizes the TMJ disc and condyle during jaw closing. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.superior_oblique",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Extra-ocular muscle that intorts, depresses and abducts the eye. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.superior_rectus",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Extra-ocular muscle that elevates the eye. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.temporalis",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Masticatory muscle that elevates and retracts the mandible. The temporomandibular joint is not in the vocabulary.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.temporoparietalis",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Epicranial muscle that tightens the scalp and may move the auricle. It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.trochlea_of_superior_oblique",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Fibrocartilaginous pulley for the superior oblique tendon, not a contractile muscle. It has no actions.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.zygomaticus_major",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial muscle that draws the corner of the mouth up and laterally (smiling). It has no exercise movement role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.zygomaticus_minor",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Facial muscle that elevates the upper lip. It has no exercise movement role.",
+      "status": "reviewed"
+    }
+  ],
+  "approvals": [
+    {
+      "approved_by": "project_owner",
+      "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+      "entries": [
+        "muscle.bucinator",
+        "muscle.corrugator_supercilii",
+        "muscle.deep_part_of_masseter",
+        "muscle.depressor_anguli_oris",
+        "muscle.depressor_labii_inferioris",
+        "muscle.depressor_septi_nasi",
+        "muscle.frontalis",
+        "muscle.genioglossus",
+        "muscle.hyoglossus",
+        "muscle.inferior_head_of_lateral_pterygoid",
+        "muscle.inferior_oblique",
+        "muscle.inferior_rectus",
+        "muscle.lateral_rectus",
+        "muscle.levator_anguli_oris",
+        "muscle.levator_labii_superioris",
+        "muscle.levator_nasolabialis",
+        "muscle.levator_palpebrae_superioris",
+        "muscle.medial_pterygoid",
+        "muscle.medial_rectus",
+        "muscle.mentalis",
+        "muscle.nasalis",
+        "muscle.occipitalis",
+        "muscle.orbicularis_oris",
+        "muscle.orbital_part_of_orbicularis_oculi",
+        "muscle.palatopharyngeus",
+        "muscle.palpebral_part_of_orbicularis_oculi",
+        "muscle.procerus",
+        "muscle.risorius",
+        "muscle.superficial_part_of_masseter",
+        "muscle.superior_head_of_lateral_pterygoid",
+        "muscle.superior_oblique",
+        "muscle.superior_rectus",
+        "muscle.temporalis",
+        "muscle.temporoparietalis",
+        "muscle.trochlea_of_superior_oblique",
+        "muscle.zygomaticus_major",
+        "muscle.zygomaticus_minor"
+      ],
+      "approved_at_unix": 1793999070.347918
+    }
+  ]
+}

@@ -58,6 +58,8 @@ def write_report(group: str, document: dict) -> Path:
     out = [f"# {table.GROUP_TITLES[group]}", "",
            f"Drafted by {document.get('drafted_with', {}).get('model', '?')}. "
            "Review each muscle; set `status` to `reviewed` in the JSON once it is right.", ""]
+    for approval in document.get("approvals", []):
+        out += [f"**Approved** ({len(approval['entries'])} entries): {approval['basis']}.", ""]
     problems = table.validate_group(group, document)
     out += ["**Rule checks:** " + ("all passed" if not problems else f"{len(problems)} problem(s)"), ""]
     out += [f"- {p}" for p in problems] + ([""] if problems else [])
@@ -87,6 +89,8 @@ def main() -> int:
     parser.add_argument("--report-only", action="store_true", help="rebuild the review report from the existing file")
     parser.add_argument("--approve", nargs="*", metavar="BASE_ID",
                         help="mark entries reviewed (all entries if no ids are given), after a passing rule check")
+    parser.add_argument("--basis", default="reviewed line by line by the project owner",
+                        help="how the approval was made; recorded in the group file")
     args = parser.parse_args()
 
     groups = table.group_muscles()
@@ -119,6 +123,12 @@ def main() -> int:
         for e in document["entries"]:
             if e["base_id"] in wanted:
                 e["status"] = "reviewed"
+        document.setdefault("approvals", []).append({
+            "approved_by": "project_owner",
+            "basis": args.basis,
+            "entries": sorted(wanted),
+            "approved_at_unix": time.time(),
+        })
         path.write_text(json.dumps(document, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         write_report(args.group, document)
         done = sum(e["status"] == "reviewed" for e in document["entries"])

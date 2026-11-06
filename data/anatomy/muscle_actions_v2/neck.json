@@ -1,0 +1,406 @@
+{
+  "format_version": 2,
+  "group": "neck",
+  "title": "Neck",
+  "drafted_with": {
+    "provider": "anthropic",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "response_id": "msg_011CgnMJH1jasYE2VeAkNWWx"
+  },
+  "drafted_at_unix": 1793999005.4270961,
+  "entries": [
+    {
+      "base_id": "muscle.anterior_belly_of_digastric",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Suprahyoid muscle that depresses the mandible and elevates the hyoid during swallowing and jaw opening. It has no meaningful cervical or limb action in exercise.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.ary_epiglottic_part_of_oblique_arytenoid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Intrinsic laryngeal muscle that narrows the laryngeal inlet. It has no exercise movement or stabilization role.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.external_part_of_thyro_arytenoid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Intrinsic laryngeal muscle that shortens and relaxes the vocal folds. It is not a movement muscle.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.geniohyoid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Suprahyoid muscle that draws the hyoid forward and depresses the mandible. Its possible minor assist to resisted neck flexion is negligible and is omitted.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.inferior_pharyngeal_constrictor",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Pharyngeal muscle used in swallowing. It has no joint action relevant to exercise.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.lateral_crico_arytenoid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Intrinsic laryngeal muscle that adducts the vocal folds. It is not a movement muscle.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.longus_capitis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "cervical_spine",
+          "movement": "flexion",
+          "weight": 0.5
+        },
+        {
+          "joint": "cervical_spine",
+          "movement": "lateral_flexion",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Deep prevertebral flexor of the head and upper cervical spine, a clear synergist to sternocleidomastoid in flexion. Its unilateral lateral flexion and slight ipsilateral rotation are minor.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.longus_colli",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "cervical_spine",
+          "movement": "flexion",
+          "weight": 0.6
+        },
+        {
+          "joint": "cervical_spine",
+          "movement": "lateral_flexion",
+          "weight": 0.2
+        },
+        {
+          "joint": "cervical_spine",
+          "movement": "rotation",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Deep cervical flexor that flattens the cervical lordosis and is a key synergist in neck flexion. Its oblique parts give minor lateral flexion and rotation. The vocabulary has no deep-neck-flexor stabilization demand, so that role is not listed.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.middle_pharyngeal_constrictor",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Pharyngeal muscle used in swallowing. It is not a movement muscle.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.mylohyoid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Suprahyoid muscle that elevates the floor of the mouth and the hyoid. It has no exercise joint action.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.oblique_part_of_cricothyroid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Intrinsic laryngeal muscle that tenses the vocal folds. It is not a movement muscle.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.omohyoid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "Infrahyoid muscle that depresses the hyoid and tenses the cervical fascia. Despite its scapular attachment, it has no meaningful scapular or cervical action.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.platysma",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Superficial facial-expression-type muscle that tenses the neck skin and depresses the mandible and lip corners. It has no exercise joint action.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.posterior_belly_of_digastric",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Suprahyoid muscle that elevates and retracts the hyoid. It has no exercise joint action.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.posterior_crico_arytenoid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Intrinsic laryngeal muscle and the sole abductor of the vocal folds. It is not a movement muscle.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.rectus_anterior_capitis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "cervical_spine",
+          "movement": "flexion",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "Small muscle that flexes the head at the atlanto-occipital joint. Its contribution is minor, and its main role is local stabilization of the craniovertebral junction.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.rectus_lateralis_capitis",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "cervical_spine",
+          "movement": "lateral_flexion",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "Small muscle that laterally flexes the head at the atlanto-occipital joint. Its contribution is minor.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.scalenus_anterior",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "cervical_spine",
+          "movement": "lateral_flexion",
+          "weight": 0.5
+        },
+        {
+          "joint": "cervical_spine",
+          "movement": "flexion",
+          "weight": 0.3
+        },
+        {
+          "joint": "cervical_spine",
+          "movement": "rotation",
+          "weight": 0.1
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Laterally flexes the cervical spine unilaterally and assists flexion bilaterally, with slight contralateral rotation. Its elevation of the first rib in respiration is outside the vocabulary.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.scalenus_medius",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "cervical_spine",
+          "movement": "lateral_flexion",
+          "weight": 0.5
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "The largest scalene and mainly a lateral flexor of the cervical spine. Its first-rib elevation in respiration is outside the vocabulary.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.scalenus_posterior",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "cervical_spine",
+          "movement": "lateral_flexion",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Assists lateral flexion of the lower cervical spine. Its second-rib elevation in respiration is outside the vocabulary.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.sternocleidomastoid",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "cervical_spine",
+          "movement": "flexion",
+          "weight": 1.0
+        },
+        {
+          "joint": "cervical_spine",
+          "movement": "rotation",
+          "weight": 1.0
+        },
+        {
+          "joint": "cervical_spine",
+          "movement": "lateral_flexion",
+          "weight": 0.8
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Prime mover for cervical flexion bilaterally and for contralateral rotation unilaterally, and a major ipsilateral lateral flexor. Its posterior fibres can extend the head at the atlanto-occipital joint when the neck is already extended; that position-dependent action is omitted.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.sternohyoid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "Infrahyoid muscle that depresses the hyoid. Its possible minor assist to resisted neck flexion is negligible and is omitted.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.sternothyroid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "Infrahyoid muscle that depresses the thyroid cartilage. It has no meaningful exercise joint action.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.straight_part_of_cricothyroid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Intrinsic laryngeal muscle that tenses the vocal folds. It is not a movement muscle.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.stylohyoid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Suprahyoid muscle that elevates and retracts the hyoid in swallowing. It is not a movement muscle.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.stylopharyngeus",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Elevates the pharynx and larynx in swallowing. It is not a movement muscle.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.superior_pharyngeal_constrictor",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Pharyngeal muscle used in swallowing. It is not a movement muscle.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.thyro_epiglottic_part_of_thyro_arytenoid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Intrinsic laryngeal muscle that widens the laryngeal inlet. It is not a movement muscle.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.thyrohyoid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Infrahyoid muscle that depresses the hyoid or elevates the larynx. It has no exercise joint action.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.transverse_arytenoid",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "Intrinsic laryngeal muscle that adducts the arytenoids. It is not a movement muscle.",
+      "status": "reviewed"
+    }
+  ],
+  "approvals": [
+    {
+      "approved_by": "project_owner",
+      "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+      "entries": [
+        "muscle.anterior_belly_of_digastric",
+        "muscle.ary_epiglottic_part_of_oblique_arytenoid",
+        "muscle.external_part_of_thyro_arytenoid",
+        "muscle.geniohyoid",
+        "muscle.inferior_pharyngeal_constrictor",
+        "muscle.lateral_crico_arytenoid",
+        "muscle.longus_capitis",
+        "muscle.longus_colli",
+        "muscle.middle_pharyngeal_constrictor",
+        "muscle.mylohyoid",
+        "muscle.oblique_part_of_cricothyroid",
+        "muscle.omohyoid",
+        "muscle.platysma",
+        "muscle.posterior_belly_of_digastric",
+        "muscle.posterior_crico_arytenoid",
+        "muscle.rectus_anterior_capitis",
+        "muscle.rectus_lateralis_capitis",
+        "muscle.scalenus_anterior",
+        "muscle.scalenus_medius",
+        "muscle.scalenus_posterior",
+        "muscle.sternocleidomastoid",
+        "muscle.sternohyoid",
+        "muscle.sternothyroid",
+        "muscle.straight_part_of_cricothyroid",
+        "muscle.stylohyoid",
+        "muscle.stylopharyngeus",
+        "muscle.superior_pharyngeal_constrictor",
+        "muscle.thyro_epiglottic_part_of_thyro_arytenoid",
+        "muscle.thyrohyoid",
+        "muscle.transverse_arytenoid"
+      ],
+      "approved_at_unix": 1793999070.3074455
+    }
+  ]
+}

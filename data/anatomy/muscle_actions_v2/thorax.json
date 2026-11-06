@@ -1,0 +1,293 @@
+{
+  "format_version": 2,
+  "group": "thorax",
+  "title": "Thorax (pectorals, serratus, intercostals, diaphragm)",
+  "drafted_with": {
+    "provider": "anthropic",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "response_id": "msg_011CgnLtm7kiJdZ5UEpaF46C"
+  },
+  "drafted_at_unix": 1793998697.0867643,
+  "entries": [
+    {
+      "base_id": "muscle.abdominal_part_of_pectoralis_major",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "adduction",
+          "weight": 0.7
+        },
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "extension",
+          "weight": 0.4
+        },
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "horizontal_adduction",
+          "weight": 0.5
+        },
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "internal_rotation",
+          "weight": 0.4
+        },
+        {
+          "joint": "scapulothoracic_joint",
+          "movement": "depression",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "The lowest, most obliquely ascending fibres act mainly as an adductor. They assist extension only from a flexed position, as in a dip or pullover. The shoulder-girdle depression is indirect, acting via the humerus, so it is kept minor.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.clavicular_head_of_pectoralis_major",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "flexion",
+          "weight": 0.7
+        },
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "horizontal_adduction",
+          "weight": 0.8
+        },
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "internal_rotation",
+          "weight": 0.4
+        },
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "adduction",
+          "weight": 0.3
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "It is a major shoulder flexor alongside the anterior deltoid and a strong horizontal adductor, as in an incline press. It adducts only with the arm below about 90 degrees, so adduction is weighted lower than for the sternocostal head.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.diaphragm",
+      "movement_muscle": true,
+      "actions": [],
+      "stabilizes": [
+        {
+          "demand": "intra_abdominal_pressure",
+          "weight": 1.0
+        }
+      ],
+      "confidence": "high",
+      "rationale": "The diaphragm moves no vocabulary joint. It is the principal generator of intra-abdominal pressure during bracing, working with transversus abdominis and the pelvic floor.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.external_intercostal",
+      "movement_muscle": true,
+      "actions": [],
+      "stabilizes": [
+        {
+          "demand": "anti_rotation_torso",
+          "weight": 0.1
+        }
+      ],
+      "confidence": "low",
+      "rationale": "Its main role is inspiration by elevating the ribs. It assists contralateral thoracic rotation, which has no thoracic-spine term in the vocabulary, so only a minor anti-rotation bracing role is listed.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.innermost_intercostal",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "This thin, incomplete layer acts with the internal intercostals in respiration. There is no meaningful evidence that it contributes to trunk bracing or joint movement.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.internal_intercostal",
+      "movement_muscle": true,
+      "actions": [],
+      "stabilizes": [
+        {
+          "demand": "anti_rotation_torso",
+          "weight": 0.1
+        }
+      ],
+      "confidence": "low",
+      "rationale": "It depresses the ribs in forced expiration. It assists ipsilateral thoracic rotation, which is absent from the vocabulary, so only a minor anti-rotation bracing role is listed.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.levatores_breves_costarum",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "These small muscles elevate the ribs. Any thoracic lateral flexion or rotation they produce is negligible and outside the vocabulary, so they are not treated as exercise muscles.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.levatores_longi_costarum",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "They elevate the ribs, spanning two levels. Their thoracic rotation and lateral flexion effect is negligible and not in the vocabulary.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.pectoralis_minor",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "scapulothoracic_joint",
+          "movement": "protraction",
+          "weight": 0.5
+        },
+        {
+          "joint": "scapulothoracic_joint",
+          "movement": "depression",
+          "weight": 0.6
+        },
+        {
+          "joint": "scapulothoracic_joint",
+          "movement": "downward_rotation",
+          "weight": 0.6
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "scapular_stabilization",
+          "weight": 0.3
+        }
+      ],
+      "confidence": "high",
+      "rationale": "Pulling on the coracoid, it tilts the scapula anteriorly and downward-rotates it with the rhomboids and levator scapulae. It depresses and assists serratus anterior in protraction, and helps fix the scapula in dips and push-ups. Its rib elevation in forced inspiration is not in the vocabulary.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.serratus_anterior",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "scapulothoracic_joint",
+          "movement": "protraction",
+          "weight": 1.0
+        },
+        {
+          "joint": "scapulothoracic_joint",
+          "movement": "upward_rotation",
+          "weight": 1.0
+        },
+        {
+          "joint": "scapulothoracic_joint",
+          "movement": "depression",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "scapular_anchoring",
+          "weight": 1.0
+        },
+        {
+          "demand": "scapular_stabilization",
+          "weight": 0.8
+        }
+      ],
+      "confidence": "high",
+      "rationale": "It is the prime protractor. It is also the co-prime upward rotator with the trapezius, its lower fibres dominating, and those lower fibres contribute slightly to depression. It holds the scapula against the thorax as the base for pressing and overhead work.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.sternocostal_head_of_pectoralis_major",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "horizontal_adduction",
+          "weight": 1.0
+        },
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "adduction",
+          "weight": 0.8
+        },
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "extension",
+          "weight": 0.5
+        },
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "internal_rotation",
+          "weight": 0.5
+        }
+      ],
+      "stabilizes": [],
+      "confidence": "high",
+      "rationale": "It is the prime horizontal adductor, as in a flat press or fly, and a major adductor alongside latissimus dorsi. It extends the humerus only from a flexed position back toward neutral, and assists internal rotation.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.subclavius",
+      "movement_muscle": true,
+      "actions": [
+        {
+          "joint": "scapulothoracic_joint",
+          "movement": "depression",
+          "weight": 0.2
+        }
+      ],
+      "stabilizes": [
+        {
+          "demand": "scapular_stabilization",
+          "weight": 0.2
+        }
+      ],
+      "confidence": "medium",
+      "rationale": "It depresses the clavicle and draws it toward the sternum, stabilizing the sternoclavicular joint during shoulder-girdle movement. Its contribution to depression of the whole girdle is minor.",
+      "status": "reviewed"
+    },
+    {
+      "base_id": "muscle.transversus_thoracis",
+      "movement_muscle": false,
+      "actions": [],
+      "stabilizes": [],
+      "confidence": "medium",
+      "rationale": "This small expiratory muscle depresses the costal cartilages. It has no meaningful joint action or established trunk-bracing role, unlike its continuation, the transversus abdominis.",
+      "status": "reviewed"
+    }
+  ],
+  "approvals": [
+    {
+      "approved_by": "project_owner",
+      "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+      "entries": [
+        "muscle.abdominal_part_of_pectoralis_major",
+        "muscle.clavicular_head_of_pectoralis_major",
+        "muscle.diaphragm",
+        "muscle.external_intercostal",
+        "muscle.innermost_intercostal",
+        "muscle.internal_intercostal",
+        "muscle.levatores_breves_costarum",
+        "muscle.levatores_longi_costarum",
+        "muscle.pectoralis_minor",
+        "muscle.serratus_anterior",
+        "muscle.sternocostal_head_of_pectoralis_major",
+        "muscle.subclavius",
+        "muscle.transversus_thoracis"
+      ],
+      "approved_at_unix": 1793999070.01292
+    }
+  ]
+}

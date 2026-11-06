@@ -33,7 +33,7 @@
       "stabilizes": [],
       "confidence": "high",
       "rationale": "The multipennate middle deltoid is the prime abductor, with supraspinatus as its main partner. It assists horizontal abduction and contributes to flexion only when the arm is elevated in the scapular plane.",
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "base_id": "muscle.ascending_part_of_trapezius",
@@ -71,7 +71,7 @@
       ],
       "confidence": "high",
       "rationale": "Lower trapezius fibres pull the scapular spine medially and downward, so they depress and retract the scapula. Paired with serratus anterior and upper trapezius, they form the upward-rotation force couple that is critical during overhead elevation.",
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "base_id": "muscle.clavicular_part_of_deltoid",
@@ -101,7 +101,7 @@
       "stabilizes": [],
       "confidence": "high",
       "rationale": "The anterior deltoid is the prime shoulder flexor, alongside clavicular pectoralis major, and assists horizontal adduction and internal rotation. It contributes to abduction mainly above about 60 degrees and in the scapular plane.",
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "base_id": "muscle.descending_part_of_trapezius",
@@ -150,7 +150,7 @@
       ],
       "confidence": "high",
       "rationale": "Upper trapezius is the prime scapular elevator with levator scapulae and is part of the upward-rotation force couple. With the scapula fixed, it extends the neck, flexes it laterally to the same side and rotates the head to the opposite side.",
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "base_id": "muscle.infraspinatus",
@@ -179,7 +179,7 @@
       ],
       "confidence": "high",
       "rationale": "Infraspinatus is the prime external rotator and assists horizontal abduction. As a posterior cuff muscle it compresses the humeral head into the glenoid and pulls it inferiorly during elevation.",
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "base_id": "muscle.scapular_spinal_part_of_deltoid",
@@ -204,7 +204,7 @@
       "stabilizes": [],
       "confidence": "high",
       "rationale": "The posterior deltoid is the prime horizontal abductor, a major extensor alongside latissimus dorsi, and assists external rotation. Its abduction contribution is negligible, so that action is omitted.",
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "base_id": "muscle.subscapularis",
@@ -237,7 +237,7 @@
       ],
       "confidence": "high",
       "rationale": "Subscapularis is the prime internal rotator and the main dynamic restraint against anterior humeral head translation. It gives only minor adduction from an abducted position.",
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "base_id": "muscle.supraspinatus",
@@ -261,7 +261,7 @@
       ],
       "confidence": "high",
       "rationale": "Supraspinatus initiates abduction and works with the acromial deltoid throughout the range, mainly by compressing and centring the humeral head. Its slight external rotation contribution is negligible and omitted.",
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "base_id": "muscle.teres_major",
@@ -286,7 +286,7 @@
       "stabilizes": [],
       "confidence": "high",
       "rationale": "Teres major acts with latissimus dorsi to extend, adduct and internally rotate the humerus. It is most active against resistance and when the scapula is stabilized by the rhomboids. It is not a rotator cuff muscle.",
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "base_id": "muscle.teres_minor",
@@ -320,7 +320,7 @@
       ],
       "confidence": "high",
       "rationale": "Teres minor is a major external rotator alongside infraspinatus and assists horizontal abduction, with weak adduction. It is a posterior cuff stabilizer that depresses and centres the humeral head.",
-      "status": "draft"
+      "status": "reviewed"
     },
     {
       "base_id": "muscle.transverse_part_of_trapezius",
@@ -353,7 +353,27 @@
       ],
       "confidence": "high",
       "rationale": "Horizontal middle trapezius fibres are the prime scapular retractors, with the rhomboids as partners. They hold the scapula retracted during rowing and pressing, and contribute modestly to upward rotation.",
-      "status": "draft"
+      "status": "reviewed"
+    }
+  ],
+  "approvals": [
+    {
+      "approved_by": "project_owner",
+      "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+      "entries": [
+        "muscle.acromial_part_of_deltoid",
+        "muscle.ascending_part_of_trapezius",
+        "muscle.clavicular_part_of_deltoid",
+        "muscle.descending_part_of_trapezius",
+        "muscle.infraspinatus",
+        "muscle.scapular_spinal_part_of_deltoid",
+        "muscle.subscapularis",
+        "muscle.supraspinatus",
+        "muscle.teres_major",
+        "muscle.teres_minor",
+        "muscle.transverse_part_of_trapezius"
+      ],
+      "approved_at_unix": 1793999069.846727
     }
   ]
 }

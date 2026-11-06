@@ -103,3 +103,80 @@ def test_committed_group_files_pass_rule_checks():
         path = table.TABLE_DIR / f"{group}.json"
         if path.exists():
             assert table.validate_group(group, json.loads(path.read_text())) == [], group
+
+
+# ── Whole-table sanity (runs once every group is drafted) ───────────────────
+
+def _complete_table():
+    records, missing = table.merged_table()
+    if missing:
+        pytest.skip(f"groups not drafted yet: {', '.join(missing)}")
+    return {r["muscle_id"]: r for r in records}
+
+
+def _weight(record, joint, movement):
+    return next((a["weight"] for a in record["actions"] if (a["joint"], a["movement"]) == (joint, movement)), 0.0)
+
+
+def test_table_covers_all_466_muscles():
+    assert len(_complete_table()) == 466
+
+
+def test_every_action_exercises_can_use_has_a_prime_mover():
+    records = _complete_table()
+    schema = json.loads((table.PROJECT_ROOT / "data/exercises/authoring/schemas/kinematic_authoring_response.schema.json").read_text())
+    alternatives = (schema["properties"]["proposed_definition"]["anyOf"][1]["properties"]["kinematic_profile"]
+                    ["properties"]["primary_joint_actions"]["items"]["anyOf"])
+    missing = []
+    for alt in alternatives:
+        joint = alt["properties"]["joint"]["enum"][0]
+        for movement in alt["properties"]["movement"]["enum"]:
+            if not any(_weight(r, joint, movement) >= 0.7 for r in records.values()):
+                missing.append(f"{joint}/{movement}")
+    assert not missing, f"no muscle with weight >= 0.7 for: {missing}"
+
+
+def test_every_stabilization_demand_has_muscles():
+    records = _complete_table()
+    used = {s["demand"] for r in records.values() for s in r["stabilizes"]}
+    assert set(table.load_vocabulary()["stabilization_demands"]) <= used
+
+
+def test_head_muscles_never_move_or_stabilize():
+    for r in _complete_table().values():
+        if r["group"] == "head":
+            assert not r["movement_muscle"] and not r["actions"] and not r["stabilizes"], r["muscle_id"]
+
+
+@pytest.mark.parametrize("fragment", ["arytenoid", "zygomaticus", "lateral_rectus", "levator_palpebrae", "orbicularis", "genioglossus"])
+def test_known_non_movement_muscles(fragment):
+    hits = [r for m, r in _complete_table().items() if fragment in m]
+    for r in hits:
+        assert not r["actions"] and not r["stabilizes"], r["muscle_id"]
+
+
+def test_postural_stabilization_is_limited_to_antigravity_regions():
+    allowed = {"back", "abdomen", "hip_and_thigh", "leg", "pelvis", "thorax"}
+    offenders = [m for m, r in _complete_table().items()
+                 if any(s["demand"] == "postural_stabilization" for s in r["stabilizes"]) and r["group"] not in allowed]
+    assert not offenders, offenders
+
+
+def test_council_flagged_errors_are_fixed():
+    t = _complete_table()
+    assert _weight(t["muscle.coracobrachialis.left"], "elbow_joint", "flexion") == 0.0
+    assert _weight(t["muscle.brachioradialis.left"], "elbow_joint", "flexion") >= 0.3
+    assert _weight(t["muscle.brachialis.left"], "elbow_joint", "flexion") >= 0.7
+    assert _weight(t["muscle.scapular_spinal_part_of_deltoid.left"], "glenohumeral_joint", "abduction") < 0.3
+    assert _weight(t["muscle.long_head_of_triceps_brachii.left"], "glenohumeral_joint", "extension") > 0.0
+    assert _weight(t["muscle.lateral_head_of_triceps_brachii.left"], "glenohumeral_joint", "extension") == 0.0
+    tva = t["muscle.transversus_abdominis.left"]
+    assert any(s["demand"] == "intra_abdominal_pressure" for s in tva["stabilizes"])
+
+
+def test_sides_mirror_each_other():
+    t = _complete_table()
+    for m, r in t.items():
+        if m.endswith(".left"):
+            other = t[m[:-5] + ".right"]
+            assert (r["actions"], r["stabilizes"]) == (other["actions"], other["stabilizes"]), m
