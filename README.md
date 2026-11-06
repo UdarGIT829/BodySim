@@ -31,7 +31,10 @@ The Kinematic Definition Studio and Review Council call the OpenAI API. The key
 is never stored in the project: set `OPENAI_API_KEY`, or put it in
 `user://bodysim_authoring_settings.cfg` under `[openai] api_key="..."`.
 
-## Credits
+## License
 
-See [ATTRIBUTION.md](ATTRIBUTION.md) for the anatomy models (CC BY-SA) and
-exercise data (Unlicense).
+BodySim's code is released under the [MIT License](LICENSE). The anatomy
+meshes in `build/anatomy/regions/` are not covered by it: they are adapted
+from Z-Anatomy and BodyParts3D and remain under CC BY-SA 4.0. See
+[ATTRIBUTION.md](ATTRIBUTION.md), which also credits the exercise data
+(free-exercise-db, Unlicense).
