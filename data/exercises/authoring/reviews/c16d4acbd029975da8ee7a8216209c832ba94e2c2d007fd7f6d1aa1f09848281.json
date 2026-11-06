@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1,
+  "revision_sha256": "c16d4acbd029975da8ee7a8216209c832ba94e2c2d007fd7f6d1aa1f09848281",
+  "status": "changes_requested",
+  "updated_at_unix": 1793999690.47718,
+  "votes": {
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The demands list only glenohumeral_stabilization and postural_stabilization. The exercise requires sustained grip and wrist control of a loaded free bar through the full arc, and the bar's moment at the hands increases as the forearms reach horizontal. The tracer output has no finger flexors (flexor digitorum superficialis/profundus) and no wrist flexors (flexor carpi radialis/ulnaris, palmaris longus); all show no involvement. This is a materially incomplete forearm pattern for a loaded-bar curl.",
+          "suggested_correction": "Add a grip/wrist stabilization demand, for example grip_stabilization or wrist_stabilization, so the tracer represents the finger and wrist flexors at an appropriate stabilizer level for holding a loaded bar."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "The glenohumeral stabilization set includes the rotator cuff and coracobrachialis. It omits anterior deltoid, the primary isometric resister of the shoulder-extension moment created when the loaded forearms rise in front of the body with the upper arms held stationary. It also includes long head of triceps brachii (left/right), a shoulder extensor and elbow extensor. That muscle is antagonistic to the required stabilization direction and is not an evidenced stabilizer here.",
+          "suggested_correction": "In a future revision, ensure glenohumeral stabilization resolves to anterior deltoid at a low-to-moderate stabilizer coefficient. Remove or justify long-head triceps; do not present it as a high-confidence stabilizer."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer[muscle_id=muscle.transversus_abdominis.left]",
+          "finding": "Transversus abdominis has no involvement. The revision's own assumption states that postural_stabilization is intended to cover trunk stabilizers such as transversus abdominis. The output contradicts the stated definition intent, and the prior council finding on this muscle is unresolved. Rectus abdominis and the obliques are also absent, so the trunk-bracing pattern contains only posterior-chain extensors.",
+          "suggested_correction": "Make the postural_stabilization mapping include low-level abdominal bracing (transversus abdominis, plus internal/external obliques as appropriate) consistent with the stated assumption."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer[muscle_id=muscle.transversus_abdominis.right]",
+          "finding": "Transversus abdominis has no involvement. The revision's assumption explicitly states postural_stabilization should cover it. The output contradicts the stated intent and leaves the prior council finding unresolved.",
+          "suggested_correction": "Represent transversus abdominis (and appropriate abdominal bracing muscles) bilaterally under postural stabilization."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer[muscle_id=muscle.adductor_magnus.left]",
+          "finding": "Adductor magnus and other lower-limb postural muscles (quadriceps, hamstrings, gastrocnemius) carry 'high' confidence despite coefficients of 0.07–0.21 for quiet standing support. Upright standing makes them loosely plausible, but high confidence overstates evidence the frames do not resolve.",
+          "suggested_correction": "Lower confidence to medium/low for generalized lower-limb postural stabilizers, or narrow the set to those resisting the anterior load moment (e.g., soleus, gluteus maximus, erector spinae)."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist[muscle_id=muscle.superficial_head_of_pronator_teres.left]",
+          "finding": "Pronator teres at 0.2 is assigned as an elbow-flexion synergist at 'high' confidence. It is a weak elbow flexor, and the semi-supinated EZ grip involves no active pronation, so high confidence is overstated.",
+          "suggested_correction": "Retain as a minor synergist but reduce confidence to medium."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-opus-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-opus-5-5",
+        "response_id": "msg_011CgnN9hwo6RQqFmPE6nkNM",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 977.0,
+          "cache_read_input_tokens": 0.0,
+          "input_tokens": 8202.0,
+          "output_tokens": 3856.0
+        }
+      },
+      "summary": "The identity (standing bilateral EZ-bar curl), repetitions input mode, open-chain classification, elbow_joint/flexion as the sole primary action, and the prime-mover set (brachialis, biceps heads, brachioradialis) are supported by the instructions and both frames. Prior feedback was addressed: facial, ocular, laryngeal, foot, and pelvic-floor stabilizers are gone, coracobrachialis is now a low stabilizer, and brachioradialis is now an action-derived mover. The tracer profile still has material errors. Grip and wrist control of the freely held loaded bar is not represented, and the finger and wrist flexors have no involvement. The glenohumeral stabilizer set omits anterior deltoid, the main resister of the shoulder-extension moment from the forward-held load, yet includes long-head triceps, which acts in the opposite direction. Transversus abdominis and all abdominals remain uninvolved, which contradicts the revision's own stated intent for postural_stabilization."
+    }
+  }
+}
