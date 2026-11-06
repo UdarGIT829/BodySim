@@ -21,7 +21,11 @@ func run_verification() -> void:
 	require(studio.get_node_or_null("Margin/Column/Workspace/CatalogPanel") != null, "Catalog panel must be editor-authored")
 	require(studio.get_node_or_null("Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel") != null, "Visual definition panel must be editor-authored")
 	require(studio.get_node_or_null("Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs/Advanced JSON/JsonEditor") is TextEdit, "Advanced JSON editor must be editor-authored")
-	require(studio.catalog.size() == 853, "Studio must load all 853 catalog-only records")
+	var catalog_only := 0
+	for source in JSON.parse_string(FileAccess.get_file_as_string("res://data/exercises/catalog/candidates.json")):
+		if source.get("status") == "catalog_only": catalog_only += 1
+	require(studio.catalog.size() == catalog_only and catalog_only > 800, "Studio must load every catalog-only record")
+	require(studio.get_node_or_null("%AutoButton") is Button and studio.get_node_or_null("%AutoRunModal") is AutoRunModal, "Studio must offer auto mode")
 	require(studio.schema.get("$id") == "bodysim.kinematic_authoring_response.v2", "Studio must load the versioned authoring schema")
 
 	var provider = PROVIDER_SCENE.instantiate()

@@ -155,3 +155,43 @@ def test_system_prompt_includes_the_generated_tracer_reference():
 def test_tracer_reference_is_deterministic():
     from src.exercises.llm.tracer_reference import tracer_reference
     assert tracer_reference() == tracer_reference()
+
+
+class RaisingClient:
+    """A client whose stream raises a real SDK error (nothing is sent)."""
+
+    def __init__(self, exc):
+        @contextmanager
+        def stream(**params):
+            raise exc
+            yield  # pragma: no cover
+
+        self.beta = SimpleNamespace(messages=SimpleNamespace(stream=stream))
+
+
+def _status_error(cls, status, message):
+    import httpx
+    response = httpx.Response(status, request=httpx.Request("POST", "https://api.anthropic.com/v1/messages"))
+    return cls(message, response=response, body=None)
+
+
+@pytest.mark.parametrize("cls_name,status,message,kind", [
+    ("BadRequestError", 400, "Your credit balance is too low to access the Anthropic API.", "credits"),
+    ("BadRequestError", 400, "messages: bad field", "request"),
+    ("RateLimitError", 429, "slow down", "rate_limit"),
+    ("InternalServerError", 529, "Overloaded", "overloaded"),
+    ("AuthenticationError", 401, "invalid x-api-key", "auth"),
+    ("NotFoundError", 404, "model not found", "model"),
+])
+def test_errors_carry_a_kind_for_auto_mode(cls_name, status, message, kind):
+    import anthropic
+    exc = _status_error(getattr(anthropic, cls_name), status, message)
+    result = cc.run_task({"task": "author", "context": "x"}, client=RaisingClient(exc))
+    assert not result["ok"] and result["error_kind"] == kind, result
+
+
+def test_network_errors_are_retryable():
+    import anthropic, httpx
+    exc = anthropic.APIConnectionError(request=httpx.Request("POST", "https://api.anthropic.com/v1/messages"))
+    result = cc.run_task({"task": "author", "context": "x"}, client=RaisingClient(exc))
+    assert result["error_kind"] == "network"

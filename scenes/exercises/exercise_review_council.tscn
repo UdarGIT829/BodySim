@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://src/exercises/review/exercise_review_council.gd" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/exercises/claude_provider.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/exercises/candidate_heatmap_view.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/exercises/auto_run_modal.tscn" id="4"]
 
 [node name="ExerciseReviewCouncil" type="Control"]
 layout_mode = 3
@@ -253,6 +254,12 @@ layout_mode = 2
 disabled = true
 text = "Request independent model review"
 
+[node name="AutoButton" type="Button" parent="Margin/Column/Workspace/EvidenceAndCouncil/Council/Scroll/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Auto mode…"
+tooltip_text = "Freeze, vote and promote every waiting candidate with the selected Claude reviewer. Your vote is recorded as an automatic approval; Claude can still reject."
+
 [node name="ModelResult" type="RichTextLabel" parent="Margin/Column/Workspace/EvidenceAndCouncil/Council/Scroll/Column"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 210)
@@ -292,3 +299,6 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Ready"
 autowrap_mode = 2
+
+[node name="AutoRunModal" parent="." instance=ExtResource("4")]
+unique_name_in_owner = true

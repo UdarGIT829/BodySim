@@ -64,6 +64,8 @@ func _ready() -> void:
 	%RejectAndClearButton.pressed.connect(reject_and_clear_selected)
 	%ClearRejectedButton.pressed.connect(clear_all_rejected)
 	%ShowClearedCheck.toggled.connect(func(_on: bool) -> void: populate_tree())
+	%AutoButton.pressed.connect(open_auto_mode)
+	%AutoRunModal.run_finished.connect(func(_state: String) -> void: reload_entries())
 	model_option.item_selected.connect(_on_model_selected)
 	custom_model_input.text_changed.connect(_on_custom_model_changed)
 	set_status("Select a passing candidate draft or frozen revision.", false)
@@ -386,3 +388,104 @@ func set_status(message: String, error: bool) -> void:
 func read_json(path: String):
 	var file := FileAccess.open(path, FileAccess.READ)
 	return JSON.parse_string(file.get_as_text()) if file else null
+
+
+# ── Auto mode ───────────────────────────────────────────────────────────────
+# For each waiting candidate: freeze it, record the owner's vote as an
+# automatic approval, ask the selected Claude reviewer, and promote it if the
+# council is unanimous. Claude can still reject; rejected candidates stay in
+# the queue with its findings, ready for the Studio to re-author.
+
+const AUTO_HUMAN_SUMMARY := "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+
+func open_auto_mode() -> void:
+	if not ClaudeSettings.has_api_key(): return set_status(ClaudeSettings.missing_key_message(), true)
+	if model_id.strip_edges().is_empty(): return set_status("Choose a Claude model before starting auto mode.", true)
+	if provider.is_busy(): return set_status("Wait for the current Claude review to finish first.", true)
+	%AutoRunModal.open_for({
+		"title": "Auto mode · Exercise Review Council",
+		"model": model_id,
+		"completed_label": "Promoted",
+		"description": "For each waiting candidate: freeze it, record your vote as an automatic approval, ask this Claude model to review it, and promote it if Claude accepts. Claude can still reject; rejections keep their findings for the Studio's next auto run. Cleared candidates are skipped. Commit and deploy stay manual.",
+		"queue": auto_council_queue,
+		"step": auto_review,
+		"label": func(entry: Dictionary) -> String: return auto_label(entry),
+		"snapshot": func() -> Dictionary: return AutoPipeline.layers(AutoPipeline.snapshot()),
+		"estimate_tokens": 25000,
+		"log_name": "council",
+	})
+
+## One entry per exercise: its saved draft if that is a live candidate (the
+## newest work), otherwise its waiting frozen revisions.
+func auto_council_queue() -> Array:
+	reload_entries()
+	var cleared := ReviewRevisionStoreScript.load_cleared()
+	var by_source := {}
+	for entry in entries:
+		if entry["kind"] != "draft": continue
+		var draft: Dictionary = entry["data"]
+		var source: Dictionary = catalog_by_source.get(String(draft.get("source_id", "")), {})
+		if AutoPipeline.source_state(source, draft, cleared) == "candidate":
+			by_source[String(draft.get("source_id", ""))] = [entry]
+	for entry in entries:
+		if entry["kind"] != "revision": continue
+		var revision: Dictionary = entry["data"]
+		var source_id := String(revision.get("source_id", ""))
+		var hash := String(revision.get("revision_sha256", ""))
+		if by_source.has(source_id) and by_source[source_id][0]["kind"] == "draft": continue
+		if ReviewRevisionStoreScript.is_cleared("revision", revision, cleared): continue
+		if not ReviewRevisionStoreScript.load_promotion(hash).is_empty(): continue
+		if catalog_by_source.get(source_id, {}).get("status", "") == "promoted": continue
+		if ReviewRevisionStoreScript.load_review(hash).get("status", "review_pending") in ["review_pending", "accepted"]:
+			if not by_source.has(source_id): by_source[source_id] = []
+			by_source[source_id].append(entry)
+	var queue: Array = []
+	for source_id in by_source: queue.append_array(by_source[source_id])
+	return queue
+
+func auto_label(entry: Dictionary) -> String:
+	var data: Dictionary = entry["data"]
+	var name := String(catalog_by_source.get(String(data.get("source_id", "")), {}).get("name", data.get("source_id", "?")))
+	return name if entry["kind"] == "draft" else "%s (revision %s)" % [name, String(data.get("revision_sha256", "")).left(12)]
+
+func auto_review(entry: Dictionary) -> Dictionary:
+	var revision: Dictionary = entry["data"]
+	if entry["kind"] == "draft":
+		var source: Dictionary = catalog_by_source.get(String(revision.get("source_id", "")), {})
+		var frozen: Dictionary = ReviewRevisionStoreScript.freeze_draft(revision, source)
+		if not frozen.get("ok", false): return {"outcome": "failed", "error": "Freeze blocked: %s" % " ".join(frozen.get("errors", []))}
+		revision = frozen["revision"]
+	if not ReviewRevisionStoreScript.verify_revision_hash(revision):
+		return {"outcome": "failed", "error": "Frozen revision content no longer matches its hash."}
+	var hash := String(revision.get("revision_sha256", ""))
+	selected_entry = {"kind": "revision", "data": revision}
+	review_context.text = ""
+	show_revision(revision)
+	var votes: Dictionary = ReviewRevisionStoreScript.load_review(hash).get("votes", {})
+	if not votes.has(ReviewRevisionStoreScript.HUMAN_MEMBER):
+		var human := {"decision": "accept", "summary": AUTO_HUMAN_SUMMARY, "blocking_findings": [], "non_blocking_findings": [],
+			"confidence": "high", "auto_mode": true, "recorded_at_unix": Time.get_unix_time_from_system()}
+		var saved: Dictionary = ReviewRevisionStoreScript.save_vote(hash, ReviewRevisionStoreScript.HUMAN_MEMBER, human, "")
+		if not saved.get("ok", false): return {"outcome": "failed", "error": saved.get("error", "Could not save the owner's vote.")}
+	var usage := {}
+	if not votes.has(ReviewRevisionStoreScript.MODEL_MEMBER):
+		provider.review(model_id, revision, "", build_contact_sheet_data_url(revision.get("source", {})))
+		var result: Dictionary = await provider.request_finished   # _on_model_review_succeeded saves the vote
+		usage = result.get("metadata", {}).get("usage", {})
+		if not result.get("ok", false):
+			return {"outcome": "failed", "error": String(result.get("error", "")), "error_kind": String(result.get("error_kind", "")), "usage": usage}
+	var review: Dictionary = ReviewRevisionStoreScript.load_review(hash)
+	load_votes(review)
+	var status := String(review.get("status", ""))
+	if status == "changes_requested":
+		var model: Dictionary = ReviewRevisionStoreScript.model_vote(review.get("votes", {}))
+		return {"outcome": "rejected_by_claude", "usage": usage, "message": String(model.get("summary", ""))}
+	if status != "accepted":
+		return {"outcome": "failed", "usage": usage, "error": "Council status is %s after both votes." % status}
+	var report: Dictionary = ReviewRevisionStoreScript.promote(revision)
+	load_votes(ReviewRevisionStoreScript.load_review(hash))
+	if not report.get("ok", false):
+		return {"outcome": "promotion_blocked", "usage": usage, "message": " ".join(report.get("errors", []))}
+	# Promotion changes the catalog; keep the source lookup current.
+	load_support_files()
+	return {"outcome": "promoted", "usage": usage, "message": "%s, %s muscles mapped" % [report.get("exercise_id", ""), report.get("mapped_muscles", "?")]}

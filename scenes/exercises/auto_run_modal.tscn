@@ -1,0 +1,177 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://src/exercises/auto/auto_run_modal.gd" id="1"]
+[ext_resource type="Script" path="res://src/exercises/auto/layered_progress_bar.gd" id="2"]
+
+[sub_resource type="StyleBoxFlat" id="TokenFill"]
+bg_color = Color(0.36, 0.62, 0.86, 1)
+
+[sub_resource type="StyleBoxFlat" id="TokenTrack"]
+bg_color = Color(0.106, 0.133, 0.173, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.29, 0.337, 0.4, 1)
+
+[node name="AutoRunModal" type="Window"]
+title = "Auto mode"
+initial_position = 2
+size = Vector2i(820, 720)
+visible = false
+transient = true
+exclusive = true
+min_size = Vector2i(640, 520)
+script = ExtResource("1")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0745, 0.0941, 0.1216, 1)
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 14
+
+[node name="Column" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="StateLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Ready"
+
+[node name="ModelLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Model: —"
+
+[node name="DescriptionLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+modulate = Color(0.66, 0.74, 0.82, 1)
+autowrap_mode = 3
+
+[node name="Settings" type="HBoxContainer" parent="Margin/Column"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BudgetLabel" type="Label" parent="Margin/Column/Settings"]
+layout_mode = 2
+text = "Token budget"
+
+[node name="BudgetSpin" type="SpinBox" parent="Margin/Column/Settings"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+min_value = 10000.0
+max_value = 1e+09
+step = 1000.0
+value = 2e+06
+tooltip_text = "Auto mode stops before a request that would go past this many tokens (input, output, cache reads and writes). Anthropic doesn't report your remaining credit balance; if the API says the balance is too low, auto mode stops as Out of API credits."
+
+[node name="MaxItemsLabel" type="Label" parent="Margin/Column/Settings"]
+layout_mode = 2
+text = "   Stop after"
+
+[node name="MaxItemsSpin" type="SpinBox" parent="Margin/Column/Settings"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+max_value = 10000.0
+suffix = "exercises"
+tooltip_text = "0 = no limit; run until the queue, the budget or the credits run out."
+
+[node name="MaxItemsHint" type="Label" parent="Margin/Column/Settings"]
+layout_mode = 2
+modulate = Color(0.66, 0.74, 0.82, 1)
+text = "(0 = no limit)"
+
+[node name="TokenTitle" type="Label" parent="Margin/Column"]
+layout_mode = 2
+text = "Tokens remaining"
+
+[node name="TokenBar" type="ProgressBar" parent="Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_styles/background = SubResource("TokenTrack")
+theme_override_styles/fill = SubResource("TokenFill")
+max_value = 2e+06
+value = 2e+06
+show_percentage = false
+
+[node name="TokenLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+modulate = Color(0.66, 0.74, 0.82, 1)
+autowrap_mode = 3
+
+[node name="PipelineTitle" type="Label" parent="Margin/Column"]
+layout_mode = 2
+text = "Catalog progress"
+
+[node name="PipelineBar" type="Control" parent="Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+script = ExtResource("2")
+
+[node name="LegendLabel" type="RichTextLabel" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="RunLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="CurrentLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+modulate = Color(0.89, 0.67, 0.34, 1)
+autowrap_mode = 3
+
+[node name="LogText" type="RichTextLabel" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+scroll_following = true
+selection_enabled = true
+
+[node name="Buttons" type="HBoxContainer" parent="Margin/Column"]
+layout_mode = 2
+alignment = 2
+theme_override_constants/separation = 8
+
+[node name="StartButton" type="Button" parent="Margin/Column/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start auto mode"
+
+[node name="StopButton" type="Button" parent="Margin/Column/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Stop after this exercise"
+
+[node name="CloseButton" type="Button" parent="Margin/Column/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Close"

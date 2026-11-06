@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bwpew5xjdmm1t" path="res://src/exercises/authoring/definition_studio_controller.gd" id="1_studio"]
 [ext_resource type="PackedScene" path="res://scenes/exercises/claude_provider.tscn" id="2_provider"]
 [ext_resource type="PackedScene" path="res://scenes/exercises/candidate_trace_gate.tscn" id="3_gate"]
+[ext_resource type="PackedScene" path="res://scenes/exercises/auto_run_modal.tscn" id="4_auto"]
 
 [node name="KinematicDefinitionStudio" type="Control" unique_id=274420018]
 layout_mode = 3
@@ -88,6 +89,12 @@ layout_mode = 2
 size_flags_horizontal = 3
 modulate = Color(0.55, 0.73, 0.86, 1)
 text = "Requests will use:"
+
+[node name="AutoButton" type="Button" parent="Margin/Column/ModelRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Auto mode…"
+tooltip_text = "Draft catalog exercises one after another with the selected model, saving each passing draft for the council. Exercises the council sent back go first, with their feedback."
 
 [node name="Workspace" type="HSplitContainer" parent="Margin/Column" unique_id=610365272]
 layout_mode = 2
@@ -473,3 +480,6 @@ text = "Submit definition candidate"
 [node name="ClaudeProvider" parent="." unique_id=89833761 instance=ExtResource("2_provider")]
 
 [node name="CandidateTraceGate" parent="." instance=ExtResource("3_gate")]
+
+[node name="AutoRunModal" parent="." instance=ExtResource("4_auto")]
+unique_name_in_owner = true

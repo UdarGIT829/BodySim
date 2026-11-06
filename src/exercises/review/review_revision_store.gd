@@ -19,19 +19,8 @@ static func freeze_draft(draft: Dictionary, source: Dictionary) -> Dictionary:
 	var eligibility := validate_eligibility(draft)
 	if not eligibility.is_empty():
 		return {"ok": false, "errors": eligibility}
-	var payload := {
-		"format_version": 1,
-		"source_id": draft.get("source_id", ""),
-		"catalog_id": draft.get("catalog_id", ""),
-		"source_snapshot_sha256": draft.get("source_snapshot_sha256", ""),
-		"source": source,
-		"additional_context": draft.get("additional_context", ""),
-		"authoring_response": draft.get("authoring_response", {}),
-		"authoring_provider_metadata": draft.get("provider_metadata", {}),
-		"candidate_trace_report": draft.get("candidate_trace_report", {}),
-	}
-	var canonical := JSON.stringify(sort_json(payload))
-	var hash := canonical.sha256_text()
+	var payload := revision_payload(draft, source)
+	var hash := payload_hash(payload)
 	var revision := payload.duplicate(true)
 	revision["revision_sha256"] = hash
 	revision["revision_id"] = "%s@%s" % [draft.get("source_id", "candidate"), hash.left(12)]
@@ -47,6 +36,29 @@ static func freeze_draft(draft: Dictionary, source: Dictionary) -> Dictionary:
 		return {"ok": false, "errors": ["Could not write frozen revision: %s" % path]}
 	file.store_string(JSON.stringify(revision, "  "))
 	return {"ok": true, "path": path, "revision": revision, "created": true}
+
+
+static func revision_payload(draft: Dictionary, source: Dictionary) -> Dictionary:
+	return {
+		"format_version": 1,
+		"source_id": draft.get("source_id", ""),
+		"catalog_id": draft.get("catalog_id", ""),
+		"source_snapshot_sha256": draft.get("source_snapshot_sha256", ""),
+		"source": source,
+		"additional_context": draft.get("additional_context", ""),
+		"authoring_response": draft.get("authoring_response", {}),
+		"authoring_provider_metadata": draft.get("provider_metadata", {}),
+		"candidate_trace_report": draft.get("candidate_trace_report", {}),
+	}
+
+
+static func payload_hash(payload: Dictionary) -> String:
+	return JSON.stringify(sort_json(payload)).sha256_text()
+
+
+## The hash this draft would freeze to, without writing anything.
+static func draft_revision_hash(draft: Dictionary, source: Dictionary) -> String:
+	return payload_hash(revision_payload(draft, source))
 
 
 static func validate_eligibility(draft: Dictionary) -> Array[String]:

@@ -1,0 +1,168 @@
+extends SceneTree
+
+## Auto-mode check. Writes drafts, votes and promotions, so it only runs in
+## the disposable copy made by tools/exercises/verify_auto_mode.sh, with
+## tools/exercises/fake_claude_bridge.py standing in for Claude.
+
+const ModalScene := preload("res://scenes/exercises/auto_run_modal.tscn")
+const StudioScene := preload("res://scenes/exercises/kinematic_definition_studio.tscn")
+const CouncilScene := preload("res://scenes/exercises/exercise_review_council.tscn")
+const FAKE_BRIDGE := "res://tools/exercises/fake_claude_bridge.py"
+const FAKE_USAGE := 16500   # tokens per fake request
+
+var failures: Array[String] = []
+
+
+func require(condition: bool, message: String) -> void:
+	if not condition:
+		failures.append(message)
+
+
+func _initialize() -> void:
+	if OS.get_environment("BODYSIM_SANDBOX") != "1":
+		push_error("verify_auto_mode.gd modifies data/; run tools/exercises/verify_auto_mode.sh instead.")
+		quit(2)
+		return
+	call_deferred("run")
+
+
+func run() -> void:
+	check_pipeline_rules()
+	await check_runner()
+	await check_studio_auto()
+	await check_council_auto()
+	if failures.is_empty():
+		print("Auto mode passed: runner (budget, credits, retries, fatal, limit, stop, failure streak), pipeline states, studio and council runs")
+		quit(0)
+	else:
+		for failure in failures:
+			push_error(failure)
+		quit(1)
+
+
+func check_pipeline_rules() -> void:
+	var cleared := {"drafts": {"Cleared_One": {"draft_saved_at_unix": 10.0}}, "revisions": {}}
+	require(AutoPipeline.source_state({"status": "promoted"}, {}, cleared) == "promoted", "promoted source")
+	require(AutoPipeline.source_state({}, {}, cleared) == "new", "no draft is new")
+	require(AutoPipeline.source_state({}, {"source_id": "X", "status": "review_rejected"}, cleared) == "needs_rework", "rejected draft needs rework")
+	require(AutoPipeline.source_state({}, {"source_id": "X", "status": "authoring_draft"}, cleared) == "attempted", "gate failure is attempted")
+	require(AutoPipeline.source_state({}, {"source_id": "Cleared_One", "status": "review_rejected", "saved_at_unix": 5.0}, cleared) == "cleared", "cleared draft is left alone")
+	require(AutoPipeline.total_tokens({"input_tokens": 1, "output_tokens": 2, "cache_read_input_tokens": 3, "cache_creation_input_tokens": 4}) == 10, "token total")
+	require(is_equal_approx(AutoPipeline.estimate_cost("claude-sonnet-5-5", {"input_tokens": 1000000, "output_tokens": 1000000}), 12.0), "Sonnet 5.5 cost")
+	require(AutoPipeline.estimate_cost("claude-unknown", {"input_tokens": 1}) < 0.0, "unknown model has no estimate")
+	var layers := AutoPipeline.layers(AutoPipeline.snapshot())
+	require(layers["done"] + layers["candidate"] + layers["remaining"] == AutoPipeline.load_catalog().size(), "layers cover the catalog")
+
+
+func make_modal() -> AutoRunModal:
+	var modal: AutoRunModal = ModalScene.instantiate()
+	root.add_child(modal)
+	modal.persist_settings = false
+	modal.retry_delay = func(_attempt: int) -> float: return 0.0
+	return modal
+
+
+## Runs a fake queue of n items through `step`.
+func run_fake(modal: AutoRunModal, n: int, step: Callable, budget := 1000000, max_items := 0) -> void:
+	var items: Array = []
+	for index in n: items.append(index)
+	modal.open_for({"model": "claude-sonnet-5-5", "queue": func() -> Array: return items, "step": step,
+		"label": func(item) -> String: return "item %d" % item,
+		"snapshot": func() -> Dictionary: return {"done": 1, "candidate": 2, "remaining": 3}, "estimate_tokens": 5000})
+	modal.budget_spin.value = budget
+	modal.max_items_spin.value = max_items
+	await modal.start()
+
+
+func check_runner() -> void:
+	var modal := make_modal()
+	var ok_step := func(_item) -> Dictionary:
+		await process_frame
+		return {"outcome": "drafted", "usage": {"input_tokens": 7000}}
+	await run_fake(modal, 3, ok_step, 20000)
+	require(modal.state == "out_of_tokens" and modal.processed == 2, "budget must stop before the third item (%s, %d)" % [modal.state, modal.processed])
+	require(modal.token_bar.value == 6000, "token bar must show what's left")
+
+	await run_fake(modal, 3, ok_step, 1000000, 1)
+	require(modal.state == "done" and modal.processed == 1, "item limit")
+
+	await run_fake(modal, 3, func(_item) -> Dictionary: return {"outcome": "failed", "error_kind": "credits", "error": "no credit"})
+	require(modal.state == "out_of_credits" and modal.processed == 0, "credit errors stop the run")
+
+	await run_fake(modal, 3, func(_item) -> Dictionary: return {"outcome": "failed", "error_kind": "auth", "error": "bad key"})
+	require(modal.state == "error" and modal.processed == 0, "auth errors stop the run")
+
+	var calls := [0]
+	var flaky := func(_item) -> Dictionary:
+		calls[0] += 1
+		return {"outcome": "failed", "error_kind": "rate_limit"} if calls[0] == 1 else {"outcome": "drafted"}
+	await run_fake(modal, 1, flaky)
+	require(modal.state == "done" and calls[0] == 2 and modal.outcomes.get("drafted") == 1, "rate limits are retried")
+
+	await run_fake(modal, 8, func(_item) -> Dictionary: return {"outcome": "failed", "error": "boom"})
+	require(modal.state == "error" and modal.processed == AutoRunModal.MAX_FAILURES_IN_A_ROW, "a failure streak stops the run")
+
+	var stopper := func(_item) -> Dictionary:
+		modal.request_stop()
+		return {"outcome": "drafted"}
+	await run_fake(modal, 3, stopper)
+	require(modal.state == "stopped" and modal.processed == 1, "stop finishes the current item, then stops")
+	require(modal.legend_label.get_parsed_text().contains("Has a candidate 2"), "legend shows the layers")
+	modal.queue_free()
+
+
+func check_studio_auto() -> void:
+	var studio = StudioScene.instantiate()
+	root.add_child(studio)
+	await process_frame
+	studio.provider.python_executable = ProjectSettings.globalize_path(FAKE_BRIDGE)
+	OS.set_environment("FAKE_CLAUDE_MODE", "ok")
+	var modal: AutoRunModal = studio.get_node("%AutoRunModal")
+	modal.persist_settings = false
+	var queue: Array = AutoPipeline.studio_queue(studio.catalog)
+	require(queue.size() >= 2, "studio queue must have work")
+	studio.open_auto_mode()
+	require(modal.visible and modal.model_label.text.contains(studio.model_id), "modal shows the selected model")
+	modal.max_items_spin.value = 2
+	await modal.start()
+	require(modal.state == "done" and modal.outcomes.get("drafted") == 2, "studio auto must draft two exercises: %s %s" % [modal.state, modal.outcomes])
+	require(modal.tokens_used() == 2 * FAKE_USAGE, "studio tokens counted")
+	for source in queue.slice(0, 2):
+		var draft := CandidateRepository.load_draft(String(source["source_id"]))
+		require(draft.get("status") == "definition_candidate", "%s must be saved as a candidate" % source["source_id"])
+
+	OS.set_environment("FAKE_CLAUDE_MODE", "credits")
+	await modal.start()
+	require(modal.state == "out_of_credits" and modal.processed == 0, "studio must stop when credits run out")
+	OS.set_environment("FAKE_CLAUDE_MODE", "ok")
+	studio.queue_free()
+	await process_frame
+
+
+func check_council_auto() -> void:
+	var council = CouncilScene.instantiate()
+	root.add_child(council)
+	await process_frame
+	council.provider.python_executable = ProjectSettings.globalize_path(FAKE_BRIDGE)
+	var queue: Array = council.auto_council_queue()
+	require(queue.size() >= 2, "council queue must have at least the two new drafts")
+	var accepted_source := String(queue[0]["data"].get("source_id", ""))
+	OS.set_environment("FAKE_ACCEPT_SOURCE", accepted_source)
+	var before: int = AutoPipeline.layers(AutoPipeline.snapshot())["done"]
+	var modal: AutoRunModal = council.get_node("%AutoRunModal")
+	modal.persist_settings = false
+	council.open_auto_mode()
+	require(modal.legend_label.get_parsed_text().contains("Promoted"), "council modal labels the first layer Promoted")
+	await modal.start()
+	require(modal.state == "done", "council run must finish: %s" % modal.state)
+	require(modal.outcomes.get("promoted") == 1, "exactly the accepted exercise is promoted: %s" % [modal.outcomes])
+	require(int(modal.outcomes.get("rejected_by_claude", 0)) == queue.size() - 1, "Claude's rejections stand: %s" % [modal.outcomes])
+	require(AutoPipeline.layers(AutoPipeline.snapshot())["done"] == before + 1, "promoted layer grows by one")
+	for hash in DirAccess.get_files_at(ReviewRevisionStore.REVIEW_DIRECTORY):
+		var review := ReviewRevisionStore.read_json("%s/%s" % [ReviewRevisionStore.REVIEW_DIRECTORY, hash])
+		var human: Dictionary = review.get("votes", {}).get("human_owner", {})
+		if human.get("auto_mode", false):
+			require(human.get("decision") == "accept", "auto mode records the owner's approval")
+	require(council.auto_council_queue().is_empty(), "nothing waits after the run")
+	council.queue_free()
+	await process_frame

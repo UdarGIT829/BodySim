@@ -55,7 +55,19 @@ DATA_URL = re.compile(r"^data:(image/(?:jpeg|png|gif|webp));base64,(.+)$", re.S)
 
 
 class ClaudeTaskError(Exception):
-    """A request that could not produce a usable structured response."""
+    """A request that could not produce a usable structured response.
+
+    ``kind`` lets unattended callers (auto mode) decide what to do: wait and
+    retry (rate_limit, overloaded, network), stop (credits, auth, model), or
+    move on to the next exercise (anything else)."""
+
+    def __init__(self, message: str, kind: str = "request"):
+        super().__init__(message)
+        self.kind = kind
+
+
+def _failure(exc: "ClaudeTaskError") -> Dict[str, Any]:
+    return {"ok": False, "error": str(exc), "error_kind": exc.kind}
 
 
 # ── Public entry point ──────────────────────────────────────────────────────
@@ -67,7 +79,7 @@ def run_task(request: Dict[str, Any], client: Any = None) -> Dict[str, Any]:
     try:
         return _run(request, client)
     except ClaudeTaskError as exc:
-        return {"ok": False, "error": str(exc)}
+        return _failure(exc)
 
 
 def _run(request: Dict[str, Any], client: Any) -> Dict[str, Any]:
@@ -214,19 +226,23 @@ def _call(client: Any, params: Dict[str, Any]) -> Any:
         with client.beta.messages.stream(**params) as stream:
             return stream.get_final_message()
     except anthropic.AuthenticationError as exc:
-        raise ClaudeTaskError("Anthropic rejected the API key. Set ANTHROPIC_API_KEY or [anthropic] api_key in user settings.") from exc
+        raise ClaudeTaskError("Anthropic rejected the API key. Set ANTHROPIC_API_KEY or [anthropic] api_key in user settings.", "auth") from exc
     except anthropic.PermissionDeniedError as exc:
-        raise ClaudeTaskError(f"This API key can't use {params['model']}: {exc.message}") from exc
+        raise ClaudeTaskError(f"This API key can't use {params['model']}: {exc.message}", "model") from exc
     except anthropic.NotFoundError as exc:
-        raise ClaudeTaskError(f"Unknown model {params['model']!r}: {exc.message}") from exc
-    except anthropic.BadRequestError as exc:
-        raise ClaudeTaskError(f"Request rejected: {exc.message}") from exc
+        raise ClaudeTaskError(f"Unknown model {params['model']!r}: {exc.message}", "model") from exc
     except anthropic.RateLimitError as exc:
-        raise ClaudeTaskError("Rate limited by the Anthropic API; wait a minute and retry.") from exc
+        raise ClaudeTaskError("Rate limited by the Anthropic API; wait a minute and retry.", "rate_limit") from exc
     except anthropic.APIStatusError as exc:
-        raise ClaudeTaskError(f"Anthropic API error {exc.status_code}: {exc.message}") from exc
+        # The API reports an empty prepaid balance as a 400 "credit balance is too low".
+        if "credit balance" in str(exc.message).lower():
+            raise ClaudeTaskError(f"Out of API credits: {exc.message}", "credits") from exc
+        if isinstance(exc, anthropic.BadRequestError):
+            raise ClaudeTaskError(f"Request rejected: {exc.message}") from exc
+        kind = "overloaded" if exc.status_code in (500, 502, 503, 504, 529) else "request"
+        raise ClaudeTaskError(f"Anthropic API error {exc.status_code}: {exc.message}", kind) from exc
     except anthropic.APIConnectionError as exc:
-        raise ClaudeTaskError("Could not reach the Anthropic API (network error).") from exc
+        raise ClaudeTaskError("Could not reach the Anthropic API (network error).", "network") from exc
 
 
 def _parse(response: Any, task: str, model: str, effort: str) -> Dict[str, Any]:
@@ -283,7 +299,7 @@ def call_structured(system_text: str, schema: Dict[str, Any], content: List[Dict
             client = make_client(settings_path)
         return _parse(_call(client, params), label, model, effort)
     except ClaudeTaskError as exc:
-        return {"ok": False, "error": str(exc)}
+        return _failure(exc)
 
 
 def models_payload() -> Dict[str, Any]:

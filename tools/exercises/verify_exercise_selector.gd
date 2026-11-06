@@ -12,6 +12,9 @@ func _initialize() -> void:
 	call_deferred("run_verification")
 
 
+var expected_summary := ""
+
+
 func run_verification() -> void:
 	var selector = SELECTOR_SCENE.instantiate()
 	selector.exercise_selected.connect(func(exercise_id: String) -> void: emitted_exercise_id = exercise_id)
@@ -20,11 +23,20 @@ func run_verification() -> void:
 	root.add_child(selector)
 	await process_frame
 
-	require(selector.records_by_id.size() == 874, "Selector must represent all 873 source records plus the split squat variant")
-	require(selector.image_modal.media_by_exercise.size() == 894, "Image modal must map all source records and promoted variants")
-	require(selector.result_count == 874, "Empty search must show the complete merged catalog")
-	require(selector.visualizable_result_count == 21, "Selector must retain all 21 visualizable variants")
-	require(selector.catalog_only_result_count == 853, "Selector must label all 853 unpromoted source records catalog only")
+	# Expected counts come from the data, so promoting an exercise keeps this passing.
+	var catalog: Array = JSON.parse_string(FileAccess.get_file_as_string("res://data/exercises/catalog/candidates.json"))
+	var visualizable: int = JSON.parse_string(FileAccess.get_file_as_string("res://data/exercises/exercises.json")).size()
+	var catalog_only := 0
+	for source in catalog:
+		if source.get("status") == "catalog_only": catalog_only += 1
+	var promoted_sources := catalog.size() - catalog_only
+	expected_summary = "%d visualizable variants + %d catalog-only records" % [visualizable, catalog_only]
+	# Promoted sources merge into their exercise; extra variants (e.g. split squat sides) add records.
+	require(selector.records_by_id.size() == catalog.size() + visualizable - promoted_sources, "Selector must represent every source record plus the extra visualizable variants")
+	require(selector.image_modal.media_by_exercise.size() == catalog.size() + visualizable, "Image modal must map all source records and promoted variants")
+	require(selector.result_count == selector.records_by_id.size(), "Empty search must show the complete merged catalog")
+	require(selector.visualizable_result_count == visualizable, "Selector must retain all visualizable variants")
+	require(selector.catalog_only_result_count == catalog_only, "Selector must label every unpromoted source record catalog only")
 	selector.populate_exercises("rdl")
 	require(selector.result_count >= 1, "Search must include exercise aliases")
 	selector.populate_exercises("vertical pull")
@@ -68,7 +80,7 @@ func run_verification() -> void:
 	require(not selector.select_exercise("exercise.not_supported"), "Selector must reject unsupported IDs")
 
 	if failures.is_empty():
-		print("Exercise selector passed: 21 visualizable variants + 853 catalog-only records")
+		print("Exercise selector passed: %s" % expected_summary)
 		quit(0)
 	else:
 		for failure in failures:

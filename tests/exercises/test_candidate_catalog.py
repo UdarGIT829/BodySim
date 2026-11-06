@@ -25,11 +25,14 @@ def test_candidate_catalog_represents_every_source_record_once():
     assert {item["source_id"] for item in candidates} == {
         item["id"] for item in sources
     }
-    assert Counter(item["status"] for item in candidates) == {
-        "catalog_only": 853,
-        "promoted": 20,
-    }
-    assert sum(len(item["body_sim_exercise_ids"]) for item in candidates) == 21
+    # Promotion moves sources from catalog_only to promoted; nothing else exists.
+    statuses = Counter(item["status"] for item in candidates)
+    assert set(statuses) == {"catalog_only", "promoted"}
+    assert statuses["catalog_only"] + statuses["promoted"] == 873 and statuses["promoted"] >= 20
+    # Every promoted source names its BodySim exercises (one source can map to several variants).
+    linked = sum(len(item["body_sim_exercise_ids"]) for item in candidates)
+    assert linked >= statuses["promoted"]
+    assert all(item["body_sim_exercise_ids"] for item in candidates if item["status"] == "promoted")
 
 
 def test_catalog_only_records_cannot_claim_body_sim_profiles():
@@ -45,8 +48,9 @@ def test_media_manifest_covers_every_source_image_and_selector_identity():
     manifest = load(MEDIA_PATH)
     by_exercise = {entry["exercise_id"]: entry for entry in manifest}
 
-    assert len(manifest) == 894  # 873 source identities + 21 canonical identities
-    assert len(by_exercise) == 894
+    canonical = load(ROOT / "data/exercises/exercises.json")
+    assert len(manifest) == 873 + len(canonical)  # source identities + canonical identities
+    assert len(by_exercise) == len(manifest)
     assert all(candidate["catalog_id"] in by_exercise for candidate in candidates)
 
     resources = {

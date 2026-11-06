@@ -79,12 +79,13 @@ def _set_vote(root: Path, member: str, decision: str) -> None:
 
 
 def test_promotes_accepted_revision(sandbox):
+    before = len(json.loads((sandbox / promotion.REL_EXERCISES).read_text()))
     report = promote_revision(HASH, root=sandbox, now=1_800_000_000)
     assert report["ok"], report
     assert report["exercise_id"] == EXERCISE_ID
 
     exercises = json.loads((sandbox / promotion.REL_EXERCISES).read_text())
-    assert exercises[-1]["id"] == EXERCISE_ID and len(exercises) == 22
+    assert exercises[-1]["id"] == EXERCISE_ID and len(exercises) == before + 1
     profile = json.loads((sandbox / promotion.REL_PROFILES).read_text())["profiles"][EXERCISE_ID]
     assert len(profile["muscles"]) == 466
     assert profile["profile_version"] == 1

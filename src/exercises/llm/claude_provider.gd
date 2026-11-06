@@ -9,6 +9,10 @@ signal generation_succeeded(response: Dictionary, metadata: Dictionary)
 signal generation_failed(message: String)
 signal review_succeeded(response: Dictionary, metadata: Dictionary)
 signal review_failed(message: String)
+## Emitted after the task-specific signal with the bridge's whole result:
+## {"ok", "task", "value", "metadata" (incl. usage), "error", "error_kind"}.
+## Auto mode awaits this one.
+signal request_finished(result: Dictionary)
 
 const BRIDGE_SCRIPT := "res://tools/exercises/run_claude.py"
 
@@ -93,6 +97,9 @@ func _finish(task: String, result: Dictionary) -> void:
 	else:
 		if ok: review_succeeded.emit(result.get("value", {}), result.get("metadata", {}))
 		else: review_failed.emit(String(result.get("error", "Claude request failed.")))
+	var full := result.duplicate()
+	full["task"] = task
+	request_finished.emit(full)
 
 
 func _exit_tree() -> void:

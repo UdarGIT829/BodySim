@@ -87,6 +87,7 @@ func _ready() -> void:
 	%DiscardButton.pressed.connect(discard_changes)
 	generate_button.pressed.connect(generate_proposal)
 	submit_button.pressed.connect(submit_candidate)
+	%AutoButton.pressed.connect(open_auto_mode)
 	set_status("Select a catalog-only exercise to begin.", false)
 
 
@@ -128,10 +129,10 @@ func configure_model_selector() -> void:
 
 
 func _on_model_selected(_index: int) -> void:
-	var model_id := String(model_option.get_selected_metadata())
-	custom_model_input.visible = model_id == "custom"
-	if model_id != "custom":
-		model_id = model_id
+	var selected := String(model_option.get_selected_metadata())
+	custom_model_input.visible = selected == "custom"
+	if selected != "custom":
+		model_id = selected
 		save_model_preference()
 	elif custom_model_input.text.strip_edges().is_empty():
 		custom_model_input.grab_focus()
@@ -726,3 +727,58 @@ func show_diff() -> void:
 func set_status(message: String, is_error: bool) -> void:
 	status_label.text = message
 	status_label.modulate = Color("e57373") if is_error else Color("9fb3c8")
+
+
+# ── Auto mode ───────────────────────────────────────────────────────────────
+
+func open_auto_mode() -> void:
+	if not ClaudeSettings.has_api_key():
+		return set_status(ClaudeSettings.missing_key_message(), true)
+	if model_id.strip_edges().is_empty():
+		return set_status("Choose a Claude model before starting auto mode.", true)
+	if provider.is_busy():
+		return set_status("Wait for the current Claude request to finish first.", true)
+	%AutoRunModal.open_for({
+		"title": "Auto mode · Kinematic Definition Studio",
+		"model": model_id,
+		"completed_label": "Completed",
+		"description": "Drafts catalog exercises one at a time with this model and saves each one for the Review Council. Exercises the council sent back go first, with its feedback in the request. Drafts that fail the candidate gate are saved for you to look at and are not retried.",
+		"queue": func() -> Array: return AutoPipeline.studio_queue(catalog),
+		"step": auto_author,
+		"label": func(source: Dictionary) -> String: return String(source.get("name", source.get("source_id", ""))),
+		"snapshot": func() -> Dictionary: return AutoPipeline.layers(AutoPipeline.snapshot()),
+		"estimate_tokens": 30000,
+		"log_name": "studio",
+	})
+
+
+## One auto-mode step: the same as selecting the exercise, pressing
+## Generate, then Save draft.
+func auto_author(source: Dictionary) -> Dictionary:
+	selected_source = source
+	baseline_response = {}
+	context_input.text = ""
+	show_source()
+	discard_changes()
+	load_existing_draft()
+	var image := build_contact_sheet_data_url(source)
+	if image.is_empty():
+		return {"outcome": "failed", "error": "No source images to send."}
+	generate_button.disabled = true
+	provider.generate(model_id, build_source_context(), image)
+	var result: Dictionary = await provider.request_finished
+	var usage: Dictionary = result.get("metadata", {}).get("usage", {})
+	if not result.get("ok", false):
+		return {"outcome": "failed", "error": String(result.get("error", "")), "error_kind": String(result.get("error_kind", "")), "usage": usage}
+	save_draft()   # re-validates through the candidate gate, then saves
+	var saved := CandidateRepository.load_draft(String(source.get("source_id", "")))
+	if saved.get("status", "") == "definition_candidate":
+		var roles: Dictionary = last_trace_report.get("summary", {}).get("role_counts", {})
+		return {"outcome": "drafted", "usage": usage, "message": "%d primary, %d synergist, %d stabilizer" % [
+			int(roles.get("primary", 0)), int(roles.get("synergist", 0)), int(roles.get("stabilizer", 0))]}
+	var classification := String(current_response.get("classification", ""))
+	var errors: Array = saved.get("validation_errors", [])
+	if classification in ["unsupported", "ambiguous"]:
+		var reasons: Array = current_response.get("classification_reasons", [])
+		return {"outcome": classification, "usage": usage, "message": String(reasons[0]) if not reasons.is_empty() else ""}
+	return {"outcome": "gate_failed", "usage": usage, "message": String(errors[0]) if not errors.is_empty() else ""}
