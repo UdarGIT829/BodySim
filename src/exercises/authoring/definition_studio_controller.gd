@@ -127,6 +127,7 @@ func save_model_preference() -> void:
 	if openai_model.strip_edges().is_empty():
 		return
 	var settings := ConfigFile.new()
+	settings.load(SETTINGS_PATH)   # keep the API key and other settings in this file
 	settings.set_value("openai", "authoring_model", openai_model)
 	settings.save(SETTINGS_PATH)
 
