@@ -66,6 +66,10 @@ var current_response: Dictionary = {}
 var provider_metadata: Dictionary = {}
 var baseline_response: Dictionary = {}
 var last_trace_report: Dictionary = {}
+var preview_window: Window = null
+var preview_view: Control = null
+var preview_summary: Label = null
+const PREVIEW_VIEW_SCENE := preload("res://scenes/exercises/candidate_heatmap_view.tscn")
 var joint_actions: Array[Dictionary] = []
 
 
@@ -88,6 +92,7 @@ func _ready() -> void:
 	%SyncJsonButton.pressed.connect(sync_json_from_form)
 	%ApplyJsonButton.pressed.connect(apply_json_editor)
 	%ValidateButton.pressed.connect(validate_current)
+	%PreviewButton.pressed.connect(preview_candidate)
 	%SaveDraftButton.pressed.connect(save_draft)
 	%DiscardButton.pressed.connect(discard_changes)
 	generate_button.pressed.connect(generate_proposal)
@@ -616,6 +621,50 @@ func validate_current() -> Array[String]:
 			gate_message += " (+%d more)" % (errors.size() - 1)
 	set_status(gate_message, not errors.is_empty())
 	return errors
+
+
+## Validates the current form (so the preview reflects unsaved edits) and
+## shows the resulting 466-muscle profile on the full-body model.
+func preview_candidate() -> void:
+	var errors := validate_current()
+	var profile: Dictionary = last_trace_report.get("profile", {})
+	if not errors.is_empty() or profile.is_empty():
+		set_status("Preview needs a passing candidate. %s" % (errors[0] if not errors.is_empty() else "No trace profile was produced."), true)
+		return
+	ensure_preview_window()
+	var definition := build_definition_from_form()
+	var summary: Dictionary = last_trace_report.get("summary", {})
+	var roles: Dictionary = summary.get("role_counts", {})
+	preview_window.title = "Candidate preview · %s · %s" % [definition.get("name", ""), definition.get("variant", "")]
+	preview_summary.text = "%s · %d of 466 muscles engaged · primary %d · synergist %d · stabilizer %d   (unsaved candidate, not a canonical exercise)" % [
+		definition.get("id", ""), int(summary.get("mapped_muscles", 0)),
+		int(roles.get("primary", 0)), int(roles.get("synergist", 0)), int(roles.get("stabilizer", 0)),
+	]
+	preview_view.show_profile(profile)
+	var available := get_viewport().get_visible_rect().size
+	preview_window.size = Vector2i(int(minf(1280.0, available.x * 0.9)), int(minf(820.0, available.y * 0.9)))
+	preview_window.popup_centered()
+
+
+func ensure_preview_window() -> void:
+	if preview_window != null and is_instance_valid(preview_window):
+		return
+	preview_window = Window.new()
+	preview_window.size = Vector2i(1280, 820)
+	preview_window.min_size = Vector2i(720, 480)
+	preview_window.wrap_controls = false
+	preview_window.close_requested.connect(preview_window.hide)
+	var column := VBoxContainer.new()
+	column.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	preview_summary = Label.new()
+	preview_summary.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	column.add_child(preview_summary)
+	preview_view = PREVIEW_VIEW_SCENE.instantiate()
+	preview_view.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	preview_view.stretch = true
+	column.add_child(preview_view)
+	preview_window.add_child(column)
+	add_child(preview_window)
 
 
 func clear_validation() -> void:
