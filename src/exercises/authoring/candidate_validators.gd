@@ -7,14 +7,20 @@ const CHAIN_TYPES := ["open_chain", "closed_chain"]
 const MOVEMENT_FAMILIES := ["squat", "hip_hinge", "horizontal_push", "vertical_push", "horizontal_pull", "vertical_pull", "loaded_carry", "elbow_flexion", "elbow_extension", "knee_extension", "knee_flexion", "ankle_plantarflexion", "trunk_flexion"]
 const STABILIZATION_DEMANDS := ["ankle_stability", "anterior_shoulder_stability", "anti_extension_hip", "anti_extension_spine", "anti_flexion_spine", "anti_rotation_torso", "elbow_joint_integrity", "elbow_stability", "femoral_head_stabilization", "glenohumeral_stabilization", "humeral_head_stabilization", "intra_abdominal_pressure", "knee_joint_stability", "lumbar_fascia_tension", "patellar_tracking", "pelvic_alignment", "pelvic_leveling_frontal", "postural_stabilization", "postural_sway_control", "scapular_anchoring", "scapular_retraction_stability", "scapular_stabilization"]
 const JOINT_ACTIONS := {
-	"ankle_joint": ["plantarflexion"],
+	"ankle_joint": ["dorsiflexion", "plantarflexion"],
+	"cervical_spine": ["extension", "flexion", "lateral_flexion", "rotation"],
 	"elbow_joint": ["extension", "flexion"],
-	"glenohumeral_joint": ["abduction", "adduction", "extension", "flexion", "horizontal_adduction", "internal_rotation"],
-	"hip_joint": ["abduction", "extension", "external_rotation", "flexion"],
-	"knee_joint": ["extension", "flexion"],
-	"lumbar_spine": ["flexion", "lateral_flexion", "rotation"],
-	"radioulnar_joint": ["supination"],
-	"scapulothoracic_joint": ["depression", "elevation", "retraction"],
+	"finger_joints": ["abduction", "adduction", "extension", "flexion"],
+	"glenohumeral_joint": ["abduction", "adduction", "extension", "external_rotation", "flexion", "horizontal_abduction", "horizontal_adduction", "internal_rotation"],
+	"hip_joint": ["abduction", "adduction", "extension", "external_rotation", "flexion", "internal_rotation"],
+	"knee_joint": ["extension", "external_rotation", "flexion", "internal_rotation"],
+	"lumbar_spine": ["extension", "flexion", "lateral_flexion", "rotation"],
+	"radioulnar_joint": ["pronation", "supination"],
+	"scapulothoracic_joint": ["depression", "downward_rotation", "elevation", "protraction", "retraction", "upward_rotation"],
+	"subtalar_joint": ["eversion", "inversion"],
+	"thumb_joints": ["abduction", "adduction", "extension", "flexion", "opposition"],
+	"toe_joints": ["extension", "flexion"],
+	"wrist_joint": ["extension", "flexion", "radial_deviation", "ulnar_deviation"],
 }
 
 

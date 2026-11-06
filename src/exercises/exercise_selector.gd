@@ -427,6 +427,8 @@ func affected_structure_name(muscle_id: String) -> String:
 
 
 func derivation_label(method: String) -> String:
+	if method == "kinematic_tracer_v2":
+		return "Kinematic tracer v2"
 	if method == "kinematic_tracer_v1":
 		return "Kinematic tracer v1"
 	if method == "opensim_calibrated":

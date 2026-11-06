@@ -22,7 +22,7 @@ func run_verification() -> void:
 	require(studio.get_node_or_null("Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel") != null, "Visual definition panel must be editor-authored")
 	require(studio.get_node_or_null("Margin/Column/Workspace/DefinitionAndEvidence/EvidencePanel/Tabs/Advanced JSON/JsonEditor") is TextEdit, "Advanced JSON editor must be editor-authored")
 	require(studio.catalog.size() == 853, "Studio must load all 853 catalog-only records")
-	require(studio.schema.get("$id") == "bodysim.kinematic_authoring_response.v1", "Studio must load the versioned authoring schema")
+	require(studio.schema.get("$id") == "bodysim.kinematic_authoring_response.v2", "Studio must load the versioned authoring schema")
 
 	var provider = PROVIDER_SCENE.instantiate()
 	root.add_child(provider)

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "bodysim.kinematic_authoring_response.v1",
-  "title": "BodySim kinematic authoring response v1",
+  "$id": "bodysim.kinematic_authoring_response.v2",
+  "title": "BodySim kinematic authoring response v2",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -13,61 +13,586 @@
     "proposed_definition"
   ],
   "properties": {
-    "classification": {"type": "string", "enum": ["supported", "ambiguous", "unsupported"]},
-    "classification_reasons": {"type": "array", "items": {"type": "string"}},
-    "assumptions": {"type": "array", "items": {"type": "string"}},
-    "questions_requiring_context": {"type": "array", "items": {"type": "string"}},
+    "classification": {
+      "type": "string",
+      "enum": [
+        "supported",
+        "ambiguous",
+        "unsupported"
+      ]
+    },
+    "classification_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "questions_requiring_context": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "field_confidence": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["variant", "laterality", "input_mode", "kinetic_chain_type", "primary_joint_actions", "stabilization_demands"],
+      "required": [
+        "variant",
+        "laterality",
+        "input_mode",
+        "kinetic_chain_type",
+        "primary_joint_actions",
+        "stabilization_demands"
+      ],
       "properties": {
-        "variant": {"type": "string", "enum": ["high", "medium", "low"]},
-        "laterality": {"type": "string", "enum": ["high", "medium", "low"]},
-        "input_mode": {"type": "string", "enum": ["high", "medium", "low"]},
-        "kinetic_chain_type": {"type": "string", "enum": ["high", "medium", "low"]},
-        "primary_joint_actions": {"type": "string", "enum": ["high", "medium", "low"]},
-        "stabilization_demands": {"type": "string", "enum": ["high", "medium", "low"]}
+        "variant": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "laterality": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "input_mode": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "kinetic_chain_type": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "primary_joint_actions": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "stabilization_demands": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        }
       }
     },
     "proposed_definition": {
       "anyOf": [
-        {"type": "null"},
+        {
+          "type": "null"
+        },
         {
           "type": "object",
           "additionalProperties": false,
-          "required": ["id", "name", "variant", "aliases", "primary_movement_family", "additional_movement_families", "laterality", "input_mode", "kinematic_profile"],
+          "required": [
+            "id",
+            "name",
+            "variant",
+            "aliases",
+            "primary_movement_family",
+            "additional_movement_families",
+            "laterality",
+            "input_mode",
+            "kinematic_profile"
+          ],
           "properties": {
-            "id": {"type": "string"},
-            "name": {"type": "string"},
-            "variant": {"type": "string"},
-            "aliases": {"type": "array", "items": {"type": "string"}},
-            "primary_movement_family": {"type": "string", "enum": ["squat", "hip_hinge", "horizontal_push", "vertical_push", "horizontal_pull", "vertical_pull", "loaded_carry", "elbow_flexion", "elbow_extension", "knee_extension", "knee_flexion", "ankle_plantarflexion", "trunk_flexion"]},
-            "additional_movement_families": {"type": "array", "items": {"type": "string", "enum": ["squat", "hip_hinge", "horizontal_push", "vertical_push", "horizontal_pull", "vertical_pull", "loaded_carry", "elbow_flexion", "elbow_extension", "knee_extension", "knee_flexion", "ankle_plantarflexion", "trunk_flexion"]}},
-            "laterality": {"type": "string", "enum": ["bilateral", "left", "right", "unilateral"]},
-            "input_mode": {"type": "string", "enum": ["repetitions", "duration"]},
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "variant": {
+              "type": "string"
+            },
+            "aliases": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "primary_movement_family": {
+              "type": "string",
+              "enum": [
+                "squat",
+                "hip_hinge",
+                "horizontal_push",
+                "vertical_push",
+                "horizontal_pull",
+                "vertical_pull",
+                "loaded_carry",
+                "elbow_flexion",
+                "elbow_extension",
+                "knee_extension",
+                "knee_flexion",
+                "ankle_plantarflexion",
+                "trunk_flexion"
+              ]
+            },
+            "additional_movement_families": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "squat",
+                  "hip_hinge",
+                  "horizontal_push",
+                  "vertical_push",
+                  "horizontal_pull",
+                  "vertical_pull",
+                  "loaded_carry",
+                  "elbow_flexion",
+                  "elbow_extension",
+                  "knee_extension",
+                  "knee_flexion",
+                  "ankle_plantarflexion",
+                  "trunk_flexion"
+                ]
+              }
+            },
+            "laterality": {
+              "type": "string",
+              "enum": [
+                "bilateral",
+                "left",
+                "right",
+                "unilateral"
+              ]
+            },
+            "input_mode": {
+              "type": "string",
+              "enum": [
+                "repetitions",
+                "duration"
+              ]
+            },
             "kinematic_profile": {
               "type": "object",
               "additionalProperties": false,
-              "required": ["kinetic_chain_type", "primary_joint_actions", "stabilization_demands"],
+              "required": [
+                "kinetic_chain_type",
+                "primary_joint_actions",
+                "stabilization_demands"
+              ],
               "properties": {
-                "kinetic_chain_type": {"type": "string", "enum": ["open_chain", "closed_chain"]},
+                "kinetic_chain_type": {
+                  "type": "string",
+                  "enum": [
+                    "open_chain",
+                    "closed_chain"
+                  ]
+                },
                 "primary_joint_actions": {
                   "type": "array",
                   "items": {
                     "anyOf": [
-                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["ankle_joint"]}, "movement": {"type": "string", "enum": ["plantarflexion"]}}},
-                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["elbow_joint"]}, "movement": {"type": "string", "enum": ["extension", "flexion"]}}},
-                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["glenohumeral_joint"]}, "movement": {"type": "string", "enum": ["abduction", "adduction", "extension", "flexion", "horizontal_adduction", "internal_rotation"]}}},
-                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["hip_joint"]}, "movement": {"type": "string", "enum": ["abduction", "extension", "external_rotation", "flexion"]}}},
-                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["knee_joint"]}, "movement": {"type": "string", "enum": ["extension", "flexion"]}}},
-                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["lumbar_spine"]}, "movement": {"type": "string", "enum": ["flexion", "lateral_flexion", "rotation"]}}},
-                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["radioulnar_joint"]}, "movement": {"type": "string", "enum": ["supination"]}}},
-                      {"type": "object", "additionalProperties": false, "required": ["joint", "movement"], "properties": {"joint": {"type": "string", "enum": ["scapulothoracic_joint"]}, "movement": {"type": "string", "enum": ["depression", "elevation", "retraction"]}}}
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "joint",
+                          "movement"
+                        ],
+                        "properties": {
+                          "joint": {
+                            "type": "string",
+                            "enum": [
+                              "ankle_joint"
+                            ]
+                          },
+                          "movement": {
+                            "type": "string",
+                            "enum": [
+                              "dorsiflexion",
+                              "plantarflexion"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "joint",
+                          "movement"
+                        ],
+                        "properties": {
+                          "joint": {
+                            "type": "string",
+                            "enum": [
+                              "cervical_spine"
+                            ]
+                          },
+                          "movement": {
+                            "type": "string",
+                            "enum": [
+                              "extension",
+                              "flexion",
+                              "lateral_flexion",
+                              "rotation"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "joint",
+                          "movement"
+                        ],
+                        "properties": {
+                          "joint": {
+                            "type": "string",
+                            "enum": [
+                              "elbow_joint"
+                            ]
+                          },
+                          "movement": {
+                            "type": "string",
+                            "enum": [
+                              "extension",
+                              "flexion"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "joint",
+                          "movement"
+                        ],
+                        "properties": {
+                          "joint": {
+                            "type": "string",
+                            "enum": [
+                              "finger_joints"
+                            ]
+                          },
+                          "movement": {
+                            "type": "string",
+                            "enum": [
+                              "abduction",
+                              "adduction",
+                              "extension",
+                              "flexion"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "joint",
+                          "movement"
+                        ],
+                        "properties": {
+                          "joint": {
+                            "type": "string",
+                            "enum": [
+                              "glenohumeral_joint"
+                            ]
+                          },
+                          "movement": {
+                            "type": "string",
+                            "enum": [
+                              "abduction",
+                              "adduction",
+                              "extension",
+                              "external_rotation",
+                              "flexion",
+                              "horizontal_abduction",
+                              "horizontal_adduction",
+                              "internal_rotation"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "joint",
+                          "movement"
+                        ],
+                        "properties": {
+                          "joint": {
+                            "type": "string",
+                            "enum": [
+                              "hip_joint"
+                            ]
+                          },
+                          "movement": {
+                            "type": "string",
+                            "enum": [
+                              "abduction",
+                              "adduction",
+                              "extension",
+                              "external_rotation",
+                              "flexion",
+                              "internal_rotation"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "joint",
+                          "movement"
+                        ],
+                        "properties": {
+                          "joint": {
+                            "type": "string",
+                            "enum": [
+                              "knee_joint"
+                            ]
+                          },
+                          "movement": {
+                            "type": "string",
+                            "enum": [
+                              "extension",
+                              "external_rotation",
+                              "flexion",
+                              "internal_rotation"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "joint",
+                          "movement"
+                        ],
+                        "properties": {
+                          "joint": {
+                            "type": "string",
+                            "enum": [
+                              "lumbar_spine"
+                            ]
+                          },
+                          "movement": {
+                            "type": "string",
+                            "enum": [
+                              "extension",
+                              "flexion",
+                              "lateral_flexion",
+                              "rotation"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "joint",
+                          "movement"
+                        ],
+                        "properties": {
+                          "joint": {
+                            "type": "string",
+                            "enum": [
+                              "radioulnar_joint"
+                            ]
+                          },
+                          "movement": {
+                            "type": "string",
+                            "enum": [
+                              "pronation",
+                              "supination"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "joint",
+                          "movement"
+                        ],
+                        "properties": {
+                          "joint": {
+                            "type": "string",
+                            "enum": [
+                              "scapulothoracic_joint"
+                            ]
+                          },
+                          "movement": {
+                            "type": "string",
+                            "enum": [
+                              "depression",
+                              "downward_rotation",
+                              "elevation",
+                              "protraction",
+                              "retraction",
+                              "upward_rotation"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "joint",
+                          "movement"
+                        ],
+                        "properties": {
+                          "joint": {
+                            "type": "string",
+                            "enum": [
+                              "subtalar_joint"
+                            ]
+                          },
+                          "movement": {
+                            "type": "string",
+                            "enum": [
+                              "eversion",
+                              "inversion"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "joint",
+                          "movement"
+                        ],
+                        "properties": {
+                          "joint": {
+                            "type": "string",
+                            "enum": [
+                              "thumb_joints"
+                            ]
+                          },
+                          "movement": {
+                            "type": "string",
+                            "enum": [
+                              "abduction",
+                              "adduction",
+                              "extension",
+                              "flexion",
+                              "opposition"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "joint",
+                          "movement"
+                        ],
+                        "properties": {
+                          "joint": {
+                            "type": "string",
+                            "enum": [
+                              "toe_joints"
+                            ]
+                          },
+                          "movement": {
+                            "type": "string",
+                            "enum": [
+                              "extension",
+                              "flexion"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "joint",
+                          "movement"
+                        ],
+                        "properties": {
+                          "joint": {
+                            "type": "string",
+                            "enum": [
+                              "wrist_joint"
+                            ]
+                          },
+                          "movement": {
+                            "type": "string",
+                            "enum": [
+                              "extension",
+                              "flexion",
+                              "radial_deviation",
+                              "ulnar_deviation"
+                            ]
+                          }
+                        }
+                      }
                     ]
                   }
                 },
-                "stabilization_demands": {"type": "array", "items": {"type": "string", "enum": ["ankle_stability", "anterior_shoulder_stability", "anti_extension_hip", "anti_extension_spine", "anti_flexion_spine", "anti_rotation_torso", "elbow_joint_integrity", "elbow_stability", "femoral_head_stabilization", "glenohumeral_stabilization", "humeral_head_stabilization", "intra_abdominal_pressure", "knee_joint_stability", "lumbar_fascia_tension", "patellar_tracking", "pelvic_alignment", "pelvic_leveling_frontal", "postural_stabilization", "postural_sway_control", "scapular_anchoring", "scapular_retraction_stability", "scapular_stabilization"]}}
+                "stabilization_demands": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "ankle_stability",
+                      "anterior_shoulder_stability",
+                      "anti_extension_hip",
+                      "anti_extension_spine",
+                      "anti_flexion_spine",
+                      "anti_rotation_torso",
+                      "elbow_joint_integrity",
+                      "elbow_stability",
+                      "femoral_head_stabilization",
+                      "glenohumeral_stabilization",
+                      "humeral_head_stabilization",
+                      "intra_abdominal_pressure",
+                      "knee_joint_stability",
+                      "lumbar_fascia_tension",
+                      "patellar_tracking",
+                      "pelvic_alignment",
+                      "pelvic_leveling_frontal",
+                      "postural_stabilization",
+                      "postural_sway_control",
+                      "scapular_anchoring",
+                      "scapular_retraction_stability",
+                      "scapular_stabilization"
+                    ]
+                  }
+                }
               }
             }
           }

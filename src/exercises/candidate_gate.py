@@ -8,12 +8,12 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 from src.exercises.schemas import validate_exercises
-from tools.exercises.kinematic_tracer import trace_exercise_kinematics
+from tools.exercises.kinematic_tracer import TRACER_VERSION, load_muscle_actions, trace_exercise_kinematics
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 STRUCTURES_PATH = PROJECT_ROOT / "data/anatomy/structures.json"
-MUSCLE_ACTIONS_PATH = PROJECT_ROOT / "data/anatomy/muscle_actions.json"
+MUSCLE_ACTIONS_DIR = PROJECT_ROOT / "data/anatomy/muscle_actions_v2"
 CANONICAL_EXERCISES_PATH = PROJECT_ROOT / "data/exercises/exercises.json"
 
 
@@ -36,8 +36,8 @@ def evaluate_candidate(definition: Dict[str, Any]) -> Dict[str, Any]:
         for structure in structures
         if structure.get("id", "").startswith("muscle.")
     ]
-    action_records = _read_json(MUSCLE_ACTIONS_PATH)
-    muscle_actions = {record["muscle_id"]: record for record in action_records}
+    muscle_actions = load_muscle_actions()
+    action_records = list(muscle_actions.values())
 
     profile_entries: List[Dict[str, Any]] = []
     if not errors:
@@ -70,7 +70,7 @@ def evaluate_candidate(definition: Dict[str, Any]) -> Dict[str, Any]:
         warnings.append("Trace has stabilizers but no primary movers or synergists.")
 
     return {
-        "gate_version": "candidate_trace_gate_v1",
+        "gate_version": "candidate_trace_gate_v2",
         "ok": not errors,
         "exercise_id": exercise_id,
         "errors": errors,
@@ -84,9 +84,9 @@ def evaluate_candidate(definition: Dict[str, Any]) -> Dict[str, Any]:
             "stabilization_coverage": stabilization_coverage,
         },
         "provenance": {
-            "tracer": "kinematic_tracer_v1",
+            "tracer": TRACER_VERSION,
             "structures_sha256": _sha256(STRUCTURES_PATH),
-            "muscle_actions_sha256": _sha256(MUSCLE_ACTIONS_PATH),
+            "muscle_actions_sha256": _table_sha256(),
             "canonical_exercises_sha256": _sha256(CANONICAL_EXERCISES_PATH),
         },
         "profile": {
@@ -126,7 +126,7 @@ def _validate_trace(entries: List[Dict[str, Any]], canonical_ids: List[str]) -> 
             errors.append(
                 f"trace.muscles[{index}].evidence_status: expected '{expected_status}'"
             )
-        if entry.get("derivation_method") != "kinematic_tracer_v1":
+        if entry.get("derivation_method") != TRACER_VERSION:
             errors.append(f"trace.muscles[{index}].derivation_method: unexpected tracer version")
         refs = entry.get("evidence_refs")
         if not isinstance(refs, list) or not refs or not all(isinstance(ref, str) for ref in refs):
@@ -140,7 +140,7 @@ def _joint_action_coverage(definition: Dict[str, Any], records: List[Dict[str, A
     for target in actions:
         count = 0
         for record in records:
-            if any(
+            if record.get("movement_muscle") and any(
                 action.get("joint") == target.get("joint")
                 and action.get("movement") == target.get("movement")
                 for action in record.get("actions", [])
@@ -160,7 +160,8 @@ def _stabilization_coverage(definition: Dict[str, Any], records: List[Dict[str, 
     for demand in demands:
         count = sum(
             1 for record in records
-            if demand in record.get("stabilization_capabilities", [])
+            if record.get("movement_muscle")
+            and any(s.get("demand") == demand for s in record.get("stabilizes", []))
         )
         result.append({"demand": demand, "matching_muscles": count})
     return result
@@ -172,3 +173,12 @@ def _read_json(path: Path) -> Any:
 
 def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _table_sha256() -> str:
+    """One checksum over every group file of the v2 muscle-action table."""
+    digest = hashlib.sha256()
+    for path in sorted(MUSCLE_ACTIONS_DIR.glob("*.json")):
+        digest.update(path.name.encode())
+        digest.update(path.read_bytes())
+    return digest.hexdigest()

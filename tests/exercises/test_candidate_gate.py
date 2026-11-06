@@ -27,7 +27,8 @@ def candidate_definition():
 def test_candidate_gate_generates_complete_isolated_profile():
     result = evaluate_candidate(candidate_definition())
     assert result["ok"], result["errors"]
-    assert result["gate_version"] == "candidate_trace_gate_v1"
+    assert result["gate_version"] == "candidate_trace_gate_v2"
+    assert result["provenance"]["tracer"] == "kinematic_tracer_v2"
     assert result["summary"]["total_muscles"] == 466
     assert result["summary"]["mapped_muscles"] > 0
     assert result["summary"]["zero_muscles"] + result["summary"]["mapped_muscles"] == 466

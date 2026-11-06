@@ -28,16 +28,10 @@ def test_canonical_muscle_ids_count(canonical_muscle_ids):
     assert "muscle.latissimus_dorsi.right" in canonical_muscle_ids
 
 
-def test_muscle_actions_file_validity(canonical_muscle_ids):
-    actions_file = Path("data/anatomy/muscle_actions.json")
-    assert actions_file.is_file()
-
-    with open(actions_file, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    is_valid, errors = validate_muscle_actions(data, canonical_muscle_ids)
-    assert is_valid, f"Muscle actions validation failed: {errors}"
-    assert len(data) == 466
+def test_v1_muscle_action_table_is_retired():
+    # Replaced by the curated v2 table (data/anatomy/muscle_actions_v2/); see
+    # tests/anatomy/test_muscle_actions_v2.py for its checks.
+    assert not Path("data/anatomy/muscle_actions.json").exists()
 
 
 def test_exercises_file_validity():

@@ -54,9 +54,19 @@ def test_joint_action_schema_encodes_only_valid_joint_movement_pairs():
         branch["properties"]["joint"]["enum"][0]: set(branch["properties"]["movement"]["enum"])
         for branch in action_items["anyOf"]
     }
-    assert encoded["scapulothoracic_joint"] == {"depression", "elevation", "retraction"}
-    assert "rotation" not in encoded["scapulothoracic_joint"]
-    assert sum(len(movements) for movements in encoded.values()) == 22
+    vocabulary = json.loads((Path(__file__).resolve().parents[2] / "data/anatomy/joint_action_vocabulary.json").read_text())
+    for joint, movements in encoded.items():
+        assert movements <= set(vocabulary["joints"][joint]), joint
+    assert "rotation" not in encoded["scapulothoracic_joint"]          # only up/downward rotation exist
+    assert "horizontal_abduction" in encoded["glenohumeral_joint"]
+
+
+def test_schema_and_validators_are_in_sync_with_the_muscle_action_table():
+    import subprocess, sys
+    root = Path(__file__).resolve().parents[2]
+    result = subprocess.run([sys.executable, str(root / "tools/anatomy/sync_vocabulary.py"), "--check"],
+                            capture_output=True, text=True, cwd=root)
+    assert result.returncode == 0, result.stdout + result.stderr
 
 
 def test_movement_family_is_structurally_non_empty_without_array_constraints():

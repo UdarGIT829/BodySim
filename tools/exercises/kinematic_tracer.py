@@ -1,148 +1,142 @@
 """
-Kinematic Tracer Engine for BodySim Phase 1B.
+Kinematic tracer v2 for BodySim.
 
-Traverses skeletal joint trees and kinematic exercise profiles to generate
-100% full-body engagement profiles for all 466 canonical muscles.
+Turns an exercise's kinematic profile (joint actions + stabilization demands
++ laterality) into an engagement profile covering all 466 canonical muscles,
+using the curated, weighted muscle-action table v2
+(data/anatomy/muscle_actions_v2/, see src/anatomy/muscle_actions_v2.py).
+
+Rules
+- Action score = the muscle's highest table weight among the exercise's
+  joint actions (exact joint + movement match).
+    score >= 0.7  -> primary,   coefficient = score
+    score >  0    -> synergist, coefficient = score
+- Otherwise, if the muscle serves one of the exercise's stabilization
+  demands: stabilizer, coefficient = STABILIZER_SCALE x its highest demand
+  weight (stabilizing is lower-intensity than moving the load).
+- Otherwise: none, coefficient 0 (an explicit, reviewed zero).
+- Laterality: actions at limb joints (shoulder girdle, shoulder, elbow,
+  forearm, wrist, hand, hip, knee, ankle, foot) only count on the working
+  side ("left"/"right"; "unilateral" is shown with the right side working, by
+  convention). This is decided by the joint, not by where the muscle lies, so
+  pectoralis major and latissimus dorsi, which sit on the trunk but move the
+  arm, follow the working side too. Spinal actions and every stabilization
+  role count on both sides, because one-sided loading is braced by both
+  sides of the trunk.
 """
 
-import json
-from pathlib import Path
-from typing import Any, Dict, List, Set
+from __future__ import annotations
 
-ANATOMY_CATALOG = Path("data/anatomy/structures.json")
-MUSCLE_ACTIONS_FILE = Path("data/anatomy/muscle_actions.json")
-EXERCISES_FILE = Path("data/exercises/exercises.json")
-OUTPUT_PROFILES_FILE = Path("data/exercises/engagement_profiles.json")
+import json
+import sys
+from pathlib import Path
+from typing import Any, Dict, List
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from src.anatomy.muscle_actions_v2 import merged_table  # noqa: E402
+
+TRACER_VERSION = "kinematic_tracer_v2"
+ANATOMY_CATALOG = PROJECT_ROOT / "data/anatomy/structures.json"
+EXERCISES_FILE = PROJECT_ROOT / "data/exercises/exercises.json"
+OUTPUT_PROFILES_FILE = PROJECT_ROOT / "data/exercises/engagement_profiles.json"
+
+PRIMARY_THRESHOLD = 0.7
+STABILIZER_SCALE = 0.35
+AXIAL_JOINTS = {"cervical_spine", "lumbar_spine"}
+WORKING_SIDE = {"left": "left", "right": "right", "unilateral": "right"}
+
+
+def load_muscle_actions() -> Dict[str, Dict[str, Any]]:
+    records, missing = merged_table()
+    if missing:
+        raise ValueError(f"muscle-action table v2 is missing groups: {', '.join(missing)}")
+    return {r["muscle_id"]: r for r in records}
 
 
 def load_inputs():
-    with open(ANATOMY_CATALOG, "r", encoding="utf-8") as f:
-        structures = json.load(f)["structures"]
-
+    structures = json.loads(ANATOMY_CATALOG.read_text(encoding="utf-8"))["structures"]
     canonical_muscle_ids = [s["id"] for s in structures if s.get("id", "").startswith("muscle.")]
+    exercises = json.loads(EXERCISES_FILE.read_text(encoding="utf-8"))
+    return canonical_muscle_ids, load_muscle_actions(), exercises
 
-    with open(MUSCLE_ACTIONS_FILE, "r", encoding="utf-8") as f:
-        actions_list = json.load(f)
 
-    muscle_actions = {a["muscle_id"]: a for a in actions_list}
-
-    with open(EXERCISES_FILE, "r", encoding="utf-8") as f:
-        exercises = json.load(f)
-
-    return canonical_muscle_ids, muscle_actions, exercises
+def _side(muscle_id: str) -> str:
+    if muscle_id.endswith(".left"):
+        return "left"
+    if muscle_id.endswith(".right"):
+        return "right"
+    return "unpaired"
 
 
 def trace_exercise_kinematics(
     exercise: Dict[str, Any],
     canonical_muscle_ids: List[str],
-    muscle_actions: Dict[str, Dict[str, Any]]
+    muscle_actions: Dict[str, Dict[str, Any]],
 ) -> List[Dict[str, Any]]:
-    """Traces kinematic demands across all 466 canonical muscles for a single exercise."""
-    kinematic_profile = exercise.get("kinematic_profile", {})
-    primary_joint_actions = kinematic_profile.get("primary_joint_actions", [])
-    stabilization_demands = set(kinematic_profile.get("stabilization_demands", []))
+    """Engagement profile entries for all canonical muscles for one exercise."""
+    profile = exercise.get("kinematic_profile", {})
+    targets = {(a["joint"], a["movement"]) for a in profile.get("primary_joint_actions", [])}
+    demands = set(profile.get("stabilization_demands", []))
+    working_side = WORKING_SIDE.get(exercise.get("laterality", "bilateral"))
 
-    # Helper targets: (joint_stem, movement)
-    primary_targets = {(a["joint"], a["movement"]) for a in primary_joint_actions}
-
-    muscle_profile_entries = []
-
-    for m_id in canonical_muscle_ids:
-        m_action_info = muscle_actions.get(m_id, {"actions": [], "stabilization_capabilities": []})
-        m_actions = m_action_info.get("actions", [])
-        m_stabs = set(m_action_info.get("stabilization_capabilities", []))
-
-        is_primary = False
-        is_synergist = False
-        is_stabilizer = False
-
-        # Check primary/synergist joint actions
-        for act in m_actions:
-            joint_stem = act["joint"]
-            movement = act["movement"]
-            act_type = act.get("type", "primary")
-
-            for target_j, target_m in primary_targets:
-                if joint_stem in target_j or target_j in joint_stem:
-                    if movement == target_m:
-                        if act_type == "primary":
-                            is_primary = True
-                        else:
-                            is_synergist = True
-
-        # Check stabilization demand matches
-        matching_stabs = stabilization_demands.intersection(m_stabs)
-        if matching_stabs:
-            is_stabilizer = True
-
-        # Determine highest role and coefficient
-        if is_primary:
-            role = "primary"
-            coeff = 1.0 if len(primary_targets) == 1 else 0.85
-            confidence = "high"
-            evidence_status = "kinematic_trace"
-            ref = "rule.kinematic_tracer.primary_mover"
-        elif is_synergist:
-            role = "synergist"
-            coeff = 0.55
-            confidence = "high"
-            evidence_status = "kinematic_trace"
-            ref = "rule.kinematic_tracer.synergist"
-        elif is_stabilizer:
-            role = "stabilizer"
-            coeff = 0.35 if "anti_flexion_spine" in matching_stabs else 0.25
-            confidence = "medium"
-            evidence_status = "kinematic_trace"
-            ref = "rule.kinematic_tracer.stabilizer"
-        else:
-            role = "none"
-            coeff = 0.0
-            confidence = "high"
-            evidence_status = "reviewed_zero"
-            ref = "rule.kinematic_tracer.reviewed_zero"
-
-        muscle_profile_entries.append({
-            "muscle_id": m_id,
+    entries = []
+    for muscle_id in canonical_muscle_ids:
+        record = muscle_actions.get(muscle_id)
+        role, coefficient, refs = "none", 0.0, []
+        if record and record.get("movement_muscle"):
+            base = muscle_id.rsplit(".", 1)[0] if _side(muscle_id) != "unpaired" else muscle_id
+            off_side = working_side is not None and _side(muscle_id) not in (working_side, "unpaired")
+            matching = [a for a in record["actions"] if (a["joint"], a["movement"]) in targets]
+            # On the non-working side only spinal actions move the load.
+            off_side_limb = off_side and any(a["joint"] not in AXIAL_JOINTS for a in matching)
+            if off_side:
+                matching = [a for a in matching if a["joint"] in AXIAL_JOINTS]
+            action_score = max((a["weight"] for a in matching), default=0.0)
+            stability = max((s["weight"] for s in record["stabilizes"] if s["demand"] in demands), default=0.0)
+            if action_score >= PRIMARY_THRESHOLD:
+                role, coefficient = "primary", action_score
+            elif action_score > 0:
+                role, coefficient = "synergist", action_score
+            elif stability > 0:
+                role, coefficient = "stabilizer", STABILIZER_SCALE * stability
+            if role != "none":
+                refs = [f"muscle_actions_v2:{base}", f"rule.{TRACER_VERSION}.{role}"]
+                if off_side_limb:
+                    refs.append(f"rule.{TRACER_VERSION}.non_working_side")
+        coefficient = round(coefficient, 4)
+        entries.append({
+            "muscle_id": muscle_id,
             "role": role,
-            "coefficient": coeff,
-            "confidence": confidence,
-            "evidence_status": evidence_status,
-            "derivation_method": "kinematic_tracer_v1",
-            "evidence_refs": [ref]
+            "coefficient": coefficient,
+            "confidence": record["confidence"] if role != "none" and record else "high",
+            "evidence_status": "kinematic_trace" if role != "none" else "reviewed_zero",
+            "derivation_method": TRACER_VERSION,
+            "evidence_refs": refs or [f"rule.{TRACER_VERSION}.reviewed_zero"],
         })
+    return entries
 
-    return muscle_profile_entries
 
-
-def run_tracer():
+def run_tracer() -> None:
     canonical_muscle_ids, muscle_actions, exercises = load_inputs()
-    print(f"Tracing kinematics for {len(exercises)} exercises against {len(canonical_muscle_ids)} canonical muscles...")
-
-    profiles_output = {"profiles": {}}
-
-    for ex in exercises:
-        ex_id = ex["id"]
-        entries = trace_exercise_kinematics(ex, canonical_muscle_ids, muscle_actions)
-
-        # Audit that exactly 466 entries were generated
+    print(f"Tracing {len(exercises)} exercises against {len(canonical_muscle_ids)} canonical muscles…")
+    output = {"profiles": {}}
+    for exercise in exercises:
+        entries = trace_exercise_kinematics(exercise, canonical_muscle_ids, muscle_actions)
         if len(entries) != 466:
-            raise ValueError(f"Exercise '{ex_id}' generated {len(entries)} entries instead of 466.")
-
-        mapped_count = sum(1 for e in entries if e["coefficient"] > 0)
-        zero_count = sum(1 for e in entries if e["coefficient"] == 0)
-
-        profiles_output["profiles"][ex_id] = {
-            "exercise_id": ex_id,
+            raise ValueError(f"{exercise['id']} produced {len(entries)} entries instead of 466")
+        mapped = sum(1 for e in entries if e["coefficient"] > 0)
+        output["profiles"][exercise["id"]] = {
+            "exercise_id": exercise["id"],
             "total_muscles": len(entries),
-            "mapped_muscles": mapped_count,
-            "zero_muscles": zero_count,
-            "muscles": entries
+            "mapped_muscles": mapped,
+            "zero_muscles": len(entries) - mapped,
+            "muscles": entries,
         }
-
-    with open(OUTPUT_PROFILES_FILE, "w", encoding="utf-8") as f:
-        json.dump(profiles_output, f, indent=2)
-
-    print(f"Successfully generated engagement profiles for {len(exercises)} exercises in {OUTPUT_PROFILES_FILE}")
+    OUTPUT_PROFILES_FILE.write_text(json.dumps(output, indent=2), encoding="utf-8")
+    print(f"Wrote {len(exercises)} engagement profiles to {OUTPUT_PROFILES_FILE.relative_to(PROJECT_ROOT)}")
 
 
 if __name__ == "__main__":

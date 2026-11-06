@@ -12,6 +12,7 @@ from pathlib import Path
 import pytest
 
 from src.exercises import promotion
+from src.exercises.candidate_gate import evaluate_candidate
 from src.exercises.promotion import PROJECT_ROOT, promote_revision
 
 FIXTURE_DRAFT = PROJECT_ROOT / "data/exercises/authoring/drafts/Barbell_Curl.json"
@@ -46,7 +47,8 @@ def sandbox(tmp_path: Path) -> Path:
         "additional_context": draft.get("additional_context", ""),
         "authoring_response": draft["authoring_response"],
         "authoring_provider_metadata": draft.get("provider_metadata", {}),
-        "candidate_trace_report": draft["candidate_trace_report"],
+        # Trace with the current tracer, as a freshly frozen revision would be.
+        "candidate_trace_report": evaluate_candidate(draft["authoring_response"]["proposed_definition"]),
         "revision_sha256": HASH,
         "revision_id": f"{draft['source_id']}@{HASH[:12]}",
         "status": "review_pending",

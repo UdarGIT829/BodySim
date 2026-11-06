@@ -1,39 +1,55 @@
 {
   "session_id": "session_2026_08_10_legs_and_pull",
   "total_canonical_muscles": 466,
-  "active_muscles": 38,
-  "zero_exposure_muscles": 428,
-  "max_raw_exposure": 22.185,
+  "active_muscles": 98,
+  "zero_exposure_muscles": 368,
+  "max_raw_exposure": 26.1,
   "exercises": [
     {
       "exercise_id": "exercise.barbell_back_squat.high_bar",
       "set_count": 3,
       "total_effort_factor": 23.0,
-      "mapped_muscles": 24,
+      "mapped_muscles": 54,
       "opensim_calibrated": true
     },
     {
       "exercise_id": "exercise.pull_up.pronated",
       "set_count": 3,
       "total_effort_factor": 26.1,
-      "mapped_muscles": 16,
+      "mapped_muscles": 50,
       "opensim_calibrated": true
     }
   ],
   "muscles": {
     "muscle.abdominal_part_of_pectoralis_major.left": {
       "muscle_id": "muscle.abdominal_part_of_pectoralis_major.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 18.27,
+      "opensim_estimated_force_n": 805.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "primary",
+          "coefficient": 0.7,
+          "raw_exposure": 18.27,
+          "opensim_estimated_force_n": 805.0
+        }
+      ],
+      "normalized_emphasis": 70.0
     },
     "muscle.abdominal_part_of_pectoralis_major.right": {
       "muscle_id": "muscle.abdominal_part_of_pectoralis_major.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 18.27,
+      "opensim_estimated_force_n": 805.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "primary",
+          "coefficient": 0.7,
+          "raw_exposure": 18.27,
+          "opensim_estimated_force_n": 805.0
+        }
+      ],
+      "normalized_emphasis": 70.0
     },
     "muscle.abductor_digiti_minimi_of_foot.left": {
       "muscle_id": "muscle.abductor_digiti_minimi_of_foot.left",
@@ -149,17 +165,33 @@
     },
     "muscle.adductor_magnus.left": {
       "muscle_id": "muscle.adductor_magnus.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 13.8,
+      "opensim_estimated_force_n": 852.3,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "synergist",
+          "coefficient": 0.6,
+          "raw_exposure": 13.799999999999999,
+          "opensim_estimated_force_n": 852.3
+        }
+      ],
+      "normalized_emphasis": 52.9
     },
     "muscle.adductor_magnus.right": {
       "muscle_id": "muscle.adductor_magnus.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 13.8,
+      "opensim_estimated_force_n": 852.3,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "synergist",
+          "coefficient": 0.6,
+          "raw_exposure": 13.799999999999999,
+          "opensim_estimated_force_n": 852.3
+        }
+      ],
+      "normalized_emphasis": 52.9
     },
     "muscle.adductor_minimus.left": {
       "muscle_id": "muscle.adductor_minimus.left",
@@ -219,61 +251,93 @@
     },
     "muscle.ascending_part_of_trapezius.left": {
       "muscle_id": "muscle.ascending_part_of_trapezius.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 4.567,
+      "opensim_estimated_force_n": 201.25,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.175,
+          "raw_exposure": 4.5675,
+          "opensim_estimated_force_n": 201.25
+        }
+      ],
+      "normalized_emphasis": 17.5
     },
     "muscle.ascending_part_of_trapezius.right": {
       "muscle_id": "muscle.ascending_part_of_trapezius.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 4.567,
+      "opensim_estimated_force_n": 201.25,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.175,
+          "raw_exposure": 4.5675,
+          "opensim_estimated_force_n": 201.25
+        }
+      ],
+      "normalized_emphasis": 17.5
     },
     "muscle.brachialis.left": {
       "muscle_id": "muscle.brachialis.left",
-      "raw_exposure": 22.185,
-      "opensim_estimated_force_n": 977.5,
+      "raw_exposure": 26.1,
+      "opensim_estimated_force_n": 1150.0,
       "contributions": [
         {
           "exercise_id": "exercise.pull_up.pronated",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 22.185000000000002,
-          "opensim_estimated_force_n": 977.5
+          "coefficient": 1.0,
+          "raw_exposure": 26.1,
+          "opensim_estimated_force_n": 1150.0
         }
       ],
       "normalized_emphasis": 100.0
     },
     "muscle.brachialis.right": {
       "muscle_id": "muscle.brachialis.right",
-      "raw_exposure": 22.185,
-      "opensim_estimated_force_n": 977.5,
+      "raw_exposure": 26.1,
+      "opensim_estimated_force_n": 1150.0,
       "contributions": [
         {
           "exercise_id": "exercise.pull_up.pronated",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 22.185000000000002,
-          "opensim_estimated_force_n": 977.5
+          "coefficient": 1.0,
+          "raw_exposure": 26.1,
+          "opensim_estimated_force_n": 1150.0
         }
       ],
       "normalized_emphasis": 100.0
     },
     "muscle.brachioradialis.left": {
       "muscle_id": "muscle.brachioradialis.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 18.27,
+      "opensim_estimated_force_n": 805.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "primary",
+          "coefficient": 0.7,
+          "raw_exposure": 18.27,
+          "opensim_estimated_force_n": 805.0
+        }
+      ],
+      "normalized_emphasis": 70.0
     },
     "muscle.brachioradialis.right": {
       "muscle_id": "muscle.brachioradialis.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 18.27,
+      "opensim_estimated_force_n": 805.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "primary",
+          "coefficient": 0.7,
+          "raw_exposure": 18.27,
+          "opensim_estimated_force_n": 805.0
+        }
+      ],
+      "normalized_emphasis": 70.0
     },
     "muscle.bucinator.left": {
       "muscle_id": "muscle.bucinator.left",
@@ -291,17 +355,33 @@
     },
     "muscle.clavicular_head_of_pectoralis_major.left": {
       "muscle_id": "muscle.clavicular_head_of_pectoralis_major.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 7.83,
+      "opensim_estimated_force_n": 345.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "synergist",
+          "coefficient": 0.3,
+          "raw_exposure": 7.83,
+          "opensim_estimated_force_n": 345.0
+        }
+      ],
+      "normalized_emphasis": 30.0
     },
     "muscle.clavicular_head_of_pectoralis_major.right": {
       "muscle_id": "muscle.clavicular_head_of_pectoralis_major.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 7.83,
+      "opensim_estimated_force_n": 345.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "synergist",
+          "coefficient": 0.3,
+          "raw_exposure": 7.83,
+          "opensim_estimated_force_n": 345.0
+        }
+      ],
+      "normalized_emphasis": 30.0
     },
     "muscle.clavicular_part_of_deltoid.left": {
       "muscle_id": "muscle.clavicular_part_of_deltoid.left",
@@ -333,33 +413,33 @@
     },
     "muscle.coracobrachialis.left": {
       "muscle_id": "muscle.coracobrachialis.left",
-      "raw_exposure": 22.185,
-      "opensim_estimated_force_n": 977.5,
+      "raw_exposure": 10.44,
+      "opensim_estimated_force_n": 460.0,
       "contributions": [
         {
           "exercise_id": "exercise.pull_up.pronated",
-          "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 22.185000000000002,
-          "opensim_estimated_force_n": 977.5
+          "role": "synergist",
+          "coefficient": 0.4,
+          "raw_exposure": 10.440000000000001,
+          "opensim_estimated_force_n": 460.0
         }
       ],
-      "normalized_emphasis": 100.0
+      "normalized_emphasis": 40.0
     },
     "muscle.coracobrachialis.right": {
       "muscle_id": "muscle.coracobrachialis.right",
-      "raw_exposure": 22.185,
-      "opensim_estimated_force_n": 977.5,
+      "raw_exposure": 10.44,
+      "opensim_estimated_force_n": 460.0,
       "contributions": [
         {
           "exercise_id": "exercise.pull_up.pronated",
-          "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 22.185000000000002,
-          "opensim_estimated_force_n": 977.5
+          "role": "synergist",
+          "coefficient": 0.4,
+          "raw_exposure": 10.440000000000001,
+          "opensim_estimated_force_n": 460.0
         }
       ],
-      "normalized_emphasis": 100.0
+      "normalized_emphasis": 40.0
     },
     "muscle.corrugator_supercilii.left": {
       "muscle_id": "muscle.corrugator_supercilii.left",
@@ -461,17 +541,33 @@
     },
     "muscle.descending_part_of_trapezius.left": {
       "muscle_id": "muscle.descending_part_of_trapezius.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 2.74,
+      "opensim_estimated_force_n": 120.75,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.105,
+          "raw_exposure": 2.7405,
+          "opensim_estimated_force_n": 120.75
+        }
+      ],
+      "normalized_emphasis": 10.5
     },
     "muscle.descending_part_of_trapezius.right": {
       "muscle_id": "muscle.descending_part_of_trapezius.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 2.74,
+      "opensim_estimated_force_n": 120.75,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.105,
+          "raw_exposure": 2.7405,
+          "opensim_estimated_force_n": 120.75
+        }
+      ],
+      "normalized_emphasis": 10.5
     },
     "muscle.diaphragm": {
       "muscle_id": "muscle.diaphragm",
@@ -538,17 +634,33 @@
     },
     "muscle.extensor_carpi_radialis_longus.left": {
       "muscle_id": "muscle.extensor_carpi_radialis_longus.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 2.61,
+      "opensim_estimated_force_n": 115.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "synergist",
+          "coefficient": 0.1,
+          "raw_exposure": 2.6100000000000003,
+          "opensim_estimated_force_n": 115.0
+        }
+      ],
+      "normalized_emphasis": 10.0
     },
     "muscle.extensor_carpi_radialis_longus.right": {
       "muscle_id": "muscle.extensor_carpi_radialis_longus.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 2.61,
+      "opensim_estimated_force_n": 115.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "synergist",
+          "coefficient": 0.1,
+          "raw_exposure": 2.6100000000000003,
+          "opensim_estimated_force_n": 115.0
+        }
+      ],
+      "normalized_emphasis": 10.0
     },
     "muscle.extensor_digiti_minimi.left": {
       "muscle_id": "muscle.extensor_digiti_minimi.left",
@@ -678,17 +790,47 @@
     },
     "muscle.external_abdominal_oblique.left": {
       "muscle_id": "muscle.external_abdominal_oblique.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 10.528,
+      "opensim_estimated_force_n": 520.87,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.14,
+          "raw_exposure": 3.22,
+          "opensim_estimated_force_n": 198.87000000000003
+        },
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.28,
+          "raw_exposure": 7.308000000000001,
+          "opensim_estimated_force_n": 322.00000000000006
+        }
+      ],
+      "normalized_emphasis": 40.3
     },
     "muscle.external_abdominal_oblique.right": {
       "muscle_id": "muscle.external_abdominal_oblique.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 10.528,
+      "opensim_estimated_force_n": 520.87,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.14,
+          "raw_exposure": 3.22,
+          "opensim_estimated_force_n": 198.87000000000003
+        },
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.28,
+          "raw_exposure": 7.308000000000001,
+          "opensim_estimated_force_n": 322.00000000000006
+        }
+      ],
+      "normalized_emphasis": 40.3
     },
     "muscle.external_anal_sphincter.left": {
       "muscle_id": "muscle.external_anal_sphincter.left",
@@ -734,31 +876,63 @@
     },
     "muscle.fibularis_brevis.left": {
       "muscle_id": "muscle.fibularis_brevis.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 4.83,
+      "opensim_estimated_force_n": 298.31,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.21,
+          "raw_exposure": 4.83,
+          "opensim_estimated_force_n": 298.305
+        }
+      ],
+      "normalized_emphasis": 18.5
     },
     "muscle.fibularis_brevis.right": {
       "muscle_id": "muscle.fibularis_brevis.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 4.83,
+      "opensim_estimated_force_n": 298.31,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.21,
+          "raw_exposure": 4.83,
+          "opensim_estimated_force_n": 298.305
+        }
+      ],
+      "normalized_emphasis": 18.5
     },
     "muscle.fibularis_longus.left": {
       "muscle_id": "muscle.fibularis_longus.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 4.83,
+      "opensim_estimated_force_n": 298.31,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.21,
+          "raw_exposure": 4.83,
+          "opensim_estimated_force_n": 298.305
+        }
+      ],
+      "normalized_emphasis": 18.5
     },
     "muscle.fibularis_longus.right": {
       "muscle_id": "muscle.fibularis_longus.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 4.83,
+      "opensim_estimated_force_n": 298.31,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.21,
+          "raw_exposure": 4.83,
+          "opensim_estimated_force_n": 298.305
+        }
+      ],
+      "normalized_emphasis": 18.5
     },
     "muscle.fibularis_tertius.left": {
       "muscle_id": "muscle.fibularis_tertius.left",
@@ -832,17 +1006,33 @@
     },
     "muscle.flexor_digitorum_longus.left": {
       "muscle_id": "muscle.flexor_digitorum_longus.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 2.415,
+      "opensim_estimated_force_n": 149.15,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.105,
+          "raw_exposure": 2.415,
+          "opensim_estimated_force_n": 149.1525
+        }
+      ],
+      "normalized_emphasis": 9.3
     },
     "muscle.flexor_digitorum_longus.right": {
       "muscle_id": "muscle.flexor_digitorum_longus.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 2.415,
+      "opensim_estimated_force_n": 149.15,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.105,
+          "raw_exposure": 2.415,
+          "opensim_estimated_force_n": 149.1525
+        }
+      ],
+      "normalized_emphasis": 9.3
     },
     "muscle.flexor_digitorum_profundus.left": {
       "muscle_id": "muscle.flexor_digitorum_profundus.left",
@@ -860,17 +1050,33 @@
     },
     "muscle.flexor_hallucis_longus.left": {
       "muscle_id": "muscle.flexor_hallucis_longus.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 2.415,
+      "opensim_estimated_force_n": 149.15,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.105,
+          "raw_exposure": 2.415,
+          "opensim_estimated_force_n": 149.1525
+        }
+      ],
+      "normalized_emphasis": 9.3
     },
     "muscle.flexor_hallucis_longus.right": {
       "muscle_id": "muscle.flexor_hallucis_longus.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 2.415,
+      "opensim_estimated_force_n": 149.15,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.105,
+          "raw_exposure": 2.415,
+          "opensim_estimated_force_n": 149.1525
+        }
+      ],
+      "normalized_emphasis": 9.3
     },
     "muscle.flexor_pollicis_longus.left": {
       "muscle_id": "muscle.flexor_pollicis_longus.left",
@@ -930,47 +1136,63 @@
     },
     "muscle.gluteus_maximus.left": {
       "muscle_id": "muscle.gluteus_maximus.left",
-      "raw_exposure": 19.55,
-      "opensim_estimated_force_n": 1207.42,
+      "raw_exposure": 23.0,
+      "opensim_estimated_force_n": 1420.5,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 19.55,
-          "opensim_estimated_force_n": 1207.425
+          "coefficient": 1.0,
+          "raw_exposure": 23.0,
+          "opensim_estimated_force_n": 1420.5
         }
       ],
       "normalized_emphasis": 88.1
     },
     "muscle.gluteus_maximus.right": {
       "muscle_id": "muscle.gluteus_maximus.right",
-      "raw_exposure": 19.55,
-      "opensim_estimated_force_n": 1207.42,
+      "raw_exposure": 23.0,
+      "opensim_estimated_force_n": 1420.5,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 19.55,
-          "opensim_estimated_force_n": 1207.425
+          "coefficient": 1.0,
+          "raw_exposure": 23.0,
+          "opensim_estimated_force_n": 1420.5
         }
       ],
       "normalized_emphasis": 88.1
     },
     "muscle.gluteus_medius.left": {
       "muscle_id": "muscle.gluteus_medius.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 4.6,
+      "opensim_estimated_force_n": 284.1,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "synergist",
+          "coefficient": 0.2,
+          "raw_exposure": 4.6000000000000005,
+          "opensim_estimated_force_n": 284.1
+        }
+      ],
+      "normalized_emphasis": 17.6
     },
     "muscle.gluteus_medius.right": {
       "muscle_id": "muscle.gluteus_medius.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 4.6,
+      "opensim_estimated_force_n": 284.1,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "synergist",
+          "coefficient": 0.2,
+          "raw_exposure": 4.6000000000000005,
+          "opensim_estimated_force_n": 284.1
+        }
+      ],
+      "normalized_emphasis": 17.6
     },
     "muscle.gluteus_minimus.left": {
       "muscle_id": "muscle.gluteus_minimus.left",
@@ -1058,17 +1280,33 @@
     },
     "muscle.iliacus.left": {
       "muscle_id": "muscle.iliacus.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 3.22,
+      "opensim_estimated_force_n": 198.87,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.14,
+          "raw_exposure": 3.22,
+          "opensim_estimated_force_n": 198.87000000000003
+        }
+      ],
+      "normalized_emphasis": 12.3
     },
     "muscle.iliacus.right": {
       "muscle_id": "muscle.iliacus.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 3.22,
+      "opensim_estimated_force_n": 198.87,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.14,
+          "raw_exposure": 3.22,
+          "opensim_estimated_force_n": 198.87000000000003
+        }
+      ],
+      "normalized_emphasis": 12.3
     },
     "muscle.iliococcygeus.left": {
       "muscle_id": "muscle.iliococcygeus.left",
@@ -1100,31 +1338,63 @@
     },
     "muscle.iliocostalis_lumborum.left": {
       "muscle_id": "muscle.iliocostalis_lumborum.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 6.44,
+      "opensim_estimated_force_n": 397.74,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.28,
+          "raw_exposure": 6.44,
+          "opensim_estimated_force_n": 397.74000000000007
+        }
+      ],
+      "normalized_emphasis": 24.7
     },
     "muscle.iliocostalis_lumborum.right": {
       "muscle_id": "muscle.iliocostalis_lumborum.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 6.44,
+      "opensim_estimated_force_n": 397.74,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.28,
+          "raw_exposure": 6.44,
+          "opensim_estimated_force_n": 397.74000000000007
+        }
+      ],
+      "normalized_emphasis": 24.7
     },
     "muscle.iliocostalis_thoracis.left": {
       "muscle_id": "muscle.iliocostalis_thoracis.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 3.22,
+      "opensim_estimated_force_n": 198.87,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.14,
+          "raw_exposure": 3.22,
+          "opensim_estimated_force_n": 198.87000000000003
+        }
+      ],
+      "normalized_emphasis": 12.3
     },
     "muscle.iliocostalis_thoracis.right": {
       "muscle_id": "muscle.iliocostalis_thoracis.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 3.22,
+      "opensim_estimated_force_n": 198.87,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.14,
+          "raw_exposure": 3.22,
+          "opensim_estimated_force_n": 198.87000000000003
+        }
+      ],
+      "normalized_emphasis": 12.3
     },
     "muscle.iliopectineal_arch.left": {
       "muscle_id": "muscle.iliopectineal_arch.left",
@@ -1240,17 +1510,47 @@
     },
     "muscle.internal_abdominal_oblique.left": {
       "muscle_id": "muscle.internal_abdominal_oblique.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 8.809,
+      "opensim_estimated_force_n": 430.9,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.105,
+          "raw_exposure": 2.415,
+          "opensim_estimated_force_n": 149.1525
+        },
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.245,
+          "raw_exposure": 6.3945,
+          "opensim_estimated_force_n": 281.75
+        }
+      ],
+      "normalized_emphasis": 33.8
     },
     "muscle.internal_abdominal_oblique.right": {
       "muscle_id": "muscle.internal_abdominal_oblique.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 8.809,
+      "opensim_estimated_force_n": 430.9,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.105,
+          "raw_exposure": 2.415,
+          "opensim_estimated_force_n": 149.1525
+        },
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.245,
+          "raw_exposure": 6.3945,
+          "opensim_estimated_force_n": 281.75
+        }
+      ],
+      "normalized_emphasis": 33.8
     },
     "muscle.internal_intercostal.left": {
       "muscle_id": "muscle.internal_intercostal.left",
@@ -1338,33 +1638,17 @@
     },
     "muscle.lateral_head_of_gastrocnemius.left": {
       "muscle_id": "muscle.lateral_head_of_gastrocnemius.left",
-      "raw_exposure": 5.75,
-      "opensim_estimated_force_n": 355.12,
-      "contributions": [
-        {
-          "exercise_id": "exercise.barbell_back_squat.high_bar",
-          "role": "stabilizer",
-          "coefficient": 0.25,
-          "raw_exposure": 5.75,
-          "opensim_estimated_force_n": 355.125
-        }
-      ],
-      "normalized_emphasis": 25.9
+      "raw_exposure": 0.0,
+      "opensim_estimated_force_n": 0.0,
+      "contributions": [],
+      "normalized_emphasis": 0.0
     },
     "muscle.lateral_head_of_gastrocnemius.right": {
       "muscle_id": "muscle.lateral_head_of_gastrocnemius.right",
-      "raw_exposure": 5.75,
-      "opensim_estimated_force_n": 355.12,
-      "contributions": [
-        {
-          "exercise_id": "exercise.barbell_back_squat.high_bar",
-          "role": "stabilizer",
-          "coefficient": 0.25,
-          "raw_exposure": 5.75,
-          "opensim_estimated_force_n": 355.125
-        }
-      ],
-      "normalized_emphasis": 25.9
+      "raw_exposure": 0.0,
+      "opensim_estimated_force_n": 0.0,
+      "contributions": [],
+      "normalized_emphasis": 0.0
     },
     "muscle.lateral_head_of_triceps_brachii.left": {
       "muscle_id": "muscle.lateral_head_of_triceps_brachii.left",
@@ -1396,30 +1680,30 @@
     },
     "muscle.latissimus_dorsi.left": {
       "muscle_id": "muscle.latissimus_dorsi.left",
-      "raw_exposure": 22.185,
-      "opensim_estimated_force_n": 977.5,
+      "raw_exposure": 26.1,
+      "opensim_estimated_force_n": 1150.0,
       "contributions": [
         {
           "exercise_id": "exercise.pull_up.pronated",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 22.185000000000002,
-          "opensim_estimated_force_n": 977.5
+          "coefficient": 1.0,
+          "raw_exposure": 26.1,
+          "opensim_estimated_force_n": 1150.0
         }
       ],
       "normalized_emphasis": 100.0
     },
     "muscle.latissimus_dorsi.right": {
       "muscle_id": "muscle.latissimus_dorsi.right",
-      "raw_exposure": 22.185,
-      "opensim_estimated_force_n": 977.5,
+      "raw_exposure": 26.1,
+      "opensim_estimated_force_n": 1150.0,
       "contributions": [
         {
           "exercise_id": "exercise.pull_up.pronated",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 22.185000000000002,
-          "opensim_estimated_force_n": 977.5
+          "coefficient": 1.0,
+          "raw_exposure": 26.1,
+          "opensim_estimated_force_n": 1150.0
         }
       ],
       "normalized_emphasis": 100.0
@@ -1524,77 +1808,93 @@
     },
     "muscle.long_head_of_biceps_brachii.left": {
       "muscle_id": "muscle.long_head_of_biceps_brachii.left",
-      "raw_exposure": 22.185,
-      "opensim_estimated_force_n": 977.5,
+      "raw_exposure": 20.88,
+      "opensim_estimated_force_n": 920.0,
       "contributions": [
         {
           "exercise_id": "exercise.pull_up.pronated",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 22.185000000000002,
-          "opensim_estimated_force_n": 977.5
+          "coefficient": 0.8,
+          "raw_exposure": 20.880000000000003,
+          "opensim_estimated_force_n": 920.0
         }
       ],
-      "normalized_emphasis": 100.0
+      "normalized_emphasis": 80.0
     },
     "muscle.long_head_of_biceps_brachii.right": {
       "muscle_id": "muscle.long_head_of_biceps_brachii.right",
-      "raw_exposure": 22.185,
-      "opensim_estimated_force_n": 977.5,
+      "raw_exposure": 20.88,
+      "opensim_estimated_force_n": 920.0,
       "contributions": [
         {
           "exercise_id": "exercise.pull_up.pronated",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 22.185000000000002,
-          "opensim_estimated_force_n": 977.5
+          "coefficient": 0.8,
+          "raw_exposure": 20.880000000000003,
+          "opensim_estimated_force_n": 920.0
         }
       ],
-      "normalized_emphasis": 100.0
+      "normalized_emphasis": 80.0
     },
     "muscle.long_head_of_biceps_femoris.left": {
       "muscle_id": "muscle.long_head_of_biceps_femoris.left",
-      "raw_exposure": 12.65,
-      "opensim_estimated_force_n": 781.28,
+      "raw_exposure": 16.1,
+      "opensim_estimated_force_n": 994.35,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
-          "role": "synergist",
-          "coefficient": 0.55,
-          "raw_exposure": 12.65,
-          "opensim_estimated_force_n": 781.2750000000001
+          "role": "primary",
+          "coefficient": 0.7,
+          "raw_exposure": 16.099999999999998,
+          "opensim_estimated_force_n": 994.3499999999999
         }
       ],
-      "normalized_emphasis": 57.0
+      "normalized_emphasis": 61.7
     },
     "muscle.long_head_of_biceps_femoris.right": {
       "muscle_id": "muscle.long_head_of_biceps_femoris.right",
-      "raw_exposure": 12.65,
-      "opensim_estimated_force_n": 781.28,
+      "raw_exposure": 16.1,
+      "opensim_estimated_force_n": 994.35,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
-          "role": "synergist",
-          "coefficient": 0.55,
-          "raw_exposure": 12.65,
-          "opensim_estimated_force_n": 781.2750000000001
+          "role": "primary",
+          "coefficient": 0.7,
+          "raw_exposure": 16.099999999999998,
+          "opensim_estimated_force_n": 994.3499999999999
         }
       ],
-      "normalized_emphasis": 57.0
+      "normalized_emphasis": 61.7
     },
     "muscle.long_head_of_triceps_brachii.left": {
       "muscle_id": "muscle.long_head_of_triceps_brachii.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 7.83,
+      "opensim_estimated_force_n": 345.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "synergist",
+          "coefficient": 0.3,
+          "raw_exposure": 7.83,
+          "opensim_estimated_force_n": 345.0
+        }
+      ],
+      "normalized_emphasis": 30.0
     },
     "muscle.long_head_of_triceps_brachii.right": {
       "muscle_id": "muscle.long_head_of_triceps_brachii.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 7.83,
+      "opensim_estimated_force_n": 345.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "synergist",
+          "coefficient": 0.3,
+          "raw_exposure": 7.83,
+          "opensim_estimated_force_n": 345.0
+        }
+      ],
+      "normalized_emphasis": 30.0
     },
     "muscle.longissimus_capitis.left": {
       "muscle_id": "muscle.longissimus_capitis.left",
@@ -1626,17 +1926,33 @@
     },
     "muscle.longissimus_thoracis.left": {
       "muscle_id": "muscle.longissimus_thoracis.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 7.245,
+      "opensim_estimated_force_n": 447.46,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.315,
+          "raw_exposure": 7.245,
+          "opensim_estimated_force_n": 447.4575
+        }
+      ],
+      "normalized_emphasis": 27.8
     },
     "muscle.longissimus_thoracis.right": {
       "muscle_id": "muscle.longissimus_thoracis.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 7.245,
+      "opensim_estimated_force_n": 447.46,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.315,
+          "raw_exposure": 7.245,
+          "opensim_estimated_force_n": 447.4575
+        }
+      ],
+      "normalized_emphasis": 27.8
     },
     "muscle.longus_capitis.left": {
       "muscle_id": "muscle.longus_capitis.left",
@@ -1710,33 +2026,17 @@
     },
     "muscle.medial_head_of_gastrocnemius.left": {
       "muscle_id": "muscle.medial_head_of_gastrocnemius.left",
-      "raw_exposure": 5.75,
-      "opensim_estimated_force_n": 355.12,
-      "contributions": [
-        {
-          "exercise_id": "exercise.barbell_back_squat.high_bar",
-          "role": "stabilizer",
-          "coefficient": 0.25,
-          "raw_exposure": 5.75,
-          "opensim_estimated_force_n": 355.125
-        }
-      ],
-      "normalized_emphasis": 25.9
+      "raw_exposure": 0.0,
+      "opensim_estimated_force_n": 0.0,
+      "contributions": [],
+      "normalized_emphasis": 0.0
     },
     "muscle.medial_head_of_gastrocnemius.right": {
       "muscle_id": "muscle.medial_head_of_gastrocnemius.right",
-      "raw_exposure": 5.75,
-      "opensim_estimated_force_n": 355.12,
-      "contributions": [
-        {
-          "exercise_id": "exercise.barbell_back_squat.high_bar",
-          "role": "stabilizer",
-          "coefficient": 0.25,
-          "raw_exposure": 5.75,
-          "opensim_estimated_force_n": 355.125
-        }
-      ],
-      "normalized_emphasis": 25.9
+      "raw_exposure": 0.0,
+      "opensim_estimated_force_n": 0.0,
+      "contributions": [],
+      "normalized_emphasis": 0.0
     },
     "muscle.medial_head_of_triceps_brachii.left": {
       "muscle_id": "muscle.medial_head_of_triceps_brachii.left",
@@ -1824,17 +2124,33 @@
     },
     "muscle.multifidus_lumborum.left": {
       "muscle_id": "muscle.multifidus_lumborum.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 5.635,
+      "opensim_estimated_force_n": 348.02,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.245,
+          "raw_exposure": 5.635,
+          "opensim_estimated_force_n": 348.0225
+        }
+      ],
+      "normalized_emphasis": 21.6
     },
     "muscle.multifidus_lumborum.right": {
       "muscle_id": "muscle.multifidus_lumborum.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 5.635,
+      "opensim_estimated_force_n": 348.02,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.245,
+          "raw_exposure": 5.635,
+          "opensim_estimated_force_n": 348.0225
+        }
+      ],
+      "normalized_emphasis": 21.6
     },
     "muscle.multifidus_thoracis.left": {
       "muscle_id": "muscle.multifidus_thoracis.left",
@@ -2146,33 +2462,17 @@
     },
     "muscle.pectoralis_minor.left": {
       "muscle_id": "muscle.pectoralis_minor.left",
-      "raw_exposure": 6.525,
-      "opensim_estimated_force_n": 287.5,
-      "contributions": [
-        {
-          "exercise_id": "exercise.pull_up.pronated",
-          "role": "stabilizer",
-          "coefficient": 0.25,
-          "raw_exposure": 6.525,
-          "opensim_estimated_force_n": 287.5
-        }
-      ],
-      "normalized_emphasis": 29.4
+      "raw_exposure": 0.0,
+      "opensim_estimated_force_n": 0.0,
+      "contributions": [],
+      "normalized_emphasis": 0.0
     },
     "muscle.pectoralis_minor.right": {
       "muscle_id": "muscle.pectoralis_minor.right",
-      "raw_exposure": 6.525,
-      "opensim_estimated_force_n": 287.5,
-      "contributions": [
-        {
-          "exercise_id": "exercise.pull_up.pronated",
-          "role": "stabilizer",
-          "coefficient": 0.25,
-          "raw_exposure": 6.525,
-          "opensim_estimated_force_n": 287.5
-        }
-      ],
-      "normalized_emphasis": 29.4
+      "raw_exposure": 0.0,
+      "opensim_estimated_force_n": 0.0,
+      "contributions": [],
+      "normalized_emphasis": 0.0
     },
     "muscle.piriformis.left": {
       "muscle_id": "muscle.piriformis.left",
@@ -2302,17 +2602,33 @@
     },
     "muscle.psoas_major.left": {
       "muscle_id": "muscle.psoas_major.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 2.415,
+      "opensim_estimated_force_n": 149.15,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.105,
+          "raw_exposure": 2.415,
+          "opensim_estimated_force_n": 149.1525
+        }
+      ],
+      "normalized_emphasis": 9.3
     },
     "muscle.psoas_major.right": {
       "muscle_id": "muscle.psoas_major.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 2.415,
+      "opensim_estimated_force_n": 149.15,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.105,
+          "raw_exposure": 2.415,
+          "opensim_estimated_force_n": 149.1525
+        }
+      ],
+      "normalized_emphasis": 9.3
     },
     "muscle.pubo_analis.left": {
       "muscle_id": "muscle.pubo_analis.left",
@@ -2372,17 +2688,33 @@
     },
     "muscle.quadratus_lumborum.left": {
       "muscle_id": "muscle.quadratus_lumborum.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 2.415,
+      "opensim_estimated_force_n": 149.15,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.105,
+          "raw_exposure": 2.415,
+          "opensim_estimated_force_n": 149.1525
+        }
+      ],
+      "normalized_emphasis": 9.3
     },
     "muscle.quadratus_lumborum.right": {
       "muscle_id": "muscle.quadratus_lumborum.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 2.415,
+      "opensim_estimated_force_n": 149.15,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.105,
+          "raw_exposure": 2.415,
+          "opensim_estimated_force_n": 149.1525
+        }
+      ],
+      "normalized_emphasis": 9.3
     },
     "muscle.quadratus_plantae.left": {
       "muscle_id": "muscle.quadratus_plantae.left",
@@ -2414,33 +2746,47 @@
     },
     "muscle.rectus_abdominis.left": {
       "muscle_id": "muscle.rectus_abdominis.left",
-      "raw_exposure": 6.525,
-      "opensim_estimated_force_n": 287.5,
+      "raw_exposure": 13.965,
+      "opensim_estimated_force_n": 700.81,
       "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.21,
+          "raw_exposure": 4.83,
+          "opensim_estimated_force_n": 298.305
+        },
         {
           "exercise_id": "exercise.pull_up.pronated",
           "role": "stabilizer",
-          "coefficient": 0.25,
-          "raw_exposure": 6.525,
-          "opensim_estimated_force_n": 287.5
+          "coefficient": 0.35,
+          "raw_exposure": 9.135,
+          "opensim_estimated_force_n": 402.5
         }
       ],
-      "normalized_emphasis": 29.4
+      "normalized_emphasis": 53.5
     },
     "muscle.rectus_abdominis.right": {
       "muscle_id": "muscle.rectus_abdominis.right",
-      "raw_exposure": 6.525,
-      "opensim_estimated_force_n": 287.5,
+      "raw_exposure": 13.965,
+      "opensim_estimated_force_n": 700.81,
       "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.21,
+          "raw_exposure": 4.83,
+          "opensim_estimated_force_n": 298.305
+        },
         {
           "exercise_id": "exercise.pull_up.pronated",
           "role": "stabilizer",
-          "coefficient": 0.25,
-          "raw_exposure": 6.525,
-          "opensim_estimated_force_n": 287.5
+          "coefficient": 0.35,
+          "raw_exposure": 9.135,
+          "opensim_estimated_force_n": 402.5
         }
       ],
-      "normalized_emphasis": 29.4
+      "normalized_emphasis": 53.5
     },
     "muscle.rectus_anterior_capitis.left": {
       "muscle_id": "muscle.rectus_anterior_capitis.left",
@@ -2458,33 +2804,33 @@
     },
     "muscle.rectus_femoris.left": {
       "muscle_id": "muscle.rectus_femoris.left",
-      "raw_exposure": 19.55,
-      "opensim_estimated_force_n": 1207.42,
+      "raw_exposure": 18.4,
+      "opensim_estimated_force_n": 1136.4,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 19.55,
-          "opensim_estimated_force_n": 1207.425
+          "coefficient": 0.8,
+          "raw_exposure": 18.400000000000002,
+          "opensim_estimated_force_n": 1136.4
         }
       ],
-      "normalized_emphasis": 88.1
+      "normalized_emphasis": 70.5
     },
     "muscle.rectus_femoris.right": {
       "muscle_id": "muscle.rectus_femoris.right",
-      "raw_exposure": 19.55,
-      "opensim_estimated_force_n": 1207.42,
+      "raw_exposure": 18.4,
+      "opensim_estimated_force_n": 1136.4,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 19.55,
-          "opensim_estimated_force_n": 1207.425
+          "coefficient": 0.8,
+          "raw_exposure": 18.400000000000002,
+          "opensim_estimated_force_n": 1136.4
         }
       ],
-      "normalized_emphasis": 88.1
+      "normalized_emphasis": 70.5
     },
     "muscle.rectus_lateralis_capitis.left": {
       "muscle_id": "muscle.rectus_lateralis_capitis.left",
@@ -2530,31 +2876,63 @@
     },
     "muscle.rhomboid_major.left": {
       "muscle_id": "muscle.rhomboid_major.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 5.481,
+      "opensim_estimated_force_n": 241.5,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.21,
+          "raw_exposure": 5.481,
+          "opensim_estimated_force_n": 241.5
+        }
+      ],
+      "normalized_emphasis": 21.0
     },
     "muscle.rhomboid_major.right": {
       "muscle_id": "muscle.rhomboid_major.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 5.481,
+      "opensim_estimated_force_n": 241.5,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.21,
+          "raw_exposure": 5.481,
+          "opensim_estimated_force_n": 241.5
+        }
+      ],
+      "normalized_emphasis": 21.0
     },
     "muscle.rhomboid_minor.left": {
       "muscle_id": "muscle.rhomboid_minor.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 3.654,
+      "opensim_estimated_force_n": 161.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.14,
+          "raw_exposure": 3.6540000000000004,
+          "opensim_estimated_force_n": 161.00000000000003
+        }
+      ],
+      "normalized_emphasis": 14.0
     },
     "muscle.rhomboid_minor.right": {
       "muscle_id": "muscle.rhomboid_minor.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 3.654,
+      "opensim_estimated_force_n": 161.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.14,
+          "raw_exposure": 3.6540000000000004,
+          "opensim_estimated_force_n": 161.00000000000003
+        }
+      ],
+      "normalized_emphasis": 14.0
     },
     "muscle.risorius.left": {
       "muscle_id": "muscle.risorius.left",
@@ -2656,33 +3034,33 @@
     },
     "muscle.semimembranosus.left": {
       "muscle_id": "muscle.semimembranosus.left",
-      "raw_exposure": 12.65,
-      "opensim_estimated_force_n": 781.28,
+      "raw_exposure": 16.1,
+      "opensim_estimated_force_n": 994.35,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
-          "role": "synergist",
-          "coefficient": 0.55,
-          "raw_exposure": 12.65,
-          "opensim_estimated_force_n": 781.2750000000001
+          "role": "primary",
+          "coefficient": 0.7,
+          "raw_exposure": 16.099999999999998,
+          "opensim_estimated_force_n": 994.3499999999999
         }
       ],
-      "normalized_emphasis": 57.0
+      "normalized_emphasis": 61.7
     },
     "muscle.semimembranosus.right": {
       "muscle_id": "muscle.semimembranosus.right",
-      "raw_exposure": 12.65,
-      "opensim_estimated_force_n": 781.28,
+      "raw_exposure": 16.1,
+      "opensim_estimated_force_n": 994.35,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
-          "role": "synergist",
-          "coefficient": 0.55,
-          "raw_exposure": 12.65,
-          "opensim_estimated_force_n": 781.2750000000001
+          "role": "primary",
+          "coefficient": 0.7,
+          "raw_exposure": 16.099999999999998,
+          "opensim_estimated_force_n": 994.3499999999999
         }
       ],
-      "normalized_emphasis": 57.0
+      "normalized_emphasis": 61.7
     },
     "muscle.semispinalis_colli.left": {
       "muscle_id": "muscle.semispinalis_colli.left",
@@ -2714,47 +3092,63 @@
     },
     "muscle.semitendinosus.left": {
       "muscle_id": "muscle.semitendinosus.left",
-      "raw_exposure": 12.65,
-      "opensim_estimated_force_n": 781.28,
+      "raw_exposure": 16.1,
+      "opensim_estimated_force_n": 994.35,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
-          "role": "synergist",
-          "coefficient": 0.55,
-          "raw_exposure": 12.65,
-          "opensim_estimated_force_n": 781.2750000000001
+          "role": "primary",
+          "coefficient": 0.7,
+          "raw_exposure": 16.099999999999998,
+          "opensim_estimated_force_n": 994.3499999999999
         }
       ],
-      "normalized_emphasis": 57.0
+      "normalized_emphasis": 61.7
     },
     "muscle.semitendinosus.right": {
       "muscle_id": "muscle.semitendinosus.right",
-      "raw_exposure": 12.65,
-      "opensim_estimated_force_n": 781.28,
+      "raw_exposure": 16.1,
+      "opensim_estimated_force_n": 994.35,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
-          "role": "synergist",
-          "coefficient": 0.55,
-          "raw_exposure": 12.65,
-          "opensim_estimated_force_n": 781.2750000000001
+          "role": "primary",
+          "coefficient": 0.7,
+          "raw_exposure": 16.099999999999998,
+          "opensim_estimated_force_n": 994.3499999999999
         }
       ],
-      "normalized_emphasis": 57.0
+      "normalized_emphasis": 61.7
     },
     "muscle.serratus_anterior.left": {
       "muscle_id": "muscle.serratus_anterior.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 9.135,
+      "opensim_estimated_force_n": 402.5,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.35,
+          "raw_exposure": 9.135,
+          "opensim_estimated_force_n": 402.5
+        }
+      ],
+      "normalized_emphasis": 35.0
     },
     "muscle.serratus_anterior.right": {
       "muscle_id": "muscle.serratus_anterior.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 9.135,
+      "opensim_estimated_force_n": 402.5,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.35,
+          "raw_exposure": 9.135,
+          "opensim_estimated_force_n": 402.5
+        }
+      ],
+      "normalized_emphasis": 35.0
     },
     "muscle.serratus_posterior_inferior.left": {
       "muscle_id": "muscle.serratus_posterior_inferior.left",
@@ -2786,77 +3180,77 @@
     },
     "muscle.short_head_of_biceps_brachii.left": {
       "muscle_id": "muscle.short_head_of_biceps_brachii.left",
-      "raw_exposure": 22.185,
-      "opensim_estimated_force_n": 977.5,
+      "raw_exposure": 20.88,
+      "opensim_estimated_force_n": 920.0,
       "contributions": [
         {
           "exercise_id": "exercise.pull_up.pronated",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 22.185000000000002,
-          "opensim_estimated_force_n": 977.5
+          "coefficient": 0.8,
+          "raw_exposure": 20.880000000000003,
+          "opensim_estimated_force_n": 920.0
         }
       ],
-      "normalized_emphasis": 100.0
+      "normalized_emphasis": 80.0
     },
     "muscle.short_head_of_biceps_brachii.right": {
       "muscle_id": "muscle.short_head_of_biceps_brachii.right",
-      "raw_exposure": 22.185,
-      "opensim_estimated_force_n": 977.5,
+      "raw_exposure": 20.88,
+      "opensim_estimated_force_n": 920.0,
       "contributions": [
         {
           "exercise_id": "exercise.pull_up.pronated",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 22.185000000000002,
-          "opensim_estimated_force_n": 977.5
+          "coefficient": 0.8,
+          "raw_exposure": 20.880000000000003,
+          "opensim_estimated_force_n": 920.0
         }
       ],
-      "normalized_emphasis": 100.0
+      "normalized_emphasis": 80.0
     },
     "muscle.short_head_of_biceps_femoris.left": {
       "muscle_id": "muscle.short_head_of_biceps_femoris.left",
-      "raw_exposure": 12.65,
-      "opensim_estimated_force_n": 781.28,
-      "contributions": [
-        {
-          "exercise_id": "exercise.barbell_back_squat.high_bar",
-          "role": "synergist",
-          "coefficient": 0.55,
-          "raw_exposure": 12.65,
-          "opensim_estimated_force_n": 781.2750000000001
-        }
-      ],
-      "normalized_emphasis": 57.0
+      "raw_exposure": 0.0,
+      "opensim_estimated_force_n": 0.0,
+      "contributions": [],
+      "normalized_emphasis": 0.0
     },
     "muscle.short_head_of_biceps_femoris.right": {
       "muscle_id": "muscle.short_head_of_biceps_femoris.right",
-      "raw_exposure": 12.65,
-      "opensim_estimated_force_n": 781.28,
-      "contributions": [
-        {
-          "exercise_id": "exercise.barbell_back_squat.high_bar",
-          "role": "synergist",
-          "coefficient": 0.55,
-          "raw_exposure": 12.65,
-          "opensim_estimated_force_n": 781.2750000000001
-        }
-      ],
-      "normalized_emphasis": 57.0
+      "raw_exposure": 0.0,
+      "opensim_estimated_force_n": 0.0,
+      "contributions": [],
+      "normalized_emphasis": 0.0
     },
     "muscle.soleus.left": {
       "muscle_id": "muscle.soleus.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 4.025,
+      "opensim_estimated_force_n": 248.59,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.175,
+          "raw_exposure": 4.0249999999999995,
+          "opensim_estimated_force_n": 248.58749999999998
+        }
+      ],
+      "normalized_emphasis": 15.4
     },
     "muscle.soleus.right": {
       "muscle_id": "muscle.soleus.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 4.025,
+      "opensim_estimated_force_n": 248.59,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.175,
+          "raw_exposure": 4.0249999999999995,
+          "opensim_estimated_force_n": 248.58749999999998
+        }
+      ],
+      "normalized_emphasis": 15.4
     },
     "muscle.spinalis_capitis.left": {
       "muscle_id": "muscle.spinalis_capitis.left",
@@ -2944,17 +3338,33 @@
     },
     "muscle.sternocostal_head_of_pectoralis_major.left": {
       "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 20.88,
+      "opensim_estimated_force_n": 920.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "primary",
+          "coefficient": 0.8,
+          "raw_exposure": 20.880000000000003,
+          "opensim_estimated_force_n": 920.0
+        }
+      ],
+      "normalized_emphasis": 80.0
     },
     "muscle.sternocostal_head_of_pectoralis_major.right": {
       "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 20.88,
+      "opensim_estimated_force_n": 920.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "primary",
+          "coefficient": 0.8,
+          "raw_exposure": 20.880000000000003,
+          "opensim_estimated_force_n": 920.0
+        }
+      ],
+      "normalized_emphasis": 80.0
     },
     "muscle.sternohyoid.left": {
       "muscle_id": "muscle.sternohyoid.left",
@@ -3042,17 +3452,33 @@
     },
     "muscle.subscapularis.left": {
       "muscle_id": "muscle.subscapularis.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 5.22,
+      "opensim_estimated_force_n": 230.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "synergist",
+          "coefficient": 0.2,
+          "raw_exposure": 5.220000000000001,
+          "opensim_estimated_force_n": 230.0
+        }
+      ],
+      "normalized_emphasis": 20.0
     },
     "muscle.subscapularis.right": {
       "muscle_id": "muscle.subscapularis.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 5.22,
+      "opensim_estimated_force_n": 230.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "synergist",
+          "coefficient": 0.2,
+          "raw_exposure": 5.220000000000001,
+          "opensim_estimated_force_n": 230.0
+        }
+      ],
+      "normalized_emphasis": 20.0
     },
     "muscle.superficial_head_of_flexor_pollicis_brevis.left": {
       "muscle_id": "muscle.superficial_head_of_flexor_pollicis_brevis.left",
@@ -3070,17 +3496,33 @@
     },
     "muscle.superficial_head_of_pronator_teres.left": {
       "muscle_id": "muscle.superficial_head_of_pronator_teres.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 5.22,
+      "opensim_estimated_force_n": 230.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "synergist",
+          "coefficient": 0.2,
+          "raw_exposure": 5.220000000000001,
+          "opensim_estimated_force_n": 230.0
+        }
+      ],
+      "normalized_emphasis": 20.0
     },
     "muscle.superficial_head_of_pronator_teres.right": {
       "muscle_id": "muscle.superficial_head_of_pronator_teres.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 5.22,
+      "opensim_estimated_force_n": 230.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "synergist",
+          "coefficient": 0.2,
+          "raw_exposure": 5.220000000000001,
+          "opensim_estimated_force_n": 230.0
+        }
+      ],
+      "normalized_emphasis": 20.0
     },
     "muscle.superficial_part_of_masseter.left": {
       "muscle_id": "muscle.superficial_part_of_masseter.left",
@@ -3238,31 +3680,63 @@
     },
     "muscle.teres_major.left": {
       "muscle_id": "muscle.teres_major.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 18.27,
+      "opensim_estimated_force_n": 805.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "primary",
+          "coefficient": 0.7,
+          "raw_exposure": 18.27,
+          "opensim_estimated_force_n": 805.0
+        }
+      ],
+      "normalized_emphasis": 70.0
     },
     "muscle.teres_major.right": {
       "muscle_id": "muscle.teres_major.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 18.27,
+      "opensim_estimated_force_n": 805.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "primary",
+          "coefficient": 0.7,
+          "raw_exposure": 18.27,
+          "opensim_estimated_force_n": 805.0
+        }
+      ],
+      "normalized_emphasis": 70.0
     },
     "muscle.teres_minor.left": {
       "muscle_id": "muscle.teres_minor.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 5.22,
+      "opensim_estimated_force_n": 230.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "synergist",
+          "coefficient": 0.2,
+          "raw_exposure": 5.220000000000001,
+          "opensim_estimated_force_n": 230.0
+        }
+      ],
+      "normalized_emphasis": 20.0
     },
     "muscle.teres_minor.right": {
       "muscle_id": "muscle.teres_minor.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 5.22,
+      "opensim_estimated_force_n": 230.0,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "synergist",
+          "coefficient": 0.2,
+          "raw_exposure": 5.220000000000001,
+          "opensim_estimated_force_n": 230.0
+        }
+      ],
+      "normalized_emphasis": 20.0
     },
     "muscle.thyro_epiglottic_part_of_thyro_arytenoid.left": {
       "muscle_id": "muscle.thyro_epiglottic_part_of_thyro_arytenoid.left",
@@ -3294,31 +3768,63 @@
     },
     "muscle.tibialis_anterior.left": {
       "muscle_id": "muscle.tibialis_anterior.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 3.22,
+      "opensim_estimated_force_n": 198.87,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.14,
+          "raw_exposure": 3.22,
+          "opensim_estimated_force_n": 198.87000000000003
+        }
+      ],
+      "normalized_emphasis": 12.3
     },
     "muscle.tibialis_anterior.right": {
       "muscle_id": "muscle.tibialis_anterior.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 3.22,
+      "opensim_estimated_force_n": 198.87,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.14,
+          "raw_exposure": 3.22,
+          "opensim_estimated_force_n": 198.87000000000003
+        }
+      ],
+      "normalized_emphasis": 12.3
     },
     "muscle.tibialis_posterior.left": {
       "muscle_id": "muscle.tibialis_posterior.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 5.635,
+      "opensim_estimated_force_n": 348.02,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.245,
+          "raw_exposure": 5.635,
+          "opensim_estimated_force_n": 348.0225
+        }
+      ],
+      "normalized_emphasis": 21.6
     },
     "muscle.tibialis_posterior.right": {
       "muscle_id": "muscle.tibialis_posterior.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 5.635,
+      "opensim_estimated_force_n": 348.02,
+      "contributions": [
+        {
+          "exercise_id": "exercise.barbell_back_squat.high_bar",
+          "role": "stabilizer",
+          "coefficient": 0.245,
+          "raw_exposure": 5.635,
+          "opensim_estimated_force_n": 348.0225
+        }
+      ],
+      "normalized_emphasis": 21.6
     },
     "muscle.transverse_arytenoid": {
       "muscle_id": "muscle.transverse_arytenoid",
@@ -3357,61 +3863,63 @@
     },
     "muscle.transverse_part_of_trapezius.left": {
       "muscle_id": "muscle.transverse_part_of_trapezius.left",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 4.567,
+      "opensim_estimated_force_n": 201.25,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.175,
+          "raw_exposure": 4.5675,
+          "opensim_estimated_force_n": 201.25
+        }
+      ],
+      "normalized_emphasis": 17.5
     },
     "muscle.transverse_part_of_trapezius.right": {
       "muscle_id": "muscle.transverse_part_of_trapezius.right",
-      "raw_exposure": 0.0,
-      "opensim_estimated_force_n": 0.0,
-      "contributions": [],
-      "normalized_emphasis": 0.0
+      "raw_exposure": 4.567,
+      "opensim_estimated_force_n": 201.25,
+      "contributions": [
+        {
+          "exercise_id": "exercise.pull_up.pronated",
+          "role": "stabilizer",
+          "coefficient": 0.175,
+          "raw_exposure": 4.5675,
+          "opensim_estimated_force_n": 201.25
+        }
+      ],
+      "normalized_emphasis": 17.5
     },
     "muscle.transversus_abdominis.left": {
       "muscle_id": "muscle.transversus_abdominis.left",
-      "raw_exposure": 14.575,
-      "opensim_estimated_force_n": 784.67,
+      "raw_exposure": 2.74,
+      "opensim_estimated_force_n": 120.75,
       "contributions": [
-        {
-          "exercise_id": "exercise.barbell_back_squat.high_bar",
-          "role": "stabilizer",
-          "coefficient": 0.35,
-          "raw_exposure": 8.049999999999999,
-          "opensim_estimated_force_n": 497.17499999999995
-        },
         {
           "exercise_id": "exercise.pull_up.pronated",
           "role": "stabilizer",
-          "coefficient": 0.25,
-          "raw_exposure": 6.525,
-          "opensim_estimated_force_n": 287.5
+          "coefficient": 0.105,
+          "raw_exposure": 2.7405,
+          "opensim_estimated_force_n": 120.75
         }
       ],
-      "normalized_emphasis": 65.7
+      "normalized_emphasis": 10.5
     },
     "muscle.transversus_abdominis.right": {
       "muscle_id": "muscle.transversus_abdominis.right",
-      "raw_exposure": 14.575,
-      "opensim_estimated_force_n": 784.67,
+      "raw_exposure": 2.74,
+      "opensim_estimated_force_n": 120.75,
       "contributions": [
-        {
-          "exercise_id": "exercise.barbell_back_squat.high_bar",
-          "role": "stabilizer",
-          "coefficient": 0.35,
-          "raw_exposure": 8.049999999999999,
-          "opensim_estimated_force_n": 497.17499999999995
-        },
         {
           "exercise_id": "exercise.pull_up.pronated",
           "role": "stabilizer",
-          "coefficient": 0.25,
-          "raw_exposure": 6.525,
-          "opensim_estimated_force_n": 287.5
+          "coefficient": 0.105,
+          "raw_exposure": 2.7405,
+          "opensim_estimated_force_n": 120.75
         }
       ],
-      "normalized_emphasis": 65.7
+      "normalized_emphasis": 10.5
     },
     "muscle.transversus_thoracis.left": {
       "muscle_id": "muscle.transversus_thoracis.left",
@@ -3471,93 +3979,93 @@
     },
     "muscle.vastus_intermedius.left": {
       "muscle_id": "muscle.vastus_intermedius.left",
-      "raw_exposure": 19.55,
-      "opensim_estimated_force_n": 1207.42,
+      "raw_exposure": 20.7,
+      "opensim_estimated_force_n": 1278.45,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 19.55,
-          "opensim_estimated_force_n": 1207.425
+          "coefficient": 0.9,
+          "raw_exposure": 20.7,
+          "opensim_estimated_force_n": 1278.45
         }
       ],
-      "normalized_emphasis": 88.1
+      "normalized_emphasis": 79.3
     },
     "muscle.vastus_intermedius.right": {
       "muscle_id": "muscle.vastus_intermedius.right",
-      "raw_exposure": 19.55,
-      "opensim_estimated_force_n": 1207.42,
+      "raw_exposure": 20.7,
+      "opensim_estimated_force_n": 1278.45,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 19.55,
-          "opensim_estimated_force_n": 1207.425
+          "coefficient": 0.9,
+          "raw_exposure": 20.7,
+          "opensim_estimated_force_n": 1278.45
         }
       ],
-      "normalized_emphasis": 88.1
+      "normalized_emphasis": 79.3
     },
     "muscle.vastus_lateralis.left": {
       "muscle_id": "muscle.vastus_lateralis.left",
-      "raw_exposure": 19.55,
-      "opensim_estimated_force_n": 1207.42,
+      "raw_exposure": 23.0,
+      "opensim_estimated_force_n": 1420.5,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 19.55,
-          "opensim_estimated_force_n": 1207.425
+          "coefficient": 1.0,
+          "raw_exposure": 23.0,
+          "opensim_estimated_force_n": 1420.5
         }
       ],
       "normalized_emphasis": 88.1
     },
     "muscle.vastus_lateralis.right": {
       "muscle_id": "muscle.vastus_lateralis.right",
-      "raw_exposure": 19.55,
-      "opensim_estimated_force_n": 1207.42,
+      "raw_exposure": 23.0,
+      "opensim_estimated_force_n": 1420.5,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 19.55,
-          "opensim_estimated_force_n": 1207.425
+          "coefficient": 1.0,
+          "raw_exposure": 23.0,
+          "opensim_estimated_force_n": 1420.5
         }
       ],
       "normalized_emphasis": 88.1
     },
     "muscle.vastus_medialis.left": {
       "muscle_id": "muscle.vastus_medialis.left",
-      "raw_exposure": 19.55,
-      "opensim_estimated_force_n": 1207.42,
+      "raw_exposure": 20.7,
+      "opensim_estimated_force_n": 1278.45,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 19.55,
-          "opensim_estimated_force_n": 1207.425
+          "coefficient": 0.9,
+          "raw_exposure": 20.7,
+          "opensim_estimated_force_n": 1278.45
         }
       ],
-      "normalized_emphasis": 88.1
+      "normalized_emphasis": 79.3
     },
     "muscle.vastus_medialis.right": {
       "muscle_id": "muscle.vastus_medialis.right",
-      "raw_exposure": 19.55,
-      "opensim_estimated_force_n": 1207.42,
+      "raw_exposure": 20.7,
+      "opensim_estimated_force_n": 1278.45,
       "contributions": [
         {
           "exercise_id": "exercise.barbell_back_squat.high_bar",
           "role": "primary",
-          "coefficient": 0.85,
-          "raw_exposure": 19.55,
-          "opensim_estimated_force_n": 1207.425
+          "coefficient": 0.9,
+          "raw_exposure": 20.7,
+          "opensim_estimated_force_n": 1278.45
         }
       ],
-      "normalized_emphasis": 88.1
+      "normalized_emphasis": 79.3
     },
     "muscle.ventral_parts_of_lateral_intertransversarii_lumborum.left": {
       "muscle_id": "muscle.ventral_parts_of_lateral_intertransversarii_lumborum.left",
