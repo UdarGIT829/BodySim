@@ -10,6 +10,8 @@
 # Web export output (deployed separately; regenerate with the Web preset +
 # tools/web/stage_web_photos.py)
 /build/web/
+/build/gh-pages/
+/build/web-export.log
 
 # Local backups and caches (the backup folder contains a secret)
 /.backup-before-web/

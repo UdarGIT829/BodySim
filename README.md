@@ -20,10 +20,19 @@ demonstration photos.
 
 ## Web build
 
-1. Export the **Web** preset (writes `build/web/`). The authoring studio and
-   review council are excluded from web builds.
-2. Stage the photos next to it, since the web build fetches them on demand:
-   `python3 tools/web/stage_web_photos.py build/web`
+Live at <https://udargit829.github.io/BodySim/>, served from the `gh-pages`
+branch. To publish the current `main`:
+
+```bash
+tools/web/deploy_pages.sh            # export, verify, publish
+tools/web/deploy_pages.sh --no-push  # export and verify only
+```
+
+It requires a clean, pushed `main`, exports the **Web** preset (the authoring
+studio and review council are excluded), stages the exercise photos that the
+web build fetches on demand (`tools/web/stage_web_photos.py`), checks the build
+for API keys and oversized files, and replaces `gh-pages` with a single commit.
+Set `GODOT=/path/to/godot` if Godot 4.7 isn't at the default location.
 
 ## Authoring tools (desktop only)
 
