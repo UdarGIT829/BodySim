@@ -53,6 +53,15 @@ func _initialize() -> void:
 	require(not Store.load_promotion(hash).is_empty(), "promotion record must exist")
 	require(Store.promote(reloaded).get("already_promoted", false), "second promotion must be a no-op")
 
+	# Clearing writes cleared.json and never touches promoted revisions.
+	require(not Store.clear_blocker("revision", reloaded).is_empty(), "A promoted revision must not be clearable")
+	var rejected_draft := {"source_id": "Cleared_Test", "status": "review_rejected", "saved_at_unix": 1.0}
+	var cleared_result: Dictionary = Store.clear_entries([{"kind": "revision", "data": reloaded}, {"kind": "draft", "data": rejected_draft}], "test")
+	require(cleared_result.get("ok", false) and cleared_result.get("cleared") == 1, "Only the rejected draft must be cleared: %s" % [cleared_result])
+	var cleared_now: Dictionary = Store.load_cleared()
+	require(Store.is_cleared("draft", rejected_draft, cleared_now), "Cleared draft must be recorded")
+	require(not Store.is_cleared("revision", reloaded, cleared_now), "Promoted revision must not be recorded as cleared")
+
 	var selector: Node = SelectorScene.instantiate()
 	root.add_child(selector)
 	await process_frame

@@ -25,6 +25,16 @@ func verify() -> void:
 	require(ReviewRevisionStoreScript.council_status({"human_owner": {"decision": "accept"}, "openai_reviewer": {"decision": "accept"}}) == "review_pending", "A legacy OpenAI accept must not satisfy the Claude council")
 	require(ReviewRevisionStoreScript.council_status({"human_owner": {"decision": "accept"}, "openai_reviewer": {"decision": "reject"}}) == "changes_requested", "Legacy rejections must still request changes")
 	require(ReviewRevisionStoreScript.model_vote({"openai_reviewer": {"decision": "reject"}}).get("decision") == "reject", "Legacy model votes must still display")
+	# Clearing rules (pure; nothing is written here).
+	require(council.get_node_or_null("%RejectAndClearButton") is Button and council.get_node_or_null("%ClearRejectedButton") is Button, "Council must offer reject-and-clear and clear-all-rejected")
+	require(council.get_node_or_null("%ShowClearedCheck") is CheckBox, "Council must let cleared candidates be shown again")
+	var cleared := {"drafts": {"EZ-Bar_Curl": {"draft_saved_at_unix": 100.0}}, "revisions": {"abc": {}}}
+	require(ReviewRevisionStoreScript.is_cleared("revision", {"revision_sha256": "abc"}, cleared), "Cleared revisions must be hidden")
+	require(not ReviewRevisionStoreScript.is_cleared("revision", {"revision_sha256": "def"}, cleared), "Other revisions must stay visible")
+	require(ReviewRevisionStoreScript.is_cleared("draft", {"source_id": "EZ-Bar_Curl", "saved_at_unix": 90.0}, cleared), "A cleared draft must stay hidden")
+	require(not ReviewRevisionStoreScript.is_cleared("draft", {"source_id": "EZ-Bar_Curl", "saved_at_unix": 200.0}, cleared), "A draft saved again after clearing must reappear")
+	require(not ReviewRevisionStoreScript.clear_blocker("draft", {"status": "definition_candidate"}).is_empty(), "Unrejected drafts must not be cleared directly")
+	require(ReviewRevisionStoreScript.clear_blocker("draft", {"status": "review_rejected"}).is_empty(), "Rejected drafts must be clearable")
 	var ineligible := {"status": "definition_candidate", "validation_errors": [], "candidate_trace_report": {}}
 	require(not ReviewRevisionStoreScript.validate_eligibility(ineligible).is_empty(), "Draft without saved Phase 2C trace must not freeze")
 	var provider = PROVIDER_SCENE.instantiate(); root.add_child(provider); await process_frame

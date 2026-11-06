@@ -73,6 +73,23 @@ layout_mode = 2
 text = "Reject selected candidate"
 tooltip_text = "Requires a reason in the Human owner feedback field. The candidate is retained for audit."
 
+[node name="RejectAndClearButton" type="Button" parent="Margin/Column/Workspace/BrowserPanel/Browser"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Reject and clear selected"
+tooltip_text = "Rejects the selected candidate (using the feedback field, or a default note) and hides it from this queue. Nothing is deleted."
+
+[node name="ClearRejectedButton" type="Button" parent="Margin/Column/Workspace/BrowserPanel/Browser"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Clear all rejected"
+tooltip_text = "Hides every rejected draft and revision from this queue. Nothing is deleted; use Show cleared to see them."
+
+[node name="ShowClearedCheck" type="CheckBox" parent="Margin/Column/Workspace/BrowserPanel/Browser"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Show cleared"
+
 [node name="RevisionLabel" type="Label" parent="Margin/Column/Workspace/BrowserPanel/Browser"]
 unique_name_in_owner = true
 layout_mode = 2

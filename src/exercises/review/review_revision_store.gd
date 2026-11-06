@@ -171,6 +171,65 @@ static func promote(revision: Dictionary, python_executable := "python3") -> Dic
 	return report
 
 
+# ── Clearing the review queue ───────────────────────────────────────────────
+# Clearing hides a candidate from the council queue without deleting anything:
+# drafts, revisions and votes stay on disk for the audit trail. A cleared draft
+# reappears if it is saved again later (it is then a new candidate).
+
+const CLEARED_PATH := "res://data/exercises/authoring/cleared.json"
+
+
+static func load_cleared() -> Dictionary:
+	var data := read_json(CLEARED_PATH)
+	if data.is_empty():
+		data = {"format_version": 1, "drafts": {}, "revisions": {}}
+	return data
+
+
+static func is_cleared(kind: String, record: Dictionary, cleared: Dictionary) -> bool:
+	if kind == "revision":
+		return cleared.get("revisions", {}).has(String(record.get("revision_sha256", "")))
+	var entry: Dictionary = cleared.get("drafts", {}).get(String(record.get("source_id", "")), {})
+	return not entry.is_empty() and float(record.get("saved_at_unix", 0.0)) <= float(entry.get("draft_saved_at_unix", -1.0))
+
+
+## Returns "" when the record may be cleared, otherwise the reason it can't.
+static func clear_blocker(kind: String, record: Dictionary) -> String:
+	if kind == "revision":
+		var hash := String(record.get("revision_sha256", ""))
+		if not load_promotion(hash).is_empty():
+			return "Promoted revisions are part of the catalog history and can't be cleared."
+		if load_review(hash).get("status", "") == "accepted":
+			return "Reject this accepted revision first if you no longer want it."
+		return ""
+	if record.get("status", "") != "review_rejected":
+		return "Reject this draft first (Reject and clear does both)."
+	return ""
+
+
+static func clear_entries(items: Array, reason: String) -> Dictionary:
+	var cleared := load_cleared()
+	var now := Time.get_unix_time_from_system()
+	var count := 0
+	for item in items:
+		var kind: String = item["kind"]
+		var record: Dictionary = item["data"]
+		if not clear_blocker(kind, record).is_empty() or is_cleared(kind, record, cleared):
+			continue
+		if kind == "revision":
+			cleared["revisions"][String(record.get("revision_sha256", ""))] = {"cleared_at_unix": now, "reason": reason, "revision_id": record.get("revision_id", "")}
+		else:
+			cleared["drafts"][String(record.get("source_id", ""))] = {"cleared_at_unix": now, "reason": reason, "draft_saved_at_unix": record.get("saved_at_unix", 0.0)}
+		count += 1
+	if count == 0:
+		return {"ok": true, "cleared": 0}
+	var file := FileAccess.open(CLEARED_PATH, FileAccess.WRITE)
+	if file == null:
+		return {"ok": false, "error": "Could not write %s." % CLEARED_PATH}
+	file.store_string(JSON.stringify(sort_json(cleared), "  "))
+	return {"ok": true, "cleared": count}
+
+
 static func list_revisions() -> Array[Dictionary]:
 	var result: Array[Dictionary] = []
 	var directory := DirAccess.open(REVISION_DIRECTORY)

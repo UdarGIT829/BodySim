@@ -61,6 +61,9 @@ func _ready() -> void:
 	request_review_button.pressed.connect(request_model_review)
 	%RecordHumanVoteButton.pressed.connect(record_human_vote)
 	%PromoteButton.pressed.connect(promote_current_revision)
+	%RejectAndClearButton.pressed.connect(reject_and_clear_selected)
+	%ClearRejectedButton.pressed.connect(clear_all_rejected)
+	%ShowClearedCheck.toggled.connect(func(_on: bool) -> void: populate_tree())
 	model_option.item_selected.connect(_on_model_selected)
 	custom_model_input.text_changed.connect(_on_custom_model_changed)
 	set_status("Select a passing candidate draft or frozen revision.", false)
@@ -100,9 +103,16 @@ func populate_tree() -> void:
 	var root := candidate_tree.create_item()
 	var drafts := candidate_tree.create_item(root); drafts.set_text(0, "Candidate drafts")
 	var revisions := candidate_tree.create_item(root); revisions.set_text(0, "Frozen revisions")
+	var cleared := ReviewRevisionStoreScript.load_cleared()
+	var show_cleared: bool = %ShowClearedCheck.button_pressed
+	var hidden := 0
 	for index in entries.size():
 		var entry := entries[index]
 		var data: Dictionary = entry["data"]
+		var is_cleared := ReviewRevisionStoreScript.is_cleared(String(entry["kind"]), data, cleared)
+		if is_cleared and not show_cleared:
+			hidden += 1
+			continue
 		var parent := drafts if entry["kind"] == "draft" else revisions
 		var item := candidate_tree.create_item(parent)
 		var source: Dictionary = catalog_by_source.get(String(data.get("source_id", "")), data.get("source", {}))
@@ -117,8 +127,12 @@ func populate_tree() -> void:
 			var review: Dictionary = ReviewRevisionStoreScript.load_review(data.get("revision_sha256", ""))
 			var promoted := not ReviewRevisionStoreScript.load_promotion(String(data.get("revision_sha256", ""))).is_empty()
 			item.set_text(1, "promoted" if promoted else review.get("status", "review_pending"))
+		if is_cleared:
+			item.set_text(1, "%s · cleared" % item.get_text(1))
+			item.set_custom_color(0, Color(0.55, 0.58, 0.64))
 		item.set_metadata(0, index)
 	drafts.collapsed = false; revisions.collapsed = false
+	%ShowClearedCheck.text = "Show cleared (%d hidden)" % hidden if hidden > 0 else "Show cleared"
 
 func _on_candidate_selected() -> void:
 	var item := candidate_tree.get_selected()
@@ -179,6 +193,38 @@ func reject_selected_candidate() -> void:
 	load_votes(result["record"])
 	populate_tree()
 	set_status("Frozen revision rejected by the human owner; changes are now requested.", false)
+
+func reject_and_clear_selected() -> void:
+	if selected_entry.is_empty(): return set_status("Select a candidate to reject and clear.", true)
+	var kind := String(selected_entry["kind"])
+	var data: Dictionary = selected_entry["data"]
+	if kind == "revision" and not ReviewRevisionStoreScript.load_promotion(String(data.get("revision_sha256", ""))).is_empty():
+		return set_status("Promoted revisions are part of the catalog history and can't be cleared.", true)
+	if human_feedback.text.strip_edges().is_empty():
+		human_feedback.text = "Cleared from the review queue."
+	var already_rejected: bool = data.get("status", "") == "review_rejected" if kind == "draft" else ReviewRevisionStoreScript.load_review(String(data.get("revision_sha256", ""))).get("status", "") == "changes_requested"
+	if not already_rejected:
+		reject_selected_candidate()
+		data = selected_entry["data"]
+	var result: Dictionary = ReviewRevisionStoreScript.clear_entries([{"kind": kind, "data": data}], human_feedback.text.strip_edges())
+	if not result.get("ok", false): return set_status(result.get("error", "Could not clear the candidate."), true)
+	selected_entry = {}
+	reload_entries()
+	set_status("Rejected and cleared from the queue (kept on disk for the audit trail).", false)
+
+func clear_all_rejected() -> void:
+	var rejected: Array = []
+	for entry in entries:
+		var data: Dictionary = entry["data"]
+		if entry["kind"] == "draft" and data.get("status", "") == "review_rejected":
+			rejected.append(entry)
+		elif entry["kind"] == "revision" and ReviewRevisionStoreScript.clear_blocker("revision", data).is_empty() \
+				and ReviewRevisionStoreScript.load_review(String(data.get("revision_sha256", ""))).get("status", "") == "changes_requested":
+			rejected.append(entry)
+	var result: Dictionary = ReviewRevisionStoreScript.clear_entries(rejected, "Cleared rejected candidates in bulk.")
+	if not result.get("ok", false): return set_status(result.get("error", "Could not clear candidates."), true)
+	reload_entries()
+	set_status("Cleared %d rejected candidate(s). Nothing was deleted; tick Show cleared to see them." % result.get("cleared", 0), false)
 
 func show_revision(revision: Dictionary) -> void:
 	current_revision = revision

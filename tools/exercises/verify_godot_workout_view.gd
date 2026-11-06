@@ -41,10 +41,11 @@ func run_verification() -> void:
 
 	# Check heat map colors for active muscles vs zero exposure muscles
 	var quad_color: Color = vc.get_muscle_color("muscle.rectus_femoris.left")
-	var zero_color: Color = vc.get_muscle_color("muscle.abdominal_part_of_pectoralis_major.left")
+	# Facial muscles are always an explicit zero in the tracer.
+	var zero_color: Color = vc.get_muscle_color("muscle.zygomaticus_major.left")
 
 	print("Rectus Femoris (Squat active) Heatmap Color: ", quad_color)
-	print("Abdominal Pec Major (Zero exposure) Heatmap Color: ", zero_color)
+	print("Zygomaticus Major (Zero exposure) Heatmap Color: ", zero_color)
 
 	# Verify contribution breakdown text
 	var details: String = vc.get_muscle_contribution_details("muscle.rectus_femoris.left")
