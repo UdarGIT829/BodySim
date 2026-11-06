@@ -372,5 +372,21 @@
       "load_vector": "eccentric_trunk_extension_lever",
       "stabilization_demands": ["anti_extension_spine", "intra_abdominal_pressure", "scapular_anchoring"]
     }
+  },
+  {
+    "id": "exercise.ez_bar_curl.standing_bilateral",
+    "name": "EZ-Bar Curl",
+    "variant": "standing_bilateral",
+    "aliases": ["ez_bar_curl", "standing_ez-bar_curl", "ez_curl_bar_biceps_curl"],
+    "movement_families": ["elbow_flexion"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "elbow_joint", "movement": "flexion"}
+      ],
+      "stabilization_demands": ["glenohumeral_stabilization", "grip", "postural_stabilization", "scapular_stabilization", "shoulder_position_hold", "wrist_stability"]
+    }
   }
 ]

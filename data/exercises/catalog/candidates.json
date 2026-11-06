@@ -8615,8 +8615,10 @@
     "source_id": "EZ-Bar_Curl",
     "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
     "name": "EZ-Bar Curl",
-    "status": "catalog_only",
-    "body_sim_exercise_ids": [],
+    "status": "promoted",
+    "body_sim_exercise_ids": [
+      "exercise.ez_bar_curl.standing_bilateral"
+    ],
     "category": "strength",
     "equipment": "e-z curl bar",
     "level": "beginner",
@@ -8639,6 +8641,25 @@
     "source_images": [
       "EZ-Bar_Curl/0.jpg",
       "EZ-Bar_Curl/1.jpg"
+    ],
+    "promotions": [
+      {
+        "exercise_id": "exercise.ez_bar_curl.standing_bilateral",
+        "revision_sha256": "12a16025ae6c75375405a557cd906fe746d4d6e3b5a32455335a2467d1ae639f",
+        "authoring_provider": {
+          "provider": "anthropic",
+          "model": "claude-opus-5-5",
+          "response_id": "msg_011CgnNtQ6wEEUSNsi5eUwgn"
+        },
+        "review_models": {
+          "model_reviewer": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "response_id": "msg_011CgnPeT6VzWJ78AhsvtxdY"
+          }
+        },
+        "promoted_at_unix": 1794001369.0133731
+      }
     ]
   },
   {

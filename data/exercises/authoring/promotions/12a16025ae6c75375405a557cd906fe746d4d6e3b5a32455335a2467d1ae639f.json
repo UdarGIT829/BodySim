@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "12a16025ae6c75375405a557cd906fe746d4d6e3b5a32455335a2467d1ae639f",
+  "revision_id": "EZ-Bar_Curl@12a16025ae6c",
+  "exercise_id": "exercise.ez_bar_curl.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.EZ-Bar_Curl",
+  "mapped_muscles": 140,
+  "promoted_at_unix": 1794001369.0133731,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "1645e7cf1d6b265b4a4e8d8142d2f68901a6bca269a6bc1df4b99b1c9c0bca4d",
+    "data/exercises/engagement_profiles.json": "b2f6c2955eb302f628dab12deccff3550af97cfcdc5b9f1295e02db33bfa9943",
+    "data/exercises/catalog/candidates.json": "476ec31d11296115a833c63fe223b9b7408752e9bc6f1a044dfb3fd1d1390028",
+    "data/exercises/sources/free_exercise_db_media.json": "55956da87d3b7208a61a544c75f5f6e12396455481ea2a28351ed4a87d25e86e"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "ccc636ff5fc5359bf8c31a393381a0201786b9f219f30499391bc640e3db09e0",
+    "data/exercises/engagement_profiles.json": "f6d816e4d2a1ba5198c4bf9ac33ac41f14d2caa7423fd65f03deb9681363768d",
+    "data/exercises/catalog/candidates.json": "91625d984cb029cf52b97a70e69e3ed09d8ec01b16b81f0107ab873d07eb735f",
+    "data/exercises/sources/free_exercise_db_media.json": "40db8445841e63e2d48f03916c5df2ee99248d6350d8cde1656908f6240659f3"
+  }
+}

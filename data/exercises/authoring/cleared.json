@@ -1,0 +1,47 @@
+{
+  "drafts": {
+    "Barbell_Curl": {
+      "cleared_at_unix": 1794001373.16073,
+      "draft_saved_at_unix": 1786424043.79302,
+      "reason": "Cleared rejected candidates in bulk."
+    },
+    "Cable_Chest_Press": {
+      "cleared_at_unix": 1794001373.16073,
+      "draft_saved_at_unix": 1786419610.41014,
+      "reason": "Cleared rejected candidates in bulk."
+    },
+    "Dumbbell_One-Arm_Shoulder_Press": {
+      "cleared_at_unix": 1794001373.16073,
+      "draft_saved_at_unix": 1786417395.37233,
+      "reason": "Cleared rejected candidates in bulk."
+    },
+    "EZ-Bar_Curl": {
+      "cleared_at_unix": 1794001385.86823,
+      "draft_saved_at_unix": 1794000237.52693,
+      "reason": "Cleared from the review queue."
+    }
+  },
+  "format_version": 1.0,
+  "revisions": {
+    "53b8f0f26cb0b2f8500a2ab08d4471b2b4f534b3a9fb5d73b5b45572be0fa0c0": {
+      "cleared_at_unix": 1794001373.16073,
+      "reason": "Cleared rejected candidates in bulk.",
+      "revision_id": "Single-Arm_Push-Up@53b8f0f26cb0"
+    },
+    "962b722b2c50e8e7b3301e7c34d1422164bbf87bf4e92e4aa6449aa0ccdf71e1": {
+      "cleared_at_unix": 1794001373.16073,
+      "reason": "Cleared rejected candidates in bulk.",
+      "revision_id": "EZ-Bar_Curl@962b722b2c50"
+    },
+    "b3748d98babd304998fd4cd959fde4b04836144b7eb6a318c198e8a3ce63da49": {
+      "cleared_at_unix": 1794001373.16073,
+      "reason": "Cleared rejected candidates in bulk.",
+      "revision_id": "Alternating_Cable_Shoulder_Press@b3748d98babd"
+    },
+    "c16d4acbd029975da8ee7a8216209c832ba94e2c2d007fd7f6d1aa1f09848281": {
+      "cleared_at_unix": 1794001373.16073,
+      "reason": "Cleared rejected candidates in bulk.",
+      "revision_id": "EZ-Bar_Curl@c16d4acbd029"
+    }
+  }
+}

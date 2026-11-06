@@ -19666,5 +19666,27 @@
         "bytes": 86992
       }
     ]
+  },
+  {
+    "exercise_id": "exercise.ez_bar_curl.standing_bilateral",
+    "source": "free_exercise_db",
+    "source_id": "EZ-Bar_Curl",
+    "source_name": "EZ-Bar Curl",
+    "repository": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense",
+    "images": [
+      {
+        "source_path": "EZ-Bar_Curl/0.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/EZ-Bar_Curl/0.jpg",
+        "sha256": "b4c9b00a033014b6095bb37047d0c735ad95a8753a2d8df6729bb51a106d57e4",
+        "bytes": 67123
+      },
+      {
+        "source_path": "EZ-Bar_Curl/1.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/EZ-Bar_Curl/1.jpg",
+        "sha256": "68010ec67ee0f9f6d2ec6c8ff6ae85790390988629691dd82217c3f42693c1e5",
+        "bytes": 68174
+      }
+    ]
   }
 ]

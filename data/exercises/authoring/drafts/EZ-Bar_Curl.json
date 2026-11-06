@@ -5393,12 +5393,12 @@
     "warnings": []
   },
   "catalog_id": "catalog.free_exercise_db.EZ-Bar_Curl",
-  "format_version": 1,
+  "format_version": 1.0,
   "provider_metadata": {
     "effort": "high",
     "input_contact_sheet": {
-      "api_image_inputs": 1,
-      "frame_count": 2,
+      "api_image_inputs": 1.0,
+      "frame_count": 2.0,
       "layout": "chronological_left_to_right",
       "source_images": [
         "EZ-Bar_Curl/0.jpg",
@@ -5479,9 +5479,15 @@
       "output_tokens": 1908.0
     }
   },
+  "rejection": {
+    "member": "human_owner",
+    "recorded_at_unix": 1794001385.82714,
+    "stage": "unfrozen_candidate",
+    "summary": "Cleared from the review queue."
+  },
   "saved_at_unix": 1794000237.52693,
   "source_id": "EZ-Bar_Curl",
   "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
-  "status": "definition_candidate",
+  "status": "review_rejected",
   "validation_errors": []
 }
