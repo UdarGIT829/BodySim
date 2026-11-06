@@ -6,9 +6,9 @@
     "provider": "anthropic",
     "model": "claude-opus-5-5",
     "effort": "high",
-    "response_id": "msg_011CgnLtm7kiJdZ5UEpaF46C"
+    "response_id": "msg_011CgnNmaz65q7QVPLehtdxt"
   },
-  "drafted_at_unix": 1793998697.0867643,
+  "drafted_at_unix": 1794000162.2809453,
   "entries": [
     {
       "base_id": "muscle.abdominal_part_of_pectoralis_major",
@@ -42,7 +42,7 @@
       ],
       "stabilizes": [],
       "confidence": "medium",
-      "rationale": "The lowest, most obliquely ascending fibres act mainly as an adductor. They assist extension only from a flexed position, as in a dip or pullover. The shoulder-girdle depression is indirect, acting via the humerus, so it is kept minor.",
+      "rationale": "The lowest, most obliquely ascending fibres act mainly as an adductor. They assist extension only from a flexed position, as in a dip or pullover. The shoulder-girdle depression is indirect, acting via the humerus, so it is kept minor. No shoulder_position_hold role is given because it does not resist the shoulder-extension moment of a curl or hold the arm overhead.",
       "status": "reviewed"
     },
     {
@@ -70,9 +70,14 @@
           "weight": 0.3
         }
       ],
-      "stabilizes": [],
+      "stabilizes": [
+        {
+          "demand": "shoulder_position_hold",
+          "weight": 0.4
+        }
+      ],
       "confidence": "high",
-      "rationale": "It is a major shoulder flexor alongside the anterior deltoid and a strong horizontal adductor, as in an incline press. It adducts only with the arm below about 90 degrees, so adduction is weighted lower than for the sternocostal head.",
+      "rationale": "It is a major shoulder flexor alongside the anterior deltoid and a strong horizontal adductor, as in an incline press. It adducts only with the arm below about 90 degrees, so adduction is weighted lower than for the sternocostal head. As a shoulder flexor it assists the anterior deltoid isometrically in resisting the shoulder-extension moment that keeps the upper arm still in a curl.",
       "status": "reviewed"
     },
     {
@@ -233,9 +238,14 @@
           "weight": 0.5
         }
       ],
-      "stabilizes": [],
-      "confidence": "high",
-      "rationale": "It is the prime horizontal adductor, as in a flat press or fly, and a major adductor alongside latissimus dorsi. It extends the humerus only from a flexed position back toward neutral, and assists internal rotation.",
+      "stabilizes": [
+        {
+          "demand": "shoulder_position_hold",
+          "weight": 0.2
+        }
+      ],
+      "confidence": "medium",
+      "rationale": "It is the prime horizontal adductor, as in a flat press or fly, and a major adductor alongside latissimus dorsi. It extends the humerus only from a flexed position back toward neutral, and assists internal rotation. Its hold role is minor: isometric adduction that keeps the elbows beside the torso in a curl, not resisting the main extension moment.",
       "status": "reviewed"
     },
     {
@@ -268,10 +278,41 @@
       "status": "reviewed"
     }
   ],
+  "revision_of": {
+    "drafted_with": {
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "response_id": "msg_011CgnLtm7kiJdZ5UEpaF46C"
+    },
+    "approvals": [
+      {
+        "approved_by": "project_owner",
+        "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+        "entries": [
+          "muscle.abdominal_part_of_pectoralis_major",
+          "muscle.clavicular_head_of_pectoralis_major",
+          "muscle.diaphragm",
+          "muscle.external_intercostal",
+          "muscle.innermost_intercostal",
+          "muscle.internal_intercostal",
+          "muscle.levatores_breves_costarum",
+          "muscle.levatores_longi_costarum",
+          "muscle.pectoralis_minor",
+          "muscle.serratus_anterior",
+          "muscle.sternocostal_head_of_pectoralis_major",
+          "muscle.subclavius",
+          "muscle.transversus_thoracis"
+        ],
+        "approved_at_unix": 1793999070.01292
+      }
+    ],
+    "feedback_file": "reports/muscle_actions_v2/feedback/2026-11-06-ez-bar-curl-council.md"
+  },
   "approvals": [
     {
       "approved_by": "project_owner",
-      "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+      "basis": "revised by Claude (claude-opus-5-5) from council findings (reports/muscle_actions_v2/feedback/2026-11-06-ez-bar-curl-council.md) and accepted without line-by-line expert review, at the project owner's request; automated rule and whole-table checks passed",
       "entries": [
         "muscle.abdominal_part_of_pectoralis_major",
         "muscle.clavicular_head_of_pectoralis_major",
@@ -287,7 +328,7 @@
         "muscle.subclavius",
         "muscle.transversus_thoracis"
       ],
-      "approved_at_unix": 1793999070.01292
+      "approved_at_unix": 1794000197.1608853
     }
   ]
 }

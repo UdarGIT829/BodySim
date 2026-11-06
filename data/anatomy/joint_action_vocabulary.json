@@ -1,21 +1,90 @@
 {
-  "version": 2,
+  "version": 3,
   "notes": "Canonical joint/movement vocabulary for muscle_actions v2. A superset of what exercise definitions can currently use (see the authoring schema); the extra actions let the table describe muscles correctly, e.g. posterior deltoid horizontal abduction. Existing names are kept unchanged for compatibility.",
   "joints": {
-    "scapulothoracic_joint": ["elevation", "depression", "retraction", "protraction", "upward_rotation", "downward_rotation"],
-    "glenohumeral_joint": ["flexion", "extension", "abduction", "adduction", "horizontal_abduction", "horizontal_adduction", "internal_rotation", "external_rotation"],
-    "elbow_joint": ["flexion", "extension"],
-    "radioulnar_joint": ["supination", "pronation"],
-    "wrist_joint": ["flexion", "extension", "radial_deviation", "ulnar_deviation"],
-    "finger_joints": ["flexion", "extension", "abduction", "adduction"],
-    "thumb_joints": ["flexion", "extension", "abduction", "adduction", "opposition"],
-    "cervical_spine": ["flexion", "extension", "lateral_flexion", "rotation"],
-    "lumbar_spine": ["flexion", "extension", "lateral_flexion", "rotation"],
-    "hip_joint": ["flexion", "extension", "abduction", "adduction", "internal_rotation", "external_rotation"],
-    "knee_joint": ["flexion", "extension", "internal_rotation", "external_rotation"],
-    "ankle_joint": ["plantarflexion", "dorsiflexion"],
-    "subtalar_joint": ["inversion", "eversion"],
-    "toe_joints": ["flexion", "extension"]
+    "scapulothoracic_joint": [
+      "elevation",
+      "depression",
+      "retraction",
+      "protraction",
+      "upward_rotation",
+      "downward_rotation"
+    ],
+    "glenohumeral_joint": [
+      "flexion",
+      "extension",
+      "abduction",
+      "adduction",
+      "horizontal_abduction",
+      "horizontal_adduction",
+      "internal_rotation",
+      "external_rotation"
+    ],
+    "elbow_joint": [
+      "flexion",
+      "extension"
+    ],
+    "radioulnar_joint": [
+      "supination",
+      "pronation"
+    ],
+    "wrist_joint": [
+      "flexion",
+      "extension",
+      "radial_deviation",
+      "ulnar_deviation"
+    ],
+    "finger_joints": [
+      "flexion",
+      "extension",
+      "abduction",
+      "adduction"
+    ],
+    "thumb_joints": [
+      "flexion",
+      "extension",
+      "abduction",
+      "adduction",
+      "opposition"
+    ],
+    "cervical_spine": [
+      "flexion",
+      "extension",
+      "lateral_flexion",
+      "rotation"
+    ],
+    "lumbar_spine": [
+      "flexion",
+      "extension",
+      "lateral_flexion",
+      "rotation"
+    ],
+    "hip_joint": [
+      "flexion",
+      "extension",
+      "abduction",
+      "adduction",
+      "internal_rotation",
+      "external_rotation"
+    ],
+    "knee_joint": [
+      "flexion",
+      "extension",
+      "internal_rotation",
+      "external_rotation"
+    ],
+    "ankle_joint": [
+      "plantarflexion",
+      "dorsiflexion"
+    ],
+    "subtalar_joint": [
+      "inversion",
+      "eversion"
+    ],
+    "toe_joints": [
+      "flexion",
+      "extension"
+    ]
   },
   "stabilization_demands": {
     "ankle_stability": "Controls the ankle/subtalar joint under load in stance.",
@@ -28,18 +97,21 @@
     "elbow_stability": "Holds the elbow position when it is not the moving joint.",
     "femoral_head_stabilization": "Centres the femoral head in the acetabulum.",
     "glenohumeral_stabilization": "Centres the humeral head in the glenoid (rotator cuff role).",
+    "grip": "Sustained finger and thumb flexion to hold a bar, handle, dumbbell or body weight (finger flexors, thumb flexors and intrinsic hand muscles).",
     "humeral_head_stabilization": "Depresses/centres the humeral head during arm elevation.",
-    "intra_abdominal_pressure": "Bracing that raises intra-abdominal pressure.",
+    "intra_abdominal_pressure": "Deliberate bracing that raises intra-abdominal pressure under heavy load: transversus abdominis, obliques, rectus abdominis, diaphragm and pelvic floor.",
     "knee_joint_stability": "Controls knee valgus/varus and rotation under load.",
     "lumbar_fascia_tension": "Tensions the thoracolumbar fascia.",
     "patellar_tracking": "Guides the patella in its groove.",
     "pelvic_alignment": "Holds pelvic tilt in the sagittal plane.",
     "pelvic_leveling_frontal": "Keeps the pelvis level in single-leg stance.",
-    "postural_stabilization": "Antigravity holding of an upright posture: trunk, hip and lower-limb extensors only. Never facial, ocular, laryngeal, lingual, palatal or hand/foot intrinsic muscles.",
+    "postural_stabilization": "Antigravity holding of an upright posture: trunk extensors and deep trunk stabilizers (multifidus, transversus abdominis, internal oblique), hip and lower-limb extensors. Never facial, ocular, laryngeal, lingual, palatal, upper-limb or hand/foot intrinsic muscles.",
     "postural_sway_control": "Ankle/hip strategy that controls standing sway.",
     "scapular_anchoring": "Fixes the scapula to the thorax as a base for arm force.",
     "scapular_retraction_stability": "Holds the scapula retracted under load.",
-    "scapular_stabilization": "General scapular control during arm movement."
+    "scapular_stabilization": "General scapular control during arm movement.",
+    "shoulder_position_hold": "Holds the upper arm still while a load acts on it from further down the limb, e.g. upper arms kept beside the torso in a curl or overhead during a triceps extension (isometric deltoid and shoulder flexor/extensor work). Distinct from glenohumeral_stabilization, which centres the humeral head.",
+    "wrist_stability": "Holds the wrist neutral against a load in the hand (wrist flexors and extensors co-contracting)."
   },
   "weight_rubric": {
     "1.0": "Prime mover: the main muscle for this action.",

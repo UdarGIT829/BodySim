@@ -578,6 +578,7 @@
                       "elbow_stability",
                       "femoral_head_stabilization",
                       "glenohumeral_stabilization",
+                      "grip",
                       "humeral_head_stabilization",
                       "intra_abdominal_pressure",
                       "knee_joint_stability",
@@ -589,7 +590,9 @@
                       "postural_sway_control",
                       "scapular_anchoring",
                       "scapular_retraction_stability",
-                      "scapular_stabilization"
+                      "scapular_stabilization",
+                      "shoulder_position_hold",
+                      "wrist_stability"
                     ]
                   }
                 }

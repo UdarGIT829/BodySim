@@ -2,7 +2,7 @@
 
 Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in the JSON once it is right.
 
-**Approved** (7 entries): accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed.
+**Approved** (7 entries): revised by Claude (claude-opus-5-5) from council findings (reports/muscle_actions_v2/feedback/2026-11-06-ez-bar-curl-council.md) and accepted without line-by-line expert review, at the project owner's request; automated rule and whole-table checks passed.
 
 **Rule checks:** all passed
 
@@ -11,7 +11,7 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 
 - elbow_joint / flexion: **1.00**
 
-> Brachialis is the prime elbow flexor in all forearm positions because it inserts on the ulna and so is unaffected by pronation or supination. It crosses no other joint in the vocabulary.
+> Brachialis is the prime elbow flexor in all forearm positions because it inserts on the ulna and so is unaffected by pronation or supination. It crosses no other joint in the vocabulary, so it has no shoulder, grip or wrist role.
 
 ## Coracobrachialis muscle  `muscle.coracobrachialis`
 *reviewed · confidence medium*
@@ -19,9 +19,10 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 - glenohumeral_joint / adduction: **0.40**
 - glenohumeral_joint / flexion: **0.30**
 - glenohumeral_joint / horizontal_adduction: **0.30**
+- stabilizes shoulder_position_hold: 0.30
 - stabilizes glenohumeral_stabilization: 0.20
 
-> Coracobrachialis is a weak synergist for shoulder flexion and adduction and assists horizontal adduction. It helps resist inferior displacement of the humeral head. It does not cross the elbow, so it has no elbow action.
+> Coracobrachialis is a weak synergist for shoulder flexion and adduction and assists horizontal adduction. It helps resist inferior displacement of the humeral head, and as an isometric shoulder flexor/adductor it assists the anterior deltoid in holding the upper arm beside the torso against the shoulder-extension moment of a curl. It does not cross the elbow, so it has no elbow action.
 
 ## Lateral head of triceps brachii  `muscle.lateral_head_of_triceps_brachii`
 *reviewed · confidence high*
@@ -48,9 +49,8 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 - elbow_joint / extension: **0.80**
 - glenohumeral_joint / extension: **0.40**
 - glenohumeral_joint / adduction: **0.30**
-- stabilizes glenohumeral_stabilization: 0.20
 
-> The long head is a major elbow extender and the only triceps head that crosses the shoulder. It assists shoulder extension mainly from a flexed position, and also assists adduction. It supports the inferior glenohumeral joint when the arm is abducted.
+> The long head is a major elbow extender and the only triceps head that crosses the shoulder; it assists shoulder extension mainly from a flexed position, and also assists adduction. Its glenohumeral_stabilization role was removed: its support of the inferior capsule in abduction is passive and minor, it does not centre the humeral head like the rotator cuff, and in curls it acts as an antagonist rather than a stabilizer.
 
 ## Medial head of triceps brachii  `muscle.medial_head_of_triceps_brachii`
 *reviewed · confidence high*

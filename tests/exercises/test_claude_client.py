@@ -142,3 +142,16 @@ def test_schemas_use_only_supported_structured_output_keywords():
     for spec in cc.TASKS.values():
         text = spec["schema"].read_text()
         assert not any(f'"{k}"' in text for k in unsupported), spec["schema"].name
+
+
+def test_system_prompt_includes_the_generated_tracer_reference():
+    client = FakeClient()
+    cc.run_task({"task": "review", "revision": _revision()}, client=client)
+    system = client.params["system"][0]["text"]
+    assert "How BodySim's tracer turns a definition into muscles" in system
+    assert "`intra_abdominal_pressure`" in system and "Serves:" in system
+
+
+def test_tracer_reference_is_deterministic():
+    from src.exercises.llm.tracer_reference import tracer_reference
+    assert tracer_reference() == tracer_reference()

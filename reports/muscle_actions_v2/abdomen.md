@@ -2,7 +2,7 @@
 
 Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in the JSON once it is right.
 
-**Approved** (6 entries): accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed.
+**Approved** (6 entries): revised by Claude (claude-opus-5-5) from council findings (reports/muscle_actions_v2/feedback/2026-11-06-ez-bar-curl-council.md) and accepted without line-by-line expert review, at the project owner's request; automated rule and whole-table checks passed.
 
 **Rule checks:** all passed
 
@@ -28,10 +28,11 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 - stabilizes anti_rotation_torso: 0.90
 - stabilizes intra_abdominal_pressure: 0.80
 - stabilizes anti_extension_spine: 0.70
+- stabilizes postural_stabilization: 0.50
 - stabilizes lumbar_fascia_tension: 0.50
 - stabilizes pelvic_alignment: 0.30
 
-> Acting unilaterally it rotates the trunk to the same side, paired with the contralateral external oblique, and laterally flexes the trunk. Acting bilaterally it assists trunk flexion. Its deep transverse fibres and its attachment to the thoracolumbar fascia give it a larger bracing and fascia-tensioning role than the external oblique.
+> Acting unilaterally it rotates the trunk to the same side, paired with the contralateral external oblique, and laterally flexes the trunk; bilaterally it assists trunk flexion. Its deep lower fibres and thoracolumbar fascia attachment give it a larger bracing and fascia-tensioning role than the external oblique, and it is tonically active as a deep trunk stabilizer in upright stance, hence a moderate postural_stabilization weight below transversus abdominis.
 
 ## Pyramidalis muscle  `muscle.pyramidalis`
 *reviewed · confidence low*
@@ -61,14 +62,15 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 - stabilizes pelvic_alignment: 0.60
 - stabilizes intra_abdominal_pressure: 0.40
 
-> It is the prime mover of trunk flexion and the main resister of lumbar extension, for example in planks. It tilts the pelvis posteriorly. Its unilateral lateral flexion is minor.
+> It is the prime mover of trunk flexion and the main resister of lumbar extension, for example in planks. It tilts the pelvis posteriorly. Its unilateral lateral flexion is minor. It is not a deep trunk stabilizer and is largely quiet in relaxed standing, so it is given no postural_stabilization role.
 
 ## Transversus abdominis muscle  `muscle.transversus_abdominis`
 *reviewed · confidence high*
 
 - stabilizes intra_abdominal_pressure: 1.00
 - stabilizes lumbar_fascia_tension: 0.90
+- stabilizes postural_stabilization: 0.80
 - stabilizes anti_rotation_torso: 0.30
 - stabilizes anti_extension_spine: 0.30
 
-> Its horizontal fibres compress the abdomen and tension the thoracolumbar fascia, making it the primary muscle for raising intra-abdominal pressure. Its direct spinal joint actions are negligible, so no joint actions are listed.
+> Its horizontal fibres compress the abdomen and tension the thoracolumbar fascia, making it the primary muscle for raising intra-abdominal pressure, and its anticipatory tonic activity makes it a major deep trunk stabilizer in upright posture (postural_stabilization 0.8, alongside multifidus and the trunk extensors). Its direct spinal joint actions are negligible, so no joint actions are listed.

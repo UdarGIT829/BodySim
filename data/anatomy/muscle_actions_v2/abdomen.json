@@ -6,9 +6,9 @@
     "provider": "anthropic",
     "model": "claude-opus-5-5",
     "effort": "high",
-    "response_id": "msg_011CgnLxPikX8fyduqzrr1xj"
+    "response_id": "msg_011CgnNpPg2xvqbwKf5y55C7"
   },
-  "drafted_at_unix": 1793998723.873656,
+  "drafted_at_unix": 1794000180.944488,
   "entries": [
     {
       "base_id": "muscle.external_abdominal_oblique",
@@ -86,6 +86,10 @@
           "weight": 0.7
         },
         {
+          "demand": "postural_stabilization",
+          "weight": 0.5
+        },
+        {
           "demand": "lumbar_fascia_tension",
           "weight": 0.5
         },
@@ -95,7 +99,7 @@
         }
       ],
       "confidence": "high",
-      "rationale": "Acting unilaterally it rotates the trunk to the same side, paired with the contralateral external oblique, and laterally flexes the trunk. Acting bilaterally it assists trunk flexion. Its deep transverse fibres and its attachment to the thoracolumbar fascia give it a larger bracing and fascia-tensioning role than the external oblique.",
+      "rationale": "Acting unilaterally it rotates the trunk to the same side, paired with the contralateral external oblique, and laterally flexes the trunk; bilaterally it assists trunk flexion. Its deep lower fibres and thoracolumbar fascia attachment give it a larger bracing and fascia-tensioning role than the external oblique, and it is tonically active as a deep trunk stabilizer in upright stance, hence a moderate postural_stabilization weight below transversus abdominis.",
       "status": "reviewed"
     },
     {
@@ -179,7 +183,7 @@
         }
       ],
       "confidence": "high",
-      "rationale": "It is the prime mover of trunk flexion and the main resister of lumbar extension, for example in planks. It tilts the pelvis posteriorly. Its unilateral lateral flexion is minor.",
+      "rationale": "It is the prime mover of trunk flexion and the main resister of lumbar extension, for example in planks. It tilts the pelvis posteriorly. Its unilateral lateral flexion is minor. It is not a deep trunk stabilizer and is largely quiet in relaxed standing, so it is given no postural_stabilization role.",
       "status": "reviewed"
     },
     {
@@ -196,6 +200,10 @@
           "weight": 0.9
         },
         {
+          "demand": "postural_stabilization",
+          "weight": 0.8
+        },
+        {
           "demand": "anti_rotation_torso",
           "weight": 0.3
         },
@@ -205,14 +213,38 @@
         }
       ],
       "confidence": "high",
-      "rationale": "Its horizontal fibres compress the abdomen and tension the thoracolumbar fascia, making it the primary muscle for raising intra-abdominal pressure. Its direct spinal joint actions are negligible, so no joint actions are listed.",
+      "rationale": "Its horizontal fibres compress the abdomen and tension the thoracolumbar fascia, making it the primary muscle for raising intra-abdominal pressure, and its anticipatory tonic activity makes it a major deep trunk stabilizer in upright posture (postural_stabilization 0.8, alongside multifidus and the trunk extensors). Its direct spinal joint actions are negligible, so no joint actions are listed.",
       "status": "reviewed"
     }
   ],
+  "revision_of": {
+    "drafted_with": {
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "response_id": "msg_011CgnLxPikX8fyduqzrr1xj"
+    },
+    "approvals": [
+      {
+        "approved_by": "project_owner",
+        "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+        "entries": [
+          "muscle.external_abdominal_oblique",
+          "muscle.internal_abdominal_oblique",
+          "muscle.pyramidalis",
+          "muscle.quadratus_lumborum",
+          "muscle.rectus_abdominis",
+          "muscle.transversus_abdominis"
+        ],
+        "approved_at_unix": 1793999070.0542402
+      }
+    ],
+    "feedback_file": "reports/muscle_actions_v2/feedback/2026-11-06-ez-bar-curl-council.md"
+  },
   "approvals": [
     {
       "approved_by": "project_owner",
-      "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+      "basis": "revised by Claude (claude-opus-5-5) from council findings (reports/muscle_actions_v2/feedback/2026-11-06-ez-bar-curl-council.md) and accepted without line-by-line expert review, at the project owner's request; automated rule and whole-table checks passed",
       "entries": [
         "muscle.external_abdominal_oblique",
         "muscle.internal_abdominal_oblique",
@@ -221,7 +253,7 @@
         "muscle.rectus_abdominis",
         "muscle.transversus_abdominis"
       ],
-      "approved_at_unix": 1793999070.0542402
+      "approved_at_unix": 1794000197.2056093
     }
   ]
 }

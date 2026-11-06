@@ -35295,7 +35295,7 @@
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.left",
           "role": "primary",
           "coefficient": 1.0,
-          "confidence": "high",
+          "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
@@ -35307,7 +35307,7 @@
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.right",
           "role": "primary",
           "coefficient": 1.0,
-          "confidence": "high",
+          "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
@@ -45657,7 +45657,7 @@
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.left",
           "role": "primary",
           "coefficient": 1.0,
-          "confidence": "high",
+          "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
@@ -45669,7 +45669,7 @@
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.right",
           "role": "primary",
           "coefficient": 1.0,
-          "confidence": "high",
+          "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
@@ -56020,7 +56020,7 @@
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.left",
           "role": "primary",
           "coefficient": 0.8,
-          "confidence": "high",
+          "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
@@ -56032,7 +56032,7 @@
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.right",
           "role": "primary",
           "coefficient": 0.8,
-          "confidence": "high",
+          "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
@@ -61200,7 +61200,7 @@
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.left",
           "role": "synergist",
           "coefficient": 0.5,
-          "confidence": "high",
+          "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
@@ -61212,7 +61212,7 @@
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.right",
           "role": "synergist",
           "coefficient": 0.5,
-          "confidence": "high",
+          "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
@@ -66404,7 +66404,7 @@
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.left",
           "role": "synergist",
           "coefficient": 0.5,
-          "confidence": "high",
+          "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
@@ -66416,7 +66416,7 @@
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.right",
           "role": "synergist",
           "coefficient": 0.5,
-          "confidence": "high",
+          "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
@@ -71607,7 +71607,7 @@
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.left",
           "role": "synergist",
           "coefficient": 0.5,
-          "confidence": "high",
+          "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
@@ -71619,7 +71619,7 @@
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.right",
           "role": "synergist",
           "coefficient": 0.5,
-          "confidence": "high",
+          "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
@@ -72531,8 +72531,8 @@
     "exercise.biceps_curl.dumbbell_standing": {
       "exercise_id": "exercise.biceps_curl.dumbbell_standing",
       "total_muscles": 466,
-      "mapped_muscles": 64,
-      "zero_muscles": 402,
+      "mapped_muscles": 68,
+      "zero_muscles": 398,
       "muscles": [
         {
           "muscle_id": "muscle.abdominal_part_of_pectoralis_major.left",
@@ -74391,24 +74391,26 @@
         },
         {
           "muscle_id": "muscle.internal_abdominal_oblique.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.175,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.internal_abdominal_oblique",
+            "rule.kinematic_tracer_v2.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.internal_abdominal_oblique.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.175,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.internal_abdominal_oblique",
+            "rule.kinematic_tracer_v2.stabilizer"
           ]
         },
         {
@@ -77478,24 +77480,26 @@
         },
         {
           "muscle_id": "muscle.transversus_abdominis.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.28,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.transversus_abdominis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.transversus_abdominis.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.28,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.transversus_abdominis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ]
         },
         {
@@ -107816,7 +107820,7 @@
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.left",
           "role": "synergist",
           "coefficient": 0.5,
-          "confidence": "high",
+          "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
@@ -107828,7 +107832,7 @@
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.right",
           "role": "synergist",
           "coefficient": 0.5,
-          "confidence": "high",
+          "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [

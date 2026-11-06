@@ -2,7 +2,7 @@
 
 Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in the JSON once it is right.
 
-**Approved** (13 entries): accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed.
+**Approved** (13 entries): revised by Claude (claude-opus-5-5) from council findings (reports/muscle_actions_v2/feedback/2026-11-06-ez-bar-curl-council.md) and accepted without line-by-line expert review, at the project owner's request; automated rule and whole-table checks passed.
 
 **Rule checks:** all passed
 
@@ -15,7 +15,7 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 - glenohumeral_joint / internal_rotation: **0.40**
 - scapulothoracic_joint / depression: **0.20**
 
-> The lowest, most obliquely ascending fibres act mainly as an adductor. They assist extension only from a flexed position, as in a dip or pullover. The shoulder-girdle depression is indirect, acting via the humerus, so it is kept minor.
+> The lowest, most obliquely ascending fibres act mainly as an adductor. They assist extension only from a flexed position, as in a dip or pullover. The shoulder-girdle depression is indirect, acting via the humerus, so it is kept minor. No shoulder_position_hold role is given because it does not resist the shoulder-extension moment of a curl or hold the arm overhead.
 
 ## Clavicular head of pectoralis major muscle  `muscle.clavicular_head_of_pectoralis_major`
 *reviewed · confidence high*
@@ -24,8 +24,9 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 - glenohumeral_joint / flexion: **0.70**
 - glenohumeral_joint / internal_rotation: **0.40**
 - glenohumeral_joint / adduction: **0.30**
+- stabilizes shoulder_position_hold: 0.40
 
-> It is a major shoulder flexor alongside the anterior deltoid and a strong horizontal adductor, as in an incline press. It adducts only with the arm below about 90 degrees, so adduction is weighted lower than for the sternocostal head.
+> It is a major shoulder flexor alongside the anterior deltoid and a strong horizontal adductor, as in an incline press. It adducts only with the arm below about 90 degrees, so adduction is weighted lower than for the sternocostal head. As a shoulder flexor it assists the anterior deltoid isometrically in resisting the shoulder-extension moment that keeps the upper arm still in a curl.
 
 ## Diaphragm  `muscle.diaphragm`
 *reviewed · confidence high*
@@ -91,14 +92,15 @@ Drafted by claude-opus-5-5. Review each muscle; set `status` to `reviewed` in th
 > It is the prime protractor. It is also the co-prime upward rotator with the trapezius, its lower fibres dominating, and those lower fibres contribute slightly to depression. It holds the scapula against the thorax as the base for pressing and overhead work.
 
 ## Sternocostal head of pectoralis major muscle  `muscle.sternocostal_head_of_pectoralis_major`
-*reviewed · confidence high*
+*reviewed · confidence medium*
 
 - glenohumeral_joint / horizontal_adduction: **1.00**
 - glenohumeral_joint / adduction: **0.80**
 - glenohumeral_joint / extension: **0.50**
 - glenohumeral_joint / internal_rotation: **0.50**
+- stabilizes shoulder_position_hold: 0.20
 
-> It is the prime horizontal adductor, as in a flat press or fly, and a major adductor alongside latissimus dorsi. It extends the humerus only from a flexed position back toward neutral, and assists internal rotation.
+> It is the prime horizontal adductor, as in a flat press or fly, and a major adductor alongside latissimus dorsi. It extends the humerus only from a flexed position back toward neutral, and assists internal rotation. Its hold role is minor: isometric adduction that keeps the elbows beside the torso in a curl, not resisting the main extension moment.
 
 ## Subclavius muscle  `muscle.subclavius`
 *reviewed · confidence medium*

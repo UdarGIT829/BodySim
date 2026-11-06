@@ -5,6 +5,7 @@
     python3 tools/anatomy/draft_muscle_actions.py shoulder_girdle [--model claude-opus-5-5] [--effort high]
     python3 tools/anatomy/draft_muscle_actions.py shoulder_girdle --report-only
     python3 tools/anatomy/draft_muscle_actions.py shoulder_girdle --approve [base_id ...]
+    python3 tools/anatomy/draft_muscle_actions.py arm --revise feedback.md   # revise with findings
 
 Writes data/anatomy/muscle_actions_v2/<group>.json (every entry status
 "draft") and a readable review report reports/muscle_actions_v2/<group>.md.
@@ -89,6 +90,8 @@ def main() -> int:
     parser.add_argument("--report-only", action="store_true", help="rebuild the review report from the existing file")
     parser.add_argument("--approve", nargs="*", metavar="BASE_ID",
                         help="mark entries reviewed (all entries if no ids are given), after a passing rule check")
+    parser.add_argument("--revise", type=Path, metavar="FEEDBACK_FILE",
+                        help="revise the existing group with these findings instead of drafting from scratch")
     parser.add_argument("--basis", default="reviewed line by line by the project owner",
                         help="how the approval was made; recorded in the group file")
     args = parser.parse_args()
@@ -137,11 +140,24 @@ def main() -> int:
     if args.report_only:
         print(write_report(args.group, json.loads(path.read_text())))
         return 0
-    if path.exists() and any(e["status"] == "reviewed" for e in json.loads(path.read_text())["entries"]):
-        print(f"{path.name} has reviewed entries; refusing to overwrite. Move it aside first.", file=sys.stderr)
-        return 1
-
-    content = [{"type": "text", "text": group_request(args.group)}]
+    previous = json.loads(path.read_text()) if path.exists() else None
+    if args.revise:
+        if previous is None:
+            parser.error(f"{path.name} does not exist; draft it first")
+        feedback = args.revise.read_text(encoding="utf-8")
+        current = [{k: e[k] for k in ("base_id", "movement_muscle", "actions", "stabilizes", "confidence", "rationale")}
+                   for e in previous["entries"]]
+        request = (group_request(args.group)
+                   + "\n\nThis is a revision. The current entries are below, followed by review findings. "
+                   "Return the complete corrected group: fix what the findings show is wrong, add entries for any "
+                   "new stabilization demands these muscles genuinely serve, and keep correct entries unchanged.\n\n"
+                   "Current entries:\n```json\n" + json.dumps(current, indent=1) + "\n```\n\nFindings:\n" + feedback)
+    else:
+        if previous and any(e["status"] == "reviewed" for e in previous["entries"]):
+            print(f"{path.name} has reviewed entries; refusing to overwrite. Use --revise, or move it aside.", file=sys.stderr)
+            return 1
+        request = group_request(args.group)
+    content = [{"type": "text", "text": request}]
     print(f"Drafting {args.group} ({len(groups[args.group])} muscles) with {args.model}, effort {args.effort}…", flush=True)
     result = claude_client.call_structured(
         system_text(), table.drafting_schema(table.load_vocabulary()), content,
@@ -162,6 +178,10 @@ def main() -> int:
         "drafted_at_unix": time.time(),
         "entries": sorted(entries, key=lambda e: e["base_id"]),
     }
+    if args.revise and previous is not None:
+        document["revision_of"] = {"drafted_with": previous.get("drafted_with"),
+                                   "approvals": previous.get("approvals", []),
+                                   "feedback_file": str(args.revise)}
     table.TABLE_DIR.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(document, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     report = write_report(args.group, document)

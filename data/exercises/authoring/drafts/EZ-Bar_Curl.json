@@ -1,21 +1,23 @@
 {
-  "additional_context": "Council feedback from human_owner:\n- review.human: Stabilization includes facial muscles somehow Suggested correction: Stabilization includes facial muscles somehow\nCouncil feedback from openai_reviewer:\n- candidate_trace_report.profile.muscles: The tracer assigns 0.25 stabilizer coefficients to a near-global set of anatomically unrelated muscles, including facial, ocular, laryngeal, intrinsic foot, pelvic-floor, and hip muscles. These muscles are not material stabilization requirements of the demonstrated bilateral standing EZ-bar curl, so the resulting tracer profile is biomechanically invalid. Suggested correction: For a future revision, constrain stabilization output to muscles plausibly required for loaded-bar grip/wrist control, elbow and glenohumeral stability, and upright trunk/postural control; do not assign generalized stabilization to unrelated regional muscles.\n- candidate_trace_report.profile.muscles[muscle_id=muscle.coracobrachialis.left]: Coracobrachialis is assigned as a coefficient-1.0 primary mover despite the instructions and frames specifying that the upper arms remain stationary beside the torso. The demonstrated primary motion is elbow flexion, not shoulder flexion. Suggested correction: For a future revision, remove coracobrachialis as a primary mover for this strict upper-arm-stationary curl, or at most represent it as a low-level shoulder stabilizer if supported by the tracer model.\n- candidate_trace_report.profile.muscles[muscle_id=muscle.coracobrachialis.right]: Coracobrachialis is assigned as a coefficient-1.0 primary mover despite the instructions and frames specifying that the upper arms remain stationary beside the torso. The demonstrated primary motion is elbow flexion, not shoulder flexion. Suggested correction: For a future revision, remove coracobrachialis as a primary mover for this strict upper-arm-stationary curl, or at most represent it as a low-level shoulder stabilizer if supported by the tracer model.\n- candidate_trace_report.profile.muscles[muscle_id=muscle.brachioradialis.left]: Brachioradialis is labeled only as a low-coefficient stabilizer, although it is an elbow flexor contributing to the demonstrated loaded elbow-flexion action, particularly with the EZ-bar's partially pronated/neutral grip orientation. Suggested correction: For a future revision, classify brachioradialis as an elbow-flexion synergist or otherwise give it action-derived rather than generic stabilization-derived representation.\n- candidate_trace_report.profile.muscles[muscle_id=muscle.brachioradialis.right]: Brachioradialis is labeled only as a low-coefficient stabilizer, although it is an elbow flexor contributing to the demonstrated loaded elbow-flexion action, particularly with the EZ-bar's partially pronated/neutral grip orientation. Suggested correction: For a future revision, classify brachioradialis as an elbow-flexion synergist or otherwise give it action-derived rather than generic stabilization-derived representation.\n- candidate_trace_report.profile.muscles[muscle_id=muscle.transversus_abdominis.left]: Transversus abdominis is marked as no involvement despite the proposed definition explicitly requiring postural stabilization in a standing, freely held loaded-bar exercise. This contradicts the stabilization demand and materially distorts the trunk-stabilization pattern. Suggested correction: For a future revision, represent appropriate trunk stabilizers consistently with the stated postural-stabilization demand.\n- candidate_trace_report.profile.muscles[muscle_id=muscle.transversus_abdominis.right]: Transversus abdominis is marked as no involvement despite the proposed definition explicitly requiring postural stabilization in a standing, freely held loaded-bar exercise. This contradicts the stabilization demand and materially distorts the trunk-stabilization pattern. Suggested correction: For a future revision, represent appropriate trunk stabilizers consistently with the stated postural-stabilization demand.\n\n",
+  "additional_context": "Council feedback from model_reviewer:\n- authoring_response.proposed_definition.kinematic_profile.stabilization_demands: The demands list only glenohumeral_stabilization and postural_stabilization. The exercise requires sustained grip and wrist control of a loaded free bar through the full arc, and the bar's moment at the hands increases as the forearms reach horizontal. The tracer output has no finger flexors (flexor digitorum superficialis/profundus) and no wrist flexors (flexor carpi radialis/ulnaris, palmaris longus); all show no involvement. This is a materially incomplete forearm pattern for a loaded-bar curl. Suggested correction: Add a grip/wrist stabilization demand, for example grip_stabilization or wrist_stabilization, so the tracer represents the finger and wrist flexors at an appropriate stabilizer level for holding a loaded bar.\n- engaged_muscles_by_role.stabilizer: The glenohumeral stabilization set includes the rotator cuff and coracobrachialis. It omits anterior deltoid, the primary isometric resister of the shoulder-extension moment created when the loaded forearms rise in front of the body with the upper arms held stationary. It also includes long head of triceps brachii (left/right), a shoulder extensor and elbow extensor. That muscle is antagonistic to the required stabilization direction and is not an evidenced stabilizer here. Suggested correction: In a future revision, ensure glenohumeral stabilization resolves to anterior deltoid at a low-to-moderate stabilizer coefficient. Remove or justify long-head triceps; do not present it as a high-confidence stabilizer.\n- engaged_muscles_by_role.stabilizer[muscle_id=muscle.transversus_abdominis.left]: Transversus abdominis has no involvement. The revision's own assumption states that postural_stabilization is intended to cover trunk stabilizers such as transversus abdominis. The output contradicts the stated definition intent, and the prior council finding on this muscle is unresolved. Rectus abdominis and the obliques are also absent, so the trunk-bracing pattern contains only posterior-chain extensors. Suggested correction: Make the postural_stabilization mapping include low-level abdominal bracing (transversus abdominis, plus internal/external obliques as appropriate) consistent with the stated assumption.\n- engaged_muscles_by_role.stabilizer[muscle_id=muscle.transversus_abdominis.right]: Transversus abdominis has no involvement. The revision's assumption explicitly states postural_stabilization should cover it. The output contradicts the stated intent and leaves the prior council finding unresolved. Suggested correction: Represent transversus abdominis (and appropriate abdominal bracing muscles) bilaterally under postural stabilization.\n\nCouncil feedback from human_owner:\n- review.human: Stabilization includes facial muscles somehow Suggested correction: Stabilization includes facial muscles somehow\nCouncil feedback from openai_reviewer:\n- candidate_trace_report.profile.muscles: The tracer assigns 0.25 stabilizer coefficients to a near-global set of anatomically unrelated muscles, including facial, ocular, laryngeal, intrinsic foot, pelvic-floor, and hip muscles. These muscles are not material stabilization requirements of the demonstrated bilateral standing EZ-bar curl, so the resulting tracer profile is biomechanically invalid. Suggested correction: For a future revision, constrain stabilization output to muscles plausibly required for loaded-bar grip/wrist control, elbow and glenohumeral stability, and upright trunk/postural control; do not assign generalized stabilization to unrelated regional muscles.\n- candidate_trace_report.profile.muscles[muscle_id=muscle.coracobrachialis.left]: Coracobrachialis is assigned as a coefficient-1.0 primary mover despite the instructions and frames specifying that the upper arms remain stationary beside the torso. The demonstrated primary motion is elbow flexion, not shoulder flexion. Suggested correction: For a future revision, remove coracobrachialis as a primary mover for this strict upper-arm-stationary curl, or at most represent it as a low-level shoulder stabilizer if supported by the tracer model.\n- candidate_trace_report.profile.muscles[muscle_id=muscle.coracobrachialis.right]: Coracobrachialis is assigned as a coefficient-1.0 primary mover despite the instructions and frames specifying that the upper arms remain stationary beside the torso. The demonstrated primary motion is elbow flexion, not shoulder flexion. Suggested correction: For a future revision, remove coracobrachialis as a primary mover for this strict upper-arm-stationary curl, or at most represent it as a low-level shoulder stabilizer if supported by the tracer model.\n- candidate_trace_report.profile.muscles[muscle_id=muscle.brachioradialis.left]: Brachioradialis is labeled only as a low-coefficient stabilizer, although it is an elbow flexor contributing to the demonstrated loaded elbow-flexion action, particularly with the EZ-bar's partially pronated/neutral grip orientation. Suggested correction: For a future revision, classify brachioradialis as an elbow-flexion synergist or otherwise give it action-derived rather than generic stabilization-derived representation.\n- candidate_trace_report.profile.muscles[muscle_id=muscle.brachioradialis.right]: Brachioradialis is labeled only as a low-coefficient stabilizer, although it is an elbow flexor contributing to the demonstrated loaded elbow-flexion action, particularly with the EZ-bar's partially pronated/neutral grip orientation. Suggested correction: For a future revision, classify brachioradialis as an elbow-flexion synergist or otherwise give it action-derived rather than generic stabilization-derived representation.\n- candidate_trace_report.profile.muscles[muscle_id=muscle.transversus_abdominis.left]: Transversus abdominis is marked as no involvement despite the proposed definition explicitly requiring postural stabilization in a standing, freely held loaded-bar exercise. This contradicts the stabilization demand and materially distorts the trunk-stabilization pattern. Suggested correction: For a future revision, represent appropriate trunk stabilizers consistently with the stated postural-stabilization demand.\n- candidate_trace_report.profile.muscles[muscle_id=muscle.transversus_abdominis.right]: Transversus abdominis is marked as no involvement despite the proposed definition explicitly requiring postural stabilization in a standing, freely held loaded-bar exercise. This contradicts the stabilization demand and materially distorts the trunk-stabilization pattern. Suggested correction: For a future revision, represent appropriate trunk stabilizers consistently with the stated postural-stabilization demand.\n\n",
   "authoring_response": {
     "assumptions": [
-      "The standard strict form applies, with the upper arms stationary and no torso swing. Glenohumeral flexion is therefore excluded from the primary joint actions, consistent with the instruction 'Focus on only moving your forearms' and the reviewer's coracobrachialis correction.",
-      "The grip is the wide outer handle with a semi-supinated angle set by the bar's shape. Forearm rotation stays fixed during the rep and is not modeled as a radioulnar action.",
-      "Brachioradialis contribution is expected to come from the elbow_joint flexion action as a synergist, not from a generic stabilization demand.",
-      "Glenohumeral stabilization is required to hold the humerus still against the shifting load moment.",
-      "Postural stabilization is required for upright standing control while holding a free bar in front of the body. It is intended to cover trunk stabilizers such as transversus abdominis and should not be expanded by the tracer to unrelated facial, ocular, laryngeal, intrinsic-foot, or pelvic-floor muscles.",
-      "Input is counted in repetitions, per instruction 5."
+      "The upper arms remain essentially stationary at the sides, as instructed and shown, so no glenohumeral flexion is counted as an exertion action.",
+      "The forearms hold the semi-supinated EZ-bar grip throughout. No active radioulnar supination occurs during the lift, so supination is not listed.",
+      "The wrists are held roughly neutral rather than actively flexed, so wrist_stability is used instead of wrist_joint/flexion.",
+      "The load is held in the hands throughout, so grip and wrist_stability are mechanically required.",
+      "The forearm load in front of the stationary upper arm creates a shoulder-extension moment that the anterior deltoid resists isometrically. This is represented by shoulder_position_hold rather than glenohumeral_stabilization.",
+      "Glenohumeral_stabilization (rotator cuff centering under the hanging load) and scapular_stabilization (scapular control while the arms carry the bar) are mechanically relevant.",
+      "Standing upright with a freely held bar requires postural_stabilization. Heavy deliberate bracing (intra_abdominal_pressure) and explicit anti-extension demands are not assumed for this beginner, moderate-load isolation curl.",
+      "The execution is strict, with no torso swing or hip drive.",
+      "Per the tracer rules, face, eye, jaw, tongue, palate, pharynx and larynx muscles are always zero. The earlier near-global stabilizer output was not produced by any demand listed here."
     ],
     "classification": "supported",
     "classification_reasons": [
-      "The instructions and both frames show a standing, bilateral, free-weight EZ-bar curl with the upper arms held beside the torso.",
-      "The bar travels from thigh level to about shoulder level through elbow flexion alone, which the elbow_joint/flexion pairing represents exactly.",
-      "The hands move freely with the bar while the feet stay fixed, so the moving segment is open chain.",
-      "The EZ-bar's angled grip is fixed for the whole set. No active forearm rotation occurs, so no radioulnar action is needed.",
-      "Council feedback flagged problems in the tracer's muscle-coefficient output: near-global stabilizers, coracobrachialis as a prime mover, and brachioradialis under-weighted. These are addressed by limiting joint actions to elbow flexion only and keeping stabilization demands minimal and mechanically justified."
+      "The instructions and both frames show a standing, bilateral, free-weight EZ-bar curl. The upper arms stay beside the torso while the elbows flex to bring the bar to shoulder level.",
+      "The exertion phase is elbow flexion, which the schema represents exactly as elbow_joint/flexion. The table assigns this action to brachialis, both biceps heads and brachioradialis, which addresses the earlier finding that brachioradialis appeared only as a stabilizer.",
+      "Shoulder flexion is omitted because the instructions specify stationary upper arms. This removes coracobrachialis as a primary mover. The isometric anterior deltoid work is instead represented through shoulder_position_hold.",
+      "The required stabilization is within the vocabulary: grip and wrist control of the loaded bar, holding the upper arm still, scapular and glenohumeral control of the hanging load, and upright standing posture. Postural_stabilization reaches transversus abdominis and internal oblique."
     ],
     "field_confidence": {
       "input_mode": "high",
@@ -27,9 +29,9 @@
     },
     "proposed_definition": {
       "aliases": [
-        "ez_curl_bar_biceps_curl",
+        "ez_bar_curl",
         "standing_ez-bar_curl",
-        "cambered_bar_curl"
+        "ez_curl_bar_biceps_curl"
       ],
       "id": "exercise.ez_bar_curl.standing_bilateral",
       "input_mode": "repetitions",
@@ -43,7 +45,11 @@
         ],
         "stabilization_demands": [
           "glenohumeral_stabilization",
-          "postural_stabilization"
+          "grip",
+          "postural_stabilization",
+          "scapular_stabilization",
+          "shoulder_position_hold",
+          "wrist_stability"
         ]
       },
       "laterality": "bilateral",
@@ -62,7 +68,7 @@
     "ok": true,
     "profile": {
       "exercise_id": "exercise.ez_bar_curl.standing_bilateral",
-      "mapped_muscles": 62.0,
+      "mapped_muscles": 140.0,
       "muscles": [
         {
           "coefficient": 0.0,
@@ -109,26 +115,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.07,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.abductor_digiti_minimi_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.abductor_digiti_minimi_of_hand.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.07,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.abductor_digiti_minimi_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.abductor_digiti_minimi_of_hand.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -153,26 +161,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.07,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.abductor_pollicis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.abductor_pollicis_brevis.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.07,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.abductor_pollicis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.abductor_pollicis_brevis.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -197,26 +207,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.14,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.acromial_part_of_deltoid",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.acromial_part_of_deltoid.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.14,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.acromial_part_of_deltoid",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.acromial_part_of_deltoid.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -375,26 +387,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.28,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.ascending_part_of_trapezius",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.ascending_part_of_trapezius.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.28,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.ascending_part_of_trapezius",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.ascending_part_of_trapezius.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 1.0,
@@ -467,48 +481,52 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.14,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.clavicular_head_of_pectoralis_major",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.clavicular_head_of_pectoralis_major.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.14,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.clavicular_head_of_pectoralis_major",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.clavicular_head_of_pectoralis_major.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.35,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.clavicular_part_of_deltoid",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.clavicular_part_of_deltoid.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.35,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.clavicular_part_of_deltoid",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.clavicular_part_of_deltoid.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -533,7 +551,7 @@
           "role": "none"
         },
         {
-          "coefficient": 0.07,
+          "coefficient": 0.105,
           "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
@@ -545,7 +563,7 @@
           "role": "stabilizer"
         },
         {
-          "coefficient": 0.07,
+          "coefficient": 0.105,
           "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
@@ -579,26 +597,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.07,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.deep_head_of_flexor_pollicis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.deep_head_of_flexor_pollicis_brevis.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.07,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.deep_head_of_flexor_pollicis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.deep_head_of_flexor_pollicis_brevis.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -711,26 +731,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.175,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.descending_part_of_trapezius",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.descending_part_of_trapezius.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.175,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.descending_part_of_trapezius",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.descending_part_of_trapezius.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -766,26 +788,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.105,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.dorsal_interossei_muscles_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.dorsal_interossei_muscles_of_hand.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.105,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.dorsal_interossei_muscles_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.dorsal_interossei_muscles_of_hand.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -810,26 +834,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.28,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.extensor_carpi_radialis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.extensor_carpi_radialis_brevis.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.28,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.extensor_carpi_radialis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.extensor_carpi_radialis_brevis.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.1,
@@ -878,26 +904,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.07,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.extensor_digitorum",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.extensor_digitorum.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.07,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.extensor_digitorum",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.extensor_digitorum.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -1208,26 +1236,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.21,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.flexor_carpi_radialis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.flexor_carpi_radialis.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.21,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.flexor_carpi_radialis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.flexor_carpi_radialis.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -1252,26 +1282,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.07,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.flexor_digiti_minimi_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.flexor_digiti_minimi_of_hand.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.07,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.flexor_digiti_minimi_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.flexor_digiti_minimi_of_hand.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -1318,26 +1350,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.35,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.flexor_digitorum_profundus",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.flexor_digitorum_profundus.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.35,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.flexor_digitorum_profundus",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.flexor_digitorum_profundus.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -1362,26 +1396,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.21,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.flexor_pollicis_longus",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.flexor_pollicis_longus.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.21,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.flexor_pollicis_longus",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.flexor_pollicis_longus.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -1540,70 +1576,76 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.175,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.humeral_head_of_extensor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.humeral_head_of_extensor_carpi_ulnaris.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.175,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.humeral_head_of_extensor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.humeral_head_of_extensor_carpi_ulnaris.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.175,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.humeral_head_of_flexor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.humeral_head_of_flexor_carpi_ulnaris.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.175,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.humeral_head_of_flexor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.humeral_head_of_flexor_carpi_ulnaris.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.28,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.humero_ulnar_head_of_flexor_digitorum_superficialis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.humero_ulnar_head_of_flexor_digitorum_superficialis.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.28,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.humero_ulnar_head_of_flexor_digitorum_superficialis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.humero_ulnar_head_of_flexor_digitorum_superficialis.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -1920,26 +1962,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.175,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.internal_abdominal_oblique",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.internal_abdominal_oblique.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.175,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.internal_abdominal_oblique",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.internal_abdominal_oblique.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -2252,26 +2296,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.105,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.levator_scapulae",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.levator_scapulae.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.105,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.levator_scapulae",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.levator_scapulae.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -2366,28 +2412,26 @@
           "role": "stabilizer"
         },
         {
-          "coefficient": 0.07,
+          "coefficient": 0.0,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "muscle_actions_v2:muscle.long_head_of_triceps_brachii",
-            "rule.kinematic_tracer_v2.stabilizer"
+            "rule.kinematic_tracer_v2.reviewed_zero"
           ],
-          "evidence_status": "kinematic_trace",
+          "evidence_status": "reviewed_zero",
           "muscle_id": "muscle.long_head_of_triceps_brachii.left",
-          "role": "stabilizer"
+          "role": "none"
         },
         {
-          "coefficient": 0.07,
+          "coefficient": 0.0,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "muscle_actions_v2:muscle.long_head_of_triceps_brachii",
-            "rule.kinematic_tracer_v2.stabilizer"
+            "rule.kinematic_tracer_v2.reviewed_zero"
           ],
-          "evidence_status": "kinematic_trace",
+          "evidence_status": "reviewed_zero",
           "muscle_id": "muscle.long_head_of_triceps_brachii.right",
-          "role": "stabilizer"
+          "role": "none"
         },
         {
           "coefficient": 0.0,
@@ -2524,26 +2568,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.035,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.lumbrical_muscles_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.lumbrical_muscles_of_hand.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.035,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.lumbrical_muscles_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.lumbrical_muscles_of_hand.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -2838,26 +2884,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.175,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.oblique_head_of_adductor_pollicis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.oblique_head_of_adductor_pollicis.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.175,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.oblique_head_of_adductor_pollicis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.oblique_head_of_adductor_pollicis.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -3036,48 +3084,52 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.07,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.opponens_digiti_minimi_muscle_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.opponens_digiti_minimi_muscle_of_hand.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.07,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.opponens_digiti_minimi_muscle_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.opponens_digiti_minimi_muscle_of_hand.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.105,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.opponens_pollicis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.opponens_pollicis.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.105,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.opponens_pollicis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.opponens_pollicis.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -3146,48 +3198,52 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.105,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.palmar_interossei",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.palmar_interossei.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.105,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.palmar_interossei",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.palmar_interossei.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.07,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.palmaris_longus",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.palmaris_longus.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.07,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.palmaris_longus",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.palmaris_longus.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -3234,26 +3290,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.105,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.pectoralis_minor",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.pectoralis_minor.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.105,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.pectoralis_minor",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.pectoralis_minor.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -3610,26 +3668,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.14,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.radial_head_of_flexor_digitorum_superficialis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.radial_head_of_flexor_digitorum_superficialis.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.14,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.radial_head_of_flexor_digitorum_superficialis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.radial_head_of_flexor_digitorum_superficialis.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -3766,48 +3826,52 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.21,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.rhomboid_major",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.rhomboid_major.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.21,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.rhomboid_major",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.rhomboid_major.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.14,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.rhomboid_minor",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.rhomboid_minor.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.14,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.rhomboid_minor",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.rhomboid_minor.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -3942,26 +4006,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.14,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.scapular_spinal_part_of_deltoid",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.scapular_spinal_part_of_deltoid.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.14,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.scapular_spinal_part_of_deltoid",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.scapular_spinal_part_of_deltoid.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.14,
@@ -4056,26 +4122,28 @@
           "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.28,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.serratus_anterior",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.serratus_anterior.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.28,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.serratus_anterior",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.serratus_anterior.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -4326,26 +4394,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.07,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.sternocostal_head_of_pectoralis_major",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.07,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.sternocostal_head_of_pectoralis_major",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -4458,26 +4528,28 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.07,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.subclavius",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.subclavius.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.07,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.subclavius",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.subclavius.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.35,
@@ -4504,26 +4576,28 @@
           "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.14,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.superficial_head_of_flexor_pollicis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.superficial_head_of_flexor_pollicis_brevis.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.14,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.superficial_head_of_flexor_pollicis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.superficial_head_of_flexor_pollicis_brevis.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.2,
@@ -4961,70 +5035,76 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.14,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.transverse_head_of_adductor_pollicis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.transverse_head_of_adductor_pollicis.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.14,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.transverse_head_of_adductor_pollicis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.transverse_head_of_adductor_pollicis.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.245,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.transverse_part_of_trapezius",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.transverse_part_of_trapezius.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.245,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.transverse_part_of_trapezius",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.transverse_part_of_trapezius.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.28,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.transversus_abdominis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.transversus_abdominis.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
+          "coefficient": 0.28,
           "confidence": "high",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.transversus_abdominis",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.transversus_abdominis.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.0,
@@ -5071,48 +5151,52 @@
           "role": "none"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.105,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.ulnar_head_of_extensor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.ulnar_head_of_extensor_carpi_ulnaris.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.105,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.ulnar_head_of_extensor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.ulnar_head_of_extensor_carpi_ulnaris.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.175,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.ulnar_head_of_flexor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.ulnar_head_of_flexor_carpi_ulnaris.left",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
-          "coefficient": 0.0,
-          "confidence": "high",
+          "coefficient": 0.175,
+          "confidence": "medium",
           "derivation_method": "kinematic_tracer_v2",
           "evidence_refs": [
-            "rule.kinematic_tracer_v2.reviewed_zero"
+            "muscle_actions_v2:muscle.ulnar_head_of_flexor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
           ],
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "muscle_id": "muscle.ulnar_head_of_flexor_carpi_ulnaris.right",
-          "role": "none"
+          "role": "stabilizer"
         },
         {
           "coefficient": 0.175,
@@ -5254,11 +5338,11 @@
         }
       ],
       "total_muscles": 466.0,
-      "zero_muscles": 404.0
+      "zero_muscles": 326.0
     },
     "provenance": {
       "canonical_exercises_sha256": "1645e7cf1d6b265b4a4e8d8142d2f68901a6bca269a6bc1df4b99b1c9c0bca4d",
-      "muscle_actions_sha256": "668fbdf148e1b7dc1e0e6454b43fd52efa73cf77d289730907e1bdaa474aff6d",
+      "muscle_actions_sha256": "52d1b3acbc4257f2c85de5f308437d20ac78b895a3274d1db8cbbde3cfd3bfcf",
       "structures_sha256": "cad14011d986446b2af5871cad93575dac1da7e34ea6cfbc67b551bf2a3d8edf",
       "tracer": "kinematic_tracer_v2"
     },
@@ -5270,25 +5354,41 @@
           "movement": "flexion"
         }
       ],
-      "mapped_muscles": 62.0,
+      "mapped_muscles": 140.0,
       "role_counts": {
-        "none": 404.0,
+        "none": 326.0,
         "primary": 8.0,
-        "stabilizer": 50.0,
+        "stabilizer": 128.0,
         "synergist": 4.0
       },
       "stabilization_coverage": [
         {
           "demand": "glenohumeral_stabilization",
-          "matching_muscles": 12.0
+          "matching_muscles": 10.0
+        },
+        {
+          "demand": "grip",
+          "matching_muscles": 32.0
         },
         {
           "demand": "postural_stabilization",
-          "matching_muscles": 38.0
+          "matching_muscles": 42.0
+        },
+        {
+          "demand": "scapular_stabilization",
+          "matching_muscles": 18.0
+        },
+        {
+          "demand": "shoulder_position_hold",
+          "matching_muscles": 12.0
+        },
+        {
+          "demand": "wrist_stability",
+          "matching_muscles": 18.0
         }
       ],
       "total_muscles": 466.0,
-      "zero_muscles": 404.0
+      "zero_muscles": 326.0
     },
     "warnings": []
   },
@@ -5309,20 +5409,22 @@
     "provider": "anthropic",
     "raw_authoring_response": {
       "assumptions": [
-        "The standard strict form applies, with the upper arms stationary and no torso swing. Glenohumeral flexion is therefore excluded from the primary joint actions, consistent with the instruction 'Focus on only moving your forearms' and the reviewer's coracobrachialis correction.",
-        "The grip is the wide outer handle with a semi-supinated angle set by the bar's shape. Forearm rotation stays fixed during the rep and is not modeled as a radioulnar action.",
-        "Brachioradialis contribution is expected to come from the elbow_joint flexion action as a synergist, not from a generic stabilization demand.",
-        "Glenohumeral stabilization is required to hold the humerus still against the shifting load moment.",
-        "Postural stabilization is required for upright standing control while holding a free bar in front of the body. It is intended to cover trunk stabilizers such as transversus abdominis and should not be expanded by the tracer to unrelated facial, ocular, laryngeal, intrinsic-foot, or pelvic-floor muscles.",
-        "Input is counted in repetitions, per instruction 5."
+        "The upper arms remain essentially stationary at the sides, as instructed and shown, so no glenohumeral flexion is counted as an exertion action.",
+        "The forearms hold the semi-supinated EZ-bar grip throughout. No active radioulnar supination occurs during the lift, so supination is not listed.",
+        "The wrists are held roughly neutral rather than actively flexed, so wrist_stability is used instead of wrist_joint/flexion.",
+        "The load is held in the hands throughout, so grip and wrist_stability are mechanically required.",
+        "The forearm load in front of the stationary upper arm creates a shoulder-extension moment that the anterior deltoid resists isometrically. This is represented by shoulder_position_hold rather than glenohumeral_stabilization.",
+        "Glenohumeral_stabilization (rotator cuff centering under the hanging load) and scapular_stabilization (scapular control while the arms carry the bar) are mechanically relevant.",
+        "Standing upright with a freely held bar requires postural_stabilization. Heavy deliberate bracing (intra_abdominal_pressure) and explicit anti-extension demands are not assumed for this beginner, moderate-load isolation curl.",
+        "The execution is strict, with no torso swing or hip drive.",
+        "Per the tracer rules, face, eye, jaw, tongue, palate, pharynx and larynx muscles are always zero. The earlier near-global stabilizer output was not produced by any demand listed here."
       ],
       "classification": "supported",
       "classification_reasons": [
-        "The instructions and both frames show a standing, bilateral, free-weight EZ-bar curl with the upper arms held beside the torso.",
-        "The bar travels from thigh level to about shoulder level through elbow flexion alone, which the elbow_joint/flexion pairing represents exactly.",
-        "The hands move freely with the bar while the feet stay fixed, so the moving segment is open chain.",
-        "The EZ-bar's angled grip is fixed for the whole set. No active forearm rotation occurs, so no radioulnar action is needed.",
-        "Council feedback flagged problems in the tracer's muscle-coefficient output: near-global stabilizers, coracobrachialis as a prime mover, and brachioradialis under-weighted. These are addressed by limiting joint actions to elbow flexion only and keeping stabilization demands minimal and mechanically justified."
+        "The instructions and both frames show a standing, bilateral, free-weight EZ-bar curl. The upper arms stay beside the torso while the elbows flex to bring the bar to shoulder level.",
+        "The exertion phase is elbow flexion, which the schema represents exactly as elbow_joint/flexion. The table assigns this action to brachialis, both biceps heads and brachioradialis, which addresses the earlier finding that brachioradialis appeared only as a stabilizer.",
+        "Shoulder flexion is omitted because the instructions specify stationary upper arms. This removes coracobrachialis as a primary mover. The isometric anterior deltoid work is instead represented through shoulder_position_hold.",
+        "The required stabilization is within the vocabulary: grip and wrist control of the loaded bar, holding the upper arm still, scapular and glenohumeral control of the hanging load, and upright standing posture. Postural_stabilization reaches transversus abdominis and internal oblique."
       ],
       "field_confidence": {
         "input_mode": "high",
@@ -5335,9 +5437,9 @@
       "proposed_definition": {
         "additional_movement_families": [],
         "aliases": [
-          "EZ Curl Bar Biceps Curl",
+          "EZ Bar Curl",
           "Standing EZ-Bar Curl",
-          "Cambered Bar Curl"
+          "EZ Curl Bar Biceps Curl"
         ],
         "id": "exercise.ez_bar_curl.standing_bilateral",
         "input_mode": "repetitions",
@@ -5350,7 +5452,11 @@
             }
           ],
           "stabilization_demands": [
+            "grip",
+            "wrist_stability",
+            "shoulder_position_hold",
             "glenohumeral_stabilization",
+            "scapular_stabilization",
             "postural_stabilization"
           ]
         },
@@ -5363,17 +5469,17 @@
     },
     "request_id": "",
     "requested_model": "claude-opus-5-5",
-    "response_id": "msg_011CgnN3xC8STTZXEVjRQ8QC",
+    "response_id": "msg_011CgnNtQ6wEEUSNsi5eUwgn",
     "served_by_fallback": false,
     "stop_reason": "end_turn",
     "usage": {
-      "cache_creation_input_tokens": 0.0,
-      "cache_read_input_tokens": 5386.0,
-      "input_tokens": 3223.0,
-      "output_tokens": 1710.0
+      "cache_creation_input_tokens": 15842.0,
+      "cache_read_input_tokens": 0.0,
+      "input_tokens": 4175.0,
+      "output_tokens": 1908.0
     }
   },
-  "saved_at_unix": 1793999594.70077,
+  "saved_at_unix": 1794000237.52693,
   "source_id": "EZ-Bar_Curl",
   "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
   "status": "definition_candidate",

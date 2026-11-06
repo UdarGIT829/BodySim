@@ -6,9 +6,9 @@
     "provider": "anthropic",
     "model": "claude-opus-5-5",
     "effort": "high",
-    "response_id": "msg_011CgnLrDVRfU1MPPwn4hCEJ"
+    "response_id": "msg_011CgnNivJcG7DUJYjLDDdfy"
   },
-  "drafted_at_unix": 1793998647.8899457,
+  "drafted_at_unix": 1794000124.0661604,
   "entries": [
     {
       "base_id": "muscle.abductor_digiti_minimi_of_hand",
@@ -25,9 +25,14 @@
           "weight": 0.1
         }
       ],
-      "stabilizes": [],
+      "stabilizes": [
+        {
+          "demand": "grip",
+          "weight": 0.2
+        }
+      ],
       "confidence": "high",
-      "rationale": "It abducts the little finger at the MCP joint and is a clear assistant to the dorsal interossei for finger abduction overall. It gives only minor assistance to MCP flexion of the fifth digit.",
+      "rationale": "It abducts the little finger at the MCP joint and is a clear assistant to the dorsal interossei for finger abduction, with only minor help in fifth-digit MCP flexion. As part of the hypothenar group it is active in power grip, a minor share next to the long finger flexors. It does not cross the wrist, so it has no wrist_stability role.",
       "status": "reviewed"
     },
     {
@@ -45,9 +50,14 @@
           "weight": 0.5
         }
       ],
-      "stabilizes": [],
+      "stabilizes": [
+        {
+          "demand": "grip",
+          "weight": 0.2
+        }
+      ],
       "confidence": "high",
-      "rationale": "It is the prime mover of palmar abduction of the thumb and assists opponens pollicis in opposition. Abductor pollicis longus shares abduction from the forearm.",
+      "rationale": "It is the prime mover of palmar abduction of the thumb and assists opponens pollicis in opposition; abductor pollicis longus shares abduction from the forearm. Its grip role is minor: it positions the thumb around a bar or handle rather than generating the squeezing force.",
       "status": "reviewed"
     },
     {
@@ -65,9 +75,14 @@
           "weight": 0.2
         }
       ],
-      "stabilizes": [],
+      "stabilizes": [
+        {
+          "demand": "grip",
+          "weight": 0.2
+        }
+      ],
       "confidence": "medium",
-      "rationale": "This small, variably present, ulnar-innervated head assists MCP flexion of the thumb. Because it inserts near adductor pollicis, it gives minor help with adduction.",
+      "rationale": "This small, variably present, ulnar-innervated head assists thumb MCP flexion and, because it inserts near adductor pollicis, gives minor help with adduction. It contributes slightly to the thumb flexion that wraps a bar, so its grip weight is minor.",
       "status": "reviewed"
     },
     {
@@ -90,9 +105,14 @@
           "weight": 0.3
         }
       ],
-      "stabilizes": [],
+      "stabilizes": [
+        {
+          "demand": "grip",
+          "weight": 0.3
+        }
+      ],
       "confidence": "high",
-      "rationale": "They are the prime movers of finger abduction away from the middle finger. Through the extensor expansion they also flex the MCP joints and extend the interphalangeal joints.",
+      "rationale": "They are the prime movers of finger abduction away from the middle finger and, through the extensor expansion, flex the MCP joints and extend the interphalangeal joints. They are active in power grip, flexing and stabilizing the MCP joints, a clear assist to the long finger flexors.",
       "status": "reviewed"
     },
     {
@@ -105,9 +125,14 @@
           "weight": 0.2
         }
       ],
-      "stabilizes": [],
+      "stabilizes": [
+        {
+          "demand": "grip",
+          "weight": 0.2
+        }
+      ],
       "confidence": "high",
-      "rationale": "It flexes only the little finger's MCP joint, a minor share of finger flexion compared with the long flexors.",
+      "rationale": "It flexes only the little finger's MCP joint, a minor share of finger flexion compared with the long flexors. It also gives a correspondingly minor contribution to sustained grip.",
       "status": "reviewed"
     },
     {
@@ -125,9 +150,14 @@
           "weight": 0.4
         }
       ],
-      "stabilizes": [],
+      "stabilizes": [
+        {
+          "demand": "grip",
+          "weight": 0.1
+        }
+      ],
       "confidence": "high",
-      "rationale": "They flex the MCP joints and, via the extensor expansion, extend the interphalangeal joints. They clearly assist extensor digitorum with IP extension but contribute only moderately to flexion.",
+      "rationale": "They flex the MCP joints and, via the extensor expansion, extend the interphalangeal joints, clearly assisting extensor digitorum with IP extension but contributing only moderately to flexion. Because they extend the IP joints and show little activity in full-fist power grip, their grip weight is minimal.",
       "status": "reviewed"
     },
     {
@@ -145,9 +175,14 @@
           "weight": 0.2
         }
       ],
-      "stabilizes": [],
+      "stabilizes": [
+        {
+          "demand": "grip",
+          "weight": 0.5
+        }
+      ],
       "confidence": "high",
-      "rationale": "With the transverse head it is the main thumb adductor and is important in key pinch. It gives minor assistance to thumb MCP flexion.",
+      "rationale": "With the transverse head it is the main thumb adductor and is important in key pinch, giving minor assistance to thumb MCP flexion. It is a clear contributor to grip because it clamps the thumb against a bar or handle.",
       "status": "reviewed"
     },
     {
@@ -160,9 +195,14 @@
           "weight": 0.1
         }
       ],
-      "stabilizes": [],
+      "stabilizes": [
+        {
+          "demand": "grip",
+          "weight": 0.2
+        }
+      ],
       "confidence": "medium",
-      "rationale": "It flexes and laterally rotates the fifth metacarpal to deepen the palm toward the thumb. The vocabulary has no little-finger opposition, so that action is omitted and only minor flexion is listed.",
+      "rationale": "It flexes and laterally rotates the fifth metacarpal to deepen the palm toward the thumb. The vocabulary has no little-finger opposition, so that action is omitted and only minor flexion is listed. Cupping the ulnar palm around a handle gives it a minor grip role.",
       "status": "reviewed"
     },
     {
@@ -180,9 +220,14 @@
           "weight": 0.2
         }
       ],
-      "stabilizes": [],
+      "stabilizes": [
+        {
+          "demand": "grip",
+          "weight": 0.3
+        }
+      ],
       "confidence": "high",
-      "rationale": "It is the prime mover of opposition, flexing and medially rotating the first metacarpal at the carpometacarpal joint. Its flexion contribution is minor.",
+      "rationale": "It is the prime mover of opposition, flexing and medially rotating the first metacarpal at the carpometacarpal joint, with a minor flexion contribution. It holds the thumb opposed around a bar, a clear but secondary grip contribution.",
       "status": "reviewed"
     },
     {
@@ -210,9 +255,14 @@
           "weight": 0.1
         }
       ],
-      "stabilizes": [],
+      "stabilizes": [
+        {
+          "demand": "grip",
+          "weight": 0.3
+        }
+      ],
       "confidence": "high",
-      "rationale": "They are the prime movers of finger adduction toward the middle finger, with minor MCP flexion and IP extension via the extensor expansion. The first palmar interosseous, which is variably described, adds slight thumb adduction.",
+      "rationale": "They are the prime movers of finger adduction toward the middle finger, with minor MCP flexion and IP extension via the extensor expansion; the variably described first palmar interosseous adds slight thumb adduction. They help grip by flexing the MCP joints and keeping the fingers together around a bar.",
       "status": "reviewed"
     },
     {
@@ -230,9 +280,14 @@
           "weight": 0.4
         }
       ],
-      "stabilizes": [],
+      "stabilizes": [
+        {
+          "demand": "grip",
+          "weight": 0.4
+        }
+      ],
       "confidence": "high",
-      "rationale": "It clearly assists flexor pollicis longus by flexing the thumb MCP joint. It also assists opposition as part of the thenar group.",
+      "rationale": "It clearly assists flexor pollicis longus by flexing the thumb MCP joint and assists opposition as part of the thenar group. That thumb flexion makes it a clear assistant in holding a bar or handle.",
       "status": "reviewed"
     },
     {
@@ -250,16 +305,51 @@
           "weight": 0.1
         }
       ],
-      "stabilizes": [],
+      "stabilizes": [
+        {
+          "demand": "grip",
+          "weight": 0.4
+        }
+      ],
       "confidence": "high",
-      "rationale": "With the oblique head it is the main thumb adductor, pulling the thumb toward the palm. Its flexion contribution at the MCP joint is minimal.",
+      "rationale": "With the oblique head it is the main thumb adductor, pulling the thumb toward the palm, with minimal MCP flexion. Its adduction force pins the thumb against a held bar, a clear contribution to grip.",
       "status": "reviewed"
     }
   ],
+  "revision_of": {
+    "drafted_with": {
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "response_id": "msg_011CgnLrDVRfU1MPPwn4hCEJ"
+    },
+    "approvals": [
+      {
+        "approved_by": "project_owner",
+        "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+        "entries": [
+          "muscle.abductor_digiti_minimi_of_hand",
+          "muscle.abductor_pollicis_brevis",
+          "muscle.deep_head_of_flexor_pollicis_brevis",
+          "muscle.dorsal_interossei_muscles_of_hand",
+          "muscle.flexor_digiti_minimi_of_hand",
+          "muscle.lumbrical_muscles_of_hand",
+          "muscle.oblique_head_of_adductor_pollicis",
+          "muscle.opponens_digiti_minimi_muscle_of_hand",
+          "muscle.opponens_pollicis",
+          "muscle.palmar_interossei",
+          "muscle.superficial_head_of_flexor_pollicis_brevis",
+          "muscle.transverse_head_of_adductor_pollicis"
+        ],
+        "approved_at_unix": 1793999069.9721754
+      }
+    ],
+    "feedback_file": "reports/muscle_actions_v2/feedback/2026-11-06-ez-bar-curl-council.md"
+  },
   "approvals": [
     {
       "approved_by": "project_owner",
-      "basis": "accepted Claude (claude-opus-5-5) draft without line-by-line expert review, at the project owner's request; automated rule and whole-table sanity checks passed",
+      "basis": "revised by Claude (claude-opus-5-5) from council findings (reports/muscle_actions_v2/feedback/2026-11-06-ez-bar-curl-council.md) and accepted without line-by-line expert review, at the project owner's request; automated rule and whole-table checks passed",
       "entries": [
         "muscle.abductor_digiti_minimi_of_hand",
         "muscle.abductor_pollicis_brevis",
@@ -274,7 +364,7 @@
         "muscle.superficial_head_of_flexor_pollicis_brevis",
         "muscle.transverse_head_of_adductor_pollicis"
       ],
-      "approved_at_unix": 1793999069.9721754
+      "approved_at_unix": 1794000197.120641
     }
   ]
 }

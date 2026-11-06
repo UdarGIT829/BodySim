@@ -80,7 +80,10 @@ def _run(request: Dict[str, Any], client: Any) -> Dict[str, Any]:
     if effort not in EFFORT_LEVELS:
         raise ClaudeTaskError(f"effort must be one of {', '.join(EFFORT_LEVELS)}")
 
-    system_prompt = spec["prompt"].read_text(encoding="utf-8")
+    # Instructions + the generated tracer reference: identical for every
+    # exercise, so the whole block is read from cache within a session.
+    from src.exercises.llm.tracer_reference import tracer_reference  # noqa: PLC0415
+    system_prompt = spec["prompt"].read_text(encoding="utf-8").rstrip() + "\n\n" + tracer_reference()
     schema = json.loads(spec["schema"].read_text(encoding="utf-8"))
     if task == "author":
         text = str(request.get("context", "")).strip()
