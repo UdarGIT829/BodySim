@@ -108,7 +108,7 @@ def test_promotes_accepted_revision(sandbox):
                      if c["catalog_id"] == _target_catalog_id(sandbox))
     assert candidate["status"] == "promoted"
     assert candidate["body_sim_exercise_ids"] == [EXERCISE_ID]
-    assert candidate["promotions"][0]["review_models"]["model_reviewer"] == {"provider": "anthropic", "model": "claude-opus-5-5"}
+    assert candidate["promotions"][-1]["review_models"]["model_reviewer"] == {"provider": "anthropic", "model": "claude-opus-5-5"}
     media = json.loads((sandbox / promotion.REL_MEDIA).read_text())
     assert any(m["exercise_id"] == EXERCISE_ID for m in media)
     assert (sandbox / promotion.REL_PROMOTIONS / f"{HASH}.json").exists()
