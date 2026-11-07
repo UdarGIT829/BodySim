@@ -32,7 +32,7 @@ func run() -> void:
 	await check_studio_auto()
 	await check_council_auto()
 	if failures.is_empty():
-		print("Auto mode passed: runner (budget, credits, retries, fatal, limit, stop, failure streak), pipeline states, studio and council runs")
+		print("Auto mode passed: runner (budget, credits, retries, fatal, limit, stop, failure streak), pipeline states, studio (search filter, skip stretches) and council (stretch rule, no Claude call) runs")
 		quit(0)
 	else:
 		for failure in failures:
@@ -119,9 +119,18 @@ func check_studio_auto() -> void:
 	OS.set_environment("FAKE_CLAUDE_MODE", "ok")
 	var modal: AutoRunModal = studio.get_node("%AutoRunModal")
 	modal.persist_settings = false
-	var queue: Array = AutoPipeline.studio_queue(studio.catalog)
+	# Auto mode follows the catalog search and skips stretches when ticked.
+	require(AutoPipeline.studio_queue(studio.catalog, false).any(func(x: Dictionary) -> bool: return AutoPipeline.is_stretch(x)), "unticked, stretches are queued")
+	require(not AutoPipeline.studio_queue(studio.catalog, true).any(func(x: Dictionary) -> bool: return AutoPipeline.is_stretch(x)), "ticked, stretches are skipped")
+	studio.search_input.text = "press"
+	studio.populate_catalog("press")
+	var queue: Array = AutoPipeline.studio_queue(studio.filtered_catalog("press"), true)
 	require(queue.size() >= 2, "studio queue must have work")
+	require(queue.all(func(x: Dictionary) -> bool: return "press" in ("%s %s %s %s" % [x.get("name", ""), x.get("equipment", ""), x.get("category", ""), x.get("instructions", [])]).to_lower()), "queue follows the search")
 	studio.open_auto_mode()
+	require(modal.option_check.visible and modal.option_enabled(), "Skip stretches is offered and on by default")
+	require(modal.description_label.text.contains("“press”"), "modal names the search it works through")
+	require(modal.run_label.text.contains("%d exercise" % queue.size()), "modal counts the filtered queue: %s" % modal.run_label.text)
 	require(modal.visible and modal.model_label.text.contains(studio.model_id), "modal shows the selected model")
 	modal.max_items_spin.value = 2
 	await modal.start()
@@ -144,7 +153,22 @@ func check_council_auto() -> void:
 	root.add_child(council)
 	await process_frame
 	council.provider.python_executable = ProjectSettings.globalize_path(FAKE_BRIDGE)
+	# A stretch is rejected by rule. The fake bridge is out of credits here, so
+	# any Claude request would fail the step instead.
+	var stretch_entry := make_stretch_draft()
+	OS.set_environment("FAKE_CLAUDE_MODE", "credits")
+	var stretch_result: Dictionary = await council.auto_review(stretch_entry)
+	OS.set_environment("FAKE_CLAUDE_MODE", "ok")
+	require(stretch_result.get("outcome") == "rejected_stretch" and stretch_result.get("usage", {}).is_empty(), "stretch must be rejected without Claude: %s" % [stretch_result])
+	var stretch_hash := ReviewRevisionStore.draft_revision_hash(stretch_entry["data"], council.catalog_by_source[stretch_entry["data"]["source_id"]])
+	var stretch_review := ReviewRevisionStore.load_review(stretch_hash)
+	require(stretch_review.get("status") == "changes_requested", "stretch review must request changes")
+	require(stretch_review.get("votes", {}).get(ReviewRevisionStore.MODEL_MEMBER, {}).get("provider_metadata", {}).get("provider") == "bodysim_rule", "the vote comes from the rule")
+	require(not stretch_review.get("votes", {}).has(ReviewRevisionStore.HUMAN_MEMBER), "no automatic owner approval for a stretch")
+	var stretch_id := String(stretch_entry["data"]["source_id"])
+	require(not AutoPipeline.studio_queue(AutoPipeline.load_catalog(), false).any(func(x: Dictionary) -> bool: return x.get("source_id") == stretch_id), "a rule-rejected stretch is never re-authored")
 	var queue: Array = council.auto_council_queue()
+	require(not queue.any(func(e: Dictionary) -> bool: return e["data"].get("source_id") == stretch_id), "the rejected stretch leaves the queue")
 	require(queue.size() >= 2, "council queue must have at least the two new drafts")
 	var accepted_source := String(queue[0]["data"].get("source_id", ""))
 	OS.set_environment("FAKE_ACCEPT_SOURCE", accepted_source)
@@ -166,3 +190,25 @@ func check_council_auto() -> void:
 	require(council.auto_council_queue().is_empty(), "nothing waits after the run")
 	council.queue_free()
 	await process_frame
+
+
+## A passing draft re-keyed to a catalog stretch, saved like a Studio draft.
+func make_stretch_draft() -> Dictionary:
+	var stretch: Dictionary = {}
+	for source in AutoPipeline.load_catalog():
+		if AutoPipeline.is_stretch(source) and source.get("status") == "catalog_only" and CandidateRepository.load_draft(String(source["source_id"])).is_empty():
+			stretch = source
+			break
+	var template: Dictionary = {}
+	for draft in AutoPipeline.load_drafts().values():
+		if draft.get("status") == "definition_candidate" and ReviewRevisionStore.validate_eligibility(draft).is_empty():
+			template = draft
+			break
+	require(not stretch.is_empty() and not template.is_empty(), "need a stretch source and a passing draft")
+	var draft := template.duplicate(true)
+	for key in ["source_id", "catalog_id", "source_snapshot_sha256"]:
+		draft[key] = stretch.get(key, "")
+	var file := FileAccess.open(CandidateRepository.draft_path(String(stretch["source_id"])), FileAccess.WRITE)
+	file.store_string(JSON.stringify(draft, "  "))
+	file.close()
+	return {"kind": "draft", "data": draft}

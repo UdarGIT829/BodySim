@@ -9,14 +9,17 @@ SANDBOX=$(mktemp -d)
 trap 'rm -rf "$SANDBOX"' EXIT
 cp -al "$ROOT/assets" "$ROOT/build" "$SANDBOX/"
 rsync -a --exclude assets --exclude build --exclude .git "$ROOT/" "$SANDBOX/"
-# The fake authoring response is the Barbell Curl definition, traced by the
-# current tracer.
+# The fake authoring response is the frozen fixture definition under a fixture ID.
 python3 - "$SANDBOX" <<'PY'
 import json, sys
 from pathlib import Path
 root = Path(sys.argv[1])
-draft = json.loads((root / "data/exercises/authoring/drafts/Barbell_Curl.json").read_text())
-(root / "fake_authoring_response.json").write_text(json.dumps(draft["authoring_response"]))
+draft = json.loads((root / "tests/fixtures/promotion_draft.json").read_text())
+response = draft["authoring_response"]
+# A fixture-only ID, so it never collides with an exercise promoted for real.
+response["proposed_definition"]["id"] = "exercise.auto_mode_fixture.standard"
+response["proposed_definition"]["variant"] = "standard"
+(root / "fake_authoring_response.json").write_text(json.dumps(response))
 PY
 chmod +x "$SANDBOX/tools/exercises/fake_claude_bridge.py"
 BODYSIM_SANDBOX=1 FAKE_AUTHORING_RESPONSE="$SANDBOX/fake_authoring_response.json" \

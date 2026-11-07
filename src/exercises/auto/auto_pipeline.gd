@@ -99,17 +99,52 @@ static func layers(snap: Dictionary) -> Dictionary:
 	return {"done": done, "candidate": candidate, "remaining": int(snap.get("total", 0)) - done - candidate}
 
 
-## Studio auto queue: exercises the council sent back first (their feedback
-## goes into the request), then never-authored ones in catalog order.
-static func studio_queue(catalog_only: Array) -> Array:
+## Studio auto queue, from the given sources (the Studio passes the ones its
+## search currently shows): exercises the council sent back first (their
+## feedback goes into the request), then never-authored ones in catalog order.
+static func studio_queue(sources: Array, skip_stretches := false) -> Array:
 	var states: Dictionary = snapshot()["states"]
 	var rework: Array = []
 	var fresh: Array = []
-	for source in catalog_only:
-		match String(states.get(String(source.get("source_id", "")), "new")):
+	for source in sources:
+		var state := String(states.get(String(source.get("source_id", "")), "new"))
+		# The council rejects stretches by rule, so re-authoring one never helps.
+		if is_stretch(source) and (skip_stretches or state == "needs_rework"):
+			continue
+		match state:
 			"needs_rework": rework.append(source)
 			"new": fresh.append(source)
 	return rework + fresh
+
+
+# ── Stretches ───────────────────────────────────────────────────────────────
+# BodySim models exercises: joint actions that move a load, plus the muscles
+# that stabilize it. A stretch lengthens muscles instead, so any profile the
+# tracer produces for one is meaningless. The council rejects them by rule,
+# without asking Claude.
+
+const STRETCH_RULE := "no_stretches"
+const STRETCH_SUMMARY := "Stretches can't be represented: BodySim models muscles moving or holding a load, and a stretch lengthens them instead. Rejected by rule without a model review."
+
+
+## The catalog's own category (free-exercise-db "stretching") marks stretches;
+## most of them don't have "stretch" in the name.
+static func is_stretch(source: Dictionary) -> bool:
+	return String(source.get("category", "")).strip_edges().to_lower() == "stretching"
+
+
+## The council's model-member vote for a stretch: a reject from the rule.
+static func stretch_rejection_vote() -> Dictionary:
+	return {
+		"decision": "reject",
+		"summary": STRETCH_SUMMARY,
+		"blocking_findings": [{"field_path": "source.category", "finding": "The source exercise is a stretch.",
+			"suggested_correction": "None; skip stretches when authoring."}],
+		"non_blocking_findings": [],
+		"confidence": "high",
+		"provider_metadata": {"provider": "bodysim_rule", "rule": STRETCH_RULE, "model": "rule: no stretches"},
+		"recorded_at_unix": Time.get_unix_time_from_system(),
+	}
 
 
 static func total_tokens(usage: Dictionary) -> int:

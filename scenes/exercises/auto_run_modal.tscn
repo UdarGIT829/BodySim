@@ -99,6 +99,12 @@ layout_mode = 2
 modulate = Color(0.66, 0.74, 0.82, 1)
 text = "(0 = no limit)"
 
+[node name="OptionCheck" type="CheckBox" parent="Margin/Column"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Option"
+
 [node name="TokenTitle" type="Label" parent="Margin/Column"]
 layout_mode = 2
 text = "Tokens remaining"

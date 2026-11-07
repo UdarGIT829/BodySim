@@ -185,18 +185,27 @@ func read_json(path: String):
 func populate_catalog(query: String) -> void:
 	catalog_tree.clear()
 	var root := catalog_tree.create_item()
-	var normalized := query.strip_edges().to_lower()
 	var count := 0
-	for source in catalog:
-		var haystack := "%s %s %s %s" % [source.get("name", ""), source.get("equipment", ""), source.get("category", ""), source.get("instructions", [])]
-		if not normalized.is_empty() and normalized not in haystack.to_lower():
-			continue
+	for source in filtered_catalog(query):
 		var item := catalog_tree.create_item(root)
 		item.set_text(0, str(source.get("name", "")))
 		item.set_text(1, str(source.get("equipment", "—")) if source.get("equipment") != null else "—")
 		item.set_metadata(0, source.get("catalog_id", ""))
 		count += 1
 	%CatalogCount.text = "%d catalog-only candidates" % count
+
+
+## The catalog sources the search box currently shows (all when it's empty).
+func filtered_catalog(query: String) -> Array:
+	var normalized := query.strip_edges().to_lower()
+	if normalized.is_empty():
+		return catalog.duplicate()
+	var matches: Array = []
+	for source in catalog:
+		var haystack := "%s %s %s %s" % [source.get("name", ""), source.get("equipment", ""), source.get("category", ""), source.get("instructions", [])]
+		if normalized in haystack.to_lower():
+			matches.append(source)
+	return matches
 
 
 func _on_catalog_selected() -> void:
@@ -738,12 +747,18 @@ func open_auto_mode() -> void:
 		return set_status("Choose a Claude model before starting auto mode.", true)
 	if provider.is_busy():
 		return set_status("Wait for the current Claude request to finish first.", true)
-	%AutoRunModal.open_for({
+	var query := search_input.text.strip_edges()
+	var sources := filtered_catalog(query)
+	var modal: AutoRunModal = %AutoRunModal
+	modal.open_for({
 		"title": "Auto mode · Kinematic Definition Studio",
+		"scope": ("Works through the %d catalog exercise(s) matching your search “%s”." % [sources.size(), query]) if not query.is_empty() \
+			else "No search filter: works through all %d catalog exercises. Type in the catalog search first to narrow it (e.g. “press”)." % sources.size(),
+		"option": {"label": "Skip stretches (the council rejects them anyway)", "setting": "skip_stretches", "default": true},
 		"model": model_id,
 		"completed_label": "Completed",
 		"description": "Drafts catalog exercises one at a time with this model and saves each one for the Review Council. Exercises the council sent back go first, with its feedback in the request. Drafts that fail the candidate gate are saved for you to look at and are not retried.",
-		"queue": func() -> Array: return AutoPipeline.studio_queue(catalog),
+		"queue": func() -> Array: return AutoPipeline.studio_queue(sources, modal.option_enabled()),
 		"step": auto_author,
 		"label": func(source: Dictionary) -> String: return String(source.get("name", source.get("source_id", ""))),
 		"snapshot": func() -> Dictionary: return AutoPipeline.layers(AutoPipeline.snapshot()),

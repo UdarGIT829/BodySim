@@ -1,8 +1,10 @@
 """Phase 2E promotion tests.
 
 Each test promotes inside a temporary copy of the canonical data files, using
-the real Barbell Curl authoring draft and the real candidate gate, so nothing
-under data/ in the working tree is modified.
+a frozen authoring draft (tests/fixtures/promotion_draft.json) and the real
+candidate gate, so nothing under data/ in the working tree is modified. The
+draft is re-keyed to the first unpromoted catalog source under a fixture-only
+exercise ID, so promoting real exercises never breaks these tests.
 """
 
 import json
@@ -15,7 +17,7 @@ from src.exercises import promotion
 from src.exercises.candidate_gate import evaluate_candidate
 from src.exercises.promotion import PROJECT_ROOT, promote_revision
 
-FIXTURE_DRAFT = PROJECT_ROOT / "data/exercises/authoring/drafts/Barbell_Curl.json"
+FIXTURE_DRAFT = PROJECT_ROOT / "tests/fixtures/promotion_draft.json"
 CANONICAL = [
     promotion.REL_EXERCISES,
     promotion.REL_PROFILES,
@@ -24,7 +26,17 @@ CANONICAL = [
     promotion.REL_STRUCTURES,
 ]
 HASH = "a" * 64
-EXERCISE_ID = "exercise.barbell_curl.standing_bilateral"
+EXERCISE_ID = "exercise.promotion_fixture.standing_bilateral"
+
+
+def _target(candidates: list) -> dict:
+    """The catalog source the fixture is promoted as: the first unpromoted,
+    non-stretch source in the sandbox's copy of the catalog."""
+    return next(c for c in candidates if c["status"] == "catalog_only" and c.get("category") != "stretching")
+
+
+def _target_catalog_id(root: Path) -> str:
+    return json.loads((root / promotion.REL_REVISIONS / f"{HASH}.json").read_text())["catalog_id"]
 
 
 def _write(path: Path, value) -> None:
@@ -38,11 +50,13 @@ def sandbox(tmp_path: Path) -> Path:
         (tmp_path / rel).parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(PROJECT_ROOT / rel, tmp_path / rel)
     draft = json.loads(FIXTURE_DRAFT.read_text(encoding="utf-8"))
+    target = _target(json.loads((tmp_path / promotion.REL_CANDIDATES).read_text(encoding="utf-8")))
+    draft["authoring_response"]["proposed_definition"]["id"] = EXERCISE_ID
     revision = {
         "format_version": 1,
-        "source_id": draft["source_id"],
-        "catalog_id": draft["catalog_id"],
-        "source_snapshot_sha256": draft["source_snapshot_sha256"],
+        "source_id": target["source_id"],
+        "catalog_id": target["catalog_id"],
+        "source_snapshot_sha256": target["source_snapshot_sha256"],
         "source": {},
         "additional_context": draft.get("additional_context", ""),
         "authoring_response": draft["authoring_response"],
@@ -50,7 +64,7 @@ def sandbox(tmp_path: Path) -> Path:
         # Trace with the current tracer, as a freshly frozen revision would be.
         "candidate_trace_report": evaluate_candidate(draft["authoring_response"]["proposed_definition"]),
         "revision_sha256": HASH,
-        "revision_id": f"{draft['source_id']}@{HASH[:12]}",
+        "revision_id": f"{target['source_id']}@{HASH[:12]}",
         "status": "review_pending",
     }
     _write(tmp_path / promotion.REL_REVISIONS / f"{HASH}.json", revision)
@@ -91,7 +105,7 @@ def test_promotes_accepted_revision(sandbox):
     assert profile["profile_version"] == 1
     assert profile["promotion"]["revision_sha256"] == HASH
     candidate = next(c for c in json.loads((sandbox / promotion.REL_CANDIDATES).read_text())
-                     if c["catalog_id"] == "catalog.free_exercise_db.Barbell_Curl")
+                     if c["catalog_id"] == _target_catalog_id(sandbox))
     assert candidate["status"] == "promoted"
     assert candidate["body_sim_exercise_ids"] == [EXERCISE_ID]
     assert candidate["promotions"][0]["review_models"]["model_reviewer"] == {"provider": "anthropic", "model": "claude-opus-5-5"}
@@ -170,7 +184,7 @@ def test_gate_failure_blocks_promotion(sandbox):
 def test_changed_source_record_blocks_promotion(sandbox):
     path = sandbox / promotion.REL_CANDIDATES
     candidates = json.loads(path.read_text())
-    next(c for c in candidates if c["catalog_id"] == "catalog.free_exercise_db.Barbell_Curl")["source_snapshot_sha256"] = "0" * 64
+    next(c for c in candidates if c["catalog_id"] == _target_catalog_id(sandbox))["source_snapshot_sha256"] = "0" * 64
     path.write_text(json.dumps(candidates, indent=2) + "\n")
     report = promote_revision(HASH, root=sandbox)
     assert not report["ok"] and "source record changed" in report["errors"][0]

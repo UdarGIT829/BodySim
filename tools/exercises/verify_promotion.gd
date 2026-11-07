@@ -7,8 +7,8 @@ extends SceneTree
 
 const Store := preload("res://src/exercises/review/review_revision_store.gd")
 const SelectorScene := preload("res://scenes/exercises/exercise_selector.tscn")
-const DRAFT := "res://data/exercises/authoring/drafts/Barbell_Curl.json"
-const EXERCISE_ID := "exercise.barbell_curl.standing_bilateral"
+const DRAFT := "res://data/exercises/authoring/drafts/_promotion_fixture.json"   # written by verify_promotion.sh
+const EXERCISE_ID := "exercise.promotion_fixture.standing_bilateral"
 
 var failures: Array[String] = []
 
@@ -27,7 +27,7 @@ func _initialize() -> void:
 	draft["status"] = "definition_candidate"
 	draft["validation_errors"] = []
 	draft.erase("rejection")
-	var frozen: Dictionary = Store.freeze_draft(draft, {"name": "Barbell Curl"})
+	var frozen: Dictionary = Store.freeze_draft(draft, {"name": "Promotion fixture"})
 	require(frozen.get("ok", false), "freeze failed: %s" % [frozen.get("errors", [])])
 	var revision: Dictionary = frozen.get("revision", {})
 	var hash := String(revision.get("revision_sha256", ""))
@@ -67,7 +67,7 @@ func _initialize() -> void:
 	await process_frame
 	require(selector.records_by_id.has(EXERCISE_ID), "selector must list the promoted exercise")
 	require(selector.records_by_id.get(EXERCISE_ID, {}).get("catalog_status") == "visualizable", "promoted exercise must be visualizable")
-	require(not selector.records_by_id.has("catalog.free_exercise_db.Barbell_Curl"), "source record must leave the catalog-only list")
+	require(not selector.records_by_id.has(String(draft.get("catalog_id", ""))), "source record must leave the catalog-only list")
 	require(selector.select_exercise(EXERCISE_ID), "promoted exercise must be selectable")
 
 	if failures.is_empty():

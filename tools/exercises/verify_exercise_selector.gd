@@ -71,7 +71,11 @@ func run_verification() -> void:
 	require(selector.image_modal.first_image.texture != null, "Image modal must load the first local image")
 	require(selector.image_modal.second_image.texture != null, "Image modal must load the second local image")
 	selector.image_modal.hide()
-	var catalog_id := "catalog.free_exercise_db.3_4_Sit-Up"
+	var catalog_id := ""
+	for source in catalog:   # any source still catalog-only
+		if source.get("status") == "catalog_only":
+			catalog_id = String(source["catalog_id"])
+			break
 	require(selector.select_exercise(catalog_id), "Catalog-only source record must be selectable")
 	require(emitted_catalog_id == catalog_id, "Catalog-only selection must emit its distinct catalog signal")
 	require(selector.affected_summary_label.text.begins_with("Catalog only"), "Catalog-only selection must not claim an engagement profile")

@@ -39,6 +39,7 @@ const LOG_DIR := "user://auto_runs"
 @onready var start_button: Button = %StartButton
 @onready var stop_button: Button = %StopButton
 @onready var close_button: Button = %CloseButton
+@onready var option_check: CheckBox = %OptionCheck
 
 var config: Dictionary = {}
 var model_id := ""
@@ -63,10 +64,14 @@ func _ready() -> void:
 	budget_spin.value = int(AutoPipeline.load_setting("token_budget", AutoPipeline.DEFAULT_TOKEN_BUDGET))
 	max_items_spin.value = int(AutoPipeline.load_setting("max_items", 0))
 	budget_spin.value_changed.connect(func(_v: float) -> void: refresh_tokens())
+	option_check.toggled.connect(_on_option_toggled)
 
 
-## config keys: title, model, completed_label, description, queue, step,
-## label, snapshot, estimate_tokens (per item, used before any item finished)
+## config keys: title, model, completed_label, description, scope (what the
+## queue covers, e.g. the active search), queue, step, label, snapshot,
+## estimate_tokens (per item, used before any item finished), and option:
+## {"label", "setting", "default"} for a remembered checkbox that the page's
+## queue reads through option_enabled().
 func open_for(new_config: Dictionary) -> void:
 	if state in ["running", "stopping"]:
 		popup_centered()
@@ -75,13 +80,38 @@ func open_for(new_config: Dictionary) -> void:
 	model_id = String(config.get("model", ""))
 	title = String(config.get("title", "Auto mode"))
 	model_label.text = "Model: %s" % model_id
-	description_label.text = String(config.get("description", ""))
+	var scope := String(config.get("scope", ""))
+	description_label.text = String(config.get("description", "")) + ("\n" + scope if not scope.is_empty() else "")
+	var option: Dictionary = config.get("option", {})
+	option_check.visible = not option.is_empty()
+	if option_check.visible:
+		option_check.text = String(option.get("label", ""))
+		var enabled: bool = option.get("default", true)
+		if persist_settings:
+			enabled = bool(AutoPipeline.load_setting(String(option["setting"]), enabled))
+		option_check.set_pressed_no_signal(enabled)
 	reset_run()
 	set_state("ready")
 	refresh_pipeline()
+	refresh_queued()
+	popup_centered(Vector2i(820, 720))
+
+
+func option_enabled() -> bool:
+	return option_check.visible and option_check.button_pressed
+
+
+func _on_option_toggled(enabled: bool) -> void:
+	var option: Dictionary = config.get("option", {})
+	if persist_settings and not option.is_empty():
+		AutoPipeline.save_setting(String(option["setting"]), enabled)
+	if state == "ready":
+		refresh_queued()
+
+
+func refresh_queued() -> void:
 	var queued: int = config["queue"].call().size()
 	run_label.text = "Ready: %d exercise(s) waiting for this step." % queued if queued > 0 else "Nothing is waiting for this step right now."
-	popup_centered(Vector2i(820, 720))
 
 
 func reset_run() -> void:
@@ -197,6 +227,7 @@ func set_state(new_state: String) -> void:
 	close_button.disabled = busy
 	budget_spin.editable = not busy
 	max_items_spin.editable = not busy
+	option_check.disabled = busy
 
 
 func _on_close_requested() -> void:

@@ -287,6 +287,11 @@ func populate_muscles(entries_to_show: Array) -> void:
 
 func request_model_review() -> void:
 	if current_revision.is_empty(): return
+	if revision_is_stretch(current_revision):
+		var result := reject_stretch_by_rule(current_revision)
+		if not result.get("ok", false): return set_status(result.get("error", "Could not record the rule's vote."), true)
+		load_votes(result["record"]); populate_tree()
+		return set_status("Rejected by rule: stretches can't be modelled. Claude was not asked (no tokens used).", false)
 	if not ClaudeSettings.has_api_key(): return set_status(ClaudeSettings.missing_key_message(), true)
 	request_review_button.disabled = true
 	set_status("Claude (%s) is reviewing the frozen revision…" % model_id, false)
@@ -406,7 +411,7 @@ func open_auto_mode() -> void:
 		"title": "Auto mode · Exercise Review Council",
 		"model": model_id,
 		"completed_label": "Promoted",
-		"description": "For each waiting candidate: freeze it, record your vote as an automatic approval, ask this Claude model to review it, and promote it if Claude accepts. Claude can still reject; rejections keep their findings for the Studio's next auto run. Cleared candidates are skipped. Commit and deploy stay manual.",
+		"description": "For each waiting candidate: freeze it, record your vote as an automatic approval, ask this Claude model to review it, and promote it if Claude accepts. Stretches are rejected by rule without asking Claude. Claude can still reject; rejections keep their findings for the Studio's next auto run. Cleared candidates are skipped. Commit and deploy stay manual.",
 		"queue": auto_council_queue,
 		"step": auto_review,
 		"label": func(entry: Dictionary) -> String: return auto_label(entry),
@@ -461,6 +466,11 @@ func auto_review(entry: Dictionary) -> Dictionary:
 	selected_entry = {"kind": "revision", "data": revision}
 	review_context.text = ""
 	show_revision(revision)
+	if revision_is_stretch(revision):
+		var rule := reject_stretch_by_rule(revision)
+		if not rule.get("ok", false): return {"outcome": "failed", "error": rule.get("error", "Could not record the rule's vote.")}
+		load_votes(rule["record"])
+		return {"outcome": "rejected_stretch", "message": "rejected by rule, Claude not asked"}
 	var votes: Dictionary = ReviewRevisionStoreScript.load_review(hash).get("votes", {})
 	if not votes.has(ReviewRevisionStoreScript.HUMAN_MEMBER):
 		var human := {"decision": "accept", "summary": AUTO_HUMAN_SUMMARY, "blocking_findings": [], "non_blocking_findings": [],
@@ -489,3 +499,17 @@ func auto_review(entry: Dictionary) -> Dictionary:
 	# Promotion changes the catalog; keep the source lookup current.
 	load_support_files()
 	return {"outcome": "promoted", "usage": usage, "message": "%s, %s muscles mapped" % [report.get("exercise_id", ""), report.get("mapped_muscles", "?")]}
+
+
+# ── Stretch rule ────────────────────────────────────────────────────────────
+
+func revision_is_stretch(revision: Dictionary) -> bool:
+	var source: Dictionary = revision.get("source", {})
+	if not source.has("category"):
+		source = catalog_by_source.get(String(revision.get("source_id", "")), {})
+	return AutoPipeline.is_stretch(source)
+
+## Records the rule's rejection as the model member's vote, so the council
+## status becomes changes_requested without a Claude request.
+func reject_stretch_by_rule(revision: Dictionary) -> Dictionary:
+	return ReviewRevisionStoreScript.save_vote(String(revision.get("revision_sha256", "")), ReviewRevisionStoreScript.MODEL_MEMBER, AutoPipeline.stretch_rejection_vote(), "")
