@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BodySim · Viraat Udar</title>
+<meta name="description" content="A full-body 3D map of the muscles each exercise works: 466 skeletal muscles, a deterministic kinematic tracer, and exercise definitions drafted by Claude and accepted only by a review council. Built in Godot 4; runs in the browser.">
+<meta property="og:title" content="BodySim: which muscles does an exercise actually work?">
+<meta property="og:description" content="Pick an exercise and see its muscle engagement across 466 skeletal muscles in 3D. Live demo in the browser.">
+<meta property="og:image" content="https://udargit829.github.io/BodySim/screenshots/hero.jpg">
+<style>
+  :root {
+    --ink: #1b1f27;
+    --muted: #5b6372;
+    --line: #e3e6ec;
+    --bg: #ffffff;
+    --soft: #f5f7fa;
+    --accent: #2457d6;
+    --accent-ink: #ffffff;
+    --max: 1040px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header { border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+  header .name { font-weight: 600; text-decoration: none; color: var(--ink); }
+  header nav a { margin-left: 22px; text-decoration: none; color: var(--muted); font-size: 15px; }
+  header nav a:hover { color: var(--ink); }
+
+  /* Hero */
+  .hero { padding-top: 64px; padding-bottom: 40px; }
+  .eyebrow { font-size: 14px; color: var(--muted); letter-spacing: .02em; margin: 0 0 12px; }
+  h1 { font-size: clamp(30px, 4.6vw, 46px); line-height: 1.15; margin: 0 0 18px; letter-spacing: -.01em; }
+  .lede { font-size: 20px; color: var(--muted); max-width: 720px; margin: 0 0 30px; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 12px 20px; border-radius: 8px;
+    font-weight: 600; font-size: 16px; text-decoration: none;
+    border: 1px solid var(--line); color: var(--ink); background: var(--bg);
+  }
+  .btn:hover { border-color: #c6ccd6; background: var(--soft); }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .btn.primary:hover { filter: brightness(1.08); background: var(--accent); }
+  .hero-shot { margin: 44px 0 0; }
+  .hero-shot img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 12px 40px rgba(20, 30, 50, .12); display: block; }
+  .hero-shot figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
+
+  /* Sections */
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 26px; margin: 0 0 18px; }
+  h3 { font-size: 18px; margin: 0 0 6px; }
+  p { margin: 0 0 14px; }
+  .narrow { max-width: 760px; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 26px; }
+  .step { background: var(--soft); border-radius: 10px; padding: 22px; }
+  .step .num { font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: .04em; }
+  .step p { font-size: 15.5px; color: var(--muted); margin: 0; }
+
+  .results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 26px; }
+  .result { border: 1px solid var(--line); border-radius: 10px; padding: 22px; }
+  .result .stat { font-size: 30px; font-weight: 700; line-height: 1.1; margin: 4px 0 8px; }
+  .result p { font-size: 15.5px; color: var(--muted); margin: 0; }
+
+  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 26px; }
+  .gallery figure { margin: 0; }
+  .gallery img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--line); display: block; }
+  .gallery figure.wide { grid-column: 1 / -1; }
+  .gallery figcaption { font-size: 14.5px; color: var(--muted); margin-top: 8px; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .tags span { font-size: 14px; padding: 5px 11px; border-radius: 999px; background: var(--soft); border: 1px solid var(--line); }
+
+  footer { border-top: 1px solid var(--line); padding: 36px 0 56px; color: var(--muted); font-size: 15px; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; }
+  footer .credits { flex-basis: 100%; font-size: 13.5px; }
+
+  @media (max-width: 760px) {
+    header nav { display: none; }
+    .steps, .results, .gallery { grid-template-columns: 1fr; }
+    .hero { padding-top: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="name" href="#">Viraat Udar</a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#results">Results</a>
+      <a href="#screens">Screenshots</a>
+      <a href="https://github.com/UdarGIT829/BodySim">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <p class="eyebrow">Personal project · Godot 4 · 2026</p>
+    <h1>Which muscles does an exercise actually work?</h1>
+    <p class="lede">Pick an exercise and BodySim shows its muscle engagement on a full 3D model of 466 skeletal muscles: which ones move the load, which assist, which hold you steady, and which aren't involved at all.</p>
+    <div class="buttons">
+      <a class="btn primary" href="demo/">Try the live demo</a>
+      <a class="btn" href="https://github.com/UdarGIT829/BodySim">Source code</a>
+    </div>
+    <figure class="hero-shot">
+      <img src="screenshots/hero.jpg" alt="Front view of the 3D body with a barbell back squat selected: glutes and quadriceps highlighted as primary movers, with the list of affected muscles beside it" width="1600" height="885">
+      <figcaption>Barbell back squat: 54 of 466 muscles engaged, ranked by role. The demo runs in the browser with no install needed.</figcaption>
+    </figure>
+  </div>
+
+  <section>
+    <div class="wrap"><div class="narrow">
+      <h2>The problem</h2>
+      <p>Exercise databases describe muscles <strong>coarsely</strong>: "primary: biceps, secondary: forearms." They don't say which side works, what holds the body steady, or which of the hundreds of muscles in the body aren't involved.</p>
+      <p>Mapping hundreds of exercises onto 466 muscles by hand doesn't scale, and asking a language model for a muscle list gives answers you can't check. BodySim describes each exercise as <strong>joint movements</strong> instead, and derives the muscles from them with a deterministic tracer, so every result can be traced back to a rule.</p>
+    </div></div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="narrow">An anatomy pipeline, a deterministic tracer, and an authoring workflow where an AI drafts and a review council decides.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1 · ANATOMY</div>
+          <h3>A full-body model</h3>
+          <p>960 musculoskeletal structures extracted from the open Z-Anatomy atlas through a Blender pipeline, cross-referenced to standard anatomical terminology (TA98), and split into regions that Godot loads and colours per muscle.</p>
+        </div>
+        <div class="step">
+          <div class="num">2 · TRACER</div>
+          <h3>Joint movements to muscles</h3>
+          <p>Each exercise is a set of joint actions, stabilization demands and laterality. A curated, weighted muscle-action table turns them into a 466-muscle profile: primary movers, synergists, stabilizers, and explicit zeros.</p>
+        </div>
+        <div class="step">
+          <div class="num">3 · REVIEW COUNCIL</div>
+          <h3>Drafted by AI, accepted by vote</h3>
+          <p>Claude drafts each definition from the exercise's instructions and photos. Deterministic validators check it, the draft is frozen under a SHA-256 hash, and it goes live only when the owner and an independent Claude reviewer both accept it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="results">
+    <div class="wrap">
+      <h2>Results</h2>
+      <p class="narrow">The catalog grows one reviewed exercise at a time.</p>
+      <div class="results">
+        <div class="result">
+          <h3>Catalog</h3>
+          <div class="stat">873</div>
+          <p>Exercises searchable, with demonstration photos. 33 are fully visualizable so far, each one through a unanimous council vote.</p>
+        </div>
+        <div class="result">
+          <h3>Complete profiles</h3>
+          <div class="stat">466 / 466</div>
+          <p>Every visualizable exercise assigns every skeletal muscle a role or an explicit, reviewed zero. Nothing is left blank.</p>
+        </div>
+        <div class="result">
+          <h3>A strict reviewer</h3>
+          <div class="stat">~30%</div>
+          <p>The share of drafts the Claude reviewer rejected. Its findings exposed three limits in the tracer, which version 3 now handles: one-sided loads, minor joints and mixed laterality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="screens">
+    <div class="wrap">
+      <h2>Screenshots</h2>
+      <div class="gallery">
+        <figure>
+          <img src="screenshots/back.jpg" alt="Back view of the body with a pull-up selected: latissimus dorsi and lower trapezius highlighted" loading="lazy" width="1600" height="885">
+          <figcaption>Pull-up from behind: the lats and lower trapezius lead.</figcaption>
+        </figure>
+        <figure>
+          <img src="screenshots/catalog.jpg" alt="Exercise search for curl, showing visualizable variants and catalog-only records" loading="lazy" width="1600" height="885">
+          <figcaption>Search the whole catalog; visualizable variants come first.</figcaption>
+        </figure>
+        <figure>
+          <img src="screenshots/photos.jpg" alt="Demonstration photos for a conventional barbell deadlift, start and finish positions" loading="lazy" width="1600" height="885">
+          <figcaption>Demonstration photos for any exercise, loaded on demand.</figcaption>
+        </figure>
+        <figure>
+          <img src="screenshots/studio.jpg" alt="Kinematic Definition Studio with a kettlebell windmill draft: joint actions, stabilization demands and the reviewer's earlier feedback" loading="lazy" width="1600" height="885">
+          <figcaption>Desktop only: the Kinematic Definition Studio, where Claude drafts and the candidate gate checks.</figcaption>
+        </figure>
+        <figure class="wide">
+          <img src="screenshots/council.jpg" alt="Review Council showing a frozen single-arm push-up revision, its muscle heatmap and the Claude reviewer's rejection" loading="lazy" width="1600" height="885">
+          <figcaption>Desktop only: the Review Council, voting on a frozen revision with the reviewer's findings.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Built with</h2>
+      <div class="tags">
+        <span>Godot 4 (GDScript)</span><span>WebAssembly</span><span>Python</span><span>Blender</span><span>Claude API</span><span>Structured outputs</span><span>Prompt caching</span><span>Z-Anatomy</span><span>free-exercise-db</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Viraat Udar · M.S. Computer Science, CSU Fullerton</span>
+    <span><a href="https://github.com/UdarGIT829">github.com/UdarGIT829</a></span>
+    <span class="credits">Code under the MIT License. Anatomy meshes adapted from Z-Anatomy and BodyParts3D (CC BY-SA 4.0); exercise data and photos from free-exercise-db (Unlicense). See <a href="https://github.com/UdarGIT829/BodySim/blob/main/ATTRIBUTION.md">ATTRIBUTION.md</a>.</span>
+  </div>
+</footer>
+
+</body>
+</html>

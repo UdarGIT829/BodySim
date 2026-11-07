@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Build BodySim's web version and publish it to the gh-pages branch, which
-# GitHub Pages serves at https://udargit829.github.io/BodySim/.
+# Build BodySim's web version and publish it, with the project page, to the
+# gh-pages branch. GitHub Pages serves the page (web/site/) at
+# https://udargit829.github.io/BodySim/ and the demo at .../BodySim/demo/.
 #
 #   tools/web/deploy_pages.sh            # build, verify, publish
 #   tools/web/deploy_pages.sh --no-push  # build and verify only
@@ -27,7 +28,8 @@ cd "$ROOT"
 GODOT=${GODOT:-$HOME/Applications/Godot_v4.7.1-stable_linux.x86_64}
 REMOTE=origin
 BRANCH=gh-pages
-OUT=build/web
+OUT=build/web          # the published site: project page at the root
+DEMO=$OUT/demo         # the Godot web export
 WORKTREE=build/gh-pages
 
 say() { printf '\n== %s\n' "$*"; }
@@ -46,14 +48,19 @@ SOURCE_SHA=$(git rev-parse --short HEAD)
 "$GODOT" --version | grep -q '^4\.7\.' || fail "need Godot 4.7.x, found $("$GODOT" --version)"
 
 # ── 2. Build ────────────────────────────────────────────────────────────────
-say "Exporting the Web preset"
-rm -rf "$OUT"; mkdir -p "$OUT"
-"$GODOT" --headless --path . --export-release "Web" "$OUT/index.html" > build/web-export.log 2>&1 \
+say "Exporting the Web preset to demo/"
+rm -rf "$OUT"; mkdir -p "$DEMO"
+"$GODOT" --headless --path . --export-release "Web" "$DEMO/index.html" > build/web-export.log 2>&1 \
   || { tail -20 build/web-export.log; fail "Godot export failed (full log: build/web-export.log)"; }
-[ -s "$OUT/index.pck" ] && [ -s "$OUT/index.wasm" ] || fail "export produced no index.pck/index.wasm"
+[ -s "$DEMO/index.pck" ] && [ -s "$DEMO/index.wasm" ] || fail "export produced no index.pck/index.wasm"
 
 say "Staging exercise photos"
-python3 -I tools/web/stage_web_photos.py "$OUT"
+python3 -I tools/web/stage_web_photos.py "$DEMO"
+
+say "Adding the project page"
+[ -s web/site/index.html ] || fail "web/site/index.html is missing"
+cp -a web/site/. "$OUT/"
+rm -f "$OUT/.gdignore"
 cp LICENSE ATTRIBUTION.md "$OUT/"
 touch "$OUT/.nojekyll"
 
@@ -72,7 +79,10 @@ for p in root.rglob("*"):
         problems.append(f"possible API key in {p}")
     if len(data) > 100 * 1024 * 1024:
         problems.append(f"{p} is over GitHub's 100 MB file limit")
-pck = (root / "index.pck").read_bytes()
+pck = (root / "demo" / "index.pck").read_bytes()
+for page in ("index.html", "demo/index.html"):
+    if not (root / page).is_file():
+        problems.append(f"missing {page}")
 for marker in (b"kinematic_definition_studio", b"exercise_review_council", b"claude_provider", b"run_claude"):
     if marker in pck:
         problems.append(f"authoring/review tool found in index.pck ({marker.decode()})")
@@ -114,4 +124,5 @@ fi
 say "Publishing to $REMOTE/$BRANCH"
 git -C "$WORKTREE" push -q --force-with-lease="$BRANCH:${REMOTE_PAGES}" "$REMOTE" "HEAD:refs/heads/$BRANCH"
 say "Deployed $SOURCE_SHA. GitHub Pages will update in a minute or two:"
-echo "   https://udargit829.github.io/BodySim/"
+echo "   https://udargit829.github.io/BodySim/       (project page)"
+echo "   https://udargit829.github.io/BodySim/demo/  (demo)"
