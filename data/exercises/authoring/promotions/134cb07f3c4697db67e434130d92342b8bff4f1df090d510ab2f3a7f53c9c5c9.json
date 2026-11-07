@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "134cb07f3c4697db67e434130d92342b8bff4f1df090d510ab2f3a7f53c9c5c9",
+  "revision_id": "Alternating_Floor_Press@134cb07f3c46",
+  "exercise_id": "exercise.kettlebell_floor_press.alternating_supine",
+  "source_catalog_id": "catalog.free_exercise_db.Alternating_Floor_Press",
+  "mapped_muscles": 96,
+  "promoted_at_unix": 1794003640.2014308,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "1da53c2e9a90915937e0339b0d466108dcbee0f77f7c45d6c6e020e328f75579",
+    "data/exercises/engagement_profiles.json": "b6baffd2cb10cf06f045215c4ff430998d44ded3078995eb54b675dbe058d32f",
+    "data/exercises/catalog/candidates.json": "eef380654697a4ff110c2f87cf9be2f7c331f2179ee8e3c4d4064397723b87b5",
+    "data/exercises/sources/free_exercise_db_media.json": "a117c8d3ca45f7fc2fa86e9e2f1f6be1ca0988a1b52ccdfb99cd3bac0378c9a9"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "d16c5723159abfa3913e4583d0100afce31842383f47c61072f3923ddad854cb",
+    "data/exercises/engagement_profiles.json": "f942d4addb0d7ccf640c35f4512bf945ffbee8717ae63cdb7f24ce19da45a940",
+    "data/exercises/catalog/candidates.json": "2ca1eceb0e2034910ed8f0124afb74bc6d4ac0ee2c9073ac3c624111407acbeb",
+    "data/exercises/sources/free_exercise_db_media.json": "4dd4fb2c1cd7a1841c0dcb8a4b55aab7a4fdb8f97b7930137fe39f3a86d0bda1"
+  }
+}

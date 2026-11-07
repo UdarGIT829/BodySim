@@ -1,0 +1,62 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "ddbf3dcd731e23b4ed1357856f55ed2926e676f443444b0bb9d8749bfe3367bf",
+  "status": "accepted",
+  "updated_at_unix": 1794003658.66593,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794003640.54539,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.synergist",
+          "finding": "Superficial head of pronator teres (0.2) and extensor carpi radialis longus (0.1) appear as synergists only because the table credits them with small elbow-flexion weights. In a supinated curl, pronator teres works against the supinated forearm position. The coefficients are small, so the pattern is acceptable but slightly counterintuitive.",
+          "suggested_correction": "No change needed to the definition. Consider reviewing the muscle-action table weights for these muscles on elbow flexion in future table work."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization recruits many lower-limb and trunk muscles (soleus, gluteus maximus, vasti, hamstrings, and others) at 0.07-0.28. This is defensible for unsupported standing under load, but it produces a broad, low-level stabilizer set for a light isolation exercise. The 'medium' field confidence is appropriate.",
+          "suggested_correction": "Keep as is, or in a future revision consider whether a narrower demand set better reflects an isolation curl."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Supination is not listed because the forearm is held supinated rather than moved. The biceps still work in that position, and the source never shows a rotation phase, so omitting it is consistent with the frames.",
+          "suggested_correction": "No change required. The assumption could state explicitly that the supinated grip is isometric throughout."
+        },
+        {
+          "field_path": "authoring_response.assumptions",
+          "finding": "The open_chain rationale cites 'feet planted' alongside 'distal hand moves freely'. Only the second clause supports open-chain classification. Standing foot contact does not by itself determine the chain type.",
+          "suggested_correction": "Reword the assumption to justify open_chain solely by the free-moving, externally loaded distal hand segment."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgnTEnCViToxcBLNqDpL3",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 9770.0,
+          "output_tokens": 1811.0
+        }
+      },
+      "summary": "The frames and instructions show a standing, bilateral, straight-bar curl with a supinated shoulder-width grip. The upper arms stay beside the torso, and only the elbows flex. The definition's identity, laterality, elbow_flexion family, elbow_joint/flexion action and open_chain classification all fit this. The tracer profile is plausible: brachialis, both biceps heads and brachioradialis are the primary movers. Grip, wrist, shoulder-hold and standing-posture muscles appear as low-coefficient stabilizers. No blocking problem was found; the remaining points are minor refinements."
+    }
+  }
+}

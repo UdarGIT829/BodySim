@@ -1,0 +1,78 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "105bcc884348cab100b80d260422f0a7a61e7cc88c39f17f8b6ed96b9dd12fd0",
+  "status": "changes_requested",
+  "updated_at_unix": 1794072403.46731,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794072376.72474,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[knee_joint/flexion]",
+          "finding": "Listing knee flexion as a primary joint action makes semimembranosus, semitendinosus and long head of biceps femoris primary movers at 0.8, equal to the obliques. The short head of biceps femoris, gastrocnemii, popliteus, plantaris, gracilis and sartorius also become synergists. Nothing in the frames or instructions shows loaded hamstring or calf work. The knee flexion is a light positioning of the lower leg, and the hamstrings are antagonists to the hip flexion that defines the exercise. The tracer output therefore overstates hamstring and calf involvement and misranks the muscle pattern.",
+          "suggested_correction": "Do not treat knee flexion as a primary mover action. Drop it, or represent the leg drive with hip flexion only, so the hamstrings and calf muscles are not primary or synergist. If knee behaviour must be captured, use an action or demand that gives only low, non-primary involvement."
+        },
+        {
+          "field_path": "engaged_muscles_by_role / proposed_definition.kinematic_profile.primary_joint_actions (omitted knee_joint/extension)",
+          "finding": "The assumptions say the kicking leg's knee extension is deliberately omitted. The frames show the extended leg held off the floor and repeatedly kicked out against gravity, which requires quadriceps work. The tracer gives vastus lateralis, intermedius and medialis zero involvement while giving the hamstrings primary status. That is an inverted knee-muscle pattern, and rectus femoris is credited only through hip flexion.",
+          "suggested_correction": "Either model the kick consistently, with knee extension as a lower-weight or alternating action and no hamstring-dominant knee flexion, or justify the omission so the vasti are not explicitly zero while the hamstrings are primary."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "Only trunk_flexion is listed. The exercise also centrally involves trunk rotation (elbow to opposite knee) and alternating hip flexion and extension leg drive, so the movement-family classification is incomplete.",
+          "suggested_correction": "Add a trunk rotation family and a hip/leg flexion family, using the closest available vocabulary."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands[pelvic_alignment]",
+          "finding": "Pelvic_alignment adds longissimus thoracis and gluteus maximus as stabilizers. Lumbar extensor involvement is questionable in a supine crunch in which the lower back is flexed or pressed down. Gluteus maximus is also of dubious relevance with the hips flexed.",
+          "suggested_correction": "Consider replacing or reducing pelvic_alignment, or justify the posterior-tilt control it represents, so the spinal extensors are not credited as stabilizers."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[hip_joint/flexion]",
+          "finding": "Hip flexion produces small synergist scores for gluteus medius, gluteus minimus, gracilis and the adductors. These are tracer-table artifacts of limited meaning here, so the low-weight synergist list is noisier than the exercise supports.",
+          "suggested_correction": "Accept this only if the table cannot be refined. Otherwise note the limitation, and do not rely on these minor synergists as evidence."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions (cervical_spine/flexion absent)",
+          "finding": "The frames show the head and shoulders lifted off the mat with the hands behind the head, which implies some neck-flexor involvement. Sternocleidomastoid and deep neck flexors are zero. This is minor if the neck is meant to be passive, but it is not addressed in the assumptions.",
+          "suggested_correction": "State whether the head lift is passive or active. If active, consider cervical flexion or an appropriate low-weight demand."
+        },
+        {
+          "field_path": "authoring_response.assumptions[2]",
+          "finding": "The assumption that the pelvis and lower back stay on the floor is not clearly supported. The second frame shows a posteriorly tilted pelvis with the knees drawn in over the trunk.",
+          "suggested_correction": "Reword the assumption to describe controlled posterior pelvic tilt, with the lumbar spine pressed toward the floor."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011Cgoxbcihj2PX6J9J2WnzX",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 6406.0,
+          "output_tokens": 3358.0
+        }
+      },
+      "summary": "The core trunk pattern is supported by the instructions and frames: supine, shoulders lifted, hands at the head, alternating knee-to-opposite-elbow crunch with rotation. Rectus abdominis, both obliques, and the hip flexors (psoas, iliacus, rectus femoris) are plausibly engaged. However, adding knee_joint/flexion as a primary joint action makes the tracer label all three hamstrings (and the short head of biceps femoris, gastrocnemii, popliteus and plantaris) as movers. The hamstrings sit at a primary coefficient of 0.8, the same level as the obliques. That is a materially wrong muscle pattern for a supine bicycle crunch, where knee flexion is a low-load, largely gravity-assisted positioning motion of the lower leg. The hamstrings are also hip extensors working against the intended hip flexion. In the other direction, the repeated knee extension of the kicking leg against gravity is left out, so the vasti are zero while the hamstrings are primary. The movement families also omit rotation and the leg drive."
+    }
+  }
+}

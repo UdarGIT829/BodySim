@@ -1,0 +1,62 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "6c90548d744aab09ce55e9e8f7df1ac9032b8532cc478123933c55e7932e5bad",
+  "status": "accepted",
+  "updated_at_unix": 1794002675.82478,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794002658.62518,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.assumptions[5] / proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The final assumption says no stabilization demand is added, yet pelvic_alignment is listed. The authoring rationale contradicts the definition.",
+          "suggested_correction": "Either remove pelvic_alignment, or state in the assumptions why it is included (resisting anterior pelvic tilt from the hip flexors)."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "pelvic_alignment brings in gluteus maximus, long head of biceps femoris, semimembranosus, semitendinosus and longissimus thoracis as low-coefficient stabilizers (0.105-0.21). The frames do not clearly show meaningful activity in these muscles during a sit-up. Gluteus maximus and the hamstrings are hip extensors acting against the movement. The effect is small, so it does not materially distort the profile.",
+          "suggested_correction": "Reconsider whether pelvic_alignment is justified. If it is kept, document that it reflects posterior-tilt control against the pull of the hip flexors on the anchored feet."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "closed_chain is labelled medium confidence and is arguable. The feet are fixed, but the trunk moves freely and no limb endpoint bears load against a surface, so the classification is ambiguous.",
+          "suggested_correction": "Justify the chain classification explicitly, for example as fixed distal segment at the feet driving hip flexion, or reconsider it against the vocabulary's convention for floor-based trunk curls."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist",
+          "finding": "Gluteus medius, gluteus minimus, gracilis and the adductors appear as synergists only because of low-weight hip flexion table entries. They are unlikely to be meaningful contributors in a sit-up, but their coefficients are low (0.2-0.3).",
+          "suggested_correction": "No action is required for this revision. A future revision could note that these are table artifacts of the hip_joint/flexion action."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgnRzQXm2DHmJXB3odpVe",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 5018.0,
+          "output_tokens": 2003.0
+        }
+      },
+      "summary": "The frames and instructions support a bilateral bodyweight sit-up with the feet secured under a dumbbell, hands at the head, and the torso curling up to roughly vertical. Lumbar flexion plus hip flexion are the right primary joint actions for this. The tracer output gives the right core pattern: rectus abdominis, psoas major, iliacus and rectus femoris as primary movers, with the obliques and other hip flexors as synergists. The weaker points are the stabilizer pattern and some inconsistent authoring text, which are non-blocking."
+    }
+  }
+}

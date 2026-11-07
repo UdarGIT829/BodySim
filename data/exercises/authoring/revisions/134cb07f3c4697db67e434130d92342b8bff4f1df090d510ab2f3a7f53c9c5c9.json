@@ -1,0 +1,5469 @@
+{
+  "additional_context": "",
+  "authoring_provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1.0,
+      "frame_count": 2.0,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Alternating_Floor_Press/0.jpg",
+        "Alternating_Floor_Press/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [
+        "Both arms work, one after the other, so laterality is bilateral rather than unilateral.",
+        "Only the concentric press phase is modeled, from the elbow-at-floor position to lockout above the chest.",
+        "The scapulae rest against the floor, so scapular protraction is not treated as a primary action.",
+        "The opposite arm holds the locked-out kettlebell during each rep, which creates an asymmetric load that the trunk must resist rotating under.",
+        "The kettlebell is gripped by the handle and is offset from the wrist, so the wrist and rotator cuff must stabilize it.",
+        "The legs are extended on the floor and act only as passive support."
+      ],
+      "classification": "supported",
+      "classification_reasons": [
+        "The exercise is a supine kettlebell floor press with the elbows pressing from the floor to lockout, which fits horizontal_push.",
+        "Both frames show a supine setup on the floor with the kettlebells held in the hands and one arm locked out above the chest.",
+        "The concentric phase is elbow extension with horizontal shoulder adduction, and both actions are in the vocabulary."
+      ],
+      "field_confidence": {
+        "input_mode": "high",
+        "kinetic_chain_type": "high",
+        "laterality": "medium",
+        "primary_joint_actions": "high",
+        "stabilization_demands": "medium",
+        "variant": "high"
+      },
+      "proposed_definition": {
+        "additional_movement_families": [],
+        "aliases": [
+          "Alternating Floor Press",
+          "Alternating Kettlebell Floor Press"
+        ],
+        "id": "exercise.kettlebell_floor_press.alternating_supine",
+        "input_mode": "repetitions",
+        "kinematic_profile": {
+          "kinetic_chain_type": "open_chain",
+          "primary_joint_actions": [
+            {
+              "joint": "glenohumeral_joint",
+              "movement": "horizontal_adduction"
+            },
+            {
+              "joint": "elbow_joint",
+              "movement": "extension"
+            }
+          ],
+          "stabilization_demands": [
+            "grip",
+            "wrist_stability",
+            "glenohumeral_stabilization",
+            "anti_rotation_torso"
+          ]
+        },
+        "laterality": "bilateral",
+        "name": "Alternating Kettlebell Floor Press",
+        "primary_movement_family": "horizontal_push",
+        "variant": "alternating_supine"
+      },
+      "questions_requiring_context": []
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgnSnRa36ecPEnJ89Yo4h",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 15842.0,
+      "input_tokens": 1727.0,
+      "output_tokens": 1204.0
+    }
+  },
+  "authoring_response": {
+    "assumptions": [
+      "Both arms work, one after the other, so laterality is bilateral rather than unilateral.",
+      "Only the concentric press phase is modeled, from the elbow-at-floor position to lockout above the chest.",
+      "The scapulae rest against the floor, so scapular protraction is not treated as a primary action.",
+      "The opposite arm holds the locked-out kettlebell during each rep, which creates an asymmetric load that the trunk must resist rotating under.",
+      "The kettlebell is gripped by the handle and is offset from the wrist, so the wrist and rotator cuff must stabilize it.",
+      "The legs are extended on the floor and act only as passive support."
+    ],
+    "classification": "supported",
+    "classification_reasons": [
+      "The exercise is a supine kettlebell floor press with the elbows pressing from the floor to lockout, which fits horizontal_push.",
+      "Both frames show a supine setup on the floor with the kettlebells held in the hands and one arm locked out above the chest.",
+      "The concentric phase is elbow extension with horizontal shoulder adduction, and both actions are in the vocabulary."
+    ],
+    "field_confidence": {
+      "input_mode": "high",
+      "kinetic_chain_type": "high",
+      "laterality": "medium",
+      "primary_joint_actions": "high",
+      "stabilization_demands": "medium",
+      "variant": "high"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "alternating_floor_press",
+        "alternating_kettlebell_floor_press"
+      ],
+      "id": "exercise.kettlebell_floor_press.alternating_supine",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "primary_joint_actions": [
+          {
+            "joint": "glenohumeral_joint",
+            "movement": "horizontal_adduction"
+          },
+          {
+            "joint": "elbow_joint",
+            "movement": "extension"
+          }
+        ],
+        "stabilization_demands": [
+          "anti_rotation_torso",
+          "glenohumeral_stabilization",
+          "grip",
+          "wrist_stability"
+        ]
+      },
+      "laterality": "bilateral",
+      "movement_families": [
+        "horizontal_push"
+      ],
+      "name": "Alternating Kettlebell Floor Press",
+      "variant": "alternating_supine"
+    },
+    "questions_requiring_context": []
+  },
+  "candidate_trace_report": {
+    "errors": [],
+    "exercise_id": "exercise.kettlebell_floor_press.alternating_supine",
+    "gate_version": "candidate_trace_gate_v2",
+    "ok": true,
+    "profile": {
+      "exercise_id": "exercise.kettlebell_floor_press.alternating_supine",
+      "mapped_muscles": 96.0,
+      "muscles": [
+        {
+          "coefficient": 0.5,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.abdominal_part_of_pectoralis_major",
+            "rule.kinematic_tracer_v2.synergist"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.abdominal_part_of_pectoralis_major.left",
+          "role": "synergist"
+        },
+        {
+          "coefficient": 0.5,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.abdominal_part_of_pectoralis_major",
+            "rule.kinematic_tracer_v2.synergist"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.abdominal_part_of_pectoralis_major.right",
+          "role": "synergist"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.abductor_digiti_minimi_of_foot.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.abductor_digiti_minimi_of_foot.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.abductor_digiti_minimi_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.abductor_digiti_minimi_of_hand.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.abductor_digiti_minimi_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.abductor_digiti_minimi_of_hand.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.abductor_hallucis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.abductor_hallucis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.abductor_pollicis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.abductor_pollicis_brevis.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.abductor_pollicis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.abductor_pollicis_brevis.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.abductor_pollicis_longus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.abductor_pollicis_longus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.acromial_part_of_deltoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.acromial_part_of_deltoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.adductor_brevis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.adductor_brevis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.adductor_longus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.adductor_longus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.adductor_magnus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.adductor_magnus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.adductor_minimus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.adductor_minimus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.2,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.anconeus",
+            "rule.kinematic_tracer_v2.synergist"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.anconeus.left",
+          "role": "synergist"
+        },
+        {
+          "coefficient": 0.2,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.anconeus",
+            "rule.kinematic_tracer_v2.synergist"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.anconeus.right",
+          "role": "synergist"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.anterior_belly_of_digastric.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.anterior_belly_of_digastric.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.ary_epiglottic_part_of_oblique_arytenoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.ary_epiglottic_part_of_oblique_arytenoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.ascending_part_of_trapezius.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.ascending_part_of_trapezius.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.brachialis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.brachialis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.brachioradialis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.brachioradialis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.bucinator.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.bucinator.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.8,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.clavicular_head_of_pectoralis_major",
+            "rule.kinematic_tracer_v2.primary"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.clavicular_head_of_pectoralis_major.left",
+          "role": "primary"
+        },
+        {
+          "coefficient": 0.8,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.clavicular_head_of_pectoralis_major",
+            "rule.kinematic_tracer_v2.primary"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.clavicular_head_of_pectoralis_major.right",
+          "role": "primary"
+        },
+        {
+          "coefficient": 0.6,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.clavicular_part_of_deltoid",
+            "rule.kinematic_tracer_v2.synergist"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.clavicular_part_of_deltoid.left",
+          "role": "synergist"
+        },
+        {
+          "coefficient": 0.6,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.clavicular_part_of_deltoid",
+            "rule.kinematic_tracer_v2.synergist"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.clavicular_part_of_deltoid.right",
+          "role": "synergist"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.coccygeus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.coccygeus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.3,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.coracobrachialis",
+            "rule.kinematic_tracer_v2.synergist"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.coracobrachialis.left",
+          "role": "synergist"
+        },
+        {
+          "coefficient": 0.3,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.coracobrachialis",
+            "rule.kinematic_tracer_v2.synergist"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.coracobrachialis.right",
+          "role": "synergist"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.corrugator_supercilii.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.corrugator_supercilii.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.deep_head_of_flexor_pollicis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.deep_head_of_flexor_pollicis_brevis.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.deep_head_of_flexor_pollicis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.deep_head_of_flexor_pollicis_brevis.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.deep_head_of_pronator_teres.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.deep_head_of_pronator_teres.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.deep_part_of_masseter.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.deep_part_of_masseter.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.depressor_anguli_oris.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.depressor_anguli_oris.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.depressor_labii_inferioris.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.depressor_labii_inferioris.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.depressor_septi_nasi.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.depressor_septi_nasi.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.descending_part_of_trapezius.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.descending_part_of_trapezius.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.diaphragm",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.dorsal_interossei_muscles_of_foot.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.dorsal_interossei_muscles_of_foot.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.105,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.dorsal_interossei_muscles_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.dorsal_interossei_muscles_of_hand.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.105,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.dorsal_interossei_muscles_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.dorsal_interossei_muscles_of_hand.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.dorsal_parts_of_lateral_intertransversarii_lumborum.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.dorsal_parts_of_lateral_intertransversarii_lumborum.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.28,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.extensor_carpi_radialis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.extensor_carpi_radialis_brevis.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.28,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.extensor_carpi_radialis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.extensor_carpi_radialis_brevis.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.21,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.extensor_carpi_radialis_longus",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.extensor_carpi_radialis_longus.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.21,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.extensor_carpi_radialis_longus",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.extensor_carpi_radialis_longus.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_digiti_minimi.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_digiti_minimi.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.extensor_digitorum",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.extensor_digitorum.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.extensor_digitorum",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.extensor_digitorum.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_digitorum_brevis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_digitorum_brevis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_digitorum_longus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_digitorum_longus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_hallucis_brevis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_hallucis_brevis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_hallucis_longus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_hallucis_longus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_indicis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_indicis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_pollicis_brevis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_pollicis_brevis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_pollicis_longus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.extensor_pollicis_longus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.35,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.external_abdominal_oblique",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.external_abdominal_oblique.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.35,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.external_abdominal_oblique",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.external_abdominal_oblique.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.external_anal_sphincter.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.external_anal_sphincter.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.035,
+          "confidence": "low",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.external_intercostal",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.external_intercostal.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.035,
+          "confidence": "low",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.external_intercostal",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.external_intercostal.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.external_part_of_thyro_arytenoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.external_part_of_thyro_arytenoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.fibularis_brevis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.fibularis_brevis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.fibularis_longus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.fibularis_longus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.fibularis_tertius.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.fibularis_tertius.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.21,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.flexor_carpi_radialis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.flexor_carpi_radialis.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.21,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.flexor_carpi_radialis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.flexor_carpi_radialis.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.flexor_digiti_minimi_of_foot.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.flexor_digiti_minimi_of_foot.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.flexor_digiti_minimi_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.flexor_digiti_minimi_of_hand.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.flexor_digiti_minimi_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.flexor_digiti_minimi_of_hand.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.flexor_digitorum_brevis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.flexor_digitorum_brevis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.flexor_digitorum_longus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.flexor_digitorum_longus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.35,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.flexor_digitorum_profundus",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.flexor_digitorum_profundus.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.35,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.flexor_digitorum_profundus",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.flexor_digitorum_profundus.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.flexor_hallucis_longus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.flexor_hallucis_longus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.21,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.flexor_pollicis_longus",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.flexor_pollicis_longus.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.21,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.flexor_pollicis_longus",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.flexor_pollicis_longus.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.frontalis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.frontalis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.genioglossus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.genioglossus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.geniohyoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.geniohyoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.gluteus_maximus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.gluteus_maximus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.gluteus_medius.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.gluteus_medius.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.gluteus_minimus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.gluteus_minimus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.gracilis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.gracilis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.175,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.humeral_head_of_extensor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.humeral_head_of_extensor_carpi_ulnaris.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.175,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.humeral_head_of_extensor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.humeral_head_of_extensor_carpi_ulnaris.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.175,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.humeral_head_of_flexor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.humeral_head_of_flexor_carpi_ulnaris.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.175,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.humeral_head_of_flexor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.humeral_head_of_flexor_carpi_ulnaris.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.28,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.humero_ulnar_head_of_flexor_digitorum_superficialis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.humero_ulnar_head_of_flexor_digitorum_superficialis.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.28,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.humero_ulnar_head_of_flexor_digitorum_superficialis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.humero_ulnar_head_of_flexor_digitorum_superficialis.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.hyoglossus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.hyoglossus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.iliacus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.iliacus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.iliococcygeus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.iliococcygeus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.iliocostalis_colli.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.iliocostalis_colli.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.iliocostalis_lumborum",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.iliocostalis_lumborum.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.iliocostalis_lumborum",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.iliocostalis_lumborum.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.iliocostalis_thoracis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.iliocostalis_thoracis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.iliopectineal_arch.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.iliopectineal_arch.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.inferior_gemellus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.inferior_gemellus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.inferior_head_of_lateral_pterygoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.inferior_head_of_lateral_pterygoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.inferior_oblique.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.inferior_oblique.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.inferior_pharyngeal_constrictor.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.inferior_pharyngeal_constrictor.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.inferior_rectus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.inferior_rectus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.35,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.infraspinatus",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.infraspinatus.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.35,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.infraspinatus",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.infraspinatus.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.innermost_intercostal.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.innermost_intercostal.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.315,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.internal_abdominal_oblique",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.internal_abdominal_oblique.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.315,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.internal_abdominal_oblique",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.internal_abdominal_oblique.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.035,
+          "confidence": "low",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.internal_intercostal",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.internal_intercostal.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.035,
+          "confidence": "low",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.internal_intercostal",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.internal_intercostal.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.interspinales_colli.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.interspinales_colli.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.interspinales_lumborum.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.interspinales_lumborum.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.interspinales_thoracis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.interspinales_thoracis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.lateral_crico_arytenoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.lateral_crico_arytenoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.lateral_head_of_flexor_hallucis_brevis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.lateral_head_of_flexor_hallucis_brevis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.lateral_head_of_gastrocnemius.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.lateral_head_of_gastrocnemius.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.9,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.lateral_head_of_triceps_brachii",
+            "rule.kinematic_tracer_v2.primary"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.lateral_head_of_triceps_brachii.left",
+          "role": "primary"
+        },
+        {
+          "coefficient": 0.9,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.lateral_head_of_triceps_brachii",
+            "rule.kinematic_tracer_v2.primary"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.lateral_head_of_triceps_brachii.right",
+          "role": "primary"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.lateral_rectus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.lateral_rectus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.latissimus_dorsi.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.latissimus_dorsi.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.levator_anguli_oris.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.levator_anguli_oris.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.levator_labii_superioris.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.levator_labii_superioris.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.levator_nasolabialis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.levator_nasolabialis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.levator_palpebrae_superioris.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.levator_palpebrae_superioris.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.levator_scapulae.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.levator_scapulae.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.levatores_breves_costarum.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.levatores_breves_costarum.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.levatores_longi_costarum.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.levatores_longi_costarum.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.long_head_of_biceps_brachii.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.long_head_of_biceps_brachii.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.long_head_of_biceps_femoris.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.long_head_of_biceps_femoris.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.8,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.long_head_of_triceps_brachii",
+            "rule.kinematic_tracer_v2.primary"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.long_head_of_triceps_brachii.left",
+          "role": "primary"
+        },
+        {
+          "coefficient": 0.8,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.long_head_of_triceps_brachii",
+            "rule.kinematic_tracer_v2.primary"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.long_head_of_triceps_brachii.right",
+          "role": "primary"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.longissimus_capitis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.longissimus_capitis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.longissimus_colli.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.longissimus_colli.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.longissimus_thoracis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.longissimus_thoracis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.longus_capitis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.longus_capitis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.longus_colli.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.longus_colli.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.lumbrical_muscles_of_foot.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.lumbrical_muscles_of_foot.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.035,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.lumbrical_muscles_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.lumbrical_muscles_of_hand.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.035,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.lumbrical_muscles_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.lumbrical_muscles_of_hand.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.medial_head_of_flexor_hallucis_brevis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.medial_head_of_flexor_hallucis_brevis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.medial_head_of_gastrocnemius.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.medial_head_of_gastrocnemius.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.9,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.medial_head_of_triceps_brachii",
+            "rule.kinematic_tracer_v2.primary"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.medial_head_of_triceps_brachii.left",
+          "role": "primary"
+        },
+        {
+          "coefficient": 0.9,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.medial_head_of_triceps_brachii",
+            "rule.kinematic_tracer_v2.primary"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.medial_head_of_triceps_brachii.right",
+          "role": "primary"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.medial_pterygoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.medial_pterygoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.medial_rectus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.medial_rectus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.mentalis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.mentalis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.middle_pharyngeal_constrictor.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.middle_pharyngeal_constrictor.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.multifidus_colli.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.multifidus_colli.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.14,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.multifidus_lumborum",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.multifidus_lumborum.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.14,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.multifidus_lumborum",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.multifidus_lumborum.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.multifidus_thoracis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.multifidus_thoracis.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.multifidus_thoracis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.multifidus_thoracis.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.mylohyoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.mylohyoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.nasalis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.nasalis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.oblique_head_of_adductor_hallucis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.oblique_head_of_adductor_hallucis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.175,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.oblique_head_of_adductor_pollicis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.oblique_head_of_adductor_pollicis.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.175,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.oblique_head_of_adductor_pollicis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.oblique_head_of_adductor_pollicis.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.oblique_part_of_cricothyroid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.oblique_part_of_cricothyroid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.obliquus_inferior_capitis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.obliquus_inferior_capitis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.obliquus_superior_capitis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.obliquus_superior_capitis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.obturator_externus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.obturator_externus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.obturator_internus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.obturator_internus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.occipitalis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.occipitalis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.omohyoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.omohyoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.opponens_digiti_minimi_muscle_of_foot.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.opponens_digiti_minimi_muscle_of_foot.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.opponens_digiti_minimi_muscle_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.opponens_digiti_minimi_muscle_of_hand.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.opponens_digiti_minimi_muscle_of_hand",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.opponens_digiti_minimi_muscle_of_hand.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.105,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.opponens_pollicis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.opponens_pollicis.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.105,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.opponens_pollicis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.opponens_pollicis.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.orbicularis_oris.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.orbicularis_oris.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.orbital_part_of_orbicularis_oculi.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.orbital_part_of_orbicularis_oculi.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.palatopharyngeus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.palatopharyngeus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.105,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.palmar_interossei",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.palmar_interossei.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.105,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.palmar_interossei",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.palmar_interossei.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.palmaris_longus",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.palmaris_longus.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.07,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.palmaris_longus",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.palmaris_longus.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.palpebral_part_of_orbicularis_oculi.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.palpebral_part_of_orbicularis_oculi.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.pectineus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.pectineus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.pectoralis_minor.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.pectoralis_minor.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.piriformis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.piriformis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.plantar_interossei.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.plantar_interossei.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.plantaris.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.plantaris.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.platysma.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.platysma.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.popliteus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.popliteus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.posterior_belly_of_digastric.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.posterior_belly_of_digastric.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.posterior_crico_arytenoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.posterior_crico_arytenoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.procerus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.procerus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.pronator_quadratus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.pronator_quadratus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.psoas_major.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.psoas_major.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.pubo_analis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.pubo_analis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.pubococcygeus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.pubococcygeus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.pyramidalis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.pyramidalis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.quadratus_femoris.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.quadratus_femoris.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.quadratus_lumborum.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.quadratus_lumborum.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.quadratus_plantae.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.quadratus_plantae.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.14,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.radial_head_of_flexor_digitorum_superficialis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.radial_head_of_flexor_digitorum_superficialis.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.14,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.radial_head_of_flexor_digitorum_superficialis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.radial_head_of_flexor_digitorum_superficialis.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rectus_abdominis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rectus_abdominis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rectus_anterior_capitis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rectus_anterior_capitis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rectus_femoris.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rectus_femoris.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rectus_lateralis_capitis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rectus_lateralis_capitis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rectus_posterior_major_capitis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rectus_posterior_major_capitis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rectus_posterior_minor_capitis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rectus_posterior_minor_capitis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rhomboid_major.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rhomboid_major.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rhomboid_minor.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.rhomboid_minor.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.risorius.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.risorius.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.035,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.rotatores",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.rotatores.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.035,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.rotatores",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.rotatores.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.sartorius.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.sartorius.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.scalenus_anterior.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.scalenus_anterior.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.scalenus_medius.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.scalenus_medius.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.scalenus_posterior.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.scalenus_posterior.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.scapular_spinal_part_of_deltoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.scapular_spinal_part_of_deltoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.semimembranosus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.semimembranosus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.semispinalis_colli.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.semispinalis_colli.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.semispinalis_thoracis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.semispinalis_thoracis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.semitendinosus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.semitendinosus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.serratus_anterior.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.serratus_anterior.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.serratus_posterior_inferior.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.serratus_posterior_inferior.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.serratus_posterior_superior.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.serratus_posterior_superior.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.2,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.short_head_of_biceps_brachii",
+            "rule.kinematic_tracer_v2.synergist"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.short_head_of_biceps_brachii.left",
+          "role": "synergist"
+        },
+        {
+          "coefficient": 0.2,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.short_head_of_biceps_brachii",
+            "rule.kinematic_tracer_v2.synergist"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.short_head_of_biceps_brachii.right",
+          "role": "synergist"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.short_head_of_biceps_femoris.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.short_head_of_biceps_femoris.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.soleus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.soleus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.spinalis_capitis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.spinalis_capitis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.spinalis_colli.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.spinalis_colli.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.spinalis_thoracis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.spinalis_thoracis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.splenius_capitis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.splenius_capitis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.splenius_colli.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.splenius_colli.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.sternocleidomastoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.sternocleidomastoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 1.0,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.sternocostal_head_of_pectoralis_major",
+            "rule.kinematic_tracer_v2.primary"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.left",
+          "role": "primary"
+        },
+        {
+          "coefficient": 1.0,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.sternocostal_head_of_pectoralis_major",
+            "rule.kinematic_tracer_v2.primary"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.right",
+          "role": "primary"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.sternohyoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.sternohyoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.sternothyroid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.sternothyroid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.straight_part_of_cricothyroid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.straight_part_of_cricothyroid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.stylohyoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.stylohyoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.stylopharyngeus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.stylopharyngeus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.subclavius.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.subclavius.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.35,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.subscapularis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.subscapularis.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.35,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.subscapularis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.subscapularis.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.14,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.superficial_head_of_flexor_pollicis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.superficial_head_of_flexor_pollicis_brevis.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.14,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.superficial_head_of_flexor_pollicis_brevis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.superficial_head_of_flexor_pollicis_brevis.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.superficial_head_of_pronator_teres.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.superficial_head_of_pronator_teres.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.superficial_part_of_masseter.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.superficial_part_of_masseter.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.superior_gemellus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.superior_gemellus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.superior_head_of_lateral_pterygoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.superior_head_of_lateral_pterygoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.superior_oblique.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.superior_oblique.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.superior_pharyngeal_constrictor.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.superior_pharyngeal_constrictor.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.superior_rectus.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.superior_rectus.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.supinator.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.supinator.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.315,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.supraspinatus",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.supraspinatus.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.315,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.supraspinatus",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.supraspinatus.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.temporalis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.temporalis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.temporoparietalis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.temporoparietalis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.tensor_fasciae_latae.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.tensor_fasciae_latae.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.teres_major.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.teres_major.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.245,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.teres_minor",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.teres_minor.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.245,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.teres_minor",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.teres_minor.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.thyro_epiglottic_part_of_thyro_arytenoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.thyro_epiglottic_part_of_thyro_arytenoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.thyrohyoid.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.thyrohyoid.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.tibialis_anterior.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.tibialis_anterior.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.tibialis_posterior.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.tibialis_posterior.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.transverse_arytenoid",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.transverse_head_of_adductor_hallucis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.transverse_head_of_adductor_hallucis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.14,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.transverse_head_of_adductor_pollicis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.transverse_head_of_adductor_pollicis.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.14,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.transverse_head_of_adductor_pollicis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.transverse_head_of_adductor_pollicis.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.transverse_part_of_trapezius.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.transverse_part_of_trapezius.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.105,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.transversus_abdominis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.transversus_abdominis.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.105,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.transversus_abdominis",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.transversus_abdominis.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.transversus_thoracis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.transversus_thoracis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.trochlea_of_superior_oblique.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.trochlea_of_superior_oblique.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.105,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.ulnar_head_of_extensor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.ulnar_head_of_extensor_carpi_ulnaris.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.105,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.ulnar_head_of_extensor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.ulnar_head_of_extensor_carpi_ulnaris.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.175,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.ulnar_head_of_flexor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.ulnar_head_of_flexor_carpi_ulnaris.left",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.175,
+          "confidence": "medium",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "muscle_actions_v2:muscle.ulnar_head_of_flexor_carpi_ulnaris",
+            "rule.kinematic_tracer_v2.stabilizer"
+          ],
+          "evidence_status": "kinematic_trace",
+          "muscle_id": "muscle.ulnar_head_of_flexor_carpi_ulnaris.right",
+          "role": "stabilizer"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.vastus_intermedius.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.vastus_intermedius.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.vastus_lateralis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.vastus_lateralis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.vastus_medialis.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.vastus_medialis.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.ventral_parts_of_lateral_intertransversarii_lumborum.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.ventral_parts_of_lateral_intertransversarii_lumborum.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.zygomaticus_major.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.zygomaticus_major.right",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.zygomaticus_minor.left",
+          "role": "none"
+        },
+        {
+          "coefficient": 0.0,
+          "confidence": "high",
+          "derivation_method": "kinematic_tracer_v2",
+          "evidence_refs": [
+            "rule.kinematic_tracer_v2.reviewed_zero"
+          ],
+          "evidence_status": "reviewed_zero",
+          "muscle_id": "muscle.zygomaticus_minor.right",
+          "role": "none"
+        }
+      ],
+      "total_muscles": 466.0,
+      "zero_muscles": 370.0
+    },
+    "provenance": {
+      "canonical_exercises_sha256": "13f633164cb156b72ba0e75a47d9bec114aea79d48feaeb00f5e019495bb0371",
+      "muscle_actions_sha256": "52d1b3acbc4257f2c85de5f308437d20ac78b895a3274d1db8cbbde3cfd3bfcf",
+      "structures_sha256": "cad14011d986446b2af5871cad93575dac1da7e34ea6cfbc67b551bf2a3d8edf",
+      "tracer": "kinematic_tracer_v2"
+    },
+    "summary": {
+      "joint_action_coverage": [
+        {
+          "joint": "glenohumeral_joint",
+          "matching_muscles": 12.0,
+          "movement": "horizontal_adduction"
+        },
+        {
+          "joint": "elbow_joint",
+          "matching_muscles": 8.0,
+          "movement": "extension"
+        }
+      ],
+      "mapped_muscles": 96.0,
+      "role_counts": {
+        "none": 370.0,
+        "primary": 10.0,
+        "stabilizer": 76.0,
+        "synergist": 10.0
+      },
+      "stabilization_coverage": [
+        {
+          "demand": "anti_rotation_torso",
+          "matching_muscles": 18.0
+        },
+        {
+          "demand": "glenohumeral_stabilization",
+          "matching_muscles": 10.0
+        },
+        {
+          "demand": "grip",
+          "matching_muscles": 32.0
+        },
+        {
+          "demand": "wrist_stability",
+          "matching_muscles": 18.0
+        }
+      ],
+      "total_muscles": 466.0,
+      "zero_muscles": 370.0
+    },
+    "warnings": []
+  },
+  "catalog_id": "catalog.free_exercise_db.Alternating_Floor_Press",
+  "format_version": 1,
+  "revision_id": "Alternating_Floor_Press@134cb07f3c46",
+  "revision_sha256": "134cb07f3c4697db67e434130d92342b8bff4f1df090d510ab2f3a7f53c9c5c9",
+  "source": {
+    "body_sim_exercise_ids": [],
+    "catalog_id": "catalog.free_exercise_db.Alternating_Floor_Press",
+    "category": "strength",
+    "equipment": "kettlebells",
+    "force": "push",
+    "instructions": [
+      "Lie on the floor with two kettlebells next to your shoulders.",
+      "Position one in place on your chest and then the other, gripping the kettlebells on the handle with the palms facing forward.",
+      "Extend both arms, so that the kettlebells are being held above your chest. Lower one kettlebell, bringing it to your chest and turn the wrist in the direction of the locked out kettlebell.",
+      "Raise the kettlebell and repeat on the opposite side."
+    ],
+    "level": "beginner",
+    "mechanic": "compound",
+    "name": "Alternating Floor Press",
+    "source": "free_exercise_db",
+    "source_id": "Alternating_Floor_Press",
+    "source_images": [
+      "Alternating_Floor_Press/0.jpg",
+      "Alternating_Floor_Press/1.jpg"
+    ],
+    "source_muscle_tags": {
+      "primary": [
+        "chest"
+      ],
+      "secondary": [
+        "abdominals",
+        "shoulders",
+        "triceps"
+      ],
+      "used_as_evidence": false
+    },
+    "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+    "status": "catalog_only"
+  },
+  "source_id": "Alternating_Floor_Press",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "review_pending"
+}

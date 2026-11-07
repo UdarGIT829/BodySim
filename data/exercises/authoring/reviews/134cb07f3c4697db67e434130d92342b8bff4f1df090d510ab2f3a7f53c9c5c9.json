@@ -1,0 +1,62 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "134cb07f3c4697db67e434130d92342b8bff4f1df090d510ab2f3a7f53c9c5c9",
+  "status": "accepted",
+  "updated_at_unix": 1794003640.06562,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794003621.11758,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The resting arm holds a kettlebell isometrically at lockout while the other arm presses. No shoulder_position_hold or scapular demand is listed, so the static work of the anterior deltoid and any serratus anterior contribution at lockout is only partly represented. The effect is small because the deltoid is already a synergist.",
+          "suggested_correction": "Consider adding shoulder_position_hold, and optionally scapular_stabilization or scapular_anchoring, if the authors want the static lockout arm modeled."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "anti_rotation_torso is plausible for the asymmetric load, but the torso is fully supported by the floor, so the demand is probably modest. The tracer gives only 0.3 to 0.35 to the obliques, which matches that, but the 'medium' confidence is warranted.",
+          "suggested_correction": "Keep the demand with low-to-moderate weighting, or note in assumptions that the floor limits the rotational challenge."
+        },
+        {
+          "field_path": "proposed_definition.laterality",
+          "finding": "Modeling an alternating exercise as bilateral is reasonable because both arms press, but the arms work in turn and the bilateral coefficients do not reflect the alternating load.",
+          "suggested_correction": "State explicitly that bilateral covers alternating reps with both sides working over a set."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Only horizontal adduction and elbow extension are listed. The humerus also moves into some shoulder flexion near lockout, and the instructions mention a wrist turn toward the locked-out side, which is not modeled. Both are minor.",
+          "suggested_correction": "Optionally note the minor glenohumeral flexion component and wrist rotation in the assumptions."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgnTDM76vzybXuJFt8rwK",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 8829.0,
+          "output_tokens": 2215.0
+        }
+      },
+      "summary": "The frozen revision is supported by the instructions and both frames. They show a supine kettlebell floor press with the kettlebells gripped by the handle, one arm locked out above the chest and the other lowered to the chest, so the alternating pattern is clear. Horizontal_push, open_chain, glenohumeral horizontal adduction plus elbow extension, and bilateral laterality all fit. The tracer output is plausible: sternocostal and clavicular pectoralis major and the three triceps heads are primary, anterior deltoid, abdominal pectoralis, anconeus, coracobrachialis and short head biceps are synergists, and the trunk, rotator cuff, grip and wrist muscles carry modest stabilizer loads. No biomechanically material claim is unsupported or contradicted, and no clearly wrong muscle pattern appears. The remaining points are refinements only."
+    }
+  }
+}

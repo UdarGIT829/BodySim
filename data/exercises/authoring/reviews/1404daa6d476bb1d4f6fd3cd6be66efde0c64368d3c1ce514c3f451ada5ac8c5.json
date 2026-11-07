@@ -1,0 +1,73 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "1404daa6d476bb1d4f6fd3cd6be66efde0c64368d3c1ce514c3f451ada5ac8c5",
+  "status": "changes_requested",
+  "updated_at_unix": 1794072433.1506,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794072403.7924,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.assumptions[2] / proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The assumption says the wrist rotation is omitted because the schema has no matching action. The table does have radioulnar_joint/pronation and radioulnar_joint/supination. The source instruction explicitly says 'Rotate your wrist as you do so', so a source-stated movement is dropped on an incorrect justification. The frames do not show the forearm rotation direction, so the omission is unresolved rather than settled. That leaves the forearm pattern (pronator and supinator muscles) unsupported.",
+          "suggested_correction": "Decide from the frames and instructions whether the clean needs a radioulnar pronation or supination action, and add it or justify excluding it without claiming the schema lacks the action. Remove the false statement about schema vocabulary."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The right frame shows the bell racked at the shoulder with the elbow flexed and the upper arm held against the load, while the other bell hangs. The profile has no shoulder-level demand or action: no shoulder_position_hold, glenohumeral_stabilization or scapular_stabilization, and no glenohumeral action for the pull and rack path. The tracer therefore returns zero for the deltoids, the latissimus, the rotator cuff and the serratus anterior. A loaded rack hold and a bell pulled close to the body should engage at least some of these, so the tracer's muscle pattern is materially incomplete.",
+          "suggested_correction": "Add shoulder demands that match the frames, for example shoulder_position_hold for the racked bell and scapular_stabilization or glenohumeral_stabilization. Consider a glenohumeral action if the upper arm visibly moves in the pull. Then re-check the tracer profile."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "Only hip_hinge is listed. The movement also includes an upper-body pull (shrug and elbow flexion) and a lower-body triple extension, so the family list under-describes the exercise.",
+          "suggested_correction": "Consider adding a vertical or upper-body pull family alongside hip_hinge if the vocabulary allows."
+        },
+        {
+          "field_path": "proposed_definition.laterality",
+          "finding": "The frames show one bell racked and the other hanging at the same moment, so each rep is effectively asymmetric. Modeling it as bilateral is defensible because the sides alternate across a set. The authoring response's own 'medium' confidence reflects this, and the rationale should say so explicitly.",
+          "suggested_correction": "Keep bilateral if desired, but record the rationale that both sides work across a set, and keep the anti_rotation_torso demand."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The ankle plantarflexion action puts the soleus (1.0) and gastrocnemii in the primary-mover role at full or near-full coefficients. This probably overstates calf involvement relative to the hip extensors for a hang clean.",
+          "suggested_correction": "Consider whether ankle plantarflexion should be kept as a primary action, and add ankle_stability if the foot-contact demand matters."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The clean begins with a hip hinge in which the hamstrings and spinal extensors resist flexion. The profile covers this only through anti_flexion_spine and postural_stabilization, which is acceptable but gives low stabilizer coefficients for the loaded hinge position.",
+          "suggested_correction": "Consider whether intra_abdominal_pressure or pelvic_alignment are warranted for the loaded hinge."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgoxdcVcZAVhcPC9VpzMq",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 11085.0,
+          "output_tokens": 3533.0
+        }
+      },
+      "summary": "The lower-body triple extension, the shrug and the elbow flexion are supported by the frames and instructions. Two problems stand: a source-stated action (wrist/forearm rotation) was dropped on a factually wrong justification, and the shoulder-girdle region is empty in the tracer output even though the frames show a loaded rack position and a pulling path."
+    }
+  }
+}

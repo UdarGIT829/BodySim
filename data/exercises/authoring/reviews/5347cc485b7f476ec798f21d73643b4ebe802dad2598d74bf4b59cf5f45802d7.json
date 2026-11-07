@@ -1,0 +1,57 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "5347cc485b7f476ec798f21d73643b4ebe802dad2598d74bf4b59cf5f45802d7",
+  "status": "accepted",
+  "updated_at_unix": 1794003620.63227,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794003604.93057,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "Only elbow_flexion is listed, although forearm supination is an explicit, instructed part of the movement and is in primary_joint_actions. This is a minor mismatch in how the movement is categorized.",
+          "suggested_correction": "If the vocabulary has a forearm supination or curl-with-supination family, add it alongside elbow_flexion in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.laterality",
+          "finding": "Laterality is bilateral, but the arms work one at a time. This is defensible because both sides are trained across the set, and the authoring confidence is only medium. The tracer shows both sides at full coefficients, which does not reflect the alternating duty cycle.",
+          "suggested_correction": "Keep bilateral with the alternating assumption documented, or state explicitly that alternating reps are modeled as simultaneous bilateral engagement."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The incline places the upper arms slightly behind the torso, which pre-stretches the long head of biceps and loads the shoulder in slight extension. shoulder_position_hold covers the anterior deltoid but not the anterior shoulder or biceps-tendon stability demand. The effect on the tracer output is small and not clearly required by the source.",
+          "suggested_correction": "Optionally consider anterior_shoulder_stability or humeral_head_stabilization in a future revision if reviewers judge the stretched-arm position to be materially demanding."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgnTCAFU5WNjZRG4jEEYJ",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 7604.0,
+          "output_tokens": 1696.0
+        }
+      },
+      "summary": "The definition matches the source text and both frames: a seated alternating dumbbell curl on an incline bench with the upper arms hanging still and only the forearms moving. The frames show the elbow flexing with the forearm turning from neutral or pronated to supinated, one arm at a time. Open-chain kinetic type, repetition input and bilateral laterality are reasonable, because both arms are trained across a set and the resting arm still holds its dumbbell. The tracer pattern is plausible. Brachialis, both biceps heads, brachioradialis and supinator are primary. Superficial pronator teres and extensor carpi radialis longus appear as low synergists via the elbow-flexion table. Anterior deltoid and the wrist and finger muscles appear as stabilizers via shoulder_position_hold, grip and wrist_stability. The back is supported by the bench, so omitting trunk and postural demands is justified. No muscle is wrongly engaged, and no muscle that should clearly work is missing."
+    }
+  }
+}

@@ -5,8 +5,10 @@
     "source_id": "3_4_Sit-Up",
     "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
     "name": "3/4 Sit-Up",
-    "status": "catalog_only",
-    "body_sim_exercise_ids": [],
+    "status": "promoted",
+    "body_sim_exercise_ids": [
+      "exercise.sit_up.three_quarter_feet_anchored"
+    ],
     "category": "strength",
     "equipment": "body only",
     "level": "beginner",
@@ -29,6 +31,25 @@
     "source_images": [
       "3_4_Sit-Up/0.jpg",
       "3_4_Sit-Up/1.jpg"
+    ],
+    "promotions": [
+      {
+        "exercise_id": "exercise.sit_up.three_quarter_feet_anchored",
+        "revision_sha256": "6c90548d744aab09ce55e9e8f7df1ac9032b8532cc478123933c55e7932e5bad",
+        "authoring_provider": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "response_id": "msg_011CgnReVdXfhVFkjM1EB4VH"
+        },
+        "review_models": {
+          "model_reviewer": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "response_id": "msg_011CgnRzQXm2DHmJXB3odpVe"
+          }
+        },
+        "promoted_at_unix": 1794002675.9479747
+      }
     ]
   },
   {
@@ -62,6 +83,33 @@
     "source_images": [
       "90_90_Hamstring/0.jpg",
       "90_90_Hamstring/1.jpg"
+    ],
+    "promotions": [
+      {
+        "exercise_id": "exercise.hamstring_90_90_leg_extension.supine_unilateral",
+        "revision_sha256": "ad30aa574adcf3cc966ded616517bbd7ac601cb04661a425be0a8ffd9e5bed45",
+        "authoring_provider": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "response_id": "msg_011CgnRf8gE5uFoS5CU673N2"
+        },
+        "review_models": {
+          "model_reviewer": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "response_id": "msg_011CgnS1hL5Wz6QKrBXNs5L9"
+          }
+        },
+        "promoted_at_unix": 1794002698.6434467
+      }
+    ],
+    "demotions": [
+      {
+        "exercise_id": "exercise.hamstring_90_90_leg_extension.supine_unilateral",
+        "revision_sha256": "ad30aa574adcf3cc966ded616517bbd7ac601cb04661a425be0a8ffd9e5bed45",
+        "reason": "It is a stretch. BodySim models muscles moving or holding a load, so a stretch's profile is meaningless.",
+        "demoted_at_unix": 1794071677.265657
+      }
     ]
   },
   {
@@ -70,8 +118,10 @@
     "source_id": "Ab_Crunch_Machine",
     "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
     "name": "Ab Crunch Machine",
-    "status": "catalog_only",
-    "body_sim_exercise_ids": [],
+    "status": "promoted",
+    "body_sim_exercise_ids": [
+      "exercise.ab_crunch_machine.seated_selectorized"
+    ],
     "category": "strength",
     "equipment": "machine",
     "level": "intermediate",
@@ -93,6 +143,25 @@
     "source_images": [
       "Ab_Crunch_Machine/0.jpg",
       "Ab_Crunch_Machine/1.jpg"
+    ],
+    "promotions": [
+      {
+        "exercise_id": "exercise.ab_crunch_machine.seated_selectorized",
+        "revision_sha256": "42b6dc67b3c8ba8dab7f3467dd57eb34b3b5ca50136b08224c41f8679632159b",
+        "authoring_provider": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "response_id": "msg_011CgnRg7GRifmZiTz87EJDK"
+        },
+        "review_models": {
+          "model_reviewer": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "response_id": "msg_011CgnS3NERK8HJBUEKjHTR1"
+          }
+        },
+        "promoted_at_unix": 1794002719.5424619
+      }
     ]
   },
   {
@@ -224,6 +293,33 @@
     "source_images": [
       "Advanced_Kettlebell_Windmill/0.jpg",
       "Advanced_Kettlebell_Windmill/1.jpg"
+    ],
+    "promotions": [
+      {
+        "exercise_id": "exercise.kettlebell_windmill.single_arm_overhead",
+        "revision_sha256": "a8875592b58e6f6a971a30c32a90219fc4d79aacd10a96623fccd35f45dc3cf3",
+        "authoring_provider": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "response_id": "msg_011CgowqUpiT2fBS3ZujEsLv"
+        },
+        "review_models": {
+          "model_reviewer": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "response_id": "msg_011CgoxZas2eMJ8AZ6jPJsys"
+          }
+        },
+        "promoted_at_unix": 1794072376.176278
+      }
+    ],
+    "demotions": [
+      {
+        "exercise_id": "exercise.kettlebell_windmill.single_arm_overhead",
+        "revision_sha256": "a8875592b58e6f6a971a30c32a90219fc4d79aacd10a96623fccd35f45dc3cf3",
+        "reason": "Promoted as bilateral to work around tracer v2, so the free arm was traced as loaded. Re-author under tracer v3 as unilateral with one_sided_limbs [arm] and a both-sides hip hinge.",
+        "demoted_at_unix": 1794078679.163101
+      }
     ]
   },
   {
@@ -297,8 +393,10 @@
     "source_id": "Alternate_Hammer_Curl",
     "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
     "name": "Alternate Hammer Curl",
-    "status": "catalog_only",
-    "body_sim_exercise_ids": [],
+    "status": "promoted",
+    "body_sim_exercise_ids": [
+      "exercise.alternate_hammer_curl.standing_alternating"
+    ],
     "category": "strength",
     "equipment": "dumbbell",
     "level": "beginner",
@@ -324,6 +422,25 @@
     "source_images": [
       "Alternate_Hammer_Curl/0.jpg",
       "Alternate_Hammer_Curl/1.jpg"
+    ],
+    "promotions": [
+      {
+        "exercise_id": "exercise.alternate_hammer_curl.standing_alternating",
+        "revision_sha256": "1b4d73eb833c99ca50cb6967b3f96398653116d4bd14f1bc55cbad79c2a0cf97",
+        "authoring_provider": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "response_id": "msg_011CgnSbYLHfm77DnxxRnB1o"
+        },
+        "review_models": {
+          "model_reviewer": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "response_id": "msg_011CgnT7XgBWio2pCMMGVNLH"
+          }
+        },
+        "promoted_at_unix": 1794003555.5262175
+      }
     ]
   },
   {
@@ -332,8 +449,10 @@
     "source_id": "Alternate_Heel_Touchers",
     "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
     "name": "Alternate Heel Touchers",
-    "status": "catalog_only",
-    "body_sim_exercise_ids": [],
+    "status": "promoted",
+    "body_sim_exercise_ids": [
+      "exercise.heel_toucher.alternating_supine"
+    ],
     "category": "strength",
     "equipment": "body only",
     "level": "beginner",
@@ -356,6 +475,25 @@
     "source_images": [
       "Alternate_Heel_Touchers/0.jpg",
       "Alternate_Heel_Touchers/1.jpg"
+    ],
+    "promotions": [
+      {
+        "exercise_id": "exercise.heel_toucher.alternating_supine",
+        "revision_sha256": "afabde9bd7d070ad4b4c2feed705d5fe9d6725654e70d8ad7a99ca257740b496",
+        "authoring_provider": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "response_id": "msg_011CgnSdN6CNjm2EdpmcgVWE"
+        },
+        "review_models": {
+          "model_reviewer": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "response_id": "msg_011CgnT8Y5WuPu87o459oUjo"
+          }
+        },
+        "promoted_at_unix": 1794003575.315162
+      }
     ]
   },
   {
@@ -364,8 +502,10 @@
     "source_id": "Alternate_Incline_Dumbbell_Curl",
     "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
     "name": "Alternate Incline Dumbbell Curl",
-    "status": "catalog_only",
-    "body_sim_exercise_ids": [],
+    "status": "promoted",
+    "body_sim_exercise_ids": [
+      "exercise.alternating_dumbbell_curl.incline_seated"
+    ],
     "category": "strength",
     "equipment": "dumbbell",
     "level": "beginner",
@@ -390,6 +530,25 @@
     "source_images": [
       "Alternate_Incline_Dumbbell_Curl/0.jpg",
       "Alternate_Incline_Dumbbell_Curl/1.jpg"
+    ],
+    "promotions": [
+      {
+        "exercise_id": "exercise.alternating_dumbbell_curl.incline_seated",
+        "revision_sha256": "5347cc485b7f476ec798f21d73643b4ebe802dad2598d74bf4b59cf5f45802d7",
+        "authoring_provider": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "response_id": "msg_011CgnSf9VDSVBs15hZYG19m"
+        },
+        "review_models": {
+          "model_reviewer": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "response_id": "msg_011CgnTCAFU5WNjZRG4jEEYJ"
+          }
+        },
+        "promoted_at_unix": 1794003620.7767272
+      }
     ]
   },
   {
@@ -435,8 +594,10 @@
     "source_id": "Alternating_Cable_Shoulder_Press",
     "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
     "name": "Alternating Cable Shoulder Press",
-    "status": "catalog_only",
-    "body_sim_exercise_ids": [],
+    "status": "promoted",
+    "body_sim_exercise_ids": [
+      "exercise.cable_shoulder_press.standing_alternating"
+    ],
     "category": "strength",
     "equipment": "cable",
     "level": "beginner",
@@ -460,6 +621,25 @@
     "source_images": [
       "Alternating_Cable_Shoulder_Press/0.jpg",
       "Alternating_Cable_Shoulder_Press/1.jpg"
+    ],
+    "promotions": [
+      {
+        "exercise_id": "exercise.cable_shoulder_press.standing_alternating",
+        "revision_sha256": "d9be19429368ef90627b005e4ffa83ac7b1ec19cd7668ba5b924576737006f86",
+        "authoring_provider": {
+          "provider": "anthropic",
+          "model": "claude-opus-5-5",
+          "response_id": "msg_011CgnNwYH9W8Hij4myADV2p"
+        },
+        "review_models": {
+          "model_reviewer": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "response_id": "msg_011CgnS4ucqxkfgEAiHUvy3o"
+          }
+        },
+        "promoted_at_unix": 1794002738.7672272
+      }
     ]
   },
   {
@@ -500,8 +680,10 @@
     "source_id": "Alternating_Floor_Press",
     "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
     "name": "Alternating Floor Press",
-    "status": "catalog_only",
-    "body_sim_exercise_ids": [],
+    "status": "promoted",
+    "body_sim_exercise_ids": [
+      "exercise.kettlebell_floor_press.alternating_supine"
+    ],
     "category": "strength",
     "equipment": "kettlebells",
     "level": "beginner",
@@ -527,6 +709,25 @@
     "source_images": [
       "Alternating_Floor_Press/0.jpg",
       "Alternating_Floor_Press/1.jpg"
+    ],
+    "promotions": [
+      {
+        "exercise_id": "exercise.kettlebell_floor_press.alternating_supine",
+        "revision_sha256": "134cb07f3c4697db67e434130d92342b8bff4f1df090d510ab2f3a7f53c9c5c9",
+        "authoring_provider": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "response_id": "msg_011CgnSnRa36ecPEnJ89Yo4h"
+        },
+        "review_models": {
+          "model_reviewer": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "response_id": "msg_011CgnTDM76vzybXuJFt8rwK"
+          }
+        },
+        "promoted_at_unix": 1794003640.2014308
+      }
     ]
   },
   {
@@ -572,8 +773,10 @@
     "source_id": "Alternating_Kettlebell_Press",
     "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
     "name": "Alternating Kettlebell Press",
-    "status": "catalog_only",
-    "body_sim_exercise_ids": [],
+    "status": "promoted",
+    "body_sim_exercise_ids": [
+      "exercise.kettlebell_overhead_press.standing_alternating"
+    ],
     "category": "strength",
     "equipment": "kettlebells",
     "level": "intermediate",
@@ -596,6 +799,25 @@
     "source_images": [
       "Alternating_Kettlebell_Press/0.jpg",
       "Alternating_Kettlebell_Press/1.jpg"
+    ],
+    "promotions": [
+      {
+        "exercise_id": "exercise.kettlebell_overhead_press.standing_alternating",
+        "revision_sha256": "fe539b16dac4e65636eac32adbdf11962f2e7cbef6391c78a23d3c8428427435",
+        "authoring_provider": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "response_id": "msg_011CgowvHnLevAzhGtp5fMDE"
+        },
+        "review_models": {
+          "model_reviewer": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "response_id": "msg_011CgoxfoPWhNM3a1knkHtwe"
+          }
+        },
+        "promoted_at_unix": 1794072453.7189286
+      }
     ]
   },
   {
@@ -1485,8 +1707,10 @@
     "source_id": "Barbell_Curl",
     "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
     "name": "Barbell Curl",
-    "status": "catalog_only",
-    "body_sim_exercise_ids": [],
+    "status": "promoted",
+    "body_sim_exercise_ids": [
+      "exercise.barbell_curl.standing_bilateral"
+    ],
     "category": "strength",
     "equipment": "barbell",
     "level": "beginner",
@@ -1511,6 +1735,25 @@
     "source_images": [
       "Barbell_Curl/0.jpg",
       "Barbell_Curl/1.jpg"
+    ],
+    "promotions": [
+      {
+        "exercise_id": "exercise.barbell_curl.standing_bilateral",
+        "revision_sha256": "ddbf3dcd731e23b4ed1357856f55ed2926e676f443444b0bb9d8749bfe3367bf",
+        "authoring_provider": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "response_id": "msg_011CgnSuThyXM37P3AdqCcf8"
+        },
+        "review_models": {
+          "model_reviewer": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "response_id": "msg_011CgnTEnCViToxcBLNqDpL3"
+          }
+        },
+        "promoted_at_unix": 1794003658.8025992
+      }
     ]
   },
   {
@@ -1519,8 +1762,10 @@
     "source_id": "Barbell_Curls_Lying_Against_An_Incline",
     "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
     "name": "Barbell Curls Lying Against An Incline",
-    "status": "catalog_only",
-    "body_sim_exercise_ids": [],
+    "status": "promoted",
+    "body_sim_exercise_ids": [
+      "exercise.barbell_curl.incline_bench_chest_supported"
+    ],
     "category": "strength",
     "equipment": "barbell",
     "level": "beginner",
@@ -1542,6 +1787,25 @@
     "source_images": [
       "Barbell_Curls_Lying_Against_An_Incline/0.jpg",
       "Barbell_Curls_Lying_Against_An_Incline/1.jpg"
+    ],
+    "promotions": [
+      {
+        "exercise_id": "exercise.barbell_curl.incline_bench_chest_supported",
+        "revision_sha256": "b2dd965dc4d430e8f21726adbc7e9bc48b3326ff3c75a43751b591604aa6d4bb",
+        "authoring_provider": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "response_id": "msg_011CgnSvhZgqeT4DHzEzes3B"
+        },
+        "review_models": {
+          "model_reviewer": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "response_id": "msg_011CgnTG9mozd6yNnetpmh73"
+          }
+        },
+        "promoted_at_unix": 1794003675.088569
+      }
     ]
   },
   {
@@ -1699,8 +1963,10 @@
     "source_id": "Barbell_Hack_Squat",
     "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
     "name": "Barbell Hack Squat",
-    "status": "catalog_only",
-    "body_sim_exercise_ids": [],
+    "status": "promoted",
+    "body_sim_exercise_ids": [
+      "exercise.barbell_hack_squat.standing_bilateral"
+    ],
     "category": "strength",
     "equipment": "barbell",
     "level": "intermediate",
@@ -1726,6 +1992,25 @@
     "source_images": [
       "Barbell_Hack_Squat/0.jpg",
       "Barbell_Hack_Squat/1.jpg"
+    ],
+    "promotions": [
+      {
+        "exercise_id": "exercise.barbell_hack_squat.standing_bilateral",
+        "revision_sha256": "838c2f1a2cddf2aba7cd56d1ced9961bacdc41d6ac4c2349aa14826f1d5b0b8f",
+        "authoring_provider": {
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "response_id": "msg_011CgnT1aoHCYWzspZLvzkgH"
+        },
+        "review_models": {
+          "model_reviewer": {
+            "provider": "anthropic",
+            "model": "claude-sonnet-5-5",
+            "response_id": "msg_011CgnTKCxdKJL6CG5x7f1p2"
+          }
+        },
+        "promoted_at_unix": 1794003723.140129
+      }
     ]
   },
   {

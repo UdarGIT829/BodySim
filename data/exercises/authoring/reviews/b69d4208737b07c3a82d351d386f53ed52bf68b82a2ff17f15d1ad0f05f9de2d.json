@@ -1,0 +1,63 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "b69d4208737b07c3a82d351d386f53ed52bf68b82a2ff17f15d1ad0f05f9de2d",
+  "status": "changes_requested",
+  "updated_at_unix": 1794003542.05235,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794003510.62245,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.laterality / proposed_definition.kinematic_profile.primary_joint_actions[0]",
+          "finding": "Laterality 'unilateral' makes limb-joint actions count only on the right (working) side, so hip_joint/extension is credited only to the right leg. The frames show a bilateral hip hinge with both feet planted and turned out. The trailing (left) glute max and hamstrings are heavily loaded, especially in the stretched bottom position. The tracer instead gives right glute max 1.0 and right hamstrings and adductor magnus 0.6-0.7 as primary, and left glute max 0.28, left hamstrings 0.14 and left adductor magnus 0.07 as stabilizers. This is a materially wrong, one-sided lower-body pattern. The assumption that the working side is not fixed by the instructions also does not justify it, because the hinge is not one-sided.",
+          "suggested_correction": "Model the hip hinge as bilateral. If the schema requires choosing a laterality, use a bilateral one so hip extension counts on both legs, and handle the one-arm overhead load through the shoulder, grip and trunk demands. Alternatively, document why only one hip should be primary and justify it from the frames, which show both legs hinging."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Stabilization demands count on both sides, so the non-working left arm (held behind the back, unloaded) receives the same grip, wrist_stability, shoulder_position_hold, glenohumeral and scapular demand as the loaded right arm. Left flexor digitorum profundus is 0.35 and left clavicular deltoid is 0.35, for example. This overstates left-hand and forearm involvement. It is a tracer limitation, but reviewers should note it.",
+          "suggested_correction": "Use laterality or demand choices that keep unloaded-arm involvement low where the tracer allows, or note the limitation in the assumptions."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The assumptions say the arm is locked out overhead under load, but no demand reaches the triceps (elbow_joint_integrity is absent), so triceps brachii and anconeus are zero. Holding a straight elbow under an overhead load plausibly involves at least minimal triceps and anconeus work.",
+          "suggested_correction": "Consider adding elbow_joint_integrity (anconeus and medial triceps) for the loaded arm, or explain why the elbow is passive."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The frames show the torso turning toward the bell, with the head and eyes tracking it, and a lateral hip shift toward the bell side. Lumbar rotation and hip abduction/adduction are dismissed as secondary, so the trace gives glute medius and obliques only indirect credit. anti_rotation_torso is present, but the trunk-rotation component of the movement is not represented as an action.",
+          "suggested_correction": "Reconsider whether lumbar rotation or frontal-plane hip control (for example pelvic_leveling_frontal or hip abduction) belongs in the definition, and state the rationale either way."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgnT5CiMTGaKiQX1thRDf",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 11969.0,
+          "output_tokens": 3523.0
+        }
+      },
+      "summary": "The exercise identity (standing single-arm overhead kettlebell windmill, feet planted, bell locked out) is well supported by the instructions and frames. The tracer output has a materially wrong hip pattern, though. The hip hinge in a windmill loads both hips, but the unilateral laterality credits hip extension to the right side only. That makes right glute max and right hamstrings primary (1.0 and 0.7) and drops the left glute max and hamstrings to weak stabilizers (0.28 and 0.14). The spinal side-bend, oblique and quadratus lumborum pattern is reasonable. The overhead isometric arm work is only partly captured."
+    }
+  }
+}

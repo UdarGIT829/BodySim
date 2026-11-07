@@ -23,6 +23,11 @@
   },
   "format_version": 1.0,
   "revisions": {
+    "408c883dec12bd43c417a674839804bb4e68ce3e31d4d0df3dafb3ca6e760cbf": {
+      "cleared_at_unix": 1794002889.42788,
+      "reason": "Cleared rejected candidates in bulk.",
+      "revision_id": "Single-Arm_Push-Up@408c883dec12"
+    },
     "53b8f0f26cb0b2f8500a2ab08d4471b2b4f534b3a9fb5d73b5b45572be0fa0c0": {
       "cleared_at_unix": 1794001373.16073,
       "reason": "Cleared rejected candidates in bulk.",

@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "6c90548d744aab09ce55e9e8f7df1ac9032b8532cc478123933c55e7932e5bad",
+  "revision_id": "3_4_Sit-Up@6c90548d744a",
+  "exercise_id": "exercise.sit_up.three_quarter_feet_anchored",
+  "source_catalog_id": "catalog.free_exercise_db.3_4_Sit-Up",
+  "mapped_muscles": 38,
+  "promoted_at_unix": 1794002675.9479747,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "ccc636ff5fc5359bf8c31a393381a0201786b9f219f30499391bc640e3db09e0",
+    "data/exercises/engagement_profiles.json": "f6d816e4d2a1ba5198c4bf9ac33ac41f14d2caa7423fd65f03deb9681363768d",
+    "data/exercises/catalog/candidates.json": "91625d984cb029cf52b97a70e69e3ed09d8ec01b16b81f0107ab873d07eb735f",
+    "data/exercises/sources/free_exercise_db_media.json": "40db8445841e63e2d48f03916c5df2ee99248d6350d8cde1656908f6240659f3"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "fa901724eff7daded7bb4d21bdb9bb01ead2f1087945f9ff76fa4d325af1dca2",
+    "data/exercises/engagement_profiles.json": "4ab6e93151921aec8bb3f3dd7c175415ef06360e56471ab0ced34d5879b9aa24",
+    "data/exercises/catalog/candidates.json": "9b8491c2059a199fd709a8e737c850160b043b5348ecf7ebd52b273939819ffd",
+    "data/exercises/sources/free_exercise_db_media.json": "9c007723a8484a34b604f5118a94089d5b7699316ab05199122137db369377b6"
+  }
+}

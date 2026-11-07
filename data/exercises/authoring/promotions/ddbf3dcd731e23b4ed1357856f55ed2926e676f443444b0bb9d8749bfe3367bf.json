@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "ddbf3dcd731e23b4ed1357856f55ed2926e676f443444b0bb9d8749bfe3367bf",
+  "revision_id": "Barbell_Curl@ddbf3dcd731e",
+  "exercise_id": "exercise.barbell_curl.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Curl",
+  "mapped_muscles": 114,
+  "promoted_at_unix": 1794003658.8025992,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "d16c5723159abfa3913e4583d0100afce31842383f47c61072f3923ddad854cb",
+    "data/exercises/engagement_profiles.json": "f942d4addb0d7ccf640c35f4512bf945ffbee8717ae63cdb7f24ce19da45a940",
+    "data/exercises/catalog/candidates.json": "2ca1eceb0e2034910ed8f0124afb74bc6d4ac0ee2c9073ac3c624111407acbeb",
+    "data/exercises/sources/free_exercise_db_media.json": "4dd4fb2c1cd7a1841c0dcb8a4b55aab7a4fdb8f97b7930137fe39f3a86d0bda1"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "4b35b27fbb0cc6b2894482c5bd8c7f26a849c121bcd74949f8c6d49362f2646c",
+    "data/exercises/engagement_profiles.json": "7aa3702275f08e493a46fc3b963caa53883c823e488df9f3ed78932d7a49ef83",
+    "data/exercises/catalog/candidates.json": "c76001ac13ff9aeced1cbd29834df147c8d638302737aec8abd329b88df6a7b8",
+    "data/exercises/sources/free_exercise_db_media.json": "add451ceda577ebbd4fa4984c3eb96701f126c08fa6f0169368e03bb97c63f85"
+  }
+}

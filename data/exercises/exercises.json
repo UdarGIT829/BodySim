@@ -388,5 +388,193 @@
       ],
       "stabilization_demands": ["glenohumeral_stabilization", "grip", "postural_stabilization", "scapular_stabilization", "shoulder_position_hold", "wrist_stability"]
     }
+  },
+  {
+    "id": "exercise.sit_up.three_quarter_feet_anchored",
+    "name": "3/4 Sit-Up",
+    "variant": "three_quarter_feet_anchored",
+    "aliases": ["3/4_sit-up", "three_quarter_sit-up", "feet_anchored_sit-up"],
+    "movement_families": ["trunk_flexion"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "closed_chain",
+      "primary_joint_actions": [
+        {"joint": "lumbar_spine", "movement": "flexion"},
+        {"joint": "hip_joint", "movement": "flexion"}
+      ],
+      "stabilization_demands": ["pelvic_alignment"]
+    }
+  },
+  {
+    "id": "exercise.ab_crunch_machine.seated_selectorized",
+    "name": "Ab Crunch Machine",
+    "variant": "seated_selectorized",
+    "aliases": ["seated_ab_crunch_machine", "machine_crunch"],
+    "movement_families": ["trunk_flexion"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "lumbar_spine", "movement": "flexion"}
+      ],
+      "stabilization_demands": ["grip"]
+    }
+  },
+  {
+    "id": "exercise.cable_shoulder_press.standing_alternating",
+    "name": "Alternating Cable Shoulder Press",
+    "variant": "standing_alternating",
+    "aliases": ["alternating_cable_overhead_press", "standing_alternating_cable_shoulder_press"],
+    "movement_families": ["vertical_push"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "glenohumeral_joint", "movement": "abduction"},
+        {"joint": "glenohumeral_joint", "movement": "flexion"},
+        {"joint": "scapulothoracic_joint", "movement": "upward_rotation"},
+        {"joint": "elbow_joint", "movement": "extension"}
+      ],
+      "stabilization_demands": ["anti_extension_spine", "anti_rotation_torso", "grip", "humeral_head_stabilization", "postural_stabilization", "wrist_stability"]
+    }
+  },
+  {
+    "id": "exercise.alternate_hammer_curl.standing_alternating",
+    "name": "Alternate Hammer Curl",
+    "variant": "standing_alternating",
+    "aliases": ["alternating_hammer_curl", "alternate_dumbbell_hammer_curl"],
+    "movement_families": ["elbow_flexion"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "elbow_joint", "movement": "flexion"}
+      ],
+      "stabilization_demands": ["grip", "postural_stabilization", "shoulder_position_hold", "wrist_stability"]
+    }
+  },
+  {
+    "id": "exercise.heel_toucher.alternating_supine",
+    "name": "Alternate Heel Touchers",
+    "variant": "alternating_supine",
+    "aliases": ["alternating_heel_touches", "heel_touchers", "lateral_crunch_heel_touch"],
+    "movement_families": ["trunk_flexion"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "lumbar_spine", "movement": "flexion"},
+        {"joint": "lumbar_spine", "movement": "lateral_flexion"}
+      ],
+      "stabilization_demands": ["anti_extension_spine"]
+    }
+  },
+  {
+    "id": "exercise.alternating_dumbbell_curl.incline_seated",
+    "name": "Alternate Incline Dumbbell Curl",
+    "variant": "incline_seated_alternating",
+    "aliases": ["alternating_incline_dumbbell_curl", "incline_alternating_dumbbell_curl"],
+    "movement_families": ["elbow_flexion"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "elbow_joint", "movement": "flexion"},
+        {"joint": "radioulnar_joint", "movement": "supination"}
+      ],
+      "stabilization_demands": ["grip", "shoulder_position_hold", "wrist_stability"]
+    }
+  },
+  {
+    "id": "exercise.kettlebell_floor_press.alternating_supine",
+    "name": "Alternating Kettlebell Floor Press",
+    "variant": "alternating_supine",
+    "aliases": ["alternating_floor_press", "alternating_kettlebell_floor_press"],
+    "movement_families": ["horizontal_push"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "glenohumeral_joint", "movement": "horizontal_adduction"},
+        {"joint": "elbow_joint", "movement": "extension"}
+      ],
+      "stabilization_demands": ["anti_rotation_torso", "glenohumeral_stabilization", "grip", "wrist_stability"]
+    }
+  },
+  {
+    "id": "exercise.barbell_curl.standing_bilateral",
+    "name": "Barbell Curl",
+    "variant": "standing_bilateral",
+    "aliases": ["standing_barbell_curl", "straight_bar_curl"],
+    "movement_families": ["elbow_flexion"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "elbow_joint", "movement": "flexion"}
+      ],
+      "stabilization_demands": ["grip", "postural_stabilization", "shoulder_position_hold", "wrist_stability"]
+    }
+  },
+  {
+    "id": "exercise.barbell_curl.incline_bench_chest_supported",
+    "name": "Barbell Curls Lying Against An Incline",
+    "variant": "incline_bench_chest_supported",
+    "aliases": ["barbell_curl_lying_against_an_incline", "prone_incline_barbell_curl", "chest-supported_incline_barbell_curl"],
+    "movement_families": ["elbow_flexion"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "elbow_joint", "movement": "flexion"}
+      ],
+      "stabilization_demands": ["grip", "shoulder_position_hold", "wrist_stability"]
+    }
+  },
+  {
+    "id": "exercise.barbell_hack_squat.standing_bilateral",
+    "name": "Barbell Hack Squat",
+    "variant": "standing_bilateral",
+    "aliases": ["barbell_hack_squat", "hack_squat_with_barbell", "behind-the-legs_barbell_squat"],
+    "movement_families": ["squat"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "closed_chain",
+      "primary_joint_actions": [
+        {"joint": "knee_joint", "movement": "extension"},
+        {"joint": "hip_joint", "movement": "extension"},
+        {"joint": "ankle_joint", "movement": "plantarflexion"}
+      ],
+      "stabilization_demands": ["anti_flexion_spine", "grip", "intra_abdominal_pressure", "knee_joint_stability", "postural_stabilization", "wrist_stability"]
+    }
+  },
+  {
+    "id": "exercise.kettlebell_overhead_press.standing_alternating",
+    "name": "Alternating Kettlebell Press",
+    "variant": "standing_alternating",
+    "aliases": ["alternating_kettlebell_press", "alternating_kettlebell_overhead_press", "alternating_kettlebell_shoulder_press"],
+    "movement_families": ["vertical_push"],
+    "laterality": "bilateral",
+    "input_mode": "repetitions",
+    "kinematic_profile": {
+      "kinetic_chain_type": "open_chain",
+      "primary_joint_actions": [
+        {"joint": "elbow_joint", "movement": "extension"},
+        {"joint": "glenohumeral_joint", "movement": "flexion"},
+        {"joint": "glenohumeral_joint", "movement": "abduction"},
+        {"joint": "scapulothoracic_joint", "movement": "upward_rotation"}
+      ],
+      "stabilization_demands": ["anti_extension_spine", "anti_rotation_torso", "grip", "postural_stabilization", "scapular_stabilization", "wrist_stability"]
+    }
   }
 ]

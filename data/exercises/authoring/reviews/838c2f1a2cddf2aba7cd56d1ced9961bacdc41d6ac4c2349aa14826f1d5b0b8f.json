@@ -1,0 +1,62 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "838c2f1a2cddf2aba7cd56d1ced9961bacdc41d6ac4c2349aa14826f1d5b0b8f",
+  "status": "accepted",
+  "updated_at_unix": 1794003722.99949,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794003700.58725,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[2] (ankle_joint/plantarflexion)",
+          "finding": "Plantarflexion makes both gastrocnemius heads primary movers (0.8 and 0.7). In a deep squat the gastrocnemius is shortened at the knee and its knee-flexion action opposes knee extension. Its contribution is probably smaller than soleus, so a primary-mover role overstates it. The action itself is defensible for the heel-driven rise.",
+          "suggested_correction": "Keep ankle plantarflexion, but note the gastrocnemius overstatement as a known table limitation, or treat the ankle as a stabilizing demand such as ankle_stability or postural_sway_control instead of a primary action."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The bar hangs from straight arms and loads the shoulder girdle. The definition has no scapular or shoulder demand, so the upper trapezius, rhomboids and deltoids show no involvement. Those muscles resist the bar's downward pull and would show some low-level isometric activity.",
+          "suggested_correction": "Consider adding scapular_stabilization or scapular_retraction_stability, and possibly shoulder_position_hold, to represent holding the bar against the arms' weight."
+        },
+        {
+          "field_path": "assumptions[4]",
+          "finding": "The assumption says the torso stays fairly upright. In the bottom frame the trunk is inclined forward at roughly 40-50 degrees with the hips pushed back, which is more like a deadlift-style squat. This supports hip extension and anti_flexion_spine, but the assumption wording does not match the frame.",
+          "suggested_correction": "Reword the assumption to say the torso leans forward in the bottom position with a neutral spine. Consider adding pelvic_alignment if trunk lean should be reflected."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands (intra_abdominal_pressure)",
+          "finding": "Heavy bracing is not described in the source instructions, which only cue breathing in on the way down and out on the way up. The demand adds many low-weight stabilizers, including pelvic floor muscles, the diaphragm and pyramidalis, that rest on an inferred demand.",
+          "suggested_correction": "Keep it only if the intended load is heavy. Otherwise state in the assumptions that moderate to heavy loading is assumed."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgnTKCxdKJL6CG5x7f1p2",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 10815.0,
+          "output_tokens": 2475.0
+        }
+      },
+      "summary": "The frames show a bilateral barbell squat with the bar held at arm's length behind the legs. The bottom position has the hips and knees flexed and the top is a full stand. Identity, bilateral laterality, closed_chain, the squat family and the knee extension, hip extension and ankle plantarflexion actions are supported by the instructions and images. Grip and wrist_stability fit a loaded bar in the hands, and anti_flexion_spine, intra_abdominal_pressure and postural_stabilization fit a loaded upright squat. The tracer pattern is broadly right: quadriceps, glutes, hamstrings and soleus lead, with adductor magnus as a synergist, trunk extensors and deep core as stabilizers, and forearm and hand muscles at low stabilizer coefficients. Remaining issues are refinements, not materially wrong claims."
+    }
+  }
+}

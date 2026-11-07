@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "afabde9bd7d070ad4b4c2feed705d5fe9d6725654e70d8ad7a99ca257740b496",
+  "revision_id": "Alternate_Heel_Touchers@afabde9bd7d0",
+  "exercise_id": "exercise.heel_toucher.alternating_supine",
+  "source_catalog_id": "catalog.free_exercise_db.Alternate_Heel_Touchers",
+  "mapped_muscles": 26,
+  "promoted_at_unix": 1794003575.315162,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "dd80b5973dc6860e39fe5cfcfc1247396f320fc4dc85849f448144b363254837",
+    "data/exercises/engagement_profiles.json": "8de248056385da8ef2740234d711f39a1725cc27eb7c81cbb74b0c52ea925c15",
+    "data/exercises/catalog/candidates.json": "b1a5021e0f296d9974b1863871257eef19822f1050bb81c788c3666cda1ac24f",
+    "data/exercises/sources/free_exercise_db_media.json": "2096e7ee4106a7de8458fdf224cad56914dfc60b609b5d43f811b96683dd900a"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "fedf284ca6332f16259eff1d0e5543a2ee1dca2b7717f4dfc26aaf1e1726da92",
+    "data/exercises/engagement_profiles.json": "790775cb780f18acf83f6810493023100d4c20643e13afac695bb2d96950b927",
+    "data/exercises/catalog/candidates.json": "91d9d21902452d11cfae53c18161f75423ca64eed0681f1463971741c967cddc",
+    "data/exercises/sources/free_exercise_db_media.json": "2c3745dc2b3964b7086203e9eb7a19da0ca379f7fc37b4e3c0f04c50fe519f37"
+  }
+}

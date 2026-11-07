@@ -1,0 +1,52 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "b2dd965dc4d430e8f21726adbc7e9bc48b3326ff3c75a43751b591604aa6d4bb",
+  "status": "accepted",
+  "updated_at_unix": 1794003674.94927,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794003659.15289,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.primary[muscle.brachioradialis]",
+          "finding": "Brachioradialis is scored 0.7 and labelled primary, but with a supinated grip it is relatively less active than in neutral or pronated curls. The table assigns the weight, so this is acceptable. The medium confidence is appropriate.",
+          "suggested_correction": "No change required. Optionally note in the assumptions that brachioradialis contribution is lower than the coefficient suggests for an underhand grip."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "With the arms hanging under load the scapulae need some light control, and scapular_stabilization is not modeled. The effect is minor and the bench supports the torso, so omitting it is defensible.",
+          "suggested_correction": "Optionally consider scapular_stabilization in a future revision if reviewers judge scapular control material for hanging-arm curls."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgnTG9mozd6yNnetpmh73",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 7413.0,
+          "output_tokens": 1714.0
+        }
+      },
+      "summary": "The frames show a chest-supported prone incline barbell curl. The man lies face-down on an incline bench, holds a straight bar bilaterally with an underhand grip, and the upper arms hang from the shoulders and stay in place while only the forearms curl the bar. Bilateral laterality, open-chain classification and elbow_joint/flexion as the sole primary joint action are all supported. The demands grip, wrist_stability and shoulder_position_hold fit a loaded bar held in the hands with the upper arms kept still. Omitting postural and trunk demands is reasonable because the bench supports the torso. The tracer output is a plausible pattern: brachialis, both biceps heads and brachioradialis as primary movers, forearm and hand stabilizers, anterior deltoid-dominant shoulder holders, and no trunk, leg or triceps involvement. No biomechanically material claim is unsupported or contradictory."
+    }
+  }
+}

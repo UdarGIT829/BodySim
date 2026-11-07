@@ -1,0 +1,57 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "d9be19429368ef90627b005e4ffa83ac7b1ec19cd7668ba5b924576737006f86",
+  "status": "accepted",
+  "updated_at_unix": 1794002738.64219,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794002719.80968,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.laterality",
+          "finding": "Bilateral laterality is a defensible way to model alternating presses, but the source shows only one arm pressing at a time. Treating both limbs as simultaneously working may slightly overstate concurrent limb loading in the tracer, and the other arm's isometric hold at shoulder height is not modelled.",
+          "suggested_correction": "A future revision could state explicitly that bilateral means alternating, equal work per side. It could also consider shoulder_position_hold to represent the non-pressing arm's isometric hold."
+        },
+        {
+          "field_path": "candidate_trace_report.profile.muscles[muscle_id=muscle.clavicular_head_of_pectoralis_major]",
+          "finding": "The clavicular pectoralis major reaches primary status (0.7) only through glenohumeral flexion. It is plausible for an overhead press with forward elbows, but it is borderline and sensitive to the assumed pressing plane, which the frames only partly resolve.",
+          "suggested_correction": "Be explicit about the pressing plane. If the path is closer to pure scaption or abduction, consider whether flexion should remain a primary action."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization adds low-coefficient lower-limb and trunk stabilizers such as adductor magnus, hamstrings and gastrocnemius. These are defensible for standing but contribute some noise to the profile. The coefficients are small and do not distort the overall pattern.",
+          "suggested_correction": "Keep the stabilizer set as is, or consider adding ankle_stability or knee-related demands only if the frames show a challenging stance."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgnS4ucqxkfgEAiHUvy3o",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 12077.0,
+          "output_tokens": 2308.0
+        }
+      },
+      "summary": "The frames and instructions support a standing, alternating single-arm cable overhead press, which fits the vertical_push family and open-chain kinetics. The joint actions (glenohumeral abduction and flexion, scapular upward rotation, elbow extension) give a plausible mover set: the three deltoid heads that act in the press (anterior, middle and the acromial part), serratus anterior, trapezius, triceps and supraspinatus. The posterior deltoid is not a primary mover, which is correct. The stabilization demands (anti-extension, anti-rotation, grip, wrist stability, humeral head stabilization, postural stabilization) map to trunk, cuff, forearm and stance muscles that are reasonable for this exercise. Earlier council concerns about facial or ubiquitous stabilizers and a primary posterior deltoid do not apply to this revision: it has 110 stabilizers out of 466, no facial muscles, and no posterior deltoid in the output. The remaining issues are minor."
+    }
+  }
+}

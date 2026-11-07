@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "fe539b16dac4e65636eac32adbdf11962f2e7cbef6391c78a23d3c8428427435",
+  "revision_id": "Alternating_Kettlebell_Press@fe539b16dac4",
+  "exercise_id": "exercise.kettlebell_overhead_press.standing_alternating",
+  "source_catalog_id": "catalog.free_exercise_db.Alternating_Kettlebell_Press",
+  "mapped_muscles": 142,
+  "promoted_at_unix": 1794072453.7189286,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "8ccbbcd59d70d3eb8bca61e68e0f59b136cc610677fb353a7ae49324eb5c545f",
+    "data/exercises/engagement_profiles.json": "de33bc3bcaacc86d8903086d22360d7a97a7084cb4f8a38f05313f5811b1f96e",
+    "data/exercises/catalog/candidates.json": "bc0160a6ba39eaf7f3cded040f80ef852ea440f067f9d17b9ac4bd293e6091d0",
+    "data/exercises/sources/free_exercise_db_media.json": "852a3f0bbc733457de8e3a4b44a66cda643c69c502d139ba5bacd41263bcae3e"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "d9615b0d8567fa1a4c6c15215b617c76730fc5e987fad4d03b1aa4b907886369",
+    "data/exercises/engagement_profiles.json": "47a68b5a755200afc943f105f3bc7e167030c1a176630e7e5a904d977e70bd6a",
+    "data/exercises/catalog/candidates.json": "3b3f47a99786a39e4fbd0cb53b5faaf368f0c0ecfa50bbadea6c42b1edcd624f",
+    "data/exercises/sources/free_exercise_db_media.json": "7b7185b323c8ab74d5bfda0fe5661d064cefe846de65092df7b6a4cb28b09671"
+  }
+}

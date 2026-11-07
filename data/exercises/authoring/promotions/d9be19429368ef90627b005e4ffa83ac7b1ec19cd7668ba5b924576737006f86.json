@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "d9be19429368ef90627b005e4ffa83ac7b1ec19cd7668ba5b924576737006f86",
+  "revision_id": "Alternating_Cable_Shoulder_Press@d9be19429368",
+  "exercise_id": "exercise.cable_shoulder_press.standing_alternating",
+  "source_catalog_id": "catalog.free_exercise_db.Alternating_Cable_Shoulder_Press",
+  "mapped_muscles": 140,
+  "promoted_at_unix": 1794002738.7672272,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "20c7ac1f881c51f6cd4ccb74cc5abe208d5f26aa734a719966b6065c11e2f9db",
+    "data/exercises/engagement_profiles.json": "08b5d455cbd79bb920352be43ecc8280a2eba42f12c47aa693271803f0adc442",
+    "data/exercises/catalog/candidates.json": "1db63c3cdcd8189ab1b8f9d3cfb3ce4280bd6d95f5d3fb78c9ca0ea975ce8b60",
+    "data/exercises/sources/free_exercise_db_media.json": "d01435c9cffba498ac75cb8e7d555139b0f7e57bc13b0b91165d22735917c178"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "13f633164cb156b72ba0e75a47d9bec114aea79d48feaeb00f5e019495bb0371",
+    "data/exercises/engagement_profiles.json": "1498d89980c5c52e7848ef2b4df3f2908447f08c17d5c08f19ad31e5d3e6eab5",
+    "data/exercises/catalog/candidates.json": "8c4c36bc68daf792880e400f7d61432ae53cb5830a40dfeacf4bf2e374a65ad9",
+    "data/exercises/sources/free_exercise_db_media.json": "b57458ed81dd573fce8dcab35cd76f77c7846821e4dbf6988c410f6b57fff9e9"
+  }
+}

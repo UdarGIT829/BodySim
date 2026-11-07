@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "b2dd965dc4d430e8f21726adbc7e9bc48b3326ff3c75a43751b591604aa6d4bb",
+  "revision_id": "Barbell_Curls_Lying_Against_An_Incline@b2dd965dc4d4",
+  "exercise_id": "exercise.barbell_curl.incline_bench_chest_supported",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Curls_Lying_Against_An_Incline",
+  "mapped_muscles": 72,
+  "promoted_at_unix": 1794003675.088569,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "4b35b27fbb0cc6b2894482c5bd8c7f26a849c121bcd74949f8c6d49362f2646c",
+    "data/exercises/engagement_profiles.json": "7aa3702275f08e493a46fc3b963caa53883c823e488df9f3ed78932d7a49ef83",
+    "data/exercises/catalog/candidates.json": "c76001ac13ff9aeced1cbd29834df147c8d638302737aec8abd329b88df6a7b8",
+    "data/exercises/sources/free_exercise_db_media.json": "add451ceda577ebbd4fa4984c3eb96701f126c08fa6f0169368e03bb97c63f85"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "5cb5c9c1863f2c7ebcc5a4c1bc58c75e1483cc20e93072eac9719ee60c8ab1de",
+    "data/exercises/engagement_profiles.json": "415f7eeaea2b6cba54a33fcfb0226f22c6b00e59dc159ff29415fb44b64706fd",
+    "data/exercises/catalog/candidates.json": "58297a1344354ff933d6db7ef8e2ee117372314cb3a62815aa32475a72395d2c",
+    "data/exercises/sources/free_exercise_db_media.json": "8f038020a8b7980558102d6134b57f94a57c7283d83b90b5037a482b5ba59295"
+  }
+}

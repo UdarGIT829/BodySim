@@ -19688,5 +19688,247 @@
         "bytes": 68174
       }
     ]
+  },
+  {
+    "exercise_id": "exercise.sit_up.three_quarter_feet_anchored",
+    "source": "free_exercise_db",
+    "source_id": "3_4_Sit-Up",
+    "source_name": "3/4 Sit-Up",
+    "repository": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense",
+    "images": [
+      {
+        "source_path": "3_4_Sit-Up/0.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/3_4_Sit-Up/0.jpg",
+        "sha256": "26e9975d65f43036864a55db2ad536d18d466c906501b57102a58319eb78e7be",
+        "bytes": 38047
+      },
+      {
+        "source_path": "3_4_Sit-Up/1.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/3_4_Sit-Up/1.jpg",
+        "sha256": "ca79885d0ca86a84d98bc87f58fd42044c9b6d08771ea5f3241f3e148c4c601c",
+        "bytes": 39230
+      }
+    ]
+  },
+  {
+    "exercise_id": "exercise.ab_crunch_machine.seated_selectorized",
+    "source": "free_exercise_db",
+    "source_id": "Ab_Crunch_Machine",
+    "source_name": "Ab Crunch Machine",
+    "repository": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense",
+    "images": [
+      {
+        "source_path": "Ab_Crunch_Machine/0.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Ab_Crunch_Machine/0.jpg",
+        "sha256": "5072e495268201939f171a0ea2a038f7bae5f3a75f9972397a99f9c8696c6b84",
+        "bytes": 84612
+      },
+      {
+        "source_path": "Ab_Crunch_Machine/1.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Ab_Crunch_Machine/1.jpg",
+        "sha256": "fb435de8360740438f7097e29afe5329e2f5b2d3a8b73d14cea259583013fd58",
+        "bytes": 82997
+      }
+    ]
+  },
+  {
+    "exercise_id": "exercise.cable_shoulder_press.standing_alternating",
+    "source": "free_exercise_db",
+    "source_id": "Alternating_Cable_Shoulder_Press",
+    "source_name": "Alternating Cable Shoulder Press",
+    "repository": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense",
+    "images": [
+      {
+        "source_path": "Alternating_Cable_Shoulder_Press/0.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Alternating_Cable_Shoulder_Press/0.jpg",
+        "sha256": "a94a9e2775c6e1f07a52bf5cf99a3e14401c79cb3dd30b671860f0b27a3c7688",
+        "bytes": 44800
+      },
+      {
+        "source_path": "Alternating_Cable_Shoulder_Press/1.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Alternating_Cable_Shoulder_Press/1.jpg",
+        "sha256": "f7076a6de1d64678eb7294832c8384002aa57c0419f478e25baa0ef5b407ca1a",
+        "bytes": 45486
+      }
+    ]
+  },
+  {
+    "exercise_id": "exercise.alternate_hammer_curl.standing_alternating",
+    "source": "free_exercise_db",
+    "source_id": "Alternate_Hammer_Curl",
+    "source_name": "Alternate Hammer Curl",
+    "repository": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense",
+    "images": [
+      {
+        "source_path": "Alternate_Hammer_Curl/0.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Alternate_Hammer_Curl/0.jpg",
+        "sha256": "ba832f1ce6e855060ccbcec1bde3545298c322fbb82ea27be5fbd49892009754",
+        "bytes": 58965
+      },
+      {
+        "source_path": "Alternate_Hammer_Curl/1.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Alternate_Hammer_Curl/1.jpg",
+        "sha256": "9aee7afaf1ef6014673988ffbdfc12209fbb20b18925de0a4df87df31b719879",
+        "bytes": 58120
+      }
+    ]
+  },
+  {
+    "exercise_id": "exercise.heel_toucher.alternating_supine",
+    "source": "free_exercise_db",
+    "source_id": "Alternate_Heel_Touchers",
+    "source_name": "Alternate Heel Touchers",
+    "repository": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense",
+    "images": [
+      {
+        "source_path": "Alternate_Heel_Touchers/0.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Alternate_Heel_Touchers/0.jpg",
+        "sha256": "fc92981d33d1d9848d8fab691ad2fe317a75c8ef07f9f4245cdbb199d8058f87",
+        "bytes": 61685
+      },
+      {
+        "source_path": "Alternate_Heel_Touchers/1.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Alternate_Heel_Touchers/1.jpg",
+        "sha256": "a31b1c713c82e6fee05538cd050a731ffe21674c08e60a98753f1975470a71a3",
+        "bytes": 60807
+      }
+    ]
+  },
+  {
+    "exercise_id": "exercise.alternating_dumbbell_curl.incline_seated",
+    "source": "free_exercise_db",
+    "source_id": "Alternate_Incline_Dumbbell_Curl",
+    "source_name": "Alternate Incline Dumbbell Curl",
+    "repository": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense",
+    "images": [
+      {
+        "source_path": "Alternate_Incline_Dumbbell_Curl/0.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Alternate_Incline_Dumbbell_Curl/0.jpg",
+        "sha256": "1a0e534d6408c13cbc4702c97d83dfa1fb365e14c220063156d65871aeaeeaf0",
+        "bytes": 55564
+      },
+      {
+        "source_path": "Alternate_Incline_Dumbbell_Curl/1.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Alternate_Incline_Dumbbell_Curl/1.jpg",
+        "sha256": "a57042c3ed7eaaaa006a7e671f6cfa7474787a5b055b3cdb3b863b8e12d5fa2f",
+        "bytes": 56425
+      }
+    ]
+  },
+  {
+    "exercise_id": "exercise.kettlebell_floor_press.alternating_supine",
+    "source": "free_exercise_db",
+    "source_id": "Alternating_Floor_Press",
+    "source_name": "Alternating Floor Press",
+    "repository": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense",
+    "images": [
+      {
+        "source_path": "Alternating_Floor_Press/0.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Alternating_Floor_Press/0.jpg",
+        "sha256": "eab274fa6d8b6db1f55ba381af4d6bc52170bf51baf8348e5353fefee904371c",
+        "bytes": 36188
+      },
+      {
+        "source_path": "Alternating_Floor_Press/1.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Alternating_Floor_Press/1.jpg",
+        "sha256": "82534ca9ec9efc5426401484bdbd9d0e5e02639d2b5fa56401ba277452019646",
+        "bytes": 35685
+      }
+    ]
+  },
+  {
+    "exercise_id": "exercise.barbell_curl.standing_bilateral",
+    "source": "free_exercise_db",
+    "source_id": "Barbell_Curl",
+    "source_name": "Barbell Curl",
+    "repository": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense",
+    "images": [
+      {
+        "source_path": "Barbell_Curl/0.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Barbell_Curl/0.jpg",
+        "sha256": "eb409ec1cced4d85c91c41920e66d8b2f0e4736dee43c01eab953fdcbeace673",
+        "bytes": 60608
+      },
+      {
+        "source_path": "Barbell_Curl/1.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Barbell_Curl/1.jpg",
+        "sha256": "27474187c68680520d3c6dbd3a452bb11f1e77b5474d9143517f43d02f5d8c0e",
+        "bytes": 62920
+      }
+    ]
+  },
+  {
+    "exercise_id": "exercise.barbell_curl.incline_bench_chest_supported",
+    "source": "free_exercise_db",
+    "source_id": "Barbell_Curls_Lying_Against_An_Incline",
+    "source_name": "Barbell Curls Lying Against An Incline",
+    "repository": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense",
+    "images": [
+      {
+        "source_path": "Barbell_Curls_Lying_Against_An_Incline/0.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Barbell_Curls_Lying_Against_An_Incline/0.jpg",
+        "sha256": "1a4ad26343c8cacc716903d0e8da5649cbb13c571b5cac6a9ba8deffcb5b6025",
+        "bytes": 57059
+      },
+      {
+        "source_path": "Barbell_Curls_Lying_Against_An_Incline/1.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Barbell_Curls_Lying_Against_An_Incline/1.jpg",
+        "sha256": "66678bfc192ed2aea2acd56823c8c57fbe00f2d8b62af35c8fcaad88255aa0cb",
+        "bytes": 57457
+      }
+    ]
+  },
+  {
+    "exercise_id": "exercise.barbell_hack_squat.standing_bilateral",
+    "source": "free_exercise_db",
+    "source_id": "Barbell_Hack_Squat",
+    "source_name": "Barbell Hack Squat",
+    "repository": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense",
+    "images": [
+      {
+        "source_path": "Barbell_Hack_Squat/0.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Barbell_Hack_Squat/0.jpg",
+        "sha256": "5f88db8ea171cc094f4d155f3ce3eec69036aa2067ea4fe4101cea34cad7f5d5",
+        "bytes": 71900
+      },
+      {
+        "source_path": "Barbell_Hack_Squat/1.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Barbell_Hack_Squat/1.jpg",
+        "sha256": "6160d5fae8d00a17b8093a920e519b1094779958bfd8c719427f4556c5f9f53d",
+        "bytes": 69805
+      }
+    ]
+  },
+  {
+    "exercise_id": "exercise.kettlebell_overhead_press.standing_alternating",
+    "source": "free_exercise_db",
+    "source_id": "Alternating_Kettlebell_Press",
+    "source_name": "Alternating Kettlebell Press",
+    "repository": "https://github.com/yuhonas/free-exercise-db",
+    "license": "Unlicense",
+    "images": [
+      {
+        "source_path": "Alternating_Kettlebell_Press/0.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Alternating_Kettlebell_Press/0.jpg",
+        "sha256": "583eac2365483c9f6fa0e26efe3fc05777e80ccb3276d5e7ff9b745ce7b394cd",
+        "bytes": 34033
+      },
+      {
+        "source_path": "Alternating_Kettlebell_Press/1.jpg",
+        "resource_path": "res://assets/exercises/free_exercise_db/Alternating_Kettlebell_Press/1.jpg",
+        "sha256": "1802ac208d925d3e65f6865f4f9497fceb5063120c9554df26675364a26284af",
+        "bytes": 33750
+      }
+    ]
   }
 ]

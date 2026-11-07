@@ -1,0 +1,62 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "42b6dc67b3c8ba8dab7f3467dd57eb34b3b5ca50136b08224c41f8679632159b",
+  "status": "accepted",
+  "updated_at_unix": 1794002719.42506,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794002698.90175,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Grip is the only stabilization demand, and it adds 32 hand and forearm stabilizer entries (flexor digitorum profundus at 0.35, flexor pollicis longus at 0.21, and others). The hands rest on or lightly hold handles near the head or face while force is transmitted largely through the arm pads and the machine arm, so these entries may overstate sustained grip effort relative to the abdominal work. This does not make the pattern materially wrong, because the instructions do say to grab the handles.",
+          "suggested_correction": "In a future revision, consider whether grip is a deliberate requirement or only light handle contact. Document that the hand muscles are low-effort stabilizers, or drop grip if the handles are only steadied."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The instruction 'begin to lift the legs up as you crunch' conflicts with 'relaxing your legs and feet'. The frames show the legs and knees essentially static, which supports omitting hip_joint/flexion. The ambiguity is only resolved by assumption, and the field confidence is medium.",
+          "suggested_correction": "State explicitly in the classification reasons that the frames show no leg or hip motion and that the foot pads act as an anchor, so hip flexion is intentionally excluded."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "Open_chain is plausible for a machine where the trunk flexes against a moving lever arm, but the feet are anchored under pads and the pelvis is supported. A reviewer could read this as partly fixed-base, and the field confidence is only medium. The label has no effect on the tracer output.",
+          "suggested_correction": "Briefly justify open_chain by the moving resistance lever and the absence of a fixed distal segment bearing body weight."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The upper arms rest on pads and the arms are held at about 90 degrees, so some isometric shoulder or elbow holding may occur. The output has no shoulder_position_hold or elbow_stability entries. This is minor and arguably correct, since the pads support the arms.",
+          "suggested_correction": "Consider noting in the assumptions that arm-pad support makes shoulder_position_hold and elbow_stability unnecessary."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgnS3NERK8HJBUEKjHTR1",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 5374.0,
+          "output_tokens": 2380.0
+        }
+      },
+      "summary": "The frames show a seated selectorized crunch machine with the pelvis supported on the seat, the feet under roller pads, the arms on pads and the hands on top handles. The torso moves from upright to flexed between frames, while the knees and hips look essentially unchanged. A bilateral open-chain lumbar_spine/flexion action in the trunk_flexion family is supported. The tracer output is plausible: rectus abdominis is primary at 1.0, both obliques are synergists at 0.6, and psoas major is a minor synergist at 0.2. The 'lift the legs' cue is contradicted by the same text ('relaxing your legs and feet') and by the frames, so omitting hip_joint/flexion is defensible. Grip is a reasonable inclusion because the instructions say to grab the handles. The remaining concerns are non-blocking calibration issues."
+    }
+  }
+}

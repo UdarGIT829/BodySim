@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "838c2f1a2cddf2aba7cd56d1ced9961bacdc41d6ac4c2349aa14826f1d5b0b8f",
+  "revision_id": "Barbell_Hack_Squat@838c2f1a2cdd",
+  "exercise_id": "exercise.barbell_hack_squat.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Hack_Squat",
+  "mapped_muscles": 131,
+  "promoted_at_unix": 1794003723.140129,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "5cb5c9c1863f2c7ebcc5a4c1bc58c75e1483cc20e93072eac9719ee60c8ab1de",
+    "data/exercises/engagement_profiles.json": "415f7eeaea2b6cba54a33fcfb0226f22c6b00e59dc159ff29415fb44b64706fd",
+    "data/exercises/catalog/candidates.json": "58297a1344354ff933d6db7ef8e2ee117372314cb3a62815aa32475a72395d2c",
+    "data/exercises/sources/free_exercise_db_media.json": "8f038020a8b7980558102d6134b57f94a57c7283d83b90b5037a482b5ba59295"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "1dbdce1cc5f64dfeb288a57bc952dd1fbb3dc08019b68301a7eeae4103842420",
+    "data/exercises/engagement_profiles.json": "1c4f5860ab1c9e2caa957899593ad0885a8538416774e57a7f8ea38992ab777b",
+    "data/exercises/catalog/candidates.json": "bb4e4dd990f9a9c0d40e6adc556d9618953f8673fe7bc007113a9098cb51a887",
+    "data/exercises/sources/free_exercise_db_media.json": "70770d5e65a8c1067afc3f1395f5083ae99f57017374331273e7a7c49677c36f"
+  }
+}

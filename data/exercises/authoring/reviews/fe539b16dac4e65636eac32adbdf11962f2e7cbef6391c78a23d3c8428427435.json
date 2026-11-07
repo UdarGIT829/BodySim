@@ -1,0 +1,62 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "fe539b16dac4e65636eac32adbdf11962f2e7cbef6391c78a23d3c8428427435",
+  "status": "accepted",
+  "updated_at_unix": 1794072453.58378,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794072433.48484,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "No rotator-cuff demand such as glenohumeral_stabilization or humeral_head_stabilization is listed. Under a loaded overhead press, infraspinatus, subscapularis and teres minor are absent from the output, and only supraspinatus appears (via abduction). The cuff's centring role is under-represented.",
+          "suggested_correction": "Consider adding glenohumeral_stabilization or humeral_head_stabilization so the infraspinatus, subscapularis and teres minor are engaged."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The contralateral arm holds a kettlebell isometrically in the rack position with a flexed elbow. The definition has no demand covering this, such as elbow_stability or shoulder_position_hold, so the racked-arm elbow flexors and anterior deltoid hold are not represented. Because laterality is bilateral, such a demand would apply to both arms.",
+          "suggested_correction": "Consider adding elbow_stability (and possibly shoulder_position_hold) to represent the stationary racked kettlebell."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.laterality",
+          "finding": "Bilateral laterality makes the tracer show both arms pressing at full coefficient at once, although only one arm presses per repetition. This is acceptable as a set-level aggregate, but it is medium-confidence and depends on the stated assumption that the arms alternate.",
+          "suggested_correction": "If the vocabulary has an alternating or per-rep unilateral representation, consider using it or documenting that the profile is a set-level aggregate."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Including glenohumeral abduction alongside flexion promotes supraspinatus to primary (0.7), and the clavicular pectoralis major and ascending trapezius also reach primary. The frames show the press in or near the scapular plane, so this is plausible, but these primary labels are table-driven rather than clearly shown by the frames.",
+          "suggested_correction": "Keep abduction only if the scapular-plane path is deliberate. Otherwise consider the effect of dropping it on the primary versus synergist roles."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgoxfoPWhNM3a1knkHtwe",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 11634.0,
+          "output_tokens": 2482.0
+        }
+      },
+      "summary": "The definition is supported by the instructions and the frames. The first frame shows two kettlebells racked at the shoulders, and the second shows one arm pressed fully overhead while the other stays racked. A standing, open-chain, vertical_push press built on elbow extension, glenohumeral flexion and abduction, and scapular upward rotation is accurate. The tracer's primary movers are the deltoid heads, the triceps heads, serratus anterior, upper and lower trapezius, supraspinatus and clavicular pectoralis major. Bilateral laterality is a defensible set-level choice because the arms alternate. The stabilizer pattern is broadly sensible for a standing press with a held contralateral load. The gaps below are real but do not make the muscle pattern materially wrong."
+    }
+  }
+}

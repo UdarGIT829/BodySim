@@ -1,0 +1,134 @@
+{
+  "additional_context": "",
+  "authoring_response": {
+    "assumptions": [],
+    "classification": "ambiguous",
+    "classification_reasons": [
+      "The exercise name says hip adduction, but instruction step 4 says to raise the leg out to the side, which is hip abduction. The primary joint action is therefore unresolved.",
+      "The instructions put the band on the right ankle with the left side toward the post. The frames show the band on the leg nearest the post, which is the person's left leg. The leg is out to the side in frame 1 and back at midline in frame 2, which looks like adduction against the band.",
+      "Two still frames do not show the full path or the band tension, so the working leg and the direction of resistance cannot be confirmed from the images alone."
+    ],
+    "field_confidence": {
+      "input_mode": "high",
+      "kinetic_chain_type": "medium",
+      "laterality": "low",
+      "primary_joint_actions": "low",
+      "stabilization_demands": "low",
+      "variant": "low"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "band_hip_adductions"
+      ],
+      "id": "exercise.band_hip_adductions.standard",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "primary_joint_actions": [],
+        "stabilization_demands": []
+      },
+      "laterality": "bilateral",
+      "movement_families": [],
+      "name": "Band Hip Adductions",
+      "variant": "standard"
+    },
+    "questions_requiring_context": [
+      "Is the intended exertion hip adduction (the leg nearest the post pulling inward against the band) or hip abduction (the far leg raised out to the side)?",
+      "Which leg is the working leg, and which side faces the band anchor?",
+      "Should the definition be a single-leg unilateral version, or a left or right specific variant?"
+    ]
+  },
+  "candidate_trace_report": {
+    "gate_version": "candidate_trace_gate_v3",
+    "ok": false,
+    "exercise_id": "exercise.band_hip_adductions.standard",
+    "errors": [
+      "definition: Exercise 'exercise.band_hip_adductions.standard': 'primary_joint_actions' must be a non-empty list."
+    ],
+    "warnings": [],
+    "summary": {
+      "total_muscles": 0,
+      "mapped_muscles": 0,
+      "zero_muscles": 0,
+      "role_counts": {
+        "primary": 0,
+        "synergist": 0,
+        "stabilizer": 0,
+        "none": 0
+      },
+      "joint_action_coverage": [],
+      "stabilization_coverage": []
+    },
+    "provenance": {
+      "tracer": "kinematic_tracer_v3",
+      "structures_sha256": "cad14011d986446b2af5871cad93575dac1da7e34ea6cfbc67b551bf2a3d8edf",
+      "muscle_actions_sha256": "52d1b3acbc4257f2c85de5f308437d20ac78b895a3274d1db8cbbde3cfd3bfcf",
+      "canonical_exercises_sha256": "d9615b0d8567fa1a4c6c15215b617c76730fc5e987fad4d03b1aa4b907886369"
+    },
+    "profile": {
+      "exercise_id": "exercise.band_hip_adductions.standard",
+      "total_muscles": 0,
+      "mapped_muscles": 0,
+      "zero_muscles": 0,
+      "muscles": []
+    }
+  },
+  "catalog_id": "catalog.free_exercise_db.Band_Hip_Adductions",
+  "format_version": 1,
+  "provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1,
+      "frame_count": 2,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Band_Hip_Adductions/0.jpg",
+        "Band_Hip_Adductions/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [],
+      "classification": "ambiguous",
+      "classification_reasons": [
+        "The exercise name says hip adduction, but instruction step 4 says to raise the leg out to the side, which is hip abduction. The primary joint action is therefore unresolved.",
+        "The instructions put the band on the right ankle with the left side toward the post. The frames show the band on the leg nearest the post, which is the person's left leg. The leg is out to the side in frame 1 and back at midline in frame 2, which looks like adduction against the band.",
+        "Two still frames do not show the full path or the band tension, so the working leg and the direction of resistance cannot be confirmed from the images alone."
+      ],
+      "field_confidence": {
+        "input_mode": "high",
+        "kinetic_chain_type": "medium",
+        "laterality": "low",
+        "primary_joint_actions": "low",
+        "stabilization_demands": "low",
+        "variant": "low"
+      },
+      "proposed_definition": null,
+      "questions_requiring_context": [
+        "Is the intended exertion hip adduction (the leg nearest the post pulling inward against the band) or hip abduction (the far leg raised out to the side)?",
+        "Which leg is the working leg, and which side faces the band anchor?",
+        "Should the definition be a single-leg unilateral version, or a left or right specific variant?"
+      ]
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011Cgox9awpBocYFxwGq3sEg",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 15842.0,
+      "input_tokens": 1714.0,
+      "output_tokens": 1025.0
+    }
+  },
+  "saved_at_unix": 1794072034.0712,
+  "source_id": "Band_Hip_Adductions",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "authoring_draft",
+  "validation_errors": [
+    "proposed_definition: must be null unless classification is supported",
+    "classification: ambiguous proposals cannot advance to definition_candidate"
+  ]
+}

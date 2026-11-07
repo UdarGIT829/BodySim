@@ -1,0 +1,57 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "ad30aa574adcf3cc966ded616517bbd7ac601cb04661a425be0a8ffd9e5bed45",
+  "status": "accepted",
+  "updated_at_unix": 1794002698.52527,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794002676.21268,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.stabilization_demands[0]",
+          "finding": "anti_extension_hip is only weakly supported. The hands clasp the thigh and hold the hip position, so the hip flexors may do little work. The assumption of light bracing therefore sits uneasily with the claim that the hip flexors resist hamstring tension. The instructions also make bracing optional ('if necessary'). If the hands do not brace, the hip flexors hold the thigh against gravity, which is closer to an isometric hip-flexion hold than to anti-extension.",
+          "suggested_correction": "State explicitly whether the thigh is held mainly by the hands or by the hip flexors. If it is held by the hands, consider dropping the demand or keeping it as clearly low-weight. If it is held by the hip flexors, describe it as a hip flexion hold."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "Because stabilization demands count on both sides, the passive left leg lying on the floor shows iliacus.left, psoas_major.left and rectus_femoris.left as engaged. The frames do not support any real demand on the resting leg. These left-side values are small (0.21 and 0.105) and come from the tracer's bilateral rule. They still slightly misrepresent the muscle pattern.",
+          "suggested_correction": "Accept the bilateral artifact as a known tracer limitation, or drop or reduce the hip-related demand if the hip flexor hold is judged negligible."
+        },
+        {
+          "field_path": "proposed_definition.name",
+          "finding": "The name and catalog tags suggest a hamstring-targeted exercise, but the tracer profile shows only quadriceps work with no hamstring involvement. The hamstrings are being stretched (lengthened), not actively contracting. A user could read the profile as contradicting the name.",
+          "suggested_correction": "Add a note or alias that makes clear this is an active knee extension that stretches the hamstrings, so the muscle profile is not read as a hamstring-strengthening pattern."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgnS1hL5Wz6QKrBXNs5L9",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 3403.0,
+          "output_tokens": 2572.0
+        }
+      },
+      "summary": "The frames support a supine, single-leg open-chain exercise. The working hip stays flexed near 90 degrees with the thigh held by clasped hands, and the knee extends until the leg is near vertical before returning. Knee extension is the one real concentric action. The tracer's primary pattern (vastus lateralis, vastus medialis, vastus intermedius, rectus femoris on the right) matches that action. Laterality as unilateral, input mode as repetitions, and the knee_extension movement family are reasonable. The remaining issues are minor and do not change the main muscle pattern, so they are non-blocking."
+    }
+  }
+}

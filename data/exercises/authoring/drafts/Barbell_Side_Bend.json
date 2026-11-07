@@ -1,0 +1,130 @@
+{
+  "additional_context": "",
+  "authoring_response": {
+    "assumptions": [],
+    "classification": "unsupported",
+    "classification_reasons": [
+      "The movement is a standing lateral trunk bend, with lumbar_spine/lateral_flexion as the main joint action. None of the primary_movement_family enum values represents lateral trunk flexion. trunk_flexion is sagittal-plane flexion, so using it would be a nearest-but-wrong category.",
+      "The frames also appear to conflict with the text. Frame 1 matches the text, with the barbell racked across the upper back. In frame 2 the lifter appears to hold the bar upright in one hand overhead while bending sideways, which is not the described back-loaded bend. This would also need clarifying if the family vocabulary were extended."
+    ],
+    "field_confidence": {
+      "input_mode": "high",
+      "kinetic_chain_type": "medium",
+      "laterality": "low",
+      "primary_joint_actions": "medium",
+      "stabilization_demands": "low",
+      "variant": "low"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "barbell_side_bend"
+      ],
+      "id": "exercise.barbell_side_bend.standard",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "primary_joint_actions": [],
+        "stabilization_demands": []
+      },
+      "laterality": "bilateral",
+      "movement_families": [],
+      "name": "Barbell Side Bend",
+      "variant": "standard"
+    },
+    "questions_requiring_context": [
+      "Is the intended load a barbell held across the upper back, as in the text, or a bar held in one hand, as in frame 2?",
+      "Can a lateral trunk flexion or side bend movement family be added to the vocabulary?"
+    ]
+  },
+  "candidate_trace_report": {
+    "gate_version": "candidate_trace_gate_v3",
+    "ok": false,
+    "exercise_id": "exercise.barbell_side_bend.standard",
+    "errors": [
+      "definition: Exercise 'exercise.barbell_side_bend.standard': 'primary_joint_actions' must be a non-empty list."
+    ],
+    "warnings": [],
+    "summary": {
+      "total_muscles": 0,
+      "mapped_muscles": 0,
+      "zero_muscles": 0,
+      "role_counts": {
+        "primary": 0,
+        "synergist": 0,
+        "stabilizer": 0,
+        "none": 0
+      },
+      "joint_action_coverage": [],
+      "stabilization_coverage": []
+    },
+    "provenance": {
+      "tracer": "kinematic_tracer_v3",
+      "structures_sha256": "cad14011d986446b2af5871cad93575dac1da7e34ea6cfbc67b551bf2a3d8edf",
+      "muscle_actions_sha256": "52d1b3acbc4257f2c85de5f308437d20ac78b895a3274d1db8cbbde3cfd3bfcf",
+      "canonical_exercises_sha256": "d9615b0d8567fa1a4c6c15215b617c76730fc5e987fad4d03b1aa4b907886369"
+    },
+    "profile": {
+      "exercise_id": "exercise.barbell_side_bend.standard",
+      "total_muscles": 0,
+      "mapped_muscles": 0,
+      "zero_muscles": 0,
+      "muscles": []
+    }
+  },
+  "catalog_id": "catalog.free_exercise_db.Barbell_Side_Bend",
+  "format_version": 1,
+  "provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1,
+      "frame_count": 2,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Barbell_Side_Bend/0.jpg",
+        "Barbell_Side_Bend/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [],
+      "classification": "unsupported",
+      "classification_reasons": [
+        "The movement is a standing lateral trunk bend, with lumbar_spine/lateral_flexion as the main joint action. None of the primary_movement_family enum values represents lateral trunk flexion. trunk_flexion is sagittal-plane flexion, so using it would be a nearest-but-wrong category.",
+        "The frames also appear to conflict with the text. Frame 1 matches the text, with the barbell racked across the upper back. In frame 2 the lifter appears to hold the bar upright in one hand overhead while bending sideways, which is not the described back-loaded bend. This would also need clarifying if the family vocabulary were extended."
+      ],
+      "field_confidence": {
+        "input_mode": "high",
+        "kinetic_chain_type": "medium",
+        "laterality": "low",
+        "primary_joint_actions": "medium",
+        "stabilization_demands": "low",
+        "variant": "low"
+      },
+      "proposed_definition": null,
+      "questions_requiring_context": [
+        "Is the intended load a barbell held across the upper back, as in the text, or a bar held in one hand, as in frame 2?",
+        "Can a lateral trunk flexion or side bend movement family be added to the vocabulary?"
+      ]
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgoxNMu7YESRRGeAvpqzb",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 15842.0,
+      "input_tokens": 1771.0,
+      "output_tokens": 797.0
+    }
+  },
+  "saved_at_unix": 1794072204.53668,
+  "source_id": "Barbell_Side_Bend",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "authoring_draft",
+  "validation_errors": [
+    "proposed_definition: must be null unless classification is supported",
+    "classification: unsupported proposals cannot advance to definition_candidate"
+  ]
+}

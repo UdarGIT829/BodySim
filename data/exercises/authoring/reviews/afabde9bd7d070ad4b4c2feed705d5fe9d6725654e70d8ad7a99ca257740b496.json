@@ -1,0 +1,57 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "afabde9bd7d070ad4b4c2feed705d5fe9d6725654e70d8ad7a99ca257740b496",
+  "status": "accepted",
+  "updated_at_unix": 1794003575.18169,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794003555.84424,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "anti_extension_spine is justified by the one-second hold, but that hold is an isometric flexion contraction, which the primary flexion action already covers. The pelvis rests on the floor and no external load pulls the spine into extension. The demand adds only transversus abdominis at 0.105, and the other muscles it serves are already primary movers.",
+          "suggested_correction": "Drop the demand or state a clearer rationale for it. If transversus abdominis engagement is the intent, consider whether a more fitting demand applies, and avoid presenting the hold as anti-extension."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.primary[muscle.quadratus_lumborum]",
+          "finding": "Quadratus lumborum is scored 0.9 and ranked as a primary mover above the obliques (0.7) because of the generic lateral_flexion action. This is a short-range crunch, mostly flexion with some side bend, so quadratus lumborum is plausibly a synergist rather than a co-equal primary. The profile slightly overstates it relative to the obliques. This comes from the table weight and does not change the overall pattern.",
+          "suggested_correction": "In a future revision, consider whether the lateral_flexion action should be kept at all, or whether the ranking should be treated as table-driven and noted as such. The movement is not an isolated side bend."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist[erector spinae, psoas_major, latissimus_dorsi, intertransversarii]",
+          "finding": "Longissimus thoracis and iliocostalis lumborum (0.6), iliocostalis thoracis, psoas major (0.3), latissimus dorsi (0.1) and the lateral intertransversarii appear only because lateral_flexion is applied to both sides. The spine flexes against gravity in a supine crunch, so these muscles are likely minimally active. Psoas is not indicated either, since the feet are planted and no hip flexion is claimed. These low-weight synergists are somewhat inflated, but they do not distort the primary pattern.",
+          "suggested_correction": "Accept as a table-driven artifact, or note in the assumptions that the minor back and hip muscles reflect the lateral_flexion action and not strong activation."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgnT8Y5WuPu87o459oUjo",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 4668.0,
+          "output_tokens": 2254.0
+        }
+      },
+      "summary": "The frames and instructions show a supine, no-load lateral crunch. Knees are bent, feet are flat and apart, the pelvis stays down, and the shoulders lift a few inches toward alternating heels. The definition's core claims hold up: repetitions, bilateral alternating laterality, trunk_flexion family, an open chain with no lower-limb or hand-loading demands, and lumbar flexion plus lateral flexion as the main actions. The trace puts rectus abdominis and both obliques in the primary group, which is right for this movement. The remaining concerns are about weighting and demand choice, and none produces a materially wrong muscle pattern."
+    }
+  }
+}

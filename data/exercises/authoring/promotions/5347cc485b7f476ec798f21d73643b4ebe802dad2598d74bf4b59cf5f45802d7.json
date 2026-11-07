@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "5347cc485b7f476ec798f21d73643b4ebe802dad2598d74bf4b59cf5f45802d7",
+  "revision_id": "Alternate_Incline_Dumbbell_Curl@5347cc485b7f",
+  "exercise_id": "exercise.alternating_dumbbell_curl.incline_seated",
+  "source_catalog_id": "catalog.free_exercise_db.Alternate_Incline_Dumbbell_Curl",
+  "mapped_muscles": 74,
+  "promoted_at_unix": 1794003620.7767272,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "fedf284ca6332f16259eff1d0e5543a2ee1dca2b7717f4dfc26aaf1e1726da92",
+    "data/exercises/engagement_profiles.json": "790775cb780f18acf83f6810493023100d4c20643e13afac695bb2d96950b927",
+    "data/exercises/catalog/candidates.json": "91d9d21902452d11cfae53c18161f75423ca64eed0681f1463971741c967cddc",
+    "data/exercises/sources/free_exercise_db_media.json": "2c3745dc2b3964b7086203e9eb7a19da0ca379f7fc37b4e3c0f04c50fe519f37"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "1da53c2e9a90915937e0339b0d466108dcbee0f77f7c45d6c6e020e328f75579",
+    "data/exercises/engagement_profiles.json": "b6baffd2cb10cf06f045215c4ff430998d44ded3078995eb54b675dbe058d32f",
+    "data/exercises/catalog/candidates.json": "eef380654697a4ff110c2f87cf9be2f7c331f2179ee8e3c4d4064397723b87b5",
+    "data/exercises/sources/free_exercise_db_media.json": "a117c8d3ca45f7fc2fa86e9e2f1f6be1ca0988a1b52ccdfb99cd3bac0378c9a9"
+  }
+}

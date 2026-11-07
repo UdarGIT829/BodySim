@@ -1,0 +1,78 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "9f42a78e535a1df0030777d921a8792fe53bbdb77c89f7a8273b48c715bab175",
+  "status": "changes_requested",
+  "updated_at_unix": 1794003700.44941,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794003675.44841,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[ankle_joint/plantarflexion]",
+          "finding": "Listing ankle plantarflexion as a primary joint action makes soleus 1.0 and medial and lateral gastrocnemius 0.8 and 0.7 primary movers, equal to the quadriceps and gluteus maximus. The assumptions call this only a modest contribution. In a deep squat the knee is heavily flexed, which puts the gastrocnemii at a mechanical disadvantage. Ankle motion is mainly dorsiflexion and a small plantarflexion on the rise, so the calf pattern is overstated.",
+          "suggested_correction": "Remove ankle plantarflexion from primary_joint_actions. Represent the soleus contribution through stabilization demands such as ankle_stability or postural_sway_control, so the calves are stabilizers or low-weight contributors rather than primary movers."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands[grip, wrist_stability]",
+          "finding": "The frames show the bar resting on the upper back with the hands only steadying it at the sides. The hands do not carry the load, unlike a deadlift or carry. The grip and wrist_stability demands engage about 50 hand and forearm muscles (FDP 0.35, wrist extensors and flexors up to 0.28, thenar and interossei muscles). That is an unsupported and materially wrong pattern for a back squat.",
+          "suggested_correction": "Drop grip and wrist_stability, or justify them with evidence that the hands bear significant load. If the lifter does not actively grip against load, the forearm and hand muscles should be zero."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands[shoulder_position_hold]",
+          "finding": "The bar load acts on the back through the traps and rear shoulders and is not resisted by isometric shoulder flexion. Because of this demand, the clavicular deltoid gets 0.35 and the pectoralis major heads and coracobrachialis get low nonzero values. The justification, that the upper arms are held abducted and externally rotated, does not describe a load acting on the arm from further down the limb.",
+          "suggested_correction": "Remove shoulder_position_hold, or replace it with a demand that matches the real shoulder-girdle task of holding the bar shelf."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The main upper-body task of the squat is retracting and bracing the scapulae to create the shelf that supports the bar. No scapular demand is present, so the trapezius (transverse and ascending parts) and the rhomboids are explicit zeros. The tracer therefore shows hand and deltoid involvement but no scapular retractors.",
+          "suggested_correction": "Add scapular_retraction_stability or scapular_stabilization to represent the upper-back bar support, and remove the unsupported hand and shoulder-hold demands."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.variant",
+          "finding": "The high-bar label is given high confidence, but the instructions say only 'back of your shoulders (slightly below the neck)'. The frames do not clearly separate a high-bar from a low-bar position, and the catalog name is simply Barbell Full Squat.",
+          "suggested_correction": "Use a neutral variant such as bilateral_back_squat, or lower the confidence for the bar position."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[hip_joint/extension]",
+          "finding": "Hip extension makes the three hamstrings primary movers at 0.7. In a deep squat their contribution is limited by length-tension, so they are probably better shown as synergists. This follows the tracer table and is not independently blocking.",
+          "suggested_correction": "Consider whether the profile can express a lower hamstring contribution, or flag the overstatement as a known table limitation."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "No hip-level control demand such as femoral_head_stabilization or a hip external rotation action is present, despite the toes-out stance and deep hip flexion. The deep rotators and gluteus minimus are therefore zero.",
+          "suggested_correction": "Consider adding femoral_head_stabilization if the deep-squat hip control is meant to be represented."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgnTHMRKn1Wodd5oSVBJJ",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 11775.0,
+          "output_tokens": 3149.0
+        }
+      },
+      "summary": "The identity is a bilateral barbell back squat with a closed chain, a squat movement family and a clear deep-squat range in both frames. The proposed joint actions and demands still produce a materially distorted muscle pattern. Ankle plantarflexion makes the gastrocnemii and soleus primary movers, which contradicts the authoring assumption of a modest contribution. Grip and wrist_stability engage dozens of hand and forearm muscles on a bar that rests on the back. The upper-back bar support is not represented, so trapezius and rhomboids are zero."
+    }
+  }
+}

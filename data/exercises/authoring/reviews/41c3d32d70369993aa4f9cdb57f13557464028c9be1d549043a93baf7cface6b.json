@@ -1,0 +1,28 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1,
+  "revision_sha256": "41c3d32d70369993aa4f9cdb57f13557464028c9be1d549043a93baf7cface6b",
+  "status": "changes_requested",
+  "updated_at_unix": 1794072337.77777,
+  "votes": {
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "source.category",
+          "finding": "The source exercise is a stretch.",
+          "suggested_correction": "None; skip stretches when authoring."
+        }
+      ],
+      "confidence": "high",
+      "decision": "reject",
+      "non_blocking_findings": [],
+      "provider_metadata": {
+        "model": "rule: no stretches",
+        "provider": "bodysim_rule",
+        "rule": "no_stretches"
+      },
+      "recorded_at_unix": 1794072337.77775,
+      "summary": "Stretches can't be represented: BodySim models muscles moving or holding a load, and a stretch lengthens them instead. Rejected by rule without a model review."
+    }
+  }
+}

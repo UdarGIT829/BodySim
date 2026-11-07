@@ -1,0 +1,62 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "a8875592b58e6f6a971a30c32a90219fc4d79aacd10a96623fccd35f45dc3cf3",
+  "status": "accepted",
+  "updated_at_unix": 1794072376.03416,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794072349.03505,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Stabilization demands count on both sides, so grip, wrist_stability, shoulder_position_hold, glenohumeral_stabilization and scapular_stabilization credit the non-working left arm equally. The frames show that hand held behind the back or resting at the hip without a load. The tracer therefore overstates left forearm, rotator cuff and deltoid involvement. The table cannot express a working side for stabilizers, so this is a modeling limitation and not an authoring error.",
+          "suggested_correction": "Document the limitation in the assumptions. If the tracer later supports side-specific stabilization, restrict the arm-specific demands to the kettlebell side."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The elbow is held locked out under load overhead, which implies isometric triceps and elbow work. No elbow demand is listed, so the triceps are an explicit zero in the tracer output.",
+          "suggested_correction": "Consider adding elbow_joint_integrity, which gives a small medial triceps and anconeus contribution, or justify omitting it."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Trunk rotation toward the floor and the hip rotation and abduction of the front leg are not modeled, although the frames show the torso turning as the lifter looks up at the bell. Obliques are already primary through lateral flexion, so the muscle pattern is not materially wrong. The movement description is incomplete.",
+          "suggested_correction": "Consider adding lumbar_spine/rotation or hip rotation and abduction actions if the authors judge them to be prime movers, or note why they are omitted."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "Only hip_hinge is listed. The side-bend and overhead-stability character of the exercise is not captured in the movement families.",
+          "suggested_correction": "Add a lateral trunk-flexion or overhead-stability family if the vocabulary offers one."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgoxZas2eMJ8AZ6jPJsys",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 11401.0,
+          "cache_read_input_tokens": 0.0,
+          "input_tokens": 13045.0,
+          "output_tokens": 3084.0
+        }
+      },
+      "summary": "The frames and instructions support a one-arm overhead kettlebell windmill: the load stays locked out overhead, both feet are planted and turned out, and the lifter hinges at the hips with side bend. The revision adopts a bilateral hip hinge, which resolves the earlier one-sided lower-body concern. Hip extension then credits glute max, hamstrings and adductor magnus on both legs. Lumbar lateral flexion credits the obliques and quadratus lumborum as primary movers. The overhead hold is carried by stabilization demands covering the rotator cuff, scapular, deltoid, wrist and grip muscles. Closed-chain and the hip_hinge family are reasonable. The remaining issues are minor or come from table limitations, so none block acceptance."
+    }
+  }
+}

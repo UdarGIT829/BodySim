@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "demoter": "demotion_v1",
+  "exercise_id": "exercise.hamstring_90_90_leg_extension.supine_unilateral",
+  "revision_sha256": "ad30aa574adcf3cc966ded616517bbd7ac601cb04661a425be0a8ffd9e5bed45",
+  "source_catalog_id": "catalog.free_exercise_db.90_90_Hamstring",
+  "source_status": "catalog_only",
+  "reason": "It is a stretch. BodySim models muscles moving or holding a load, so a stretch's profile is meaningless.",
+  "demoted_at_unix": 1794071677.265657,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "1dbdce1cc5f64dfeb288a57bc952dd1fbb3dc08019b68301a7eeae4103842420",
+    "data/exercises/engagement_profiles.json": "1c4f5860ab1c9e2caa957899593ad0885a8538416774e57a7f8ea38992ab777b",
+    "data/exercises/catalog/candidates.json": "bb4e4dd990f9a9c0d40e6adc556d9618953f8673fe7bc007113a9098cb51a887",
+    "data/exercises/sources/free_exercise_db_media.json": "70770d5e65a8c1067afc3f1395f5083ae99f57017374331273e7a7c49677c36f"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "ca016fd14bb8229fb2c77a61e175a8e9244120c03ef27bda52e77f8fe3a506c7",
+    "data/exercises/engagement_profiles.json": "6fb76c4a195212c8949502bdf4273077ce6ccc760e6808104123e4451948f07e",
+    "data/exercises/catalog/candidates.json": "6ac0214621b0e3c27ad69a6cd2b047701a1eefe9fa9e7d5d3902962df5c6ad4e",
+    "data/exercises/sources/free_exercise_db_media.json": "b4639d228afbdb88ff54bbd7df24069fcab32ba0401b27cd2bf65ea22f518616"
+  },
+  "promotion_record": {
+    "ok": true,
+    "promoter": "promotion_v1",
+    "revision_sha256": "ad30aa574adcf3cc966ded616517bbd7ac601cb04661a425be0a8ffd9e5bed45",
+    "revision_id": "90_90_Hamstring@ad30aa574adc",
+    "exercise_id": "exercise.hamstring_90_90_leg_extension.supine_unilateral",
+    "source_catalog_id": "catalog.free_exercise_db.90_90_Hamstring",
+    "mapped_muscles": 9,
+    "promoted_at_unix": 1794002698.6434467,
+    "files_before_sha256": {
+      "data/exercises/exercises.json": "fa901724eff7daded7bb4d21bdb9bb01ead2f1087945f9ff76fa4d325af1dca2",
+      "data/exercises/engagement_profiles.json": "4ab6e93151921aec8bb3f3dd7c175415ef06360e56471ab0ced34d5879b9aa24",
+      "data/exercises/catalog/candidates.json": "9b8491c2059a199fd709a8e737c850160b043b5348ecf7ebd52b273939819ffd",
+      "data/exercises/sources/free_exercise_db_media.json": "9c007723a8484a34b604f5118a94089d5b7699316ab05199122137db369377b6"
+    },
+    "files_after_sha256": {
+      "data/exercises/exercises.json": "479ee8a5d01cc613443b2ae78ff4a92acddc1cab9eae16ba6ef1de888df5365f",
+      "data/exercises/engagement_profiles.json": "432c00a9ae1ba7e21e2d22cbd5830345b915a55d09e3a3b5b7f520d343dca5b6",
+      "data/exercises/catalog/candidates.json": "7bfff5e464db118a4c6530e9464d21b081377411982b8ddf7d091b0aad1c6c3f",
+      "data/exercises/sources/free_exercise_db_media.json": "0630282d403293d96e5771bfb7d8081b486d4473710dc8951a769c7c0a294a60"
+    }
+  }
+}

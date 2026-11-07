@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "1b4d73eb833c99ca50cb6967b3f96398653116d4bd14f1bc55cbad79c2a0cf97",
+  "revision_id": "Alternate_Hammer_Curl@1b4d73eb833c",
+  "exercise_id": "exercise.alternate_hammer_curl.standing_alternating",
+  "source_catalog_id": "catalog.free_exercise_db.Alternate_Hammer_Curl",
+  "mapped_muscles": 114,
+  "promoted_at_unix": 1794003555.5262175,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "13f633164cb156b72ba0e75a47d9bec114aea79d48feaeb00f5e019495bb0371",
+    "data/exercises/engagement_profiles.json": "1498d89980c5c52e7848ef2b4df3f2908447f08c17d5c08f19ad31e5d3e6eab5",
+    "data/exercises/catalog/candidates.json": "8c4c36bc68daf792880e400f7d61432ae53cb5830a40dfeacf4bf2e374a65ad9",
+    "data/exercises/sources/free_exercise_db_media.json": "b57458ed81dd573fce8dcab35cd76f77c7846821e4dbf6988c410f6b57fff9e9"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "dd80b5973dc6860e39fe5cfcfc1247396f320fc4dc85849f448144b363254837",
+    "data/exercises/engagement_profiles.json": "8de248056385da8ef2740234d711f39a1725cc27eb7c81cbb74b0c52ea925c15",
+    "data/exercises/catalog/candidates.json": "b1a5021e0f296d9974b1863871257eef19822f1050bb81c788c3666cda1ac24f",
+    "data/exercises/sources/free_exercise_db_media.json": "2096e7ee4106a7de8458fdf224cad56914dfc60b609b5d43f811b96683dd900a"
+  }
+}

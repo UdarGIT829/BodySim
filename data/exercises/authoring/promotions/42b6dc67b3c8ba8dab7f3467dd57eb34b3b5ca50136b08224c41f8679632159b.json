@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "42b6dc67b3c8ba8dab7f3467dd57eb34b3b5ca50136b08224c41f8679632159b",
+  "revision_id": "Ab_Crunch_Machine@42b6dc67b3c8",
+  "exercise_id": "exercise.ab_crunch_machine.seated_selectorized",
+  "source_catalog_id": "catalog.free_exercise_db.Ab_Crunch_Machine",
+  "mapped_muscles": 40,
+  "promoted_at_unix": 1794002719.5424619,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "479ee8a5d01cc613443b2ae78ff4a92acddc1cab9eae16ba6ef1de888df5365f",
+    "data/exercises/engagement_profiles.json": "432c00a9ae1ba7e21e2d22cbd5830345b915a55d09e3a3b5b7f520d343dca5b6",
+    "data/exercises/catalog/candidates.json": "7bfff5e464db118a4c6530e9464d21b081377411982b8ddf7d091b0aad1c6c3f",
+    "data/exercises/sources/free_exercise_db_media.json": "0630282d403293d96e5771bfb7d8081b486d4473710dc8951a769c7c0a294a60"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "20c7ac1f881c51f6cd4ccb74cc5abe208d5f26aa734a719966b6065c11e2f9db",
+    "data/exercises/engagement_profiles.json": "08b5d455cbd79bb920352be43ecc8280a2eba42f12c47aa693271803f0adc442",
+    "data/exercises/catalog/candidates.json": "1db63c3cdcd8189ab1b8f9d3cfb3ce4280bd6d95f5d3fb78c9ca0ea975ce8b60",
+    "data/exercises/sources/free_exercise_db_media.json": "d01435c9cffba498ac75cb8e7d555139b0f7e57bc13b0b91165d22735917c178"
+  }
+}

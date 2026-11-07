@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "demoter": "demotion_v1",
+  "exercise_id": "exercise.kettlebell_windmill.single_arm_overhead",
+  "revision_sha256": "a8875592b58e6f6a971a30c32a90219fc4d79aacd10a96623fccd35f45dc3cf3",
+  "source_catalog_id": "catalog.free_exercise_db.Advanced_Kettlebell_Windmill",
+  "source_status": "catalog_only",
+  "reason": "Promoted as bilateral to work around tracer v2, so the free arm was traced as loaded. Re-author under tracer v3 as unilateral with one_sided_limbs [arm] and a both-sides hip hinge.",
+  "demoted_at_unix": 1794078679.163101,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "d9615b0d8567fa1a4c6c15215b617c76730fc5e987fad4d03b1aa4b907886369",
+    "data/exercises/engagement_profiles.json": "c77242d804c080c281cf7a810d11239d011a7a9aa1a4babb321b24f0bc395809",
+    "data/exercises/catalog/candidates.json": "3b3f47a99786a39e4fbd0cb53b5faaf368f0c0ecfa50bbadea6c42b1edcd624f",
+    "data/exercises/sources/free_exercise_db_media.json": "7b7185b323c8ab74d5bfda0fe5661d064cefe846de65092df7b6a4cb28b09671"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "9ddf515a2e3a747dbad6c53bc860564e0033cf404ac88b9ee970909e4290a4f2",
+    "data/exercises/engagement_profiles.json": "a2e8ad21a98d38d12fb8612b4d3c2a547a59da3e1a0be3e59cfb71197a09d513",
+    "data/exercises/catalog/candidates.json": "9f42f33891c3dccd7cb3b3ad44d5c172deb259b65571aef448a62daa57007af8",
+    "data/exercises/sources/free_exercise_db_media.json": "beccb46130c615cab01317bc285facc2c0cd8727b735206bff7b4e2dcb38d4bd"
+  },
+  "promotion_record": {
+    "ok": true,
+    "promoter": "promotion_v1",
+    "revision_sha256": "a8875592b58e6f6a971a30c32a90219fc4d79aacd10a96623fccd35f45dc3cf3",
+    "revision_id": "Advanced_Kettlebell_Windmill@a8875592b58e",
+    "exercise_id": "exercise.kettlebell_windmill.single_arm_overhead",
+    "source_catalog_id": "catalog.free_exercise_db.Advanced_Kettlebell_Windmill",
+    "mapped_muscles": 160,
+    "promoted_at_unix": 1794072376.176278,
+    "files_before_sha256": {
+      "data/exercises/exercises.json": "ca016fd14bb8229fb2c77a61e175a8e9244120c03ef27bda52e77f8fe3a506c7",
+      "data/exercises/engagement_profiles.json": "6fb76c4a195212c8949502bdf4273077ce6ccc760e6808104123e4451948f07e",
+      "data/exercises/catalog/candidates.json": "6ac0214621b0e3c27ad69a6cd2b047701a1eefe9fa9e7d5d3902962df5c6ad4e",
+      "data/exercises/sources/free_exercise_db_media.json": "b4639d228afbdb88ff54bbd7df24069fcab32ba0401b27cd2bf65ea22f518616"
+    },
+    "files_after_sha256": {
+      "data/exercises/exercises.json": "8ccbbcd59d70d3eb8bca61e68e0f59b136cc610677fb353a7ae49324eb5c545f",
+      "data/exercises/engagement_profiles.json": "de33bc3bcaacc86d8903086d22360d7a97a7084cb4f8a38f05313f5811b1f96e",
+      "data/exercises/catalog/candidates.json": "bc0160a6ba39eaf7f3cded040f80ef852ea440f067f9d17b9ac4bd293e6091d0",
+      "data/exercises/sources/free_exercise_db_media.json": "852a3f0bbc733457de8e3a4b44a66cda643c69c502d139ba5bacd41263bcae3e"
+    }
+  }
+}

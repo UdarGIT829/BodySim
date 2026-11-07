@@ -1,0 +1,128 @@
+{
+  "additional_context": "",
+  "authoring_response": {
+    "assumptions": [],
+    "classification": "unsupported",
+    "classification_reasons": [
+      "The exercise is a static standing balance hold on an unstable board, with duration as the input. None of the movement families (squat, hip_hinge, push, pull, carry, elbow, knee, ankle_plantarflexion or trunk_flexion) describes it. Choosing one would be a nearest-but-wrong category.",
+      "There is no clear concentric phase or intended joint action. The ankle and hip make small, continuous corrective adjustments in unspecified directions as the board tilts. Picking dorsiflexion, plantarflexion, inversion or eversion as a primary action would invent evidence.",
+      "Both frames show an upright bilateral stance with the arms held out for balance. The frames show no deliberate range-of-motion path, only different moments of the same balance correction.",
+      "The work is mainly postural sway control and ankle stability. The tracer can only represent these as stabilization demands attached to a valid movement family and at least one joint action, and this exercise has neither."
+    ],
+    "field_confidence": {
+      "input_mode": "high",
+      "kinetic_chain_type": "high",
+      "laterality": "high",
+      "primary_joint_actions": "low",
+      "stabilization_demands": "medium",
+      "variant": "medium"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "balance_board"
+      ],
+      "id": "exercise.balance_board.standard",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "primary_joint_actions": [],
+        "stabilization_demands": []
+      },
+      "laterality": "bilateral",
+      "movement_families": [],
+      "name": "Balance Board",
+      "variant": "standard"
+    },
+    "questions_requiring_context": []
+  },
+  "candidate_trace_report": {
+    "gate_version": "candidate_trace_gate_v3",
+    "ok": false,
+    "exercise_id": "exercise.balance_board.standard",
+    "errors": [
+      "definition: Exercise 'exercise.balance_board.standard': 'primary_joint_actions' must be a non-empty list."
+    ],
+    "warnings": [],
+    "summary": {
+      "total_muscles": 0,
+      "mapped_muscles": 0,
+      "zero_muscles": 0,
+      "role_counts": {
+        "primary": 0,
+        "synergist": 0,
+        "stabilizer": 0,
+        "none": 0
+      },
+      "joint_action_coverage": [],
+      "stabilization_coverage": []
+    },
+    "provenance": {
+      "tracer": "kinematic_tracer_v3",
+      "structures_sha256": "cad14011d986446b2af5871cad93575dac1da7e34ea6cfbc67b551bf2a3d8edf",
+      "muscle_actions_sha256": "52d1b3acbc4257f2c85de5f308437d20ac78b895a3274d1db8cbbde3cfd3bfcf",
+      "canonical_exercises_sha256": "d9615b0d8567fa1a4c6c15215b617c76730fc5e987fad4d03b1aa4b907886369"
+    },
+    "profile": {
+      "exercise_id": "exercise.balance_board.standard",
+      "total_muscles": 0,
+      "mapped_muscles": 0,
+      "zero_muscles": 0,
+      "muscles": []
+    }
+  },
+  "catalog_id": "catalog.free_exercise_db.Balance_Board",
+  "format_version": 1,
+  "provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1,
+      "frame_count": 2,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Balance_Board/0.jpg",
+        "Balance_Board/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [],
+      "classification": "unsupported",
+      "classification_reasons": [
+        "The exercise is a static standing balance hold on an unstable board, with duration as the input. None of the movement families (squat, hip_hinge, push, pull, carry, elbow, knee, ankle_plantarflexion or trunk_flexion) describes it. Choosing one would be a nearest-but-wrong category.",
+        "There is no clear concentric phase or intended joint action. The ankle and hip make small, continuous corrective adjustments in unspecified directions as the board tilts. Picking dorsiflexion, plantarflexion, inversion or eversion as a primary action would invent evidence.",
+        "Both frames show an upright bilateral stance with the arms held out for balance. The frames show no deliberate range-of-motion path, only different moments of the same balance correction.",
+        "The work is mainly postural sway control and ankle stability. The tracer can only represent these as stabilization demands attached to a valid movement family and at least one joint action, and this exercise has neither."
+      ],
+      "field_confidence": {
+        "input_mode": "high",
+        "kinetic_chain_type": "high",
+        "laterality": "high",
+        "primary_joint_actions": "low",
+        "stabilization_demands": "medium",
+        "variant": "medium"
+      },
+      "proposed_definition": null,
+      "questions_requiring_context": []
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011Cgox6Vbmm6R1fU2V1FRhR",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 15842.0,
+      "input_tokens": 1003.0,
+      "output_tokens": 733.0
+    }
+  },
+  "saved_at_unix": 1794071989.25409,
+  "source_id": "Balance_Board",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "authoring_draft",
+  "validation_errors": [
+    "proposed_definition: must be null unless classification is supported",
+    "classification: unsupported proposals cannot advance to definition_candidate"
+  ]
+}

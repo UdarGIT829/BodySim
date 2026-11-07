@@ -1,0 +1,73 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "408c883dec12bd43c417a674839804bb4e68ce3e31d4d0df3dafb3ca6e760cbf",
+  "status": "changes_requested",
+  "updated_at_unix": 1794002769.35897,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794002739.04015,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands[wrist_stability]",
+          "finding": "Stabilization demands count on both sides, so wrist_stability gives the left (free) forearm the same stabilizer coefficients as the working side: left extensor_carpi_radialis_brevis 0.28, extensor_carpi_radialis_longus 0.21, flexor_carpi_radialis 0.21, and the left ulnar wrist muscles. The frames show the free hand behind the back bearing no load, and the authoring assumptions say the free arm adds no meaningful demand. The tracer output therefore shows a bilaterally loaded forearm that the exercise does not produce.",
+          "suggested_correction": "Do not present wrist loading for the unloaded free arm. The demand cannot be limited to the working side, so either drop it or avoid it unless the tracer can lateralize it, and record this as a known limitation instead of implying symmetric forearm demand. The working wrist's extended-palm load might instead be represented through working-side actions or a tracer-supported lateralized mechanism."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands[glenohumeral_stabilization, scapular_stabilization]",
+          "finding": "These shoulder demands also apply to both sides. The non-working (left) arm is passive behind the back, yet the trace gives left infraspinatus 0.35, subscapularis 0.35, supraspinatus 0.315, teres minor 0.245, left rhomboids, trapezius parts, serratus anterior 0.28, pectoralis minor and subclavius, among others. This loads the free-arm shoulder girdle at about the same level as the supporting side, which misrepresents a one-arm support exercise.",
+          "suggested_correction": "In a future revision, avoid demands that cannot be lateralized to the supporting limb, or confine shoulder-girdle involvement to the working side through limb-joint actions. If the demands are retained, document that left-side stabilizer values are an artifact and do not indicate real free-arm demand."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[glenohumeral_joint/horizontal_adduction]",
+          "finding": "The assumption that the elbow is partly flared is not resolved by the instructions or frames. The instructions place the arm directly under the shoulder, and a closer-elbow path would make the shoulder action closer to flexion. The result is a sternocostal pectoralis major primary at 1.0 and a clavicular head at 0.8, with the deltoid only a synergist, which may overstate pectoral dominance. The assigned confidence is medium.",
+          "suggested_correction": "Justify the shoulder action from the frames, or consider adding glenohumeral_joint/flexion if the elbow path is closer to the torso."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[scapulothoracic_joint/protraction]",
+          "finding": "The instructions do not describe scapular protraction (a plus at lockout). It is an inference from the push-up pattern, and it makes serratus anterior a 1.0 primary mover.",
+          "suggested_correction": "State explicitly that protraction is inferred from the push-up pattern, or reduce its prominence if the demonstrated range of motion does not show it."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The body line is held isometrically on the toes, but the trace has no lower-body involvement. Hip extensors and quadriceps are zero, and pelvic or hip position holding is not represented, even though the wide-stance single-arm plank position makes these muscles contribute.",
+          "suggested_correction": "Consider pelvic_alignment or another hip-position demand that supports a plank-like body line, if justified by the frames."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist[short_head_of_biceps_brachii.right]",
+          "finding": "Short head of biceps brachii and coracobrachialis appear as synergists only through horizontal adduction weights. Their role in a push-up is minor, and the 0.3 coracobrachialis coefficient is probably high.",
+          "suggested_correction": "Treat these as low-confidence contributors, and avoid presenting them as meaningful synergists unless supported."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgnS6KgxX8AiPydkJ3jnp",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 11401.0,
+          "input_tokens": 8526.0,
+          "output_tokens": 3565.0
+        }
+      },
+      "summary": "The core identity is well supported: a bodyweight one-arm push-up with the free hand behind the back, unilateral with the right side working, closed chain, and the horizontal_push family. Elbow extension, horizontal adduction and scapular protraction give a plausible primary and synergist pattern on the right (triceps, pectoralis major, serratus anterior, anterior deltoid). Facial, laryngeal and other unrelated muscles are correctly zero, so the earlier face and larynx feedback is resolved. However, the traced stabilizer pattern is materially wrong. The limb-specific demands wrist_stability, glenohumeral_stabilization and scapular_stabilization count on both sides, so the passive free arm held behind the back is traced as a loaded stabilizer. This contradicts the definition's own assumption that the free arm adds no meaningful demand."
+    }
+  }
+}
