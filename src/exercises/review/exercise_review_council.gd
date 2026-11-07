@@ -159,7 +159,8 @@ func show_draft(draft: Dictionary) -> void:
 	load_votes({})
 	if draft.get("status", "") == "review_rejected":
 		var rejection: Dictionary = draft.get("rejection", {})
-		prior_feedback_text.text = "[color=#ff7676][b]Rejected by human owner[/b][/color]\n%s" % rejection.get("summary", "No reason recorded.")
+		var by := "Claude reviewer" if rejection.get("member", "") == ReviewRevisionStoreScript.MODEL_MEMBER else "human owner"
+		prior_feedback_text.text = "[color=#ff7676][b]Rejected by %s[/b][/color]\n%s" % [by, rejection.get("summary", "No reason recorded.")]
 
 func freeze_selected_draft() -> void:
 	if selected_entry.get("kind") != "draft": return
@@ -430,10 +431,12 @@ func auto_council_queue() -> Array:
 	reload_entries()
 	var cleared := ReviewRevisionStoreScript.load_cleared()
 	var by_source := {}
+	var draft_hashes := {}   # source_id -> the revision hash its current draft freezes to
 	for entry in entries:
 		if entry["kind"] != "draft": continue
 		var draft: Dictionary = entry["data"]
 		var source: Dictionary = catalog_by_source.get(String(draft.get("source_id", "")), {})
+		draft_hashes[String(draft.get("source_id", ""))] = ReviewRevisionStoreScript.draft_revision_hash(draft, source)
 		if AutoPipeline.source_state(source, draft, cleared) == "candidate":
 			by_source[String(draft.get("source_id", ""))] = [entry]
 	for entry in entries:
@@ -442,6 +445,10 @@ func auto_council_queue() -> Array:
 		var source_id := String(revision.get("source_id", ""))
 		var hash := String(revision.get("revision_sha256", ""))
 		if by_source.has(source_id) and by_source[source_id][0]["kind"] == "draft": continue
+		# A newer draft supersedes older revisions, and a revision traced by an
+		# older tracer can't be promoted (re-validation would differ).
+		if draft_hashes.has(source_id) and draft_hashes[source_id] != hash: continue
+		if revision.get("candidate_trace_report", {}).get("provenance", {}).get("tracer", "") != AutoPipeline.CURRENT_TRACER: continue
 		if ReviewRevisionStoreScript.is_cleared("revision", revision, cleared): continue
 		if not ReviewRevisionStoreScript.load_promotion(hash).is_empty(): continue
 		if not ReviewRevisionStoreScript.load_demotion(hash).is_empty(): continue

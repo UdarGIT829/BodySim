@@ -29,7 +29,7 @@ def main() -> int:
         return 0 if result["ok"] else 2
     except Exception as exc:  # Bridge must always leave a machine-readable diagnostic.
         result = {
-            "gate_version": "candidate_trace_gate_v2",
+            "gate_version": "candidate_trace_gate_v3",
             "ok": False,
             "errors": [f"candidate gate crashed: {type(exc).__name__}: {exc}"],
             "warnings": [],

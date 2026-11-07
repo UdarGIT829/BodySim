@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Set, Tuple
 
 
-VALID_DERIVATION_METHODS = {"kinematic_tracer_v1", "kinematic_tracer_v2", "opensim_calibrated", "manual_override"}
+VALID_DERIVATION_METHODS = {"kinematic_tracer_v1", "kinematic_tracer_v2", "kinematic_tracer_v3", "opensim_calibrated", "manual_override"}
 VALID_EVIDENCE_STATUSES = {"kinematic_trace", "opensim_calibrated", "reviewed", "provisional", "unresolved"}
 VALID_CONFIDENCE_LEVELS = {"high", "medium", "low"}
 VALID_ROLES = {"primary", "synergist", "stabilizer"}

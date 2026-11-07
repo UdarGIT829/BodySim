@@ -76,3 +76,14 @@ def test_movement_family_is_structurally_non_empty_without_array_constraints():
     assert definition["properties"]["primary_movement_family"]["type"] == "string"
     assert definition["properties"]["primary_movement_family"]["enum"]
     assert "minItems" not in json.dumps(schema)
+
+
+
+def test_joint_actions_carry_the_tracer_v3_fields():
+    schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
+    profile = schema["properties"]["proposed_definition"]["anyOf"][1]["properties"]["kinematic_profile"]
+    for branch in profile["properties"]["primary_joint_actions"]["items"]["anyOf"]:
+        assert branch["properties"]["emphasis"]["enum"] == ["primary", "assist"]
+        assert branch["properties"]["sides"]["enum"] == ["working", "both"]
+    assert profile["properties"]["one_sided_limbs"]["items"]["enum"] == ["arm", "leg"]
+    assert "one_sided_limbs" in profile["required"]

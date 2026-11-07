@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "bodysim.kinematic_authoring_response.v2",
-  "title": "BodySim kinematic authoring response v2",
+  "$id": "bodysim.kinematic_authoring_response.v3",
+  "title": "BodySim kinematic authoring response v3",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -197,7 +197,8 @@
               "required": [
                 "kinetic_chain_type",
                 "primary_joint_actions",
-                "stabilization_demands"
+                "stabilization_demands",
+                "one_sided_limbs"
               ],
               "properties": {
                 "kinetic_chain_type": {
@@ -216,7 +217,9 @@
                         "additionalProperties": false,
                         "required": [
                           "joint",
-                          "movement"
+                          "movement",
+                          "emphasis",
+                          "sides"
                         ],
                         "properties": {
                           "joint": {
@@ -231,6 +234,20 @@
                               "dorsiflexion",
                               "plantarflexion"
                             ]
+                          },
+                          "emphasis": {
+                            "type": "string",
+                            "enum": [
+                              "primary",
+                              "assist"
+                            ]
+                          },
+                          "sides": {
+                            "type": "string",
+                            "enum": [
+                              "working",
+                              "both"
+                            ]
                           }
                         }
                       },
@@ -239,7 +256,9 @@
                         "additionalProperties": false,
                         "required": [
                           "joint",
-                          "movement"
+                          "movement",
+                          "emphasis",
+                          "sides"
                         ],
                         "properties": {
                           "joint": {
@@ -256,6 +275,20 @@
                               "lateral_flexion",
                               "rotation"
                             ]
+                          },
+                          "emphasis": {
+                            "type": "string",
+                            "enum": [
+                              "primary",
+                              "assist"
+                            ]
+                          },
+                          "sides": {
+                            "type": "string",
+                            "enum": [
+                              "working",
+                              "both"
+                            ]
                           }
                         }
                       },
@@ -264,7 +297,9 @@
                         "additionalProperties": false,
                         "required": [
                           "joint",
-                          "movement"
+                          "movement",
+                          "emphasis",
+                          "sides"
                         ],
                         "properties": {
                           "joint": {
@@ -279,6 +314,20 @@
                               "extension",
                               "flexion"
                             ]
+                          },
+                          "emphasis": {
+                            "type": "string",
+                            "enum": [
+                              "primary",
+                              "assist"
+                            ]
+                          },
+                          "sides": {
+                            "type": "string",
+                            "enum": [
+                              "working",
+                              "both"
+                            ]
                           }
                         }
                       },
@@ -287,7 +336,9 @@
                         "additionalProperties": false,
                         "required": [
                           "joint",
-                          "movement"
+                          "movement",
+                          "emphasis",
+                          "sides"
                         ],
                         "properties": {
                           "joint": {
@@ -304,6 +355,20 @@
                               "extension",
                               "flexion"
                             ]
+                          },
+                          "emphasis": {
+                            "type": "string",
+                            "enum": [
+                              "primary",
+                              "assist"
+                            ]
+                          },
+                          "sides": {
+                            "type": "string",
+                            "enum": [
+                              "working",
+                              "both"
+                            ]
                           }
                         }
                       },
@@ -312,7 +377,9 @@
                         "additionalProperties": false,
                         "required": [
                           "joint",
-                          "movement"
+                          "movement",
+                          "emphasis",
+                          "sides"
                         ],
                         "properties": {
                           "joint": {
@@ -333,6 +400,20 @@
                               "horizontal_adduction",
                               "internal_rotation"
                             ]
+                          },
+                          "emphasis": {
+                            "type": "string",
+                            "enum": [
+                              "primary",
+                              "assist"
+                            ]
+                          },
+                          "sides": {
+                            "type": "string",
+                            "enum": [
+                              "working",
+                              "both"
+                            ]
                           }
                         }
                       },
@@ -341,7 +422,9 @@
                         "additionalProperties": false,
                         "required": [
                           "joint",
-                          "movement"
+                          "movement",
+                          "emphasis",
+                          "sides"
                         ],
                         "properties": {
                           "joint": {
@@ -360,6 +443,20 @@
                               "flexion",
                               "internal_rotation"
                             ]
+                          },
+                          "emphasis": {
+                            "type": "string",
+                            "enum": [
+                              "primary",
+                              "assist"
+                            ]
+                          },
+                          "sides": {
+                            "type": "string",
+                            "enum": [
+                              "working",
+                              "both"
+                            ]
                           }
                         }
                       },
@@ -368,7 +465,9 @@
                         "additionalProperties": false,
                         "required": [
                           "joint",
-                          "movement"
+                          "movement",
+                          "emphasis",
+                          "sides"
                         ],
                         "properties": {
                           "joint": {
@@ -385,6 +484,20 @@
                               "flexion",
                               "internal_rotation"
                             ]
+                          },
+                          "emphasis": {
+                            "type": "string",
+                            "enum": [
+                              "primary",
+                              "assist"
+                            ]
+                          },
+                          "sides": {
+                            "type": "string",
+                            "enum": [
+                              "working",
+                              "both"
+                            ]
                           }
                         }
                       },
@@ -393,7 +506,9 @@
                         "additionalProperties": false,
                         "required": [
                           "joint",
-                          "movement"
+                          "movement",
+                          "emphasis",
+                          "sides"
                         ],
                         "properties": {
                           "joint": {
@@ -410,6 +525,20 @@
                               "lateral_flexion",
                               "rotation"
                             ]
+                          },
+                          "emphasis": {
+                            "type": "string",
+                            "enum": [
+                              "primary",
+                              "assist"
+                            ]
+                          },
+                          "sides": {
+                            "type": "string",
+                            "enum": [
+                              "working",
+                              "both"
+                            ]
                           }
                         }
                       },
@@ -418,7 +547,9 @@
                         "additionalProperties": false,
                         "required": [
                           "joint",
-                          "movement"
+                          "movement",
+                          "emphasis",
+                          "sides"
                         ],
                         "properties": {
                           "joint": {
@@ -433,6 +564,20 @@
                               "pronation",
                               "supination"
                             ]
+                          },
+                          "emphasis": {
+                            "type": "string",
+                            "enum": [
+                              "primary",
+                              "assist"
+                            ]
+                          },
+                          "sides": {
+                            "type": "string",
+                            "enum": [
+                              "working",
+                              "both"
+                            ]
                           }
                         }
                       },
@@ -441,7 +586,9 @@
                         "additionalProperties": false,
                         "required": [
                           "joint",
-                          "movement"
+                          "movement",
+                          "emphasis",
+                          "sides"
                         ],
                         "properties": {
                           "joint": {
@@ -460,6 +607,20 @@
                               "retraction",
                               "upward_rotation"
                             ]
+                          },
+                          "emphasis": {
+                            "type": "string",
+                            "enum": [
+                              "primary",
+                              "assist"
+                            ]
+                          },
+                          "sides": {
+                            "type": "string",
+                            "enum": [
+                              "working",
+                              "both"
+                            ]
                           }
                         }
                       },
@@ -468,7 +629,9 @@
                         "additionalProperties": false,
                         "required": [
                           "joint",
-                          "movement"
+                          "movement",
+                          "emphasis",
+                          "sides"
                         ],
                         "properties": {
                           "joint": {
@@ -483,6 +646,20 @@
                               "eversion",
                               "inversion"
                             ]
+                          },
+                          "emphasis": {
+                            "type": "string",
+                            "enum": [
+                              "primary",
+                              "assist"
+                            ]
+                          },
+                          "sides": {
+                            "type": "string",
+                            "enum": [
+                              "working",
+                              "both"
+                            ]
                           }
                         }
                       },
@@ -491,7 +668,9 @@
                         "additionalProperties": false,
                         "required": [
                           "joint",
-                          "movement"
+                          "movement",
+                          "emphasis",
+                          "sides"
                         ],
                         "properties": {
                           "joint": {
@@ -509,6 +688,20 @@
                               "flexion",
                               "opposition"
                             ]
+                          },
+                          "emphasis": {
+                            "type": "string",
+                            "enum": [
+                              "primary",
+                              "assist"
+                            ]
+                          },
+                          "sides": {
+                            "type": "string",
+                            "enum": [
+                              "working",
+                              "both"
+                            ]
                           }
                         }
                       },
@@ -517,7 +710,9 @@
                         "additionalProperties": false,
                         "required": [
                           "joint",
-                          "movement"
+                          "movement",
+                          "emphasis",
+                          "sides"
                         ],
                         "properties": {
                           "joint": {
@@ -532,6 +727,20 @@
                               "extension",
                               "flexion"
                             ]
+                          },
+                          "emphasis": {
+                            "type": "string",
+                            "enum": [
+                              "primary",
+                              "assist"
+                            ]
+                          },
+                          "sides": {
+                            "type": "string",
+                            "enum": [
+                              "working",
+                              "both"
+                            ]
                           }
                         }
                       },
@@ -540,7 +749,9 @@
                         "additionalProperties": false,
                         "required": [
                           "joint",
-                          "movement"
+                          "movement",
+                          "emphasis",
+                          "sides"
                         ],
                         "properties": {
                           "joint": {
@@ -556,6 +767,20 @@
                               "flexion",
                               "radial_deviation",
                               "ulnar_deviation"
+                            ]
+                          },
+                          "emphasis": {
+                            "type": "string",
+                            "enum": [
+                              "primary",
+                              "assist"
+                            ]
+                          },
+                          "sides": {
+                            "type": "string",
+                            "enum": [
+                              "working",
+                              "both"
                             ]
                           }
                         }
@@ -593,6 +818,16 @@
                       "scapular_stabilization",
                       "shoulder_position_hold",
                       "wrist_stability"
+                    ]
+                  }
+                },
+                "one_sided_limbs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "arm",
+                      "leg"
                     ]
                   }
                 }

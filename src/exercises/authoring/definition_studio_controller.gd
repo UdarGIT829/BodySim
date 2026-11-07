@@ -31,6 +31,9 @@ const SETTINGS_PATH := "user://bodysim_authoring_settings.cfg"
 @onready var laterality_option: OptionButton = %LateralityOption
 @onready var input_mode_option: OptionButton = %InputModeOption
 @onready var chain_option: OptionButton = %ChainOption
+@onready var one_sided_option: OptionButton = %OneSidedOption
+@onready var assist_check: CheckBox = %AssistCheck
+@onready var both_sides_check: CheckBox = %BothSidesCheck
 @onready var joint_option: OptionButton = %JointOption
 @onready var movement_option: OptionButton = %MovementOption
 @onready var actions_tree: Tree = %ActionsTree
@@ -62,6 +65,8 @@ var preview_view: Control = null
 var preview_summary: Label = null
 const PREVIEW_VIEW_SCENE := preload("res://scenes/exercises/candidate_heatmap_view.tscn")
 var joint_actions: Array[Dictionary] = []
+## one_sided_limbs choices; null means "infer from actions" (the key is omitted).
+const ONE_SIDED_CHOICES := [["Infer from actions", null], ["None (both sides)", []], ["Arm", ["arm"]], ["Leg", ["leg"]], ["Arm and leg", ["arm", "leg"]]]
 
 
 func _ready() -> void:
@@ -109,6 +114,9 @@ func configure_controls() -> void:
 	fill_option(laterality_option, CandidateValidators.LATERALITIES)
 	fill_option(input_mode_option, CandidateValidators.INPUT_MODES)
 	fill_option(chain_option, CandidateValidators.CHAIN_TYPES)
+	one_sided_option.clear()
+	for choice in ONE_SIDED_CHOICES:
+		one_sided_option.add_item(String(choice[0]))
 	fill_option(joint_option, CandidateValidators.JOINT_ACTIONS.keys())
 	for value in CandidateValidators.STABILIZATION_DEMANDS:
 		stabilization_list.add_item(String(value).replace("_", " "))
@@ -268,6 +276,9 @@ func discard_changes() -> void:
 	laterality_option.select(0)
 	input_mode_option.select(0)
 	chain_option.select(0)
+	one_sided_option.select(0)
+	assist_check.button_pressed = false
+	both_sides_check.button_pressed = false
 	stabilization_list.deselect_all()
 	classification_label.text = "Not generated"
 	rationale_text.text = "Generate a proposal or build the definition manually."
@@ -319,9 +330,14 @@ func populate_movement_options() -> void:
 
 
 func add_joint_action() -> void:
-	var action := {"joint": joint_option.get_selected_metadata(), "movement": movement_option.get_selected_metadata()}
-	if action not in joint_actions:
-		joint_actions.append(action)
+	var action := {"joint": joint_option.get_selected_metadata(), "movement": movement_option.get_selected_metadata(),
+		"emphasis": "assist" if assist_check.button_pressed else "primary",
+		"sides": "both" if both_sides_check.button_pressed else "working"}
+	for existing in joint_actions:   # re-adding a pair updates its flags
+		if existing.get("joint") == action["joint"] and existing.get("movement") == action["movement"]:
+			joint_actions.erase(existing)
+			break
+	joint_actions.append(action)
 	refresh_actions_tree()
 	sync_json_from_form()
 
@@ -342,7 +358,10 @@ func refresh_actions_tree() -> void:
 	for index in joint_actions.size():
 		var item := actions_tree.create_item(root)
 		item.set_text(0, String(joint_actions[index]["joint"]).replace("_", " "))
-		item.set_text(1, String(joint_actions[index]["movement"]).replace("_", " "))
+		var flags: Array[String] = []
+		if joint_actions[index].get("emphasis", "primary") == "assist": flags.append("assist")
+		if joint_actions[index].get("sides", "working") == "both": flags.append("both sides")
+		item.set_text(1, String(joint_actions[index]["movement"]).replace("_", " ") + (" (%s)" % ", ".join(flags) if not flags.is_empty() else ""))
 		item.set_metadata(0, index)
 
 
@@ -350,7 +369,7 @@ func build_definition_from_form() -> Dictionary:
 	var stabs: Array[String] = []
 	for index in stabilization_list.get_selected_items():
 		stabs.append(String(stabilization_list.get_item_metadata(index)))
-	return {
+	var definition := {
 		"id": id_input.text.strip_edges(),
 		"name": name_input.text.strip_edges(),
 		"variant": variant_input.text.strip_edges(),
@@ -364,6 +383,10 @@ func build_definition_from_form() -> Dictionary:
 			"stabilization_demands": stabs,
 		}
 	}
+	var limbs = ONE_SIDED_CHOICES[maxi(0, one_sided_option.selected)][1]
+	if limbs != null:
+		definition["kinematic_profile"]["one_sided_limbs"] = limbs.duplicate()
+	return definition
 
 
 func split_csv(value: String) -> Array[String]:
@@ -419,6 +442,10 @@ func populate_form(definition: Dictionary) -> void:
 	select_metadata(input_mode_option, definition.get("input_mode"))
 	var profile: Dictionary = definition.get("kinematic_profile", {})
 	select_metadata(chain_option, profile.get("kinetic_chain_type"))
+	one_sided_option.select(0)
+	for index in ONE_SIDED_CHOICES.size():
+		if ONE_SIDED_CHOICES[index][1] != null and profile.get("one_sided_limbs") is Array and ONE_SIDED_CHOICES[index][1] == profile["one_sided_limbs"]:
+			one_sided_option.select(index)
 	joint_actions.clear()
 	for action in profile.get("primary_joint_actions", []):
 		if action is Dictionary:
@@ -764,8 +791,9 @@ func open_auto_mode() -> void:
 	var modal: AutoRunModal = %AutoRunModal
 	modal.open_for({
 		"title": "Auto mode · Kinematic Definition Studio",
-		"scope": ("Works through the %d catalog exercise(s) matching your search “%s”." % [sources.size(), query]) if not query.is_empty() \
-			else "No search filter: works through all %d catalog exercises. Type in the catalog search first to narrow it (e.g. “press”)." % sources.size(),
+		"scope": (("Works through the %d catalog exercise(s) matching your search “%s”." % [sources.size(), query]) if not query.is_empty() \
+			else "No search filter: works through all %d catalog exercises. Type in the catalog search first to narrow it (e.g. “press”)." % sources.size()) \
+			+ set_aside_note(),
 		"option": {"label": "Skip stretches (the council rejects them anyway)", "setting": "skip_stretches", "default": true},
 		"model": model_id,
 		"completed_label": "Completed",
@@ -777,6 +805,11 @@ func open_auto_mode() -> void:
 		"estimate_tokens": 30000,
 		"log_name": "studio",
 	})
+
+
+func set_aside_note() -> String:
+	var set_aside := int(AutoPipeline.snapshot()["counts"].get("set_aside", 0))
+	return "" if set_aside == 0 else " %d exercise(s) are set aside after %d Claude rejections; review them in the council before re-authoring." % [set_aside, AutoPipeline.MAX_CLAUDE_REJECTIONS]
 
 
 ## One auto-mode step: the same as selecting the exercise, pressing

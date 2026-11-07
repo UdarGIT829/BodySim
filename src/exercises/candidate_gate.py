@@ -44,6 +44,8 @@ def evaluate_candidate(definition: Dict[str, Any]) -> Dict[str, Any]:
         profile_entries = trace_exercise_kinematics(definition, canonical_muscle_ids, muscle_actions)
         errors.extend(_validate_trace(profile_entries, canonical_muscle_ids))
 
+    errors.extend(_validate_tracer_fields(definition))
+
     action_coverage = _joint_action_coverage(definition, action_records)
     for coverage in action_coverage:
         if coverage["matching_muscles"] == 0:
@@ -70,7 +72,7 @@ def evaluate_candidate(definition: Dict[str, Any]) -> Dict[str, Any]:
         warnings.append("Trace has stabilizers but no primary movers or synergists.")
 
     return {
-        "gate_version": "candidate_trace_gate_v2",
+        "gate_version": "candidate_trace_gate_v3",
         "ok": not errors,
         "exercise_id": exercise_id,
         "errors": errors,
@@ -97,6 +99,21 @@ def evaluate_candidate(definition: Dict[str, Any]) -> Dict[str, Any]:
             "muscles": profile_entries,
         },
     }
+
+
+def _validate_tracer_fields(definition: Dict[str, Any]) -> List[str]:
+    """Tracer v3 fields: optional per-action emphasis/sides and one_sided_limbs."""
+    errors: List[str] = []
+    profile = definition.get("kinematic_profile", {}) or {}
+    for index, action in enumerate(profile.get("primary_joint_actions", []) or []):
+        if action.get("emphasis", "primary") not in ("primary", "assist"):
+            errors.append(f"kinematic_profile.primary_joint_actions[{index}].emphasis: use primary or assist")
+        if action.get("sides", "working") not in ("working", "both"):
+            errors.append(f"kinematic_profile.primary_joint_actions[{index}].sides: use working or both")
+    limbs = profile.get("one_sided_limbs", [])
+    if not isinstance(limbs, list) or len(set(limbs)) != len(limbs) or any(l not in ("arm", "leg") for l in limbs):
+        errors.append("kinematic_profile.one_sided_limbs: list arm and/or leg, each once")
+    return errors
 
 
 def _validate_trace(entries: List[Dict[str, Any]], canonical_ids: List[str]) -> List[str]:

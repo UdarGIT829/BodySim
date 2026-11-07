@@ -46,12 +46,25 @@ static func revision_payload(draft: Dictionary, source: Dictionary) -> Dictionar
 		"source_id": draft.get("source_id", ""),
 		"catalog_id": draft.get("catalog_id", ""),
 		"source_snapshot_sha256": draft.get("source_snapshot_sha256", ""),
-		"source": source,
+		"source": stable_source(source),
 		"additional_context": draft.get("additional_context", ""),
 		"authoring_response": draft.get("authoring_response", {}),
 		"authoring_provider_metadata": draft.get("provider_metadata", {}),
 		"candidate_trace_report": draft.get("candidate_trace_report", {}),
 	}
+
+
+## Catalog fields that promotion and demotion change. They are left out of a
+## revision, so a draft's revision hash doesn't change when its source record
+## is promoted or demoted.
+const MUTABLE_SOURCE_FIELDS := ["status", "body_sim_exercise_ids", "promotions", "demotions"]
+
+
+static func stable_source(source: Dictionary) -> Dictionary:
+	var stable := source.duplicate(true)
+	for field in MUTABLE_SOURCE_FIELDS:
+		stable.erase(field)
+	return stable
 
 
 static func payload_hash(payload: Dictionary) -> String:

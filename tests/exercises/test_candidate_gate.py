@@ -27,8 +27,8 @@ def candidate_definition():
 def test_candidate_gate_generates_complete_isolated_profile():
     result = evaluate_candidate(candidate_definition())
     assert result["ok"], result["errors"]
-    assert result["gate_version"] == "candidate_trace_gate_v2"
-    assert result["provenance"]["tracer"] == "kinematic_tracer_v2"
+    assert result["gate_version"] == "candidate_trace_gate_v3"
+    assert result["provenance"]["tracer"] == "kinematic_tracer_v3"
     assert result["summary"]["total_muscles"] == 466
     assert result["summary"]["mapped_muscles"] > 0
     assert result["summary"]["zero_muscles"] + result["summary"]["mapped_muscles"] == 466
@@ -87,3 +87,15 @@ def test_candidate_gate_cli_writes_machine_readable_report(tmp_path):
     report = json.loads(output_path.read_text(encoding="utf-8"))
     assert report["ok"]
     assert report["summary"]["total_muscles"] == 466
+
+
+
+def test_gate_checks_the_tracer_v3_fields():
+    definition = candidate_definition()
+    definition["kinematic_profile"]["primary_joint_actions"][0].update({"emphasis": "assist", "sides": "both"})
+    definition["kinematic_profile"]["one_sided_limbs"] = ["arm"]
+    assert evaluate_candidate(definition)["ok"]
+    definition["kinematic_profile"]["primary_joint_actions"][0]["emphasis"] = "huge"
+    definition["kinematic_profile"]["one_sided_limbs"] = ["arm", "arm"]
+    errors = " ".join(evaluate_candidate(definition)["errors"])
+    assert "emphasis" in errors and "one_sided_limbs" in errors

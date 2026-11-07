@@ -53,16 +53,31 @@ def tracer_reference() -> str:
         f"- A muscle with no action score becomes a stabilizer if it serves one of the definition's "
         f"`stabilization_demands`, with coefficient {tracer.STABILIZER_SCALE:g} x its demand weight.",
         "- Every other muscle is an explicit zero. Face, eye, jaw, tongue, palate, pharynx and larynx muscles are always zero.",
+        f"- Each joint action has `emphasis` and `sides`. `emphasis: \"assist\"` counts the action at "
+        f"{tracer.ASSIST_SCALE:g} x the table weight, so it can make a muscle a synergist but never primary. Use it for a "
+        "joint that really moves but contributes little: the calves in a squat or a hang clean, the knee bend of a "
+        "bicycle crunch. Use `primary` for the actions that move the load. Leaving a real action out entirely makes its "
+        "muscles explicit zeros, which is just as wrong as making them primary.",
         "- Laterality: for `left`, `right` and `unilateral` (shown with the right side working), actions at limb joints "
-        "count only on the working side, decided by joint (pectoralis major and latissimus follow the working arm). "
-        "Spinal actions and all stabilization demands count on both sides.",
+        "count only on the working side, decided by joint (pectoralis major and latissimus follow the working arm), "
+        "unless the action has `sides: \"both\"`. Use `both` when both limbs do that action although the load is "
+        "one-sided, e.g. the two-legged hip hinge of a one-arm kettlebell windmill. Spinal actions always count on both sides.",
+        "- Limb demands follow the working side for the limbs listed in `one_sided_limbs` (`arm`, `leg`); every other "
+        "demand counts on both sides. Arm demands: " + ", ".join(f"`{d}`" for d, l in sorted(tracer.LIMB_OF_DEMAND.items()) if l == "arm")
+        + ". Leg demands: " + ", ".join(f"`{d}`" for d, l in sorted(tracer.LIMB_OF_DEMAND.items()) if l == "leg")
+        + ". For a one-arm push-up or a one-arm row, `one_sided_limbs` is [\"arm\"] so the free arm stays unloaded; "
+        "for a pistol squat it is [\"leg\"]; for a bilateral exercise it is [].",
         "",
         "Consequences for authoring and review:",
         "- A muscle is only engaged if an action or demand in the definition reaches it. If a muscle should work, "
         "the definition must name the action or demand that the table assigns to it; see the lists below.",
-        "- Choose stabilization demands for what the exercise actually requires, e.g. `grip` and `wrist_stability` "
-        "for loads held in the hands, `shoulder_position_hold` when the upper arm is held still against the load, "
-        "`intra_abdominal_pressure` for heavy bracing, `postural_stabilization` for standing.",
+        "- Put demands where the load is actually held. A barbell resting on the upper back needs scapular retraction "
+        "for the shelf, not `grip` or `wrist_stability`; `grip` and `wrist_stability` are for loads held in the hands. "
+        "`shoulder_position_hold` is for an upper arm held still against a load further down the limb (a curl, a rack "
+        "position, an arm locked out overhead), `intra_abdominal_pressure` for heavy bracing, `postural_stabilization` "
+        "for standing.",
+        "- Every action and demand listed below exists. Never claim the vocabulary lacks something without checking "
+        "these lists (e.g. forearm rotation is `radioulnar_joint/pronation` and `supination`).",
         "- A review should judge the definition's actions and demands against this table. A muscle missing from the "
         "output usually means a demand or action is missing from the definition.",
         "",

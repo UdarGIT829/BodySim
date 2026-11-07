@@ -26,7 +26,27 @@ func run_verification() -> void:
 		if source.get("status") == "catalog_only": catalog_only += 1
 	require(studio.catalog.size() == catalog_only and catalog_only > 800, "Studio must load every catalog-only record")
 	require(studio.get_node_or_null("%AutoButton") is Button and studio.get_node_or_null("%AutoRunModal") is AutoRunModal, "Studio must offer auto mode")
-	require(studio.schema.get("$id") == "bodysim.kinematic_authoring_response.v2", "Studio must load the versioned authoring schema")
+	require(studio.schema.get("$id") == "bodysim.kinematic_authoring_response.v3", "Studio must load the versioned authoring schema")
+	# Tracer v3 fields survive the form: per-action emphasis/sides and one_sided_limbs.
+	var v3_definition := {"id": "exercise.form_check.standard", "name": "Form check", "variant": "standard", "aliases": ["form check"],
+		"movement_families": ["hip_hinge"], "laterality": "unilateral", "input_mode": "repetitions",
+		"kinematic_profile": {"kinetic_chain_type": "closed_chain", "one_sided_limbs": ["arm"], "stabilization_demands": ["grip"],
+			"primary_joint_actions": [{"joint": "hip_joint", "movement": "extension", "emphasis": "primary", "sides": "both"},
+				{"joint": "ankle_joint", "movement": "plantarflexion", "emphasis": "assist", "sides": "working"}]}}
+	studio.populate_form(v3_definition)
+	var rebuilt: Dictionary = studio.build_definition_from_form()
+	require(rebuilt["kinematic_profile"].get("one_sided_limbs") == ["arm"], "one_sided_limbs survives the form")
+	require(rebuilt["kinematic_profile"]["primary_joint_actions"] == v3_definition["kinematic_profile"]["primary_joint_actions"], "emphasis and sides survive the form")
+	require(studio.actions_tree.get_root().get_child(1).get_text(1).contains("assist"), "the action list shows assist")
+	studio.assist_check.button_pressed = true
+	studio.select_metadata(studio.joint_option, "knee_joint")
+	studio.populate_movement_options()
+	studio.select_metadata(studio.movement_option, "flexion")
+	studio.add_joint_action()
+	require(studio.joint_actions[-1].get("emphasis") == "assist" and studio.joint_actions[-1].get("sides") == "working", "Add uses the Assist and Both sides boxes")
+	studio.one_sided_option.select(0)
+	require(not studio.build_definition_from_form()["kinematic_profile"].has("one_sided_limbs"), "'Infer from actions' leaves the field out")
+	studio.discard_changes()
 
 	var provider = PROVIDER_SCENE.instantiate()
 	root.add_child(provider)

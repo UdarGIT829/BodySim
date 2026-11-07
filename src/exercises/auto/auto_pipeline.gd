@@ -12,6 +12,8 @@ extends RefCounted
 ##                 re-authoring will use the feedback
 ##   attempted     authored, but it failed the candidate gate (often Claude
 ##                 said BodySim can't model it); auto mode doesn't retry these
+##   set_aside     Claude rejected it MAX_CLAUDE_REJECTIONS times under the
+##                 current tracer; auto mode stops re-authoring it for you to look at
 ##   cleared       hidden from the council queue by the owner; left alone
 ##   new           never authored
 
@@ -21,6 +23,11 @@ const SETTINGS_SECTION := "auto_mode"
 const DEFAULT_TOKEN_BUDGET := 2000000
 const RETRYABLE_ERRORS := ["rate_limit", "overloaded", "network"]
 const FATAL_ERRORS := ["auth", "model"]
+## Must match TRACER_VERSION in tools/exercises/kinematic_tracer.py (a test checks).
+const CURRENT_TRACER := "kinematic_tracer_v3"
+## After this many Claude rejections under the current tracer, auto mode stops
+## re-authoring an exercise.
+const MAX_CLAUDE_REJECTIONS := 2
 
 ## USD per million tokens: input, output, cache read, 1-hour cache write.
 ## The prompts cache their prefix with a 1-hour TTL. An estimate only; the
@@ -55,13 +62,23 @@ static func load_drafts() -> Dictionary:
 
 
 ## Pipeline state for one catalog source (see the table at the top).
-static func source_state(source: Dictionary, draft: Dictionary, cleared: Dictionary) -> String:
+static func source_state(source: Dictionary, draft: Dictionary, cleared: Dictionary, rejections := {}) -> String:
+	var state := _base_state(source, draft, cleared)
+	if state == "needs_rework" and int(rejections.get(String(source.get("source_id", "")), 0)) >= MAX_CLAUDE_REJECTIONS:
+		return "set_aside"
+	return state
+
+
+static func _base_state(source: Dictionary, draft: Dictionary, cleared: Dictionary) -> String:
 	if source.get("status", "") == "promoted":
 		return "promoted"
 	if draft.is_empty():
 		return "new"
 	if ReviewRevisionStore.is_cleared("draft", draft, cleared):
 		return "cleared"
+	var demotions: Array = source.get("demotions", [])
+	if not demotions.is_empty() and float(draft.get("saved_at_unix", 0.0)) <= float(demotions[-1].get("demoted_at_unix", 0.0)):
+		return "needs_rework"   # demoted after promotion; the draft predates the demotion
 	match String(draft.get("status", "")):
 		"review_rejected":
 			return "needs_rework"
@@ -84,14 +101,29 @@ static func snapshot() -> Dictionary:
 	var drafts := load_drafts()
 	var cleared := ReviewRevisionStore.load_cleared()
 	var states := {}
-	var counts := {"promoted": 0, "candidate": 0, "needs_rework": 0, "attempted": 0, "cleared": 0, "new": 0}
+	var counts := {"promoted": 0, "candidate": 0, "needs_rework": 0, "set_aside": 0, "attempted": 0, "cleared": 0, "new": 0}
+	var rejections := claude_rejections()
 	var catalog := load_catalog()
 	for source in catalog:
 		var source_id := String(source.get("source_id", ""))
-		var state := source_state(source, drafts.get(source_id, {}), cleared)
+		var state := source_state(source, drafts.get(source_id, {}), cleared, rejections)
 		states[source_id] = state
 		counts[state] += 1
 	return {"states": states, "counts": counts, "total": catalog.size()}
+
+
+## {source_id: number of Claude rejections of revisions traced by the current tracer}.
+## Rejections by rule (stretches) and by the owner don't count.
+static func claude_rejections() -> Dictionary:
+	var counts := {}
+	for revision in ReviewRevisionStore.list_revisions():
+		if revision.get("candidate_trace_report", {}).get("provenance", {}).get("tracer", "") != CURRENT_TRACER:
+			continue
+		var vote: Dictionary = ReviewRevisionStore.load_review(String(revision.get("revision_sha256", ""))).get("votes", {}).get(ReviewRevisionStore.MODEL_MEMBER, {})
+		if vote.get("decision", "") == "reject" and vote.get("provider_metadata", {}).get("provider", "") != "bodysim_rule":
+			var source_id := String(revision.get("source_id", ""))
+			counts[source_id] = int(counts.get(source_id, 0)) + 1
+	return counts
 
 
 ## The three layers both auto-mode modals draw.

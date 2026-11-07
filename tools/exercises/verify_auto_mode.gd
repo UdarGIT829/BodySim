@@ -42,6 +42,21 @@ func run() -> void:
 
 func check_pipeline_rules() -> void:
 	var cleared := {"drafts": {"Cleared_One": {"draft_saved_at_unix": 10.0}}, "revisions": {}}
+	# Retry cap: Claude's rejections under the current tracer set an exercise aside.
+	var rejected := {"source_id": "X", "status": "review_rejected"}
+	require(AutoPipeline.source_state({"source_id": "X"}, rejected, cleared, {"X": 1}) == "needs_rework", "one rejection: re-author")
+	require(AutoPipeline.source_state({"source_id": "X"}, rejected, cleared, {"X": AutoPipeline.MAX_CLAUDE_REJECTIONS}) == "set_aside", "the cap sets it aside")
+	# A demotion after the draft was saved means it needs a new revision, whatever its hash.
+	require(AutoPipeline.source_state({"source_id": "X", "demotions": [{"demoted_at_unix": 20.0}]}, {"source_id": "X", "status": "definition_candidate", "saved_at_unix": 10.0}, cleared) == "needs_rework", "demoted drafts need rework")
+	# Promotion and demotion fields don't change a draft's revision hash.
+	var some_draft := {"source_id": "X", "authoring_response": {"a": 1}, "candidate_trace_report": {"ok": true}}
+	var source := {"source_id": "X", "name": "X", "category": "strength", "status": "catalog_only"}
+	var changed := source.duplicate(true)
+	changed["status"] = "promoted"
+	changed["promotions"] = [{"exercise_id": "exercise.x.y"}]
+	require(ReviewRevisionStore.draft_revision_hash(some_draft, source) == ReviewRevisionStore.draft_revision_hash(some_draft, changed), "revision hash ignores promotion fields")
+	changed["name"] = "Renamed"
+	require(ReviewRevisionStore.draft_revision_hash(some_draft, source) != ReviewRevisionStore.draft_revision_hash(some_draft, changed), "revision hash still covers the source content")
 	require(AutoPipeline.source_state({"status": "promoted"}, {}, cleared) == "promoted", "promoted source")
 	require(AutoPipeline.source_state({}, {}, cleared) == "new", "no draft is new")
 	require(AutoPipeline.source_state({}, {"source_id": "X", "status": "review_rejected"}, cleared) == "needs_rework", "rejected draft needs rework")
@@ -133,6 +148,7 @@ func check_studio_auto() -> void:
 	require(modal.run_label.text.contains("%d exercise" % queue.size()), "modal counts the filtered queue: %s" % modal.run_label.text)
 	require(modal.visible and modal.model_label.text.contains(studio.model_id), "modal shows the selected model")
 	modal.max_items_spin.value = 2
+	modal.budget_spin.value = 100000000
 	await modal.start()
 	require(modal.state == "done" and modal.outcomes.get("drafted") == 2, "studio auto must draft two exercises: %s %s" % [modal.state, modal.outcomes])
 	require(modal.tokens_used() == 2 * FAKE_USAGE, "studio tokens counted")
@@ -177,6 +193,8 @@ func check_council_auto() -> void:
 	modal.persist_settings = false
 	council.open_auto_mode()
 	require(modal.legend_label.get_parsed_text().contains("Promoted"), "council modal labels the first layer Promoted")
+	modal.max_items_spin.value = 0             # the sandbox reads the owner's saved settings; pin them
+	modal.budget_spin.value = 100000000
 	await modal.start()
 	require(modal.state == "done", "council run must finish: %s" % modal.state)
 	require(modal.outcomes.get("promoted") == 1, "exactly the accepted exercise is promoted: %s" % [modal.outcomes])

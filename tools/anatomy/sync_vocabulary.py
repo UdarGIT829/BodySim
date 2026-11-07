@@ -8,7 +8,8 @@ Source of truth: data/anatomy/joint_action_vocabulary.json, restricted to the
 joint actions at least one movement muscle in the v2 table performs (so an
 exercise can never name an action the tracer maps to nothing). Writes:
   - the primary_joint_actions and stabilization_demands enums of the
-    authoring schema (bumped to bodysim.kinematic_authoring_response.v2)
+    authoring schema (bodysim.kinematic_authoring_response.v3), with the
+    tracer v3 per-action fields (emphasis, sides) and one_sided_limbs
   - JOINT_ACTIONS and STABILIZATION_DEMANDS in candidate_validators.gd
 """
 
@@ -29,7 +30,7 @@ from src.anatomy.muscle_actions_v2 import load_vocabulary, merged_table  # noqa:
 
 SCHEMA_PATH = PROJECT_ROOT / "data/exercises/authoring/schemas/kinematic_authoring_response.schema.json"
 VALIDATORS_PATH = PROJECT_ROOT / "src/exercises/authoring/candidate_validators.gd"
-SCHEMA_ID = "bodysim.kinematic_authoring_response.v2"
+SCHEMA_ID = "bodysim.kinematic_authoring_response.v3"
 
 
 def usable_actions() -> Dict[str, List[str]]:
@@ -46,18 +47,25 @@ def usable_actions() -> Dict[str, List[str]]:
 def render_schema(actions: Dict[str, List[str]], demands: List[str]) -> str:
     schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
     schema["$id"] = SCHEMA_ID
-    schema["title"] = "BodySim kinematic authoring response v2"
+    schema["title"] = "BodySim kinematic authoring response v3"
     profile = schema["properties"]["proposed_definition"]["anyOf"][1]["properties"]["kinematic_profile"]["properties"]
+    # Every property is required (structured outputs); emphasis and sides
+    # carry the tracer's defaults, "primary" and "working".
     profile["primary_joint_actions"]["items"]["anyOf"] = [{
         "type": "object",
         "additionalProperties": False,
-        "required": ["joint", "movement"],
+        "required": ["joint", "movement", "emphasis", "sides"],
         "properties": {
             "joint": {"type": "string", "enum": [joint]},
             "movement": {"type": "string", "enum": sorted(movements)},
+            "emphasis": {"type": "string", "enum": ["primary", "assist"]},
+            "sides": {"type": "string", "enum": ["working", "both"]},
         },
     } for joint, movements in actions.items()]
     profile["stabilization_demands"]["items"]["enum"] = demands
+    profile["one_sided_limbs"] = {"type": "array", "items": {"type": "string", "enum": ["arm", "leg"]}}
+    kinematic_profile = schema["properties"]["proposed_definition"]["anyOf"][1]["properties"]["kinematic_profile"]
+    kinematic_profile["required"] = ["kinetic_chain_type", "primary_joint_actions", "stabilization_demands", "one_sided_limbs"]
     return json.dumps(schema, indent=2) + "\n"
 
 

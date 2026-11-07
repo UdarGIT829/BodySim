@@ -53,7 +53,7 @@ func cleanup_temporary_file(path: String) -> void:
 func failure(message: String) -> Dictionary:
 	push_error("CandidateTraceGate: %s" % message)
 	return {
-		"gate_version": "candidate_trace_gate_v2",
+		"gate_version": "candidate_trace_gate_v3",
 		"ok": false,
 		"errors": [message],
 		"warnings": [],

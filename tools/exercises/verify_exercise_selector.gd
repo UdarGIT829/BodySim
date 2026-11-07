@@ -57,7 +57,7 @@ func run_verification() -> void:
 	var first_muscle_item: TreeItem = selector.affected_tree.get_root().get_first_child().get_first_child()
 	require(first_muscle_item.get_text(1).ends_with("%") and int(first_muscle_item.get_text(1).trim_suffix("%")) > 0, "Affected tree must display the engagement coefficient")
 	require(selector.affected_tree.columns == 3, "Affected tree must use the compact three-column layout")
-	require(first_muscle_item.get_tooltip_text(0).contains("Kinematic tracer v2"), "Affected structure tooltip must preserve derivation provenance")
+	require(first_muscle_item.get_tooltip_text(0).contains("Kinematic tracer v"), "Affected structure tooltip must preserve derivation provenance")
 	first_muscle_item.select(0)
 	selector.affected_tree.item_selected.emit()
 	require(emitted_structure_id.begins_with("muscle."), "Affected muscle selection must emit its canonical structure ID")

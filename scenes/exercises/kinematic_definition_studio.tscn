@@ -289,6 +289,15 @@ text = "Kinetic chain"
 unique_name_in_owner = true
 layout_mode = 2
 
+[node name="OneSidedLabel" type="Label" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid"]
+layout_mode = 2
+text = "One-sided limbs"
+
+[node name="OneSidedOption" type="OptionButton" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/IdentityGrid"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "For left/right/unilateral exercises: which limbs carry the load on the working side only. Their demands (grip, wrist, shoulder, knee…) then count on that side only. Ignored for bilateral exercises."
+
 [node name="Mechanics" type="HSplitContainer" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column" unique_id=1121504376]
 layout_mode = 2
 size_flags_vertical = 3
@@ -314,6 +323,18 @@ size_flags_horizontal = 3
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="AssistCheck" type="CheckBox" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/Mechanics/ActionColumn/ActionPicker"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Assist"
+tooltip_text = "The joint moves but doesn't move the load: its muscles count at 0.4 x and can't be primary (e.g. calves in a squat)."
+
+[node name="BothSidesCheck" type="CheckBox" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/Mechanics/ActionColumn/ActionPicker"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Both sides"
+tooltip_text = "In a one-sided exercise, both limbs do this action (e.g. the two-legged hinge of a one-arm windmill)."
 
 [node name="AddActionButton" type="Button" parent="Margin/Column/Workspace/DefinitionAndEvidence/DefinitionPanel/Margin/Column/Mechanics/ActionColumn/ActionPicker" unique_id=69457510]
 unique_name_in_owner = true

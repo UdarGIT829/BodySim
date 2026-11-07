@@ -4,6 +4,10 @@ extends RefCounted
 const LATERALITIES := ["bilateral", "left", "right", "unilateral"]
 const INPUT_MODES := ["repetitions", "duration"]
 const CHAIN_TYPES := ["open_chain", "closed_chain"]
+## Tracer v3 per-action fields (optional; defaults "primary" and "working") and limbs.
+const EMPHASES := ["primary", "assist"]
+const SIDES := ["working", "both"]
+const LIMBS := ["arm", "leg"]
 const MOVEMENT_FAMILIES := ["squat", "hip_hinge", "horizontal_push", "vertical_push", "horizontal_pull", "vertical_pull", "loaded_carry", "elbow_flexion", "elbow_extension", "knee_extension", "knee_flexion", "ankle_plantarflexion", "trunk_flexion"]
 const STABILIZATION_DEMANDS := ["ankle_stability", "anterior_shoulder_stability", "anti_extension_hip", "anti_extension_spine", "anti_flexion_spine", "anti_rotation_torso", "elbow_joint_integrity", "elbow_stability", "femoral_head_stabilization", "glenohumeral_stabilization", "grip", "humeral_head_stabilization", "intra_abdominal_pressure", "knee_joint_stability", "lumbar_fascia_tension", "patellar_tracking", "pelvic_alignment", "pelvic_leveling_frontal", "postural_stabilization", "postural_sway_control", "scapular_anchoring", "scapular_retraction_stability", "scapular_stabilization", "shoulder_position_hold", "wrist_stability"]
 const JOINT_ACTIONS := {
@@ -96,6 +100,13 @@ static func validate_definition(definition: Dictionary, canonical_ids: Dictionar
 				errors.append("kinematic_profile.primary_joint_actions[%d]: duplicate joint/action pair" % index)
 			else:
 				action_keys.append("%s:%s" % [action.get("joint"), action.get("movement")])
+				if action.get("emphasis", "primary") not in EMPHASES:
+					errors.append("kinematic_profile.primary_joint_actions[%d].emphasis: use primary or assist" % index)
+				if action.get("sides", "working") not in SIDES:
+					errors.append("kinematic_profile.primary_joint_actions[%d].sides: use working or both" % index)
+	var limbs = profile.get("one_sided_limbs", [])
+	if not limbs is Array or _has_duplicates(limbs) or limbs.any(func(limb) -> bool: return limb not in LIMBS):
+		errors.append("kinematic_profile.one_sided_limbs: list arm and/or leg, each once")
 	var demands: Array = profile.get("stabilization_demands", [])
 	if _has_duplicates(demands):
 		errors.append("kinematic_profile.stabilization_demands: duplicate values are not allowed")
