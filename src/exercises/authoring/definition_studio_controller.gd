@@ -88,6 +88,10 @@ func _ready() -> void:
 	generate_button.pressed.connect(generate_proposal)
 	submit_button.pressed.connect(submit_candidate)
 	%AutoButton.pressed.connect(open_auto_mode)
+	%DemoteButton.pressed.connect(func() -> void: %DemoteDialog.open())
+	%DemoteDialog.demoted.connect(func(report: Dictionary) -> void:
+		reload_catalog()
+		set_status("Demoted %s; its source is back in the catalog." % report.get("exercise_id", ""), false))
 	set_status("Select a catalog-only exercise to begin.", false)
 
 
@@ -175,6 +179,14 @@ func load_support_files() -> void:
 	var prompt_file := FileAccess.open(PROMPT_PATH, FileAccess.READ)
 	if prompt_file:
 		system_prompt = prompt_file.get_as_text()
+
+
+## Re-read the catalog and canonical IDs (after a demotion changes them).
+func reload_catalog() -> void:
+	catalog.clear()
+	canonical_ids.clear()
+	load_support_files()
+	populate_catalog(search_input.text)
 
 
 func read_json(path: String):

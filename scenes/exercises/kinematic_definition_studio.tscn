@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" path="res://scenes/exercises/claude_provider.tscn" id="2_provider"]
 [ext_resource type="PackedScene" path="res://scenes/exercises/candidate_trace_gate.tscn" id="3_gate"]
 [ext_resource type="PackedScene" path="res://scenes/exercises/auto_run_modal.tscn" id="4_auto"]
+[ext_resource type="PackedScene" path="res://scenes/exercises/demote_dialog.tscn" id="5_demote"]
 
 [node name="KinematicDefinitionStudio" type="Control" unique_id=274420018]
 layout_mode = 3
@@ -95,6 +96,12 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Auto mode…"
 tooltip_text = "Draft catalog exercises one after another with the selected model, saving each passing draft for the council. Exercises the council sent back go first, with their feedback."
+
+[node name="DemoteButton" type="Button" parent="Margin/Column/ModelRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Demote…"
+tooltip_text = "Take a council-promoted exercise (e.g. a stretch that slipped through) back out of the visualizer."
 
 [node name="Workspace" type="HSplitContainer" parent="Margin/Column" unique_id=610365272]
 layout_mode = 2
@@ -482,4 +489,7 @@ text = "Submit definition candidate"
 [node name="CandidateTraceGate" parent="." instance=ExtResource("3_gate")]
 
 [node name="AutoRunModal" parent="." instance=ExtResource("4_auto")]
+unique_name_in_owner = true
+
+[node name="DemoteDialog" parent="." instance=ExtResource("5_demote")]
 unique_name_in_owner = true

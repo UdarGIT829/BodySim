@@ -128,7 +128,8 @@ func populate_tree() -> void:
 		else:
 			var review: Dictionary = ReviewRevisionStoreScript.load_review(data.get("revision_sha256", ""))
 			var promoted := not ReviewRevisionStoreScript.load_promotion(String(data.get("revision_sha256", ""))).is_empty()
-			item.set_text(1, "promoted" if promoted else review.get("status", "review_pending"))
+			var demoted := not ReviewRevisionStoreScript.load_demotion(String(data.get("revision_sha256", ""))).is_empty()
+			item.set_text(1, "demoted" if demoted else "promoted" if promoted else review.get("status", "review_pending"))
 		if is_cleared:
 			item.set_text(1, "%s · cleared" % item.get_text(1))
 			item.set_custom_color(0, Color(0.55, 0.58, 0.64))
@@ -321,6 +322,9 @@ func load_votes(review: Dictionary) -> void:
 	var promotion: Dictionary = ReviewRevisionStoreScript.load_promotion(String(current_revision.get("revision_sha256", ""))) if not current_revision.is_empty() else {}
 	if not promotion.is_empty():
 		status = "promoted"
+	var demotion: Dictionary = ReviewRevisionStoreScript.load_demotion(String(current_revision.get("revision_sha256", ""))) if not current_revision.is_empty() else {}
+	if not demotion.is_empty():
+		status = "demoted"
 	%CouncilOutcome.text = "Council outcome: %s" % String(status).replace("_", " ").capitalize()
 	%PromoteButton.disabled = current_revision.is_empty() or status != "accepted"
 
@@ -440,6 +444,7 @@ func auto_council_queue() -> Array:
 		if by_source.has(source_id) and by_source[source_id][0]["kind"] == "draft": continue
 		if ReviewRevisionStoreScript.is_cleared("revision", revision, cleared): continue
 		if not ReviewRevisionStoreScript.load_promotion(hash).is_empty(): continue
+		if not ReviewRevisionStoreScript.load_demotion(hash).is_empty(): continue
 		if catalog_by_source.get(source_id, {}).get("status", "") == "promoted": continue
 		if ReviewRevisionStoreScript.load_review(hash).get("status", "review_pending") in ["review_pending", "accepted"]:
 			if not by_source.has(source_id): by_source[source_id] = []

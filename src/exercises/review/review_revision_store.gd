@@ -11,6 +11,8 @@ const HUMAN_MEMBER := "human_owner"
 const MODEL_MEMBER := "model_reviewer"
 const LEGACY_MODEL_MEMBERS := ["openai_reviewer"]
 const PROMOTION_BRIDGE := "res://tools/exercises/run_promotion.py"
+const DEMOTION_DIRECTORY := "res://data/exercises/authoring/demotions"
+const DEMOTION_BRIDGE := "res://tools/exercises/run_demotion.py"
 const PAYLOAD_KEYS := ["format_version", "source_id", "catalog_id", "source_snapshot_sha256", "source",
 	"additional_context", "authoring_response", "authoring_provider_metadata", "candidate_trace_report"]
 
@@ -160,17 +162,38 @@ static func promote(revision: Dictionary, python_executable := "python3") -> Dic
 		return {"ok": false, "errors": ["Frozen revision content no longer matches its hash; it cannot be promoted."]}
 	if load_review(hash).get("status", "") != "accepted":
 		return {"ok": false, "errors": ["Only a unanimously accepted revision can be promoted."]}
+	var report := run_bridge(PROMOTION_BRIDGE, {"revision_sha256": hash, "dry_run": false}, python_executable)
+	return report if not report.is_empty() else {"ok": false, "errors": ["Promotion returned no report."]}
+
+
+## A demoted revision's record (empty if it was never demoted).
+static func load_demotion(hash: String) -> Dictionary:
+	return read_json("%s/%s.json" % [DEMOTION_DIRECTORY, hash])
+
+
+## Council-promoted exercises that can be demoted (see src/exercises/demotion.py).
+static func list_demotable(python_executable := "python3") -> Dictionary:
+	return run_bridge(DEMOTION_BRIDGE, {"action": "list"}, python_executable)
+
+
+## Demote a council-promoted exercise back to catalog-only.
+static func demote(exercise_id: String, reason: String, python_executable := "python3") -> Dictionary:
+	return run_bridge(DEMOTION_BRIDGE, {"action": "demote", "exercise_id": exercise_id, "reason": reason, "dry_run": false}, python_executable)
+
+
+## Runs a Python bridge script with a JSON request file and returns its JSON report.
+static func run_bridge(script: String, request: Dictionary, python_executable := "python3") -> Dictionary:
 	var nonce := "%d" % Time.get_ticks_usec()
-	var input_path := "user://promotion_%s_input.json" % nonce
-	var output_path := "user://promotion_%s_output.json" % nonce
+	var input_path := "user://bridge_%s_input.json" % nonce
+	var output_path := "user://bridge_%s_output.json" % nonce
 	var input_file := FileAccess.open(input_path, FileAccess.WRITE)
 	if input_file == null:
-		return {"ok": false, "errors": ["Could not create the promotion request file."]}
-	input_file.store_string(JSON.stringify({"revision_sha256": hash, "dry_run": false}))
+		return {"ok": false, "errors": ["Could not create the bridge request file."]}
+	input_file.store_string(JSON.stringify(request))
 	input_file.close()
 	var console_output: Array = []
 	var exit_code := OS.execute(python_executable, PackedStringArray([
-		ProjectSettings.globalize_path(PROMOTION_BRIDGE),
+		ProjectSettings.globalize_path(script),
 		"--input", ProjectSettings.globalize_path(input_path),
 		"--output", ProjectSettings.globalize_path(output_path),
 	]), console_output, true)
@@ -179,7 +202,7 @@ static func promote(revision: Dictionary, python_executable := "python3") -> Dic
 		if FileAccess.file_exists(path):
 			DirAccess.remove_absolute(ProjectSettings.globalize_path(path))
 	if report.is_empty():
-		return {"ok": false, "errors": ["Promotion exited with code %d without a report. %s" % [exit_code, " ".join(console_output)]]}
+		return {"ok": false, "errors": ["%s exited with code %d without a report. %s" % [script.get_file(), exit_code, " ".join(console_output)]]}
 	return report
 
 

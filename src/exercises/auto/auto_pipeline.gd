@@ -8,7 +8,8 @@ extends RefCounted
 ## Pipeline state of a catalog exercise:
 ##   promoted      visualizable (the council promoted it)
 ##   candidate     a passing draft or frozen revision is waiting in the council
-##   needs_rework  the council rejected it; re-authoring will use the feedback
+##   needs_rework  the council rejected it (or it was demoted after promotion);
+##                 re-authoring will use the feedback
 ##   attempted     authored, but it failed the candidate gate (often Claude
 ##                 said BodySim can't model it); auto mode doesn't retry these
 ##   cleared       hidden from the council queue by the owner; left alone
@@ -68,6 +69,8 @@ static func source_state(source: Dictionary, draft: Dictionary, cleared: Diction
 			if not ReviewRevisionStore.validate_eligibility(draft).is_empty():
 				return "attempted"
 			var hash := ReviewRevisionStore.draft_revision_hash(draft, source)
+			if not ReviewRevisionStore.load_demotion(hash).is_empty():
+				return "needs_rework"   # demoted after promotion; it needs a new revision
 			if not ReviewRevisionStore.load_promotion(hash).is_empty():
 				return "promoted"
 			if ReviewRevisionStore.load_review(hash).get("status", "") == "changes_requested":

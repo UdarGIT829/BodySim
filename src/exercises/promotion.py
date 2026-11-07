@@ -46,6 +46,7 @@ REL_STRUCTURES = "data/anatomy/structures.json"
 REL_REVISIONS = "data/exercises/authoring/revisions"
 REL_REVIEWS = "data/exercises/authoring/reviews"
 REL_PROMOTIONS = "data/exercises/authoring/promotions"
+REL_DEMOTIONS = "data/exercises/authoring/demotions"
 
 
 class PromotionError(Exception):
@@ -89,6 +90,11 @@ def _promote(revision_hash: str, *, root: Path, gate, now, dry_run) -> Dict[str,
         return {"ok": True, "already_promoted": True, "promoter": PROMOTER_VERSION,
                 "revision_sha256": revision_hash, "exercise_id": existing.get("exercise_id"),
                 "record_path": str(record_path.relative_to(root))}
+
+    demotion_path = root / REL_DEMOTIONS / f"{revision_hash}.json"
+    if demotion_path.exists():
+        reason = _read_json(demotion_path).get("reason", "")
+        raise PromotionError(f"this revision was demoted ({reason}); re-author it as a new revision instead")
 
     revision = _require_json(root / REL_REVISIONS / f"{revision_hash}.json", "frozen revision")
     review = _require_json(root / REL_REVIEWS / f"{revision_hash}.json", "council review record")

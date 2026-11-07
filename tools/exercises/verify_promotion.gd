@@ -7,6 +7,8 @@ extends SceneTree
 
 const Store := preload("res://src/exercises/review/review_revision_store.gd")
 const SelectorScene := preload("res://scenes/exercises/exercise_selector.tscn")
+const StudioScene := preload("res://scenes/exercises/kinematic_definition_studio.tscn")
+const CouncilScene := preload("res://scenes/exercises/exercise_review_council.tscn")
 const DRAFT := "res://data/exercises/authoring/drafts/_promotion_fixture.json"   # written by verify_promotion.sh
 const EXERCISE_ID := "exercise.promotion_fixture.standing_bilateral"
 
@@ -69,9 +71,45 @@ func _initialize() -> void:
 	require(selector.records_by_id.get(EXERCISE_ID, {}).get("catalog_status") == "visualizable", "promoted exercise must be visualizable")
 	require(not selector.records_by_id.has(String(draft.get("catalog_id", ""))), "source record must leave the catalog-only list")
 	require(selector.select_exercise(EXERCISE_ID), "promoted exercise must be selectable")
+	selector.queue_free()
+
+	# Demotion, driven through the Studio's dialog like a click.
+	var studio = StudioScene.instantiate()
+	root.add_child(studio)
+	await process_frame
+	var source_id := String(draft.get("source_id", ""))
+	require(not studio.catalog.any(func(x: Dictionary) -> bool: return x.get("source_id") == source_id), "promoted source must not be in the Studio catalog")
+	var dialog: DemoteDialog = studio.get_node("%DemoteDialog")
+	dialog.open()
+	var index := -1
+	for i in dialog.exercises.size():
+		if dialog.exercises[i].get("exercise_id") == EXERCISE_ID: index = i
+	require(index >= 0, "the dialog must list the council-promoted fixture")
+	require(not dialog.exercises.any(func(x: Dictionary) -> bool: return String(x.get("exercise_id", "")) == "exercise.barbell_back_squat.high_bar"), "original exercises must not be listed")
+	dialog.exercise_list.select(index)
+	dialog._on_selected(index)
+	dialog.reason_input.text = "verification demotion"
+	dialog._on_demote_pressed()
+	require(not Store.load_promotion(hash).is_empty(), "the first click only arms the button")
+	dialog._on_demote_pressed()
+	require(Store.load_promotion(hash).is_empty() and Store.load_demotion(hash).get("reason") == "verification demotion", "demotion record replaces the promotion record")
+	require(studio.catalog.any(func(x: Dictionary) -> bool: return x.get("source_id") == source_id), "the source is back in the Studio catalog")
+	require(not dialog.exercises.any(func(x: Dictionary) -> bool: return x.get("exercise_id") == EXERCISE_ID), "the dialog list refreshes")
+	var exercises: Array = JSON.parse_string(FileAccess.get_file_as_string("res://data/exercises/exercises.json"))
+	require(not exercises.any(func(x: Dictionary) -> bool: return x.get("id") == EXERCISE_ID), "the exercise leaves exercises.json")
+	var again: Dictionary = Store.promote(reloaded)
+	require(not again.get("ok", true) and " ".join(again.get("errors", [])).contains("demoted"), "a demoted revision can't be promoted again: %s" % [again])
+	studio.queue_free()
+	var council = CouncilScene.instantiate()
+	root.add_child(council)
+	await process_frame
+	council.show_revision(reloaded)
+	require(council.get_node("%CouncilOutcome").text.contains("Demoted") and council.get_node("%PromoteButton").disabled, "the council shows it demoted and can't promote it")
+	require(not council.auto_council_queue().any(func(e: Dictionary) -> bool: return e["data"].get("revision_sha256") == hash), "auto mode skips a demoted revision")
+	council.queue_free()
 
 	if failures.is_empty():
-		print("Phase 2E promotion passed: freeze, hash verification, unanimous gate, bridge, idempotence, selector heatmap")
+		print("Phase 2E promotion passed: freeze, hash verification, unanimous gate, bridge, idempotence, selector heatmap, demotion from the Studio")
 		quit(0)
 	else:
 		for failure in failures:
