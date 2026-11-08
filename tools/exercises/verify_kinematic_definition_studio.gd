@@ -26,6 +26,22 @@ func run_verification() -> void:
 		if source.get("status") == "catalog_only": catalog_only += 1
 	require(studio.catalog.size() == catalog_only and catalog_only > 800, "Studio must load every catalog-only record")
 	require(studio.get_node_or_null("%AutoButton") is Button and studio.get_node_or_null("%AutoRunModal") is AutoRunModal, "Studio must offer auto mode")
+	# Status filter: "sent back with changes" lists exactly the exercises that need re-authoring, never promoted ones.
+	var snap: Dictionary = AutoPipeline.snapshot()
+	var filter: OptionButton = studio.get_node("%StatusFilter")
+	filter.select(1)
+	filter.item_selected.emit(1)
+	var sent_back: Array = studio.filtered_catalog("")
+	var expected := 0
+	for source in studio.catalog:
+		if snap["states"].get(String(source["source_id"])) == "needs_rework": expected += 1
+	require(sent_back.size() == expected, "the filter lists every exercise sent back (%d vs %d)" % [sent_back.size(), expected])
+	require(sent_back.all(func(x: Dictionary) -> bool: return snap["states"].get(String(x["source_id"])) == "needs_rework" and x.get("status") != "promoted"), "only sent-back, unpromoted exercises")
+	require(studio.filtered_catalog("zzzz-no-match").is_empty(), "the filter combines with the search")
+	require(studio.scope_text(sent_back.size(), "").contains("sent back with changes"), "auto mode names the filter")
+	filter.select(0)
+	filter.item_selected.emit(0)
+	require(studio.filtered_catalog("").size() == studio.catalog.size(), "'All' shows the whole catalog again")
 	require(studio.schema.get("$id") == "bodysim.kinematic_authoring_response.v3", "Studio must load the versioned authoring schema")
 	# Tracer v3 fields survive the form: per-action emphasis/sides and one_sided_limbs.
 	var v3_definition := {"id": "exercise.form_check.standard", "name": "Form check", "variant": "standard", "aliases": ["form check"],

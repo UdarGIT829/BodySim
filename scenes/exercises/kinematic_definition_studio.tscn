@@ -135,6 +135,11 @@ layout_mode = 2
 placeholder_text = "Search catalog-only exercises…"
 clear_button_enabled = true
 
+[node name="StatusFilter" type="OptionButton" parent="Margin/Column/Workspace/CatalogPanel/Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Show only exercises at one stage of the pipeline. Combines with the search; auto mode works through what the catalog shows. Promoted exercises are never listed here."
+
 [node name="CatalogCount" type="Label" parent="Margin/Column/Workspace/CatalogPanel/Margin/Column" unique_id=1614777828]
 unique_name_in_owner = true
 modulate = Color(0.6, 0.68, 0.76, 1)

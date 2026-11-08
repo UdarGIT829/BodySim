@@ -66,6 +66,16 @@ var preview_summary: Label = null
 const PREVIEW_VIEW_SCENE := preload("res://scenes/exercises/candidate_heatmap_view.tscn")
 var joint_actions: Array[Dictionary] = []
 ## one_sided_limbs choices; null means "infer from actions" (the key is omitted).
+## Catalog status filter: [label, pipeline states shown (empty = all)]. The
+## Studio's catalog only holds catalog-only sources, so promoted exercises
+## never appear; demoted ones do (they need re-authoring).
+const STATUS_FILTERS := [
+	["Show: all catalog exercises", []],
+	["Show: sent back with changes", ["needs_rework"]],
+	["Show: set aside after repeated rejections", ["set_aside"]],
+	["Show: never drafted", ["new"]],
+]
+var source_states: Dictionary = {}   # source_id -> AutoPipeline state, refreshed by refresh_states()
 const ONE_SIDED_CHOICES := [["Infer from actions", null], ["None (both sides)", []], ["Arm", ["arm"]], ["Leg", ["leg"]], ["Arm and leg", ["arm", "leg"]]]
 
 
@@ -74,12 +84,16 @@ func _ready() -> void:
 	load_model_preference()
 	configure_model_selector()
 	load_support_files()
+	for choice in STATUS_FILTERS:
+		%StatusFilter.add_item(String(choice[0]))
 	populate_catalog("")
 	provider.generation_succeeded.connect(_on_generation_succeeded)
 	provider.generation_failed.connect(_on_generation_failed)
 	model_option.item_selected.connect(_on_model_selected)
 	custom_model_input.text_changed.connect(_on_custom_model_changed)
 	search_input.text_changed.connect(populate_catalog)
+	%StatusFilter.item_selected.connect(func(_i: int) -> void: refresh_states(); populate_catalog(search_input.text))
+	%AutoRunModal.run_finished.connect(func(_state: String) -> void: refresh_states(); populate_catalog(search_input.text))
 	catalog_tree.item_selected.connect(_on_catalog_selected)
 	joint_option.item_selected.connect(func(_index: int) -> void: populate_movement_options())
 	%AddActionButton.pressed.connect(add_joint_action)
@@ -194,6 +208,7 @@ func reload_catalog() -> void:
 	catalog.clear()
 	canonical_ids.clear()
 	load_support_files()
+	refresh_states()
 	populate_catalog(search_input.text)
 
 
@@ -212,20 +227,33 @@ func populate_catalog(query: String) -> void:
 		item.set_text(1, str(source.get("equipment", "—")) if source.get("equipment") != null else "—")
 		item.set_metadata(0, source.get("catalog_id", ""))
 		count += 1
-	%CatalogCount.text = "%d catalog-only candidates" % count
+	var states: Array = active_status_states()
+	%CatalogCount.text = "%d catalog-only candidates" % count if states.is_empty() else "%d %s" % [count, String(STATUS_FILTERS[%StatusFilter.selected][0]).trim_prefix("Show: ")]
 
 
-## The catalog sources the search box currently shows (all when it's empty).
+## The catalog sources the catalog currently shows: the search text and the
+## status filter together (everything when both are empty).
 func filtered_catalog(query: String) -> Array:
 	var normalized := query.strip_edges().to_lower()
-	if normalized.is_empty():
-		return catalog.duplicate()
+	var states := active_status_states()
 	var matches: Array = []
 	for source in catalog:
+		if not states.is_empty() and String(source_states.get(String(source.get("source_id", "")), "new")) not in states:
+			continue
 		var haystack := "%s %s %s %s" % [source.get("name", ""), source.get("equipment", ""), source.get("category", ""), source.get("instructions", [])]
-		if normalized in haystack.to_lower():
+		if normalized.is_empty() or normalized in haystack.to_lower():
 			matches.append(source)
 	return matches
+
+
+func active_status_states() -> Array:
+	return STATUS_FILTERS[maxi(0, %StatusFilter.selected)][1]
+
+
+## Pipeline states are read from disk, so they're cached and refreshed when
+## the filter changes, after a draft is saved, and after an auto run.
+func refresh_states() -> void:
+	source_states = AutoPipeline.snapshot()["states"] if not active_status_states().is_empty() else {}
 
 
 func _on_catalog_selected() -> void:
@@ -741,6 +769,7 @@ func save_draft() -> void:
 	if result.get("ok", false):
 		baseline_response = current_response.duplicate(true)
 		show_diff()
+		if not active_status_states().is_empty(): refresh_states()
 	set_status("Saved %s" % result.get("path", "") if result.get("ok", false) else result.get("error", "Draft save failed."), not result.get("ok", false))
 
 
@@ -791,9 +820,7 @@ func open_auto_mode() -> void:
 	var modal: AutoRunModal = %AutoRunModal
 	modal.open_for({
 		"title": "Auto mode · Kinematic Definition Studio",
-		"scope": (("Works through the %d catalog exercise(s) matching your search “%s”." % [sources.size(), query]) if not query.is_empty() \
-			else "No search filter: works through all %d catalog exercises. Type in the catalog search first to narrow it (e.g. “press”)." % sources.size()) \
-			+ set_aside_note(),
+		"scope": scope_text(sources.size(), query) + set_aside_note(),
 		"option": {"label": "Skip stretches (the council rejects them anyway)", "setting": "skip_stretches", "default": true},
 		"model": model_id,
 		"completed_label": "Completed",
@@ -805,6 +832,17 @@ func open_auto_mode() -> void:
 		"estimate_tokens": 30000,
 		"log_name": "studio",
 	})
+
+
+func scope_text(count: int, query: String) -> String:
+	var states := active_status_states()
+	var filter := String(STATUS_FILTERS[%StatusFilter.selected][0]).trim_prefix("Show: ") if not states.is_empty() else ""
+	if query.is_empty() and filter.is_empty():
+		return "No search filter: works through all %d catalog exercises. Type in the catalog search or pick a status first to narrow it (e.g. “press”, or “sent back with changes”)." % count
+	var parts: Array[String] = []
+	if not filter.is_empty(): parts.append("“%s”" % filter)
+	if not query.is_empty(): parts.append("matching “%s”" % query)
+	return "Works through the %d catalog exercise(s) %s." % [count, " and ".join(parts)]
 
 
 func set_aside_note() -> String:
