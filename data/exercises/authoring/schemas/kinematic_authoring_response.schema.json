@@ -239,581 +239,79 @@
                 "primary_joint_actions": {
                   "type": "array",
                   "items": {
-                    "anyOf": [
-                      {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                          "joint",
-                          "movement",
-                          "emphasis",
-                          "sides"
-                        ],
-                        "properties": {
-                          "joint": {
-                            "type": "string",
-                            "enum": [
-                              "ankle_joint"
-                            ]
-                          },
-                          "movement": {
-                            "type": "string",
-                            "enum": [
-                              "dorsiflexion",
-                              "plantarflexion"
-                            ]
-                          },
-                          "emphasis": {
-                            "type": "string",
-                            "enum": [
-                              "primary",
-                              "assist"
-                            ]
-                          },
-                          "sides": {
-                            "type": "string",
-                            "enum": [
-                              "working",
-                              "both"
-                            ]
-                          }
-                        }
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "joint",
+                      "movement",
+                      "emphasis",
+                      "sides"
+                    ],
+                    "properties": {
+                      "joint": {
+                        "type": "string",
+                        "enum": [
+                          "ankle_joint",
+                          "cervical_spine",
+                          "elbow_joint",
+                          "finger_joints",
+                          "glenohumeral_joint",
+                          "hip_joint",
+                          "knee_joint",
+                          "lumbar_spine",
+                          "radioulnar_joint",
+                          "scapulothoracic_joint",
+                          "subtalar_joint",
+                          "thumb_joints",
+                          "toe_joints",
+                          "wrist_joint"
+                        ]
                       },
-                      {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                          "joint",
-                          "movement",
-                          "emphasis",
-                          "sides"
-                        ],
-                        "properties": {
-                          "joint": {
-                            "type": "string",
-                            "enum": [
-                              "cervical_spine"
-                            ]
-                          },
-                          "movement": {
-                            "type": "string",
-                            "enum": [
-                              "extension",
-                              "flexion",
-                              "lateral_flexion",
-                              "rotation"
-                            ]
-                          },
-                          "emphasis": {
-                            "type": "string",
-                            "enum": [
-                              "primary",
-                              "assist"
-                            ]
-                          },
-                          "sides": {
-                            "type": "string",
-                            "enum": [
-                              "working",
-                              "both"
-                            ]
-                          }
-                        }
+                      "movement": {
+                        "type": "string",
+                        "enum": [
+                          "abduction",
+                          "adduction",
+                          "depression",
+                          "dorsiflexion",
+                          "downward_rotation",
+                          "elevation",
+                          "eversion",
+                          "extension",
+                          "external_rotation",
+                          "flexion",
+                          "horizontal_abduction",
+                          "horizontal_adduction",
+                          "internal_rotation",
+                          "inversion",
+                          "lateral_flexion",
+                          "opposition",
+                          "plantarflexion",
+                          "pronation",
+                          "protraction",
+                          "radial_deviation",
+                          "retraction",
+                          "rotation",
+                          "supination",
+                          "ulnar_deviation",
+                          "upward_rotation"
+                        ]
                       },
-                      {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                          "joint",
-                          "movement",
-                          "emphasis",
-                          "sides"
-                        ],
-                        "properties": {
-                          "joint": {
-                            "type": "string",
-                            "enum": [
-                              "elbow_joint"
-                            ]
-                          },
-                          "movement": {
-                            "type": "string",
-                            "enum": [
-                              "extension",
-                              "flexion"
-                            ]
-                          },
-                          "emphasis": {
-                            "type": "string",
-                            "enum": [
-                              "primary",
-                              "assist"
-                            ]
-                          },
-                          "sides": {
-                            "type": "string",
-                            "enum": [
-                              "working",
-                              "both"
-                            ]
-                          }
-                        }
+                      "emphasis": {
+                        "type": "string",
+                        "enum": [
+                          "primary",
+                          "assist"
+                        ]
                       },
-                      {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                          "joint",
-                          "movement",
-                          "emphasis",
-                          "sides"
-                        ],
-                        "properties": {
-                          "joint": {
-                            "type": "string",
-                            "enum": [
-                              "finger_joints"
-                            ]
-                          },
-                          "movement": {
-                            "type": "string",
-                            "enum": [
-                              "abduction",
-                              "adduction",
-                              "extension",
-                              "flexion"
-                            ]
-                          },
-                          "emphasis": {
-                            "type": "string",
-                            "enum": [
-                              "primary",
-                              "assist"
-                            ]
-                          },
-                          "sides": {
-                            "type": "string",
-                            "enum": [
-                              "working",
-                              "both"
-                            ]
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                          "joint",
-                          "movement",
-                          "emphasis",
-                          "sides"
-                        ],
-                        "properties": {
-                          "joint": {
-                            "type": "string",
-                            "enum": [
-                              "glenohumeral_joint"
-                            ]
-                          },
-                          "movement": {
-                            "type": "string",
-                            "enum": [
-                              "abduction",
-                              "adduction",
-                              "extension",
-                              "external_rotation",
-                              "flexion",
-                              "horizontal_abduction",
-                              "horizontal_adduction",
-                              "internal_rotation"
-                            ]
-                          },
-                          "emphasis": {
-                            "type": "string",
-                            "enum": [
-                              "primary",
-                              "assist"
-                            ]
-                          },
-                          "sides": {
-                            "type": "string",
-                            "enum": [
-                              "working",
-                              "both"
-                            ]
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                          "joint",
-                          "movement",
-                          "emphasis",
-                          "sides"
-                        ],
-                        "properties": {
-                          "joint": {
-                            "type": "string",
-                            "enum": [
-                              "hip_joint"
-                            ]
-                          },
-                          "movement": {
-                            "type": "string",
-                            "enum": [
-                              "abduction",
-                              "adduction",
-                              "extension",
-                              "external_rotation",
-                              "flexion",
-                              "internal_rotation"
-                            ]
-                          },
-                          "emphasis": {
-                            "type": "string",
-                            "enum": [
-                              "primary",
-                              "assist"
-                            ]
-                          },
-                          "sides": {
-                            "type": "string",
-                            "enum": [
-                              "working",
-                              "both"
-                            ]
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                          "joint",
-                          "movement",
-                          "emphasis",
-                          "sides"
-                        ],
-                        "properties": {
-                          "joint": {
-                            "type": "string",
-                            "enum": [
-                              "knee_joint"
-                            ]
-                          },
-                          "movement": {
-                            "type": "string",
-                            "enum": [
-                              "extension",
-                              "external_rotation",
-                              "flexion",
-                              "internal_rotation"
-                            ]
-                          },
-                          "emphasis": {
-                            "type": "string",
-                            "enum": [
-                              "primary",
-                              "assist"
-                            ]
-                          },
-                          "sides": {
-                            "type": "string",
-                            "enum": [
-                              "working",
-                              "both"
-                            ]
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                          "joint",
-                          "movement",
-                          "emphasis",
-                          "sides"
-                        ],
-                        "properties": {
-                          "joint": {
-                            "type": "string",
-                            "enum": [
-                              "lumbar_spine"
-                            ]
-                          },
-                          "movement": {
-                            "type": "string",
-                            "enum": [
-                              "extension",
-                              "flexion",
-                              "lateral_flexion",
-                              "rotation"
-                            ]
-                          },
-                          "emphasis": {
-                            "type": "string",
-                            "enum": [
-                              "primary",
-                              "assist"
-                            ]
-                          },
-                          "sides": {
-                            "type": "string",
-                            "enum": [
-                              "working",
-                              "both"
-                            ]
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                          "joint",
-                          "movement",
-                          "emphasis",
-                          "sides"
-                        ],
-                        "properties": {
-                          "joint": {
-                            "type": "string",
-                            "enum": [
-                              "radioulnar_joint"
-                            ]
-                          },
-                          "movement": {
-                            "type": "string",
-                            "enum": [
-                              "pronation",
-                              "supination"
-                            ]
-                          },
-                          "emphasis": {
-                            "type": "string",
-                            "enum": [
-                              "primary",
-                              "assist"
-                            ]
-                          },
-                          "sides": {
-                            "type": "string",
-                            "enum": [
-                              "working",
-                              "both"
-                            ]
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                          "joint",
-                          "movement",
-                          "emphasis",
-                          "sides"
-                        ],
-                        "properties": {
-                          "joint": {
-                            "type": "string",
-                            "enum": [
-                              "scapulothoracic_joint"
-                            ]
-                          },
-                          "movement": {
-                            "type": "string",
-                            "enum": [
-                              "depression",
-                              "downward_rotation",
-                              "elevation",
-                              "protraction",
-                              "retraction",
-                              "upward_rotation"
-                            ]
-                          },
-                          "emphasis": {
-                            "type": "string",
-                            "enum": [
-                              "primary",
-                              "assist"
-                            ]
-                          },
-                          "sides": {
-                            "type": "string",
-                            "enum": [
-                              "working",
-                              "both"
-                            ]
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                          "joint",
-                          "movement",
-                          "emphasis",
-                          "sides"
-                        ],
-                        "properties": {
-                          "joint": {
-                            "type": "string",
-                            "enum": [
-                              "subtalar_joint"
-                            ]
-                          },
-                          "movement": {
-                            "type": "string",
-                            "enum": [
-                              "eversion",
-                              "inversion"
-                            ]
-                          },
-                          "emphasis": {
-                            "type": "string",
-                            "enum": [
-                              "primary",
-                              "assist"
-                            ]
-                          },
-                          "sides": {
-                            "type": "string",
-                            "enum": [
-                              "working",
-                              "both"
-                            ]
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                          "joint",
-                          "movement",
-                          "emphasis",
-                          "sides"
-                        ],
-                        "properties": {
-                          "joint": {
-                            "type": "string",
-                            "enum": [
-                              "thumb_joints"
-                            ]
-                          },
-                          "movement": {
-                            "type": "string",
-                            "enum": [
-                              "abduction",
-                              "adduction",
-                              "extension",
-                              "flexion",
-                              "opposition"
-                            ]
-                          },
-                          "emphasis": {
-                            "type": "string",
-                            "enum": [
-                              "primary",
-                              "assist"
-                            ]
-                          },
-                          "sides": {
-                            "type": "string",
-                            "enum": [
-                              "working",
-                              "both"
-                            ]
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                          "joint",
-                          "movement",
-                          "emphasis",
-                          "sides"
-                        ],
-                        "properties": {
-                          "joint": {
-                            "type": "string",
-                            "enum": [
-                              "toe_joints"
-                            ]
-                          },
-                          "movement": {
-                            "type": "string",
-                            "enum": [
-                              "extension",
-                              "flexion"
-                            ]
-                          },
-                          "emphasis": {
-                            "type": "string",
-                            "enum": [
-                              "primary",
-                              "assist"
-                            ]
-                          },
-                          "sides": {
-                            "type": "string",
-                            "enum": [
-                              "working",
-                              "both"
-                            ]
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                          "joint",
-                          "movement",
-                          "emphasis",
-                          "sides"
-                        ],
-                        "properties": {
-                          "joint": {
-                            "type": "string",
-                            "enum": [
-                              "wrist_joint"
-                            ]
-                          },
-                          "movement": {
-                            "type": "string",
-                            "enum": [
-                              "extension",
-                              "flexion",
-                              "radial_deviation",
-                              "ulnar_deviation"
-                            ]
-                          },
-                          "emphasis": {
-                            "type": "string",
-                            "enum": [
-                              "primary",
-                              "assist"
-                            ]
-                          },
-                          "sides": {
-                            "type": "string",
-                            "enum": [
-                              "working",
-                              "both"
-                            ]
-                          }
-                        }
+                      "sides": {
+                        "type": "string",
+                        "enum": [
+                          "working",
+                          "both"
+                        ]
                       }
-                    ]
+                    }
                   }
                 },
                 "stabilization_demands": {

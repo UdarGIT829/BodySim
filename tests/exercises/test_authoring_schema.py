@@ -46,19 +46,31 @@ def test_every_object_is_closed_and_all_properties_are_required():
         assert set(node.get("required", [])) == set(node.get("properties", {}))
 
 
-def test_joint_action_schema_encodes_only_valid_joint_movement_pairs():
+def test_joint_action_schema_lists_only_vocabulary_joints_and_movements():
+    """Actions are one flat object (a per-joint branch made the compiled
+    grammar too large for the API); valid pairs are enforced in code, by the
+    GDScript validators' JOINT_ACTIONS, generated from the same vocabulary."""
+    from tools.anatomy.sync_vocabulary import usable_actions
     schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
     definition = schema["properties"]["proposed_definition"]["anyOf"][1]
-    action_items = definition["properties"]["kinematic_profile"]["properties"]["primary_joint_actions"]["items"]
-    encoded = {
-        branch["properties"]["joint"]["enum"][0]: set(branch["properties"]["movement"]["enum"])
-        for branch in action_items["anyOf"]
-    }
-    vocabulary = json.loads((Path(__file__).resolve().parents[2] / "data/anatomy/joint_action_vocabulary.json").read_text())
-    for joint, movements in encoded.items():
-        assert movements <= set(vocabulary["joints"][joint]), joint
-    assert "rotation" not in encoded["scapulothoracic_joint"]          # only up/downward rotation exist
-    assert "horizontal_abduction" in encoded["glenohumeral_joint"]
+    item = definition["properties"]["kinematic_profile"]["properties"]["primary_joint_actions"]["items"]
+    pairs = usable_actions()
+    assert item["properties"]["joint"]["enum"] == list(pairs)
+    assert set(item["properties"]["movement"]["enum"]) == {m for ms in pairs.values() for m in ms}
+    assert "rotation" not in pairs["scapulothoracic_joint"]            # only up/downward rotation exist
+    assert "horizontal_abduction" in pairs["glenohumeral_joint"]
+    validators = (Path(__file__).resolve().parents[2] / "src/exercises/authoring/candidate_validators.gd").read_text()
+    for joint, movements in pairs.items():
+        assert f'"{joint}": {json.dumps(sorted(movements))}' in validators, joint
+
+
+def test_schemas_stay_small_enough_for_structured_outputs():
+    """A tripwire: the API rejects schemas whose compiled grammar is too large
+    (the authoring schema hit it at ~29 KB with per-joint action branches). Both schemas
+    compiled at their current sizes; keep them well below that."""
+    root = Path(__file__).resolve().parents[2] / "data/exercises/authoring/schemas"
+    assert len((root / "kinematic_authoring_response.schema.json").read_bytes()) < 15000
+    assert len((root / "kinematic_review_response.schema.json").read_bytes()) < 20000
 
 
 def test_schema_and_validators_are_in_sync_with_the_muscle_action_table():
@@ -82,9 +94,9 @@ def test_movement_family_is_structurally_non_empty_without_array_constraints():
 def test_joint_actions_carry_the_tracer_v3_fields():
     schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
     profile = schema["properties"]["proposed_definition"]["anyOf"][1]["properties"]["kinematic_profile"]
-    for branch in profile["properties"]["primary_joint_actions"]["items"]["anyOf"]:
-        assert branch["properties"]["emphasis"]["enum"] == ["primary", "assist"]
-        assert branch["properties"]["sides"]["enum"] == ["working", "both"]
+    item = profile["properties"]["primary_joint_actions"]["items"]
+    assert item["properties"]["emphasis"]["enum"] == ["primary", "assist"]
+    assert item["properties"]["sides"]["enum"] == ["working", "both"]
     assert profile["properties"]["one_sided_limbs"]["items"]["enum"] == ["arm", "leg"]
     assert "one_sided_limbs" in profile["required"]
 

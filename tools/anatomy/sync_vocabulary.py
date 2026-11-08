@@ -62,19 +62,24 @@ def render_schema(actions: Dict[str, List[str]], demands: List[str]) -> str:
     schema["$id"] = SCHEMA_ID
     schema["title"] = "BodySim kinematic authoring response v3"
     profile = schema["properties"]["proposed_definition"]["anyOf"][1]["properties"]["kinematic_profile"]["properties"]
-    # Every property is required (structured outputs); emphasis and sides
-    # carry the tracer's defaults, "primary" and "working".
-    profile["primary_joint_actions"]["items"]["anyOf"] = [{
+    # One flat object per action (every property required, as structured
+    # outputs need). A branch per joint listing only its movements would be
+    # stricter, but its compiled grammar outgrew the API's limit ("compiled
+    # grammar is too large") once emphasis and sides were added, so the
+    # joint/movement pairing is checked in code instead: the GDScript
+    # validators reject unknown pairs and the candidate gate rejects actions
+    # that reach no muscles. emphasis and sides carry the tracer's defaults.
+    profile["primary_joint_actions"]["items"] = {
         "type": "object",
         "additionalProperties": False,
         "required": ["joint", "movement", "emphasis", "sides"],
         "properties": {
-            "joint": {"type": "string", "enum": [joint]},
-            "movement": {"type": "string", "enum": sorted(movements)},
+            "joint": {"type": "string", "enum": list(actions)},
+            "movement": {"type": "string", "enum": sorted({m for ms in actions.values() for m in ms})},
             "emphasis": {"type": "string", "enum": ["primary", "assist"]},
             "sides": {"type": "string", "enum": ["working", "both"]},
         },
-    } for joint, movements in actions.items()]
+    }
     profile["stabilization_demands"]["items"]["enum"] = demands
     profile["one_sided_limbs"] = {"type": "array", "items": {"type": "string", "enum": ["arm", "leg"]}}
     kinematic_profile = schema["properties"]["proposed_definition"]["anyOf"][1]["properties"]["kinematic_profile"]

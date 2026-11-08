@@ -198,7 +198,12 @@ def make_client(settings_path: Optional[str] = None) -> Any:
     import anthropic  # noqa: PLC0415 - keeps tests importable without the SDK
 
     key = os.environ.get("ANTHROPIC_API_KEY", "").strip() or read_settings_key(settings_path)
-    return anthropic.Anthropic(api_key=key) if key else anthropic.Anthropic()
+    # Ask for gzip only. The API compresses some responses (notably error
+    # bodies) with Brotli when offered, and with an older `brotli` package
+    # installed, httpx2's Brotli decoder crashes ("process() takes no keyword
+    # arguments"), hiding the real API error.
+    headers = {"Accept-Encoding": "gzip, deflate"}
+    return anthropic.Anthropic(api_key=key, default_headers=headers) if key else anthropic.Anthropic(default_headers=headers)
 
 
 def read_settings_key(settings_path: Optional[str]) -> str:

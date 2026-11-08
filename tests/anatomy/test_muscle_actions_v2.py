@@ -124,13 +124,10 @@ def test_table_covers_all_466_muscles():
 
 def test_every_action_exercises_can_use_has_a_prime_mover():
     records = _complete_table()
-    schema = json.loads((table.PROJECT_ROOT / "data/exercises/authoring/schemas/kinematic_authoring_response.schema.json").read_text())
-    alternatives = (schema["properties"]["proposed_definition"]["anyOf"][1]["properties"]["kinematic_profile"]
-                    ["properties"]["primary_joint_actions"]["items"]["anyOf"])
+    from tools.anatomy.sync_vocabulary import usable_actions   # the pairs exercises can use
     missing = []
-    for alt in alternatives:
-        joint = alt["properties"]["joint"]["enum"][0]
-        for movement in alt["properties"]["movement"]["enum"]:
+    for joint, movements in usable_actions().items():
+        for movement in movements:
             if not any(_weight(r, joint, movement) >= 0.7 for r in records.values()):
                 missing.append(f"{joint}/{movement}")
     assert not missing, f"no muscle with weight >= 0.7 for: {missing}"
