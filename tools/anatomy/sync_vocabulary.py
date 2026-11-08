@@ -11,6 +11,9 @@ exercise can never name an action the tracer maps to nothing). Writes:
     authoring schema (bodysim.kinematic_authoring_response.v3), with the
     tracer v3 per-action fields (emphasis, sides) and one_sided_limbs
   - JOINT_ACTIONS and STABILIZATION_DEMANDS in candidate_validators.gd
+  - the movement-family enums of the authoring schema, MOVEMENT_FAMILIES in
+    candidate_validators.gd and FAMILY_ORDER in exercise_selector.gd, from
+    the vocabulary's movement_families (in that order)
 """
 
 from __future__ import annotations
@@ -30,6 +33,7 @@ from src.anatomy.muscle_actions_v2 import load_vocabulary, merged_table  # noqa:
 
 SCHEMA_PATH = PROJECT_ROOT / "data/exercises/authoring/schemas/kinematic_authoring_response.schema.json"
 VALIDATORS_PATH = PROJECT_ROOT / "src/exercises/authoring/candidate_validators.gd"
+SELECTOR_PATH = PROJECT_ROOT / "src/exercises/exercise_selector.gd"
 SCHEMA_ID = "bodysim.kinematic_authoring_response.v3"
 
 
@@ -42,6 +46,10 @@ def usable_actions() -> Dict[str, List[str]]:
     return {joint: [m for m in movements if (joint, m) in performed]
             for joint, movements in sorted(vocabulary["joints"].items())
             if any((joint, m) in performed for m in movements)}
+
+
+def families() -> List[str]:
+    return list(load_vocabulary()["movement_families"])
 
 
 def render_schema(actions: Dict[str, List[str]], demands: List[str]) -> str:
@@ -66,6 +74,9 @@ def render_schema(actions: Dict[str, List[str]], demands: List[str]) -> str:
     profile["one_sided_limbs"] = {"type": "array", "items": {"type": "string", "enum": ["arm", "leg"]}}
     kinematic_profile = schema["properties"]["proposed_definition"]["anyOf"][1]["properties"]["kinematic_profile"]
     kinematic_profile["required"] = ["kinetic_chain_type", "primary_joint_actions", "stabilization_demands", "one_sided_limbs"]
+    definition = schema["properties"]["proposed_definition"]["anyOf"][1]["properties"]
+    definition["primary_movement_family"]["enum"] = families()
+    definition["additional_movement_families"]["items"]["enum"] = families()
     return json.dumps(schema, indent=2) + "\n"
 
 
@@ -76,8 +87,19 @@ def render_validators(actions: Dict[str, List[str]], demands: List[str]) -> str:
     text, n1 = re.subn(r"const JOINT_ACTIONS := \{.*?\n\}", lambda _: joint_block, text, count=1, flags=re.S)
     text, n2 = re.subn(r"const STABILIZATION_DEMANDS := \[.*?\]", lambda _: "const STABILIZATION_DEMANDS := " + json.dumps(demands),
                        text, count=1, flags=re.S)
-    if n1 != 1 or n2 != 1:
+    text, n3 = re.subn(r"const MOVEMENT_FAMILIES := \[.*?\]", lambda _: "const MOVEMENT_FAMILIES := " + json.dumps(families()),
+                       text, count=1, flags=re.S)
+    if n1 != 1 or n2 != 1 or n3 != 1:
         raise SystemExit("could not locate the vocabulary constants in candidate_validators.gd")
+    return text
+
+
+def render_selector() -> str:
+    text = SELECTOR_PATH.read_text(encoding="utf-8")
+    block = "const FAMILY_ORDER := [\n" + "".join(f'\t"{f}",\n' for f in families()) + "]"
+    text, n = re.subn(r"const FAMILY_ORDER := \[.*?\n\]", lambda _: block, text, count=1, flags=re.S)
+    if n != 1:
+        raise SystemExit("could not locate FAMILY_ORDER in exercise_selector.gd")
     return text
 
 
@@ -87,7 +109,8 @@ def main() -> int:
     args = parser.parse_args()
     actions = usable_actions()
     demands = sorted(load_vocabulary()["stabilization_demands"])
-    outputs = {SCHEMA_PATH: render_schema(actions, demands), VALIDATORS_PATH: render_validators(actions, demands)}
+    outputs = {SCHEMA_PATH: render_schema(actions, demands), VALIDATORS_PATH: render_validators(actions, demands),
+               SELECTOR_PATH: render_selector()}
     stale = [p for p, text in outputs.items() if p.read_text(encoding="utf-8") != text]
     if args.check:
         for p in stale:
@@ -96,7 +119,7 @@ def main() -> int:
     for p in stale:
         p.write_text(outputs[p], encoding="utf-8")
         print(f"updated {p.relative_to(PROJECT_ROOT)}")
-    print(f"{sum(len(m) for m in actions.values())} joint actions across {len(actions)} joints; {len(demands)} stabilization demands")
+    print(f"{sum(len(m) for m in actions.values())} joint actions across {len(actions)} joints; {len(demands)} stabilization demands; {len(families())} movement families")
     return 0
 
 

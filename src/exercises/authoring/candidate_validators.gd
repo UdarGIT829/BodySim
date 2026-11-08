@@ -8,7 +8,7 @@ const CHAIN_TYPES := ["open_chain", "closed_chain"]
 const EMPHASES := ["primary", "assist"]
 const SIDES := ["working", "both"]
 const LIMBS := ["arm", "leg"]
-const MOVEMENT_FAMILIES := ["squat", "hip_hinge", "horizontal_push", "vertical_push", "horizontal_pull", "vertical_pull", "loaded_carry", "elbow_flexion", "elbow_extension", "knee_extension", "knee_flexion", "ankle_plantarflexion", "trunk_flexion"]
+const MOVEMENT_FAMILIES := ["squat", "hip_hinge", "horizontal_push", "vertical_push", "horizontal_pull", "vertical_pull", "loaded_carry", "elbow_flexion", "elbow_extension", "knee_extension", "knee_flexion", "ankle_plantarflexion", "trunk_flexion", "lunge", "hip_bridge", "hip_flexion", "hip_abduction_adduction", "core_anti_extension", "core_rotation", "trunk_lateral_flexion", "shoulder_raise", "shoulder_rotation", "scapular_elevation", "wrist_and_grip", "olympic_lift", "jump_and_throw", "neck"]
 const STABILIZATION_DEMANDS := ["ankle_stability", "anterior_shoulder_stability", "anti_extension_hip", "anti_extension_spine", "anti_flexion_spine", "anti_rotation_torso", "elbow_joint_integrity", "elbow_stability", "femoral_head_stabilization", "glenohumeral_stabilization", "grip", "humeral_head_stabilization", "intra_abdominal_pressure", "knee_joint_stability", "lumbar_fascia_tension", "patellar_tracking", "pelvic_alignment", "pelvic_leveling_frontal", "postural_stabilization", "postural_sway_control", "scapular_anchoring", "scapular_retraction_stability", "scapular_stabilization", "shoulder_position_hold", "wrist_stability"]
 const JOINT_ACTIONS := {
 	"ankle_joint": ["dorsiflexion", "plantarflexion"],

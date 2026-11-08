@@ -87,3 +87,21 @@ def test_joint_actions_carry_the_tracer_v3_fields():
         assert branch["properties"]["sides"]["enum"] == ["working", "both"]
     assert profile["properties"]["one_sided_limbs"]["items"]["enum"] == ["arm", "leg"]
     assert "one_sided_limbs" in profile["required"]
+
+
+def test_movement_families_come_from_the_vocabulary():
+    root = Path(__file__).resolve().parents[2]
+    vocabulary = list(json.loads((root / "data/anatomy/joint_action_vocabulary.json").read_text())["movement_families"])
+    schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
+    definition = schema["properties"]["proposed_definition"]["anyOf"][1]["properties"]
+    assert definition["primary_movement_family"]["enum"] == vocabulary
+    assert definition["additional_movement_families"]["items"]["enum"] == vocabulary
+    for gd, const in (("src/exercises/authoring/candidate_validators.gd", "MOVEMENT_FAMILIES"),
+                      ("src/exercises/exercise_selector.gd", "FAMILY_ORDER")):
+        text = (root / gd).read_text()
+        block = text[text.index(f"const {const} := ["):]
+        block = block[:block.index("]") + 1]
+        assert all(f'"{family}"' in block for family in vocabulary), (gd, const)
+    # Every canonical exercise uses known families.
+    for exercise in json.loads((root / "data/exercises/exercises.json").read_text()):
+        assert set(exercise["movement_families"]) <= set(vocabulary), exercise["id"]

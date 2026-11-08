@@ -99,6 +99,11 @@ def tracer_reference() -> str:
         served = demands.get(demand, [])
         out.append(f"- `{demand}`: {vocabulary['stabilization_demands'][demand]}")
         out.append(f"  Serves: {listing(served) if served else '(no muscles yet)'}")
+    out += ["", "### Movement families (catalog labels)", "",
+            "Families group and search the catalog. They, like `kinetic_chain_type`, don't change the traced "
+            "muscles. Pick the closest primary family; add others only when they genuinely apply.", ""]
+    for family, description in vocabulary.get("movement_families", {}).items():
+        out.append(f"- `{family}`: {description}")
     out += ["", "### Joint actions and the muscles that perform them (muscle weight)", ""]
     for joint in sorted(vocabulary["joints"]):
         for movement in vocabulary["joints"][joint]:

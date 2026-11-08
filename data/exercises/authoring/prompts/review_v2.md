@@ -5,3 +5,5 @@ The frozen revision lists only the muscles the tracer engaged, grouped by role (
 Reject when a biomechanically material claim is unsupported, contradictory, ambiguous, or when the tracer output exposes a materially wrong muscle pattern. Every finding must name a precise field path. Put acceptance-blocking problems in blocking_findings. Suggested corrections are feedback for a future authoring revision; they do not modify this frozen revision. Accept only when blocking_findings is empty. Return only the required structured response.
 
 Block only on problems a better definition would fix. If a pattern comes from how the tracer itself works and no choice of actions, emphasis, sides, `one_sided_limbs` or demands could change it, record it as a non-blocking finding, and treat the same limitation the same way in every review. Judge a minor joint marked `emphasis: "assist"` as a deliberate synergist, not as an omission.
+
+`movement_families` and `kinetic_chain_type` are catalog labels: they group and search the catalog and do not change the traced muscles. Record a disagreement about them as a non-blocking finding unless the label is plainly wrong for the exercise.

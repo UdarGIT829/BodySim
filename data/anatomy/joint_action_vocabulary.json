@@ -119,5 +119,35 @@
     "0.3-0.6": "Clear assistant (synergist).",
     "0.1-0.2": "Minor or position-dependent contribution.",
     "omit": "No meaningful contribution; do not list the action."
-  }
+  },
+  "movement_families": {
+    "squat": "Bilateral knee-and-hip bend under load (back squat, goblet squat).",
+    "hip_hinge": "Bending at the hips with a neutral spine (deadlift, good morning, kettlebell swing).",
+    "horizontal_push": "Pushing away from the chest (bench press, push-up).",
+    "vertical_push": "Pressing overhead (overhead press).",
+    "horizontal_pull": "Pulling toward the torso (rows).",
+    "vertical_pull": "Pulling down from overhead (pull-up, lat pulldown).",
+    "loaded_carry": "Walking or holding while carrying a load (farmer's walk).",
+    "elbow_flexion": "Curling at the elbow (biceps curls).",
+    "elbow_extension": "Straightening the elbow against load (triceps extensions, pushdowns).",
+    "knee_extension": "Straightening the knee in isolation (leg extension).",
+    "knee_flexion": "Bending the knee in isolation (leg curl).",
+    "ankle_plantarflexion": "Rising onto the toes (calf raises).",
+    "trunk_flexion": "Curling the trunk forward (crunch, sit-up).",
+    "lunge": "Split-stance or single-leg knee-and-hip work (lunges, split squats, step-ups).",
+    "hip_bridge": "Driving the hips up from a bent-knee position (glute bridge, hip thrust).",
+    "hip_flexion": "Raising the thigh or legs toward the trunk (leg raises, knee raises).",
+    "hip_abduction_adduction": "Moving the leg out to the side or back in (band abductions, adductor machine).",
+    "core_anti_extension": "Holding the trunk rigid against extension (plank, ab rollout).",
+    "core_rotation": "Rotating the trunk or resisting rotation (Russian twist, woodchop, Pallof press).",
+    "trunk_lateral_flexion": "Bending the trunk sideways (side bend).",
+    "shoulder_raise": "Lifting the arms in front or to the side (front raise, lateral raise).",
+    "shoulder_rotation": "Rotating the upper arm (external and internal rotations).",
+    "scapular_elevation": "Shrugging the shoulder blades up (shrugs).",
+    "wrist_and_grip": "Wrist curls and grip work (wrist curl, plate pinch).",
+    "olympic_lift": "Explosive full-body pulls that catch the load (clean, snatch).",
+    "jump_and_throw": "Explosive jumps, bounds and throws (box jump, medicine ball throw).",
+    "neck": "Moving or bracing the head and neck (neck flexion and extension)."
+  },
+  "notes_movement_families": "Movement families group and search the exercise catalog. They don't affect the traced muscles. The first 13 are the original set; tools/anatomy/sync_vocabulary.py writes this list into the authoring schema, the GDScript validators and the selector's grouping order."
 }
