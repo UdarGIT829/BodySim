@@ -32,7 +32,7 @@ func run() -> void:
 	await check_studio_auto()
 	await check_council_auto()
 	if failures.is_empty():
-		print("Auto mode passed: runner (budget, credits, retries, fatal, limit, stop, failure streak), pipeline states, studio (search filter, skip stretches) and council (stretch rule, no Claude call) runs")
+		print("Auto mode passed: runner (budget, credits, retries, fatal, limit, stop, failure streak), pipeline states, studio (search filter, skip stretches) and council (stretch rule, no Claude call, suggested edits applied in-step and from the queue) runs")
 		quit(0)
 	else:
 		for failure in failures:
@@ -144,19 +144,19 @@ func check_studio_auto() -> void:
 	studio.search_input.text = "press"
 	studio.populate_catalog("press")
 	var queue: Array = AutoPipeline.studio_queue(studio.filtered_catalog("press"), true)
-	require(queue.size() >= 2, "studio queue must have work")
+	require(queue.size() >= 3, "studio queue must have work")
 	require(queue.all(func(x: Dictionary) -> bool: return "press" in ("%s %s %s %s" % [x.get("name", ""), x.get("equipment", ""), x.get("category", ""), x.get("instructions", [])]).to_lower()), "queue follows the search")
 	studio.open_auto_mode()
 	require(modal.option_check.visible and modal.option_enabled(), "Skip stretches is offered and on by default")
 	require(modal.description_label.text.contains("“press”"), "modal names the search it works through")
 	require(modal.run_label.text.contains("%d exercise" % queue.size()), "modal counts the filtered queue: %s" % modal.run_label.text)
 	require(modal.visible and modal.model_label.text.contains(studio.model_id), "modal shows the selected model")
-	modal.max_items_spin.value = 2
+	modal.max_items_spin.value = 3
 	modal.budget_spin.value = 100000000
 	await modal.start()
-	require(modal.state == "done" and modal.outcomes.get("drafted") == 2, "studio auto must draft two exercises: %s %s" % [modal.state, modal.outcomes])
-	require(modal.tokens_used() == 2 * FAKE_USAGE, "studio tokens counted")
-	for source in queue.slice(0, 2):
+	require(modal.state == "done" and modal.outcomes.get("drafted") == 3, "studio auto must draft three exercises: %s %s" % [modal.state, modal.outcomes])
+	require(modal.tokens_used() == 3 * FAKE_USAGE, "studio tokens counted")
+	for source in queue.slice(0, 3):
 		var draft := CandidateRepository.load_draft(String(source["source_id"]))
 		require(draft.get("status") == "definition_candidate", "%s must be saved as a candidate" % source["source_id"])
 
@@ -187,10 +187,32 @@ func check_council_auto() -> void:
 	require(not stretch_review.get("votes", {}).has(ReviewRevisionStore.HUMAN_MEMBER), "no automatic owner approval for a stretch")
 	var stretch_id := String(stretch_entry["data"]["source_id"])
 	require(not AutoPipeline.studio_queue(AutoPipeline.load_catalog(), false).any(func(x: Dictionary) -> bool: return x.get("source_id") == stretch_id), "a rule-rejected stretch is never re-authored")
+	# Suggested edits, in the same step: the reviewer rejects with an edit that
+	# fixes everything; it's applied, re-frozen and reviewed again (2 reviews).
+	var before_edits: Array = council.auto_council_queue().filter(func(e: Dictionary) -> bool: return e["kind"] == "draft")
+	require(before_edits.size() >= 3, "need drafts for the edit checks")
+	var edit_id := String(before_edits[1]["data"]["source_id"])
+	OS.set_environment("FAKE_EDIT_SOURCE", edit_id)
+	var edited: Dictionary = await council.auto_review(before_edits[1])
+	OS.set_environment("FAKE_EDIT_SOURCE", "")
+	require(edited.get("outcome") == "rejected_by_claude_after_edits", "edits are applied and re-reviewed: %s" % [edited])
+	require(AutoPipeline.total_tokens(edited.get("usage", {})) == 2 * FAKE_USAGE, "both reviews are counted")
+	var edited_draft := CandidateRepository.load_draft(edit_id)
+	require(edited_draft["authoring_response"]["proposed_definition"]["kinematic_profile"]["kinetic_chain_type"] == "closed_chain", "the edit is in the new draft")
+	require(edited_draft.get("provider_metadata", {}).has("edited_by_council"), "the draft records where its edits came from")
+	# Suggested edits waiting from an earlier review show up as an "edits" entry.
+	var waiting: Dictionary = before_edits[2]
+	var waiting_id := String(waiting["data"]["source_id"])
+	var frozen: Dictionary = ReviewRevisionStore.freeze_draft(waiting["data"], council.catalog_by_source[waiting_id])
+	var waiting_hash := String(frozen["revision"]["revision_sha256"])
+	ReviewRevisionStore.save_vote(waiting_hash, ReviewRevisionStore.HUMAN_MEMBER, {"decision": "accept"})
+	ReviewRevisionStore.save_vote(waiting_hash, ReviewRevisionStore.MODEL_MEMBER, {"decision": "reject", "blocking_findings": [],
+		"proposed_edits": [{"op": "set_kinetic_chain_type", "value": "closed_chain"}], "edits_resolve_all_blocking_findings": true})
+	require(council.auto_council_queue().any(func(e: Dictionary) -> bool: return e["kind"] == "edits" and e["data"].get("source_id") == waiting_id), "edits waiting to be applied are queued")
 	var queue: Array = council.auto_council_queue()
 	require(not queue.any(func(e: Dictionary) -> bool: return e["data"].get("source_id") == stretch_id), "the rejected stretch leaves the queue")
 	require(queue.size() >= 2, "council queue must have at least the two new drafts")
-	var accepted_source := String(queue[0]["data"].get("source_id", ""))
+	var accepted_source := String(queue.filter(func(e: Dictionary) -> bool: return e["kind"] == "draft")[0]["data"].get("source_id", ""))
 	OS.set_environment("FAKE_ACCEPT_SOURCE", accepted_source)
 	var before: int = AutoPipeline.layers(AutoPipeline.snapshot())["done"]
 	var modal: AutoRunModal = council.get_node("%AutoRunModal")
@@ -202,7 +224,8 @@ func check_council_auto() -> void:
 	await modal.start()
 	require(modal.state == "done", "council run must finish: %s" % modal.state)
 	require(modal.outcomes.get("promoted") == 1, "exactly the accepted exercise is promoted: %s" % [modal.outcomes])
-	require(int(modal.outcomes.get("rejected_by_claude", 0)) == queue.size() - 1, "Claude's rejections stand: %s" % [modal.outcomes])
+	require(int(modal.outcomes.get("rejected_by_claude", 0)) + int(modal.outcomes.get("rejected_by_claude_after_edits", 0)) == queue.size() - 1, "Claude's rejections stand: %s" % [modal.outcomes])
+	require(int(modal.outcomes.get("rejected_by_claude_after_edits", 0)) == 1, "the waiting edits were applied in the run: %s" % [modal.outcomes])
 	require(AutoPipeline.layers(AutoPipeline.snapshot())["done"] == before + 1, "promoted layer grows by one")
 	for hash in DirAccess.get_files_at(ReviewRevisionStore.REVIEW_DIRECTORY):
 		var review := ReviewRevisionStore.read_json("%s/%s" % [ReviewRevisionStore.REVIEW_DIRECTORY, hash])

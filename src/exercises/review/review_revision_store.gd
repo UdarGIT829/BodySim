@@ -13,6 +13,7 @@ const LEGACY_MODEL_MEMBERS := ["openai_reviewer"]
 const PROMOTION_BRIDGE := "res://tools/exercises/run_promotion.py"
 const DEMOTION_DIRECTORY := "res://data/exercises/authoring/demotions"
 const DEMOTION_BRIDGE := "res://tools/exercises/run_demotion.py"
+const EDITS_BRIDGE := "res://tools/exercises/run_review_edits.py"
 const PAYLOAD_KEYS := ["format_version", "source_id", "catalog_id", "source_snapshot_sha256", "source",
 	"additional_context", "authoring_response", "authoring_provider_metadata", "candidate_trace_report"]
 
@@ -177,6 +178,28 @@ static func promote(revision: Dictionary, python_executable := "python3") -> Dic
 		return {"ok": false, "errors": ["Only a unanimously accepted revision can be promoted."]}
 	var report := run_bridge(PROMOTION_BRIDGE, {"revision_sha256": hash, "dry_run": false}, python_executable)
 	return report if not report.is_empty() else {"ok": false, "errors": ["Promotion returned no report."]}
+
+
+## The model reviewer's proposed edits for a rejected revision, if they can
+## be applied without re-authoring: the reviewer says they resolve every
+## blocking finding, and nobody else rejected it.
+static func ready_edits(review: Dictionary) -> Array:
+	if review.get("status", "") != "changes_requested":
+		return []
+	var votes: Dictionary = review.get("votes", {})
+	for member in votes:
+		if member != MODEL_MEMBER and votes[member] is Dictionary and votes[member].get("decision", "") == "reject":
+			return []
+	var vote: Dictionary = votes.get(MODEL_MEMBER, {}) if votes.get(MODEL_MEMBER) is Dictionary else {}
+	if not vote.get("edits_resolve_all_blocking_findings", false):
+		return []
+	return vote.get("proposed_edits", [])
+
+
+## Applies the model reviewer's proposed edits to a rejected revision and saves
+## the result as the exercise's new draft (src/exercises/review_edits.py).
+static func apply_review_edits(hash: String, python_executable := "python3") -> Dictionary:
+	return run_bridge(EDITS_BRIDGE, {"revision_sha256": hash, "dry_run": false}, python_executable)
 
 
 ## A demoted revision's record (empty if it was never demoted).

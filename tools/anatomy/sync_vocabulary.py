@@ -11,6 +11,7 @@ exercise can never name an action the tracer maps to nothing). Writes:
     authoring schema (bodysim.kinematic_authoring_response.v3), with the
     tracer v3 per-action fields (emphasis, sides) and one_sided_limbs
   - JOINT_ACTIONS and STABILIZATION_DEMANDS in candidate_validators.gd
+  - the review schema's proposed_edits operations (bodysim.kinematic_review_response.v2)
   - the movement-family enums of the authoring schema, MOVEMENT_FAMILIES in
     candidate_validators.gd and FAMILY_ORDER in exercise_selector.gd, from
     the vocabulary's movement_families (in that order)
@@ -34,6 +35,10 @@ from src.anatomy.muscle_actions_v2 import load_vocabulary, merged_table  # noqa:
 SCHEMA_PATH = PROJECT_ROOT / "data/exercises/authoring/schemas/kinematic_authoring_response.schema.json"
 VALIDATORS_PATH = PROJECT_ROOT / "src/exercises/authoring/candidate_validators.gd"
 SELECTOR_PATH = PROJECT_ROOT / "src/exercises/exercise_selector.gd"
+REVIEW_SCHEMA_PATH = PROJECT_ROOT / "data/exercises/authoring/schemas/kinematic_review_response.schema.json"
+REVIEW_SCHEMA_ID = "bodysim.kinematic_review_response.v2"
+LATERALITIES = ["bilateral", "left", "right", "unilateral"]
+CHAIN_TYPES = ["open_chain", "closed_chain"]
 SCHEMA_ID = "bodysim.kinematic_authoring_response.v3"
 
 
@@ -94,6 +99,43 @@ def render_validators(actions: Dict[str, List[str]], demands: List[str]) -> str:
     return text
 
 
+def _op(name: str, **fields) -> dict:
+    props = {"op": {"type": "string", "enum": [name]}, **fields}
+    return {"type": "object", "additionalProperties": False, "required": list(props), "properties": props}
+
+
+def render_review_schema(actions: Dict[str, List[str]], demands: List[str]) -> str:
+    """The review schema, with the edit operations a reviewer can propose.
+
+    Every operation is a closed object with all fields required (structured
+    outputs). Joint and movement are separate enums; the edit applier checks
+    the pair against the vocabulary."""
+    schema = json.loads(REVIEW_SCHEMA_PATH.read_text(encoding="utf-8"))
+    schema["$id"] = REVIEW_SCHEMA_ID
+    joint = {"type": "string", "enum": list(actions)}
+    movement = {"type": "string", "enum": sorted({m for ms in actions.values() for m in ms})}
+    emphasis = {"type": "string", "enum": ["primary", "assist"]}
+    sides = {"type": "string", "enum": ["working", "both"]}
+    demand = {"type": "string", "enum": demands}
+    ops = [
+        _op("set_kinetic_chain_type", value={"type": "string", "enum": CHAIN_TYPES}),
+        _op("set_laterality", value={"type": "string", "enum": LATERALITIES}),
+        _op("set_movement_families", value={"type": "array", "items": {"type": "string", "enum": families()}}),
+        _op("set_one_sided_limbs", value={"type": "array", "items": {"type": "string", "enum": ["arm", "leg"]}}),
+        _op("add_joint_action", joint=joint, movement=movement, emphasis=emphasis, sides=sides),
+        _op("remove_joint_action", joint=joint, movement=movement),
+        _op("set_action_emphasis", joint=joint, movement=movement, emphasis=emphasis),
+        _op("set_action_sides", joint=joint, movement=movement, sides=sides),
+        _op("add_stabilization_demand", demand=demand),
+        _op("remove_stabilization_demand", demand=demand),
+    ]
+    schema["properties"]["proposed_edits"] = {"type": "array", "items": {"anyOf": ops}}
+    schema["properties"]["edits_resolve_all_blocking_findings"] = {"type": "boolean"}
+    schema["required"] = ["decision", "summary", "blocking_findings", "non_blocking_findings", "confidence",
+                          "proposed_edits", "edits_resolve_all_blocking_findings"]
+    return json.dumps(schema, indent=2) + "\n"
+
+
 def render_selector() -> str:
     text = SELECTOR_PATH.read_text(encoding="utf-8")
     block = "const FAMILY_ORDER := [\n" + "".join(f'\t"{f}",\n' for f in families()) + "]"
@@ -110,7 +152,7 @@ def main() -> int:
     actions = usable_actions()
     demands = sorted(load_vocabulary()["stabilization_demands"])
     outputs = {SCHEMA_PATH: render_schema(actions, demands), VALIDATORS_PATH: render_validators(actions, demands),
-               SELECTOR_PATH: render_selector()}
+               SELECTOR_PATH: render_selector(), REVIEW_SCHEMA_PATH: render_review_schema(actions, demands)}
     stale = [p for p, text in outputs.items() if p.read_text(encoding="utf-8") != text]
     if args.check:
         for p in stale:

@@ -65,6 +65,7 @@ func _ready() -> void:
 	%ClearRejectedButton.pressed.connect(clear_all_rejected)
 	%ShowClearedCheck.toggled.connect(func(_on: bool) -> void: populate_tree())
 	%AutoButton.pressed.connect(open_auto_mode)
+	%ApplyEditsButton.pressed.connect(apply_suggested_edits)
 	%AutoRunModal.run_finished.connect(func(_state: String) -> void: reload_entries())
 	model_option.item_selected.connect(_on_model_selected)
 	custom_model_input.text_changed.connect(_on_custom_model_changed)
@@ -328,6 +329,10 @@ func load_votes(review: Dictionary) -> void:
 		status = "demoted"
 	%CouncilOutcome.text = "Council outcome: %s" % String(status).replace("_", " ").capitalize()
 	%PromoteButton.disabled = current_revision.is_empty() or status != "accepted"
+	var edits: Array = model.get("proposed_edits", []) if review.get("status", "") == "changes_requested" else []
+	var ready: bool = not ReviewRevisionStoreScript.ready_edits(review).is_empty()
+	%ApplyEditsButton.disabled = edits.is_empty()
+	%ApplyEditsButton.text = "Apply suggested edits (%d)%s" % [edits.size(), "" if ready or edits.is_empty() else " · partial fix"]
 
 func promote_current_revision() -> void:
 	if current_revision.is_empty(): return set_status("Select an accepted frozen revision first.", true)
@@ -346,7 +351,32 @@ func format_vote(member: String, vote: Dictionary) -> String:
 	var text := "[b]%s: %s[/b] (%s confidence)\n%s" % [member, String(vote.get("decision", "")).to_upper(), vote.get("confidence", ""), vote.get("summary", "")]
 	for finding in vote.get("blocking_findings", []): text += "\n[color=#ff7676]BLOCK · %s[/color]\n%s\nSuggested: %s" % [finding.get("field_path", ""), finding.get("finding", ""), finding.get("suggested_correction", "")]
 	for finding in vote.get("non_blocking_findings", []): text += "\nNOTE · %s\n%s" % [finding.get("field_path", ""), finding.get("finding", "")]
+	var edits: Array = vote.get("proposed_edits", [])
+	if not edits.is_empty():
+		text += "\n[color=#3b95ff]SUGGESTED EDITS%s[/color]" % (" · fix every blocking finding" if vote.get("edits_resolve_all_blocking_findings", false) else " · partial")
+		for edit in edits: text += "\n• %s" % describe_edit(edit)
 	return text
+
+func describe_edit(edit: Dictionary) -> String:
+	var op := String(edit.get("op", ""))
+	var target := "%s/%s" % [edit.get("joint", ""), edit.get("movement", "")]
+	match op:
+		"add_joint_action": return "add %s (%s, %s)" % [target, edit.get("emphasis", ""), edit.get("sides", "")]
+		"remove_joint_action": return "remove %s" % target
+		"set_action_emphasis": return "%s → %s" % [target, edit.get("emphasis", "")]
+		"set_action_sides": return "%s → sides %s" % [target, edit.get("sides", "")]
+		"add_stabilization_demand": return "add demand %s" % edit.get("demand", "")
+		"remove_stabilization_demand": return "remove demand %s" % edit.get("demand", "")
+	return "%s → %s" % [op.trim_prefix("set_").replace("_", " "), str(edit.get("value", ""))]
+
+func apply_suggested_edits() -> void:
+	if current_revision.is_empty(): return set_status("Select a rejected revision first.", true)
+	var applied := apply_edits_for(String(current_revision.get("revision_sha256", "")))
+	if not applied.get("ok", false): return set_status("Edits not applied: %s" % applied.get("error", ""), true)
+	var draft: Dictionary = applied["draft"]
+	selected_entry = {"kind": "draft", "data": draft}
+	show_draft(draft)
+	set_status("Applied %d edit(s): %s. The edited draft is ready to freeze and review." % [applied["described"].size(), "; ".join(applied["described"])], false)
 
 func format_prior_feedback(hash: String) -> String:
 	if hash.is_empty(): return "No frozen revision selected."
@@ -430,15 +460,20 @@ func open_auto_mode() -> void:
 func auto_council_queue() -> Array:
 	reload_entries()
 	var cleared := ReviewRevisionStoreScript.load_cleared()
+	var rejections := AutoPipeline.claude_rejections()
 	var by_source := {}
 	var draft_hashes := {}   # source_id -> the revision hash its current draft freezes to
 	for entry in entries:
 		if entry["kind"] != "draft": continue
 		var draft: Dictionary = entry["data"]
 		var source: Dictionary = catalog_by_source.get(String(draft.get("source_id", "")), {})
-		draft_hashes[String(draft.get("source_id", ""))] = ReviewRevisionStoreScript.draft_revision_hash(draft, source)
-		if AutoPipeline.source_state(source, draft, cleared) == "candidate":
-			by_source[String(draft.get("source_id", ""))] = [entry]
+		var draft_hash := ReviewRevisionStoreScript.draft_revision_hash(draft, source)
+		draft_hashes[String(draft.get("source_id", ""))] = draft_hash
+		match AutoPipeline.source_state(source, draft, cleared, rejections):
+			"candidate":
+				by_source[String(draft.get("source_id", ""))] = [entry]
+			"edits_pending":   # apply the reviewer's edits instead of re-authoring
+				by_source[String(draft.get("source_id", ""))] = [{"kind": "edits", "data": ReviewRevisionStoreScript.read_json(ReviewRevisionStoreScript.revision_path(draft_hash))}]
 	for entry in entries:
 		if entry["kind"] != "revision": continue
 		var revision: Dictionary = entry["data"]
@@ -463,9 +498,54 @@ func auto_council_queue() -> Array:
 func auto_label(entry: Dictionary) -> String:
 	var data: Dictionary = entry["data"]
 	var name := String(catalog_by_source.get(String(data.get("source_id", "")), {}).get("name", data.get("source_id", "?")))
-	return name if entry["kind"] == "draft" else "%s (revision %s)" % [name, String(data.get("revision_sha256", "")).left(12)]
+	match String(entry["kind"]):
+		"draft": return name
+		"edits": return "%s (applying the reviewer's edits)" % name
+	return "%s (revision %s)" % [name, String(data.get("revision_sha256", "")).left(12)]
 
+## One auto-mode step. If the reviewer rejects but proposes edits that fix
+## every blocking finding, they're applied (free, deterministic), and the
+## edited definition is frozen and reviewed once more in the same step.
 func auto_review(entry: Dictionary) -> Dictionary:
+	var usage := {}
+	var edited := false
+	if entry["kind"] == "edits":
+		var applied := apply_edits_for(String(entry["data"].get("revision_sha256", "")))
+		if not applied.get("ok", false): return {"outcome": "edits_failed", "error": applied.get("error", "")}
+		entry = {"kind": "draft", "data": applied["draft"]}
+		edited = true
+	var result: Dictionary = await review_entry(entry)
+	add_usage(usage, result.get("usage", {}))
+	if result.get("outcome") == "rejected_by_claude" and not edited:
+		var hash := String(result.get("revision_sha256", ""))
+		if not ReviewRevisionStoreScript.ready_edits(ReviewRevisionStoreScript.load_review(hash)).is_empty():
+			var applied := apply_edits_for(hash)
+			if not applied.get("ok", false):
+				result["message"] = "%s (suggested edits not applied: %s)" % [result.get("message", ""), applied.get("error", "")]
+			else:
+				edited = true
+				result = await review_entry({"kind": "draft", "data": applied["draft"]})
+				add_usage(usage, result.get("usage", {}))
+	if edited and result.get("outcome") in ["promoted", "rejected_by_claude"]:
+		result["outcome"] = "%s_after_edits" % result["outcome"]
+	result["usage"] = usage
+	return result
+
+func add_usage(total: Dictionary, more: Dictionary) -> void:
+	for key in more:
+		total[key] = int(total.get(key, 0)) + int(more[key])
+
+## Applies the reviewer's edits for a rejected revision; returns the new draft.
+func apply_edits_for(hash: String) -> Dictionary:
+	var report: Dictionary = ReviewRevisionStoreScript.apply_review_edits(hash)
+	var source_id := String(report.get("source_id", ""))
+	if not report.get("ok", false):
+		return {"ok": false, "error": " ".join(report.get("errors", ["the edited definition failed the candidate gate"]))}
+	reload_entries()
+	return {"ok": true, "draft": CandidateRepository.load_draft(source_id), "described": report.get("described", [])}
+
+## Freeze (if a draft), vote, review and promote one candidate.
+func review_entry(entry: Dictionary) -> Dictionary:
 	var revision: Dictionary = entry["data"]
 	if entry["kind"] == "draft":
 		var source: Dictionary = catalog_by_source.get(String(revision.get("source_id", "")), {})
@@ -501,7 +581,7 @@ func auto_review(entry: Dictionary) -> Dictionary:
 	var status := String(review.get("status", ""))
 	if status == "changes_requested":
 		var model: Dictionary = ReviewRevisionStoreScript.model_vote(review.get("votes", {}))
-		return {"outcome": "rejected_by_claude", "usage": usage, "message": String(model.get("summary", ""))}
+		return {"outcome": "rejected_by_claude", "usage": usage, "message": String(model.get("summary", "")), "revision_sha256": hash}
 	if status != "accepted":
 		return {"outcome": "failed", "usage": usage, "error": "Council status is %s after both votes." % status}
 	var report: Dictionary = ReviewRevisionStoreScript.promote(revision)

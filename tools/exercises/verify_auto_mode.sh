@@ -21,6 +21,11 @@ response["proposed_definition"]["id"] = "exercise.auto_mode_fixture.standard"
 response["proposed_definition"]["variant"] = "standard"
 (root / "fake_authoring_response.json").write_text(json.dumps(response))
 PY
+# Start from a clean authoring history (real catalog, no drafts, revisions,
+# votes or promotion records), so the check doesn't depend on the owner's
+# own council work, e.g. an exercise already rejected once and near the cap.
+A="$SANDBOX/data/exercises/authoring"
+rm -f "$A"/drafts/*.json "$A"/revisions/*.json "$A"/reviews/*.json "$A"/promotions/*.json "$A"/demotions/*.json "$A"/cleared.json
 chmod +x "$SANDBOX/tools/exercises/fake_claude_bridge.py"
 BODYSIM_SANDBOX=1 FAKE_AUTHORING_RESPONSE="$SANDBOX/fake_authoring_response.json" \
 	"$GODOT" --headless --path "$SANDBOX" --script res://tools/exercises/verify_auto_mode.gd

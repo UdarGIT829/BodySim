@@ -260,6 +260,13 @@ layout_mode = 2
 text = "Auto mode…"
 tooltip_text = "Freeze, vote and promote every waiting candidate with the selected Claude reviewer. Your vote is recorded as an automatic approval; Claude can still reject."
 
+[node name="ApplyEditsButton" type="Button" parent="Margin/Column/Workspace/EvidenceAndCouncil/Council/Scroll/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+disabled = true
+text = "Apply suggested edits"
+tooltip_text = "Apply the reviewer's proposed field changes to this rejected revision (no re-authoring). The edited definition is re-traced and saved as a new draft to freeze and review."
+
 [node name="ModelResult" type="RichTextLabel" parent="Margin/Column/Workspace/EvidenceAndCouncil/Council/Scroll/Column"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 210)

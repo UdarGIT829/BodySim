@@ -12,6 +12,8 @@ extends RefCounted
 ##                 re-authoring will use the feedback
 ##   attempted     authored, but it failed the candidate gate (often Claude
 ##                 said BodySim can't model it); auto mode doesn't retry these
+##   edits_pending Claude rejected it but proposed edits that fix every
+##                 blocking finding; the council applies them (no re-authoring)
 ##   set_aside     Claude rejected it MAX_CLAUDE_REJECTIONS times under the
 ##                 current tracer; auto mode stops re-authoring it for you to look at
 ##   cleared       hidden from the council queue by the owner; left alone
@@ -64,7 +66,7 @@ static func load_drafts() -> Dictionary:
 ## Pipeline state for one catalog source (see the table at the top).
 static func source_state(source: Dictionary, draft: Dictionary, cleared: Dictionary, rejections := {}) -> String:
 	var state := _base_state(source, draft, cleared)
-	if state == "needs_rework" and int(rejections.get(String(source.get("source_id", "")), 0)) >= MAX_CLAUDE_REJECTIONS:
+	if state in ["needs_rework", "edits_pending"] and int(rejections.get(String(source.get("source_id", "")), 0)) >= MAX_CLAUDE_REJECTIONS:
 		return "set_aside"
 	return state
 
@@ -90,8 +92,11 @@ static func _base_state(source: Dictionary, draft: Dictionary, cleared: Dictiona
 				return "needs_rework"   # demoted after promotion; it needs a new revision
 			if not ReviewRevisionStore.load_promotion(hash).is_empty():
 				return "promoted"
-			if ReviewRevisionStore.load_review(hash).get("status", "") == "changes_requested":
-				return "cleared" if hash in cleared.get("revisions", {}) else "needs_rework"
+			var review := ReviewRevisionStore.load_review(hash)
+			if review.get("status", "") == "changes_requested":
+				if hash in cleared.get("revisions", {}):
+					return "cleared"
+				return "edits_pending" if not ReviewRevisionStore.ready_edits(review).is_empty() else "needs_rework"
 			return "candidate"
 	return "attempted"
 
@@ -101,7 +106,7 @@ static func snapshot() -> Dictionary:
 	var drafts := load_drafts()
 	var cleared := ReviewRevisionStore.load_cleared()
 	var states := {}
-	var counts := {"promoted": 0, "candidate": 0, "needs_rework": 0, "set_aside": 0, "attempted": 0, "cleared": 0, "new": 0}
+	var counts := {"promoted": 0, "candidate": 0, "edits_pending": 0, "needs_rework": 0, "set_aside": 0, "attempted": 0, "cleared": 0, "new": 0}
 	var rejections := claude_rejections()
 	var catalog := load_catalog()
 	for source in catalog:
@@ -130,7 +135,7 @@ static func claude_rejections() -> Dictionary:
 static func layers(snap: Dictionary) -> Dictionary:
 	var counts: Dictionary = snap.get("counts", {})
 	var done := int(counts.get("promoted", 0))
-	var candidate := int(counts.get("candidate", 0))
+	var candidate := int(counts.get("candidate", 0)) + int(counts.get("edits_pending", 0))   # both wait on the council
 	return {"done": done, "candidate": candidate, "remaining": int(snap.get("total", 0)) - done - candidate}
 
 

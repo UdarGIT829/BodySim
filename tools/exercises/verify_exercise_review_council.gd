@@ -13,7 +13,8 @@ func verify() -> void:
 	await process_frame
 	require(council.model_id is String and council.model_id.begins_with("claude-"), "Council must select a Claude review model")
 	require(council.provider is ClaudeProvider, "Council must use the Claude provider")
-	require(council.schema.get("$id") == "bodysim.kinematic_review_response.v1", "Council must load the strict review schema")
+	require(council.schema.get("$id") == "bodysim.kinematic_review_response.v2", "Council must load the strict review schema")
+	require(council.schema.get("required", []).has("proposed_edits") and council.get_node_or_null("%ApplyEditsButton") is Button, "Council must support suggested edits")
 	require(council.model_option.item_count == ClaudeSettings.MODEL_PRESETS.size(), "Council must offer the Claude model presets plus a custom model")
 	require(council.get_node_or_null("Margin/Column/Workspace/BrowserPanel") != null, "Review queue must be editor-authored")
 	require(council.get_node_or_null("Margin/Column/Workspace/EvidenceAndCouncil/Evidence/EvidenceTabs/Candidate heatmap/CandidateHeatmap") != null, "Candidate heatmap must be editor-authored")
