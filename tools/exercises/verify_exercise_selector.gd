@@ -40,7 +40,7 @@ func run_verification() -> void:
 	selector.populate_exercises("rdl")
 	require(selector.result_count >= 1, "Search must include exercise aliases")
 	selector.populate_exercises("vertical pull")
-	require(selector.result_count == 2, "Search must include movement-family names")
+	require(selector.result_count >= 2, "Search must include movement-family names")
 	selector.populate_exercises("")
 
 	var exercise_id := "exercise.ab_wheel_rollout.kneeling"

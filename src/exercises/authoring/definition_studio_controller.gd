@@ -291,8 +291,8 @@ func discard_changes() -> void:
 func load_existing_draft() -> void:
 	baseline_response = {}
 	var stored := CandidateRepository.load_draft(String(selected_source.get("source_id", "")))
+	var feedback := CandidateRepository.latest_rejection_feedback(String(selected_source.get("source_id", "")), selected_source)
 	if stored.is_empty():
-		var feedback := CandidateRepository.latest_rejection_feedback(String(selected_source.get("source_id", "")))
 		if not feedback.is_empty(): context_input.text = feedback
 		show_diff()
 		return
@@ -302,10 +302,10 @@ func load_existing_draft() -> void:
 		current_response = strip_deprecated_load_vector(stored_response)
 		provider_metadata = stored.get("provider_metadata", {})
 		last_trace_report = stored.get("candidate_trace_report", {})
-		context_input.text = String(stored.get("additional_context", ""))
-		var feedback := CandidateRepository.latest_rejection_feedback(String(selected_source.get("source_id", "")))
-		if not feedback.is_empty() and feedback not in context_input.text:
-			context_input.text = "%s\n\n%s" % [feedback, context_input.text]
+		# Keep the owner's own notes, but replace (don't stack) council feedback
+		# from earlier rounds with the latest decision.
+		var notes := CandidateRepository.strip_council_feedback(String(stored.get("additional_context", "")))
+		context_input.text = feedback if notes.is_empty() else ("%s\n\n%s" % [feedback, notes] if not feedback.is_empty() else notes)
 		json_editor.text = JSON.stringify(current_response, "  ")
 		show_response_summary()
 		if current_response.get("proposed_definition") is Dictionary:

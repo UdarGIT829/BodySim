@@ -76,6 +76,17 @@ def tracer_reference() -> str:
         "`shoulder_position_hold` is for an upper arm held still against a load further down the limb (a curl, a rack "
         "position, an arm locked out overhead), `intra_abdominal_pressure` for heavy bracing, `postural_stabilization` "
         "for standing.",
+        "- A joint held still against the load still needs its muscles credited, because the tracer only engages "
+        "muscles through listed actions and demands: list the action that resists the load with `emphasis: \"assist\"` "
+        "(arms hugging an atlas stone: elbow flexion and shoulder adduction; a hip bridge held during a leg curl: "
+        "hip extension), or add the demand that reaches those muscles (the supporting arm of a plank row: "
+        "`shoulder_position_hold` and `elbow_joint_integrity`; legs holding a plank: `pelvic_alignment`, "
+        "`anti_extension_hip`).",
+        "- Motions that only accompany the lift are `assist`, not primary: calf plantarflexion in squats, cleans and "
+        "throws; scapular retraction at a deadlift lockout; scapular protraction in a bench press; scapular downward "
+        "rotation in pull-ups; elbow flexion in a rear-delt row whose cue is to use the arms as hooks.",
+        "- Don't list a motion the instructions tell the lifter to avoid. If the trunk stays rigid (rollouts, planks), "
+        "the core works through `anti_extension_spine` and `intra_abdominal_pressure`, not `lumbar_spine/flexion`.",
         "- Every action and demand listed below exists. Never claim the vocabulary lacks something without checking "
         "these lists (e.g. forearm rotation is `radioulnar_joint/pronation` and `supination`).",
         "- A review should judge the definition's actions and demands against this table. A muscle missing from the "

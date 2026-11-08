@@ -42,6 +42,10 @@ func run() -> void:
 
 func check_pipeline_rules() -> void:
 	var cleared := {"drafts": {"Cleared_One": {"draft_saved_at_unix": 10.0}}, "revisions": {}}
+	# Re-authoring replaces earlier council feedback instead of stacking it, and keeps the owner's notes.
+	var old_context := "Council feedback from openai_reviewer:\n- a: stale v1 finding\n- b: another\n\n%s\nFrom model_reviewer:\n- c: newer finding\n%s\nOwner note: the bar is back-supported." % [CandidateRepository.FEEDBACK_START, CandidateRepository.FEEDBACK_END]
+	var stripped := CandidateRepository.strip_council_feedback(old_context)
+	require(stripped == "Owner note: the bar is back-supported.", "old feedback is stripped, notes kept: %s" % stripped)
 	# Retry cap: Claude's rejections under the current tracer set an exercise aside.
 	var rejected := {"source_id": "X", "status": "review_rejected"}
 	require(AutoPipeline.source_state({"source_id": "X"}, rejected, cleared, {"X": 1}) == "needs_rework", "one rejection: re-author")
