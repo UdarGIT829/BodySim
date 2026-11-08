@@ -9,16 +9,21 @@ extends Window
 ##        "error": String, "error_kind": String}
 ##   label.call(item) -> String          name shown while it runs
 ##   snapshot.call() -> Dictionary       AutoPipeline.layers()-shaped counts
-## The run ends as done, stopped, out of tokens (the budget below), out of
-## credits (the API said so), or stopped on an error that retrying won't fix.
+## Spending is in estimated dollars: an optional limit for this run, and the
+## owner's Claude credit balance (entered here, from the Claude Console),
+## minus everything the Studio and the Council have spent since (the ledger
+## in AutoPipeline). Before each exercise the run checks the typical cost of
+## the next one against both. The run ends as done, stopped, spend limit
+## reached, out of credits (estimated, or the API said so), or stopped on an
+## error that retrying won't fix.
 
 signal run_finished(state: String)
 
 const COLORS := {"done": Color("68dda5"), "candidate": Color("e3aa57"), "remaining": Color("3a4553")}
 const STATE_TEXT := {
 	"ready": "Ready", "running": "Running", "stopping": "Stopping after the current exercise…",
-	"done": "Done", "stopped": "Stopped", "out_of_tokens": "Out of tokens (budget used up)",
-	"out_of_credits": "Out of API credits", "error": "Stopped on an error",
+	"done": "Done", "stopped": "Stopped", "spend_limit": "Spend limit for this run reached",
+	"out_of_credits": "Out of credits", "error": "Stopped on an error",
 }
 const MAX_RETRIES := 3
 const MAX_FAILURES_IN_A_ROW := 5
@@ -26,10 +31,12 @@ const LOG_DIR := "user://auto_runs"
 
 @onready var model_label: Label = %ModelLabel
 @onready var description_label: Label = %DescriptionLabel
-@onready var budget_spin: SpinBox = %BudgetSpin
+@onready var run_limit_spin: SpinBox = %RunLimitSpin
 @onready var max_items_spin: SpinBox = %MaxItemsSpin
-@onready var token_bar: ProgressBar = %TokenBar
-@onready var token_label: Label = %TokenLabel
+@onready var credits_spin: SpinBox = %CreditsSpin
+@onready var credits_bar: ProgressBar = %CreditsBar
+@onready var credits_label: Label = %CreditsLabel
+@onready var spend_label: Label = %SpendLabel
 @onready var pipeline_bar: LayeredProgressBar = %PipelineBar
 @onready var legend_label: RichTextLabel = %LegendLabel
 @onready var run_label: Label = %RunLabel
@@ -61,15 +68,17 @@ func _ready() -> void:
 	start_button.pressed.connect(start)
 	stop_button.pressed.connect(request_stop)
 	close_button.pressed.connect(_on_close_requested)
-	budget_spin.value = int(AutoPipeline.load_setting("token_budget", AutoPipeline.DEFAULT_TOKEN_BUDGET))
+	run_limit_spin.value = float(AutoPipeline.load_setting("run_limit_usd", 2.0))
 	max_items_spin.value = int(AutoPipeline.load_setting("max_items", 0))
-	budget_spin.value_changed.connect(func(_v: float) -> void: refresh_tokens())
+	run_limit_spin.value_changed.connect(func(_v: float) -> void: refresh_spend())
+	%SetCreditsButton.pressed.connect(set_balance)
 	option_check.toggled.connect(_on_option_toggled)
 
 
 ## config keys: title, model, completed_label, description, scope (what the
 ## queue covers, e.g. the active search), queue, step, label, snapshot,
-## estimate_tokens (per item, used before any item finished), and option:
+## task ("author" or "review": prices the next exercise from history before
+## this run has any of its own; or estimate_usd to fix it), and option:
 ## {"label", "setting", "default"} for a remembered checkbox that the page's
 ## queue reads through option_enabled().
 func open_for(new_config: Dictionary) -> void:
@@ -92,6 +101,7 @@ func open_for(new_config: Dictionary) -> void:
 		option_check.set_pressed_no_signal(enabled)
 	reset_run()
 	set_state("ready")
+	refresh_credits(true)
 	refresh_pipeline()
 	refresh_queued()
 	popup_centered(Vector2i(820, 720))
@@ -121,7 +131,7 @@ func reset_run() -> void:
 	token_using_items = 0
 	log_text.clear()
 	current_label.text = ""
-	refresh_tokens()
+	refresh_spend()
 	refresh_run_label()
 
 
@@ -129,14 +139,19 @@ func start() -> void:
 	if state in ["running", "stopping"]:
 		return
 	if persist_settings:
-		AutoPipeline.save_setting("token_budget", int(budget_spin.value))
+		AutoPipeline.save_setting("run_limit_usd", float(run_limit_spin.value))
 		AutoPipeline.save_setting("max_items", int(max_items_spin.value))
 	reset_run()
 	stop_requested = false
 	open_log()
 	set_state("running")
 	var queue: Array = config["queue"].call()
-	log_line("Started with %s. %d exercise(s) queued; token budget %s." % [model_id, queue.size(), group(int(budget_spin.value))])
+	var left := AutoPipeline.credits_left()
+	log_line("Started with %s. %d exercise(s) queued; spend limit %s; credits %s; a typical exercise ≈ %s." % [model_id, queue.size(),
+		money(run_limit_spin.value) if run_limit_spin.value > 0 else "none", money(left) + " left (estimated)" if left >= 0.0 else "not set",
+		money(next_cost())])
+	if next_cost() < 0.0:
+		log_line("No price is known for %s, so spending can't be estimated; only the API's own out-of-credits error will stop the run." % model_id, true)
 	var finished := false
 	var failures_in_a_row := 0
 	for item in queue:
@@ -148,8 +163,9 @@ func start() -> void:
 			finish("done", "Reached the limit of %d exercise(s)." % int(max_items_spin.value))
 			finished = true
 			break
-		if tokens_used() + next_estimate() > int(budget_spin.value):
-			finish("out_of_tokens", "The next exercise would need about %s tokens; %s are left in the budget." % [group(next_estimate()), group(tokens_left())])
+		var stop := spending_stop()
+		if not stop.is_empty():
+			finish(stop[0], stop[1])
 			finished = true
 			break
 		var name := String(config["label"].call(item))
@@ -209,7 +225,10 @@ func finish(final_state: String, message: String) -> void:
 	set_state(final_state)
 	current_label.text = message
 	log_line("%s. %s" % [STATE_TEXT[final_state], message], final_state in ["error", "out_of_credits"])
-	log_line("Used %s tokens%s. Log: %s" % [group(tokens_used()), cost_text(), ProjectSettings.globalize_path(log_path)])
+	var left := AutoPipeline.credits_left()
+	log_line("This run: ≈ %s, %s tokens.%s Log: %s" % [money(run_cost()), group(tokens_used()),
+		(" Credits left ≈ %s." % money(left)) if left >= 0.0 else "", ProjectSettings.globalize_path(log_path)])
+	refresh_credits()
 	refresh_pipeline()
 	run_finished.emit(final_state)
 
@@ -218,14 +237,14 @@ func set_state(new_state: String) -> void:
 	state = new_state
 	state_label.text = STATE_TEXT.get(new_state, new_state)
 	var colors := {"done": Color("68dda5"), "running": Color("a9bdd0"), "stopping": Color("e3aa57"),
-		"out_of_tokens": Color("e3aa57"), "out_of_credits": Color("ff7676"), "error": Color("ff7676")}
+		"spend_limit": Color("e3aa57"), "out_of_credits": Color("ff7676"), "error": Color("ff7676")}
 	state_label.modulate = colors.get(new_state, Color.WHITE)
 	var busy := new_state in ["running", "stopping"]
 	start_button.disabled = busy
 	start_button.text = "Start auto mode" if new_state == "ready" else "Run again"
 	stop_button.disabled = new_state != "running"
 	close_button.disabled = busy
-	budget_spin.editable = not busy
+	run_limit_spin.editable = not busy
 	max_items_spin.editable = not busy
 	option_check.disabled = busy
 
@@ -243,36 +262,83 @@ func add_usage(new_usage: Dictionary) -> void:
 	for key in usage:
 		usage[key] = int(usage[key]) + int(new_usage.get(key, 0))
 	token_using_items += 1
-	refresh_tokens()
+	refresh_spend()
+	refresh_credits()
 
 
 func tokens_used() -> int:
 	return AutoPipeline.total_tokens(usage)
 
 
-func tokens_left() -> int:
-	return maxi(0, int(budget_spin.value) - tokens_used())
+## Estimated dollars this run has spent.
+func run_cost() -> float:
+	return maxf(0.0, AutoPipeline.estimate_cost(model_id, usage))
 
 
-## Average tokens per request so far, or the page's estimate before any.
-func next_estimate() -> int:
-	if token_using_items == 0:
-		return int(config.get("estimate_tokens", 30000))
-	return int(ceil(float(tokens_used()) / float(token_using_items)))
+## Typical dollars for the next exercise: this run's average so far, else the
+## page's history-based estimate (-1 when the model has no known price).
+func next_cost() -> float:
+	if AutoPipeline.estimate_cost(model_id, usage) < 0.0:
+		return -1.0
+	if token_using_items > 0:
+		return run_cost() / token_using_items
+	if config.has("estimate_usd"):
+		return float(config["estimate_usd"])
+	return AutoPipeline.typical_cost(String(config.get("task", "author")), model_id)
 
 
-func refresh_tokens() -> void:
-	var budget := int(budget_spin.value)
-	token_bar.max_value = maxf(1.0, budget)
-	token_bar.value = tokens_left()
-	token_label.text = "%s of %s tokens left · used %s (%s cache reads, %s output)%s" % [
-		group(tokens_left()), group(budget), group(tokens_used()),
-		group(int(usage.get("cache_read_input_tokens", 0))), group(int(usage.get("output_tokens", 0))), cost_text()]
+## [state, message] if the next exercise would go past the run's spend limit
+## or the estimated credits, else [].
+func spending_stop() -> Array:
+	var next := next_cost()
+	if next < 0.0:
+		return []
+	if run_limit_spin.value > 0 and run_cost() + next > run_limit_spin.value:
+		return ["spend_limit", "This run has spent ≈ %s of its %s limit; the next exercise typically costs ≈ %s." % [money(run_cost()), money(run_limit_spin.value), money(next)]]
+	var left := AutoPipeline.credits_left()
+	if left >= 0.0 and left < next:
+		return ["out_of_credits", "Estimated credits left (≈ %s) won't cover the next exercise (≈ %s). If you've added credits, set your balance again." % [money(left), money(next)]]
+	return []
 
 
-func cost_text() -> String:
-	var cost := AutoPipeline.estimate_cost(model_id, usage)
-	return " · ≈ $%.2f" % cost if cost >= 0.0 else ""
+func set_balance() -> void:
+	AutoPipeline.set_credits(float(credits_spin.value))
+	log_line("Balance set to %s." % money(credits_spin.value))
+	refresh_credits()
+
+
+## The credits bar: estimated balance left out of the balance last entered.
+## `fill_input` puts the estimate into the box when the modal opens.
+func refresh_credits(fill_input := false) -> void:
+	var c := AutoPipeline.credits()
+	var balance := float(c["balance"])
+	if balance < 0.0:
+		credits_bar.max_value = 1.0
+		credits_bar.value = 0.0
+		credits_label.text = "Enter your current balance from the Claude Console and press Set balance. BodySim then subtracts its own estimated spending (every Studio and Council request, manual or auto) until you set it again."
+		return
+	var spent := AutoPipeline.spend_since(float(c["set_at"]))
+	var left := balance - float(spent["cost"])
+	credits_bar.max_value = maxf(balance, 0.01)
+	credits_bar.value = clampf(left, 0.0, balance)
+	var local_offset := int(Time.get_time_zone_from_system().get("bias", 0)) * 60   # minutes east of UTC
+	var when := Time.get_datetime_string_from_unix_time(int(c["set_at"]) + local_offset, true).left(16)
+	credits_label.text = "≈ %s left · you set %s on %s · spent since ≈ %s over %d request(s)%s" % [money(left), money(balance), when,
+		money(spent["cost"]), spent["requests"], (" (%d with no known price)" % spent["unpriced"]) if spent["unpriced"] > 0 else ""]
+	if fill_input:
+		credits_spin.set_value_no_signal(snappedf(maxf(left, 0.0), 0.01))
+
+
+func refresh_spend() -> void:
+	var next := next_cost()
+	spend_label.text = "This run: ≈ %s of %s · %s tokens (%s cache reads, %s output) · next exercise ≈ %s" % [
+		money(run_cost()), money(run_limit_spin.value) if run_limit_spin.value > 0 else "no limit", group(tokens_used()),
+		group(int(usage.get("cache_read_input_tokens", 0))), group(int(usage.get("output_tokens", 0))),
+		money(next) if next >= 0.0 else "unknown (no price for this model)"]
+
+
+static func money(value: float) -> String:
+	return "$%.2f" % value if absf(value) >= 0.1 or value == 0.0 else "$%.3f" % value
 
 
 func refresh_pipeline() -> void:

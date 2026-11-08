@@ -829,7 +829,7 @@ func open_auto_mode() -> void:
 		"step": auto_author,
 		"label": func(source: Dictionary) -> String: return String(source.get("name", source.get("source_id", ""))),
 		"snapshot": func() -> Dictionary: return AutoPipeline.layers(AutoPipeline.snapshot()),
-		"estimate_tokens": 30000,
+		"task": "author",
 		"log_name": "studio",
 	})
 

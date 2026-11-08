@@ -22,7 +22,6 @@ extends RefCounted
 const CATALOG_PATH := "res://data/exercises/catalog/candidates.json"
 const DRAFT_DIR := "res://data/exercises/authoring/drafts"
 const SETTINGS_SECTION := "auto_mode"
-const DEFAULT_TOKEN_BUDGET := 2000000
 const RETRYABLE_ERRORS := ["rate_limit", "overloaded", "network"]
 const FATAL_ERRORS := ["auth", "model"]
 ## Must match TRACER_VERSION in tools/exercises/kinematic_tracer.py (a test checks).
@@ -214,3 +213,133 @@ static func save_setting(key: String, value) -> void:
 	settings.load(ClaudeSettings.SETTINGS_PATH)   # keep the API key and every other setting
 	settings.set_value(SETTINGS_SECTION, key, value)
 	settings.save(ClaudeSettings.SETTINGS_PATH)
+
+
+# ── Credits and spending ────────────────────────────────────────────────────
+# Every Claude request the Studio or the Council makes (manual or auto) is
+# appended to a ledger with its usage and estimated cost (ClaudeProvider does
+# this). The owner enters their credit balance from the Claude Console now and
+# then; what's left is estimated as that balance minus the ledger's spend since
+# it was entered. Estimates use PRICES; re-entering the balance re-syncs it.
+# BODYSIM_SPEND_LEDGER and BODYSIM_CREDITS_FILE redirect both files (the
+# sandboxed checks use them so tests never touch the owner's real records).
+
+const LEDGER_DEFAULT := "user://claude_spend.jsonl"
+const CREDITS_DEFAULT := "user://bodysim_credits.cfg"
+## Used for an estimate before there's any history for a task and model.
+const DEFAULT_USAGE := {
+	"author": {"input_tokens": 3000, "output_tokens": 5000, "cache_read_input_tokens": 17000, "cache_creation_input_tokens": 0},
+	"review": {"input_tokens": 6000, "output_tokens": 3000, "cache_read_input_tokens": 17000, "cache_creation_input_tokens": 0},
+}
+
+
+static func ledger_path() -> String:
+	var override := OS.get_environment("BODYSIM_SPEND_LEDGER")
+	return override if not override.is_empty() else LEDGER_DEFAULT
+
+
+static func credits_path() -> String:
+	var override := OS.get_environment("BODYSIM_CREDITS_FILE")
+	return override if not override.is_empty() else CREDITS_DEFAULT
+
+
+## Appends one finished request to the ledger. Requests that failed before
+## any usage was billed have no usage and aren't recorded.
+static func record_spend(task: String, model: String, usage: Dictionary) -> void:
+	if usage.is_empty() or total_tokens(usage) == 0:
+		return
+	var path := ledger_path()
+	var file := FileAccess.open(path, FileAccess.READ_WRITE if FileAccess.file_exists(path) else FileAccess.WRITE)
+	if file == null:
+		return
+	file.seek_end()
+	file.store_line(JSON.stringify({"t": Time.get_unix_time_from_system(), "task": task, "model": model,
+		"usage": usage, "cost_usd": estimate_cost(model, usage)}))
+
+
+static func read_ledger() -> Array:
+	var entries: Array = []
+	var file := FileAccess.open(ledger_path(), FileAccess.READ)
+	if file == null:
+		return entries
+	while not file.eof_reached():
+		var line := file.get_line().strip_edges()
+		if line.is_empty(): continue
+		var entry = JSON.parse_string(line)
+		if entry is Dictionary: entries.append(entry)
+	return entries
+
+
+## {"balance": USD or -1 when never set, "set_at": unix time}
+static func credits() -> Dictionary:
+	var cfg := ConfigFile.new()
+	if cfg.load(credits_path()) != OK:
+		return {"balance": -1.0, "set_at": 0.0}
+	return {"balance": float(cfg.get_value("credits", "balance_usd", -1.0)), "set_at": float(cfg.get_value("credits", "set_at_unix", 0.0))}
+
+
+static func set_credits(balance_usd: float) -> void:
+	var cfg := ConfigFile.new()
+	cfg.set_value("credits", "balance_usd", balance_usd)
+	cfg.set_value("credits", "set_at_unix", Time.get_unix_time_from_system())
+	cfg.save(credits_path())
+
+
+## {"cost": USD, "requests": n, "unpriced": n} for ledger entries after `since`.
+static func spend_since(since: float) -> Dictionary:
+	var cost := 0.0
+	var requests := 0
+	var unpriced := 0
+	for entry in read_ledger():
+		if float(entry.get("t", 0.0)) <= since: continue
+		requests += 1
+		var c := float(entry.get("cost_usd", -1.0))
+		if c < 0.0: unpriced += 1
+		else: cost += c
+	return {"cost": cost, "requests": requests, "unpriced": unpriced}
+
+
+## Estimated USD left, or -1 when no balance has been entered.
+static func credits_left() -> float:
+	var c := credits()
+	if float(c["balance"]) < 0.0:
+		return -1.0
+	return float(c["balance"]) - float(spend_since(float(c["set_at"]))["cost"])
+
+
+## Typical USD for one request of `task` ("author" or "review") on `model`:
+## the mean of the last 20 matching ledger entries; before there are any,
+## the usage recorded in drafts and reviews on disk; else DEFAULT_USAGE.
+## -1 when the model has no known price.
+static func typical_cost(task: String, model: String) -> float:
+	if not PRICES.has(model):
+		return -1.0
+	var costs: Array[float] = []
+	for entry in read_ledger():
+		if entry.get("task") == task and entry.get("model") == model and float(entry.get("cost_usd", -1.0)) >= 0.0:
+			costs.append(float(entry["cost_usd"]))
+	if costs.is_empty():
+		for usage in _recorded_usage(task):
+			costs.append(estimate_cost(model, usage))
+	if costs.is_empty():
+		return estimate_cost(model, DEFAULT_USAGE.get(task, DEFAULT_USAGE["author"]))
+	costs = costs.slice(maxi(0, costs.size() - 20))
+	var sum := 0.0
+	for c in costs: sum += c
+	return sum / costs.size()
+
+
+## Usage recorded on disk before the ledger existed: authoring usage in drafts,
+## Claude review usage in council reviews.
+static func _recorded_usage(task: String) -> Array:
+	var found: Array = []
+	if task == "author":
+		for draft in load_drafts().values():
+			var usage: Dictionary = draft.get("provider_metadata", {}).get("usage", {})
+			if total_tokens(usage) > 0: found.append(usage)
+	else:
+		for revision in ReviewRevisionStore.list_revisions():
+			var vote: Dictionary = ReviewRevisionStore.load_review(String(revision.get("revision_sha256", ""))).get("votes", {}).get(ReviewRevisionStore.MODEL_MEMBER, {})
+			var usage: Dictionary = vote.get("provider_metadata", {}).get("usage", {})
+			if total_tokens(usage) > 0: found.append(usage)
+	return found

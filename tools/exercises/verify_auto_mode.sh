@@ -27,5 +27,7 @@ PY
 A="$SANDBOX/data/exercises/authoring"
 rm -f "$A"/drafts/*.json "$A"/revisions/*.json "$A"/reviews/*.json "$A"/promotions/*.json "$A"/demotions/*.json "$A"/cleared.json
 chmod +x "$SANDBOX/tools/exercises/fake_claude_bridge.py"
+# The spending ledger and credit balance go to sandbox files, never the owner's.
+BODYSIM_SPEND_LEDGER="$SANDBOX/spend.jsonl" BODYSIM_CREDITS_FILE="$SANDBOX/credits.cfg" \
 BODYSIM_SANDBOX=1 FAKE_AUTHORING_RESPONSE="$SANDBOX/fake_authoring_response.json" \
 	"$GODOT" --headless --path "$SANDBOX" --script res://tools/exercises/verify_auto_mode.gd

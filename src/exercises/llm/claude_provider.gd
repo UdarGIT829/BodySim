@@ -20,6 +20,7 @@ const BRIDGE_SCRIPT := "res://tools/exercises/run_claude.py"
 @export var effort := "high"
 
 var _thread: Thread = null
+var _model := ""
 
 
 func is_busy() -> bool:
@@ -52,6 +53,7 @@ func _start(task: String, request: Dictionary) -> void:
 	if String(request.get("model", "")).is_empty():
 		_finish.call_deferred(task, {"ok": false, "error": "Choose a Claude model first."})
 		return
+	_model = String(request.get("model", ""))
 	_thread = Thread.new()
 	_thread.start(_run.bind(task, request))
 
@@ -91,6 +93,9 @@ func _finish(task: String, result: Dictionary) -> void:
 		_thread.wait_to_finish()
 		_thread = null
 	var ok: bool = result.get("ok", false)
+	# Every billed request goes into the spending ledger (the credit estimate).
+	var metadata: Dictionary = result.get("metadata", {}) if result.get("metadata") is Dictionary else {}
+	AutoPipeline.record_spend(task, String(metadata.get("model", _model)), metadata.get("usage", {}))
 	if task == "author":
 		if ok: generation_succeeded.emit(result.get("value", {}), result.get("metadata", {}))
 		else: generation_failed.emit(String(result.get("error", "Claude request failed.")))

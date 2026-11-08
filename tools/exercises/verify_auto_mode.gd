@@ -32,7 +32,7 @@ func run() -> void:
 	await check_studio_auto()
 	await check_council_auto()
 	if failures.is_empty():
-		print("Auto mode passed: runner (budget, credits, retries, fatal, limit, stop, failure streak), pipeline states, studio (search filter, skip stretches) and council (stretch rule, no Claude call, suggested edits applied in-step and from the queue) runs")
+		print("Auto mode passed: runner (spend limit, credits and ledger, API credit errors, retries, fatal, limit, stop, failure streak), pipeline states, studio (search filter, skip stretches) and council (stretch rule, no Claude call, suggested edits applied in-step and from the queue) runs")
 		quit(0)
 	else:
 		for failure in failures:
@@ -82,13 +82,13 @@ func make_modal() -> AutoRunModal:
 
 
 ## Runs a fake queue of n items through `step`.
-func run_fake(modal: AutoRunModal, n: int, step: Callable, budget := 1000000, max_items := 0) -> void:
+func run_fake(modal: AutoRunModal, n: int, step: Callable, limit_usd := 0.0, max_items := 0) -> void:
 	var items: Array = []
 	for index in n: items.append(index)
 	modal.open_for({"model": "claude-sonnet-5-5", "queue": func() -> Array: return items, "step": step,
 		"label": func(item) -> String: return "item %d" % item,
-		"snapshot": func() -> Dictionary: return {"done": 1, "candidate": 2, "remaining": 3}, "estimate_tokens": 5000})
-	modal.budget_spin.value = budget
+		"snapshot": func() -> Dictionary: return {"done": 1, "candidate": 2, "remaining": 3}, "estimate_usd": 0.01})
+	modal.run_limit_spin.value = limit_usd
 	modal.max_items_spin.value = max_items
 	await modal.start()
 
@@ -98,11 +98,27 @@ func check_runner() -> void:
 	var ok_step := func(_item) -> Dictionary:
 		await process_frame
 		return {"outcome": "drafted", "usage": {"input_tokens": 7000}}
-	await run_fake(modal, 3, ok_step, 20000)
-	require(modal.state == "out_of_tokens" and modal.processed == 2, "budget must stop before the third item (%s, %d)" % [modal.state, modal.processed])
-	require(modal.token_bar.value == 6000, "token bar must show what's left")
+	# 7,000 Sonnet input tokens ≈ $0.014 per item: a $0.04 limit stops before the third.
+	await run_fake(modal, 3, ok_step, 0.04)
+	require(modal.state == "spend_limit" and modal.processed == 2, "the spend limit must stop before the third item (%s, %d)" % [modal.state, modal.processed])
+	require(is_equal_approx(modal.run_cost(), 0.028) and modal.spend_label.text.contains("$0.028"), "the run's spend is shown: %s" % modal.spend_label.text)
 
-	await run_fake(modal, 3, ok_step, 1000000, 1)
+	# Credits: none set means no estimate-based stop; too little left stops before starting.
+	require(AutoPipeline.credits_left() < 0.0, "no balance set yet (sandbox credits file)")
+	AutoPipeline.set_credits(0.005)
+	await run_fake(modal, 3, ok_step)
+	require(modal.state == "out_of_credits" and modal.processed == 0, "too few estimated credits stop the run")
+	# Ledger: spend recorded after the balance was set comes off it, and sets the typical cost.
+	AutoPipeline.set_credits(5.0)
+	AutoPipeline.record_spend("author", "claude-sonnet-5-5", {"input_tokens": 1000000})
+	require(is_equal_approx(AutoPipeline.credits_left(), 3.0), "credits left = balance - spend since: %f" % AutoPipeline.credits_left())
+	require(is_equal_approx(AutoPipeline.typical_cost("author", "claude-sonnet-5-5"), 2.0), "typical cost comes from the ledger")
+	require(AutoPipeline.typical_cost("author", "claude-unknown") < 0.0, "no price, no estimate")
+	modal.refresh_credits()
+	require(modal.credits_label.text.contains("$3.00 left") and is_equal_approx(modal.credits_bar.value, 3.0), "the credits bar shows what's left: %s" % modal.credits_label.text)
+	DirAccess.remove_absolute(AutoPipeline.credits_path())   # leave later checks without a balance
+
+	await run_fake(modal, 3, ok_step, 0.0, 1)
 	require(modal.state == "done" and modal.processed == 1, "item limit")
 
 	await run_fake(modal, 3, func(_item) -> Dictionary: return {"outcome": "failed", "error_kind": "credits", "error": "no credit"})
@@ -152,7 +168,7 @@ func check_studio_auto() -> void:
 	require(modal.run_label.text.contains("%d exercise" % queue.size()), "modal counts the filtered queue: %s" % modal.run_label.text)
 	require(modal.visible and modal.model_label.text.contains(studio.model_id), "modal shows the selected model")
 	modal.max_items_spin.value = 3
-	modal.budget_spin.value = 100000000
+	modal.run_limit_spin.value = 0.0
 	await modal.start()
 	require(modal.state == "done" and modal.outcomes.get("drafted") == 3, "studio auto must draft three exercises: %s %s" % [modal.state, modal.outcomes])
 	require(modal.tokens_used() == 3 * FAKE_USAGE, "studio tokens counted")
@@ -220,7 +236,7 @@ func check_council_auto() -> void:
 	council.open_auto_mode()
 	require(modal.legend_label.get_parsed_text().contains("Promoted"), "council modal labels the first layer Promoted")
 	modal.max_items_spin.value = 0             # the sandbox reads the owner's saved settings; pin them
-	modal.budget_spin.value = 100000000
+	modal.run_limit_spin.value = 0.0
 	await modal.start()
 	require(modal.state == "done", "council run must finish: %s" % modal.state)
 	require(modal.outcomes.get("promoted") == 1, "exactly the accepted exercise is promoted: %s" % [modal.outcomes])

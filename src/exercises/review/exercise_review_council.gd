@@ -451,7 +451,7 @@ func open_auto_mode() -> void:
 		"step": auto_review,
 		"label": func(entry: Dictionary) -> String: return auto_label(entry),
 		"snapshot": func() -> Dictionary: return AutoPipeline.layers(AutoPipeline.snapshot()),
-		"estimate_tokens": 25000,
+		"task": "review",
 		"log_name": "council",
 	})
 

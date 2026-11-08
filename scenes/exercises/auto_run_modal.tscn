@@ -68,19 +68,18 @@ autowrap_mode = 3
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="BudgetLabel" type="Label" parent="Margin/Column/Settings"]
+[node name="RunLimitLabel" type="Label" parent="Margin/Column/Settings"]
 layout_mode = 2
-text = "Token budget"
+text = "Spend at most $"
 
-[node name="BudgetSpin" type="SpinBox" parent="Margin/Column/Settings"]
+[node name="RunLimitSpin" type="SpinBox" parent="Margin/Column/Settings"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(150, 0)
+custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
-min_value = 10000.0
-max_value = 1e+09
-step = 1000.0
-value = 2e+06
-tooltip_text = "Auto mode stops before a request that would go past this many tokens (input, output, cache reads and writes). Anthropic doesn't report your remaining credit balance; if the API says the balance is too low, auto mode stops as Out of API credits."
+max_value = 10000.0
+step = 0.01
+value = 2.0
+tooltip_text = "Estimated dollars this run may spend (0 = no limit). Auto mode stops before an exercise whose typical cost would go past it."
 
 [node name="MaxItemsLabel" type="Label" parent="Margin/Column/Settings"]
 layout_mode = 2
@@ -105,21 +104,53 @@ visible = false
 layout_mode = 2
 text = "Option"
 
-[node name="TokenTitle" type="Label" parent="Margin/Column"]
+[node name="CreditsTitle" type="Label" parent="Margin/Column"]
 layout_mode = 2
-text = "Tokens remaining"
+text = "Claude credits (estimated)"
 
-[node name="TokenBar" type="ProgressBar" parent="Margin/Column"]
+[node name="CreditsRow" type="HBoxContainer" parent="Margin/Column"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="CreditsInputLabel" type="Label" parent="Margin/Column/CreditsRow"]
+layout_mode = 2
+text = "My balance now  $"
+
+[node name="CreditsSpin" type="SpinBox" parent="Margin/Column/CreditsRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+max_value = 100000.0
+step = 0.01
+tooltip_text = "Your remaining credit balance from the Claude Console (Billing). BodySim subtracts its own estimated spend from it until you set it again."
+
+[node name="SetCreditsButton" type="Button" parent="Margin/Column/CreditsRow"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Set balance"
+
+[node name="CreditsHint" type="Label" parent="Margin/Column/CreditsRow"]
+layout_mode = 2
+modulate = Color(0.66, 0.74, 0.82, 1)
+text = "(from console.anthropic.com → Billing)"
+
+[node name="CreditsBar" type="ProgressBar" parent="Margin/Column"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 theme_override_styles/background = SubResource("TokenTrack")
 theme_override_styles/fill = SubResource("TokenFill")
-max_value = 2e+06
-value = 2e+06
+max_value = 1.0
+value = 1.0
 show_percentage = false
 
-[node name="TokenLabel" type="Label" parent="Margin/Column"]
+[node name="CreditsLabel" type="Label" parent="Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+modulate = Color(0.66, 0.74, 0.82, 1)
+autowrap_mode = 3
+
+[node name="SpendLabel" type="Label" parent="Margin/Column"]
 unique_name_in_owner = true
 layout_mode = 2
 modulate = Color(0.66, 0.74, 0.82, 1)
