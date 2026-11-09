@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "0871c3c3fc4bb23209f4b92e1e81f7c110482b3f4f1b7fc935231794056a1e1f",
+  "status": "accepted",
+  "updated_at_unix": 1794183628.07295,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183617.04439,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "knee_joint_stability adds small stabilizer coefficients for gluteus_medius, gluteus_maximus, tensor_fasciae_latae, sartorius and gracilis. These are of marginal relevance in a seated, supported setup. At 0.07-0.14 they are low enough not to distort the profile.",
+          "suggested_correction": "Optional: keep as is, since the demand is defensible for knees held near-straight under load."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Toe flexion as assist spreads small coefficients across many foot intrinsic muscles. This is a plausible, deliberate synergist role for the balls of the feet pressing the platform and is not an omission or overstatement.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPycwP318e837VCc14H",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 6732.0,
+          "output_tokens": 1306.0
+        }
+      },
+      "summary": "The frames show a bilateral seated machine calf press. The legs are nearly straight, the balls of the feet are on the platform, and the hands hold the handles. Ankle plantarflexion as the primary action puts soleus and both gastrocnemius heads in the primary role with plausible coefficients. Assist-weighted toe flexion credits the toe flexors and foot intrinsics as light synergists. Assist-weighted knee extension (both sides) credits the quadriceps for holding the knee near-straight against the load, which is how the guidance says to credit a joint held still against load. Ankle and knee stability demands produce small stabilizer values for the tibialis anterior, hamstrings and popliteus. The closed-chain label, bilateral laterality and ankle_plantarflexion family are appropriate, and no muscle pattern is materially wrong."
+    }
+  }
+}

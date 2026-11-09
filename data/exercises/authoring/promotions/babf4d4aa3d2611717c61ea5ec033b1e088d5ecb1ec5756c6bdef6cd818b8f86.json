@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "babf4d4aa3d2611717c61ea5ec033b1e088d5ecb1ec5756c6bdef6cd818b8f86",
+  "revision_id": "Clean_Pull@babf4d4aa3d2",
+  "exercise_id": "exercise.clean_pull.barbell_floor",
+  "source_catalog_id": "catalog.free_exercise_db.Clean_Pull",
+  "mapped_muscles": 117,
+  "promoted_at_unix": 1794183964.9667847,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "5ddbd54252c88af7db751c887fa567bae62bec96addfdca5f829074a3a86431e",
+    "data/exercises/engagement_profiles.json": "18244710710e996cfaa7137a27f04b3f88be06a9e393f6defa11b0e96db67e02",
+    "data/exercises/catalog/candidates.json": "7d7616546638684f228f9634465b6b07e2640c28d13de49e865936ce049c5849",
+    "data/exercises/sources/free_exercise_db_media.json": "fcb65dc020135d396ea7624be6578cfd822e090d2e3c1690998bf453faabf0e2"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "9a00caea0a0326dc9726275162a44ffa5672c53904ce62802a1409d6625cb77f",
+    "data/exercises/engagement_profiles.json": "fdb14b7b5d0c893abd678eca5a80811dcf902e927923acab85b7785f85c3a139",
+    "data/exercises/catalog/candidates.json": "41a0e1d7c439466c6ea7264ddd441a7a4c198be3caef2b81ee77dd32ac819d05",
+    "data/exercises/sources/free_exercise_db_media.json": "2c19ce554dd5684635b640ab52d4eb97654552c8091b14e7f68eb1bde19c40dd"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "e92c3e3c1e348d9c40739a6ad87bf18948d2cecdf4b294a58d2c2d69c0fdacfa",
+  "revision_id": "Cable_Wrist_Curl@e92c3e3c1e34",
+  "exercise_id": "exercise.cable_wrist_curl.seated_supinated",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Wrist_Curl",
+  "mapped_muscles": 40,
+  "promoted_at_unix": 1794183585.7281842,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "6165bf695305a51b01eea0341a4be596d0f3911d630fe462c8c519ba3ec43551",
+    "data/exercises/engagement_profiles.json": "d418488193c0f8b5d7af6f42e652920201bd54bfac88f47a4896e374751c66a0",
+    "data/exercises/catalog/candidates.json": "38be4f07d85dd27b064f20043f281721099bc216c7991d82545c0b40d863685c",
+    "data/exercises/sources/free_exercise_db_media.json": "4f42a643e492d973f80efdfc3fbe70e3a3a01c7ab44c74b3ef4b42d47a461855"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "11c671f22489a1c39fdaee91ff2acc70028559f9af323dbe0a3a4dc2b1ec44ae",
+    "data/exercises/engagement_profiles.json": "bda5f7cece3eb40c3624e6edfa6de887edd9a100ddb860ae238aecbcfa3aa134",
+    "data/exercises/catalog/candidates.json": "faa813d7061dee1b34856cd9d37cd8ffba0f3e37b36bc3b059779af0307aab65",
+    "data/exercises/sources/free_exercise_db_media.json": "23008ad71638ec70b7e9873429ba1f575b30329af31397248702823c5cd1a2d1"
+  }
+}

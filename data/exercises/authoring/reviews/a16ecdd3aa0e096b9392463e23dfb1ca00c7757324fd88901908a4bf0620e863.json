@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "a16ecdd3aa0e096b9392463e23dfb1ca00c7757324fd88901908a4bf0620e863",
+  "status": "accepted",
+  "updated_at_unix": 1794182713.01303,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182694.6991,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The sternocostal head of pectoralis major is not engaged, although it contributes in the shoulder-extension and rising phases of a dip. This is a minor omission, since the clavicular head and anterior deltoid already carry the shoulder-flexion assist.",
+          "suggested_correction": "Optionally add glenohumeral_joint/adduction or horizontal_adduction as an assist if a future revision wants more chest involvement."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "elbow_extension is acceptable as the primary catalog label. A dip is a compound pressing pattern and could also carry horizontal_push or vertical_push, but this is a label preference only.",
+          "suggested_correction": "Optionally add horizontal_push as a secondary family."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The legs are held extended and supported on the floor or box, and the core is lightly engaged. The definition leaves out any hip or trunk demand, which is defensible given the minimal load.",
+          "suggested_correction": "No change required; a future revision could add a light postural_stabilization demand if desired."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrNodbRRb5jQbD6jxWSg",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8502.0,
+          "output_tokens": 1548.0
+        }
+      },
+      "summary": "The definition matches the source text and both frames: bilateral bodyweight bench dip with hands gripping the bench edge behind the torso, legs extended with heels on the floor or a low box, and elbows flexing on the way down. The extension of the elbows on the way up is correctly the primary action. Triceps heads are the primary movers and the long head is credited. Glenohumeral flexion as an assist reasonably credits the anterior deltoid and clavicular pectoralis major raising the torso from the extended-shoulder bottom position. Grip and wrist_stability fit the hands holding the bench edge. anterior_shoulder_stability and scapular_stabilization fit the loaded, extended shoulder. The trace, with triceps primary, anterior deltoid and upper pec as synergists, and scapular and forearm stabilizers, is a plausible pattern with no materially wrong muscle."
+    }
+  }
+}

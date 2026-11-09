@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "2e10326191b34d75b1781a90293f93e0dd7e1145bc1cab1f88ddf206a54e45b6",
+  "status": "accepted",
+  "updated_at_unix": 1794184710.38468,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184697.34303,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The hands and arms carry part of the torso on the bench in the frames, and the hip extensors resist the load on the pelvis, but no demand credits either. These contributions are small and the isolation intent is clear, so omitting them does not make the muscle pattern materially wrong. The knee_joint_stability demand also yields a hamstring- and popliteus-weighted stabilizer set at low coefficients, which is acceptable for a locked-knee hold.",
+          "suggested_correction": "Optionally add low-weight demands for the supported upper body (for example scapular_stabilization) or an assist-level hip extension if the catalog wants to show the load carried on the pelvis."
+        },
+        {
+          "field_path": "source.instructions",
+          "finding": "The text describes a donkey calf raise machine with a pad on the tailbone, but the frames show a partner sitting or leaning on the lifter's hips with the lifter's hands on a bench. The foot position and heel drop are not clearly visible. The joint actions are the same either way.",
+          "suggested_correction": "Keep the alias for the partner variant, and note the equipment ambiguity in a future revision if the catalog distinguishes machine from partner loading."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRMFUXBacaeAnVpsqkq",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 6094.0,
+          "output_tokens": 1403.0
+        }
+      },
+      "summary": "The definition is a bilateral, straight-knee ankle plantarflexion with the load on the hips and the trunk hinged forward and supported by the hands. Primary ankle plantarflexion correctly makes the soleus and both gastrocnemius heads the primary movers, and the peroneals, deep calf flexors, tibialis posterior and plantaris appear as low-level synergists. The stabilizer pattern is plausible: the spinal extensors hold the loaded hinged trunk, and the ankle and knee muscles hold the straight-leg stance. Closed chain, bilateral and the ankle_plantarflexion family all fit. The frames show a partner-loaded variant, which the authoring notes disclose, and it has the same joint actions and load path as the machine version."
+    }
+  }
+}

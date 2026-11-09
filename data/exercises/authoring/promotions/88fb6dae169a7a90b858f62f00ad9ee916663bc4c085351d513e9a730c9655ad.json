@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "88fb6dae169a7a90b858f62f00ad9ee916663bc4c085351d513e9a730c9655ad",
+  "revision_id": "Bottoms_Up@88fb6dae169a",
+  "exercise_id": "exercise.bottoms_up.supine_bodyweight",
+  "source_catalog_id": "catalog.free_exercise_db.Bottoms_Up",
+  "mapped_muscles": 44,
+  "promoted_at_unix": 1794183136.633717,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "63e383b5f1926d15e20f4998ece0c97a0140bfae87d9e61c8985c062c8681250",
+    "data/exercises/engagement_profiles.json": "af5d071563393e8d8580d89840378fe25eb523e4861f9ec1694e36dc73cfdd1a",
+    "data/exercises/catalog/candidates.json": "57b3b7fa00f24ca1ef564eaedc49de7780f765a6645c786b1b93e0fd8d307f7f",
+    "data/exercises/sources/free_exercise_db_media.json": "defd544fcdfe3be6378168f927db0e68b136bee83dc124990293eca518560798"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "818bfcda5c8f782328a5d43f8a064831f944fa76d23f032ab9be6a8510f87bfa",
+    "data/exercises/engagement_profiles.json": "430f2b761bc1c894f080adc024c3e64132ffad6056c54c9f3ca1242f7209a351",
+    "data/exercises/catalog/candidates.json": "d3a207fa86441fb2cf046d86b60d92b090c645afe52eab0556e54190845f534a",
+    "data/exercises/sources/free_exercise_db_media.json": "041db2bf1319622f5a9a31b041d774f6e7458f26a13c1189e519fd0df380eaa8"
+  }
+}

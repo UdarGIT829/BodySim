@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c79cf1fc40612751665ae0b52edad39111623c4a8cddb6cbf4aa6937bc079997",
+  "status": "accepted",
+  "updated_at_unix": 1794184990.55752,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184981.37828,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[glenohumeral_joint/horizontal_adduction]",
+          "finding": "The table gives the short head of biceps a small synergist weight through horizontal adduction. This is a catalog-level artifact of the tracer, not a definition error, and does no material harm to the profile.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The upper arm is held against the dumbbell load at the bottom pause. The traced muscles for this are already covered by the horizontal adduction and protraction actions, so no extra demand is required.",
+          "suggested_correction": "Optional: none required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRiCCfkJP7awo785xfc",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8159.0,
+          "output_tokens": 1109.0
+        }
+      },
+      "summary": "The definition matches the source text and both frames: a bilateral supine dumbbell press from the floor, with the upper arms stopping on the floor at the bottom and elbow extension driving the press. Elbow extension and glenohumeral horizontal adduction as primary actions give a plausible primary pattern (triceps heads, sternocostal and clavicular pectoralis major), with anterior deltoid, abdominal pectoralis, coracobrachialis and short head of biceps as synergists. Scapular protraction is correctly marked assist, so serratus anterior and pectoralis minor appear as synergists without being promoted to primary. Grip and wrist_stability fit dumbbells held in the hands. scapular_retraction_stability is reasonable for scapulae pinned against the floor. Leaving out leg and trunk demands is defensible because the body is fully supported on the floor. The bilateral laterality, empty one_sided_limbs, open_chain label and horizontal_push family are all appropriate."
+    }
+  }
+}

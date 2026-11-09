@@ -1,17 +1,25 @@
 {
-  "additional_context": "",
+  "format_version": 1,
+  "catalog_id": "catalog.free_exercise_db.Arnold_Dumbbell_Press",
+  "source_id": "Arnold_Dumbbell_Press",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "definition_candidate",
+  "additional_context": "[Council feedback on the previous definition]\nFrom model_reviewer:\n- authoring_response.proposed_definition.kinematic_profile.primary_joint_actions: The step-2 instruction ('raise the dumbbells as you rotate the palms of your hands until they are facing forward') and the step-4 tip describing opposite rotation of each arm make rotation the defining feature of this exercise. Frame 1 shows palms toward the face with elbows forward, and frame 2 shows palms forward with elbows out. The definition omits forearm pronation and glenohumeral rotation entirely, so pronator_quadratus, the pronator teres heads and subscapularis (internal rotation) are explicit zeros. This is a real, deliberately described action rather than a negligible one, and the tracer has a vocabulary for it, so the omission is a definition error, not a tracer limitation. Suggested correction: Add radioulnar_joint/pronation (emphasis assist or primary as judged) and consider glenohumeral_joint/internal_rotation with emphasis assist. This keeps the rotation from being modelled as primary while still engaging the pronator muscles and subscapularis.\n- authoring_response.assumptions[1]: The assumption that palm rotation is 'a minor forearm and shoulder rotation component and is not modelled' contradicts the source instructions, which present it as a core part of the movement. The decision is therefore an unsupported material claim, not a justified simplification, and it directly causes the missing pronator and internal-rotator muscle pattern. Suggested correction: Revise the assumption to state that the supinated-to-pronated palm rotation is part of the concentric phase, and model it with assist-level actions in the next authoring revision.\n[End of council feedback]",
   "authoring_response": {
     "assumptions": [
-      "Both arms work together (bilateral, simultaneous) with the back supported on the bench.",
-      "The palm rotation during the press is treated as a minor forearm and shoulder rotation component and is not modelled as a primary joint action.",
-      "Pressing the dumbbells upward is modelled as glenohumeral flexion plus abduction as the elbows swing out, with elbow extension and scapular upward rotation.",
-      "Input is repetitions, with the lowering phase excluded because actions describe the concentric phase.",
-      "Chain type is open chain because the hands move a free load."
+      "Both arms press simultaneously, with both dumbbells moving together and bilateral loading.",
+      "The exercise is performed seated with back support, so no postural or spinal bracing demand is listed.",
+      "The shoulder-flexion and abduction path is modelled as both primary because the elbows travel forward and then outward as the dumbbells rise.",
+      "The palm rotation from facing the body to facing forward is part of the concentric phase, so it is modelled as assist-level forearm pronation and assist-level glenohumeral internal rotation.",
+      "Scapular upward rotation accompanies the overhead path and is modelled as assist.",
+      "The dumbbells are held in the hands, so grip and wrist stability apply.",
+      "Rotator cuff and scapular control are required to guide the humerus and scapula through the changing arm path under load.",
+      "Edited by the council from revision 92a637a53f2f, as the reviewer proposed: remove glenohumeral_joint/internal_rotation; add glenohumeral_joint/external_rotation (assist, working)."
     ],
     "classification": "supported",
     "classification_reasons": [
-      "Seated, back-supported bilateral dumbbell press from a front rack to overhead lockout, shown clearly in both frames and described in the instructions.",
-      "The vertical_push family, glenohumeral, elbow and scapular actions are all representable in the schema vocabulary."
+      "The frames show a seated bilateral dumbbell press with back support, moving from a curl-like rack position with palms toward the face to an overhead lockout with palms forward.",
+      "The exertion phase can be represented with the schema's shoulder, elbow, scapular and forearm vocabulary, including the palm rotation described in the instructions."
     ],
     "field_confidence": {
       "input_mode": "high",
@@ -23,34 +31,54 @@
     },
     "proposed_definition": {
       "aliases": [
-        "arnold_press",
         "seated_arnold_press",
-        "seated_dumbbell_arnold_press"
+        "arnold_press"
       ],
       "id": "exercise.arnold_dumbbell_press.seated_bilateral",
       "input_mode": "repetitions",
       "kinematic_profile": {
         "kinetic_chain_type": "open_chain",
+        "one_sided_limbs": [],
         "primary_joint_actions": [
           {
+            "emphasis": "primary",
             "joint": "glenohumeral_joint",
-            "movement": "flexion"
+            "movement": "flexion",
+            "sides": "working"
           },
           {
+            "emphasis": "primary",
             "joint": "glenohumeral_joint",
-            "movement": "abduction"
+            "movement": "abduction",
+            "sides": "working"
           },
           {
+            "emphasis": "primary",
             "joint": "elbow_joint",
-            "movement": "extension"
+            "movement": "extension",
+            "sides": "working"
           },
           {
+            "emphasis": "assist",
             "joint": "scapulothoracic_joint",
-            "movement": "upward_rotation"
+            "movement": "upward_rotation",
+            "sides": "working"
+          },
+          {
+            "emphasis": "assist",
+            "joint": "radioulnar_joint",
+            "movement": "pronation",
+            "sides": "working"
+          },
+          {
+            "joint": "glenohumeral_joint",
+            "movement": "external_rotation",
+            "emphasis": "assist",
+            "sides": "working"
           }
         ],
         "stabilization_demands": [
-          "anti_extension_spine",
+          "glenohumeral_stabilization",
           "grip",
           "scapular_stabilization",
           "wrist_stability"
@@ -58,14 +86,148 @@
       },
       "laterality": "bilateral",
       "movement_families": [
-        "vertical_push",
-        "elbow_extension"
+        "vertical_push"
       ],
       "name": "Arnold Dumbbell Press",
       "variant": "seated_bilateral"
     },
     "questions_requiring_context": []
   },
+  "provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1.0,
+      "frame_count": 2.0,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Arnold_Dumbbell_Press/0.jpg",
+        "Arnold_Dumbbell_Press/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [
+        "Both arms press simultaneously, with both dumbbells moving together and bilateral loading.",
+        "The exercise is performed seated with back support, so no postural or spinal bracing demand is listed.",
+        "The shoulder-flexion and abduction path is modelled as both primary because the elbows travel forward and then outward as the dumbbells rise.",
+        "The palm rotation from facing the body to facing forward is part of the concentric phase, so it is modelled as assist-level forearm pronation and assist-level glenohumeral internal rotation.",
+        "Scapular upward rotation accompanies the overhead path and is modelled as assist.",
+        "The dumbbells are held in the hands, so grip and wrist stability apply.",
+        "Rotator cuff and scapular control are required to guide the humerus and scapula through the changing arm path under load."
+      ],
+      "classification": "supported",
+      "classification_reasons": [
+        "The frames show a seated bilateral dumbbell press with back support, moving from a curl-like rack position with palms toward the face to an overhead lockout with palms forward.",
+        "The exertion phase can be represented with the schema's shoulder, elbow, scapular and forearm vocabulary, including the palm rotation described in the instructions."
+      ],
+      "field_confidence": {
+        "input_mode": "high",
+        "kinetic_chain_type": "high",
+        "laterality": "high",
+        "primary_joint_actions": "medium",
+        "stabilization_demands": "medium",
+        "variant": "high"
+      },
+      "proposed_definition": {
+        "additional_movement_families": [],
+        "aliases": [
+          "Seated Arnold Press",
+          "Arnold Press"
+        ],
+        "id": "exercise.arnold_dumbbell_press.seated_bilateral",
+        "input_mode": "repetitions",
+        "kinematic_profile": {
+          "kinetic_chain_type": "open_chain",
+          "one_sided_limbs": [],
+          "primary_joint_actions": [
+            {
+              "emphasis": "primary",
+              "joint": "glenohumeral_joint",
+              "movement": "flexion",
+              "sides": "working"
+            },
+            {
+              "emphasis": "primary",
+              "joint": "glenohumeral_joint",
+              "movement": "abduction",
+              "sides": "working"
+            },
+            {
+              "emphasis": "primary",
+              "joint": "elbow_joint",
+              "movement": "extension",
+              "sides": "working"
+            },
+            {
+              "emphasis": "assist",
+              "joint": "scapulothoracic_joint",
+              "movement": "upward_rotation",
+              "sides": "working"
+            },
+            {
+              "emphasis": "assist",
+              "joint": "radioulnar_joint",
+              "movement": "pronation",
+              "sides": "working"
+            },
+            {
+              "emphasis": "assist",
+              "joint": "glenohumeral_joint",
+              "movement": "internal_rotation",
+              "sides": "working"
+            }
+          ],
+          "stabilization_demands": [
+            "grip",
+            "wrist_stability",
+            "glenohumeral_stabilization",
+            "scapular_stabilization"
+          ]
+        },
+        "laterality": "bilateral",
+        "name": "Arnold Dumbbell Press",
+        "primary_movement_family": "vertical_push",
+        "variant": "seated_bilateral"
+      },
+      "questions_requiring_context": []
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgrHjSXy4ZFbsBaor78KW",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 16554.0,
+      "input_tokens": 2461.0,
+      "output_tokens": 1827.0
+    },
+    "edited_by_council": {
+      "from_revision_sha256": "92a637a53f2f0963f36b790f7c1fd12fd98df503fb18e81ba70e5872f9d9167a",
+      "edits": [
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "internal_rotation",
+          "op": "remove_joint_action"
+        },
+        {
+          "emphasis": "assist",
+          "joint": "glenohumeral_joint",
+          "movement": "external_rotation",
+          "op": "add_joint_action",
+          "sides": "working"
+        }
+      ],
+      "described": [
+        "remove glenohumeral_joint/internal_rotation",
+        "add glenohumeral_joint/external_rotation (assist, working)"
+      ],
+      "reviewer_model": "claude-sonnet-5-5",
+      "resolve_all_blocking_findings": true
+    }
+  },
+  "validation_errors": [],
   "candidate_trace_report": {
     "gate_version": "candidate_trace_gate_v3",
     "ok": true,
@@ -74,13 +236,13 @@
     "warnings": [],
     "summary": {
       "total_muscles": 466,
-      "mapped_muscles": 98,
-      "zero_muscles": 368,
+      "mapped_muscles": 106,
+      "zero_muscles": 360,
       "role_counts": {
-        "primary": 20,
-        "synergist": 10,
-        "stabilizer": 68,
-        "none": 368
+        "primary": 14,
+        "synergist": 30,
+        "stabilizer": 62,
+        "none": 360
       },
       "joint_action_coverage": [
         {
@@ -102,12 +264,22 @@
           "joint": "scapulothoracic_joint",
           "movement": "upward_rotation",
           "matching_muscles": 8
+        },
+        {
+          "joint": "radioulnar_joint",
+          "movement": "pronation",
+          "matching_muscles": 8
+        },
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "external_rotation",
+          "matching_muscles": 6
         }
       ],
       "stabilization_coverage": [
         {
-          "demand": "anti_extension_spine",
-          "matching_muscles": 8
+          "demand": "glenohumeral_stabilization",
+          "matching_muscles": 10
         },
         {
           "demand": "grip",
@@ -127,13 +299,13 @@
       "tracer": "kinematic_tracer_v3",
       "structures_sha256": "cad14011d986446b2af5871cad93575dac1da7e34ea6cfbc67b551bf2a3d8edf",
       "muscle_actions_sha256": "52d1b3acbc4257f2c85de5f308437d20ac78b895a3274d1db8cbbde3cfd3bfcf",
-      "canonical_exercises_sha256": "d9615b0d8567fa1a4c6c15215b617c76730fc5e987fad4d03b1aa4b907886369"
+      "canonical_exercises_sha256": "3c63651e01b274399fceda820d4ae67c165e9ba8e07730c54a006c9a70b8c01f"
     },
     "profile": {
       "exercise_id": "exercise.arnold_dumbbell_press.seated_bilateral",
       "total_muscles": 466,
-      "mapped_muscles": 98,
-      "zero_muscles": 368,
+      "mapped_muscles": 106,
+      "zero_muscles": 360,
       "muscles": [
         {
           "muscle_id": "muscle.abdominal_part_of_pectoralis_major.left",
@@ -453,26 +625,28 @@
         },
         {
           "muscle_id": "muscle.ascending_part_of_trapezius.left",
-          "role": "primary",
-          "coefficient": 0.7,
+          "role": "synergist",
+          "coefficient": 0.28,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.ascending_part_of_trapezius",
-            "rule.kinematic_tracer_v3.primary"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.ascending_part_of_trapezius.right",
-          "role": "primary",
-          "coefficient": 0.7,
+          "role": "synergist",
+          "coefficient": 0.28,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.ascending_part_of_trapezius",
-            "rule.kinematic_tracer_v3.primary"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
@@ -499,24 +673,28 @@
         },
         {
           "muscle_id": "muscle.brachioradialis.left",
-          "role": "none",
-          "coefficient": 0.0,
-          "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "role": "synergist",
+          "coefficient": 0.08,
+          "confidence": "medium",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.brachioradialis",
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.brachioradialis.right",
-          "role": "none",
-          "coefficient": 0.0,
-          "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "role": "synergist",
+          "coefficient": 0.08,
+          "confidence": "medium",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.brachioradialis",
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
@@ -683,24 +861,28 @@
         },
         {
           "muscle_id": "muscle.deep_head_of_pronator_teres.left",
-          "role": "none",
-          "coefficient": 0.0,
-          "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "role": "synergist",
+          "coefficient": 0.16,
+          "confidence": "medium",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.deep_head_of_pronator_teres",
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.deep_head_of_pronator_teres.right",
-          "role": "none",
-          "coefficient": 0.0,
-          "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "role": "synergist",
+          "coefficient": 0.16,
+          "confidence": "medium",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.deep_head_of_pronator_teres",
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
@@ -793,26 +975,28 @@
         },
         {
           "muscle_id": "muscle.descending_part_of_trapezius.left",
-          "role": "primary",
-          "coefficient": 0.7,
+          "role": "synergist",
+          "coefficient": 0.28,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.descending_part_of_trapezius",
-            "rule.kinematic_tracer_v3.primary"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.descending_part_of_trapezius.right",
-          "role": "primary",
-          "coefficient": 0.7,
+          "role": "synergist",
+          "coefficient": 0.28,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.descending_part_of_trapezius",
-            "rule.kinematic_tracer_v3.primary"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
@@ -1144,26 +1328,24 @@
         },
         {
           "muscle_id": "muscle.external_abdominal_oblique.left",
-          "role": "stabilizer",
-          "coefficient": 0.28,
+          "role": "none",
+          "coefficient": 0.0,
           "confidence": "high",
-          "evidence_status": "kinematic_trace",
+          "evidence_status": "reviewed_zero",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "muscle_actions_v2:muscle.external_abdominal_oblique",
-            "rule.kinematic_tracer_v3.stabilizer"
+            "rule.kinematic_tracer_v3.reviewed_zero"
           ]
         },
         {
           "muscle_id": "muscle.external_abdominal_oblique.right",
-          "role": "stabilizer",
-          "coefficient": 0.28,
+          "role": "none",
+          "coefficient": 0.0,
           "confidence": "high",
-          "evidence_status": "kinematic_trace",
+          "evidence_status": "reviewed_zero",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "muscle_actions_v2:muscle.external_abdominal_oblique",
-            "rule.kinematic_tracer_v3.stabilizer"
+            "rule.kinematic_tracer_v3.reviewed_zero"
           ]
         },
         {
@@ -1974,24 +2156,28 @@
         },
         {
           "muscle_id": "muscle.infraspinatus.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "synergist",
+          "coefficient": 0.4,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.infraspinatus",
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.infraspinatus.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "synergist",
+          "coefficient": 0.4,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.infraspinatus",
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
@@ -2018,26 +2204,24 @@
         },
         {
           "muscle_id": "muscle.internal_abdominal_oblique.left",
-          "role": "stabilizer",
-          "coefficient": 0.245,
+          "role": "none",
+          "coefficient": 0.0,
           "confidence": "high",
-          "evidence_status": "kinematic_trace",
+          "evidence_status": "reviewed_zero",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "muscle_actions_v2:muscle.internal_abdominal_oblique",
-            "rule.kinematic_tracer_v3.stabilizer"
+            "rule.kinematic_tracer_v3.reviewed_zero"
           ]
         },
         {
           "muscle_id": "muscle.internal_abdominal_oblique.right",
-          "role": "stabilizer",
-          "coefficient": 0.245,
+          "role": "none",
+          "coefficient": 0.0,
           "confidence": "high",
-          "evidence_status": "kinematic_trace",
+          "evidence_status": "reviewed_zero",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "muscle_actions_v2:muscle.internal_abdominal_oblique",
-            "rule.kinematic_tracer_v3.stabilizer"
+            "rule.kinematic_tracer_v3.reviewed_zero"
           ]
         },
         {
@@ -3540,24 +3724,28 @@
         },
         {
           "muscle_id": "muscle.pronator_quadratus.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "synergist",
+          "coefficient": 0.4,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.pronator_quadratus",
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.pronator_quadratus.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "synergist",
+          "coefficient": 0.4,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.pronator_quadratus",
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
@@ -3740,26 +3928,24 @@
         },
         {
           "muscle_id": "muscle.rectus_abdominis.left",
-          "role": "stabilizer",
-          "coefficient": 0.35,
+          "role": "none",
+          "coefficient": 0.0,
           "confidence": "high",
-          "evidence_status": "kinematic_trace",
+          "evidence_status": "reviewed_zero",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "muscle_actions_v2:muscle.rectus_abdominis",
-            "rule.kinematic_tracer_v3.stabilizer"
+            "rule.kinematic_tracer_v3.reviewed_zero"
           ]
         },
         {
           "muscle_id": "muscle.rectus_abdominis.right",
-          "role": "stabilizer",
-          "coefficient": 0.35,
+          "role": "none",
+          "coefficient": 0.0,
           "confidence": "high",
-          "evidence_status": "kinematic_trace",
+          "evidence_status": "reviewed_zero",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "muscle_actions_v2:muscle.rectus_abdominis",
-            "rule.kinematic_tracer_v3.stabilizer"
+            "rule.kinematic_tracer_v3.reviewed_zero"
           ]
         },
         {
@@ -4054,24 +4240,28 @@
         },
         {
           "muscle_id": "muscle.scapular_spinal_part_of_deltoid.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "synergist",
+          "coefficient": 0.16,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.scapular_spinal_part_of_deltoid",
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.scapular_spinal_part_of_deltoid.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "synergist",
+          "coefficient": 0.16,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.scapular_spinal_part_of_deltoid",
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
@@ -4164,26 +4354,28 @@
         },
         {
           "muscle_id": "muscle.serratus_anterior.left",
-          "role": "primary",
-          "coefficient": 1.0,
+          "role": "synergist",
+          "coefficient": 0.4,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.serratus_anterior",
-            "rule.kinematic_tracer_v3.primary"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.serratus_anterior.right",
-          "role": "primary",
-          "coefficient": 1.0,
+          "role": "synergist",
+          "coefficient": 0.4,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.serratus_anterior",
-            "rule.kinematic_tracer_v3.primary"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
@@ -4588,24 +4780,26 @@
         },
         {
           "muscle_id": "muscle.subscapularis.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.35,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.subscapularis",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.subscapularis.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.35,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.subscapularis",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
@@ -4634,24 +4828,28 @@
         },
         {
           "muscle_id": "muscle.superficial_head_of_pronator_teres.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "synergist",
+          "coefficient": 0.32,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.superficial_head_of_pronator_teres",
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.superficial_head_of_pronator_teres.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "synergist",
+          "coefficient": 0.32,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.superficial_head_of_pronator_teres",
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
@@ -4922,24 +5120,28 @@
         },
         {
           "muscle_id": "muscle.teres_minor.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "synergist",
+          "coefficient": 0.28,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.teres_minor",
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.teres_minor.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "synergist",
+          "coefficient": 0.28,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.teres_minor",
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
@@ -5090,49 +5292,49 @@
         {
           "muscle_id": "muscle.transverse_part_of_trapezius.left",
           "role": "synergist",
-          "coefficient": 0.3,
+          "coefficient": 0.12,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.transverse_part_of_trapezius",
-            "rule.kinematic_tracer_v3.synergist"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.transverse_part_of_trapezius.right",
           "role": "synergist",
-          "coefficient": 0.3,
+          "coefficient": 0.12,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.transverse_part_of_trapezius",
-            "rule.kinematic_tracer_v3.synergist"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.transversus_abdominis.left",
-          "role": "stabilizer",
-          "coefficient": 0.105,
+          "role": "none",
+          "coefficient": 0.0,
           "confidence": "high",
-          "evidence_status": "kinematic_trace",
+          "evidence_status": "reviewed_zero",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "muscle_actions_v2:muscle.transversus_abdominis",
-            "rule.kinematic_tracer_v3.stabilizer"
+            "rule.kinematic_tracer_v3.reviewed_zero"
           ]
         },
         {
           "muscle_id": "muscle.transversus_abdominis.right",
-          "role": "stabilizer",
-          "coefficient": 0.105,
+          "role": "none",
+          "coefficient": 0.0,
           "confidence": "high",
-          "evidence_status": "kinematic_trace",
+          "evidence_status": "reviewed_zero",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "muscle_actions_v2:muscle.transversus_abdominis",
-            "rule.kinematic_tracer_v3.stabilizer"
+            "rule.kinematic_tracer_v3.reviewed_zero"
           ]
         },
         {
@@ -5362,102 +5564,5 @@
       ]
     }
   },
-  "catalog_id": "catalog.free_exercise_db.Arnold_Dumbbell_Press",
-  "format_version": 1,
-  "provider_metadata": {
-    "effort": "high",
-    "input_contact_sheet": {
-      "api_image_inputs": 1,
-      "frame_count": 2,
-      "layout": "chronological_left_to_right",
-      "source_images": [
-        "Arnold_Dumbbell_Press/0.jpg",
-        "Arnold_Dumbbell_Press/1.jpg"
-      ]
-    },
-    "model": "claude-sonnet-5-5",
-    "provider": "anthropic",
-    "raw_authoring_response": {
-      "assumptions": [
-        "Both arms work together (bilateral, simultaneous) with the back supported on the bench.",
-        "The palm rotation during the press is treated as a minor forearm and shoulder rotation component and is not modelled as a primary joint action.",
-        "Pressing the dumbbells upward is modelled as glenohumeral flexion plus abduction as the elbows swing out, with elbow extension and scapular upward rotation.",
-        "Input is repetitions, with the lowering phase excluded because actions describe the concentric phase.",
-        "Chain type is open chain because the hands move a free load."
-      ],
-      "classification": "supported",
-      "classification_reasons": [
-        "Seated, back-supported bilateral dumbbell press from a front rack to overhead lockout, shown clearly in both frames and described in the instructions.",
-        "The vertical_push family, glenohumeral, elbow and scapular actions are all representable in the schema vocabulary."
-      ],
-      "field_confidence": {
-        "input_mode": "high",
-        "kinetic_chain_type": "high",
-        "laterality": "high",
-        "primary_joint_actions": "medium",
-        "stabilization_demands": "medium",
-        "variant": "high"
-      },
-      "proposed_definition": {
-        "additional_movement_families": [
-          "elbow_extension"
-        ],
-        "aliases": [
-          "Arnold Press",
-          "Seated Arnold Press",
-          "Seated Dumbbell Arnold Press"
-        ],
-        "id": "exercise.arnold_dumbbell_press.seated_bilateral",
-        "input_mode": "repetitions",
-        "kinematic_profile": {
-          "kinetic_chain_type": "open_chain",
-          "primary_joint_actions": [
-            {
-              "joint": "glenohumeral_joint",
-              "movement": "flexion"
-            },
-            {
-              "joint": "glenohumeral_joint",
-              "movement": "abduction"
-            },
-            {
-              "joint": "elbow_joint",
-              "movement": "extension"
-            },
-            {
-              "joint": "scapulothoracic_joint",
-              "movement": "upward_rotation"
-            }
-          ],
-          "stabilization_demands": [
-            "grip",
-            "wrist_stability",
-            "anti_extension_spine",
-            "scapular_stabilization"
-          ]
-        },
-        "laterality": "bilateral",
-        "name": "Arnold Dumbbell Press",
-        "primary_movement_family": "vertical_push",
-        "variant": "seated_bilateral"
-      },
-      "questions_requiring_context": []
-    },
-    "request_id": "",
-    "requested_model": "claude-sonnet-5-5",
-    "response_id": "msg_011CgowykG7vfuCMGz9CuQAQ",
-    "served_by_fallback": false,
-    "stop_reason": "end_turn",
-    "usage": {
-      "cache_creation_input_tokens": 0.0,
-      "cache_read_input_tokens": 15842.0,
-      "input_tokens": 1886.0,
-      "output_tokens": 1377.0
-    }
-  },
-  "saved_at_unix": 1794071901.43144,
-  "source_id": "Arnold_Dumbbell_Press",
-  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
-  "status": "definition_candidate",
-  "validation_errors": []
+  "saved_at_unix": 1794179129.9545085
 }

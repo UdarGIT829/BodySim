@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "4953a979c9151d9f9087e5ae1fd320ff7df45768ee779ac1b94120a40de98094",
+  "revision_id": "Barbell_Seated_Calf_Raise@4953a979c915",
+  "exercise_id": "exercise.barbell_calf_raise.seated",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Seated_Calf_Raise",
+  "mapped_muscles": 20,
+  "promoted_at_unix": 1794179402.5408623,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "eaf2ac73ac806f4697a06f6ff89618e1bde26c4937bc1942ca1730a185833eb3",
+    "data/exercises/engagement_profiles.json": "fd0a6d54abfe30b175bdc2086b1dbe4dc04ac5eb8b74738b6bf79836d3fb8d36",
+    "data/exercises/catalog/candidates.json": "1240ade066485dd37e747a1eabeaab3db7a6741d20888100a3023e8007d8b4a9",
+    "data/exercises/sources/free_exercise_db_media.json": "ee6567c298d7ee8cf319be978580aaf309afcd617d538ef691542fb80e384cb5"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "6d2b2e72b49c052f0750ec2cc46cedd08a283cef273f9090b897bc7adedb8f60",
+    "data/exercises/engagement_profiles.json": "b476c454ee6dcd0a48514a0be5b1b7c4f1c99e4101210bc91463e61d5b1da8e4",
+    "data/exercises/catalog/candidates.json": "e12a3484b2d2ceb96859af24332137f5b7e00509bcec5a482e9100cc7566d764",
+    "data/exercises/sources/free_exercise_db_media.json": "843462ada2917f0f89d415d78436ecc35fda079c095b33d6671745e24f2ef96a"
+  }
+}

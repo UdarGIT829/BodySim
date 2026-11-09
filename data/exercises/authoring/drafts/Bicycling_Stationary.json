@@ -1,0 +1,95 @@
+{
+  "additional_context": "",
+  "authoring_response": {
+    "assumptions": [],
+    "classification": "unsupported",
+    "classification_reasons": [
+      "The exercise is continuous, cyclic, alternating-leg pedaling on a stationary bike. The movement-family vocabulary has no cycling or locomotion/cardio family. The nearest options (squat, lunge, knee_extension, hip_bridge) would be nearest-but-wrong categories, and the instructions forbid inventing one.",
+      "The instructions describe only seat adjustment, console menu selection, resistance level and heart-rate handles. They give no biomechanical cues such as seated versus standing pedaling, cadence or resistance.",
+      "The frames show a seated, upright bike with hands on the handlebars. Pedaling alternates hip and knee flexion and extension through the crank cycle, and the current schema cannot capture that phase structure or its muscle loading faithfully.",
+      "Because primary_movement_family is required and no exact family exists, no faithful definition can be produced, so proposed_definition is null."
+    ],
+    "field_confidence": {
+      "input_mode": "high",
+      "kinetic_chain_type": "medium",
+      "laterality": "high",
+      "primary_joint_actions": "low",
+      "stabilization_demands": "low",
+      "variant": "medium"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "bicycling",
+        "stationary"
+      ],
+      "id": "exercise.bicycling_stationary.standard",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "primary_joint_actions": [],
+        "stabilization_demands": []
+      },
+      "laterality": "bilateral",
+      "movement_families": [],
+      "name": "Bicycling, Stationary",
+      "variant": "standard"
+    },
+    "questions_requiring_context": []
+  },
+  "candidate_trace_report": {},
+  "catalog_id": "catalog.free_exercise_db.Bicycling_Stationary",
+  "format_version": 1,
+  "provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1,
+      "frame_count": 2,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Bicycling_Stationary/0.jpg",
+        "Bicycling_Stationary/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [],
+      "classification": "unsupported",
+      "classification_reasons": [
+        "The exercise is continuous, cyclic, alternating-leg pedaling on a stationary bike. The movement-family vocabulary has no cycling or locomotion/cardio family. The nearest options (squat, lunge, knee_extension, hip_bridge) would be nearest-but-wrong categories, and the instructions forbid inventing one.",
+        "The instructions describe only seat adjustment, console menu selection, resistance level and heart-rate handles. They give no biomechanical cues such as seated versus standing pedaling, cadence or resistance.",
+        "The frames show a seated, upright bike with hands on the handlebars. Pedaling alternates hip and knee flexion and extension through the crank cycle, and the current schema cannot capture that phase structure or its muscle loading faithfully.",
+        "Because primary_movement_family is required and no exact family exists, no faithful definition can be produced, so proposed_definition is null."
+      ],
+      "field_confidence": {
+        "input_mode": "high",
+        "kinetic_chain_type": "medium",
+        "laterality": "high",
+        "primary_joint_actions": "low",
+        "stabilization_demands": "low",
+        "variant": "medium"
+      },
+      "proposed_definition": null,
+      "questions_requiring_context": []
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgrLM32bDFXVrxxzrJhCz",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 16554.0,
+      "input_tokens": 1715.0,
+      "output_tokens": 904.0
+    }
+  },
+  "saved_at_unix": 1794180768.9953,
+  "source_id": "Bicycling_Stationary",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "authoring_draft",
+  "validation_errors": [
+    "proposed_definition: must be null unless classification is supported",
+    "classification: unsupported proposals cannot advance to definition_candidate"
+  ]
+}

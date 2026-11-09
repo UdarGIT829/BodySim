@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "68ace6911c4494e0aca736128294cb38bbdb6b3303a2d928138d0725d579b1c6",
+  "revision_id": "Cable_Hip_Adduction@68ace6911c44",
+  "exercise_id": "exercise.cable_hip_adduction.standing_ankle_cuff",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Hip_Adduction",
+  "mapped_muscles": 55,
+  "promoted_at_unix": 1794183324.9050913,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "8d7e96516e13d0f771cb734645cb19b9fd49031f2ae8d077a7c239c61fa05391",
+    "data/exercises/engagement_profiles.json": "c93f656bf1d413acb19b7afa71b627167d0bc6e9790c6711fc23402739d6db18",
+    "data/exercises/catalog/candidates.json": "ab5919a5d6f6e208069daf3afd183cb1f5706863724f8e43ddc083d4fe8b5a5f",
+    "data/exercises/sources/free_exercise_db_media.json": "d611a594877242a28f8ce18e260254f9bd286a4fb1c23dcc3f32f484fefe377e"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "7b6ce46e58ac76d3d0df5ea67a14a2d8f3bf83326fe367f41a65687e2f439c0f",
+    "data/exercises/engagement_profiles.json": "1da83a6f9d8a5128178d6b38496b437745f92be3a2785d7324bd80d806eda32a",
+    "data/exercises/catalog/candidates.json": "2cb10ae8c964312e8b54ea4b92239d4f4150e83a411749080b48961a2065cfcd",
+    "data/exercises/sources/free_exercise_db_media.json": "2549879347895e3710b43cf9013f62b466086e8d4a9cc1d631d5f7eabe66abd9"
+  }
+}

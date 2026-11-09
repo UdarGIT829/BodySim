@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "77c3b9bbb56733a19c55b6d4d5e33a0d0b9b13759b165347cb138c1cc2949549",
+  "revision_id": "Crunch_-_Hands_Overhead@77c3b9bbb567",
+  "exercise_id": "exercise.crunch.hands_overhead",
+  "source_catalog_id": "catalog.free_exercise_db.Crunch_-_Hands_Overhead",
+  "mapped_muscles": 20,
+  "promoted_at_unix": 1794184327.5829506,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "fc98c7ee145550a27704c7850377e97cb2162769cc021a9dfe2448551e2a2201",
+    "data/exercises/engagement_profiles.json": "d98365b296c205d5f3492d00aee8864224fdf5bf810867cc680c75576b362407",
+    "data/exercises/catalog/candidates.json": "f50228bfc0b5d8226eba9b0d21485a525b692eb5579641db484262fca5ae352f",
+    "data/exercises/sources/free_exercise_db_media.json": "e488eb185179933578077a107af1baa4a2ab9cb0b2fa560d578d02838d88fd9b"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "608f95e57e8d11d30b4a64c338443f86533c6bab47f3b5ecfdf1bf0deb6e43a6",
+    "data/exercises/engagement_profiles.json": "7d037d9e6606167dd8209771a3217491e77fb46ab5ec246de74847a946f7e00d",
+    "data/exercises/catalog/candidates.json": "194e0e3f0bb3b097ed47b90b324ed61fa94d9dde7e5e7dda96cc87a214ca2634",
+    "data/exercises/sources/free_exercise_db_media.json": "0cbd54677132e80d5b2fd28a0695e9653f6af8b35c07872c889117467a9b43a0"
+  }
+}

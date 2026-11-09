@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "282a9bafc2d0942aef0af0461b50c55cc4312588821a37e9a98f4b547779e9d2",
+  "status": "accepted",
+  "updated_at_unix": 1794183040.56871,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183028.00074,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "closed_chain is defensible because the hands are loaded on the bars and the feet are fixed on the floor. The hands slide apart on rolling bars, so the chain is not strictly fixed and open_chain could also be argued. This is only a catalog label and does not change the traced muscles.",
+          "suggested_correction": "Keep closed_chain, or note the rolling-hand ambiguity in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[1]",
+          "finding": "The elbow extension assist represents an isometric hold of a slightly bent elbow, not an active extension. The triceps coefficients of about 0.32 to 0.36 are reasonable but could slightly overstate triceps work in what is a chest-isolation movement. This is a minor weighting judgement, not an error.",
+          "suggested_correction": "No change required; the assist emphasis is already the lowest available weighting."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPECegT4vhHJUqxphwW",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9666.0,
+          "output_tokens": 1533.0
+        }
+      },
+      "summary": "The frozen definition fits the source frames and instructions. Both frames show a push-up position with the hands on two rolling EZ bars and the toes on the floor. The load is bodyweight resisted as the bars are pulled back together, so glenohumeral horizontal adduction as the primary action correctly puts the pectoralis major heads (sternocostal 1.0, clavicular 0.8) in the primary role. The anterior deltoid, abdominal head of pectoralis major and coracobrachialis appear as synergists. Elbow extension as an assist keeps the triceps at synergist level, which fits the elbow holding a fixed, slightly bent angle against the load. The plank-like trunk and legs are covered by anti_extension_spine, anti_extension_hip and pelvic_alignment, with no lumbar flexion listed. Grip and wrist_stability are correctly placed because the load is held in the hands. scapular_anchoring credits serratus anterior and the trapezius and rhomboids. Bilateral laterality with empty one_sided_limbs is right, since both arms work equally. No biomechanically material claim is unsupported or contradictory, and the tracer output has no materially wrong muscle pattern."
+    }
+  }
+}

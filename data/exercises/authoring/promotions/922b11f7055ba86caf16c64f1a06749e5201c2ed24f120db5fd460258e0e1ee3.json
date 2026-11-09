@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "922b11f7055ba86caf16c64f1a06749e5201c2ed24f120db5fd460258e0e1ee3",
+  "revision_id": "Cocoons@922b11f7055b",
+  "exercise_id": "exercise.cocoons.supine_bodyweight",
+  "source_catalog_id": "catalog.free_exercise_db.Cocoons",
+  "mapped_muscles": 44,
+  "promoted_at_unix": 1794184228.020063,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "9d3c4ec453538c33b05a556d5371655ff417b658839909717d8c4f79509537c7",
+    "data/exercises/engagement_profiles.json": "100e83fc66b5df91a0cd7c09d988504b1bbcd1f13819a48f0cf846b1695e423c",
+    "data/exercises/catalog/candidates.json": "67f7d5a2e5f742aed0651c37cb78d2d6056fdc664f5be8b805f3ada936ee1c10",
+    "data/exercises/sources/free_exercise_db_media.json": "2c13e84b1f2c4517976249b0b8d01029e77cbcb47f50cff4a742154d1488a3ed"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "56a21f1d61feeaac9f15cce4ed702e4f58e02411d23d722fc21b8726d37cd29f",
+    "data/exercises/engagement_profiles.json": "173e8346a50687d0c48f72d12918cfeaabf5b34a7eb9445ae13bee6ff12b63e1",
+    "data/exercises/catalog/candidates.json": "4c496c2fe94cacad666e8dd073e2f99eb05e30d4260d9c2247c2468ceefc7bf5",
+    "data/exercises/sources/free_exercise_db_media.json": "37eb1cc2ec38eb53d2cd21f552f1f89d410c0255073e84cc64c11ebc1166d773"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "3e6e193cb52a5f6255f6244f13a429e5bae0bf989fcd994a21e503d7540fb544",
+  "revision_id": "Clean_Shrug@3e6e193cb52a",
+  "exercise_id": "exercise.barbell_clean_shrug.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Clean_Shrug",
+  "mapped_muscles": 100,
+  "promoted_at_unix": 1794183977.9784074,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "9a00caea0a0326dc9726275162a44ffa5672c53904ce62802a1409d6625cb77f",
+    "data/exercises/engagement_profiles.json": "fdb14b7b5d0c893abd678eca5a80811dcf902e927923acab85b7785f85c3a139",
+    "data/exercises/catalog/candidates.json": "41a0e1d7c439466c6ea7264ddd441a7a4c198be3caef2b81ee77dd32ac819d05",
+    "data/exercises/sources/free_exercise_db_media.json": "2c19ce554dd5684635b640ab52d4eb97654552c8091b14e7f68eb1bde19c40dd"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "8a65f666df441b858959c8ae68a5c07b6c8dc261faf06da47bf4cd1e5d015b4f",
+    "data/exercises/engagement_profiles.json": "9f218cd118d098d679c0f373a3156a94c9afbd1c66143efc93d5b18cb11bb574",
+    "data/exercises/catalog/candidates.json": "5aa7fe0b83af69f84125e6b21bfc64ba40586ee0570e6f6c96153c3a4516c0fd",
+    "data/exercises/sources/free_exercise_db_media.json": "afba2750346707e86a651958a05670c2b2d413546df86128b2413e5c8f35b09f"
+  }
+}

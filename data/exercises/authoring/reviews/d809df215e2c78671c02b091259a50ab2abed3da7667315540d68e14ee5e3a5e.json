@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "d809df215e2c78671c02b091259a50ab2abed3da7667315540d68e14ee5e3a5e",
+  "status": "accepted",
+  "updated_at_unix": 1794183357.11999,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183344.0983,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The frames show a small change in upper-arm angle between the start and end positions, so the upper arms are not perfectly still. shoulder_position_hold models this adequately and is arguably the best available choice. It gives the clavicular deltoid 0.35 as a stabilizer, which is plausible and not materially wrong.",
+          "suggested_correction": "No change needed. Optionally, a future revision could consider a small assist-level glenohumeral action if the source clearly showed shoulder motion."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "The grip and wrist_stability demands add many low-coefficient hand and forearm stabilizers (coefficients 0.035 to 0.35). This is how the tracer spreads the demand weights and is acceptable for a hand-held cable bar. It is not a definition error.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPdVnUBFzAkxxh6xXxH",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7280.0,
+          "output_tokens": 1424.0
+        }
+      },
+      "summary": "The definition fits the source. It is a bilateral lying incline cable triceps extension on a high pulley with a straight bar and a narrow overhand grip. The frames show the elbows flexed with the hands behind the head at the start and the arms extended at the end, so elbow_joint/extension is the single primary action. The tracer output matches: all three triceps heads are primary on both sides, with anconeus as a synergist. The shoulder_position_hold, grip and wrist_stability demands put the deltoid, forearm and hand muscles in the right places for a load held in the hands with the upper arms held still. The incline bench supports the trunk, so leaving out trunk bracing demands is reasonable. The labels open_chain, bilateral and elbow_extension are appropriate."
+    }
+  }
+}

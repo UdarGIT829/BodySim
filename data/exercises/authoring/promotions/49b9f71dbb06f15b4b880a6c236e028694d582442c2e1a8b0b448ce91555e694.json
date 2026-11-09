@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "49b9f71dbb06f15b4b880a6c236e028694d582442c2e1a8b0b448ce91555e694",
+  "revision_id": "Decline_Dumbbell_Triceps_Extension@49b9f71dbb06",
+  "exercise_id": "exercise.dumbbell_triceps_extension.decline_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Decline_Dumbbell_Triceps_Extension",
+  "mapped_muscles": 70,
+  "promoted_at_unix": 1794184538.8665473,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "ce1955c944da495a3344a0b9501777ec6f7afc07c187ec79cca1dd192fc422db",
+    "data/exercises/engagement_profiles.json": "bcf2ab3f8993d8c07a4d1efaa762a27121ed46997a17aa4fcf9a1288b1560098",
+    "data/exercises/catalog/candidates.json": "9069e366fb56e3a51fe2dbcff191c4aa62cf9eb9a35d8f41a6bc8be3e01fbf1d",
+    "data/exercises/sources/free_exercise_db_media.json": "e6583794a48bb98a82280e03d6dbef76984ebc99f835f9021b384554ca01a219"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "59a3b7327a3f290636ce6e0a486d5602614def276fc297314ab5d9e5291e55fa",
+    "data/exercises/engagement_profiles.json": "b42ab1ecef30d2d35291d5ab9f5f9f0509c0d434305ecfb5173484924a42dbf5",
+    "data/exercises/catalog/candidates.json": "04e57d9ae2c911780ce801160cbde3339d36aaae9744df9fdfe8793868456f56",
+    "data/exercises/sources/free_exercise_db_media.json": "ec4e5550874da283da4369361359978afa87ca224ccfa229f0ca38a5b3f27418"
+  }
+}

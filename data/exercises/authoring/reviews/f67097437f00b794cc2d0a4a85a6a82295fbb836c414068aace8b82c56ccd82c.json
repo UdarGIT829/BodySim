@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "f67097437f00b794cc2d0a4a85a6a82295fbb836c414068aace8b82c56ccd82c",
+  "status": "accepted",
+  "updated_at_unix": 1794183464.15469,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183451.40378,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[2]",
+          "finding": "Knee flexion is correctly an isometric assist at about 90 degrees. It gives the hamstrings, gastrocnemii, popliteus and plantaris small non-zero coefficients (0.04 to 0.32), which is a minor overstatement of hamstring involvement but acceptable as a deliberate synergist.",
+          "suggested_correction": "No change required. Optionally, if reviewers prefer, drop the knee assist, since the knees are held rather than driven."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Transversus abdominis and the diaphragm get no engagement because no bracing demand is listed. This is defensible for a light-to-moderate isolation movement, and the author documented the choice.",
+          "suggested_correction": "Optionally add intra_abdominal_pressure if future reviews want deep-core credit."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[1]",
+          "finding": "Rectus femoris reaches 0.7 and so counts as primary through hip flexion, even though the knees are flexed to 90 degrees, which makes it less effective as a hip flexor. This follows from the table weights and is not fixable through a different choice of actions.",
+          "suggested_correction": "No change required."
+        },
+        {
+          "field_path": "authoring_response.classification_reasons",
+          "finding": "The text says hands behind the head while the frames show the arms flat on the mat. The author noted this and correctly treated it as passive, with no effect on the joint actions.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPmQhqiWSdhv46oMXDN",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 5474.0,
+          "output_tokens": 1486.0
+        }
+      },
+      "summary": "The definition matches the source instructions and frames. Both ankles are strapped to a low pulley and the knees are held near 90 degrees. The pelvis curls off the mat with the legs drawn toward the torso, which is lumbar flexion plus hip flexion against the cable. Open chain, bilateral, and the trunk_flexion and hip_flexion families are all appropriate. The tracer output follows from that: rectus abdominis, psoas and iliacus as primary movers, the obliques as synergists, and the hamstrings only as low-level knee-flexion assists. Nothing material is unsupported or contradicted."
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "5e28b08b6c99b0093b325350849f916e6f6cff930a0edaedc28d6a07f8b45ce8",
+  "status": "accepted",
+  "updated_at_unix": 1794184198.02949,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184187.36133,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The label horizontal_push is correct. core_anti_extension could be added as a secondary family because the rigid-plank trunk is a notable demand, but this is only a catalog label and does not change the traced muscles.",
+          "suggested_correction": "Optionally add core_anti_extension as a secondary movement family."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "A rotator-cuff demand (glenohumeral_stabilization) is not listed, so infraspinatus, supraspinatus and teres minor are explicit zeros. This is a minor omission under the dumbbell-elevated close-grip push-up. The quadriceps are also absent despite some isometric knee-extension holding of the legs.",
+          "suggested_correction": "Consider adding glenohumeral_stabilization in a future revision if rotator cuff involvement is wanted."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQhfbYrmGYA87Gu5F62",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8093.0,
+          "output_tokens": 1415.0
+        }
+      },
+      "summary": "Both frames show a bilateral push-up with the hands close together on an upright dumbbell and the toes on the floor. The torso is rigid, and the path is elbow flexion and extension with no hip sag or rise. The definition fits this. Elbow extension and glenohumeral horizontal adduction are the primary pressing actions, and scapular protraction is an assist. Triceps (lateral, medial and long heads), sternocostal and clavicular pectoralis major are primary. Clavicular deltoid, abdominal pectoralis major, serratus anterior, anconeus, coracobrachialis, pectoralis minor and short head of biceps are synergists. Core, hip, scapular and wrist muscles appear as stabilizers through the listed demands. Hands are on the dumbbell end plate, so wrist_stability rather than grip is acceptable. Laterality bilateral with empty one_sided_limbs is correct."
+    }
+  }
+}

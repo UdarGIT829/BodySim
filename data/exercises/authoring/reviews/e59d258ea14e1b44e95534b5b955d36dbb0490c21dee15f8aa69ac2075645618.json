@@ -1,0 +1,57 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "e59d258ea14e1b44e95534b5b955d36dbb0490c21dee15f8aa69ac2075645618",
+  "status": "accepted",
+  "updated_at_unix": 1794105449.20186,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105438.25761,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Scapulothoracic upward rotation is omitted. It is a real but minor component of a shrug, and the table would add serratus anterior and ascending trapezius at a low level. The omission does not distort the primary pattern, and it is explicitly documented in the assumptions.",
+          "suggested_correction": "Optionally add scapulothoracic_joint/upward_rotation with emphasis assist if a future revision wants to represent the serratus and lower-trapezius contribution."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization and grip spread low-coefficient stabilizer credit across many leg, trunk and hand muscles (92 stabilizers). This is consistent with the table and a heavy standing hold, but it makes the stabilizer tail broad relative to this isolation exercise.",
+          "suggested_correction": "No change required. A future revision could consider whether the demand set should stay this broad."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "vertical_pull is a loose fit, because the shrug is a vertical lift of the shoulder girdle, not a pull toward the torso. It follows the source's force=pull label and is the closest available family.",
+          "suggested_correction": "Keep vertical_pull unless a more precise shoulder-girdle elevation family exists in the vocabulary."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011Cgpgcj1Pu761qztpdW3Tm",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 8880.0,
+          "output_tokens": 1284.0
+        }
+      },
+      "summary": "The definition is a standing bilateral barbell shrug with a pronated grip, straight arms and a bar hanging at the thighs, and the frames and instructions support this. Scapulothoracic elevation as the only primary action puts the descending trapezius (1.0) and levator scapulae (0.7) as primary movers and the rhomboids as 0.4 synergists. That is the expected pattern for a shrug. Bilateral laterality is correct, with no one-sided limbs needed. Open chain is defensible because the barbell is a free load. The grip, wrist_stability and postural_stabilization demands match a heavy bar held in the hands while standing upright. No biomechanically material claim is unsupported or contradicted, and the tracer output has no materially wrong muscle pattern."
+    }
+  }
+}

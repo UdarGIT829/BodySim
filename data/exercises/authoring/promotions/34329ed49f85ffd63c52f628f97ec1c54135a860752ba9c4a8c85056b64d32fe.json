@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "34329ed49f85ffd63c52f628f97ec1c54135a860752ba9c4a8c85056b64d32fe",
+  "revision_id": "Dumbbell_One-Arm_Triceps_Extension@34329ed49f85",
+  "exercise_id": "exercise.dumbbell_one_arm_triceps_extension.standing",
+  "source_catalog_id": "catalog.free_exercise_db.Dumbbell_One-Arm_Triceps_Extension",
+  "mapped_muscles": 90,
+  "promoted_at_unix": 1794185099.7823954,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "82e8399ba6bfe504a20d312ae302817a3274babea933db33d21ad0a4fa966ac4",
+    "data/exercises/engagement_profiles.json": "4534c8b3a1510d992454c9a7b78d765c23865256139d2e1d7f37f769c1153582",
+    "data/exercises/catalog/candidates.json": "96a8543e8edf19cc7ea803b8a2a5e980d4864c7189f89b07b28f9a79a00793b0",
+    "data/exercises/sources/free_exercise_db_media.json": "ac544d208a379f496d2d33072f88f7b60ceb55a23465ecdede28426d5c083f6d"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "341b450dde9f9ad01b449a8e08c35df5e1cfad1edcd9d082293c8cf0014c2366",
+    "data/exercises/engagement_profiles.json": "7915c0d9c7f9ded66a54faca6065ed21aa7dbb0f3389f03517001866117706de",
+    "data/exercises/catalog/candidates.json": "18abf6479769ec2471598751cf0b9d3e1409d9586f109b7046876b42e8a1ed2e",
+    "data/exercises/sources/free_exercise_db_media.json": "0ad1ce8995945b8b9c30d3b94daeca59dce5b04211b1cc76e5af33e2ff117146"
+  }
+}

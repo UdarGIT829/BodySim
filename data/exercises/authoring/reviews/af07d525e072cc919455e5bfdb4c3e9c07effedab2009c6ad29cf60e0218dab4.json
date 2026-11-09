@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "af07d525e072cc919455e5bfdb4c3e9c07effedab2009c6ad29cf60e0218dab4",
+  "status": "accepted",
+  "updated_at_unix": 1794183915.54259,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183902.64162,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[scapulothoracic_joint/elevation]",
+          "finding": "The shrug is marked primary, which makes the descending trapezius a primary mover at 1.0 and the levator scapulae primary at 0.7. The instructions describe the shrug as part of the third pull after peak extension, so it moves the bar less than the legs and hips. Primary is defensible because the shrug is explicitly cued, but assist would be a more conservative weighting.",
+          "suggested_correction": "Consider emphasis 'assist' for scapular elevation in a future revision if the trapezius should read as a secondary mover. This is not required for acceptance."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The spinal erectors appear only as stabilizers (longissimus 0.315, iliocostalis lumborum 0.28) through anti_flexion_spine, although they work strongly isometrically throughout the pull. This is consistent with the cue to keep the back angle unchanged, and listing lumbar extension would contradict that cue. It is a limitation of how the tracer represents isometric trunk work.",
+          "suggested_correction": "No change needed. Keep anti_flexion_spine and avoid adding lumbar_spine/extension."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands[grip]",
+          "finding": "The instructions say the hands relax in the front rack, so grip applies only to the pull phase. This is acknowledged in the assumptions and is acceptable for a whole-lift profile.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The families olympic_lift, squat and hip_hinge are acceptable catalog labels, and olympic_lift is the correct primary family. These labels do not affect the traced muscles.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQLfsaCbQZyuTCGtPmg",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 12214.0,
+          "output_tokens": 1600.0
+        }
+      },
+      "summary": "The definition is a bilateral barbell squat clean. Both frames fit it: the floor setup, and the extended, shrugged bar-at-hip position at the end of the second pull. Hip, knee and ankle extension carry the lift, with the scapular shrug and a light arm pull as the third-pull components. The resulting profile is plausible: glutes, quadriceps and hamstrings are primary, the traps and levator scapulae are credited through the shrug, and the calves, biceps and brachialis are synergists. The erectors, abdominals, grip and shoulder muscles are credited through stabilizer demands. No biomechanically material claim is unsupported or contradicted, so there are no blocking findings."
+    }
+  }
+}

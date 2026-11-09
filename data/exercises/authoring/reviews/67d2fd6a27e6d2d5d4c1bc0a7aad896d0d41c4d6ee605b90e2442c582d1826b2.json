@@ -1,0 +1,49 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "67d2fd6a27e6d2d5d4c1bc0a7aad896d0d41c4d6ee605b90e2442c582d1826b2",
+  "status": "accepted",
+  "updated_at_unix": 1794184961.14465,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184950.8447,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "A shoulder_position_hold or elbow_joint_integrity demand could be added for completeness, but the main movers already carry the load and the omission does not distort the muscle pattern.",
+          "suggested_correction": "Optional: leave as is, or add elbow_joint_integrity only if the catalog convention credits elbow compression in pressing."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRfwX4bZruW5bcBQePr",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9068.0,
+          "output_tokens": 1103.0
+        }
+      },
+      "summary": "The definition matches the source instructions and both frames: a bilateral flat dumbbell bench press with a neutral grip, performed supine on a bench. Elbow extension and glenohumeral horizontal adduction as primary actions give the right movers: pectoralis major (sternocostal 1.0, clavicular 0.8), all three triceps heads, and anterior deltoid, abdominal pec and coracobrachialis as synergists. Scapular protraction is correctly marked as an assist, so serratus anterior and pectoralis minor are only synergists. The grip, wrist_stability, humeral_head_stabilization and scapular_retraction_stability demands credit the loaded hands, the rotator cuff and the retracted shoulder blades pressed into the bench. Leaving out postural and core demands is reasonable because the torso is bench-supported. The labels open_chain, bilateral, horizontal_push and one_sided_limbs [] are all appropriate. No muscle pattern is materially wrong."
+    }
+  }
+}

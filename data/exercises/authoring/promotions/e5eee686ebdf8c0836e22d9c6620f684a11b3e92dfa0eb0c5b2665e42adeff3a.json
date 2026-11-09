@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "e5eee686ebdf8c0836e22d9c6620f684a11b3e92dfa0eb0c5b2665e42adeff3a",
+  "revision_id": "Advanced_Kettlebell_Windmill@e5eee686ebdf",
+  "exercise_id": "exercise.kettlebell_windmill.single_arm_overhead",
+  "source_catalog_id": "catalog.free_exercise_db.Advanced_Kettlebell_Windmill",
+  "mapped_muscles": 88,
+  "promoted_at_unix": 1794179034.0371969,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "d653622a1fe8c1e9f1c2b8d054e02fa52c6d7dd6236e18263ba008a14a8f4662",
+    "data/exercises/engagement_profiles.json": "2038f8dfab18cc41f7e969dc37bbcf6f5a516310e700fa864f066fe3235bfcb3",
+    "data/exercises/catalog/candidates.json": "9dd88b91852b3785d0864bdd9d900e7668305e99e1e97b0760789caa5ef7ae10",
+    "data/exercises/sources/free_exercise_db_media.json": "2a7a3fac2fcb1b7eb681361da5d9b30d40328624ccc2b9f1f734bcb6842a731a"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "98e25420a19379102e497b2056497f8b12f153eabd5ac79ac9682a6098c723e5",
+    "data/exercises/engagement_profiles.json": "48a5dccdacfd7b4b9f1a62a1a500e135b02eff5d354c0f0ef71a4bc29dd594bd",
+    "data/exercises/catalog/candidates.json": "5e5f473c78066d9026506cd0288fef2a04043b1634b6f399a2547e8481f2a6a5",
+    "data/exercises/sources/free_exercise_db_media.json": "4c62e28043eb8f131d810fc6ac2ac504c4f2b467e4a0774c9a87c759b69d4b66"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "7d249c27bdf11c75e19a5ca504ec0199ae549cf06cc21da32a4b80e05c05e1d9",
+  "status": "accepted",
+  "updated_at_unix": 1794179262.76244,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179251.58961,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "Descending trapezius and levator scapulae, which support a band resting on the upper trapezius and neck, are not engaged because scapular_retraction_stability does not reach them. scapular_stabilization would add the descending trapezius at 0.5. The omission is minor, and the current shelf modelling is defensible.",
+          "suggested_correction": "Optionally add scapular_stabilization in a future revision if a more complete shelf profile is wanted."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization brings in vastus muscles, gastrocnemius and rectus femoris as low-coefficient stabilizers. They are plausible for the slight fixed knee bend and the standing base, but they are broad and not specific evidence of what the frames show. They stay under 0.22, so the profile is not materially distorted.",
+          "suggested_correction": "No change needed. Keep postural_stabilization for the standing base."
+        },
+        {
+          "field_path": "engaged_muscles_by_role",
+          "finding": "Neck extensors, which resist the band tension at the neck, are not modelled, and the tracer cannot express light isometric neck loading. The load acts through the upper back, so this is a tracer limitation and not a definition error.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJRq7PnC2gVChUsqiVT",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 6346.0,
+          "output_tokens": 1287.0
+        }
+      },
+      "summary": "The definition matches the instructions and both frames: a standing bilateral hip hinge, with the band under both feet and looped behind the neck. Hip extension is the only primary action, and the spine stays neutral, so the erector spinae work isometrically through anti_flexion_spine and no lumbar action is listed. The tracer output follows from that: gluteus maximus and the hamstrings are primary, adductor magnus and gluteus medius are synergists, and the erectors, abdominal wall, soleus and quadriceps are low-coefficient stabilizers. The earlier grip problem is fixed. Grip is gone, the hand intrinsics are zero, and the band shelf is credited through scapular_retraction_stability, which gives the transverse trapezius and rhomboids. The labels (closed_chain, hip_hinge, bilateral) are appropriate."
+    }
+  }
+}

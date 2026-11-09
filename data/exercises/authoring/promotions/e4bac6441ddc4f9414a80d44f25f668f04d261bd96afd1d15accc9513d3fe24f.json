@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "e4bac6441ddc4f9414a80d44f25f668f04d261bd96afd1d15accc9513d3fe24f",
+  "revision_id": "Band_Assisted_Pull-Up@e4bac6441ddc",
+  "exercise_id": "exercise.band_assisted_pull_up.knee_in_band_pronated",
+  "source_catalog_id": "catalog.free_exercise_db.Band_Assisted_Pull-Up",
+  "mapped_muscles": 86,
+  "promoted_at_unix": 1794179250.6557307,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "1bcc2c1e0897865f12a412fe87eef803e147d062c764359f5087c059ad3e41c4",
+    "data/exercises/engagement_profiles.json": "d0192f1ce824121a6ab9f1f879d8100e728e64c26e2ec18680ec9e2826be2cda",
+    "data/exercises/catalog/candidates.json": "840a84dfe2d4b1520249767f9d4f5d711ee26544e6a0d750a6827970e9276498",
+    "data/exercises/sources/free_exercise_db_media.json": "d135c0a974b09b1a5bf3617d61db9d40bc05b22091969a0f296e99ddcdc217bc"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "f07d28058739c43dc7a0816b33a7fe370403c6de2cd27567d13f50188407fa67",
+    "data/exercises/engagement_profiles.json": "388039a6f9d904cddd65cac9c1af26774c3a0bb3f68a129372808e610a83d865",
+    "data/exercises/catalog/candidates.json": "0e14a56ebd82f95baed0b00e9cccd6b0e316e4e10dbcf8603b395b9eef4c3a46",
+    "data/exercises/sources/free_exercise_db_media.json": "c31ca3f8c10274d4d47a93d92bf632cb343f5d07aa8e722eec8bbb15b35314f7"
+  }
+}

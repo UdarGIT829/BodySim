@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "0d50e76ab00ff445550799cf563b9b08c6360da15b1e3d19687a34c4b12d2985",
+  "revision_id": "Cable_Deadlifts@0d50e76ab00f",
+  "exercise_id": "exercise.cable_deadlift.dual_handle_standing",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Deadlifts",
+  "mapped_muscles": 80,
+  "promoted_at_unix": 1794183296.4481256,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "f7ec5abf0688cbac425f4cb3be0abbb40254bcc020ef77cc0b18a0a089b8dc70",
+    "data/exercises/engagement_profiles.json": "1ba51b2a8bcfe2d95acc1c3520f377de6ffe0c6ddbc21910a7f2a58d55a9665a",
+    "data/exercises/catalog/candidates.json": "c5c9f6343fde74d8ef0f51c1afc5730adb2ba2b39b52528780e34c919e615301",
+    "data/exercises/sources/free_exercise_db_media.json": "aa5db8b0c6ef7a26650f7c87d93f4c0ccdc504df2bfba59931435c8c517bbc43"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "eb6aa287654347a9be1ede2e13fb0e1d3fc15eabc49102707d57853f920d756c",
+    "data/exercises/engagement_profiles.json": "7edc82186af097cb4ecaff042281817bc5afecd2ed9531174104a3b63447cc68",
+    "data/exercises/catalog/candidates.json": "0cace294092dd0a82272e7807769f68323d21a9c2e0861aeefa63a5d34847ee2",
+    "data/exercises/sources/free_exercise_db_media.json": "01e865817264e6f9282341a0989f7f9e03e8a2a845128267ba46398a014f5574"
+  }
+}

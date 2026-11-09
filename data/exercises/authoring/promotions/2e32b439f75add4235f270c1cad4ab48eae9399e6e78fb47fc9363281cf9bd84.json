@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "2e32b439f75add4235f270c1cad4ab48eae9399e6e78fb47fc9363281cf9bd84",
+  "revision_id": "Bent_Over_Two-Dumbbell_Row@2e32b439f75a",
+  "exercise_id": "exercise.bent_over_two_dumbbell_row.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Bent_Over_Two-Dumbbell_Row",
+  "mapped_muscles": 104,
+  "promoted_at_unix": 1794182926.7317042,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "2765dec6ec12c437dbf55bf8c5029f787f5e58aadcc92a451f7000541b802a61",
+    "data/exercises/engagement_profiles.json": "8c8c877bf74994424cd5ea8350e803b455240a1ecc6f90c855c44a92a0f95167",
+    "data/exercises/catalog/candidates.json": "46b9b8a281c68b7f89744ae4f2d6e2378d8dbddc92a24bfd12f52e6f8bf74a53",
+    "data/exercises/sources/free_exercise_db_media.json": "f16f08d043c335ad495c6489bcdf35425f35f2c8ebd989105dae3e25a6081efb"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "354cb43abd71b26a6287468f497d5eb41440ee93458cb4ab7cf77c5ac9628521",
+    "data/exercises/engagement_profiles.json": "ad1e899e6566b21009dd1509bc9cef38c3be4362e23d5ea7e67aa731277358bc",
+    "data/exercises/catalog/candidates.json": "caf432196739607b7875d083602e4106550bf7e7078354619e2de35600af6422",
+    "data/exercises/sources/free_exercise_db_media.json": "a546d25624e4c7d40f2c2fc1539630919df1cc41637b7c60bf9108c888dceb1b"
+  }
+}

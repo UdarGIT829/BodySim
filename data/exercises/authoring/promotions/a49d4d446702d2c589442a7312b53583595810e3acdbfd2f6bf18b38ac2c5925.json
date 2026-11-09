@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "a49d4d446702d2c589442a7312b53583595810e3acdbfd2f6bf18b38ac2c5925",
+  "revision_id": "Box_Squat_with_Chains@a49d4d446702",
+  "exercise_id": "exercise.box_squat.barbell_chains",
+  "source_catalog_id": "catalog.free_exercise_db.Box_Squat_with_Chains",
+  "mapped_muscles": 89,
+  "promoted_at_unix": 1794183189.6791005,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "7a74bff8554756ec74f4acf85f8b259558868000e1d1d0ade8eccbbef4c83a14",
+    "data/exercises/engagement_profiles.json": "28a97202253c89c5697f364fbca2ea956c216c8d697dd57265d1ea00a393a512",
+    "data/exercises/catalog/candidates.json": "baa9af2281d5a9a5f20e8cb75d7292d3841e842f0e0216b94d65743e544385a7",
+    "data/exercises/sources/free_exercise_db_media.json": "be6af5aad8a4f0591dd2e5e8534cbb8d44614639cbeba329790a2324f58a47fa"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "c211db485dde19a82e2345c41ef792ecd8f03f99c71dae5ce4b6bb083c06f0bb",
+    "data/exercises/engagement_profiles.json": "d7329898a262129bc1c14567bbc6c0771e029040c91fc0adcb1ecc28bf9ac9d0",
+    "data/exercises/catalog/candidates.json": "b907c77206785b1e135a41936d27c9d6a1c93673a99de264dcf51df43f388242",
+    "data/exercises/sources/free_exercise_db_media.json": "ec8caf39ba317900c7b1cb8b06583063b58c399889496232dafd5d547bd8709f"
+  }
+}

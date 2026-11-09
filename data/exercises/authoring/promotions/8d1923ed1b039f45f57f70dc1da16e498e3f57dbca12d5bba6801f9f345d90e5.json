@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "8d1923ed1b039f45f57f70dc1da16e498e3f57dbca12d5bba6801f9f345d90e5",
+  "revision_id": "Bench_Press_with_Chains@8d1923ed1b03",
+  "exercise_id": "exercise.barbell_bench_press.chains_flat",
+  "source_catalog_id": "catalog.free_exercise_db.Bench_Press_with_Chains",
+  "mapped_muscles": 105,
+  "promoted_at_unix": 1794182770.709432,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "4f5faba1db6fe207d03f1c1c9e366a412e76cd86e1078343abf895fd80c5e374",
+    "data/exercises/engagement_profiles.json": "8bc810afa2c9be73fb40ac1ba6fa77455cfbd8c5e641db9079676d2c8beeb14f",
+    "data/exercises/catalog/candidates.json": "3ec2194e6b83403ade0eb60b70a945cd968c3773bfdefad91d238deb8ae39eca",
+    "data/exercises/sources/free_exercise_db_media.json": "5e67b29a73e2b41fc42a39465c224be584d4d36de79c683571d03ccc35ea3502"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "b3f84937d568ea79cf8a69e9ff2bc56c74cf811c7125f03ed929a41cadceb412",
+    "data/exercises/engagement_profiles.json": "cc9772778eba3b78a93ec23334fa98a330d35241259520fca174a6527f826b58",
+    "data/exercises/catalog/candidates.json": "daab8688803560c30dfe5d4dbf9f7496718c666fd163ff2ba583ac90c6ea78ec",
+    "data/exercises/sources/free_exercise_db_media.json": "c606afc64e76c5ca6c4fcf71480f1aa3eb615d9984c20a1df8df87b898ba9fb1"
+  }
+}

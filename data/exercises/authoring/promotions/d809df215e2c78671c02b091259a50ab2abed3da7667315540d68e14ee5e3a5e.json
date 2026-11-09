@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "d809df215e2c78671c02b091259a50ab2abed3da7667315540d68e14ee5e3a5e",
+  "revision_id": "Cable_Incline_Triceps_Extension@d809df215e2c",
+  "exercise_id": "exercise.cable_incline_triceps_extension.incline_bench_straight_bar",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Incline_Triceps_Extension",
+  "mapped_muscles": 70,
+  "promoted_at_unix": 1794183357.4892476,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "7dfc9167fbcaf86ea370ce868ead646220c2a33085800688a13fb0031086aa0f",
+    "data/exercises/engagement_profiles.json": "30c68dcc66554d5b092a7094ff4e7c6bd539713d792296956aa6cbf037e359a2",
+    "data/exercises/catalog/candidates.json": "0cbf6d04188182068eca54947db3985ce27711faf78a5bc238c6d6dca4c67159",
+    "data/exercises/sources/free_exercise_db_media.json": "cf610279bc049c1a5ee41cebf8823f1a66c9ea57839581baf2d868b7ea4294cb"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "5d7959a3ef359b2f0d677cd2e05d112ce1656f981308d264192dada9b5e17c44",
+    "data/exercises/engagement_profiles.json": "43bee273d913e0fdf1894d129455a1a1abfc7ca3c1840b08260d9560c5543d3f",
+    "data/exercises/catalog/candidates.json": "2e52640115cecac6eecda44723226324953a2f2ff82e4c674d89be2c379d080a",
+    "data/exercises/sources/free_exercise_db_media.json": "7df4a82e78543fc8e13e7e41f2e0915779627c8aed39b6d0f3ce8471cbcb6f4f"
+  }
+}

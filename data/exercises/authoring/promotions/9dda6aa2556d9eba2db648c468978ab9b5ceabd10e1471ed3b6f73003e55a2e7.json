@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "9dda6aa2556d9eba2db648c468978ab9b5ceabd10e1471ed3b6f73003e55a2e7",
+  "revision_id": "Box_Jump_Multiple_Response@9dda6aa2556d",
+  "exercise_id": "exercise.box_jump.multiple_response",
+  "source_catalog_id": "catalog.free_exercise_db.Box_Jump_Multiple_Response",
+  "mapped_muscles": 80,
+  "promoted_at_unix": 1794183151.5751548,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "818bfcda5c8f782328a5d43f8a064831f944fa76d23f032ab9be6a8510f87bfa",
+    "data/exercises/engagement_profiles.json": "430f2b761bc1c894f080adc024c3e64132ffad6056c54c9f3ca1242f7209a351",
+    "data/exercises/catalog/candidates.json": "d3a207fa86441fb2cf046d86b60d92b090c645afe52eab0556e54190845f534a",
+    "data/exercises/sources/free_exercise_db_media.json": "041db2bf1319622f5a9a31b041d774f6e7458f26a13c1189e519fd0df380eaa8"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "2496030332bf288cacd7746a7ed5788b1f9b642871b2a8bafebe08fe8ca94ab3",
+    "data/exercises/engagement_profiles.json": "77360ab1b18b716b0afcf07ea6c092f2d0cb5fb230930e8ed6babd75e8648d5d",
+    "data/exercises/catalog/candidates.json": "7a3399ef9067600fe331233b5e66383d9fad2fa0815e58dbe7a197239ef4229c",
+    "data/exercises/sources/free_exercise_db_media.json": "761872dd6c1111acf841988ad1491c1336d943c8eb7a7ae4a3f988afaa5902f1"
+  }
+}

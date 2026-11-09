@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "9dda6aa2556d9eba2db648c468978ab9b5ceabd10e1471ed3b6f73003e55a2e7",
+  "status": "accepted",
+  "updated_at_unix": 1794183151.21896,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183138.73905,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[3]",
+          "finding": "The frames show the arms swinging back before takeoff and then forward and up. Only the forward shoulder flexion is modelled, and the backswing extension is omitted. As an assist-level contribution this is a reasonable simplification and does not materially change the profile.",
+          "suggested_correction": "Optionally add glenohumeral extension as assist only if the backswing is judged material. This is not required."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "The label closed_chain is debatable because both feet leave the ground in flight. It reflects the foot-on-ground drive and landing phases and is not plainly wrong. It is a catalog label and does not change the traced muscles.",
+          "suggested_correction": "Keep closed_chain, or consider open_chain only if the catalog convention treats flight phases that way."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "The rectus abdominis and hip flexors are not engaged. The deep trunk stabilizers appear only at low coefficients through anti_flexion_spine and postural_stabilization. This is a minor and acceptable pattern for a landing-dominated jump. The tracer reports concentric-phase actions only, so eccentric landing demand is represented only through the stabilization demands.",
+          "suggested_correction": "No change required. If landing demand needs more weight, consider adding anti_extension_spine or intra_abdominal_pressure in a future revision."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPNN1inDKxpazABETR7",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7227.0,
+          "output_tokens": 1488.0
+        }
+      },
+      "summary": "The definition fits the source. The frames and text show a bilateral two-foot jump onto a box with an arm swing, repeated for reps. Hip and knee extension as primary actions put the glutes, hamstrings and quadriceps in the primary tier. Calf plantarflexion is marked assist, consistent with how the guidance treats calves in squats and throws, so the calves register as synergists. The arm swing is modelled as assist-level shoulder flexion, which puts the anterior deltoid and clavicular pectoralis in a low synergist role. The stabilization demands cover landing control and an upright trunk. The resulting muscle pattern is biomechanically reasonable, and the labels (closed chain, jump_and_throw, bilateral, no one-sided limbs) are acceptable."
+    }
+  }
+}

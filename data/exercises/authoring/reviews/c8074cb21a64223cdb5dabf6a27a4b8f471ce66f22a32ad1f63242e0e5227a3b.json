@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c8074cb21a64223cdb5dabf6a27a4b8f471ce66f22a32ad1f63242e0e5227a3b",
+  "status": "accepted",
+  "updated_at_unix": 1794184314.14709,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184303.68488,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The trunk is not braced through anti_extension_spine or intra_abdominal_pressure, although heavy implements held far from the body can challenge the trunk. Postural_stabilization already covers the upright trunk and deep stabilizers, and the frames do not show a clear bracing demand, so this is an optional refinement.",
+          "suggested_correction": "Optionally consider adding anti_extension_spine if a future revision wants to credit the rectus abdominis and obliques."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The frames show slightly bent elbows and arms near or just below horizontal. The assumption of straight elbows is a reasonable simplification, and the abduction hold is the dominant demand.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQrEuVQRahZHMrDViLm",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10421.0,
+          "output_tokens": 1192.0
+        }
+      },
+      "summary": "The definition matches the source. Both frames show a standing bilateral setup with the implements held in the hands, then the arms raised out to the sides to about horizontal. The instructions describe a static hold for time. Glenohumeral abduction as the primary action makes the acromial deltoid and supraspinatus the primary movers, which is correct. Scapular upward rotation as an assist action credits serratus anterior and the trapezius as synergists without making them primary. Grip and wrist_stability fit a load held in the hands. glenohumeral_stabilization and scapular_stabilization fit the cuff and scapular control needed in a sustained abducted hold. postural_stabilization fits the upright stance. The labels (open_chain, shoulder_raise, bilateral, duration input) are reasonable, and no blocking problems were found."
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "71ce90c876c78b7d54b572b1b382a8fb2447e6fa8a89ccdfdc8bf6efea46cef3",
+  "status": "accepted",
+  "updated_at_unix": 1794184476.91676,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184463.86598,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The press phase brings the bar to the lower chest, where pectoralis major and anterior deltoid do real work. Marking horizontal adduction and flexion as assist keeps them as synergists, which is a defensible choice for a close-grip, triceps-dominant press. The table gives the abdominal head of pectoralis major a small coefficient (0.2) from horizontal adduction, a minor artifact of the table.",
+          "suggested_correction": "No change needed. A future revision could add glenohumeral extension at assist for the tucked-elbow lower-chest path, but this is not required."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "A rotator-cuff demand such as glenohumeral_stabilization is not listed, although the source mentions protecting the rotator cuff during the lift. This is optional and does not make the muscle pattern materially wrong.",
+          "suggested_correction": "Optionally add glenohumeral_stabilization or humeral_head_stabilization in a later revision."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The labels elbow_extension and horizontal_push are reasonable for a combined close-grip press and skull crusher. They are catalog labels only and do not change the traced muscles.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrR43L4MnXkUvKVuQNi1",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9306.0,
+          "output_tokens": 1623.0
+        }
+      },
+      "summary": "The definition fits the source. Each rep is a close-grip decline barbell press followed by a skull-crusher phase, and both phases are driven by bilateral elbow extension. The tracer output matches: the three triceps heads are the only primary movers, anconeus appears as a minor synergist, and the pectoralis major and anterior deltoid are synergists from the assisted glenohumeral actions. The bar is held in the hands and the upper arms are held still in the skull-crusher phase, so grip, wrist stability and shoulder position hold are credited correctly. The bench supports the trunk and legs, so no leg or postural demand is needed. Bilateral laterality with no one-sided limbs is correct for a two-handed barbell lift. The remaining points are minor."
+    }
+  }
+}

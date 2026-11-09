@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "67d2fd6a27e6d2d5d4c1bc0a7aad896d0d41c4d6ee605b90e2442c582d1826b2",
+  "revision_id": "Dumbbell_Bench_Press_with_Neutral_Grip@67d2fd6a27e6",
+  "exercise_id": "exercise.dumbbell_bench_press.neutral_grip_flat",
+  "source_catalog_id": "catalog.free_exercise_db.Dumbbell_Bench_Press_with_Neutral_Grip",
+  "mapped_muscles": 94,
+  "promoted_at_unix": 1794184961.820688,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "e0c98a4747dea33eb42a98f8691dd4a4a3058255ecc5503b2fb042e3e5e200c7",
+    "data/exercises/engagement_profiles.json": "578c3b92638294d92afb4230bfe54637882a442d351b2766e721f6abee4f62b1",
+    "data/exercises/catalog/candidates.json": "9dc33979dbccb5e2a26c4e32c7f7ca88bfbe7677ae4bb17f2720ca8532cac9f7",
+    "data/exercises/sources/free_exercise_db_media.json": "1e7f8c75ec5161e5fd7ef60bdb0002dcf3eac978bd7d74f8a31722a93a75ef7d"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "02c21dd1e22ce5524bb982e294353ffee159918c2f43e3566739fa1538219453",
+    "data/exercises/engagement_profiles.json": "33e23ed7fcb4dd22361f0ed9f17c58a85b761984969232e3fa786db706358b15",
+    "data/exercises/catalog/candidates.json": "6259d1a9845b7316492df650b2488d3b4ecc78cecaad529b942324e19ba173ab",
+    "data/exercises/sources/free_exercise_db_media.json": "bcfd2bc847ab2e43229a08e5c3888d511b17e01b54cd6e03895e16ab21decd5d"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "04ee501938c433cb3b6a9b78377e42750bbdf65f5ca12a6937cc13d1fcdda81d",
+  "status": "accepted",
+  "updated_at_unix": 1794184491.38224,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184480.59687,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "No stabilization demands are listed, so transversus abdominis and the isometric hip flexors anchoring the pelvis against the secured feet have zero involvement. The cue to press the lower back into the bench and exhale suggests some deep-core activity. It is light, not heavy bracing, so omitting intra_abdominal_pressure is defensible.",
+          "suggested_correction": "Optionally add a low-weight demand such as intra_abdominal_pressure if future authors want transversus abdominis represented. This is not required for acceptance."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "open_chain is a catalog label. The feet are fixed under pads, but the moving segment (the trunk) is not loaded against a fixed distal contact in the usual sense. The label is arguable either way and does not change the traced muscles.",
+          "suggested_correction": "Keep open_chain, or consider closed_chain only if the catalog convention treats secured feet as fixed distal segments."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrR5HJDzJEBohdw6jae8",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 3387.0,
+          "output_tokens": 1110.0
+        }
+      },
+      "summary": "The definition matches the source: a bilateral bodyweight decline crunch with feet secured under the pads, a short trunk curl of about four inches, and the lower back kept on the bench. Lumbar flexion as the only primary action gives rectus abdominis as primary, both obliques as synergists, and a small psoas contribution. That is a sound profile for an abdominal isolation movement. The frames show the legs fixed and the shoulders lifting only slightly. The hands rest beside the head without load, so omitting grip and wrist demands is correct. No biomechanically material claim is unsupported or contradicted."
+    }
+  }
+}

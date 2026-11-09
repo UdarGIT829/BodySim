@@ -1,0 +1,57 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "2428188b3831329fbb64f1ebf3ad8bf2a5445839cda99ec5df77b632fbf07d25",
+  "status": "accepted",
+  "updated_at_unix": 1794105291.50107,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105276.43954,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "The quadriceps work isometrically to hold the knee angle under load, but they appear only as small stabilizers (vastus lateralis 0.105, vastus medialis 0.14, no vastus intermedius or rectus femoris) through knee_joint_stability. This is acceptable given the weak table mapping for isometric knee work, but it slightly understates quadriceps involvement.",
+          "suggested_correction": "Optionally add patellar_tracking, or an assist-emphasis knee_joint/extension, if the authors want fuller isometric quadriceps representation."
+        },
+        {
+          "field_path": "kinematic_profile.primary_joint_actions",
+          "finding": "Hamstrings score as primary movers (0.7) only because the table gives them the same hip-extension weight whatever the knee angle. With the knees flexed near 90 degrees their real contribution is likely lower than that of the glutes. This follows from the tracer's table rather than from a definition choice.",
+          "suggested_correction": "No change is required."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "Hip abductor and external-rotator control, such as femoral_head_stabilization, is not claimed. Gluteus medius appears only as a 0.2 synergist, and the minimus and deep rotators are absent. This omission is minor for a bilateral bridge.",
+          "suggested_correction": "Optionally add femoral_head_stabilization if deeper hip-centring work is wanted."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgQo5PSBzm1XALjiAv6",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 5096.0,
+          "output_tokens": 1787.0
+        }
+      },
+      "summary": "The definition is supported by the instructions and both frames. A loaded barbell sits across the hips of a supine lifter whose upper back and heels are on the floor. The hips extend vertically with the knees held roughly fixed, which matches bilateral hip_joint/extension as the only primary joint action. Closed_chain, bilateral laterality and the hip_hinge family are defensible. The stabilization demands are plausible: anti_extension_spine and pelvic_alignment cover the trunk resisting lumbar hyperextension and posterior pelvic tilt at lockout, and knee_joint_stability covers the fixed knee angle and frontal-plane control. The tracer output is a sensible pattern, with gluteus maximus at 1.0, hamstrings at 0.7, adductor magnus and gluteus medius as synergists, and low-level trunk and knee stabilizers. No materially wrong muscle is exposed."
+    }
+  }
+}

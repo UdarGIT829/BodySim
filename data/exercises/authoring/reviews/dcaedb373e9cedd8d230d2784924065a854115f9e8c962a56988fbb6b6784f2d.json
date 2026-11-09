@@ -1,0 +1,57 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "dcaedb373e9cedd8d230d2784924065a854115f9e8c962a56988fbb6b6784f2d",
+  "status": "accepted",
+  "updated_at_unix": 1794104930.24676,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794104914.9905,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "The isometric hip hinge is represented only through postural_stabilization and anti_flexion_spine. Hamstrings (about 0.14) and glutes (about 0.28) are therefore low stabilizers, although they hold the hinge throughout the set. This is not clearly wrong, and the overall pattern is acceptable.",
+          "suggested_correction": "A future revision could add pelvic_alignment to raise the hamstring and glute hinge-hold contribution if desired."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist (sternocostal_head_of_pectoralis_major, abdominal_part_of_pectoralis_major)",
+          "finding": "Pectoralis major appears as a synergist (0.5 and 0.4) because it has table weight under glenohumeral extension. It is not a meaningful row mover. This arises from the tracer table rather than from a flaw in the definition's choices.",
+          "suggested_correction": "No change is needed. The table weight is a tracer limitation."
+        },
+        {
+          "field_path": "kinematic_profile.primary_joint_actions",
+          "finding": "The definition omits shoulder-girdle or rotator-cuff stabilization (infraspinatus, teres minor) and shoulder-position holding for the resting-arm kettlebell. These are minor omissions that do not distort the main profile.",
+          "suggested_correction": "Optionally add glenohumeral_stabilization for rotator cuff involvement."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpfxC7iKAaaUXcxHn1G1",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 12174.0,
+          "cache_read_input_tokens": 0.0,
+          "input_tokens": 10945.0,
+          "output_tokens": 1795.0
+        }
+      },
+      "summary": "The definition is supported by the instructions and both frames. The frames show a hip-hinged bent-over stance with a kettlebell in each hand, one pulled to the ribs while the other hangs near the floor. Elbow flexion, glenohumeral extension and scapular retraction capture the horizontal pull. The grip, wrist, anti-flexion, anti-rotation and postural demands put the hold and hinge load where it actually sits. The tracer output is plausible: brachialis, biceps, brachioradialis, lats, teres major, rhomboids, middle trapezius and posterior deltoid are primary, with erectors, obliques, transversus abdominis, forearm and grip muscles and posterior-chain holders as stabilizers. Bilateral laterality is reasonable because both arms work across a set. Open chain is reasonable because the working kettlebell is free of the floor. The weaknesses are minor."
+    }
+  }
+}

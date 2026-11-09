@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "f214078f3bdc7974419a3a6e5442c5dbe7ade3d252666ef7f90eab0835d8892a",
+  "revision_id": "Dumbbell_Alternate_Bicep_Curl@f214078f3bdc",
+  "exercise_id": "exercise.dumbbell_alternate_bicep_curl.standing_alternating",
+  "source_catalog_id": "catalog.free_exercise_db.Dumbbell_Alternate_Bicep_Curl",
+  "mapped_muscles": 116,
+  "promoted_at_unix": 1794184933.1394002,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "844c89f53a025a0d37a3435f725d5001205d24f352993323c0350dfa1b60dc7d",
+    "data/exercises/engagement_profiles.json": "af3cf83fad5e739ccd98abd16ae9ca3dfbc6cc51f86b2b956fc23092f0d4be44",
+    "data/exercises/catalog/candidates.json": "3f76d967736e230c5e7cf28e817067bd95dec71e9ca66647450ea333d74a2bb1",
+    "data/exercises/sources/free_exercise_db_media.json": "607c713d0d4a1ca2087bfde856645fbe684e540d0548761d730f965089cd757a"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "266133bac68e825667ee7b7c91b90fbdb3e3b9d84efb9d47f6ba790e9a624278",
+    "data/exercises/engagement_profiles.json": "f74143cb844dc2470cf6db314ef38373061968d594bc3ff1298bf3ab5e8a23ef",
+    "data/exercises/catalog/candidates.json": "6b876535feba27df79846a179137a1a9350a58097781ab859e0a3de485ce8a89",
+    "data/exercises/sources/free_exercise_db_media.json": "8930e499d9f9fc5ab5cdc120b11a64f140a651525fe4e87abc493de0657427fd"
+  }
+}

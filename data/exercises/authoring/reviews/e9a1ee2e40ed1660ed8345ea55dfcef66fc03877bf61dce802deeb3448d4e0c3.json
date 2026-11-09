@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "e9a1ee2e40ed1660ed8345ea55dfcef66fc03877bf61dce802deeb3448d4e0c3",
+  "status": "accepted",
+  "updated_at_unix": 1794183866.29225,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183853.22855,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands[postural_stabilization]",
+          "finding": "This is the nearest demand for the kneeling trunk and hip hold. It also credits soleus and gastrocnemius at low stabilizer coefficients, although the shins rest on the pad and the calves do little. The tracer has no kneeling-specific demand, so no choice of actions or demands avoids this.",
+          "suggested_correction": "None required. The calf stabilizer values are low and acceptable."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands[wrist_stability]",
+          "finding": "The ball is released, and the wrist briefly snaps at release. Wrist stability reasonably credits the co-contraction that holds the wrist against the ball while pushing, but it is a modest simplification.",
+          "suggested_correction": "Optional: keep as is. Wrist flexion as an assist is not clearly supported by the frames."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[hip_joint/extension]",
+          "finding": "The forward fall and catch in the second frame is follow-through. The assumptions say it is not modelled, which is reasonable. The hamstrings are credited as primary hip extensors through the tracer table, though they probably contribute less than the glutes with the knees bent.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQH2hMRXd5x1CqtESRM",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9324.0,
+          "output_tokens": 1526.0
+        }
+      },
+      "summary": "The definition fits a bilateral kneeling medicine-ball chest pass. Explosive hip extension and a two-arm chest push drive the ball. Hip extension, glenohumeral horizontal adduction and elbow extension are primary, with scapular protraction as an assist. The pectoralis major, anterior deltoid and triceps come out as movers, the glutes and hamstrings as hip drivers, and the trunk as an anti-extension stabilizer. Both frames support a kneeling stance on a pad with the ball released from the chest. Grip is correctly omitted because the ball is pushed from the palms, and the knee is correctly omitted because it stays bent. The remaining concerns are minor and non-blocking."
+    }
+  }
+}

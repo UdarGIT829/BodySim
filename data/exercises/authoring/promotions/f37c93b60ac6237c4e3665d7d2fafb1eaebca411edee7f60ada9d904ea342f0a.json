@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "f37c93b60ac6237c4e3665d7d2fafb1eaebca411edee7f60ada9d904ea342f0a",
+  "revision_id": "Cross-Body_Crunch@f37c93b60ac6",
+  "exercise_id": "exercise.cross_body_crunch.alternating",
+  "source_catalog_id": "catalog.free_exercise_db.Cross-Body_Crunch",
+  "mapped_muscles": 56,
+  "promoted_at_unix": 1794184271.3561094,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "8e11c6fd749d4060371c4555d897ad248cf7baf78e453017635f2762deb996e9",
+    "data/exercises/engagement_profiles.json": "5df8999932ad2abb373afe397dc6c4f28b2639d2001ae2fb9eb674cf04016d0e",
+    "data/exercises/catalog/candidates.json": "d2036f5fbf442f2b35c9791afc6710b9085e2f6eec75308a5d55a57f93c97071",
+    "data/exercises/sources/free_exercise_db_media.json": "8faa6929ef39e73fc919e7ca21fe89fd3f1e14711fb960c488017685ed222d00"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "249a57a1f944744f46e63455fcbe5c5fc098ca2863d60b3c0a30e17659896252",
+    "data/exercises/engagement_profiles.json": "f7265bf32ce5e2ca16e1c574207d0d48e450ce28341dbcb45cc07a94122f81da",
+    "data/exercises/catalog/candidates.json": "bc9a745826c10a756168e96dcb2fde415a976cec184e3c40b43f38b3be8ece59",
+    "data/exercises/sources/free_exercise_db_media.json": "e9cf4ba3872eab9ffdb6a83a3ff70e972d2cb2b51bd7f46d48bd105e97eae8a5"
+  }
+}

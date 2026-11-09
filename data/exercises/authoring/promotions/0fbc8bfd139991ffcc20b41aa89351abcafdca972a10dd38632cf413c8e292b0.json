@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "0fbc8bfd139991ffcc20b41aa89351abcafdca972a10dd38632cf413c8e292b0",
+  "revision_id": "Dips_-_Chest_Version@0fbc8bfd1399",
+  "exercise_id": "exercise.chest_dip.parallel_bars",
+  "source_catalog_id": "catalog.free_exercise_db.Dips_-_Chest_Version",
+  "mapped_muscles": 96,
+  "promoted_at_unix": 1794184675.0967264,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "d85f2b7f2d0ae35159878f043df08f7baac0774beb08968729f50dcbd11cff86",
+    "data/exercises/engagement_profiles.json": "db64bf5ca5b7e217fb7c6332db34c30a2508b81f5c2155b45529f05a0921cc78",
+    "data/exercises/catalog/candidates.json": "ec8717406928281228a833929488eba5758877ef7c2fa255189513025bbea732",
+    "data/exercises/sources/free_exercise_db_media.json": "f272ce8008a340a54a6a08362f38f579fe238a1204b571fc2df5893d8312491f"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "1f1b0f72451f57b4e8c58a98f7d47cfebbe119ed247308d50831bd29a8ba93bd",
+    "data/exercises/engagement_profiles.json": "fc5edf043aefdfd5709b6c8f284b94f39b5843dfd1634bf0bcc9b692d53bc088",
+    "data/exercises/catalog/candidates.json": "b48e9f0b4fb5ba0424c717a3edb1ea86f4a3a7a3793a8b4d52b99e6053313a40",
+    "data/exercises/sources/free_exercise_db_media.json": "09be3f272c06cd097be072a403ca770292322c38ab2c6270d5892f111fd16e87"
+  }
+}

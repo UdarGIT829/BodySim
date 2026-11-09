@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "8ae6500a91a06d0f6f6eeeba2384154db89d5f07fd31c8495ddb397fe20ea4f3",
+  "revision_id": "Close-Grip_EZ-Bar_Curl_with_Band@8ae6500a91a0",
+  "exercise_id": "exercise.ez_bar_curl.close_grip_band",
+  "source_catalog_id": "catalog.free_exercise_db.Close-Grip_EZ-Bar_Curl_with_Band",
+  "mapped_muscles": 114,
+  "promoted_at_unix": 1794184134.8352962,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "b0e470ce5fe62582e5f60c8d9eb7173d3e1330f5eb34ab9471259b64f50820cb",
+    "data/exercises/engagement_profiles.json": "d1ff8d0eef5d4f5445129685a4c76b934eb4eccfb7b1bb367c41a61da6a671c1",
+    "data/exercises/catalog/candidates.json": "b6c59eb45900cd326eb5a422d84350400157bbc9605f79fbe87015d4aff63060",
+    "data/exercises/sources/free_exercise_db_media.json": "3e3033fe34cc82a9b8616f2f8369407ec610e3a27f1c99ae40a6bd2a6cd2ac91"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "81ab20f2e3dc3c8a4fa7e1155fa5c192f3fea7bfc4e3599a85867abdb4d52c3b",
+    "data/exercises/engagement_profiles.json": "0500c76960b1fe8841a8a89ea0d0aae79f2a90d88641b63387edcd0e67d73c9c",
+    "data/exercises/catalog/candidates.json": "1068e0fad0d585086b745a127fb1d8232d91c8dde5d89dd867b4e596f875499f",
+    "data/exercises/sources/free_exercise_db_media.json": "413b9a21c93fa35e0445c2b968980a3451c423b9ea5027b27c3faabd84ac2ecd"
+  }
+}

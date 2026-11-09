@@ -1,0 +1,63 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "739f13aaae64a123a97fee407d2ce1f4fab28d82dfd8ca66828b20c879dd6469",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105147.39919,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105125.23924,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions[scapulothoracic_joint/downward_rotation]",
+          "finding": "Downward rotation is a minor scapular motion that accompanies the pull. It is not a load-driving action, yet it is counted at full weight. This promotes levator_scapulae (0.7) and rhomboid_major (0.8) to primary movers. Levator scapulae is not a primary mover in a band-assisted pull-up, so the tracer profile is materially distorted.",
+          "suggested_correction": "Mark scapulothoracic_joint/downward_rotation as emphasis \"assist\" so rhomboid_major and levator_scapulae become synergists (about 0.32 and 0.28). Keep glenohumeral adduction/extension, elbow flexion and scapular depression as the primary actions."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions[glenohumeral_joint/adduction]",
+          "finding": "With adduction at full weight, both pectoralis major heads (sternocostal 0.8, abdominal 0.7) are primary movers. This probably overstates the pecs in a lat-dominant vertical pull. Marking adduction as an assist would drop them to synergists, while the lats and teres major stay primary through extension.",
+          "suggested_correction": "Consider glenohumeral adduction as an assist and extension as the primary action, so the pecs read as synergists."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "No humeral-head or glenohumeral stabilization demand is listed. The rotator cuff (infraspinatus, supraspinatus) is therefore at zero, although it works to centre the humerus when hanging and pulling.",
+          "suggested_correction": "Consider adding humeral_head_stabilization (or glenohumeral_stabilization) to cover the rotator cuff."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The trunk has no demand, so the abdominals and spinal stabilizers are zero. The source says to avoid swinging, which implies modest trunk control while hanging. Treating this as light bracing rather than heavy intra-abdominal pressure is reasonable.",
+          "suggested_correction": "Optionally add a light trunk demand such as anti_extension_spine or pelvic_alignment, if the authors judge the frames support it."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgDeg47drDoVTFekvcu",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 8591.0,
+          "output_tokens": 2803.0
+        }
+      },
+      "summary": "The identity, bilateral laterality, vertical-pull family, pronated wide grip, closed-chain type, and the elbow flexion, shoulder adduction/extension, scapular depression, grip and wrist demands are supported by the instructions and frames. The frames show an overhand grip on a fixed bar, a band loop under one bent knee, and a chin-over-bar pull. The definition lists scapulothoracic downward_rotation at full weight. That makes levator_scapulae (0.7) and rhomboid_major (0.8) primary movers, which overstates a minor scapular motion in a lat-driven pull-up. A better definition would mark that action as an assist."
+    }
+  }
+}

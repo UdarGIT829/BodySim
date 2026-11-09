@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "7f7555a0d93f46473c713c8d1f413750563221fd7efdf38f02b36b5529dd0b5c",
+  "revision_id": "Decline_Barbell_Bench_Press@7f7555a0d93f",
+  "exercise_id": "exercise.barbell_bench_press.decline_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Decline_Barbell_Bench_Press",
+  "mapped_muscles": 90,
+  "promoted_at_unix": 1794184461.098446,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "482f7fd1c3cf444bf0b58d93cce3bbb48d50b599de067e09717c63123c103127",
+    "data/exercises/engagement_profiles.json": "472bf6b5f80dd134af2c411904108545a0fb7aca021451826375d7285684ce8c",
+    "data/exercises/catalog/candidates.json": "c217dbdbc85d4ae45d059c1d148c6fa9f5480d22fcccd341badb62b2d14f243e",
+    "data/exercises/sources/free_exercise_db_media.json": "2e58c384cd1b79e2b50a982ef93cb9e0ce378d51fa87db7adfc8e8d0852bf572"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "27007f35071adfb5ad83699a15a606417708a0656ba3e16cc1249caf06226ca8",
+    "data/exercises/engagement_profiles.json": "245b6526fb8d86b16074cd160e0c0692af45e26965037ec37825f3571fee24f2",
+    "data/exercises/catalog/candidates.json": "b88c7b69f981cc4478c562b708498088dc034db9291311b60c89fdd3aa3c57e8",
+    "data/exercises/sources/free_exercise_db_media.json": "3aa9a49547cd8421146e169e05cc875c9a2c74ddd3c2e243b01d27ea868049a3"
+  }
+}

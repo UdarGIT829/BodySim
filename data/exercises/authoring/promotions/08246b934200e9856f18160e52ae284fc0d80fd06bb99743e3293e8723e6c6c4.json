@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "08246b934200e9856f18160e52ae284fc0d80fd06bb99743e3293e8723e6c6c4",
+  "revision_id": "Conans_Wheel@08246b934200",
+  "exercise_id": "exercise.conans_wheel.zurcher_hold_carry",
+  "source_catalog_id": "catalog.free_exercise_db.Conans_Wheel",
+  "mapped_muscles": 102,
+  "promoted_at_unix": 1794184241.8251321,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "56a21f1d61feeaac9f15cce4ed702e4f58e02411d23d722fc21b8726d37cd29f",
+    "data/exercises/engagement_profiles.json": "173e8346a50687d0c48f72d12918cfeaabf5b34a7eb9445ae13bee6ff12b63e1",
+    "data/exercises/catalog/candidates.json": "4c496c2fe94cacad666e8dd073e2f99eb05e30d4260d9c2247c2468ceefc7bf5",
+    "data/exercises/sources/free_exercise_db_media.json": "37eb1cc2ec38eb53d2cd21f552f1f89d410c0255073e84cc64c11ebc1166d773"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "168b3fe60072eed9d1a01bc260e57450aad3e53817b2372ea9ebd5f2749651ed",
+    "data/exercises/engagement_profiles.json": "b81cb53039c7b549be1fb4032f3bc9be0101a4b0bad9abf5657837fabb84428e",
+    "data/exercises/catalog/candidates.json": "a6b22300a65cf6b96f584df569d24423e77fb0b5a17d278dae9b972a8c920f9d",
+    "data/exercises/sources/free_exercise_db_media.json": "d5e7d0b77811d9527d231a71a462bf4693bda746e745dd395232475c9bb1406b"
+  }
+}

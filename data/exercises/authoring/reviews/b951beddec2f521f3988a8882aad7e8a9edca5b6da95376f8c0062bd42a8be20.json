@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "b951beddec2f521f3988a8882aad7e8a9edca5b6da95376f8c0062bd42a8be20",
+  "status": "accepted",
+  "updated_at_unix": 1794182990.88285,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182979.45859,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The quadriceps hold the knees straight in the toe-supported plank, but only vastus lateralis and rectus_femoris would appear through postural or hip demands. They are currently explicit zeros. This is minor and does not change the muscle pattern that matters for this exercise.",
+          "suggested_correction": "Optionally consider anti_extension_hip or postural_stabilization to credit lower-body isometric support in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "wrist_stability only applies once the hands are loaded at the top of the movement. This does not matter for a bodyweight press-up.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPAd1n4wrauweamZHTV",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7513.0,
+          "output_tokens": 1338.0
+        }
+      },
+      "summary": "The frozen definition fits the source. Frame 1 shows the forearms on the floor with the torso rigid. Frame 2 shows the arms extended with the hands on the floor. Elbow extension is the only joint that moves under load, so a single primary elbow_joint/extension action is right. All three triceps heads come out as primary movers and anconeus as a synergist. The shoulder angle stays roughly constant between the two positions, so shoulder_position_hold is a better fit than a listed shoulder action. The trunk stays rigid, so anti_extension_spine and pelvic_alignment are the correct way to credit the core. The hips and hamstrings also appear as stabilizers. Bilateral laterality, closed_chain and the movement-family labels are all appropriate."
+    }
+  }
+}

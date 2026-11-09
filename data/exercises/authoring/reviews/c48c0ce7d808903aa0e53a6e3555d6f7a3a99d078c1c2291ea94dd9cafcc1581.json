@@ -1,0 +1,68 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c48c0ce7d808903aa0e53a6e3555d6f7a3a99d078c1c2291ea94dd9cafcc1581",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105506.80242,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105492.36309,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions[ankle_joint/plantarflexion].emphasis",
+          "finding": "Ankle plantarflexion is described in the assumptions as a minor contributor, but it is authored at full primary emphasis. The tracer therefore makes soleus (1.0) and both gastrocnemius heads (0.8 and 0.7) primary movers. In a box squat the ankle moves little and the calves contribute far less than the quadriceps and glutes. This is a materially wrong muscle pattern.",
+          "suggested_correction": "Mark ankle_joint/plantarflexion with emphasis \"assist\" so the calves become synergists. Keep knee extension and hip extension as primary."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands[grip]",
+          "finding": "The load rests on the upper back (the frames show the bar across the rear shoulders) and the hands only steady it. Grip is for loads held in the hands. It engages 32 muscles in the hand and forearm, including flexor digitorum profundus at 0.35, which overstates their role.",
+          "suggested_correction": "Remove grip. The bar shelf is already covered by scapular_retraction_stability."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands[wrist_stability]",
+          "finding": "Wrist stability is for loads held in the hands. With a back-squat bar position, the wrist flexors and extensors are not meaningfully loaded, yet the tracer engages 18 forearm muscles as stabilizers, for example extensor carpi radialis brevis at 0.28.",
+          "suggested_correction": "Remove wrist_stability."
+        },
+        {
+          "field_path": "authoring_response.assumptions[3]",
+          "finding": "The assumption that holding the bar with both hands requires grip and wrist stability is not supported for a bar carried on the back. It is the stated reason for the unsupported demands above.",
+          "suggested_correction": "Revise the assumption to say the bar is supported on the upper back shelf, with the hands only steadying it, and that scapular retraction stability is the relevant demand."
+        }
+      ],
+      "confidence": "high",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The pelvic-floor muscles and pyramidalis appear at tiny coefficients (0.035 to 0.14) through intra_abdominal_pressure. This comes from how the tracer maps the demand and is acceptable. Optionally, femoral_head_stabilization or pelvic_leveling_frontal could add hip-stabilizer involvement, but this is not required.",
+          "suggested_correction": "No change required. Consider femoral_head_stabilization only if hip-centering demand is judged material."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpggiVFLusvgVJML7zet",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 11722.0,
+          "output_tokens": 1752.0
+        }
+      },
+      "summary": "Identity, laterality (bilateral), closed chain, squat family, and knee and hip extension as primary actions are supported by the instructions and frames. Two things in the tracer output are materially wrong. The calves are driven as primary movers, and forearm and hand muscles are engaged by grip and wrist_stability demands for a bar that rests on the upper back."
+    }
+  }
+}

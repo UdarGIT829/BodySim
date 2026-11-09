@@ -1,0 +1,70 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "99d95fbe8a97d998eede950fe370a2152b815cdf478f1212b96b64df99800d22",
+  "status": "changes_requested",
+  "updated_at_unix": 1794183999.91072,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183980.45895,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The jerk ends with a heavy barbell locked out overhead on the split-stance catch, and the instructions say to receive the bar with the arms locked out overhead. No demand reaches the rotator cuff, so supraspinatus, infraspinatus, subscapularis and teres minor are explicit zeros in the traced output. These muscles are heavily loaded centring the humeral head under the overhead bar, so this is a materially wrong muscle pattern.",
+          "suggested_correction": "Add the glenohumeral_stabilization demand so the rotator cuff is credited as stabilizers."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "The spinal erectors (longissimus, iliocostalis, multifidus) are only stabilizers at about 0.25-0.32 although they are heavily loaded in the pulls. This comes from how the tracer scores anti_flexion_spine, and the instructions say to hold the back angle, so listing lumbar extension would be wrong.",
+          "suggested_correction": "No change needed; this is a tracer limitation."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The split-stance catch of the jerk (front-leg and back-leg asymmetry) is not modeled, and neither frame shows the jerk. The bilateral treatment is a reasonable simplification and is stated in the assumptions.",
+          "suggested_correction": "Optional: note the limitation; no edit required."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The labels olympic_lift, squat and vertical_push are acceptable for this catalog entry. They are labels only and do not change the traced muscles.",
+          "suggested_correction": "None."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "demand": "glenohumeral_stabilization",
+          "op": "add_stabilization_demand"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQSQosdAiKe6MRYjkgp",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 15012.0,
+          "output_tokens": 2460.0
+        }
+      },
+      "summary": "The clean and rack position match frames 1 and 2 and the instructions, and the main drivers are credited correctly: hip, knee and elbow extension, shoulder flexion and the shrug. The overhead lockout of the jerk, a heavy barbell held overhead, never credits the rotator cuff. Infraspinatus, supraspinatus, subscapularis and teres minor are all explicit zeros, which is a materially wrong muscle pattern. A single added demand fixes it."
+    }
+  }
+}

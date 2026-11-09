@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "d3153add0c66cfa56868a2ff504b8221905c7f4c691cae4be609712b6d2d2a2f",
+  "revision_id": "Cable_Rear_Delt_Fly@d3153add0c66",
+  "exercise_id": "exercise.cable_rear_delt_fly.standing_crossed_high_pulley",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Rear_Delt_Fly",
+  "mapped_muscles": 116,
+  "promoted_at_unix": 1794183449.1545963,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "f38c5cd549712dcd0d8127add4b79025f5d1283469954de64c450ee10230d5fd",
+    "data/exercises/engagement_profiles.json": "8fc57275677e4f72762b8633f333c5211e473544f233e7fb34be96dcc909f19f",
+    "data/exercises/catalog/candidates.json": "215e8d9b2695c2d3a33d7d1d4d796df4bdde8093caae3ed93acfd6b6d388b057",
+    "data/exercises/sources/free_exercise_db_media.json": "7f33a7578998165cd16338fa20784898093755979e93dcebccd57d72901f4cf3"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "6feadcf614b5cbff17df1a32ad756d985357f7b238a769e7c7af0aef5f45ac09",
+    "data/exercises/engagement_profiles.json": "b9bf089ef31cb191a589e88db5898ac0bdee62347b6a8923f6f50647d2ca67d6",
+    "data/exercises/catalog/candidates.json": "1dee2093629d1ca0ceb33a2bec10384aefd4e801589b574b0186bc7bbc235604",
+    "data/exercises/sources/free_exercise_db_media.json": "349d83ffc1efa56765bc70aed46c4086d11292d7c1c5182a946be7010162bc13"
+  }
+}

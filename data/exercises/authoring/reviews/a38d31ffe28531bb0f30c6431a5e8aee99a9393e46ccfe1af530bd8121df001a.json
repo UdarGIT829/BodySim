@@ -1,0 +1,49 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "a38d31ffe28531bb0f30c6431a5e8aee99a9393e46ccfe1af530bd8121df001a",
+  "status": "accepted",
+  "updated_at_unix": 1794183397.58783,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183389.1532,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The frames show the upper arm held roughly vertical against a cable pulling from behind the head. Latissimus dorsi or teres major isometric work is plausible but minor. The tracer output is not materially wrong without it, and the definition's chosen demands cover the main shoulder-hold work through the anterior deltoid.",
+          "suggested_correction": "No change required. Optionally consider whether a small assisted shoulder-extension or humeral-head demand is wanted in a future revision."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPgpc8GnsGUPRu27e1d",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7319.0,
+          "output_tokens": 913.0
+        }
+      },
+      "summary": "The definition matches the source instructions and frames. A lying cable triceps extension with a straight bar is bilateral and open-chain. The upper arms stay stationary and the elbow is the only moving joint. Elbow extension as the sole primary action puts the three triceps heads in the primary role and anconeus as a synergist, which is the expected pattern. The listed demands are placed where the load is held: grip and wrist_stability for the bar in the hands, and shoulder_position_hold for the upper arm held still against the cable pull. The flat bench supports the trunk and scapulae, so omitting bracing and scapular demands is reasonable. The elbow_extension family is correct."
+    }
+  }
+}

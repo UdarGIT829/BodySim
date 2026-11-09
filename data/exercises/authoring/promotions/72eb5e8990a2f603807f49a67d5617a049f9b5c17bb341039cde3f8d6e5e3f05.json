@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "72eb5e8990a2f603807f49a67d5617a049f9b5c17bb341039cde3f8d6e5e3f05",
+  "revision_id": "Decline_Dumbbell_Flyes@72eb5e8990a2",
+  "exercise_id": "exercise.dumbbell_fly.decline_bench",
+  "source_catalog_id": "catalog.free_exercise_db.Decline_Dumbbell_Flyes",
+  "mapped_muscles": 86,
+  "promoted_at_unix": 1794184524.9475873,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "63c88f4301efe24be02ccc81d3b420b5aba7862659adec87fce54095bb7b536e",
+    "data/exercises/engagement_profiles.json": "94fd91fef9695b313818e9eb115309ed6f5de757362c2ae66d640b29616ed3dc",
+    "data/exercises/catalog/candidates.json": "098b8afa6c0b478ec60692ed66cd01763216f5bc4733187f36b705ced5ed0a82",
+    "data/exercises/sources/free_exercise_db_media.json": "9bcd0d970c44d268c53245793f40c65b3c51b696d63520aabddfbcf945955663"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "ce1955c944da495a3344a0b9501777ec6f7afc07c187ec79cca1dd192fc422db",
+    "data/exercises/engagement_profiles.json": "bcf2ab3f8993d8c07a4d1efaa762a27121ed46997a17aa4fcf9a1288b1560098",
+    "data/exercises/catalog/candidates.json": "9069e366fb56e3a51fe2dbcff191c4aa62cf9eb9a35d8f41a6bc8be3e01fbf1d",
+    "data/exercises/sources/free_exercise_db_media.json": "e6583794a48bb98a82280e03d6dbef76984ebc99f835f9021b384554ca01a219"
+  }
+}

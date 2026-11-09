@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "1a2ed68af3700f81023ab2196af81d28b4163718278733f7ac2ec5a615ddda10",
+  "revision_id": "Dumbbell_Lying_One-Arm_Rear_Lateral_Raise@1a2ed68af370",
+  "exercise_id": "exercise.dumbbell_rear_lateral_raise.incline_chest_supported_unilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Dumbbell_Lying_One-Arm_Rear_Lateral_Raise",
+  "mapped_muscles": 33,
+  "promoted_at_unix": 1794185071.8014705,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "f2aa3abcbc13094066a0cf108dd5c1027105a5c5ef23a52cb60e71d456f06d44",
+    "data/exercises/engagement_profiles.json": "cd7d098210fa858ee7eef1f9441b7a8cdbfe8a9cc79a8544aa907e4e0ceb74e4",
+    "data/exercises/catalog/candidates.json": "22b5263d095946cf715d98a822afe01cdf2cecc97eb9ec71e43aaf929d65fe95",
+    "data/exercises/sources/free_exercise_db_media.json": "c899a2aa8be732ae290ce9517772129cb68bd824b0add1a690de93b386a159ec"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "68fdf02ef9275aa3bd88c84291b8fa7a9b5499ddcdcec2d4e1d0c0362c2a03e9",
+    "data/exercises/engagement_profiles.json": "467d2b9a1e2adb2f50750710ad3699c4054d77fd1de7abad715f7865d860d43a",
+    "data/exercises/catalog/candidates.json": "e76fcee81998a733544b8c033c5cbf0d088eff9c4e6c3088e293d77e9e9db410",
+    "data/exercises/sources/free_exercise_db_media.json": "a6225fbd77f5cd345f3e7bcad8d526f92aaf2d74d353e38063f570a81d045778"
+  }
+}

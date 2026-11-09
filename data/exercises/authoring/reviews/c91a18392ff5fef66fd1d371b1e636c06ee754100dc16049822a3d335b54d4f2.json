@@ -1,0 +1,68 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c91a18392ff5fef66fd1d371b1e636c06ee754100dc16049822a3d335b54d4f2",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105358.43436,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105335.85442,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "`grip` is listed, but the barbell rests on the upper back (frames 1 and 2). The hands only steady it at the sides. A back-rack load is held by the scapular and upper-back shelf, not by sustained finger flexion. The result is about 32 hand and forearm muscles on both sides (flexor digitorum profundus 0.35, flexor pollicis longus 0.21, interossei, thenar and hypothenar muscles) engaged as stabilizers, which is a materially wrong tracer pattern for a lunge. The assumption text justifying grip also contradicts the authoring guidance for loads carried on the back.",
+          "suggested_correction": "Remove `grip` from the stabilization demands."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "`scapular_retraction_stability` is absent. The bar sits across the rear shoulders and upper back (instructions step 1, both frames), and the upper-back muscles must hold it in place. The trapezius (transverse and ascending parts) and the rhomboids are therefore explicit zeros in the trace, although they are clearly engaged in this lift.",
+          "suggested_correction": "Add `scapular_retraction_stability` as the demand for the bar shelf on the upper back. Do not add `grip` or `wrist_stability`."
+        }
+      ],
+      "confidence": "high",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "The family is given only as `squat`. The movement is a split-stance lunge with a loaded forward step. The reviewer cannot confirm whether the vocabulary has a lunge or split-squat family, so this may be a loose fit.",
+          "suggested_correction": "If the vocabulary has a lunge or split-squat family, use it, or add it alongside `squat`."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The rear leg and ankles are treated as omitted. The rear leg is under load in the bottom position, and the front ankle does a small amount of plantarflexion on the drive up. Neither is a primary mover, so leaving them out is defensible. Both appear only through the generic postural demands.",
+          "suggested_correction": "Optionally add ankle plantarflexion with `emphasis: \"assist\"`, and consider a bracing demand such as `intra_abdominal_pressure` for heavy loading."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.laterality",
+          "finding": "The instructions have the lifter perform the right leg and then the left leg. Modelling this as unilateral with the right side working is reasonable. The side choice is arbitrary but acceptable, and the left side is covered only by postural and pelvic-leveling stabilizers.",
+          "suggested_correction": "No change is required."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgVB7oFPqNFWSt8Ldxh",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 8080.0,
+          "output_tokens": 2786.0
+        }
+      },
+      "summary": "The identity, laterality, kinetic-chain type and hip/knee extension actions are supported by the instructions and both frames: a back-loaded barbell in a rack, a staggered split stance, and a drive up through the front leg. The stabilization demands are wrong, though. `grip` is the wrong place for a back-rack load and produces a spurious hand and forearm pattern. The upper-back shelf demand that should carry the bar is missing."
+    }
+  }
+}

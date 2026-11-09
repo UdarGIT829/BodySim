@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "8d7ea0a6a234e03da6656e828d2353e59ed947a804610ef939bf9d704a8ae7ba",
+  "status": "accepted",
+  "updated_at_unix": 1794185038.24079,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794185027.98612,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "movement_families",
+          "finding": "horizontal_push is a loose label. The load is held up over the shoulders and the motion is scapular protraction. shoulder_raise or a similar family might fit as well or better. Labels do not change the traced muscles, and no family cleanly describes protraction.",
+          "suggested_correction": "Optionally consider shoulder_raise alongside or instead of horizontal_push in a future revision."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "Rotator cuff muscles (infraspinatus, supraspinatus, subscapularis) are not engaged. They would likely co-contract to centre the humeral head while the dumbbells are held at about 90 degrees of shoulder flexion. This is a minor omission, and shoulder_position_hold already covers the main isometric shoulder load.",
+          "suggested_correction": "Optionally add glenohumeral_stabilization if the rotator cuff is considered meaningfully engaged."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRmdVm1pjKWYt5rMZkq",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7507.0,
+          "output_tokens": 1231.0
+        }
+      },
+      "summary": "The frames and instructions show a bilateral incline-bench dumbbell movement. The arms stay straight and locked while the shoulders rise off the bench, which is scapular protraction. The definition captures this with scapulothoracic_joint/protraction as the sole primary action, so serratus anterior is primary (1.0) and pectoralis minor a synergist (0.5). Grip and wrist_stability fit a load held in the hands. shoulder_position_hold and elbow_joint_integrity credit the held shoulder flexion and the locked elbows without listing a moving elbow or glenohumeral joint. Bilateral laterality, an empty one_sided_limbs and an open-chain label are all supported by the frames. The resulting muscle pattern is plausible, and the remaining points are label or minor-weighting matters."
+    }
+  }
+}

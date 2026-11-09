@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "33f73e3f8b8467a7da499c28239e2601f645ce566a4ddd20fa82021b493d7d3a",
+  "status": "accepted",
+  "updated_at_unix": 1794184977.5914,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184964.81595,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "No wrist_stability demand is listed, although the dumbbells are held in the hands and then racked at the shoulders. The wrist flexors and extensors get no credit beyond grip. This is a minor omission, not a materially wrong pattern.",
+          "suggested_correction": "Optionally add wrist_stability in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The upper trapezius is absent from the trace because no scapular elevation is listed. This is consistent with the instructions, which cue straight arms and give no shrug cue. A real clean often includes a small shrug.",
+          "suggested_correction": "Optionally add scapulothoracic_joint/elevation with emphasis assist if the shrug is judged material."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "olympic_lift is a reasonable primary label. The squat catch and the hip-dominant pull could also carry the squat or hip_hinge families, but these labels do not change the trace.",
+          "suggested_correction": "Optionally add squat or hip_hinge as secondary families."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "closed_chain is acceptable because the feet stay planted, apart from a brief jump in the pull. It is a catalog label and does not affect the trace.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRgyAK2KnTkeuPrLwqJ",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10799.0,
+          "output_tokens": 1522.0
+        }
+      },
+      "summary": "The definition matches the source text and the frames. The start frame shows a hip-hinged, knee-bent pull with a dumbbell in each hand at the floor, and the later frame shows an upright stance with the dumbbells racked at the shoulders. Hip and knee extension are primary, and the traced primary movers are the glutes, hamstrings and quadriceps, which is right for triple extension. The ankle is correctly marked assist (soleus and gastrocnemius come out as synergists). Elbow flexion is also assist, which fits the straight-arm pull with a late bend to receive the weights (brachialis, biceps and brachioradialis as synergists). The demands fit the lift: anti_flexion_spine for the neutral spine, grip for the held dumbbells, intra_abdominal_pressure for the explosive pull and catch, and shoulder_position_hold for the racked position. Bilateral laterality with empty one_sided_limbs is correct. The remaining points are minor and non-blocking."
+    }
+  }
+}

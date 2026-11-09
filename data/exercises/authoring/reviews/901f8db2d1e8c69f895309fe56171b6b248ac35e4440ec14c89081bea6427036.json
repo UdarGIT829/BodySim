@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "901f8db2d1e8c69f895309fe56171b6b248ac35e4440ec14c89081bea6427036",
+  "status": "accepted",
+  "updated_at_unix": 1794182727.49681,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182715.17119,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The airborne frame shows the knees and hips tucked high to clear the bench, so hip flexion is present in flight. The instructions only say to jump over the bench, and the definition models only the takeoff, so hip flexors such as psoas and iliacus are explicit zeros. This is a minor flight-phase contribution.",
+          "suggested_correction": "Optionally add hip_joint/flexion with emphasis assist and sides both if the tuck is meant to be part of the exercise."
+        },
+        {
+          "field_path": "authoring_response.assumptions",
+          "finding": "The assumption of a vertical airborne phase with arms swung forward and up is only loosely matched by the frames. The frames show the arms bent with fists near the chest or face and a tucked lower body. The glenohumeral flexion assist is still reasonable and low-weighted.",
+          "suggested_correction": "Reword the assumption to say the arms swing and are held flexed in front, and that the legs tuck over the bench."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "The jump alternates between a closed-chain push-off and an airborne open-chain phase. closed_chain is acceptable as a catalog label for a ground-contact plyometric, and the label does not change the traced muscles.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrNq9MN7Hh2DmJnbJajd",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7244.0,
+          "output_tokens": 1492.0
+        }
+      },
+      "summary": "The definition fits a two-footed countermovement jump over a bench. Hip and knee extension are primary, which gives glutes, hamstrings, adductor magnus and quadriceps as primary movers. Ankle plantarflexion is correctly marked assist, so the calves are synergists. The arm swing is modelled as assisting glenohumeral flexion. The ankle, knee, spinal and postural demands are plausible for takeoff and landing, and the tracer pattern matches this. The frames show a visible knee tuck while airborne, which the definition does not model. That is a minor omission and not blocking."
+    }
+  }
+}

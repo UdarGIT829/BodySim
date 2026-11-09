@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c26ea24a695ccc19b9795572bff2cdb5130e65948ff5c196d22b621b2d9c2b16",
+  "status": "accepted",
+  "updated_at_unix": 1794184596.55014,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184582.78855,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The overhead bench grip also loads the lats and shoulder extensors isometrically. This is not modeled, and the trace shows trunk-anchoring muscles only through the scapular and hand-muscle demands. This is a minor omission and does not make the muscle pattern materially wrong.",
+          "suggested_correction": "A future revision could consider shoulder_position_hold or wrist_stability if the authoring team wants the overhead anchoring arm credited more fully."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[2]",
+          "finding": "Knee flexion as an assist gives the hamstrings, gastrocnemius, popliteus and plantaris small synergist or stabilizer coefficients. This is acceptable for a slight knee bend, and the hamstrings are plausibly active isometrically, but the calf and popliteus values are marginal.",
+          "suggested_correction": "No change is required. Keeping knee flexion as an assist is appropriate."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "hip_flexion and trunk_flexion are valid catalog labels. core_anti_extension could also apply because the abs hold the legs parallel to the floor at the start. It does not change the traced muscles.",
+          "suggested_correction": "Optional: add core_anti_extension as a secondary family."
+        },
+        {
+          "field_path": "classification_reasons",
+          "finding": "Frame 2 shows the legs more extended than the text's knees-to-chest end position. The authoring response already notes this as a difference in range, not in joint actions.",
+          "suggested_correction": "None needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRComUnUngYZrLsRb4u",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8578.0,
+          "output_tokens": 1725.0
+        }
+      },
+      "summary": "The definition fits the source text and both frames. The lifter lies supine on a decline bench, grips the top of the bench overhead, and brings the legs toward the torso while the pelvis rolls back and the hips lift. Hip flexion and lumbar flexion as primary actions put the hip flexors (iliacus, psoas major, rectus femoris) and the rectus abdominis in the primary tier, with the obliques as synergists. This matches the movement. Knee flexion as an assist is reasonable because the knees bend slightly as the legs come in. Grip and scapular_stabilization cover the hands holding the bench and the anchoring of the shoulder girdle. Bilateral laterality, an empty one_sided_limbs list and the open-chain label are appropriate. The remaining points are minor and non-blocking."
+    }
+  }
+}

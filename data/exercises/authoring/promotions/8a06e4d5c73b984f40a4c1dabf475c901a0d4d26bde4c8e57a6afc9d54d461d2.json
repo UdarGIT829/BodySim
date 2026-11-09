@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "8a06e4d5c73b984f40a4c1dabf475c901a0d4d26bde4c8e57a6afc9d54d461d2",
+  "revision_id": "Deadlift_with_Bands@8a06e4d5c73b",
+  "exercise_id": "exercise.barbell_deadlift.banded_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Deadlift_with_Bands",
+  "mapped_muscles": 129,
+  "promoted_at_unix": 1794184425.3809311,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "b11e5b709e802ff57994329815b36a611d7d4036c9ff251692ccff1e37c10b8c",
+    "data/exercises/engagement_profiles.json": "e42aeb253f6461de2d76c743f7c49b0416138021987ceaa232be7ff08875d8c7",
+    "data/exercises/catalog/candidates.json": "ad9ab055dc73883298eb7efec556356997a40ade52d7fd62f83fe17ea6040997",
+    "data/exercises/sources/free_exercise_db_media.json": "575dc01a3c8363de3b0b0d783b8de925b91e56c7a977e7c9b4e8794d750c6359"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "3165855ea66514d5fdf2dfe30d41d189108666afc8124c123d150bb2dad6734e",
+    "data/exercises/engagement_profiles.json": "2ad7c6323b0d8ddba4bcd99b75e6303c76980e638871194c8c6dd6cf2e655859",
+    "data/exercises/catalog/candidates.json": "9758eefca307d6db807d96725ce41fdbe42463cc05d7d7b190215a41425bc231",
+    "data/exercises/sources/free_exercise_db_media.json": "0b79b272b46bd249e706b6214ce71ee9133f3b57c48e53c9d337ad7946c7e1d8"
+  }
+}

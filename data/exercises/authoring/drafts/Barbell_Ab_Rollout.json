@@ -1,18 +1,24 @@
 {
-  "additional_context": "",
+  "format_version": 1,
+  "catalog_id": "catalog.free_exercise_db.Barbell_Ab_Rollout",
+  "source_id": "Barbell_Ab_Rollout",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "definition_candidate",
+  "additional_context": "[Council feedback on the previous definition]\nFrom model_reviewer:\n- proposed_definition.kinematic_profile.primary_joint_actions[lumbar_spine/flexion]: Lumbar flexion is listed as a full primary action, but the instructions say to keep a slight arch and maintain back posture at all times. The frames show a neutral spine at the pike end and a plank-like spine at the extended end. The trunk's real job is to resist extension as the arms move overhead. The assumptions admit the flexion is 'modest', yet it gives the rectus abdominis a coefficient of 1.0 and the internal and external obliques 0.6 as dynamic movers. That overstates their role and conflicts with the source text. Suggested correction: Remove lumbar_spine/flexion as a primary action, or mark it clearly as a minor assist if some posterior pelvic tilt or abdominal curl at the top is claimed. Express the abdominal work mainly through anti_extension_spine and intra_abdominal_pressure, and add pelvic_alignment if pelvic tilt control is intended.\n- proposed_definition.movement_families: The only movement family is trunk_flexion, which repeats the unsupported lumbar flexion claim. It omits the hip hinge/pike and the shoulder-extension roll-in that actually move the load and are present in the joint actions. The family list therefore misdescribes the movement as a crunch-like pattern. Suggested correction: Choose families that match a rollout: anti-extension core bracing plus the hip-flexion/pike component and the shoulder-extension (lat-driven) pull. Remove trunk_flexion unless real trunk flexion is justified.\n- proposed_definition.kinematic_profile.stabilization_demands: The assumption that the roll-out phase is 'modeled only through the anti-extension spine demand' is inconsistent with a profile that treats lumbar flexion as the abdominal driver. The central abdominal role should be controlled resistance to extension, not flexion. In the extended position the arms are held overhead against the load, but no shoulder-position or glenohumeral control demand is present to reflect that. Suggested correction: Keep anti_extension_spine as the main core demand and consider adding glenohumeral_stabilization or shoulder_position_hold for the overhead arm position, with the abdominal pattern coming from these demands and not from lumbar flexion.\n[End of council feedback]",
   "authoring_response": {
     "assumptions": [
-      "The text defines the exertion phase as the roll-in toward the feet with a second contraction at the top. The image order only shows the two endpoints of the same cycle, so it is not treated as a conflict.",
-      "The movement is bilateral with the arms kept nearly straight and no kneeling.",
-      "Lumbar flexion is modest because the instructions say to keep a slight back arch, but the abs are the intended driver.",
-      "The feet stay planted and the hands stay on the barbell, so the chain is treated as closed.",
-      "The roll-out (eccentric) phase is modeled only through the anti-extension spine demand."
+      "The text starts in the plank-like extended position and rolls toward the feet with the hips raised, so the exertion phase is the hips-up pike, not the roll-out. The frames show the pike first and the extended position second, so I treat them as two ends of one repetition cycle and not as a conflict.",
+      "Both hands grip the barbell, which rolls on its plates along the floor. The feet stay planted, so the chain is closed.",
+      "The spine stays in a slight arch or neutral position, as the text requires, so no lumbar flexion is listed. Abdominal work is modeled through anti-extension and bracing demands.",
+      "Hip flexion is the main pike action. Knees stay essentially straight, so knee action is not listed.",
+      "Glenohumeral extension with arms near-vertical against the floor is the lat-driven shoulder action that pulls the bar toward the feet. Elbows stay locked, so no elbow action is listed.",
+      "Calves and scapular motion are not listed because they only accompany the movement.",
+      "Edited by the council from revision 5efd1fba005e, as the reviewer proposed: glenohumeral_joint/extension emphasis -> assist."
     ],
     "classification": "supported",
     "classification_reasons": [
-      "The exercise is a bilateral barbell roll-out and roll-in with the hands on a rolling barbell and the feet on the floor.",
-      "The instructions describe the exertion phase as rolling the barbell toward the feet with hips lifting and abs contracting, which maps to glenohumeral extension, hip flexion and lumbar flexion in the available vocabulary.",
-      "The two frames show the hinged pike end position and the extended plank-like position, so the setup and path are clear enough."
+      "Both frames and the instructions show a bilateral, hands-on-barbell plank-to-pike rollout that the vocabulary can represent.",
+      "The movement is a trunk held against extension, with the hips flexing (pike) and the shoulders moving from overhead toward the body as the barbell rolls toward the feet."
     ],
     "field_confidence": {
       "input_mode": "high",
@@ -25,67 +31,174 @@
     "proposed_definition": {
       "aliases": [
         "barbell_rollout",
-        "barbell_ab_roll-out",
-        "standing_barbell_rollout"
+        "barbell_ab_roll-out"
       ],
-      "id": "exercise.barbell_ab_rollout.feet_supported",
+      "id": "exercise.barbell_ab_rollout.plank_to_pike",
       "input_mode": "repetitions",
       "kinematic_profile": {
         "kinetic_chain_type": "closed_chain",
+        "one_sided_limbs": [],
         "primary_joint_actions": [
           {
-            "joint": "lumbar_spine",
-            "movement": "flexion"
-          },
-          {
+            "emphasis": "primary",
             "joint": "hip_joint",
-            "movement": "flexion"
+            "movement": "flexion",
+            "sides": "working"
           },
           {
+            "emphasis": "assist",
             "joint": "glenohumeral_joint",
-            "movement": "extension"
+            "movement": "extension",
+            "sides": "working"
           }
         ],
         "stabilization_demands": [
           "anti_extension_spine",
-          "elbow_stability",
+          "elbow_joint_integrity",
           "grip",
           "intra_abdominal_pressure",
+          "pelvic_alignment",
           "scapular_stabilization",
+          "shoulder_position_hold",
           "wrist_stability"
         ]
       },
       "laterality": "bilateral",
       "movement_families": [
-        "trunk_flexion"
+        "core_anti_extension",
+        "hip_flexion"
       ],
       "name": "Barbell Ab Rollout",
-      "variant": "feet_supported"
+      "variant": "plank_to_pike"
     },
     "questions_requiring_context": []
   },
+  "provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1.0,
+      "frame_count": 2.0,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Barbell_Ab_Rollout/0.jpg",
+        "Barbell_Ab_Rollout/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [
+        "The text starts in the plank-like extended position and rolls toward the feet with the hips raised, so the exertion phase is the hips-up pike, not the roll-out. The frames show the pike first and the extended position second, so I treat them as two ends of one repetition cycle and not as a conflict.",
+        "Both hands grip the barbell, which rolls on its plates along the floor. The feet stay planted, so the chain is closed.",
+        "The spine stays in a slight arch or neutral position, as the text requires, so no lumbar flexion is listed. Abdominal work is modeled through anti-extension and bracing demands.",
+        "Hip flexion is the main pike action. Knees stay essentially straight, so knee action is not listed.",
+        "Glenohumeral extension with arms near-vertical against the floor is the lat-driven shoulder action that pulls the bar toward the feet. Elbows stay locked, so no elbow action is listed.",
+        "Calves and scapular motion are not listed because they only accompany the movement."
+      ],
+      "classification": "supported",
+      "classification_reasons": [
+        "Both frames and the instructions show a bilateral, hands-on-barbell plank-to-pike rollout that the vocabulary can represent.",
+        "The movement is a trunk held against extension, with the hips flexing (pike) and the shoulders moving from overhead toward the body as the barbell rolls toward the feet."
+      ],
+      "field_confidence": {
+        "input_mode": "high",
+        "kinetic_chain_type": "medium",
+        "laterality": "high",
+        "primary_joint_actions": "medium",
+        "stabilization_demands": "medium",
+        "variant": "medium"
+      },
+      "proposed_definition": {
+        "additional_movement_families": [
+          "hip_flexion"
+        ],
+        "aliases": [
+          "Barbell Rollout",
+          "Barbell Ab Roll-Out"
+        ],
+        "id": "exercise.barbell_ab_rollout.plank_to_pike",
+        "input_mode": "repetitions",
+        "kinematic_profile": {
+          "kinetic_chain_type": "closed_chain",
+          "one_sided_limbs": [],
+          "primary_joint_actions": [
+            {
+              "emphasis": "primary",
+              "joint": "hip_joint",
+              "movement": "flexion",
+              "sides": "working"
+            },
+            {
+              "emphasis": "primary",
+              "joint": "glenohumeral_joint",
+              "movement": "extension",
+              "sides": "working"
+            }
+          ],
+          "stabilization_demands": [
+            "anti_extension_spine",
+            "intra_abdominal_pressure",
+            "pelvic_alignment",
+            "shoulder_position_hold",
+            "scapular_stabilization",
+            "elbow_joint_integrity",
+            "grip",
+            "wrist_stability"
+          ]
+        },
+        "laterality": "bilateral",
+        "name": "Barbell Ab Rollout",
+        "primary_movement_family": "core_anti_extension",
+        "variant": "plank_to_pike"
+      },
+      "questions_requiring_context": []
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgrHtEBaKmQu8WV9xc9bN",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 16554.0,
+      "input_tokens": 2651.0,
+      "output_tokens": 1926.0
+    },
+    "edited_by_council": {
+      "from_revision_sha256": "5efd1fba005e56398fcb92380269ffcadca3455c5fba21d66292e5fbb4d014e4",
+      "edits": [
+        {
+          "emphasis": "assist",
+          "joint": "glenohumeral_joint",
+          "movement": "extension",
+          "op": "set_action_emphasis"
+        }
+      ],
+      "described": [
+        "glenohumeral_joint/extension emphasis -> assist"
+      ],
+      "reviewer_model": "claude-sonnet-5-5",
+      "resolve_all_blocking_findings": true
+    }
+  },
+  "validation_errors": [],
   "candidate_trace_report": {
     "gate_version": "candidate_trace_gate_v3",
     "ok": true,
-    "exercise_id": "exercise.barbell_ab_rollout.feet_supported",
+    "exercise_id": "exercise.barbell_ab_rollout.plank_to_pike",
     "errors": [],
     "warnings": [],
     "summary": {
       "total_muscles": 466,
-      "mapped_muscles": 127,
-      "zero_muscles": 339,
+      "mapped_muscles": 143,
+      "zero_muscles": 323,
       "role_counts": {
-        "primary": 14,
-        "synergist": 26,
-        "stabilizer": 87,
-        "none": 339
+        "primary": 6,
+        "synergist": 28,
+        "stabilizer": 109,
+        "none": 323
       },
       "joint_action_coverage": [
-        {
-          "joint": "lumbar_spine",
-          "movement": "flexion",
-          "matching_muscles": 8
-        },
         {
           "joint": "hip_joint",
           "movement": "flexion",
@@ -103,8 +216,8 @@
           "matching_muscles": 8
         },
         {
-          "demand": "elbow_stability",
-          "matching_muscles": 8
+          "demand": "elbow_joint_integrity",
+          "matching_muscles": 4
         },
         {
           "demand": "grip",
@@ -115,8 +228,16 @@
           "matching_muscles": 19
         },
         {
+          "demand": "pelvic_alignment",
+          "matching_muscles": 20
+        },
+        {
           "demand": "scapular_stabilization",
           "matching_muscles": 18
+        },
+        {
+          "demand": "shoulder_position_hold",
+          "matching_muscles": 12
         },
         {
           "demand": "wrist_stability",
@@ -128,36 +249,38 @@
       "tracer": "kinematic_tracer_v3",
       "structures_sha256": "cad14011d986446b2af5871cad93575dac1da7e34ea6cfbc67b551bf2a3d8edf",
       "muscle_actions_sha256": "52d1b3acbc4257f2c85de5f308437d20ac78b895a3274d1db8cbbde3cfd3bfcf",
-      "canonical_exercises_sha256": "d9615b0d8567fa1a4c6c15215b617c76730fc5e987fad4d03b1aa4b907886369"
+      "canonical_exercises_sha256": "b7e7453b86644928e6504f5059798d3d07fd5b8589895d5f5356fb4271915e33"
     },
     "profile": {
-      "exercise_id": "exercise.barbell_ab_rollout.feet_supported",
+      "exercise_id": "exercise.barbell_ab_rollout.plank_to_pike",
       "total_muscles": 466,
-      "mapped_muscles": 127,
-      "zero_muscles": 339,
+      "mapped_muscles": 143,
+      "zero_muscles": 323,
       "muscles": [
         {
           "muscle_id": "muscle.abdominal_part_of_pectoralis_major.left",
           "role": "synergist",
-          "coefficient": 0.4,
+          "coefficient": 0.16,
           "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.abdominal_part_of_pectoralis_major",
-            "rule.kinematic_tracer_v3.synergist"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.abdominal_part_of_pectoralis_major.right",
           "role": "synergist",
-          "coefficient": 0.4,
+          "coefficient": 0.16,
           "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.abdominal_part_of_pectoralis_major",
-            "rule.kinematic_tracer_v3.synergist"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
@@ -276,24 +399,26 @@
         },
         {
           "muscle_id": "muscle.acromial_part_of_deltoid.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.14,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.acromial_part_of_deltoid",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.acromial_part_of_deltoid.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.14,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.acromial_part_of_deltoid",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
@@ -504,26 +629,24 @@
         },
         {
           "muscle_id": "muscle.brachioradialis.left",
-          "role": "stabilizer",
-          "coefficient": 0.07,
-          "confidence": "medium",
-          "evidence_status": "kinematic_trace",
+          "role": "none",
+          "coefficient": 0.0,
+          "confidence": "high",
+          "evidence_status": "reviewed_zero",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "muscle_actions_v2:muscle.brachioradialis",
-            "rule.kinematic_tracer_v3.stabilizer"
+            "rule.kinematic_tracer_v3.reviewed_zero"
           ]
         },
         {
           "muscle_id": "muscle.brachioradialis.right",
-          "role": "stabilizer",
-          "coefficient": 0.07,
-          "confidence": "medium",
-          "evidence_status": "kinematic_trace",
+          "role": "none",
+          "coefficient": 0.0,
+          "confidence": "high",
+          "evidence_status": "reviewed_zero",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "muscle_actions_v2:muscle.brachioradialis",
-            "rule.kinematic_tracer_v3.stabilizer"
+            "rule.kinematic_tracer_v3.reviewed_zero"
           ]
         },
         {
@@ -550,46 +673,50 @@
         },
         {
           "muscle_id": "muscle.clavicular_head_of_pectoralis_major.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.14,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.clavicular_head_of_pectoralis_major",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.clavicular_head_of_pectoralis_major.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.14,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.clavicular_head_of_pectoralis_major",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.clavicular_part_of_deltoid.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.35,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.clavicular_part_of_deltoid",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.clavicular_part_of_deltoid.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.35,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.clavicular_part_of_deltoid",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
@@ -618,24 +745,26 @@
         },
         {
           "muscle_id": "muscle.coracobrachialis.left",
-          "role": "none",
-          "coefficient": 0.0,
-          "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "role": "stabilizer",
+          "coefficient": 0.105,
+          "confidence": "medium",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.coracobrachialis",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.coracobrachialis.right",
-          "role": "none",
-          "coefficient": 0.0,
-          "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "role": "stabilizer",
+          "coefficient": 0.105,
+          "confidence": "medium",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.coracobrachialis",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
@@ -1148,26 +1277,26 @@
         },
         {
           "muscle_id": "muscle.external_abdominal_oblique.left",
-          "role": "synergist",
-          "coefficient": 0.6,
+          "role": "stabilizer",
+          "coefficient": 0.28,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.external_abdominal_oblique",
-            "rule.kinematic_tracer_v3.synergist"
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.external_abdominal_oblique.right",
-          "role": "synergist",
-          "coefficient": 0.6,
+          "role": "stabilizer",
+          "coefficient": 0.28,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.external_abdominal_oblique",
-            "rule.kinematic_tracer_v3.synergist"
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
@@ -1554,24 +1683,26 @@
         },
         {
           "muscle_id": "muscle.gluteus_maximus.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.21,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.gluteus_maximus",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.gluteus_maximus.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.21,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.gluteus_maximus",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
@@ -2032,26 +2163,26 @@
         },
         {
           "muscle_id": "muscle.internal_abdominal_oblique.left",
-          "role": "synergist",
-          "coefficient": 0.6,
+          "role": "stabilizer",
+          "coefficient": 0.28,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.internal_abdominal_oblique",
-            "rule.kinematic_tracer_v3.synergist"
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.internal_abdominal_oblique.right",
-          "role": "synergist",
-          "coefficient": 0.6,
+          "role": "stabilizer",
+          "coefficient": 0.28,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.internal_abdominal_oblique",
-            "rule.kinematic_tracer_v3.synergist"
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
@@ -2254,26 +2385,28 @@
         },
         {
           "muscle_id": "muscle.latissimus_dorsi.left",
-          "role": "primary",
-          "coefficient": 1.0,
+          "role": "synergist",
+          "coefficient": 0.4,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.latissimus_dorsi",
-            "rule.kinematic_tracer_v3.primary"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.latissimus_dorsi.right",
-          "role": "primary",
-          "coefficient": 1.0,
+          "role": "synergist",
+          "coefficient": 0.4,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.latissimus_dorsi",
-            "rule.kinematic_tracer_v3.primary"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
@@ -2456,48 +2589,52 @@
         },
         {
           "muscle_id": "muscle.long_head_of_biceps_femoris.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.14,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.long_head_of_biceps_femoris",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.long_head_of_biceps_femoris.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.14,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.long_head_of_biceps_femoris",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.long_head_of_triceps_brachii.left",
           "role": "synergist",
-          "coefficient": 0.4,
+          "coefficient": 0.16,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.long_head_of_triceps_brachii",
-            "rule.kinematic_tracer_v3.synergist"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.long_head_of_triceps_brachii.right",
           "role": "synergist",
-          "coefficient": 0.4,
+          "coefficient": 0.16,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.long_head_of_triceps_brachii",
-            "rule.kinematic_tracer_v3.synergist"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
@@ -2546,24 +2683,26 @@
         },
         {
           "muscle_id": "muscle.longissimus_thoracis.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.105,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.longissimus_thoracis",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.longissimus_thoracis.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.105,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.longissimus_thoracis",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
@@ -2702,24 +2841,26 @@
         },
         {
           "muscle_id": "muscle.medial_head_of_triceps_brachii.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.07,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.medial_head_of_triceps_brachii",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.medial_head_of_triceps_brachii.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.07,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.medial_head_of_triceps_brachii",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
@@ -3760,26 +3901,26 @@
         },
         {
           "muscle_id": "muscle.rectus_abdominis.left",
-          "role": "primary",
-          "coefficient": 1.0,
+          "role": "stabilizer",
+          "coefficient": 0.35,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.rectus_abdominis",
-            "rule.kinematic_tracer_v3.primary"
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.rectus_abdominis.right",
-          "role": "primary",
-          "coefficient": 1.0,
+          "role": "stabilizer",
+          "coefficient": 0.35,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.rectus_abdominis",
-            "rule.kinematic_tracer_v3.primary"
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
@@ -4078,48 +4219,52 @@
         },
         {
           "muscle_id": "muscle.scapular_spinal_part_of_deltoid.left",
-          "role": "primary",
-          "coefficient": 0.7,
+          "role": "synergist",
+          "coefficient": 0.28,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.scapular_spinal_part_of_deltoid",
-            "rule.kinematic_tracer_v3.primary"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.scapular_spinal_part_of_deltoid.right",
-          "role": "primary",
-          "coefficient": 0.7,
+          "role": "synergist",
+          "coefficient": 0.28,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.scapular_spinal_part_of_deltoid",
-            "rule.kinematic_tracer_v3.primary"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.semimembranosus.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.14,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.semimembranosus",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.semimembranosus.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.14,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.semimembranosus",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
@@ -4168,24 +4313,26 @@
         },
         {
           "muscle_id": "muscle.semitendinosus.left",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.14,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.semitendinosus",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
           "muscle_id": "muscle.semitendinosus.right",
-          "role": "none",
-          "coefficient": 0.0,
+          "role": "stabilizer",
+          "coefficient": 0.14,
           "confidence": "high",
-          "evidence_status": "reviewed_zero",
+          "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "rule.kinematic_tracer_v3.reviewed_zero"
+            "muscle_actions_v2:muscle.semitendinosus",
+            "rule.kinematic_tracer_v3.stabilizer"
           ]
         },
         {
@@ -4457,25 +4604,27 @@
         {
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.left",
           "role": "synergist",
-          "coefficient": 0.5,
+          "coefficient": 0.2,
           "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.sternocostal_head_of_pectoralis_major",
-            "rule.kinematic_tracer_v3.synergist"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.sternocostal_head_of_pectoralis_major.right",
           "role": "synergist",
-          "coefficient": 0.5,
+          "coefficient": 0.2,
           "confidence": "medium",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.sternocostal_head_of_pectoralis_major",
-            "rule.kinematic_tracer_v3.synergist"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
@@ -4660,26 +4809,24 @@
         },
         {
           "muscle_id": "muscle.superficial_head_of_pronator_teres.left",
-          "role": "stabilizer",
-          "coefficient": 0.07,
+          "role": "none",
+          "coefficient": 0.0,
           "confidence": "high",
-          "evidence_status": "kinematic_trace",
+          "evidence_status": "reviewed_zero",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "muscle_actions_v2:muscle.superficial_head_of_pronator_teres",
-            "rule.kinematic_tracer_v3.stabilizer"
+            "rule.kinematic_tracer_v3.reviewed_zero"
           ]
         },
         {
           "muscle_id": "muscle.superficial_head_of_pronator_teres.right",
-          "role": "stabilizer",
-          "coefficient": 0.07,
+          "role": "none",
+          "coefficient": 0.0,
           "confidence": "high",
-          "evidence_status": "kinematic_trace",
+          "evidence_status": "reviewed_zero",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
-            "muscle_actions_v2:muscle.superficial_head_of_pronator_teres",
-            "rule.kinematic_tracer_v3.stabilizer"
+            "rule.kinematic_tracer_v3.reviewed_zero"
           ]
         },
         {
@@ -4928,26 +5075,28 @@
         },
         {
           "muscle_id": "muscle.teres_major.left",
-          "role": "primary",
-          "coefficient": 0.7,
+          "role": "synergist",
+          "coefficient": 0.28,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.teres_major",
-            "rule.kinematic_tracer_v3.primary"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
           "muscle_id": "muscle.teres_major.right",
-          "role": "primary",
-          "coefficient": 0.7,
+          "role": "synergist",
+          "coefficient": 0.28,
           "confidence": "high",
           "evidence_status": "kinematic_trace",
           "derivation_method": "kinematic_tracer_v3",
           "evidence_refs": [
             "muscle_actions_v2:muscle.teres_major",
-            "rule.kinematic_tracer_v3.primary"
+            "rule.kinematic_tracer_v3.synergist",
+            "rule.kinematic_tracer_v3.assist"
           ]
         },
         {
@@ -5392,99 +5541,5 @@
       ]
     }
   },
-  "catalog_id": "catalog.free_exercise_db.Barbell_Ab_Rollout",
-  "format_version": 1,
-  "provider_metadata": {
-    "effort": "high",
-    "input_contact_sheet": {
-      "api_image_inputs": 1,
-      "frame_count": 2,
-      "layout": "chronological_left_to_right",
-      "source_images": [
-        "Barbell_Ab_Rollout/0.jpg",
-        "Barbell_Ab_Rollout/1.jpg"
-      ]
-    },
-    "model": "claude-sonnet-5-5",
-    "provider": "anthropic",
-    "raw_authoring_response": {
-      "assumptions": [
-        "The text defines the exertion phase as the roll-in toward the feet with a second contraction at the top. The image order only shows the two endpoints of the same cycle, so it is not treated as a conflict.",
-        "The movement is bilateral with the arms kept nearly straight and no kneeling.",
-        "Lumbar flexion is modest because the instructions say to keep a slight back arch, but the abs are the intended driver.",
-        "The feet stay planted and the hands stay on the barbell, so the chain is treated as closed.",
-        "The roll-out (eccentric) phase is modeled only through the anti-extension spine demand."
-      ],
-      "classification": "supported",
-      "classification_reasons": [
-        "The exercise is a bilateral barbell roll-out and roll-in with the hands on a rolling barbell and the feet on the floor.",
-        "The instructions describe the exertion phase as rolling the barbell toward the feet with hips lifting and abs contracting, which maps to glenohumeral extension, hip flexion and lumbar flexion in the available vocabulary.",
-        "The two frames show the hinged pike end position and the extended plank-like position, so the setup and path are clear enough."
-      ],
-      "field_confidence": {
-        "input_mode": "high",
-        "kinetic_chain_type": "medium",
-        "laterality": "high",
-        "primary_joint_actions": "medium",
-        "stabilization_demands": "medium",
-        "variant": "medium"
-      },
-      "proposed_definition": {
-        "additional_movement_families": [],
-        "aliases": [
-          "Barbell Rollout",
-          "Barbell Ab Roll-Out",
-          "Standing Barbell Rollout"
-        ],
-        "id": "exercise.barbell_ab_rollout.feet_supported",
-        "input_mode": "repetitions",
-        "kinematic_profile": {
-          "kinetic_chain_type": "closed_chain",
-          "primary_joint_actions": [
-            {
-              "joint": "lumbar_spine",
-              "movement": "flexion"
-            },
-            {
-              "joint": "hip_joint",
-              "movement": "flexion"
-            },
-            {
-              "joint": "glenohumeral_joint",
-              "movement": "extension"
-            }
-          ],
-          "stabilization_demands": [
-            "anti_extension_spine",
-            "intra_abdominal_pressure",
-            "scapular_stabilization",
-            "elbow_stability",
-            "grip",
-            "wrist_stability"
-          ]
-        },
-        "laterality": "bilateral",
-        "name": "Barbell Ab Rollout",
-        "primary_movement_family": "trunk_flexion",
-        "variant": "feet_supported"
-      },
-      "questions_requiring_context": []
-    },
-    "request_id": "",
-    "requested_model": "claude-sonnet-5-5",
-    "response_id": "msg_011CgoxBWbRzTV3EhiKYJ4Zg",
-    "served_by_fallback": false,
-    "stop_reason": "end_turn",
-    "usage": {
-      "cache_creation_input_tokens": 0.0,
-      "cache_read_input_tokens": 15842.0,
-      "input_tokens": 1852.0,
-      "output_tokens": 2047.0
-    }
-  },
-  "saved_at_unix": 1794072065.76596,
-  "source_id": "Barbell_Ab_Rollout",
-  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
-  "status": "definition_candidate",
-  "validation_errors": []
+  "saved_at_unix": 1794179292.1705976
 }

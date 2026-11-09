@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "e30cf24e82724b56d156bf265ca39fbf718361a2d7f7683e240e30fe8fa215c5",
+  "status": "accepted",
+  "updated_at_unix": 1794184886.76067,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184872.76513,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "hip_hinge is a loose catalog label. The exercise is a prone isometric hold with hip extension, closer to a back-extension or superman pattern than a standing hinge. It does not change the traced muscles and is not plainly wrong.",
+          "suggested_correction": "Consider adding core_anti_extension, or hip_bridge as the closest hip-extension family, alongside or in place of hip_hinge in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "Open_chain is debatable because the hands are fixed on the floor while the legs are free. It is a catalog label only and is defensible as written.",
+          "suggested_correction": "No change needed. If preferred, document the mixed chain in the assumptions."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[1]",
+          "finding": "Shoulder flexion is credited as a primary action although the arms are held overhead against body weight, closer to a held position than a moving action. The deltoid and clavicular pectoralis profile is still plausible for the isometric reach.",
+          "suggested_correction": "Optionally add shoulder_position_hold in a future revision to represent the held overhead arm position more explicitly."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRaBfSnxf5CQzs2t2rU",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8771.0,
+          "output_tokens": 1634.0
+        }
+      },
+      "summary": "The frozen definition matches the source frames and instructions: prone on a ball, hands walked forward on the floor, legs lifted straight, held as a static position. Hip extension as the primary action correctly puts the glutes and hamstrings at the top of the profile. The knee and elbow extension assists produce credible synergist quads and triceps. Shoulder flexion, scapular stabilization and wrist stability fit the forward-reaching hands that carry body weight. The spinal extensors appear through anti_flexion_spine and the trunk flexors through pelvic_alignment, which fits a trunk held rigid over the ball. No biomechanically material claim is unsupported or contradicted."
+    }
+  }
+}

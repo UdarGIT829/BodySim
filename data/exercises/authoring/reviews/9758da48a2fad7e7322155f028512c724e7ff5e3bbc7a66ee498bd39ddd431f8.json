@@ -1,0 +1,68 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "9758da48a2fad7e7322155f028512c724e7ff5e3bbc7a66ee498bd39ddd431f8",
+  "status": "changes_requested",
+  "updated_at_unix": 1794183027.0001,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183009.37949,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The assumption that the elbows hold a fixed, slightly bent angle is contradicted by the frames. The start frame shows extended arms and the bottom frame shows markedly flexed elbows, so the elbow extends on the return. The definition lists no elbow action. The triceps lateral and long heads are therefore explicit zeros and the medial head gets only 0.07 from a joint-integrity demand. Triceps work through this range is real but minor next to the pec drive.",
+          "suggested_correction": "Add elbow_joint/extension with emphasis assist, so the triceps heads become synergists without competing with the pecs. Do not make it primary."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Rotator cuff and humeral head control are not credited, although the shoulder is loaded in a long-lever, wide-arm position. Infraspinatus, supraspinatus and teres minor are zeros.",
+          "suggested_correction": "Consider adding humeral_head_stabilization or glenohumeral_stabilization in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The horizontal_push label is a reasonable closest fit for a push-up-position chest fly. The exercise is really a fly, and no family labels it exactly.",
+          "suggested_correction": "Keep horizontal_push, or consider whether an adduction-oriented family would fit better if one is added."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "emphasis": "assist",
+          "joint": "elbow_joint",
+          "movement": "extension",
+          "op": "add_joint_action",
+          "sides": "working"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPCq2epJuNoz2S3Wa2Y",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9283.0,
+          "output_tokens": 2096.0
+        }
+      },
+      "summary": "The core pattern is supported: bilateral glenohumeral horizontal adduction drives the pecs as primary movers, with the deltoid, abdominal pec, coracobrachialis and short head of biceps as synergists, and a plank-like trunk, hip and hand-support pattern. One assumption is contradicted by the frames. The elbows are not held at a fixed angle: they are nearly straight in the start frame and flexed to roughly 90 degrees in the bottom frame. As a result the elbow extensors are almost entirely absent from the tracer output, and the definition cannot express the elbow extension needed to return the bars."
+    }
+  }
+}

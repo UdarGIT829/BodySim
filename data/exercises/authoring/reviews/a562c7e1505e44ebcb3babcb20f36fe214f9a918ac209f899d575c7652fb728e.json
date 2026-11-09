@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "a562c7e1505e44ebcb3babcb20f36fe214f9a918ac209f899d575c7652fb728e",
+  "status": "accepted",
+  "updated_at_unix": 1794183696.75682,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183683.87482,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Toe flexion (the forefoot pressing through the toes at the top of the rise) is not credited. This is minor and optional. Plantarflexion already reaches flexor hallucis longus and flexor digitorum longus as synergists.",
+          "suggested_correction": "Optionally add toe_joints/flexion with emphasis assist. It is not needed for acceptance."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization and postural_sway_control overlap in the lower leg, and the hip, quadriceps and trunk extensors get small stabilizer credit from standing. The result is plausible and low-weight, so it does not misrepresent the exercise.",
+          "suggested_correction": "No change required."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[1]",
+          "finding": "Assist elbow flexion is a reasonable way to credit the isometric hold of the handles against band tension. brachialis and the biceps heads appear as synergists even though the elbows do not move. This follows the held-joint convention.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQ4YjGi3gUSGUXfUytp",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10905.0,
+          "output_tokens": 1476.0
+        }
+      },
+      "summary": "The definition fits the source. It shows a bilateral, standing, closed-chain calf raise with the feet on the band and the handles held at the shoulders. Ankle plantarflexion is the only moving joint and is correctly primary on both sides, so soleus and both gastrocnemius heads are the primary movers. The held rack position is credited as the guidance describes: assist elbow flexion for the elbow flexors resisting band tension, shoulder_position_hold for the deltoids, and grip and wrist_stability for the loaded hands. The tracer output has no materially wrong pattern, and all stabilizer coefficients are low. Frame 1 shows the arms down while the band is gripped, which is setup. Frame 2 shows the rack position with the heels raised, matching the instructions."
+    }
+  }
+}

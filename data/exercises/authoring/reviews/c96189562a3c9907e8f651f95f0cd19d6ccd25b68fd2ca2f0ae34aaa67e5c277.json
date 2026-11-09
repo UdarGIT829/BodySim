@@ -1,0 +1,63 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c96189562a3c9907e8f651f95f0cd19d6ccd25b68fd2ca2f0ae34aaa67e5c277",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105045.46477,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105027.15425,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions[2] (scapulothoracic_joint/retraction)",
+          "finding": "Scapular retraction is in the definition as a full-weight action, so the trapezius transverse part (1.0), rhomboid major (0.9) and rhomboid minor (0.7) become primary movers, and latissimus dorsi and the ascending trapezius pick up synergist credit. The source cue ('pull shoulder blades together' after the bar passes the knees) is a brief lockout adjustment, and the assumptions call it 'a minor action'. The frames show the arms hanging with the bar carried by hip and knee extension. The coefficients contradict the stated intent and overstate upper-back work relative to the glutes, hamstrings and quadriceps.",
+          "suggested_correction": "Mark the scapulothoracic retraction action as emphasis 'assist' (0.4 x table weight), so the rhomboids and transverse trapezius drop to synergist or lower, or remove it and rely on scapular_retraction_stability for the isometric hold. Keep it only if the lockout retraction is a deliberate part of the movement."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "Listing 'squat' alongside 'hip_hinge' is arguable. The conventional deadlift is predominantly a hinge, and the knee extension in the first pull does not make it a squat pattern. The frames show a high-hip hinged start.",
+          "suggested_correction": "Consider listing only 'hip_hinge', or justify the squat component explicitly."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The erector spinae (longissimus thoracis, iliocostalis lumborum) are modeled only as isometric stabilizers at about 0.3. This is defensible, since the spine is held neutral and not moved, and it is largely a tracer limitation. Lats and rotator cuff get little credit, because the demands that keep the bar close and the arms packed (for example humeral_head_stabilization) are not used.",
+          "suggested_correction": "Optionally add humeral_head_stabilization to represent lat and cuff work keeping the bar close; otherwise leave as is."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands (postural_stabilization, knee_joint_stability)",
+          "finding": "These demands add many low-coefficient stabilizers such as gracilis, popliteus, tensor fasciae latae and gastrocnemius, which is acceptable but diffuse for a bilateral deadlift where the knees only extend.",
+          "suggested_correction": "Keep them only if they are judged real demands; they are not materially wrong."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011Cgpg6RKwPoZktchsxNLbw",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 10929.0,
+          "output_tokens": 2190.0
+        }
+      },
+      "summary": "The identity, bilateral laterality, closed chain, hip-hinge family and the hip and knee extension actions are supported by the frames (hip-hinged start with the bar over midfoot, upright lockout with the bar at the thighs). However, scapulothoracic retraction is entered as a full primary action. The definition's own assumptions call it a minor lockout cue, but the tracer scores it at full weight, making transverse trapezius (1.0), rhomboid major (0.9) and rhomboid minor (0.7) primary movers on par with gluteus maximus and the quadriceps. The frames show the arms hanging and the scapulae mostly held, so this is a materially wrong muscle pattern that a better definition would fix."
+    }
+  }
+}

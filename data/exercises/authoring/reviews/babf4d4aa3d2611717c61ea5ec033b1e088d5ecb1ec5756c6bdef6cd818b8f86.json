@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "babf4d4aa3d2611717c61ea5ec033b1e088d5ecb1ec5756c6bdef6cd818b8f86",
+  "status": "accepted",
+  "updated_at_unix": 1794183964.49303,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183954.2662,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "scapular_stabilization is a broad choice that engages serratus anterior, pectoralis minor and the trapezius parts. Holding the bar close with straight arms would more specifically involve the lats and the scapular retractors. The lats have no credited route in this definition, so their involvement is omitted. This is a modest imprecision, not a materially wrong pattern.",
+          "suggested_correction": "In a future revision, consider an assist-level glenohumeral_joint/extension for the lats and scapular_retraction_stability, or humeral_head_stabilization, in place of the broad scapular_stabilization demand."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The labels olympic_lift and hip_hinge are acceptable. The movement has a strong knee-extension and jumping component, so squat or jump_and_throw could be argued. Catalog labels do not change the traced muscles.",
+          "suggested_correction": "No change required; keep olympic_lift as the primary family."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQQV4Jnny5HS3bTom3A",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10047.0,
+          "output_tokens": 1134.0
+        }
+      },
+      "summary": "The definition fits the source instructions and frames. This is a bilateral barbell pull from the floor with straight arms and a constant back angle, followed by explosive triple extension. Hip and knee extension are primary, which makes the glutes, hamstrings and quadriceps the movers. Ankle plantarflexion is correctly marked as an assist. The spine is credited through anti-flexion and bracing, and the hands carry the load through grip. The arms stay straight and no shrug is cued, so omitting elbow flexion and scapular elevation is supported. The traced pattern is plausible, with no materially wrong muscle exposed."
+    }
+  }
+}

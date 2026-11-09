@@ -1,0 +1,77 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "4f16bf441f5123cc452b2e8dfd3bcbe88b1b7eac21c0760a14a24390afb59f48",
+  "status": "changes_requested",
+  "updated_at_unix": 1794184043.14412,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184020.50684,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The strict press moves the humerus overhead in the scapular plane, but only glenohumeral flexion is listed. The acromial deltoid, a major mover in an overhead press, is a weak 0.2 synergist, and supraspinatus has no involvement. The abduction component is missing.",
+          "suggested_correction": "Add glenohumeral_joint/abduction as primary with sides working, so the acromial deltoid and supraspinatus are credited as movers."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The rotator cuff (infraspinatus, subscapularis, teres minor, supraspinatus) is traced as explicit zero, yet it centres the humeral head under a heavy bar during the rack and overhead press. No demand reaches these muscles.",
+          "suggested_correction": "Add the glenohumeral_stabilization demand so the cuff is engaged as stabilizers."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "The bar is a free implement and the feet leave the floor in the pull, so open_chain is arguable. Closed_chain is defensible because the lifter stays in place, and this label does not change the traced muscles.",
+          "suggested_correction": "Keep closed_chain or reconsider it in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The latissimus dorsi, which keeps the bar close during the pull, and the scapular upward-rotation muscles during the press are modeled only lightly. This is a minor calibration question and not a clear error.",
+          "suggested_correction": "Optionally add glenohumeral extension as assist for the pull if the bar-path cue should be credited."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "emphasis": "primary",
+          "joint": "glenohumeral_joint",
+          "movement": "abduction",
+          "op": "add_joint_action",
+          "sides": "working"
+        },
+        {
+          "demand": "glenohumeral_stabilization",
+          "op": "add_stabilization_demand"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQVNDC8NzRgqDDv2YHe",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 13878.0,
+          "output_tokens": 2942.0
+        }
+      },
+      "summary": "The pull phase is well modeled: hip and knee extension are primary, the calf and shrug are assist, and grip, wrist, spine and bracing demands are present. The overhead press is under-credited. The lift is modeled only as glenohumeral flexion and elbow extension, so the acromial deltoid is a 0.2 synergist and the whole rotator cuff is an explicit zero. A loaded overhead press recruits the mid deltoid and the cuff (supraspinatus, infraspinatus, subscapularis, teres minor), which the vocabulary can express."
+    }
+  }
+}

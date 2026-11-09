@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "6aba9f1dc85f4a35ef0f606eb15fd450c0779a7e0dd28f60f8060b52ff1220b8",
+  "status": "accepted",
+  "updated_at_unix": 1794179202.89296,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179190.28041,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "loaded_carry is a reasonable but imperfect catalog label for a backward sled drag. It does not change the traced muscles, and the assumptions state the choice openly.",
+          "suggested_correction": "Optionally add horizontal_pull as a secondary family if the catalog wants to reflect the pulling action of the arms. This is not required."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[glenohumeral_joint/extension]",
+          "finding": "The tracer's glenohumeral extension weights also give small synergist credit to the pectoralis major abdominal and sternocostal heads. This comes from the muscle-action table, which cannot be changed by any choice of actions, emphasis or demands. The values are low (0.16 to 0.2) and do not materially distort the pattern.",
+          "suggested_correction": "None needed; this is a tracer limitation."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJMJjfPjGvU41XJzt5L",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 12802.0,
+          "output_tokens": 1416.0
+        }
+      },
+      "summary": "The frozen revision matches the source instructions and both frames. The lifter walks backward in a bilateral stance, leaning back and driving through short steps while holding two straps attached to a sled. Knee extension is primary, so the quadriceps are the only primary movers. Hip extension and ankle plantarflexion are marked assist, so the glutes, hamstrings and calves appear as synergists. The arm and back pattern now reflects the load-bearing role of the arms. Elbow flexion, shoulder extension and scapular retraction are assist actions, and scapular_retraction_stability, grip and wrist_stability are listed as demands. The tracer therefore engages the biceps, brachialis, lats, teres major, rhomboids, trapezius and forearm flexors, which addresses the earlier council feedback. The earlier shoulder_position_hold demand, which loaded the shoulder flexors, has been removed. Spinal control is modeled with anti_flexion_spine and postural_stabilization, and no trunk motion is claimed. Laterality is bilateral with no one-sided limbs, which fits the symmetric two-handed grip and stance. No blocking problems remain."
+    }
+  }
+}

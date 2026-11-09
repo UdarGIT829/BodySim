@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "58999cc45ba51578d322242ccf127b6d33d8e439c1e2004ec6975a968a8cddcb",
+  "status": "accepted",
+  "updated_at_unix": 1794184017.56051,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184001.16305,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.classification_reasons",
+          "finding": "Neither source frame shows the jerk, so the jerk phase (dip, drive, split catch, lockout) rests on the written instructions alone. This is stated openly and the text is unambiguous.",
+          "suggested_correction": "No change needed. A future revision could cite a jerk frame if one becomes available."
+        },
+        {
+          "field_path": "proposed_definition.laterality",
+          "finding": "The split-stance catch of the jerk is modeled as bilateral with both legs doing the same actions. The front/back leg asymmetry is brief and cannot be separated from the squat-based clean in a single whole-lift definition, so this is a reasonable simplification.",
+          "suggested_correction": "No change needed. A split-jerk-only variant could use leg-specific modeling."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[scapulothoracic_joint/elevation]",
+          "finding": "The shrug is marked primary, so the descending trapezius reaches a coefficient of 1.0. The instructions describe an aggressive shrug, which makes this defensible, though it arguably overstates the trapezius relative to the hip and knee drive.",
+          "suggested_correction": "Optionally consider assist emphasis if reviewers judge the shrug to be accompanying rather than load-moving."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The labels olympic_lift, squat and vertical_push are acceptable catalog labels. They do not affect the traced muscles.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQTw3LU9pBhKMWRzJFQ",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 15532.0,
+          "output_tokens": 2145.0
+        }
+      },
+      "summary": "The definition is supported by the source. The frames show the clean setup (bar at the shins, hips low) and the front-rack catch, and the written steps cover the pulls, the third-pull shrug and elbow turnover, the front-squat recovery, and the jerk drive to overhead lockout. Hip, knee and ankle extension, scapular elevation, shoulder flexion and elbow extension are weighted sensibly: the calf, elbow-flexion and upward-rotation actions are correctly marked assist. The demands match where the load sits: grip and wrist_stability for the hands, shoulder_position_hold for the rack, anti_flexion_spine for a held back angle, and anti_extension_spine and intra_abdominal_pressure for bracing. The resulting muscle pattern is plausible: glutes, quadriceps and hamstrings, upper trapezius and levator scapulae, anterior deltoid, triceps and the core stabilizers are engaged, and the rotator cuff is covered by glenohumeral_stabilization. No biomechanically material claim is unsupported or contradictory."
+    }
+  }
+}

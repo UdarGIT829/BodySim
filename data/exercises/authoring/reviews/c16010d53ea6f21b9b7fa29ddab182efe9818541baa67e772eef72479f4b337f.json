@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c16010d53ea6f21b9b7fa29ddab182efe9818541baa67e772eef72479f4b337f",
+  "status": "accepted",
+  "updated_at_unix": 1794182836.28282,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182825.0918,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[2]",
+          "finding": "Assist-level knee flexion credits the hamstrings at about 0.32, plus the gastrocnemius heads, popliteus and plantaris at low coefficients. The knee angle is held isometrically, so some hamstring and gastrocnemius activity is plausible. The low-end calf and popliteus coefficients are a side effect of how the tracer weights knee flexion and are not a definition error.",
+          "suggested_correction": "No change required. A future revision could omit the knee flexion assist if the catalog wants the profile focused on the abdominals and hip flexors."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[0]",
+          "finding": "The cue emphasizes the lower abs and the posterior pelvic roll. Psoas at 1.0 and iliacus at 0.9 as primary movers is a defensible but slightly hip-flexor-heavy reading of a reverse-crunch pattern, since the hip flexors also drive the knees toward the chest.",
+          "suggested_correction": "No change required. This is a judgment call on emphasis."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrNyFBKj6k68ANyHRDnJ",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 5451.0,
+          "output_tokens": 1380.0
+        }
+      },
+      "summary": "The definition matches the source text and frames. The athlete lies supine with the legs free in the air, the knees held bent at about 75 degrees, and both legs moving together. The knees are drawn toward the chest and the pelvis rolls backward off the floor. Primary hip flexion and primary lumbar flexion (posterior pelvic tilt) are both supported, and they produce a sensible primary pattern: rectus abdominis, psoas, iliacus and rectus femoris. The obliques appear as synergists, as expected for lumbar flexion. The knee bend is held isometrically, so the assist emphasis is reasonable. The open-chain, bilateral and family labels are appropriate. The empty stabilization list and empty one_sided_limbs are correct because the arms are unloaded and both legs work."
+    }
+  }
+}

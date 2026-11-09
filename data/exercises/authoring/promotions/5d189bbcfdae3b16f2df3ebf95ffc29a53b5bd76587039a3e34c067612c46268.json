@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "5d189bbcfdae3b16f2df3ebf95ffc29a53b5bd76587039a3e34c067612c46268",
+  "revision_id": "Body_Tricep_Press@5d189bbcfdae",
+  "exercise_id": "exercise.body_tricep_press.bar_rack_incline",
+  "source_catalog_id": "catalog.free_exercise_db.Body_Tricep_Press",
+  "mapped_muscles": 112,
+  "promoted_at_unix": 1794183007.4166687,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "9588b5057f9980b62c67aeeb0897ee7f56736ff41afd37f0f29ea6d511df2e91",
+    "data/exercises/engagement_profiles.json": "fbf2dbf5bd13d10096c5cd423f1357f92bd67f8de6433637b3492d4436258bcf",
+    "data/exercises/catalog/candidates.json": "f1cea3e779ce0f0f8bd4798e864842de173060d824b07200f529b0a80f3f9532",
+    "data/exercises/sources/free_exercise_db_media.json": "c0c4e8a25874526d61ec12f9fc58a02b829c38285d0702cbba8fcc146a29b21d"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "c6c3ce19c8000241dde598d9725ce2b82ee0ef074788f17382fae5a5f5898251",
+    "data/exercises/engagement_profiles.json": "da92b9e21d2eb65ac8ffd6dab1e864eb4b56c123aeb75f7ffe977204b24e835a",
+    "data/exercises/catalog/candidates.json": "39370a105b9424357438a1a3eb5444573380924c3d5a4f17b8a4ff1dc9b31677",
+    "data/exercises/sources/free_exercise_db_media.json": "74fca262c9aaf9ad733e35d53364d080ed76b50c0e2fad8d4a4b18efd9d620f9"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "8ae6500a91a06d0f6f6eeeba2384154db89d5f07fd31c8495ddb397fe20ea4f3",
+  "status": "accepted",
+  "updated_at_unix": 1794184134.32882,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184124.69405,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.stabilization_demands[postural_stabilization]",
+          "finding": "This demand adds many low-coefficient stabilizers in the trunk, hips, thighs and calves. This is a table-driven spread that fits upright standing, and no choice of actions or demands would change it without dropping the demand.",
+          "suggested_correction": "None required. Treat the low stabilizer coefficients as expected background standing work."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist[superficial_head_of_pronator_teres]",
+          "finding": "Pronator teres appears as a minor synergist (0.2) because the table assigns it a small elbow flexion weight. This comes from the table, and the supinated grip is held rather than moved, so no action choice would change it.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQd3hvsA87Y8QLJ6ajc",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9264.0,
+          "output_tokens": 1029.0
+        }
+      },
+      "summary": "The definition matches the source. It is a standing, bilateral, open-chain EZ-bar curl with a narrow supinated grip and band resistance anchored under the feet. Both frames show the upper arms staying beside the torso while the bar moves from thigh level to shoulder level. Elbow flexion as the only primary joint action correctly yields brachialis, both biceps heads and brachioradialis as primary movers. Grip, wrist_stability and shoulder_position_hold fit a load held in the hands against an upper arm that stays still. Postural_stabilization is a reasonable standing demand. The elbow_flexion family and open_chain label are appropriate. The tracer output has no materially wrong muscle pattern."
+    }
+  }
+}

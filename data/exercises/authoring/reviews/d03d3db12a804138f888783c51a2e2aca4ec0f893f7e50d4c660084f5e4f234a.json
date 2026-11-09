@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "d03d3db12a804138f888783c51a2e2aca4ec0f893f7e50d4c660084f5e4f234a",
+  "status": "accepted",
+  "updated_at_unix": 1794184149.41237,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184137.38597,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.primary_joint_actions[glenohumeral_joint/horizontal_adduction]",
+          "finding": "Marking shoulder horizontal adduction as assist keeps the pectoralis major at about 0.4 or below. A close-grip press still loads the chest meaningfully, so this is a judgment call. It is defensible given the triceps-led instruction cue and the tucked elbows.",
+          "suggested_correction": "No change required. A future revision could reconsider the weighting only if evidence shows chest involvement comparable to the triceps."
+        },
+        {
+          "field_path": "assumptions[0]",
+          "finding": "The bench in the frames looks slightly inclined, while the instructions say flat. The difference does not materially change the traced muscle pattern.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQdyN2FbGjUKSgN3gYg",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8243.0,
+          "output_tokens": 1299.0
+        }
+      },
+      "summary": "The definition matches the source. The instructions and both frames show a bilateral supine narrow-grip EZ-bar press from over the torso to the lower chest, with the elbows in and the triceps pushing the bar back up. Elbow extension is the primary action, so the three triceps heads come out as primary movers. Shoulder horizontal adduction and flexion are marked assist, which fits the instructed tucked elbows and the triceps-led cue. They still bring in the pectoralis major, anterior deltoid and coracobrachialis as synergists. Protraction as assist adds serratus anterior and pectoralis minor, which is acceptable. Grip and wrist_stability are correctly placed because the bar is held in the hands. scapular_retraction_stability correctly covers the scapulae pinned against the bench. Both sides are credited and one_sided_limbs is empty, as for a bilateral lift. The labels (open_chain, bilateral, horizontal_push plus elbow_extension) are reasonable."
+    }
+  }
+}

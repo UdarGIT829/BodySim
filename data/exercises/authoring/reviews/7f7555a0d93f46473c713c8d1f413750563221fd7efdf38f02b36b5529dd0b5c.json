@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "7f7555a0d93f46473c713c8d1f413750563221fd7efdf38f02b36b5529dd0b5c",
+  "status": "accepted",
+  "updated_at_unix": 1794184460.49859,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184450.69042,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.primary_joint_actions",
+          "finding": "The decline angle shifts emphasis toward the lower pectoralis (abdominal part). The tracer only credits it at 0.5 through horizontal adduction, and no available action would reasonably raise it, so this reflects a tracer limitation rather than a definition error.",
+          "suggested_correction": "None required."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "Optional: intra_abdominal_pressure or anti_extension_spine could be added for trunk bracing on the bench. The frozen definition's assumption of moderate bracing is reasonable, so the omission is not an error.",
+          "suggested_correction": "Leave as is, or consider a light bracing demand in a future revision."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrR35V1CMQDCWkKckkpx",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8870.0,
+          "output_tokens": 1156.0
+        }
+      },
+      "summary": "The definition fits the source instructions and frames: a bilateral barbell press on a fixed decline bench with the legs secured. The primary actions are glenohumeral horizontal adduction and elbow extension, which make the pectoralis major heads and the three triceps heads primary, with the anterior deltoid as a synergist. Scapular protraction is an assist, which keeps serratus anterior and pectoralis minor as synergists. The demands match where the load is held: grip and wrist_stability for the bar in the hands, scapular_retraction_stability for the scapulae set against the bench, and glenohumeral_stabilization for the rotator cuff. The legs are secured and bracing is moderate, so omitting leg demands and intra_abdominal_pressure is defensible. The open_chain label and the horizontal_push family are appropriate. Laterality is bilateral with empty one_sided_limbs, as expected for a symmetric two-arm lift."
+    }
+  }
+}

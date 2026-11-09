@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "50c9100a1d8df816ac105e7497064ca482edcd968584c103db5609e74aa5c0d6",
+  "revision_id": "Chest_Push_from_3_point_stance@50c9100a1d8d",
+  "exercise_id": "exercise.medicine_ball_chest_push.three_point_stance",
+  "source_catalog_id": "catalog.free_exercise_db.Chest_Push_from_3_point_stance",
+  "mapped_muscles": 140,
+  "promoted_at_unix": 1794183850.7839637,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "4e5e1bf50008083d39a7f6f380f0e581ed4c564980a1c0c158ffbb62bdb15277",
+    "data/exercises/engagement_profiles.json": "43403934464ed06b3a25bb29860fad11f9a0e3a56195f4b807d73b45151fd293",
+    "data/exercises/catalog/candidates.json": "6198c225177b5f568ed7e3dfbf491fc51dcaa16798ad116a935fe2953ace2e92",
+    "data/exercises/sources/free_exercise_db_media.json": "d30279179c5fa748c2e0bbc1e2bd7d25814e15d209a8f2f1aa5ca048a7aa4a2a"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "e08910ba58c4e7036ea8a86fae8c84c4b82cdb406748e752e408e2708e828dd3",
+    "data/exercises/engagement_profiles.json": "52d29bde113507b7ca31969bc1ed9105aa267f5a52908c3a61b7304bc619c928",
+    "data/exercises/catalog/candidates.json": "a5554b417c0dc52cecf272339372ab45236111511143d34578ad71a722bc8541",
+    "data/exercises/sources/free_exercise_db_media.json": "1d279e224edd53033da1b19d957a7708b7405041e5075bf36df2bc392cadb339"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "e5eee686ebdf8c0836e22d9c6620f684a11b3e92dfa0eb0c5b2665e42adeff3a",
+  "status": "accepted",
+  "updated_at_unix": 1794179033.858,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179003.70116,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The lateral and long heads of the triceps are traced as zero, although they do some isometric work holding the elbow locked out under the overhead load. The existing elbow_joint_integrity demand credits only the medial head and anconeus at a very low coefficient. A bony lockout needs little triceps effort, so this is minor.",
+          "suggested_correction": "Optionally add elbow_joint/extension as an assist action with sides working if the triceps should register more visibly."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The frontal-plane pelvic shift over a single loaded stance side and the standing leg posture are not credited. Gluteus medius is only a 0.2 synergist, and the quadriceps and calves are absent because the knees stay nearly straight.",
+          "suggested_correction": "Optionally add pelvic_leveling_frontal and/or postural_stabilization in a future revision to reflect the standing and hip-shift demands."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The labels hip_hinge and trunk_lateral_flexion are acceptable. core_rotation could also apply because of the trunk rotation toward the floor. Labels do not change the traced muscles.",
+          "suggested_correction": "Optionally add core_rotation as a secondary family."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJ7ZMMUSQfTRRv4xFKi",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 18256.0,
+          "cache_read_input_tokens": 0.0,
+          "input_tokens": 8891.0,
+          "output_tokens": 2863.0
+        }
+      },
+      "summary": "The definition fits a standing one-arm overhead kettlebell windmill. The source text and frames show the kettlebell locked out overhead on one arm, the feet turned out, a push of the hips toward the loaded side into a deep side hinge, and a return to upright. Unilateral laterality with one_sided_limbs [arm] keeps the free arm unloaded, which fixes the earlier demotion. Hip extension with sides both credits the glutes and hamstrings on both legs. Lateral flexion credits the quadratus lumborum, obliques and erectors, and rotation is correctly a minor assist. The overhead-arm demands (shoulder_position_hold, glenohumeral_stabilization, scapular_stabilization, elbow_joint_integrity, grip, wrist_stability) are limited to the working side. The resulting tracer pattern is plausible and not materially wrong. The remaining gaps are minor."
+    }
+  }
+}

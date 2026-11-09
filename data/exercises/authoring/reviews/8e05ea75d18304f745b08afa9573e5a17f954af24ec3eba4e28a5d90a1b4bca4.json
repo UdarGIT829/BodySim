@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "8e05ea75d18304f745b08afa9573e5a17f954af24ec3eba4e28a5d90a1b4bca4",
+  "status": "accepted",
+  "updated_at_unix": 1794183574.0362,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183562.34901,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The assumptions say the glenohumeral joint is held still against the load, but no demand credits shoulder or rotator-cuff isometric work. With arms hanging vertically and the load acting along the arm, this demand is small, so omitting it does not make the tracer output materially wrong.",
+          "suggested_correction": "Optionally consider glenohumeral_stabilization in a future revision if the authors want the minor rotator-cuff and deltoid hold credited. It is not required."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization spreads low-level stabilizer coefficients (0.07-0.28) across many leg and trunk muscles. This is a reasonable standing-posture credit, but it makes the stabilizer list long relative to the isolation movement.",
+          "suggested_correction": "No change needed. This follows how the tracer handles postural_stabilization for standing exercises."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPub7PUK5PDGZShyE3Z",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9077.0,
+          "output_tokens": 1433.0
+        }
+      },
+      "summary": "The definition fits the source instructions and frames: a standing, bilateral, straight-bar low-pulley shrug with extended arms, where the motion is scapular elevation. Scapulothoracic elevation as the only primary action correctly makes the descending trapezius (1.0) and levator scapulae (0.7) primary movers, with the rhomboids as synergists (0.4). The elbows stay extended and the glenohumeral joint does not move, so omitting elbow flexion, glenohumeral and lumbar actions is correct. Grip and wrist_stability reflect the bar held in the hands. Postural_stabilization reflects standing, and elbow_joint_integrity reflects the locked elbows. The bilateral laterality, empty one_sided_limbs, open_chain label and scapular_elevation family are appropriate. The resulting profile has no materially wrong muscle pattern."
+    }
+  }
+}

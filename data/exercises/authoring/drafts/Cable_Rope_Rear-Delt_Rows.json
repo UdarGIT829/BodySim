@@ -1,0 +1,100 @@
+{
+  "additional_context": "",
+  "authoring_response": {
+    "assumptions": [],
+    "classification": "ambiguous",
+    "classification_reasons": [
+      "The instructions and the demonstration images conflict on setup. The text says to sit at a low pulley row station with the hips slid back and the knees slightly bent. The frames show a standing lifter leaning back, with the cable running up to a high pulley.",
+      "The setup changes the variant identity and the stabilization demands. A seated lifter does not need standing postural control, but a standing, leaning lifter does. It also changes the pull line and the base of support.",
+      "The cable height and body position are not resolved by the metadata, so the variant slug cannot be set faithfully."
+    ],
+    "field_confidence": {
+      "input_mode": "high",
+      "kinetic_chain_type": "medium",
+      "laterality": "high",
+      "primary_joint_actions": "medium",
+      "stabilization_demands": "low",
+      "variant": "low"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "cable_rope_rear-delt_rows"
+      ],
+      "id": "exercise.cable_rope_rear_delt_rows.standard",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "primary_joint_actions": [],
+        "stabilization_demands": []
+      },
+      "laterality": "bilateral",
+      "movement_families": [],
+      "name": "Cable Rope Rear-Delt Rows",
+      "variant": "standard"
+    },
+    "questions_requiring_context": [
+      "Is the intended variant seated at a low pulley, as the text says, or standing and leaning back at a high pulley, as the frames show?",
+      "If standing, is the pulley set high (above the hands) and are the feet planted flat on the floor with the lifter leaning back?",
+      "Should the definition follow the written instructions or the demonstration images where they differ?"
+    ]
+  },
+  "candidate_trace_report": {},
+  "catalog_id": "catalog.free_exercise_db.Cable_Rope_Rear-Delt_Rows",
+  "format_version": 1,
+  "provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1,
+      "frame_count": 2,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Cable_Rope_Rear-Delt_Rows/0.jpg",
+        "Cable_Rope_Rear-Delt_Rows/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [],
+      "classification": "ambiguous",
+      "classification_reasons": [
+        "The instructions and the demonstration images conflict on setup. The text says to sit at a low pulley row station with the hips slid back and the knees slightly bent. The frames show a standing lifter leaning back, with the cable running up to a high pulley.",
+        "The setup changes the variant identity and the stabilization demands. A seated lifter does not need standing postural control, but a standing, leaning lifter does. It also changes the pull line and the base of support.",
+        "The cable height and body position are not resolved by the metadata, so the variant slug cannot be set faithfully."
+      ],
+      "field_confidence": {
+        "input_mode": "high",
+        "kinetic_chain_type": "medium",
+        "laterality": "high",
+        "primary_joint_actions": "medium",
+        "stabilization_demands": "low",
+        "variant": "low"
+      },
+      "proposed_definition": null,
+      "questions_requiring_context": [
+        "Is the intended variant seated at a low pulley, as the text says, or standing and leaning back at a high pulley, as the frames show?",
+        "If standing, is the pulley set high (above the hands) and are the feet planted flat on the floor with the lifter leaning back?",
+        "Should the definition follow the written instructions or the demonstration images where they differ?"
+      ]
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgrLsXUhRDboF2Ja3rmLo",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 16554.0,
+      "input_tokens": 1916.0,
+      "output_tokens": 1240.0
+    }
+  },
+  "saved_at_unix": 1794181184.8864,
+  "source_id": "Cable_Rope_Rear-Delt_Rows",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "authoring_draft",
+  "validation_errors": [
+    "proposed_definition: must be null unless classification is supported",
+    "classification: ambiguous proposals cannot advance to definition_candidate"
+  ]
+}

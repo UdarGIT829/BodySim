@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c71f8a865b0cc913833b3df1290c2d6be7089ff807bcfb20a9787b2013f071fc",
+  "status": "accepted",
+  "updated_at_unix": 1794184506.03231,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184494.64433,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The decline angle shifts emphasis toward the lower (abdominal) pectoralis major fibers, which the tracer shows only as a synergist at 0.5 via horizontal adduction. This is a modest emphasis nuance, not a materially wrong pattern. The frames do not clearly show a distinct adduction component.",
+          "suggested_correction": "Optionally consider an assist-level glenohumeral adduction action in a future revision if decline-specific lower-pec emphasis is wanted. This is not required."
+        },
+        {
+          "field_path": "proposed_definition.stabilization_demands",
+          "finding": "The stabilization demands carry medium confidence. Grip, wrist and cuff demands are standard for a dumbbell press, but their relative weights are tracer-determined and cannot be tuned further.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrR6KTEF8EubTe6rvq7D",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8715.0,
+          "output_tokens": 1296.0
+        }
+      },
+      "summary": "The definition fits the source instructions and frames: a bilateral dumbbell press on a decline bench, pronated grip, from the chest to arms locked out over the chest. Shoulder horizontal adduction and elbow extension are correctly primary. Scapular protraction is a reasonable assist for the lockout. Scapular retraction stability covers the bench shelf, and grip and wrist stability cover the loads held in the hands. Glenohumeral stabilization credits the rotator cuff. The tracer output is plausible: both pectoralis major heads and all three triceps heads are primary, the clavicular deltoid, serratus anterior, short head of biceps and abdominal pectoralis head are synergists, and cuff, rhomboid, trapezius and forearm muscles are stabilizers. Nothing material is unsupported or contradictory."
+    }
+  }
+}

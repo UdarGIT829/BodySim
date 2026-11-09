@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "b527cd462a9404dcee74e98b0817e93c1cf5cf1505c0040df61030c438e565d1",
+  "status": "accepted",
+  "updated_at_unix": 1794184693.83496,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184677.94071,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The sternocostal and abdominal pectoralis major heads are zero. In a dip the shoulder extends at the bottom and the chest contributes somewhat, though less so in the upright triceps variant. Glenohumeral flexion as an assist reaches only the clavicular pec head. This is a modeling simplification, not a clearly wrong pattern.",
+          "suggested_correction": "A future revision could consider an assist-level glenohumeral extension or horizontal adduction to credit the sternocostal pec. This is not required for acceptance."
+        },
+        {
+          "field_path": "proposed_definition.assumptions",
+          "finding": "The first frame shows a noticeable forward trunk lean at the bottom of the dip, while the text says to keep the torso upright. The upright variant label is therefore only approximately supported by the frames. The lean would raise chest involvement, but the triceps-dominant profile is still reasonable.",
+          "suggested_correction": "Mention the mild forward lean in the assumptions, or clarify the variant as a triceps-biased dip with a slight lean."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "Only elbow_extension is listed. This is a catalog label and does not change the traced muscles. A dip is also a compound pressing movement that could carry a push-type label, but none of the push families fits cleanly. The single label is acceptable.",
+          "suggested_correction": "Optionally add vertical_push as a secondary label if the catalog convention allows it."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRKq5ok9HejKMEvK9iU",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8944.0,
+          "output_tokens": 1896.0
+        }
+      },
+      "summary": "The definition fits an upright parallel-bar triceps dip. Elbow extension is the primary action, and the triceps (lateral, medial and long heads) come out as the only primary movers, which matches the instructions' triceps cue. Hands are fixed on the bars while the body moves, so closed chain is right. Bilateral laterality with no one-sided limbs matches the frames. Glenohumeral flexion and scapular depression are reasonable assists for pressing the body up, and they bring in the anterior deltoid, clavicular pec major, pectoralis minor, lower trapezius and latissimus as synergists. The grip, wrist and scapular stabilization demands match hands loaded on the bars and the shoulder girdle controlling the body. The muscle pattern shows no material error."
+    }
+  }
+}

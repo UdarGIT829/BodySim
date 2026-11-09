@@ -1,0 +1,80 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "13205036d85e6bfb33362188ee9be7f8ed025ca8c8b886a7d9cd4d07b863145b",
+  "status": "changes_requested",
+  "updated_at_unix": 1794183934.27288,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183918.47789,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "There is no action for the straight-armed shoulder girdle holding a heavy bar against gravity. The frames show the arms hanging straight with the bar close to the legs, and the instructions say to keep the bar close and maintain back angle. The lats, trapezius, rhomboids and teres major are all explicit zeros in the tracer output, which understates real upper-back work in a deadlift-style pull.",
+          "suggested_correction": "Add scapulothoracic_joint/retraction with emphasis assist, as at a deadlift lockout. Add glenohumeral_joint/extension with emphasis assist, so the lats and teres major resist the bar drifting forward. Both should use sides both."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Ankle plantarflexion is omitted, citing the heel-drive cue. This is defensible, since the calves do not move the load in this lift.",
+          "suggested_correction": "No change required. An assist-level plantarflexion would also be acceptable."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "The labels hip_hinge and olympic_lift are reasonable for a clean-style deadlift, though squat-like leg drive from the floor is also prominent. Catalog labels do not change the traced muscles.",
+          "suggested_correction": "Optional only. Keep hip_hinge as the primary family."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "The spinal erectors are credited only as stabilizers (coefficient about 0.3) through anti_flexion_spine, because the table has no isometric credit beyond the demand weights. This is a tracer limitation, not an authoring choice, and it is acceptable.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "emphasis": "assist",
+          "joint": "scapulothoracic_joint",
+          "movement": "retraction",
+          "op": "add_joint_action",
+          "sides": "both"
+        },
+        {
+          "emphasis": "assist",
+          "joint": "glenohumeral_joint",
+          "movement": "extension",
+          "op": "add_joint_action",
+          "sides": "both"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQMqx5W3S3WPoicWhzA",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8347.0,
+          "output_tokens": 1944.0
+        }
+      },
+      "summary": "The frames and instructions support a bilateral conventional barbell pull from the floor to hip and knee lockout. Hip extension, knee extension, spinal bracing, grip and knee control are well supported. The tracer output leaves the lats, trapezius and rhomboids at zero involvement. In this lift they hold the straight-armed shoulder girdle and keep the bar close against a heavy load, so the muscle pattern is materially incomplete. Adding two assist-level joint actions would fix it."
+    }
+  }
+}

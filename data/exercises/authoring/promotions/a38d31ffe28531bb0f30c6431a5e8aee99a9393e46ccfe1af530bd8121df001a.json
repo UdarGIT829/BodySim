@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "a38d31ffe28531bb0f30c6431a5e8aee99a9393e46ccfe1af530bd8121df001a",
+  "revision_id": "Cable_Lying_Triceps_Extension@a38d31ffe285",
+  "exercise_id": "exercise.cable_lying_triceps_extension.bench_straight_bar",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Lying_Triceps_Extension",
+  "mapped_muscles": 70,
+  "promoted_at_unix": 1794183397.9655852,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "c43ca13a9ff9946bd67164b5f6527e0b577b5fe929e1937bdd14de8009877c8b",
+    "data/exercises/engagement_profiles.json": "6e070ba5596c24b44727299b01641346bbe62d02be46b6773678f7ad92264524",
+    "data/exercises/catalog/candidates.json": "101d614a27cd3b6a1ae25e42c44928d8536ab069e0e0647057e372a37316d1ab",
+    "data/exercises/sources/free_exercise_db_media.json": "6a8b80e6abd0eddb87379f395a8dc1cf0af785a0bdbabeb351cd53a82351b7e0"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "ed13f16db433e01ba5c9113a63b384e70a4c96c3846d0983dd077111c20ab51d",
+    "data/exercises/engagement_profiles.json": "fa60903d224539629c9c84b6ef45b0a03a009d5800bd86d4b410a97b6a954519",
+    "data/exercises/catalog/candidates.json": "247189583dadcd528f1ad03160d51855bd275d1fdae4b7f899403a2e6d3649cc",
+    "data/exercises/sources/free_exercise_db_media.json": "b84e683d8b9d412667979af6d78cc4a10b87a3c8f446f332c461717dff0a1d1f"
+  }
+}

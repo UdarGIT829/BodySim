@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "b951beddec2f521f3988a8882aad7e8a9edca5b6da95376f8c0062bd42a8be20",
+  "revision_id": "Body-Up@b951beddec2f",
+  "exercise_id": "exercise.body_up.forearm_plank_press",
+  "source_catalog_id": "catalog.free_exercise_db.Body-Up",
+  "mapped_muscles": 78,
+  "promoted_at_unix": 1794182991.19728,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "4c4da077fff5b927681104a474a6c92ff033a111358211c75928db1f041337d3",
+    "data/exercises/engagement_profiles.json": "6afd0b9604198b4f26f8a879e4b550798d487fc2e3f6f8e203b0ca21483f2249",
+    "data/exercises/catalog/candidates.json": "c70e1f2968e81a424d2931e4f78014f05fcd68580f027b86bbc7db7e3ad71faf",
+    "data/exercises/sources/free_exercise_db_media.json": "f6700bf0f019edd72736d28c3c00721f36cf458fef0fd6e8654e051889c26a18"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "9588b5057f9980b62c67aeeb0897ee7f56736ff41afd37f0f29ea6d511df2e91",
+    "data/exercises/engagement_profiles.json": "fbf2dbf5bd13d10096c5cd423f1357f92bd67f8de6433637b3492d4436258bcf",
+    "data/exercises/catalog/candidates.json": "f1cea3e779ce0f0f8bd4798e864842de173060d824b07200f529b0a80f3f9532",
+    "data/exercises/sources/free_exercise_db_media.json": "c0c4e8a25874526d61ec12f9fc58a02b829c38285d0702cbba8fcc146a29b21d"
+  }
+}

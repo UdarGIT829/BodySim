@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "79d0d8a58bb88584d7da367ef3974f087669615b4c3967d63a877ae485652c01",
+  "revision_id": "Barbell_Incline_Bench_Press_-_Medium_Grip@79d0d8a58bb8",
+  "exercise_id": "exercise.barbell_incline_bench_press.medium_grip",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Incline_Bench_Press_-_Medium_Grip",
+  "mapped_muscles": 92,
+  "promoted_at_unix": 1794179342.6877668,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "b7e7453b86644928e6504f5059798d3d07fd5b8589895d5f5356fb4271915e33",
+    "data/exercises/engagement_profiles.json": "56bf622ddce697c0de5af015e5bffea42a3b8f12ee0f60d05c6c6dcbed2a5292",
+    "data/exercises/catalog/candidates.json": "840c400f7d6d45bb852ba6be8f0b6bb9c9a8bbe7e598ebb4c1fbfacee4171554",
+    "data/exercises/sources/free_exercise_db_media.json": "9f2c6080b0d500a05088c873b917ace214171ad2c6c715f05fa97ed582d544d1"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "3d6746a4d60b35525012375d32fdec1ce42a3d398e658092a5429eebbcb4e5e0",
+    "data/exercises/engagement_profiles.json": "4d9f873b2dfe3c243a9ba550bb1f959c9943a7f7841f753ddb58da0cfcabf2fb",
+    "data/exercises/catalog/candidates.json": "12f4cef2d67c7d57ebebd38160f407102cede9759c7f0b2421466ed9227b3bd2",
+    "data/exercises/sources/free_exercise_db_media.json": "eef627909e224084aeb393e50c8c666e640f6e9fbd1d8584bb177c4b0e2ad9b4"
+  }
+}

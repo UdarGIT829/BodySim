@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "5f3fbb84548943e0f357661aaf7ae068840bbab9daffb71d1bb5cded7e5b25f5",
+  "revision_id": "Dumbbell_Lying_Rear_Lateral_Raise@5f3fbb845489",
+  "exercise_id": "exercise.dumbbell_rear_lateral_raise.chest_supported_incline",
+  "source_catalog_id": "catalog.free_exercise_db.Dumbbell_Lying_Rear_Lateral_Raise",
+  "mapped_muscles": 70,
+  "promoted_at_unix": 1794185086.58128,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "68fdf02ef9275aa3bd88c84291b8fa7a9b5499ddcdcec2d4e1d0c0362c2a03e9",
+    "data/exercises/engagement_profiles.json": "467d2b9a1e2adb2f50750710ad3699c4054d77fd1de7abad715f7865d860d43a",
+    "data/exercises/catalog/candidates.json": "e76fcee81998a733544b8c033c5cbf0d088eff9c4e6c3088e293d77e9e9db410",
+    "data/exercises/sources/free_exercise_db_media.json": "a6225fbd77f5cd345f3e7bcad8d526f92aaf2d74d353e38063f570a81d045778"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "82e8399ba6bfe504a20d312ae302817a3274babea933db33d21ad0a4fa966ac4",
+    "data/exercises/engagement_profiles.json": "4534c8b3a1510d992454c9a7b78d765c23865256139d2e1d7f37f769c1153582",
+    "data/exercises/catalog/candidates.json": "96a8543e8edf19cc7ea803b8a2a5e980d4864c7189f89b07b28f9a79a00793b0",
+    "data/exercises/sources/free_exercise_db_media.json": "ac544d208a379f496d2d33072f88f7b60ceb55a23465ecdede28426d5c083f6d"
+  }
+}

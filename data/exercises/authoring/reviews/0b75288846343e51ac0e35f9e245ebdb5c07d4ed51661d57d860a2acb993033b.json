@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "0b75288846343e51ac0e35f9e245ebdb5c07d4ed51661d57d860a2acb993033b",
+  "status": "accepted",
+  "updated_at_unix": 1794185024.20523,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794185012.21029,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.assumptions[5]",
+          "finding": "The assumption says shoulder_position_hold is listed as a demand, but stabilization_demands contains only grip and wrist_stability. This is a text inconsistency. The omission is defensible because the shoulder is an active mover here, not an isometric hold, so no muscle pattern is affected.",
+          "suggested_correction": "Remove the shoulder_position_hold mention from the assumption text in a future revision."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist (sternocostal_head_of_pectoralis_major, abdominal_part_of_pectoralis_major)",
+          "finding": "The pectoralis major heads appear as synergists (0.5 and 0.4) because the table credits them under glenohumeral extension. This follows from the tracer's action-to-muscle table, and no choice of actions or demands would remove it without dropping the correct lat and teres major work.",
+          "suggested_correction": "None needed; this is a tracer limitation."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist (superficial_head_of_pronator_teres)",
+          "finding": "Pronator teres appears as a synergist through elbow flexion at 0.2, although the neutral grip involves no forearm rotation. This is an artifact of the tracer table and is minor.",
+          "suggested_correction": "None needed; this is a tracer limitation."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRkTrJzDCUMUAKHRXZm",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8141.0,
+          "output_tokens": 1451.0
+        }
+      },
+      "summary": "The frames show a chest-supported prone dumbbell row on an incline bench. Both arms start hanging straight and both elbows flex to bring the dumbbells to the sides at the top. Bilateral laterality, open-chain, and the horizontal_pull family all fit. Scapular retraction, elbow flexion, and glenohumeral extension as primary actions match the instructions and the visible path, and the lats, rhomboids, middle trapezius, posterior deltoid, teres major, biceps, brachialis, and brachioradialis come out as primary movers. The supported trunk justifies leaving out spinal bracing and postural demands. Grip and wrist_stability correctly sit on the hand-held load. The remaining issues are non-blocking."
+    }
+  }
+}

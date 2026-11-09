@@ -1,0 +1,52 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "88ff287e58e4e7b024df0e8adc5331f8dd5f7c2fbe6e9122143777cffda76f4c",
+  "status": "accepted",
+  "updated_at_unix": 1794105334.94178,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105321.75047,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "horizontal_push is a debatable label. The incline torso means the bar travels along an angled line, not horizontally. The assumption that shoulder flexion is about 90 degrees is not clearly resolved by the frames. Because the movement is a straight-arm scapular protraction, no family is a clean fit, and horizontal_push is a reasonable best available choice.",
+          "suggested_correction": "Document why horizontal_push was chosen over vertical_push given the incline angle, and drop the claim of about 90 degrees of shoulder flexion unless the frames support it."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The large number of hand and forearm stabilizers (32 muscles from grip, 18 from wrist_stability) gives them small but nonzero coefficients. This is how the tracer maps grip and wrist demands and does not change the primary and synergist pattern. It is a tracer limitation, not a definition error.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgU91GuC2bfQVec1bDz",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 7866.0,
+          "output_tokens": 1467.0
+        }
+      },
+      "summary": "The frozen revision matches the source. The instructions say the arms stay straight while the bar is lifted by protracting the scapulae and raising the shoulders from the bench. The frames show a bilateral overhand barbell grip, straight arms and wrist wraps on an incline bench station. Scapulothoracic protraction as the only primary action makes serratus anterior the primary mover on both sides, with pectoralis minor as a synergist. The stabilization demands (grip, wrist_stability, shoulder_position_hold, glenohumeral_stabilization, elbow_joint_integrity) match a barbell held in the hands with locked-out arms. The tracer output has no materially wrong muscle pattern. The remaining concerns are minor."
+    }
+  }
+}

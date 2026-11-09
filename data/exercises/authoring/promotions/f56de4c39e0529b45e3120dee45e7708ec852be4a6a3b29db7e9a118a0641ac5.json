@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "f56de4c39e0529b45e3120dee45e7708ec852be4a6a3b29db7e9a118a0641ac5",
+  "revision_id": "Double_Kettlebell_Snatch@f56de4c39e05",
+  "exercise_id": "exercise.double_kettlebell_snatch.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Double_Kettlebell_Snatch",
+  "mapped_muscles": 167,
+  "promoted_at_unix": 1794184804.7937155,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "b6e88ba3e39f3762bcb0b87c08a19c4a7b14e5cb31c34c0af1e19a8436b8f03b",
+    "data/exercises/engagement_profiles.json": "0456049cf87dba04773c3fa4c27c9942e06cd7f681ab27db364e5de209caecbd",
+    "data/exercises/catalog/candidates.json": "e69b63552a9ba545e3327745a51db52de1fb710af598549a0083d95de853f517",
+    "data/exercises/sources/free_exercise_db_media.json": "8fa8d406dcfeeef194776414dd390b4e9b4e6a500e5051500b221cbc0d838666"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "e007a4ea0c3582f76dd311a096f2c647fdf4525ca7773f9a55175c2dcacfa5f6",
+    "data/exercises/engagement_profiles.json": "168ae627cd54bd83b6ba807939656f4838b8e360d4a08cb449879f2c48fdd5bc",
+    "data/exercises/catalog/candidates.json": "322496d29b36e88903da57cda9bebb00c10478a3021374cb67766095e90e79be",
+    "data/exercises/sources/free_exercise_db_media.json": "32a113a3e73beea5aac8e0e8ca8debafabcabfbcade01ddf4473091bb4a5486e"
+  }
+}

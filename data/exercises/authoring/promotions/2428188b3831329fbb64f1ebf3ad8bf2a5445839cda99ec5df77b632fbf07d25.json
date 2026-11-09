@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "2428188b3831329fbb64f1ebf3ad8bf2a5445839cda99ec5df77b632fbf07d25",
+  "revision_id": "Barbell_Glute_Bridge@2428188b3831",
+  "exercise_id": "exercise.barbell_glute_bridge.supine_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Glute_Bridge",
+  "mapped_muscles": 40,
+  "promoted_at_unix": 1794105291.6609416,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "698f6942713e2647f17af4de5011b5b5252f0c0bf638d811e024f1d578bcd594",
+    "data/exercises/engagement_profiles.json": "ea9d1b3b522a8dd5ef3ff8822de7d6e9bf832de1eb92820ab9f94f85191d07e3",
+    "data/exercises/catalog/candidates.json": "6bad3fbb492ffa623ffbf808126e77ba38e067b6aa61f4c6c4625853dfd6b43f",
+    "data/exercises/sources/free_exercise_db_media.json": "35417a96f2b0da588ea5ed49a543cd7f06487df2ba78d3f1b496e5ee2eb94106"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "d5f07a1a3528216aae321cab2ab6509b0d2662b92e1bfdc36e257e20b929859e",
+    "data/exercises/engagement_profiles.json": "f93840c0074dc1622209317ae44a833646475f7de39379de0f56a004e983af50",
+    "data/exercises/catalog/candidates.json": "67497c9068a4a56db78ee9e42888513bc26a1902f7ffd0d236fe0d7d5274512f",
+    "data/exercises/sources/free_exercise_db_media.json": "a387b8db254e203248590806ef274ed4fb112131eba0f2a36bb0e14bc24cde86"
+  }
+}

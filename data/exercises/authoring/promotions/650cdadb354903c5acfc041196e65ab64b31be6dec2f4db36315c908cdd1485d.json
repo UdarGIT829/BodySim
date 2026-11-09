@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "650cdadb354903c5acfc041196e65ab64b31be6dec2f4db36315c908cdd1485d",
+  "revision_id": "Deficit_Deadlift@650cdadb3549",
+  "exercise_id": "exercise.barbell_deficit_deadlift.bilateral_deficit",
+  "source_catalog_id": "catalog.free_exercise_db.Deficit_Deadlift",
+  "mapped_muscles": 131,
+  "promoted_at_unix": 1794184627.7981684,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "33512c7e4522b61f54ab71af89383e826750bc698372ffdf24e3e2f524eb5ed0",
+    "data/exercises/engagement_profiles.json": "da4646022617e2c44a033c7bdfd9d1f9405cad955eb8929f74af769ab65ee7ca",
+    "data/exercises/catalog/candidates.json": "b596e1dc6498937464da4e9b879e0bb52f8c29a9e7f0fafd579cb85b07b42df5",
+    "data/exercises/sources/free_exercise_db_media.json": "e01f86de0d1de2b8f770f6d1fbadd246b1115dddf799499aacc65b05f12e8058"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "7fdfe079340b3c3af5c6febdcf407309375a41ebbd3838afd34d4ccf9cad57da",
+    "data/exercises/engagement_profiles.json": "e9376b7ebb8bbbe86e36a532a4467a18218f08490a2824ee0bc082705f29af24",
+    "data/exercises/catalog/candidates.json": "ef31025789763d57e659d8562635149f9eb4e16941a9009080bee36ad6d0aabd",
+    "data/exercises/sources/free_exercise_db_media.json": "5a6df69ee1dc9a3fdef00d475cc317a78f1b8c784bda6bbd0670581f7a65cb44"
+  }
+}

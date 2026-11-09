@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "b59e099d8d226d58afbe6c5e53e3fb0afa9a98aaed6251ac7aae26e2d3524496",
+  "revision_id": "Decline_EZ_Bar_Triceps_Extension@b59e099d8d22",
+  "exercise_id": "exercise.ez_bar_triceps_extension.decline_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Decline_EZ_Bar_Triceps_Extension",
+  "mapped_muscles": 70,
+  "promoted_at_unix": 1794184552.1711934,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "59a3b7327a3f290636ce6e0a486d5602614def276fc297314ab5d9e5291e55fa",
+    "data/exercises/engagement_profiles.json": "b42ab1ecef30d2d35291d5ab9f5f9f0509c0d434305ecfb5173484924a42dbf5",
+    "data/exercises/catalog/candidates.json": "04e57d9ae2c911780ce801160cbde3339d36aaae9744df9fdfe8793868456f56",
+    "data/exercises/sources/free_exercise_db_media.json": "ec4e5550874da283da4369361359978afa87ca224ccfa229f0ca38a5b3f27418"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "f27305ab9f8f454eb64f05233ae53e518b7d1d823a76db72b6725ec9252bda38",
+    "data/exercises/engagement_profiles.json": "32f34742024f0b3ec57da507b05da9efc447c39265df512becda14a122c69d8f",
+    "data/exercises/catalog/candidates.json": "1cc9fa43d2b00c601484624fe5ad5f0e8f864a54c9f61644acb55f53b8b65203",
+    "data/exercises/sources/free_exercise_db_media.json": "b0a26064b9261cf1063c8dcd9edc810c3541c44f20dcf13a6efe46ef3539761d"
+  }
+}

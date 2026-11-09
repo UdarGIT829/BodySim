@@ -1,0 +1,68 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "d583acc2d470ed3fff81cad21b7b46c4f81d31ec3c482193bbf5f35b4683ee34",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105101.74869,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105081.259,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[ankle_joint/plantarflexion]",
+          "finding": "Plantarflexion is listed with primary emphasis, which makes soleus (1.0) and both gastrocnemius heads (0.7-0.8) primary movers. In a triple-extension drive the calves finish the extension but do not move the load. Squats and hang cleans are the reference cases where the calves are `assist`. The frames show a squat start and a standing finish with at most a heel rise, which does not justify promoting the calves above that convention.",
+          "suggested_correction": "Keep ankle_joint/plantarflexion but mark it `emphasis: \"assist\"`, so the calves become synergists. Keep hip and knee extension as the primary lower-body actions."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[elbow_joint/extension]",
+          "finding": "Elbow extension is listed as a primary action, which makes the lateral, medial and long heads of triceps brachii primary movers at 0.8-0.9. In both frames the arms are nearly straight, hanging to the ball at the bottom and extended overhead at release. The ball is swung up by hip/knee drive and shoulder flexion, so elbow extension only adds a small amount at release. Calling the triceps co-primary with the quadriceps and glutes is not supported by the instructions or frames.",
+          "suggested_correction": "Mark elbow_joint/extension `emphasis: \"assist\"`, so the triceps become synergists. Keep glenohumeral flexion as the primary upper-body action."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The ball is thrown overhead and backward, so the trunk resists extension at the finish. Rectus abdominis and the external obliques are zero, and only the deep abdominals appear, through postural_stabilization and anti_flexion_spine. The rotator cuff is also absent despite the loaded overhead arm path.",
+          "suggested_correction": "Consider adding anti_extension_spine for the overhead finish and glenohumeral_stabilization or humeral_head_stabilization for the cuff."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The overhead arm path involves scapular upward rotation, which is not modeled as an action. Scapular_stabilization partly covers this, but it gives serratus anterior and the trapezius only stabilizer-level credit.",
+          "suggested_correction": "Optionally add scapulothoracic_joint/upward_rotation as an assist action."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands[grip]",
+          "finding": "The ball is gripped only during the lowering and drive phases and is released overhead, so the grip and wrist demands (many small hand muscles at low coefficients) are transient. This is a minor overstatement of a plausible demand, not a materially wrong pattern.",
+          "suggested_correction": "Keep grip and wrist_stability as is, or drop wrist_stability if a leaner profile is preferred."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgAQeNXh9m7b3P3C5f2",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 11750.0,
+          "output_tokens": 2542.0
+        }
+      },
+      "summary": "The identity, bilateral laterality, squat family and overall triple-extension-plus-overhead-release pattern are supported by the instructions and the two frames. The emphasis on two minor joints is overstated: ankle plantarflexion and elbow extension are marked as full primary actions, so the soleus, gastrocnemii and all three triceps heads come out as primary movers at the same level as the quadriceps and gluteus maximus. The tracer profile overweights these muscles for what is a hip/knee-driven, shoulder-flexion-swung throw."
+    }
+  }
+}

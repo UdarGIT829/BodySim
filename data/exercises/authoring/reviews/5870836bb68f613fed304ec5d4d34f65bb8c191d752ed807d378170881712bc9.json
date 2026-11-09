@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "5870836bb68f613fed304ec5d4d34f65bb8c191d752ed807d378170881712bc9",
+  "status": "accepted",
+  "updated_at_unix": 1794184917.21016,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184903.44657,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The tracer cannot represent the eccentric landing-absorption phase or the brief hand repositioning to shoulder width. The concentric press profile is the reasonable proxy, because the same muscles absorb the landing eccentrically, so this is a tracer limitation rather than a definition error.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The jump_and_throw label is a loose fit for a plyometric push-up. It is secondary to horizontal_push and affects only catalog grouping, not the traced muscles.",
+          "suggested_correction": "Optional: keep horizontal_push as the primary family and retain jump_and_throw only for plyometric search."
+        },
+        {
+          "field_path": "proposed_definition.laterality",
+          "finding": "The second hand is partly hidden in frame 2, so bilateral hand contact is inferred from frame 1 and the instructions. This is well supported and does not change the profile.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRcSoLWP2jPmbAGgVvB",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7696.0,
+          "output_tokens": 1568.0
+        }
+      },
+      "summary": "The definition fits the source instructions and frames. The hands start on two low boxes in a rigid plank line, and the lifter presses up explosively, drops between the boxes and absorbs the landing through the arms. Bilateral laterality, closed-chain, empty one_sided_limbs and the push-up style actions are all supported. These actions are elbow extension and glenohumeral horizontal adduction as primary, with scapular protraction as assist. The resulting tracer profile is plausible. The triceps heads, both pectoralis major heads and clavicular deltoid carry the push, serratus anterior and the pectoralis major abdominal head assist, and the trunk, hip and wrist muscles work as stabilizers. No materially wrong muscle pattern is exposed."
+    }
+  }
+}

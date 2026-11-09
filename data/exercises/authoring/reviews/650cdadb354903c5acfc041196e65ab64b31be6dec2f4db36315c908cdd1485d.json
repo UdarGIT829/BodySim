@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "650cdadb354903c5acfc041196e65ab64b31be6dec2f4db36315c908cdd1485d",
+  "status": "accepted",
+  "updated_at_unix": 1794184627.11716,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184614.16543,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The erector spinae (longissimus thoracis 0.315, iliocostalis lumborum 0.28, multifidus 0.245) appear only as low-coefficient stabilizers through anti_flexion_spine. Their real isometric load in a heavy deadlift is higher. The vocabulary cannot represent isometric spinal extensor work any other way once lumbar extension is excluded because the spine stays neutral. This is a tracer limitation, not an authoring error.",
+          "suggested_correction": "No change needed. Keep anti_flexion_spine rather than listing lumbar_spine/extension."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "hip_hinge is the closest primary label. Knee extension is also prominent in the deficit start, so a secondary label such as squat could be considered. Labels do not change the traced muscles.",
+          "suggested_correction": "Optionally keep hip_hinge only. Adding another family is not required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRF8LyjmVM1iGfho4Ej",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 11100.0,
+          "output_tokens": 1669.0
+        }
+      },
+      "summary": "The definition matches the source. It is a bilateral barbell deadlift from a low platform, with hands outside the knees and feet hip-width apart. The frames show a neutral spine, straight arms and a standing lockout. The instructions cue driving through the heels with the knees bent, then pulling the shoulder blades together as the hips drive forward. Hip extension and knee extension as primary actions give the expected pattern: gluteus maximus, hamstrings, adductor magnus and the quadriceps. Ankle plantarflexion as an assist adds modest calf and soleus work. Scapular retraction as an assist matches the lockout cue and gives the rhomboids and trapezius. The trunk is braced through anti_flexion_spine and intra_abdominal_pressure, with no lumbar extension action, which fits the instruction to keep the back arched and rigid. Grip and wrist_stability are correctly placed because the bar is held in the hands. The arms stay straight, so there is no elbow flexion. Bilateral laterality and empty one_sided_limbs are correct. No biomechanically material claim is unsupported or contradicted."
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "8e30957b861132ddfb8fb35efc1ec3644f861b9b224d77a090b7b0df9e1f2084",
+  "status": "accepted",
+  "updated_at_unix": 1794183666.43985,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183652.36765,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.assumptions",
+          "finding": "The assumption 'Knees stay fixed in near-extension and do not move, so no knee action is listed' and the assumption 'Knee joint stability is included to cover the fixed, extended knee under load' are stale. The council edit added knee_joint/extension as an assist and removed knee_joint_stability. The assumption text now contradicts the definition, though the last assumption does record the edit.",
+          "suggested_correction": "In a future authoring revision, rewrite the assumptions to say the knee and hip are held isometrically and credited through assist-weighted extension actions, and drop the reference to knee_joint_stability."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions[hip_joint/extension]",
+          "finding": "Hip extension as an assist is a judgment call. The seat supports the trunk and the hip does not move, so isometric hamstring and glute demand is real but small. It gives gluteus_maximus 0.4 and the hamstrings about 0.28. That is slightly generous but defensible and not materially wrong.",
+          "suggested_correction": "Optionally keep the hip credit as an assist. Do not raise it to primary."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions[knee_joint/extension]",
+          "finding": "The instructions say the knee must stay stationary with no bending. The knee extension assist represents only the isometric hold that keeps the knees extended, not knee motion. This is acceptable under the held-joint credit rule, and the quadriceps coefficients (about 0.36-0.4) remain clearly subordinate to the calf muscles.",
+          "suggested_correction": "Keep as an assist. Do not promote it to primary."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQ2EZp6yigpRZKxjkP7",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7308.0,
+          "output_tokens": 1692.0
+        }
+      },
+      "summary": "The frozen revision matches the source. Both frames show a seated calf press on a leg press sled with the feet on the lower platform and the knees near extension, so a bilateral, closed-chain ankle plantarflexion pattern is supported. The traced primary movers are soleus and both gastrocnemius heads at 1.0, 0.8 and 0.7. These are the correct muscles for the exercise. The assist-weighted toe flexion, knee extension and hip extension are deliberate credits for joints held isometrically against the platform load, which the tracer rules allow. Their coefficients stay at or below 0.4 and none reaches primary. The remaining findings are minor and do not block acceptance."
+    }
+  }
+}

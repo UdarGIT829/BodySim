@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "fed0532c2de64ca5814f3b7376c6fc29f13f776fab0634ee583508aa55758550",
+  "status": "accepted",
+  "updated_at_unix": 1794179100.99181,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179087.46162,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The grip and wrist_stability demands spread small stabilizer coefficients across many hand and forearm muscles. This is acceptable for a barbell held in the hands, and it follows from how the tracer expands these demands.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "The family labels elbow_extension and horizontal_push are reasonable. The arms are held roughly horizontal rather than pressing from the chest, so the push is not a classic bench-style horizontal push. The labels do not change the traced muscles.",
+          "suggested_correction": "Optional: keep elbow_extension as the primary family."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJDiu1NyvutmCEnnR37",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9090.0,
+          "output_tokens": 1468.0
+        }
+      },
+      "summary": "The definition matches the source instructions and both frames. The lifter is prone on an incline bench with the chest supported, holds the bar pronated, and presses it forward by extending both elbows until the arms are straight and roughly horizontal. Elbow extension as the primary action correctly makes all three triceps heads primary movers. The upper arms rise from angled below horizontal to horizontal, so glenohumeral flexion as an assist is a fair reading of the range of motion. It resolves the earlier council concern, and the assist weighting puts the anterior deltoid and clavicular pectoralis in the synergist tier without making them primary. Grip and wrist_stability fit a bar held in the hands. Scapular_stabilization fits the scapular control needed while the arms are held out. Shoulder_position_hold fits the arms being held horizontal against the bar's weight. No postural, spinal or leg demands are credited, which fits the supported prone position, and bilateral laterality with empty one_sided_limbs is correct. The tracer output (triceps primary, anterior deltoid and clavicular pectoralis synergists, scapular and forearm stabilizers) is a plausible pattern for this exercise."
+    }
+  }
+}

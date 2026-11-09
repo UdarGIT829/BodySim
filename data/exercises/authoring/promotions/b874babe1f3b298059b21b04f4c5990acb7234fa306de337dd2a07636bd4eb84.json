@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "b874babe1f3b298059b21b04f4c5990acb7234fa306de337dd2a07636bd4eb84",
+  "revision_id": "Atlas_Stone_Trainer@b874babe1f3b",
+  "exercise_id": "exercise.atlas_stone_trainer.bar_end_lap_lift",
+  "source_catalog_id": "catalog.free_exercise_db.Atlas_Stone_Trainer",
+  "mapped_muscles": 135,
+  "promoted_at_unix": 1794179157.8699355,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "8d9a41f6324ef12f90427f7c38c9b724301ad48a47463afc2dc2081a2438a5dc",
+    "data/exercises/engagement_profiles.json": "83cd45cac41b19d48764a3246770c34122a5e508edbbb94ed78e2dedb5df59f9",
+    "data/exercises/catalog/candidates.json": "a3daef6cfed8da65404c68f1622502964fd314fa8f5aa027a1a2a606d640a887",
+    "data/exercises/sources/free_exercise_db_media.json": "42232e40664f07bc03e833ee5e598bd06c042e5e67e9387f76feae8c490e40c3"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "fd12e2117b6bbb4a668d308ca0303f00f7df61659d75cb2dd911ea3a0ee79a64",
+    "data/exercises/engagement_profiles.json": "af504ef14238eb1043115feb3a8b88d91f9cf36ea19f759eb30cdd2015e3b6bd",
+    "data/exercises/catalog/candidates.json": "81b56d9a29f334e2b19f19768cc5c0d4ed54c6542a00f24f3f3ee80180d9d888",
+    "data/exercises/sources/free_exercise_db_media.json": "458869362f03bb3a7c5cb2a76e7cb7393832144c1c323345ce5af5805f2d8068"
+  }
+}

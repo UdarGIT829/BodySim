@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "a16ecdd3aa0e096b9392463e23dfb1ca00c7757324fd88901908a4bf0620e863",
+  "revision_id": "Bench_Dips@a16ecdd3aa0e",
+  "exercise_id": "exercise.bench_dip.hands_on_bench",
+  "source_catalog_id": "catalog.free_exercise_db.Bench_Dips",
+  "mapped_muscles": 90,
+  "promoted_at_unix": 1794182713.3067968,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "5e5e2d4af2dc0ec8e18d6e7ace6c358ec019a8badafbcf11e769a5de08e85cec",
+    "data/exercises/engagement_profiles.json": "81d57cdfe22ab707d85dc07214f40c623868653202953e9ccd2b32986519c218",
+    "data/exercises/catalog/candidates.json": "fc1ea849018ecb8423deb4c90492f21e993c48aa7264fa25e1ab432b1b5f33fa",
+    "data/exercises/sources/free_exercise_db_media.json": "58b966246bec6544b986a3a2a2e9acce728ce8eddd1efa1b171cfba75dc5a501"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "effd2f287b6b8aedb0a3c7ab0f6b2766eafa5eafa175715cf2851977ba399ad7",
+    "data/exercises/engagement_profiles.json": "a7291b33ba55f8bf13e1c4701f1b82b586ea46ade8f6ba3a36f132b5d03b1c01",
+    "data/exercises/catalog/candidates.json": "e780e2a486217bef6b37f22624de9e1ad2b8ba2379266617deba8f469acc689c",
+    "data/exercises/sources/free_exercise_db_media.json": "cf330fe0e5f86d5056d6208d7be6a746264b6dc3044e794ad582aeecbe32876d"
+  }
+}

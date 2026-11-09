@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "427f45653deb317fc5e2b78a36df755e6d255ec32a1ec4cfafef2ac76f01c4be",
+  "status": "accepted",
+  "updated_at_unix": 1794183798.94135,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183785.50439,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The forceful throw and follow-through usually include a trunk flexion whip, which is not modeled. Rectus abdominis and the obliques are credited only as anti-extension stabilizers at 0.35 or lower. The frames do not clearly show this trunk path, so omitting it is defensible.",
+          "suggested_correction": "In a future revision, consider an assist-level lumbar_spine/flexion if the trunk flexion is confirmed in the follow-through."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The rotator cuff and scapular stabilizers (glenohumeral_stabilization, scapular_stabilization) are not listed, although the ball is moved ballistically overhead. Serratus anterior and trapezius are already partly covered by scapular upward rotation.",
+          "suggested_correction": "Optionally add glenohumeral_stabilization if the rotator cuff is intended to register."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "The chain label is closed_chain because the feet stay planted during the drive. The release phase is ballistic and the arms are free, so the label is a loose fit but not plainly wrong. It is a catalog label only.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQC3RcxYPWMaSo9CPRe",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10682.0,
+          "output_tokens": 1597.0
+        }
+      },
+      "summary": "The definition fits a bilateral standing two-handed overhead medicine ball throw. The frames show a hip- and knee-flexed countermovement with the ball low, then a tall finish on the toes with the ball overhead behind the head. Lower-body drive (hip and knee extension, assisted plantarflexion) and elbow extension are properly primary. The council's edit is biomechanically sound. The throw starts with the arms overhead and ends with them forward at about shoulder height, which is glenohumeral extension. That makes lats, teres major and posterior deltoid real movers, with the pectoralis major heads as synergists. Shoulder flexion is correctly demoted to assist for the overhead loading. The grip, anti-extension and postural demands match a held ball and an upright, braced trunk. The tracer output has no materially wrong muscle pattern."
+    }
+  }
+}

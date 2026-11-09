@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "3682b17106fbd346df68f115590c9b57098b671cb93cacb724393f2daa3bc53f",
+  "revision_id": "Bent_Press@3682b17106fb",
+  "exercise_id": "exercise.kettlebell_bent_press.standing_unilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Bent_Press",
+  "mapped_muscles": 111,
+  "promoted_at_unix": 1794182963.184381,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "e1590a5aeaa336a1dc5e74d6aa33c9a94a644ddfe6366e7f419ec09e82359ded",
+    "data/exercises/engagement_profiles.json": "6c54cca28aafdba72dbe18090463f820904bc1c12b46c76cb41bdd83aa5e1563",
+    "data/exercises/catalog/candidates.json": "5d0fa1c4b66b92325295ea104d18244894363d3481249b8b8ec9f8fb16487124",
+    "data/exercises/sources/free_exercise_db_media.json": "cc002cace3643eaddd6de4875b8f3e4da8a58a2a06da47aaf95cfd15aa55bb66"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "b9ecd022ebe4c5a5f6457722e75bbd2fad9f65d3ba5152c4d2885a93a8c74b65",
+    "data/exercises/engagement_profiles.json": "6b1aabf42732780466a510f83c23b133b35402fd77d6e8c8b91bfec964e40630",
+    "data/exercises/catalog/candidates.json": "540ef9d27d711d8340b816069bfd90123ee8518ad5d810e1624b75718741b8cd",
+    "data/exercises/sources/free_exercise_db_media.json": "14ff5095342e01ef938cc57a9f36a7ef5f83bb2ae23390d270051ba8e7aadadc"
+  }
+}

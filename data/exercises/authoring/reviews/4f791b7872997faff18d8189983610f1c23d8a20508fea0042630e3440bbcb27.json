@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "4f791b7872997faff18d8189983610f1c23d8a20508fea0042630e3440bbcb27",
+  "status": "accepted",
+  "updated_at_unix": 1794182881.2988,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182866.39998,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The bar is held in the working hand, but wrist_stability is not listed, so the wrist flexors and extensors that hold the wrist neutral under load get no credit beyond a small ECRL synergist value. This is a modest omission, not a material misrepresentation.",
+          "suggested_correction": "Consider adding wrist_stability in a future revision."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist",
+          "finding": "Pectoralis major (sternocostal and abdominal heads), long head of triceps and teres major appear through the glenohumeral extension weights. This comes from how the tracer's action table works and is not something the definition's choices could change.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "open_chain is acceptable since the hand moves the load while the feet stay planted. It is only a catalog label and does not change the traced muscles.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrP2J4YV4ozVnVh64nPw",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8432.0,
+          "output_tokens": 1782.0
+        }
+      },
+      "summary": "The definition matches the source and frames: a one-arm row from a hinged torso, with the bar anchored at one end and the free hand resting on the knee. Laterality is unilateral with one_sided_limbs [\"arm\"], so the working-arm actions and grip stay right-sided while spinal and leg demands stay bilateral. Glenohumeral extension, elbow flexion and scapular retraction are the right primary movers, and they produce latissimus, teres major, posterior deltoid, rhomboids, middle trapezius, brachialis, biceps and brachioradialis as primary. Hip extension as a both-sided assist plus anti_flexion_spine, anti_rotation_torso and postural_stabilization appropriately credit the isometric hinge and the no-swing instruction. No materially wrong muscle pattern appears in the tracer output."
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "additional_context": "",
+  "authoring_response": {
+    "assumptions": [],
+    "classification": "ambiguous",
+    "classification_reasons": [
+      "The instructions describe an alternating-leg skip over a line of boxes, but the contact-sheet frames do not clearly show the box contact. Frame 1 shows the lifter airborne beside the box. Frame 2 shows a two-foot-looking landing on the floor in front of another box. The images and text therefore do not clearly agree.",
+      "The text is internally unclear about which leg lands on the box, whether the box landing is single-leg or two-foot, and how the leading and trailing legs alternate.",
+      "Laterality (bilateral, alternating, or one-legged takeoff and landing) and the limb loading would change the joint actions and one_sided_limbs.",
+      "Whether the box is stepped onto, hopped over, or leapt from changes the primary movement family (jump_and_throw versus lunge), and the tracer vocabulary needs a single faithful choice.",
+      "Reps versus timed ground contacts per box, and the exact path between the two still frames, are not established."
+    ],
+    "field_confidence": {
+      "input_mode": "medium",
+      "kinetic_chain_type": "medium",
+      "laterality": "low",
+      "primary_joint_actions": "medium",
+      "stabilization_demands": "low",
+      "variant": "low"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "box_skip"
+      ],
+      "id": "exercise.box_skip.standard",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "primary_joint_actions": [],
+        "stabilization_demands": []
+      },
+      "laterality": "bilateral",
+      "movement_families": [],
+      "name": "Box Skip",
+      "variant": "standard"
+    },
+    "questions_requiring_context": [
+      "Does the lifter land on top of the box, or pass beside or over it? The frames show the lifter beside and past the box rather than on it.",
+      "Is the box landing single-leg or two-foot, and which leg takes off and which leg lands on each pass?",
+      "Should the movement be treated as bilateral with alternating legs, or as unilateral with a fixed working leg?",
+      "Is the target a maximal-height or maximal-distance jump, or a controlled skip with minimal flight?",
+      "Is volume counted in repetitions (boxes cleared) or in duration?"
+    ]
+  },
+  "candidate_trace_report": {},
+  "catalog_id": "catalog.free_exercise_db.Box_Skip",
+  "format_version": 1,
+  "provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1,
+      "frame_count": 2,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Box_Skip/0.jpg",
+        "Box_Skip/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [],
+      "classification": "ambiguous",
+      "classification_reasons": [
+        "The instructions describe an alternating-leg skip over a line of boxes, but the contact-sheet frames do not clearly show the box contact. Frame 1 shows the lifter airborne beside the box. Frame 2 shows a two-foot-looking landing on the floor in front of another box. The images and text therefore do not clearly agree.",
+        "The text is internally unclear about which leg lands on the box, whether the box landing is single-leg or two-foot, and how the leading and trailing legs alternate.",
+        "Laterality (bilateral, alternating, or one-legged takeoff and landing) and the limb loading would change the joint actions and one_sided_limbs.",
+        "Whether the box is stepped onto, hopped over, or leapt from changes the primary movement family (jump_and_throw versus lunge), and the tracer vocabulary needs a single faithful choice.",
+        "Reps versus timed ground contacts per box, and the exact path between the two still frames, are not established."
+      ],
+      "field_confidence": {
+        "input_mode": "medium",
+        "kinetic_chain_type": "medium",
+        "laterality": "low",
+        "primary_joint_actions": "medium",
+        "stabilization_demands": "low",
+        "variant": "low"
+      },
+      "proposed_definition": null,
+      "questions_requiring_context": [
+        "Does the lifter land on top of the box, or pass beside or over it? The frames show the lifter beside and past the box rather than on it.",
+        "Is the box landing single-leg or two-foot, and which leg takes off and which leg lands on each pass?",
+        "Should the movement be treated as bilateral with alternating legs, or as unilateral with a fixed working leg?",
+        "Is the target a maximal-height or maximal-distance jump, or a controlled skip with minimal flight?",
+        "Is volume counted in repetitions (boxes cleared) or in duration?"
+      ]
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgrLXAdGFAm5g38386eza",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 16554.0,
+      "input_tokens": 1703.0,
+      "output_tokens": 1020.0
+    }
+  },
+  "saved_at_unix": 1794180907.31365,
+  "source_id": "Box_Skip",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "authoring_draft",
+  "validation_errors": [
+    "proposed_definition: must be null unless classification is supported",
+    "classification: ambiguous proposals cannot advance to definition_candidate"
+  ]
+}

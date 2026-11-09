@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "91cb645d4e2cd2ee162a4ab527b8d818db38175c5ac470c3bea8c10e5e79cf9d",
+  "revision_id": "Decline_Oblique_Crunch@91cb645d4e2c",
+  "exercise_id": "exercise.decline_oblique_crunch.decline_bench",
+  "source_catalog_id": "catalog.free_exercise_db.Decline_Oblique_Crunch",
+  "mapped_muscles": 36,
+  "promoted_at_unix": 1794184565.2765946,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "f27305ab9f8f454eb64f05233ae53e518b7d1d823a76db72b6725ec9252bda38",
+    "data/exercises/engagement_profiles.json": "32f34742024f0b3ec57da507b05da9efc447c39265df512becda14a122c69d8f",
+    "data/exercises/catalog/candidates.json": "1cc9fa43d2b00c601484624fe5ad5f0e8f864a54c9f61644acb55f53b8b65203",
+    "data/exercises/sources/free_exercise_db_media.json": "b0a26064b9261cf1063c8dcd9edc810c3541c44f20dcf13a6efe46ef3539761d"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "fe364a5fb508f35e5bece780c6ef8382204743cfc251337ccf49170e7cd99a3a",
+    "data/exercises/engagement_profiles.json": "42e424f21b35920b6328236d2b3addead193ae2cf916c8b307f63d079bf9d7e3",
+    "data/exercises/catalog/candidates.json": "4d7202260ba71d0173de280637de69986fe63e6837e8772095ac69555d9924f4",
+    "data/exercises/sources/free_exercise_db_media.json": "79614e490f49722812d75f69b7e86913873b517705ae15ea89faab88c8813e5e"
+  }
+}

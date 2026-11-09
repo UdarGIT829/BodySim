@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "7496a58a4c3d3549b87f5c61b38f0ef419fa9966a85f9d06a6e07e0460c58e16",
+  "revision_id": "Arnold_Dumbbell_Press@7496a58a4c3d",
+  "exercise_id": "exercise.arnold_dumbbell_press.seated_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Arnold_Dumbbell_Press",
+  "mapped_muscles": 106,
+  "promoted_at_unix": 1794179144.577967,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "3c63651e01b274399fceda820d4ae67c165e9ba8e07730c54a006c9a70b8c01f",
+    "data/exercises/engagement_profiles.json": "4cdbf8a9bc2c323f027bbb2a4429bf1f26eed8bb008cd1a5e7760e657dfd3d43",
+    "data/exercises/catalog/candidates.json": "99776ffe60a1d9a322ca219a8ea7dcc2be7a3b5aff26dd155b97ff258e6e436d",
+    "data/exercises/sources/free_exercise_db_media.json": "fd79098b9f22e0f0962cf804a21892f9825948ee6401f09d4d2db0989b73b8b4"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "8d9a41f6324ef12f90427f7c38c9b724301ad48a47463afc2dc2081a2438a5dc",
+    "data/exercises/engagement_profiles.json": "83cd45cac41b19d48764a3246770c34122a5e508edbbb94ed78e2dedb5df59f9",
+    "data/exercises/catalog/candidates.json": "a3daef6cfed8da65404c68f1622502964fd314fa8f5aa027a1a2a606d640a887",
+    "data/exercises/sources/free_exercise_db_media.json": "42232e40664f07bc03e833ee5e598bd06c042e5e67e9387f76feae8c490e40c3"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "1f0febc1467b9e482d8f4a6731f3de1a220ee3078ced2f238368d275bdb80f47",
+  "revision_id": "Cable_Russian_Twists@1f0febc1467b",
+  "exercise_id": "exercise.cable_russian_twist.stability_ball_supine",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Russian_Twists",
+  "mapped_muscles": 116,
+  "promoted_at_unix": 1794183492.2915885,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "7b241087c8af1467db3ddf710088d8a2762efc1d5fa553859e390f9029148acb",
+    "data/exercises/engagement_profiles.json": "5f32ea3d236beac59b1446343e49834349ed6a65c0cd81e4bca74132632a9252",
+    "data/exercises/catalog/candidates.json": "4214be0ac516e01fbb20874d2140316c7ae6964f5bfdf0943a8a4494b2847345",
+    "data/exercises/sources/free_exercise_db_media.json": "c49692ff4045cfe409825fcd39e88c4051652c776c03d67d0e8137581764a959"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "198084d2e531da78b7706abd907ef0bb3c40647e26363d8ea8b42616193bec35",
+    "data/exercises/engagement_profiles.json": "05217fda9942a5ad3eb6f913ef1380da5a5e40a624b287d87994b83aa23bb7d1",
+    "data/exercises/catalog/candidates.json": "fec173a32e3cebd3dcc5ea170a53839c7eebad792d29a10f21e2387b5ed0a6f9",
+    "data/exercises/sources/free_exercise_db_media.json": "b69a96425b8c03636a80713bf65ae917065abcd5e7cb58581ea75ba664124aa1"
+  }
+}

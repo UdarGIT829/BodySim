@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "ddee631ac60c76f12c1db111f716502a1ab9ad680238ff35ca01f954246e29a4",
+  "status": "accepted",
+  "updated_at_unix": 1794179367.66282,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179356.73916,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The spinal erectors are credited only through anti_flexion_spine and show low stabilizer coefficients (0.14 to 0.315). That is acceptable for an isometric hold, though the horizontal posture may call for slightly more erector engagement.",
+          "suggested_correction": "No change required. Optionally consider adding postural_stabilization in a future revision if more trunk or hip involvement is wanted."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "horizontal_pull is a reasonable label. The rear-delt emphasis could also be tagged under another family, but this does not change the traced muscles.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJZabFG3PnPsHpynQeD",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10074.0,
+          "output_tokens": 1229.0
+        }
+      },
+      "summary": "The frames and instructions show a bilateral bent-over wide overhand barbell row. The torso is hinged with a neutral spine, the elbows flare and the bar is pulled to the upper chest. Horizontal abduction with scapular retraction gives the posterior deltoid, transverse trapezius and rhomboids as primary movers, which matches the rear-delt cue. Elbow flexion is now marked assist, so the biceps, brachialis and brachioradialis are synergists, consistent with the 'arms as hooks' cue. The isometric hip extension assist and the anti_flexion_spine demand credit the hamstrings, glutes and spinal erectors as synergists and stabilizers. Grip and wrist_stability fit a bar held in the hands. No biomechanically material claim is unsupported and the tracer profile is plausible."
+    }
+  }
+}

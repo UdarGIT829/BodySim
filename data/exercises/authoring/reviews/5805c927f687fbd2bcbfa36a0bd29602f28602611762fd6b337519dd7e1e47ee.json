@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "5805c927f687fbd2bcbfa36a0bd29602f28602611762fd6b337519dd7e1e47ee",
+  "status": "accepted",
+  "updated_at_unix": 1794183386.50334,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183375.42473,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "vertical_pull is defined as pulling down from overhead. This is a downward pull from shoulder height with the arms straight, so it is the closest available family but not an exact fit. The label does not change the traced muscles.",
+          "suggested_correction": "Keep vertical_pull. A future revision could note the straight-arm adduction character in the assumptions."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The elbows are held isometrically extended against the cable load. elbow_joint_integrity could credit the triceps medial head and anconeus. The current elbow_stability, together with the adduction pull, already gives a reasonable pattern, so this is optional.",
+          "suggested_correction": "Optionally add elbow_joint_integrity in a future revision."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPfpSgp9xdP2J2yFkm4",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8250.0,
+          "output_tokens": 1204.0
+        }
+      },
+      "summary": "The frames show a standing lifter between two high pulleys, arms in a T at the start and pulled down to the front of the thighs with the elbows nearly straight. Glenohumeral adduction as the sole primary action matches this. It makes lats, teres major and both pectoralis major heads (sternocostal and abdominal) the primary movers, with clavicular pec, coracobrachialis, triceps long head, short head of biceps, subscapularis and teres minor as synergists. Grip is correct for handles held in the hands, and elbow_stability fits the elbows held extended. postural_stabilization is reasonable for standing. The bilateral laterality, empty one_sided_limbs and open_chain labels are all right, and no unsupported muscle pattern is exposed."
+    }
+  }
+}

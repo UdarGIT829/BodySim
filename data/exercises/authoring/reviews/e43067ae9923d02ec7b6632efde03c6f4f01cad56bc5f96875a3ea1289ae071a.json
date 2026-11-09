@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "e43067ae9923d02ec7b6632efde03c6f4f01cad56bc5f96875a3ea1289ae071a",
+  "status": "accepted",
+  "updated_at_unix": 1794182675.7626,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182661.14024,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The assumptions treat the downward whip as passive. In real battle rope waves the descent is often actively driven, with some shoulder extension and adduction from the lats and teres major. The source instructions only describe the raise, so omitting these actions is defensible and not blocking.",
+          "suggested_correction": "A future revision could add glenohumeral extension or adduction as an assist if the downward slam is judged to be actively driven."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "'shoulder_raise' is a reasonable closest label for this exercise. The catalog force tag says 'push' and the rope wave has a whole-body conditioning character. Catalog labels do not change the traced muscles.",
+          "suggested_correction": "No change needed. An additional label such as 'jump_and_throw' is not warranted."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Stabilizer coefficients for the lower-body extensors and hamstrings come from the generic 'postural_stabilization' demand. They are small (about 0.1 to 0.28) and plausible for a planted, slightly flexed wide stance. They do not misrepresent the primary pattern.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrNmA1C4pn4fEoNa6g6u",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10472.0,
+          "output_tokens": 1656.0
+        }
+      },
+      "summary": "The frozen definition matches the instructions and frames. A standing, wide-stance, alternating two-arm rope wave is driven by shoulder flexion from the hips to about shoulder level, with the elbows bent and a hand grip on the rope. Glenohumeral flexion is correctly primary, and elbow flexion is correctly an assist because the elbows stay bent while the shoulder drives the rope. Bilateral laterality with working-side actions is consistent with both arms doing the same action in alternation. Grip, wrist stability, scapular stabilization, anti-rotation and postural stabilization are placed where the load is held. The tracer output follows: the anterior deltoid and clavicular pectoralis major lead, the biceps, brachialis and brachioradialis act as synergists, and the hand, scapular, trunk and lower-limb muscles are low-coefficient stabilizers. No biomechanically material claim is unsupported or contradicted."
+    }
+  }
+}

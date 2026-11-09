@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "9aafbc003f67767db51f96612b131a2a738ccd2f66f4f82f8c5cfb64fc68b5a1",
+  "status": "accepted",
+  "updated_at_unix": 1794184161.76237,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184152.87447,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization gives small stabilizer credit to the quadriceps, glutes, soleus and spinal extensors. This is the expected table-driven result of the standing-posture demand, and the coefficients are low, so it is acceptable.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Forearm supination is not listed, and the grip is held supinated rather than actively rotated. The biceps are already primary through elbow flexion, so omitting it is defensible.",
+          "suggested_correction": "Optional: none required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQf84RxCjSNBAHAGrfu",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9929.0,
+          "output_tokens": 1105.0
+        }
+      },
+      "summary": "The definition matches the source instructions and both frames: a standing, bilateral, close-grip supinated EZ-bar curl with the upper arms kept at the sides and only the forearms moving. Elbow flexion as the sole primary joint action reaches brachialis, the biceps heads and brachioradialis as primary movers, with pronator teres and ECRL as minor synergists. The demands fit where the load is held: grip and wrist_stability for the bar in the hands, shoulder_position_hold for the isometric upper-arm work, and postural_stabilization for standing. Laterality, kinetic chain type and movement family are correct, and the tracer output shows no materially wrong muscle pattern."
+    }
+  }
+}

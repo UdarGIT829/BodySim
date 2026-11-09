@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "87a0de0f5ac5fd7f417729c6a25b295285003af73de88dee53767dff1d6153e1",
+  "status": "accepted",
+  "updated_at_unix": 1794183599.07269,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183587.96473,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "closed_chain is a defensible label because the feet are planted. The moving segment is the scapula and the hands are free, so open_chain could also be argued. The label does not change the traced muscles and is not plainly wrong.",
+          "suggested_correction": "Keep closed_chain or switch to open_chain per catalog convention. No change is required."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization spreads small stabilizer coefficients across many leg muscles (soleus, quadriceps, hamstrings, gastrocnemii). This is plausible for a loaded standing posture but is somewhat broad for a shrug. It reflects how the demand is defined in the table, not a definitional error.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPwUXZfvmU8QUPLF59F",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 5688.0,
+          "output_tokens": 1231.0
+        }
+      },
+      "summary": "Both frames show a standing lifter with the calf-machine shoulder pads on top of the shoulders and the arms hanging relaxed at the sides. The second frame shows the shoulders raised toward the ears, matching the instructions. A bilateral, working-side scapulothoracic elevation primary is the right action: it makes upper trapezius (1.0) and levator scapulae (0.7) primary and the rhomboids (0.4) synergists. Omitting grip and wrist demands is correct because the hands carry nothing. The load is compressive through the shoulders, so anti_flexion_spine and postural_stabilization are reasonable demands. They produce low-coefficient stabilizers in the spinal extensors, trunk and legs, which fits the pattern and does not obscure the primary movers."
+    }
+  }
+}

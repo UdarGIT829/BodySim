@@ -1,0 +1,63 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "e7251c95db2725723e50bac280e9b2d6625928c45b0a53f6daeed48abaf3d2f4",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105080.83208,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105058.52083,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The sled pulls the hands forward toward the sled. The muscles that resist this are the elbow flexors, shoulder extensors (lats, teres major, posterior deltoid) and scapular retractors. The definition instead uses shoulder_position_hold, which engages the clavicular deltoid and clavicular pectoralis major, the shoulder flexors. The trace therefore resists the wrong direction while the real load-bearing arm and back muscles get no involvement. The definition also lacks any demand that reaches the scapular retractors.",
+          "suggested_correction": "Remove or de-emphasize shoulder_position_hold. Add scapular_retraction_stability, and either add a demand that reaches the lats and posterior shoulder or add the actions in the next finding."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The assumption that no elbow or shoulder joint action occurs contradicts the demonstration frames and the force:pull metadata. In the right-hand frame the elbows are flexed with the forearms in front of the chest, holding against the sled load. Biceps brachii, brachialis, brachioradialis, latissimus dorsi, teres major and rhomboids are explicit zeros in the trace, which is a materially wrong muscle pattern for a rope-pull exercise.",
+          "suggested_correction": "Add assist-emphasis arm actions that really occur, such as elbow_joint/flexion, glenohumeral_joint/extension and scapulothoracic_joint/retraction, with sides both. Keep the leg actions as the primary drivers."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Hip extension is deliberately omitted, so the glutes and hamstrings appear only as weak stabilizers (gluteus maximus 0.28, hamstrings about 0.14). Stepping backward against a heavy sled likely involves some hip extension during push-off. The knee-dominant emphasis is defensible, but this is a judgment call.",
+          "suggested_correction": "Consider adding hip_joint/extension with emphasis assist and sides both if the stepping action involves hip drive."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "Only knee_extension is listed even though ankle plantarflexion is a co-driver. This is acceptable as a dominant-family label.",
+          "suggested_correction": "Optionally add a family covering the pulling or arm component once arm actions are added."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011Cgpg8jUdmbJt5QQDb2e2L",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 10437.0,
+          "output_tokens": 2549.0
+        }
+      },
+      "summary": "The leg drive (knee extension plus ankle plantarflexion) and the bilateral closed-chain classification are well supported by the instructions and frames. The arm and upper-back pattern is not. The tracer output shows pectoralis major and anterior deltoid as stabilizers, which resist the wrong direction of pull. It also gives explicit zeros to the elbow flexors, lats, teres major, rhomboids and middle trapezius, which hold the rope against the sled pull."
+    }
+  }
+}

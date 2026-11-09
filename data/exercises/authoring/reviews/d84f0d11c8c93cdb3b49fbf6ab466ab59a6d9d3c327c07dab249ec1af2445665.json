@@ -1,0 +1,63 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "d84f0d11c8c93cdb3b49fbf6ab466ab59a6d9d3c327c07dab249ec1af2445665",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105376.63475,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105358.90083,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[elbow_joint/flexion]",
+          "finding": "Elbow flexion is counted at full weight, so brachialis, both biceps heads and brachioradialis become primary movers. The source instructions say to avoid using the biceps and to treat the arms as hooks, with the rear delts doing the work. The frames show the elbow bending as the bar rises, so the joint does move, but it is a minor contributor rather than a load-moving action. The assumption that 'biceps involvement is the elbow flexion needed to hold the bar path' also conflicts with the primary emphasis the output reflects.",
+          "suggested_correction": "Keep elbow_joint/flexion but mark it emphasis 'assist'. This makes the elbow flexors synergists at 0.4 x table weight (brachialis 0.4, biceps heads 0.32, brachioradialis 0.28) and leaves rear deltoid, rhomboids and transverse trapezius as the primary movers."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.primary",
+          "finding": "Because of the elbow-flexion emphasis, brachialis, brachioradialis, long head of biceps brachii and short head of biceps brachii (left and right) are listed as primary. This contradicts the stated rear-delt focus and 'refrain from using your biceps' cue, so the resulting tracer profile is wrong for this exercise.",
+          "suggested_correction": "After setting elbow flexion to assist, these muscles should appear as synergists and not as primary movers."
+        }
+      ],
+      "confidence": "high",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands[postural_stabilization]",
+          "finding": "postural_stabilization is described for upright antigravity holding. It is a reasonable proxy for the static hip-hinged position (glutes, hamstrings, quadriceps, soleus at low coefficients) but also recruits vasti and calves that do little in a hinged hold. The effect is small and acceptable.",
+          "suggested_correction": "Optionally keep as is; no change is required for acceptance."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist[latissimus_dorsi]",
+          "finding": "Latissimus dorsi enters only through scapular retraction at 0.2. Its role is plausible but minor in this flared-elbow rear-delt variant. This is a table-driven pattern and not a definition error.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgWsgcgEYukMNpweH89",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 10520.0,
+          "output_tokens": 2261.0
+        }
+      },
+      "summary": "Identity, bilateral laterality, open-chain classification, horizontal_pull family, horizontal abduction and scapular retraction are all supported by the instructions and frames. The rear deltoid, rhomboid and transverse trapezius pattern is correct. The elbow flexors, however, appear as primary movers (brachialis 1.0, biceps heads 0.8, brachioradialis 0.7). The source explicitly says to refrain from using the biceps and to let the arms act only as hooks. That elbow-flexor pattern is materially wrong for the intended movement and is fixable by changing the emphasis on the elbow action."
+    }
+  }
+}

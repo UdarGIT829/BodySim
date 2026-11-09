@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "78ecbfd21ba91adc238e434cd4e8e9095c28c5486fff97e1a48d1c2114c00d00",
+  "revision_id": "Crunch_-_Legs_On_Exercise_Ball@78ecbfd21ba9",
+  "exercise_id": "exercise.crunch.legs_on_exercise_ball",
+  "source_catalog_id": "catalog.free_exercise_db.Crunch_-_Legs_On_Exercise_Ball",
+  "mapped_muscles": 20,
+  "promoted_at_unix": 1794184343.30133,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "608f95e57e8d11d30b4a64c338443f86533c6bab47f3b5ecfdf1bf0deb6e43a6",
+    "data/exercises/engagement_profiles.json": "7d037d9e6606167dd8209771a3217491e77fb46ab5ec246de74847a946f7e00d",
+    "data/exercises/catalog/candidates.json": "194e0e3f0bb3b097ed47b90b324ed61fa94d9dde7e5e7dda96cc87a214ca2634",
+    "data/exercises/sources/free_exercise_db_media.json": "0cbd54677132e80d5b2fd28a0695e9653f6af8b35c07872c889117467a9b43a0"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "a9959eaef822e1fbe4ed0b116da3cf3e086c91611022b9ecae851f975f185615",
+    "data/exercises/engagement_profiles.json": "5149bcc39c8aae8520372481f9ca38450ee3c649117161054b89b8a26c0252a1",
+    "data/exercises/catalog/candidates.json": "7c3854c27d7867df315215f0f4cd2e448eb6a323686116e57d8f191b7087685c",
+    "data/exercises/sources/free_exercise_db_media.json": "29ee0c62d52da7273dd482be89e62ebdf53d26d7feb6f089799d2ba9e3f24a6a"
+  }
+}

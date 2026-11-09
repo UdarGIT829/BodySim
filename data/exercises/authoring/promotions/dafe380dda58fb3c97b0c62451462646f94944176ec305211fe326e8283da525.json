@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "dafe380dda58fb3c97b0c62451462646f94944176ec305211fe326e8283da525",
+  "revision_id": "Double_Kettlebell_Push_Press@dafe380dda58",
+  "exercise_id": "exercise.kettlebell_push_press.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Double_Kettlebell_Push_Press",
+  "mapped_muscles": 155,
+  "promoted_at_unix": 1794184780.1484034,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "c9d4a7522925dd7609bd6b168efdee1cb680c5b4174a964c77089ef84b27fa8b",
+    "data/exercises/engagement_profiles.json": "3700d9cab5d1e044ea6da42479ee8b29bc2cd35351f307efb6af35fbaa67c243",
+    "data/exercises/catalog/candidates.json": "9c5878ff32716d94012d8de4df4df00bfbdf1ea54a675f2d844fbe977855cc4b",
+    "data/exercises/sources/free_exercise_db_media.json": "02b822fce841058537771dba3f0c0b4500959e6ebdf6a203579c33e0a5724451"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "b6e88ba3e39f3762bcb0b87c08a19c4a7b14e5cb31c34c0af1e19a8436b8f03b",
+    "data/exercises/engagement_profiles.json": "0456049cf87dba04773c3fa4c27c9942e06cd7f681ab27db364e5de209caecbd",
+    "data/exercises/catalog/candidates.json": "e69b63552a9ba545e3327745a51db52de1fb710af598549a0083d95de853f517",
+    "data/exercises/sources/free_exercise_db_media.json": "8fa8d406dcfeeef194776414dd390b4e9b4e6a500e5051500b221cbc0d838666"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "61c9115a6ee48e3015cdbb3feee00dfbf99c4238f9b23826cbfd7ac411bca0e9",
+  "status": "accepted",
+  "updated_at_unix": 1794183124.04506,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183108.40715,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.kinetic_chain_type",
+          "finding": "The feet are planted for the hip drive while the bell moves freely, so closed_chain is arguable. This is a catalog label only and is not plainly wrong.",
+          "suggested_correction": "Keep closed_chain for consistency with other standing Olympic-style lifts, or use open_chain if the catalog convention follows the loaded implement."
+        },
+        {
+          "field_path": "kinematic_profile.primary_joint_actions[glenohumeral_joint/flexion]",
+          "finding": "The racked-position frame shows the upper arm held at the side or slightly back, so shoulder flexion is minor and ambiguous. The assist weighting keeps it a minor synergist and it does not materially change the profile.",
+          "suggested_correction": "Optionally drop this assist and rely on shoulder_position_hold for the deltoid work."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPL8EhaNXyaVtKMaCDL",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9653.0,
+          "output_tokens": 1749.0
+        }
+      },
+      "summary": "The definition fits the source. It is a standing one-arm hang clean with the kettlebell held bottoms-up, with a hip-driven pull and the bell racked at the shoulder, as the frames and instructions show. Hip extension on both sides is primary, so the glutes and hamstrings come out as primary movers. Elbow flexion on the working arm is primary, which makes the brachialis, biceps and brachioradialis primary. Knee extension and ankle plantarflexion are correctly marked as assists, so the quads and calves are synergists. The shrug and shoulder flexion assists, the grip and wrist_stability demands for the inverted bell, and the one_sided_limbs setting of arm only are all consistent with the exercise. No blocking problem was found."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "c16010d53ea6f21b9b7fa29ddab182efe9818541baa67e772eef72479f4b337f",
+  "revision_id": "Bent-Knee_Hip_Raise@c16010d53ea6",
+  "exercise_id": "exercise.bent_knee_hip_raise.bodyweight_supine",
+  "source_catalog_id": "catalog.free_exercise_db.Bent-Knee_Hip_Raise",
+  "mapped_muscles": 44,
+  "promoted_at_unix": 1794182836.5768373,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "200311b7a6d9dc6f1545d41e1f1f3ad2087718c6762ff11bd5699ac1d8787e80",
+    "data/exercises/engagement_profiles.json": "1ffe2a812888ab4e0d7441dccf81f7c8629d442296e05e47485e786b1b49e1c6",
+    "data/exercises/catalog/candidates.json": "b754e163e9b06a862cc97956bde23ead961dd9b87887f1734a5da1064715265c",
+    "data/exercises/sources/free_exercise_db_media.json": "ce24b8e1ecbee3de9edd6fd9ab1ec10b1a676783a7eaa0b81e1e0d816d8834ea"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "cb6fb72b0ffe9f3b8539caa50de94fe7ed22f4db558825836069a3d46629abde",
+    "data/exercises/engagement_profiles.json": "70a1658cee8fe10d41044d3702bfdd3de2c48e093b2e41064b219e90dcad55f5",
+    "data/exercises/catalog/candidates.json": "3f85c135ea36f1188a8902e993a4c787992d1515ed1264ae4425c33fa0befac6",
+    "data/exercises/sources/free_exercise_db_media.json": "3196327cf56cd332f4ed98f8f9b261e450a49e132232d45292271d3794047e53"
+  }
+}

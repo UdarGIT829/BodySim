@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "d03d3db12a804138f888783c51a2e2aca4ec0f893f7e50d4c660084f5e4f234a",
+  "revision_id": "Close-Grip_EZ-Bar_Press@d03d3db12a80",
+  "exercise_id": "exercise.close_grip_ez_bar_press.flat_bench",
+  "source_catalog_id": "catalog.free_exercise_db.Close-Grip_EZ-Bar_Press",
+  "mapped_muscles": 86,
+  "promoted_at_unix": 1794184149.98935,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "81ab20f2e3dc3c8a4fa7e1155fa5c192f3fea7bfc4e3599a85867abdb4d52c3b",
+    "data/exercises/engagement_profiles.json": "0500c76960b1fe8841a8a89ea0d0aae79f2a90d88641b63387edcd0e67d73c9c",
+    "data/exercises/catalog/candidates.json": "1068e0fad0d585086b745a127fb1d8232d91c8dde5d89dd867b4e596f875499f",
+    "data/exercises/sources/free_exercise_db_media.json": "413b9a21c93fa35e0445c2b968980a3451c423b9ea5027b27c3faabd84ac2ecd"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "2d9fb03ffed4b0cc59e298f1ae438014ac85678d1ea37aaacd9330c59c801019",
+    "data/exercises/engagement_profiles.json": "70a6c1d19e2c44bff08b36b2a7e402bdcb19afbf54228e2e82a4bac59ddbfb6a",
+    "data/exercises/catalog/candidates.json": "76412a0a33af2b58fd6391e3af008ffffe78b7cd99967331e8e93a68bc9fa4e1",
+    "data/exercises/sources/free_exercise_db_media.json": "60d7ab8c75f4255caf40c14ee7352e2c3b7021f9bc23e009235b033d78bb6fb3"
+  }
+}

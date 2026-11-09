@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "87564492a139957fdb8aa10d89d794c825afe6ac6b3ff38d6ac8ca143a2fb5ea",
+  "revision_id": "Dip_Machine@87564492a139",
+  "exercise_id": "exercise.dip_machine.seated_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Dip_Machine",
+  "mapped_muscles": 76,
+  "promoted_at_unix": 1794184656.667804,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "bbf93812b666316debc3aa356b2d35c1a8b2586c0a7813ac5dc26576e1491488",
+    "data/exercises/engagement_profiles.json": "ce322a3023553f805813ccd45edad7e6722d062206af4fbb34bec5bf1219b83e",
+    "data/exercises/catalog/candidates.json": "354f5f2114a62ae1771a2eb03bd7200fa5143b6b6126722f6f363597a45ba31d",
+    "data/exercises/sources/free_exercise_db_media.json": "fafda495e2e68290b641118a5dc5e3ad37e73989526b879f6c38032f1af0e378"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "d85f2b7f2d0ae35159878f043df08f7baac0774beb08968729f50dcbd11cff86",
+    "data/exercises/engagement_profiles.json": "db64bf5ca5b7e217fb7c6332db34c30a2508b81f5c2155b45529f05a0921cc78",
+    "data/exercises/catalog/candidates.json": "ec8717406928281228a833929488eba5758877ef7c2fa255189513025bbea732",
+    "data/exercises/sources/free_exercise_db_media.json": "f272ce8008a340a54a6a08362f38f579fe238a1204b571fc2df5893d8312491f"
+  }
+}

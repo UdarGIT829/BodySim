@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "282a9bafc2d0942aef0af0461b50c55cc4312588821a37e9a98f4b547779e9d2",
+  "revision_id": "Bodyweight_Flyes@282a9bafc2d0",
+  "exercise_id": "exercise.bodyweight_flyes.ez_bar_rolling",
+  "source_catalog_id": "catalog.free_exercise_db.Bodyweight_Flyes",
+  "mapped_muscles": 106,
+  "promoted_at_unix": 1794183040.8914304,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "c6c3ce19c8000241dde598d9725ce2b82ee0ef074788f17382fae5a5f5898251",
+    "data/exercises/engagement_profiles.json": "da92b9e21d2eb65ac8ffd6dab1e864eb4b56c123aeb75f7ffe977204b24e835a",
+    "data/exercises/catalog/candidates.json": "39370a105b9424357438a1a3eb5444573380924c3d5a4f17b8a4ff1dc9b31677",
+    "data/exercises/sources/free_exercise_db_media.json": "74fca262c9aaf9ad733e35d53364d080ed76b50c0e2fad8d4a4b18efd9d620f9"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "3a593cd98b623233b8005a2b8bab7056980b4ce8b79b555cb2234f7f75a1947f",
+    "data/exercises/engagement_profiles.json": "2e9740df7d39f0aeab8a57330af966c8ae00d51361976d52002a17cf4ca9e0cd",
+    "data/exercises/catalog/candidates.json": "f1c1d5d868890bdfac10de48f8a9e70aa318a99867667bc62f65b578924c2228",
+    "data/exercises/sources/free_exercise_db_media.json": "c59ba22b86ae9bb25128321a2f4b7546d793d7cdc2dd95b3feac69451716ef81"
+  }
+}

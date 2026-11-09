@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "11b3456f1c187583722e931a8645383c8c93dd06b57ad185865b52b11a7923a2",
+  "status": "accepted",
+  "updated_at_unix": 1794182895.03293,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182883.59533,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "source.instructions[2]",
+          "finding": "The source text says to put the other hand on the knee, which contradicts the two-arm title and the frames showing both hands on the bar. The authoring assumption of treating this as a text error is supported by the frames.",
+          "suggested_correction": "No change to the definition is needed. Note the catalog text inconsistency upstream."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist",
+          "finding": "The pectoralis major heads, plus adductor_magnus and the long head of triceps, appear as synergists. This comes from the table weights for glenohumeral extension and hip extension, not from a definition error. Pectoralis activity in a row is minor.",
+          "suggested_correction": "No change. This is a tracer or table limitation."
+        },
+        {
+          "field_path": "kinematic_profile.movement_families",
+          "finding": "horizontal_pull is a reasonable primary label. The hinged torso posture could arguably also warrant hip_hinge, but the label does not change the traced muscles.",
+          "suggested_correction": "Optionally add hip_hinge as a secondary family."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrP3ZBuDSP7WTexdpzFK",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9701.0,
+          "output_tokens": 1336.0
+        }
+      },
+      "summary": "The definition matches the frames and the title: a bilateral, hip-hinged, landmine-style row with both hands on the bar behind the plates, pulled toward the lower chest. Glenohumeral extension, elbow flexion and scapular retraction are the primary row actions. Hip extension is correctly an assist action for the isometric hold of the hinge. Anti-flexion of the spine, grip and wrist stability are placed where the load is held, and the resulting muscle pattern is plausible: lats, rhomboids, middle trapezius, rear deltoid, teres major, biceps, brachialis and brachioradialis are primary, with the erectors, glutes and hamstrings supporting."
+    }
+  }
+}

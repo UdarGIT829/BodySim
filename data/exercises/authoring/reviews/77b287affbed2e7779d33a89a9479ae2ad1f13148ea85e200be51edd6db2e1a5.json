@@ -1,0 +1,52 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "77b287affbed2e7779d33a89a9479ae2ad1f13148ea85e200be51edd6db2e1a5",
+  "status": "accepted",
+  "updated_at_unix": 1794105057.71499,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105045.97706,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization spreads small stabilizer coefficients (0.07-0.28) across many leg, hip and trunk muscles. This is a tracer artifact of how the demand is mapped and is not a flaw in the definition. It is acceptable for upright standing but is slightly diffuse for a upper-body exercise.",
+          "suggested_correction": "No change required. Optionally, a future revision could consider whether the postural demand is needed alongside the standing context."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist",
+          "finding": "Latissimus dorsi appears as a synergist at 0.2 only through scapulothoracic retraction. Its role in horizontal abduction is minor, so this is a small, acceptable contribution.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011Cgpg7pWDx8FsqxCJvCCiW",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 10089.0,
+          "output_tokens": 1305.0
+        }
+      },
+      "summary": "The frames and instructions show a standing, bilateral, straight-arm band reverse fly. The band is anchored at rack height, and the arms sweep from in front of the body out to the sides in the horizontal plane. The definition captures this with glenohumeral horizontal abduction and scapular retraction as the primary actions, bilateral laterality, an open chain, and horizontal_pull. The resulting profile is biomechanically sound: posterior deltoid, middle trapezius and both rhomboids are primary, and infraspinatus, teres minor, lower and upper trapezius, acromial deltoid and latissimus are synergists. Grip, wrist and elbow demands match handles held in the hands with the elbows nearly straight. Postural stabilization fits the upright stance."
+    }
+  }
+}

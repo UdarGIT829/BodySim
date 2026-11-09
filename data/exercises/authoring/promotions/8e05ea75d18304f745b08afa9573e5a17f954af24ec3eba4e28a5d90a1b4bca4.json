@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "8e05ea75d18304f745b08afa9573e5a17f954af24ec3eba4e28a5d90a1b4bca4",
+  "revision_id": "Cable_Shrugs@8e05ea75d183",
+  "exercise_id": "exercise.cable_shrug.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Shrugs",
+  "mapped_muscles": 104,
+  "promoted_at_unix": 1794183574.480954,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "1701485f8d29de31c90cdcb100625362f3636772c90031ea24dd07c264e194e2",
+    "data/exercises/engagement_profiles.json": "16b339bbe7284a218821cad0fd611fd97c484c087466b9c3ad1afee8d35ccff8",
+    "data/exercises/catalog/candidates.json": "ccfd1c487e65ef9454c46cb0bce5e4bb9c94e356e1fd990ab0ff78e7dded0c9d",
+    "data/exercises/sources/free_exercise_db_media.json": "0d919dab20ad75f002f91b9a21d98d327fef03b4e960fa80571dcf90548f109c"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "6165bf695305a51b01eea0341a4be596d0f3911d630fe462c8c519ba3ec43551",
+    "data/exercises/engagement_profiles.json": "d418488193c0f8b5d7af6f42e652920201bd54bfac88f47a4896e374751c66a0",
+    "data/exercises/catalog/candidates.json": "38be4f07d85dd27b064f20043f281721099bc216c7991d82545c0b40d863685c",
+    "data/exercises/sources/free_exercise_db_media.json": "4f42a643e492d973f80efdfc3fbe70e3a3a01c7ab44c74b3ef4b42d47a461855"
+  }
+}

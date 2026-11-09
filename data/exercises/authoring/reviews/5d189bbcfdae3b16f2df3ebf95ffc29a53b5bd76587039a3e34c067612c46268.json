@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "5d189bbcfdae3b16f2df3ebf95ffc29a53b5bd76587039a3e34c067612c46268",
+  "status": "accepted",
+  "updated_at_unix": 1794183007.10019,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182993.23592,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The label elbow_extension is correct. The sustained plank-like trunk work is also a defining feature but is not labelled. This affects catalog search only, not the traced muscles.",
+          "suggested_correction": "Optionally add core_anti_extension as a secondary movement family."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Grip and wrist_stability are credited at full demand weight, although the forearms may partly rest on or lean over the bar rather than hold it in a hard fist. The hand and forearm stabilizer coefficients (up to 0.35) are plausible but probably slightly generous. Stabilization demands are marked medium confidence for this reason.",
+          "suggested_correction": "Optionally review whether grip is needed. Keep wrist_stability only if the frames in a future revision show a firm hand hold on the bar."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPBeC1gBaQQ7H6W7yrc",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9216.0,
+          "output_tokens": 1452.0
+        }
+      },
+      "summary": "The definition matches the source instructions and both frames: a bodyweight, bar-supported incline triceps press. Both hands are fixed on a rack bar and the feet are planted, giving a closed chain. The body leans rigidly while the elbows flex and extend. Elbow extension as the only primary action correctly makes all three triceps heads primary (0.8-0.9) and anconeus a synergist (0.2). The listed demands are consistent with the frames. Anti-extension spine and hip and pelvic alignment cover the rigid plank-like lean. Shoulder position hold and scapular stabilization cover the fixed upper arms and shoulder girdle. Grip and wrist stability cover the loaded hands. No material muscle is wrongly promoted or omitted, and the tracer output shows no materially wrong pattern."
+    }
+  }
+}

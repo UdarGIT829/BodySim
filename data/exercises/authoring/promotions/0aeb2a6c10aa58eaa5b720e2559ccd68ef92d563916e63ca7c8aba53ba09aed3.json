@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "0aeb2a6c10aa58eaa5b720e2559ccd68ef92d563916e63ca7c8aba53ba09aed3",
+  "revision_id": "Cable_Crunch@0aeb2a6c10aa",
+  "exercise_id": "exercise.cable_crunch.kneeling_rope",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Crunch",
+  "mapped_muscles": 77,
+  "promoted_at_unix": 1794183283.1420388,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "f3d7727a650651a28ef89e46e29f7b4474635c5716bab48af6ea4eac2b6f8b3e",
+    "data/exercises/engagement_profiles.json": "78fa8beffa56d6bd921300dcafd8eb201913b3813a86c9123cc72d51a9a46a32",
+    "data/exercises/catalog/candidates.json": "17f4af4795c88735285dcd67a2bf3cda1b7bb20c0c6091ac09274ade9363267f",
+    "data/exercises/sources/free_exercise_db_media.json": "f742fb82b86dde2945c3def1d03a86f08e4d1016165521a649ffaf711ea4d009"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "f7ec5abf0688cbac425f4cb3be0abbb40254bcc020ef77cc0b18a0a089b8dc70",
+    "data/exercises/engagement_profiles.json": "1ba51b2a8bcfe2d95acc1c3520f377de6ffe0c6ddbc21910a7f2a58d55a9665a",
+    "data/exercises/catalog/candidates.json": "c5c9f6343fde74d8ef0f51c1afc5730adb2ba2b39b52528780e34c919e615301",
+    "data/exercises/sources/free_exercise_db_media.json": "aa5db8b0c6ef7a26650f7c87d93f4c0ccdc504df2bfba59931435c8c517bbc43"
+  }
+}

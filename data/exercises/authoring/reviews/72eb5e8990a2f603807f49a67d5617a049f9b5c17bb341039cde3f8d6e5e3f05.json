@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "72eb5e8990a2f603807f49a67d5617a049f9b5c17bb341039cde3f8d6e5e3f05",
+  "status": "accepted",
+  "updated_at_unix": 1794184524.31631,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184509.43982,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The fixed slight elbow bend under load is credited only through elbow_stability and elbow_joint_integrity. This gives brachialis essentially zero and the biceps and triceps only small coefficients, although they co-contract isometrically. The effect is small, and the source tells the lifter to keep the arms stationary, so this is a defensible choice.",
+          "suggested_correction": "Optionally add elbow_joint/flexion with emphasis assist, or add glenohumeral_stabilization, to credit isometric elbow flexors and rotator cuff co-contraction more fully."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "horizontal_push is a catalog label that is only approximate for a fly, which is a horizontal adduction movement. The label does not change the traced muscles and is acceptable.",
+          "suggested_correction": "Keep horizontal_push, or consider shoulder_raise or another closer family if one is preferred for catalog search."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Rotator cuff muscles other than subscapularis (infraspinatus, supraspinatus, teres minor) are not engaged. They play a minor centering role in the stretched position of a fly. This is a small omission and not materially wrong.",
+          "suggested_correction": "Optionally replace or supplement anterior_shoulder_stability with glenohumeral_stabilization."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrR7Q6oHq2nWwaxD4Ac6",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8487.0,
+          "output_tokens": 1806.0
+        }
+      },
+      "summary": "The frozen definition fits the source and frames: a bilateral decline-bench dumbbell fly with a neutral grip, slightly bent fixed elbows and legs secured. Glenohumeral horizontal adduction is the right driving action. It makes the sternocostal and clavicular pectoralis major primary, with the abdominal pectoralis major, anterior deltoid, coracobrachialis and short head of biceps as synergists. That is the expected pattern. Dumbbells held in the hands justify grip and wrist stability. Scapular anchoring and anterior shoulder stability cover the shoulder base without crediting scapular protraction. The elbow demands credit the isometric elbow hold. Omitting postural stabilization is reasonable because the bench supports the trunk. The remaining observations are minor and non-blocking."
+    }
+  }
+}

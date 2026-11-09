@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "e43067ae9923d02ec7b6632efde03c6f4f01cad56bc5f96875a3ea1289ae071a",
+  "revision_id": "Battling_Ropes@e43067ae9923",
+  "exercise_id": "exercise.battling_ropes.alternating_waves",
+  "source_catalog_id": "catalog.free_exercise_db.Battling_Ropes",
+  "mapped_muscles": 136,
+  "promoted_at_unix": 1794182676.0345778,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "3c5c112b8e509a44230b56db06e1907ec2ca273afc968b768a3b9dd0ddcc87a8",
+    "data/exercises/engagement_profiles.json": "b0e1f4f7114db07c913522244e19ca7c27d0242ba54cc8aea012865c81df5187",
+    "data/exercises/catalog/candidates.json": "7542bf3aeb3ddb541a859851c85585066460a8a5d2813602399c2519826304bf",
+    "data/exercises/sources/free_exercise_db_media.json": "9a3700709eeb94aeacce9f21f7192f0d1b1fd7bc3caafc82975bbf16d6c63521"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "8d41daba31de04ca2f2b419ccc0c95b7a6973158e73e54dfbfc5b73e92e69a29",
+    "data/exercises/engagement_profiles.json": "647acf8478b96cced529658335646a3f79db4b64815208903c64cba6d49bc33f",
+    "data/exercises/catalog/candidates.json": "6c354e6928518d336b30b898a027b9e0938f4fa3fb1381607e3ca91ca017c456",
+    "data/exercises/sources/free_exercise_db_media.json": "b17864dfb262fb508a9e56a8d27838428eb865db4cdec1990d3c329e6397011a"
+  }
+}

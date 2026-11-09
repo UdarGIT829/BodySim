@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "2a29b7bcab3d895d924477fb065d9d56cd915f1a38cc05ef89028bd91eb4b5cd",
+  "status": "accepted",
+  "updated_at_unix": 1794182742.09718,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182729.6455,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The cued leg drive and arched, tight torso are not credited, so the legs and trunk stay at zero. This is a modeling choice and the real contribution is small, so it does not materially misrepresent the exercise.",
+          "suggested_correction": "Optionally add postural_stabilization or anti_flexion_spine in a future revision to credit the isometric trunk and leg drive."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Grip and wrist_stability produce a large number of low-coefficient forearm and hand stabilizers. These are plausible for squeezing the bar, but the grip cue to pull the bar apart is only a minor contribution.",
+          "suggested_correction": "No change required."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "open_chain is defensible because the hands move the bar freely, although the cued foot and back contact makes this label somewhat subjective. It is a catalog label only.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrNrD2eMEEGFHQSDP4Yp",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7983.0,
+          "output_tokens": 1301.0
+        }
+      },
+      "summary": "The frames and instructions agree on a supine, bilateral flat bench barbell press from a rack, with the bar lowered to the lower chest and pressed to lockout. Glenohumeral horizontal adduction plus elbow extension is the right primary pair. The tracer output fits this: the sternocostal and clavicular pectoralis major and all three triceps heads are primary, while the anterior deltoid, abdominal pectoralis major, coracobrachialis, anconeus and short head of biceps are synergists. Grip, wrist stability and scapular retraction stability are appropriate for a bar held in the hands with the scapulae retracted, as the cues instruct. Laterality, open-chain and the horizontal_push family are acceptable."
+    }
+  }
+}

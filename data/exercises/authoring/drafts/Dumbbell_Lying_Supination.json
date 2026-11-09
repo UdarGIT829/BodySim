@@ -1,0 +1,104 @@
+{
+  "additional_context": "",
+  "authoring_response": {
+    "assumptions": [],
+    "classification": "ambiguous",
+    "classification_reasons": [
+      "The exercise name, 'Dumbbell Lying Supination', implies a forearm rotation at the radioulnar joint. The numbered instructions instead describe glenohumeral external rotation, with the elbow fixed at 90 degrees, the upper arm held against the torso, and the forearm swinging in a semicircle up to vertical.",
+      "These two readings recruit different muscles: supinator and biceps for supination, versus infraspinatus and teres minor for shoulder external rotation. The definition cannot be authored faithfully without choosing one.",
+      "The contact sheet does not resolve this. The dumbbell looks vertically oriented and the plate ends up on opposite sides between the two frames, but two stills do not show whether the motion is a forearm roll or an arc of the whole forearm about the shoulder.",
+      "The instructions say the dumbbell is lifted in a semicircle to a vertical forearm, but the end frame does not show a clearly vertical forearm."
+    ],
+    "field_confidence": {
+      "input_mode": "high",
+      "kinetic_chain_type": "high",
+      "laterality": "medium",
+      "primary_joint_actions": "low",
+      "stabilization_demands": "low",
+      "variant": "medium"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "dumbbell_lying_supination"
+      ],
+      "id": "exercise.dumbbell_lying_supination.standard",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "primary_joint_actions": [],
+        "stabilization_demands": []
+      },
+      "laterality": "bilateral",
+      "movement_families": [],
+      "name": "Dumbbell Lying Supination",
+      "variant": "standard"
+    },
+    "questions_requiring_context": [
+      "Is the intended movement shoulder external rotation (the forearm sweeping through an arc with the elbow fixed at 90 degrees), or forearm supination (rolling the forearm about its own long axis)?",
+      "Is the dumbbell held at the handle's center with the forearm roughly horizontal in front of the torso at the start?",
+      "Does the elbow stay fixed at 90 degrees throughout, with no elbow flexion or extension?",
+      "Is this meant as a single-arm exercise performed on each side in turn, with the non-working arm used only as a head rest?"
+    ]
+  },
+  "candidate_trace_report": {},
+  "catalog_id": "catalog.free_exercise_db.Dumbbell_Lying_Supination",
+  "format_version": 1,
+  "provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1,
+      "frame_count": 2,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Dumbbell_Lying_Supination/0.jpg",
+        "Dumbbell_Lying_Supination/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [],
+      "classification": "ambiguous",
+      "classification_reasons": [
+        "The exercise name, 'Dumbbell Lying Supination', implies a forearm rotation at the radioulnar joint. The numbered instructions instead describe glenohumeral external rotation, with the elbow fixed at 90 degrees, the upper arm held against the torso, and the forearm swinging in a semicircle up to vertical.",
+        "These two readings recruit different muscles: supinator and biceps for supination, versus infraspinatus and teres minor for shoulder external rotation. The definition cannot be authored faithfully without choosing one.",
+        "The contact sheet does not resolve this. The dumbbell looks vertically oriented and the plate ends up on opposite sides between the two frames, but two stills do not show whether the motion is a forearm roll or an arc of the whole forearm about the shoulder.",
+        "The instructions say the dumbbell is lifted in a semicircle to a vertical forearm, but the end frame does not show a clearly vertical forearm."
+      ],
+      "field_confidence": {
+        "input_mode": "high",
+        "kinetic_chain_type": "high",
+        "laterality": "medium",
+        "primary_joint_actions": "low",
+        "stabilization_demands": "low",
+        "variant": "medium"
+      },
+      "proposed_definition": null,
+      "questions_requiring_context": [
+        "Is the intended movement shoulder external rotation (the forearm sweeping through an arc with the elbow fixed at 90 degrees), or forearm supination (rolling the forearm about its own long axis)?",
+        "Is the dumbbell held at the handle's center with the forearm roughly horizontal in front of the torso at the start?",
+        "Does the elbow stay fixed at 90 degrees throughout, with no elbow flexion or extension?",
+        "Is this meant as a single-arm exercise performed on each side in turn, with the non-working arm used only as a head rest?"
+      ]
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgrNKLyWmwZ9DWqGMmC5p",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 16554.0,
+      "input_tokens": 1962.0,
+      "output_tokens": 1169.0
+    }
+  },
+  "saved_at_unix": 1794182320.99511,
+  "source_id": "Dumbbell_Lying_Supination",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "authoring_draft",
+  "validation_errors": [
+    "proposed_definition: must be null unless classification is supported",
+    "classification: ambiguous proposals cannot advance to definition_candidate"
+  ]
+}

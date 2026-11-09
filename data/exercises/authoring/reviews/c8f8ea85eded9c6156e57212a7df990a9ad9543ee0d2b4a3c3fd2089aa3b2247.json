@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c8f8ea85eded9c6156e57212a7df990a9ad9543ee0d2b4a3c3fd2089aa3b2247",
+  "status": "accepted",
+  "updated_at_unix": 1794182977.1837,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182965.25654,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Scapular protraction is omitted, so serratus anterior and pectoralis minor are explicit zeros. The cue to keep the shoulders retracted and not protract supports leaving it out, but serratus anterior has a small real role in pressing. Listing protraction as an assist action would be defensible.",
+          "suggested_correction": "Optionally add scapulothoracic_joint/protraction with emphasis assist and sides both, or keep it omitted given the retraction cue."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The leg drive and arch are real isometric contributions that the traced profile leaves out, so quadriceps, glutes and trunk extensors show no involvement. This is a reasonable simplification, because the instructions describe them as setup rather than the lift.",
+          "suggested_correction": "Optionally add postural_stabilization or anti_flexion_spine if the catalog wants to credit the bridge and leg drive."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrP9bcvBQsnw1PsMAXFh",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8401.0,
+          "output_tokens": 1365.0
+        }
+      },
+      "summary": "The definition fits a bilateral barbell bench press to boards. The frames show a supine lifter pressing a bar over the chest with a partner holding boards. Primary actions are glenohumeral horizontal adduction and elbow extension, which put the pectoralis major heads and all three triceps heads in the primary role. The clavicular deltoid, coracobrachialis, anconeus and short head of biceps are synergists, with abdominal pectoralis major also traced at 0.5. Demands for glenohumeral stabilization, scapular retraction stability, grip and wrist stability match the retracted shoulder blades and the hand-held bar. Laterality, the horizontal_push label and the open_chain label are reasonable, and the muscle pattern is not materially wrong."
+    }
+  }
+}

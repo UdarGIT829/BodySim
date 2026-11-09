@@ -1,0 +1,63 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "060d14d7673f6944599860452a68b61635e5be420ed21c2a8c9f440548d7dbe9",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105421.15179,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105403.69935,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands[grip]",
+          "finding": "The barbell rests on the upper thighs and the frames show the hands only resting on the bar to steady it. The authoring assumptions concede that the hands 'only steady the bar'. Grip is defined as sustained finger and thumb flexion to hold a load in the hands, and no load is held there. The tracer therefore gives about 32 hand and forearm muscles stabilizer coefficients, such as flexor_digitorum_profundus 0.35 and humero_ulnar_head_of_flexor_digitorum_superficialis 0.28, which overstates involvement in a calf raise.",
+          "suggested_correction": "Remove grip from the stabilization demands. Hand steadying of a thigh-supported bar is incidental and cannot be represented at a 'light' level by the tracer."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands[wrist_stability]",
+          "finding": "Wrist stability is meant for holding the wrist neutral against a load in the hand. The bar's weight is carried by the thighs, so there is no load for the wrist to resist. Including it makes extensor_carpi_radialis_brevis 0.28, extensor_carpi_radialis_longus 0.21, flexor_carpi_radialis 0.21 and the other wrist flexors and extensors appear as stabilizers, which is unsupported by the source.",
+          "suggested_correction": "Remove wrist_stability. The remaining ankle_stability demand is enough to describe the ankle control under load."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.primary[gastrocnemius heads]",
+          "finding": "With the knees near 90 degrees the gastrocnemii are shortened and contribute little, so the soleus is the dominant mover. The tracer scores them 0.7 and 0.8 from the ankle plantarflexion table weights and cannot reflect this. This is a tracer limitation, not something a different definition could fix.",
+          "suggested_correction": "No change to the definition. Note the soleus-dominant nature of the seated variant in the documentation only."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "Closed_chain is defensible because the forefoot is fixed on the block, but the load is applied through the thighs and not through the foot axis. The authoring itself rated this field as medium confidence.",
+          "suggested_correction": "Closed_chain can be kept. Briefly justify it in the assumptions."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgaBBQrSstt6nFc4Nns",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 7181.0,
+          "output_tokens": 2149.0
+        }
+      },
+      "summary": "The core identity is well supported. This is a bilateral seated barbell calf raise with the balls of both feet on a block, and the frames show the heels lowered then raised while the bar rests on the thighs. The ankle plantarflexion action, bilateral laterality, closed-chain classification and the soleus and gastrocnemius primaries are all appropriate. The grip and wrist_stability demands are not supported: the load sits on the thighs, not in the hands. The tracer cannot scale a demand down to 'light', so it adds 52 stabilizers, mostly hand and forearm muscles, with coefficients up to 0.35. That is a materially wrong muscle pattern for a calf isolation."
+    }
+  }
+}

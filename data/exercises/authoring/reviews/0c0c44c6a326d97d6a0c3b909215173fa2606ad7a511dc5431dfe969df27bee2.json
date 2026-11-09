@@ -1,0 +1,73 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "0c0c44c6a326d97d6a0c3b909215173fa2606ad7a511dc5431dfe969df27bee2",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105236.8002,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105212.37443,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[lumbar_spine/flexion]",
+          "finding": "Lumbar flexion is listed as a full primary action, but the instructions say to keep a slight arch and maintain back posture at all times. The frames show a neutral spine at the pike end and a plank-like spine at the extended end. The trunk's real job is to resist extension as the arms move overhead. The assumptions admit the flexion is 'modest', yet it gives the rectus abdominis a coefficient of 1.0 and the internal and external obliques 0.6 as dynamic movers. That overstates their role and conflicts with the source text.",
+          "suggested_correction": "Remove lumbar_spine/flexion as a primary action, or mark it clearly as a minor assist if some posterior pelvic tilt or abdominal curl at the top is claimed. Express the abdominal work mainly through anti_extension_spine and intra_abdominal_pressure, and add pelvic_alignment if pelvic tilt control is intended."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The only movement family is trunk_flexion, which repeats the unsupported lumbar flexion claim. It omits the hip hinge/pike and the shoulder-extension roll-in that actually move the load and are present in the joint actions. The family list therefore misdescribes the movement as a crunch-like pattern.",
+          "suggested_correction": "Choose families that match a rollout: anti-extension core bracing plus the hip-flexion/pike component and the shoulder-extension (lat-driven) pull. Remove trunk_flexion unless real trunk flexion is justified."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The assumption that the roll-out phase is 'modeled only through the anti-extension spine demand' is inconsistent with a profile that treats lumbar flexion as the abdominal driver. The central abdominal role should be controlled resistance to extension, not flexion. In the extended position the arms are held overhead against the load, but no shoulder-position or glenohumeral control demand is present to reflect that.",
+          "suggested_correction": "Keep anti_extension_spine as the main core demand and consider adding glenohumeral_stabilization or shoulder_position_hold for the overhead arm position, with the abdominal pattern coming from these demands and not from lumbar flexion."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[hip_joint/flexion]",
+          "finding": "Hip flexion is plausible for the roll-in toward the pike. As a full primary action it makes the iliopsoas, rectus femoris and a wide synergist set prominent, so it competes with the abdominal emphasis. This is a modest weighting question, not a clear error.",
+          "suggested_correction": "Consider whether hip flexion should be an assist action so the abs, lats and shoulder extensors stay dominant."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "Closed_chain is defensible because the feet are fixed and the hands stay on the barbell, but the hands roll the barbell, so the label is arguably ambiguous. This is low-impact.",
+          "suggested_correction": "Keep closed_chain with the rationale documented, or reconsider if the rolling hand contact is treated as a free implement."
+        },
+        {
+          "field_path": "trace_summary",
+          "finding": "The tracer has no way to represent the eccentric roll-out versus the concentric roll-in, so the shoulder-flexion lengthening phase cannot be modeled. This is a tracer limitation and is not caused by the definition.",
+          "suggested_correction": "No change to the definition is required for this limitation."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgL5LHjkGZzQk1JzA8i",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 10714.0,
+          "output_tokens": 3036.0
+        }
+      },
+      "summary": "The setup and path are clear from the frames: a bilateral roll-in and roll-out with the hands on a rolling barbell and the feet planted. The hip flexion and shoulder extension actions fit the pike-to-plank path. Primary lumbar flexion contradicts the instructions to keep a slight arch and maintain back posture at all times. The trunk is held against extension, not driven into flexion. That claim makes the rectus abdominis and both obliques look like dynamic flexors, and the movement family repeats the error."
+    }
+  }
+}

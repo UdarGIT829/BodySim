@@ -1,0 +1,49 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "88fb6dae169a7a90b858f62f00ad9ee916663bc4c085351d513e9a730c9655ad",
+  "status": "accepted",
+  "updated_at_unix": 1794183136.30125,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183126.43324,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[2]",
+          "finding": "The knee flexion assist gives the hamstrings coefficients of about 0.32 and the gastrocnemius heads about 0.12. The hamstrings may be slightly overstated, since the knee tuck is largely passive. The assist weighting is a defensible synergist treatment, so this is not an error.",
+          "suggested_correction": "No change is required. A future revision could drop the knee flexion action if the knee tuck is judged purely passive."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPMU3qoBbDeyYvV8rAq",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 4792.0,
+          "output_tokens": 1098.0
+        }
+      },
+      "summary": "The definition matches the supine reverse-crunch pattern in the instructions and both frames. The frames show legs extended at the start and hips and knees flexed with the glutes lifted at the end. Lumbar flexion (rectus abdominis, with the obliques as synergists) and primary hip flexion (iliopsoas, rectus femoris, with pectineus, TFL and sartorius as synergists) reproduce the expected muscle pattern. The knee tuck is correctly weighted as an assist, so the hamstrings and gastrocnemius appear only as low-coefficient synergists. The arms rest on the floor and the trunk is moving, so omitting arm and spinal stabilization demands is consistent with the source. Laterality, the open-chain label and the movement families are appropriate."
+    }
+  }
+}

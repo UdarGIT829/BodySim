@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c920ab235e8e6b8a6ade5091e0c4bb846060ebffd57a45207355b800de3e8c04",
+  "status": "accepted",
+  "updated_at_unix": 1794184854.91535,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184835.47899,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.assumptions[2]",
+          "finding": "The assumption says sideways trunk bending is not modeled as a prime action. The later council edit adds lumbar_spine/lateral_flexion as primary, so the assumption text contradicts the final definition.",
+          "suggested_correction": "In a future revision, restate the assumption to say that controlled lateral trunk flexion and rotation over the hinge are modeled as a primary action."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[2]",
+          "finding": "The elbow_joint/extension assist credits the triceps on both sides because laterality is bilateral. Only the overhead arm holds a locked-out elbow against the load, while the hanging arm just holds the bell. This comes from the tracer's bilateral handling, and no available edit separates the two arms.",
+          "suggested_correction": "None required. Keep the assist weighting so the triceps stay synergists rather than primary."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Standing stance and ankle control are not credited: the feet are turned out and weight is carried on both legs. A postural_stabilization or ankle_stability demand would reach the calf and lower-leg stabilizers, which are currently zero. The effect is minor.",
+          "suggested_correction": "Optionally add postural_stabilization (or ankle_stability) in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "Only hip_hinge is listed. The lateral lean and trunk turn are central to the windmill, so core_rotation or trunk_lateral_flexion would help catalog search. This is a label issue only and does not change the traced muscles.",
+          "suggested_correction": "Consider adding trunk_lateral_flexion or core_rotation as a secondary family."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRXSHC5NBTxtqMFhfJ9",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 11899.0,
+          "output_tokens": 2477.0
+        }
+      },
+      "summary": "The definition is faithful to the frames and instructions: a two-kettlebell windmill with one bell locked out overhead, the other reached to the floor, and a hip hinge back to standing. Hip extension drives the return, so glutes and hamstrings are primary, with adductor magnus as a synergist. The frames show a clear side lean and trunk turn over the hinge. Controlling that lean through the obliques and quadratus lumborum (lateral_flexion, primary) is a reasonable representation, and the erectors are credited as synergists. Both hands hold bells, so bilateral grip, wrist and scapular demands are correct. The remaining issues are labeling or tracer-limit points, none of which materially distorts the muscle pattern."
+    }
+  }
+}

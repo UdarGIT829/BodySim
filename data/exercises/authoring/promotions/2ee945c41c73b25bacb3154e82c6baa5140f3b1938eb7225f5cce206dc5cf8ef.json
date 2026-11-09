@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "2ee945c41c73b25bacb3154e82c6baa5140f3b1938eb7225f5cce206dc5cf8ef",
+  "revision_id": "Bodyweight_Squat@2ee945c41c73",
+  "exercise_id": "exercise.bodyweight_squat.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Bodyweight_Squat",
+  "mapped_muscles": 66,
+  "promoted_at_unix": 1794183090.6292465,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "95914e27dbe84cb548e807f0eb811a3c3bc976d3ff84972acee7b50932d78ca8",
+    "data/exercises/engagement_profiles.json": "6757a1da32d2e43e67b63b4cf0a93a93fd86c0f2565c54e2eda99eea9ba11c4a",
+    "data/exercises/catalog/candidates.json": "7ad0d41ddff52268553f260930f92f065d3df8311ac3c56fc2cb9232694f2bd5",
+    "data/exercises/sources/free_exercise_db_media.json": "252bcaea33f099bd34bf0cb4d9077e67a7a9b669814b3b33f7e5874185259d3b"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "b82fbec73c8b04ddbff46ad3d227572dd7b3f87d534a924e4531f907297fa2b8",
+    "data/exercises/engagement_profiles.json": "987597dc42bc77b4be196b42285cf9fb5dfb5d314df8e9354f5a5b463cd0748f",
+    "data/exercises/catalog/candidates.json": "619ea2eea9668a8f7124168302404de672cb858bd71f278678b207f406a0af18",
+    "data/exercises/sources/free_exercise_db_media.json": "521c675853e2d9998cc952a92f25f0fd1be66267e17cd33c03d5c27e0e2dfe13"
+  }
+}

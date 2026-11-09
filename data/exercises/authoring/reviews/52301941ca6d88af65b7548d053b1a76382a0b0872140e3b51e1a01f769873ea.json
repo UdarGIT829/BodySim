@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "52301941ca6d88af65b7548d053b1a76382a0b0872140e3b51e1a01f769873ea",
+  "status": "accepted",
+  "updated_at_unix": 1794179235.49335,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179218.37665,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "Open_chain is defensible, since the feet roll freely on the ball. The bridge could also be called closed-chain because the feet bear load on a support. It is a catalog label and does not change the traced muscles, and neither choice is plainly wrong.",
+          "suggested_correction": "No change required. Optionally note in the rationale that the feet are unfixed and the load is borne through the ball."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The pelvic_alignment demand adds small stabilizer coefficients for iliacus (0.14) and psoas_major (0.105), which are hip flexors and do little in a held bridge. This follows from how the demand table assigns muscles and is a minor pattern. The abdominals and spinal extensors it also credits are appropriate.",
+          "suggested_correction": "No change required. The pattern is a tracer limitation of the pelvic_alignment demand and its effect is small."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJPNp3Cw2MQuoKXUUkb",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 6378.0,
+          "output_tokens": 2017.0
+        }
+      },
+      "summary": "The frames show a bilateral supine bridge with both heels on a stability ball. The hips stay lifted while the knees flex to roll the ball toward the buttocks. The definition matches this: knee flexion is the primary action, so the hamstrings, including biceps femoris short head, are the primary movers. Held hip extension is credited as an assist, which makes gluteus maximus (0.4) and adductor magnus synergists. Spinal extensors and abdominals appear as modest stabilizers. Both-sided output is correct for a bilateral exercise with no one-sided limbs. The tracer profile is reasonable, and I found no biomechanically material errors."
+    }
+  }
+}

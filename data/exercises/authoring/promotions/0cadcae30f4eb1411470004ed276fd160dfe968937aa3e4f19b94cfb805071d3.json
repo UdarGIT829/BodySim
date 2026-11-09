@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "0cadcae30f4eb1411470004ed276fd160dfe968937aa3e4f19b94cfb805071d3",
+  "revision_id": "Bradford_Rocky_Presses@0cadcae30f4e",
+  "exercise_id": "exercise.barbell_bradford_press.seated_front_back",
+  "source_catalog_id": "catalog.free_exercise_db.Bradford_Rocky_Presses",
+  "mapped_muscles": 104,
+  "promoted_at_unix": 1794183204.7212422,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "c211db485dde19a82e2345c41ef792ecd8f03f99c71dae5ce4b6bb083c06f0bb",
+    "data/exercises/engagement_profiles.json": "d7329898a262129bc1c14567bbc6c0771e029040c91fc0adcb1ecc28bf9ac9d0",
+    "data/exercises/catalog/candidates.json": "b907c77206785b1e135a41936d27c9d6a1c93673a99de264dcf51df43f388242",
+    "data/exercises/sources/free_exercise_db_media.json": "ec8caf39ba317900c7b1cb8b06583063b58c399889496232dafd5d547bd8709f"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "3f94fc1de8df5da79410b3b3137407c6590e020daf7a7f1fb1485b78b3ff5554",
+    "data/exercises/engagement_profiles.json": "6246ee0654f8d5ebb81114bd5c58db6c8c5e00e0f290a310b64cd62ee6a413a6",
+    "data/exercises/catalog/candidates.json": "b4630448e67e61d99a9a3f854a32a17470c6bc1b3f3f96bbc7fa8592d9fe417e",
+    "data/exercises/sources/free_exercise_db_media.json": "8ee8056e042d027400a6ec01f03fedbaa85b2e4f03c90955517ee619404c2038"
+  }
+}

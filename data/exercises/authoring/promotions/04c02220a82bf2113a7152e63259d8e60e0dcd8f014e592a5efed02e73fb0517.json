@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "04c02220a82bf2113a7152e63259d8e60e0dcd8f014e592a5efed02e73fb0517",
+  "revision_id": "Chair_Squat@04c02220a82b",
+  "exercise_id": "exercise.chair_squat.smith_machine",
+  "source_catalog_id": "catalog.free_exercise_db.Chair_Squat",
+  "mapped_muscles": 66,
+  "promoted_at_unix": 1794183836.9386957,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "48460d6712c4158bf8eb594d4c48baea00ca4459500276fe7cd87af850e20556",
+    "data/exercises/engagement_profiles.json": "f9972beac116e9972a61d9a1d3fc2621c6692ece642f220ca808a466ae8615d5",
+    "data/exercises/catalog/candidates.json": "a654346200dff68f25b4dffb5569d8431c0a8402f67c89ac4f1177ca9f12f10e",
+    "data/exercises/sources/free_exercise_db_media.json": "3a1ba3d45f2e51e5c6b7fa2509605db5e4d3157c4bb8685d652ebad659472122"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "4e5e1bf50008083d39a7f6f380f0e581ed4c564980a1c0c158ffbb62bdb15277",
+    "data/exercises/engagement_profiles.json": "43403934464ed06b3a25bb29860fad11f9a0e3a56195f4b807d73b45151fd293",
+    "data/exercises/catalog/candidates.json": "6198c225177b5f568ed7e3dfbf491fc51dcaa16798ad116a935fe2953ace2e92",
+    "data/exercises/sources/free_exercise_db_media.json": "d30279179c5fa748c2e0bbc1e2bd7d25814e15d209a8f2f1aa5ca048a7aa4a2a"
+  }
+}

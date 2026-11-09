@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "7496a58a4c3d3549b87f5c61b38f0ef419fa9966a85f9d06a6e07e0460c58e16",
+  "status": "accepted",
+  "updated_at_unix": 1794179144.37554,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179130.40445,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "No trunk bracing demand is listed. With back support this is defensible, but an overhead press still has some anti-extension demand on the trunk, so the core and erector muscles come out as zeros.",
+          "suggested_correction": "Optionally consider anti_extension_spine if a future revision wants light trunk involvement credited. This is not required given the supported seated position."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.primary",
+          "finding": "The clavicular pectoralis major (0.7) and supraspinatus (0.7) reach primary status through table weights on glenohumeral flexion and abduction. This is borderline for a press but follows the table, not a definition error.",
+          "suggested_correction": "None needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJGuCTNjuzRgCDXiL3u",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10666.0,
+          "output_tokens": 1637.0
+        }
+      },
+      "summary": "The definition matches the source. It is a seated, back-supported, bilateral dumbbell press that moves from a curl-like rack position with palms toward the face to an overhead lockout with palms forward. Glenohumeral flexion and abduction and elbow extension are primary. Scapular upward rotation, forearm pronation and glenohumeral external rotation are assists. This covers the palm rotation the instructions describe, with the pronators and rotator cuff engaged at appropriate weights. Grip, wrist stability, glenohumeral stabilization and scapular stabilization suit dumbbells held in the hands. The tracer output looks right: anterior and lateral deltoid, triceps, clavicular pectoralis and supraspinatus as primaries, with trapezius, serratus, infraspinatus, teres minor and the pronators as synergists. The labels (bilateral, open chain, vertical_push) fit."
+    }
+  }
+}

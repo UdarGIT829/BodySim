@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "08246b934200e9856f18160e52ae284fc0d80fd06bb99743e3293e8723e6c6c4",
+  "status": "accepted",
+  "updated_at_unix": 1794184241.31324,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184230.60078,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "A heavy bar hugged in the elbow crooks plausibly loads the scapular retractors and serratus anterior, which the source tags hint at as traps. The output gives them no involvement. This is a minor omission rather than a material error.",
+          "suggested_correction": "Consider adding scapular_stabilization in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Walking involves repeated single-leg support, so frontal-plane pelvic control is plausible. Gluteus medius currently appears only as a 0.2 synergist via hip extension.",
+          "suggested_correction": "Optionally add pelvic_leveling_frontal."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "Closed_chain for walking is a defensible catalog label, since the feet are in contact with the ground, though gait has swing phases. This is only a label and does not change the traced muscles.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQkr4BPDVw226citucN",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9306.0,
+          "output_tokens": 1336.0
+        }
+      },
+      "summary": "The definition fits the source. Both frames show an upright, bilateral, two-footed stance with the bar in the crook of the elbows and the hands clasped on the wrists. The instructions confirm this: keep the weight off the forearms, stay tight and upright, take short fast steps, and turn in a circle. Primary hip and knee extension for propelling and bearing the load is reasonable, and the calves are correctly marked assist. Elbow flexion and shoulder adduction as assist match the arms hugging a static load. Leaving out grip is correct because the hands clasp the wrists rather than grip the bar. Trunk demands for anti-flexion and anti-rotation suit the upright posture and turning with an off-centre load. The tracer output is consistent: quadriceps, glutes and hamstrings lead, arm holders are synergists, and the trunk muscles are stabilizers. Only minor, non-blocking refinements remain."
+    }
+  }
+}

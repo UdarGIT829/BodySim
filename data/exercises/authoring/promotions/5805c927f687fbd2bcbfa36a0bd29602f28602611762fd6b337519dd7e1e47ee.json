@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "5805c927f687fbd2bcbfa36a0bd29602f28602611762fd6b337519dd7e1e47ee",
+  "revision_id": "Cable_Iron_Cross@5805c927f687",
+  "exercise_id": "exercise.cable_iron_cross.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Iron_Cross",
+  "mapped_muscles": 102,
+  "promoted_at_unix": 1794183386.887276,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "845eb54bc87401d60dbc929b40a33dde9c587d75f600d6a8d2c0d739a4873f73",
+    "data/exercises/engagement_profiles.json": "b950f0bc5153841d8b300167d8a9c7b3e22119d5d7b7bb847e5a443ad86209d5",
+    "data/exercises/catalog/candidates.json": "f76c2be07e54c2e84b5b4f9e6a998447bd36ea8f063591fdfe9cb063d6b511f8",
+    "data/exercises/sources/free_exercise_db_media.json": "cd4bf70f2777cb9000bce3fb4dc9869e0c638dfd364bcbcdef82bf0df8147f10"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "c43ca13a9ff9946bd67164b5f6527e0b577b5fe929e1937bdd14de8009877c8b",
+    "data/exercises/engagement_profiles.json": "6e070ba5596c24b44727299b01641346bbe62d02be46b6773678f7ad92264524",
+    "data/exercises/catalog/candidates.json": "101d614a27cd3b6a1ae25e42c44928d8536ab069e0e0647057e372a37316d1ab",
+    "data/exercises/sources/free_exercise_db_media.json": "6a8b80e6abd0eddb87379f395a8dc1cf0af785a0bdbabeb351cd53a82351b7e0"
+  }
+}

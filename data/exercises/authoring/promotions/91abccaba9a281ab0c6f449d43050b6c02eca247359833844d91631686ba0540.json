@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "91abccaba9a281ab0c6f449d43050b6c02eca247359833844d91631686ba0540",
+  "revision_id": "Chain_Handle_Extension@91abccaba9a2",
+  "exercise_id": "exercise.chain_handle_extension.lying_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Chain_Handle_Extension",
+  "mapped_muscles": 70,
+  "promoted_at_unix": 1794183810.4041457,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "6c88a2346f201ecb1d7d92736cfb523f6217e20de1ffd490bb48ac412cb3f9cf",
+    "data/exercises/engagement_profiles.json": "f97cd5bb95f543099fad8eefd50aeea5caf90293ad83e2b428c191ad549206f4",
+    "data/exercises/catalog/candidates.json": "a9e79139bc6548b3927fc4689b6f6462b5ababa331c587731575e480c1835bef",
+    "data/exercises/sources/free_exercise_db_media.json": "6581515bcecd04cb883368f738a5d1fd39ded6769e4d0e7811b9a924dce6be1b"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "975ae179ea9a4dab3e7e1ef09545b11d97921f2439fdd42646cdb47c5a7cb953",
+    "data/exercises/engagement_profiles.json": "9a8d7cec725ffa4ef306102b55b75f40c0d3946ab1fb9f0052236ad1fb91a19c",
+    "data/exercises/catalog/candidates.json": "2b1f3b7cd27f8b76b5f8b59494ddec0329dd3ccb8b5cdd516c65a9415e9e423e",
+    "data/exercises/sources/free_exercise_db_media.json": "abaec1c5e12b7169d5cc5e522d746159dea34e0e8e422edb858f14893546aa3e"
+  }
+}

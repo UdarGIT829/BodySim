@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "09707d45817b457f8f545371d293952f4dee878224eb62cd68afdd3531636fc1",
+  "status": "accepted",
+  "updated_at_unix": 1794184409.36478,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184390.89083,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The core muscles, the main training target, appear only as stabilizers with coefficients of at most 0.35 (rectus abdominis, transversus abdominis, obliques). This follows from how the tracer works: stabilizers are scaled by 0.35, and the chosen demands are the right way to credit anti-extension work. No choice of action or demand would raise them.",
+          "suggested_correction": "No change needed; this is a tracer limitation."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The source instructs the lifter to squeeze the glutes and to extend the hip as well as the knee on the working leg. The glutes and hamstrings are credited only weakly, as stabilizers through pelvic_alignment. The authoring assumption that hip extension is gravity-assisted and eccentrically controlled by the hip flexors is defensible, so this is a judgement call rather than an error.",
+          "suggested_correction": "Optionally add hip_joint/extension as an assist if glute and hamstring involvement should be shown more strongly."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[1]",
+          "finding": "The source explicitly cues straightening the knee. The quadriceps appear only as synergists (about 0.36 to 0.4) because the action is marked assist. This is reasonable since no external load is moved.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQxfVFpcQxgknckp1EB",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 6359.0,
+          "output_tokens": 2263.0
+        }
+      },
+      "summary": "The definition matches the source instructions and frames: a supine dead bug with arms held toward the ceiling, the lumbar spine and pelvis held flat, and alternating leg extension and return. Hip flexion is a reasonable primary action, since the hip flexors control the lowering of the leg and drive its return. Knee extension as an assist is defensible, because the knee straightens but moves no external load. The core work is carried by anti_extension_spine, intra_abdominal_pressure and pelvic_alignment, and no lumbar flexion is listed, as the instructions require. The arms are unloaded, so omitting arm and grip demands is correct. The resulting profile has iliacus, psoas major and rectus femoris as primary, abdominals, obliques and pelvic floor as stabilizers, and quadriceps and other hip flexors as synergists. This is plausible, with no materially wrong muscle pattern."
+    }
+  }
+}

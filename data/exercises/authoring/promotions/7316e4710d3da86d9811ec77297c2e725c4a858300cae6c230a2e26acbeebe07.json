@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "7316e4710d3da86d9811ec77297c2e725c4a858300cae6c230a2e26acbeebe07",
+  "revision_id": "Barbell_Shrug_Behind_The_Back@7316e4710d3d",
+  "exercise_id": "exercise.barbell_shrug.behind_the_back",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Shrug_Behind_The_Back",
+  "mapped_muscles": 100,
+  "promoted_at_unix": 1794105464.1075263,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "874a65cab1b52d88591e39deadbd72958667014ae79202c5c591070cd89abd14",
+    "data/exercises/engagement_profiles.json": "12efa0d0e8b482d3ea6176e76383363848035ddffb0c88bd0cdf8912ab8cbb2e",
+    "data/exercises/catalog/candidates.json": "4aed4943bcb32a8bf3103d6639c1970f6ab73e9366d1e41ce3efc8f40485ccea",
+    "data/exercises/sources/free_exercise_db_media.json": "2dfd4df7cead64f9be30477eb0b7573244f2b11909b5b35dadd2b16afb1f7581"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "d653622a1fe8c1e9f1c2b8d054e02fa52c6d7dd6236e18263ba008a14a8f4662",
+    "data/exercises/engagement_profiles.json": "2038f8dfab18cc41f7e969dc37bbcf6f5a516310e700fa864f066fe3235bfcb3",
+    "data/exercises/catalog/candidates.json": "9dd88b91852b3785d0864bdd9d900e7668305e99e1e97b0760789caa5ef7ae10",
+    "data/exercises/sources/free_exercise_db_media.json": "2a7a3fac2fcb1b7eb681361da5d9b30d40328624ccc2b9f1f734bcb6842a731a"
+  }
+}

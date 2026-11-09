@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "c920ab235e8e6b8a6ade5091e0c4bb846060ebffd57a45207355b800de3e8c04",
+  "revision_id": "Double_Kettlebell_Windmill@c920ab235e8e",
+  "exercise_id": "exercise.double_kettlebell_windmill.overhead_and_floor",
+  "source_catalog_id": "catalog.free_exercise_db.Double_Kettlebell_Windmill",
+  "mapped_muscles": 142,
+  "promoted_at_unix": 1794184855.5969155,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "e007a4ea0c3582f76dd311a096f2c647fdf4525ca7773f9a55175c2dcacfa5f6",
+    "data/exercises/engagement_profiles.json": "168ae627cd54bd83b6ba807939656f4838b8e360d4a08cb449879f2c48fdd5bc",
+    "data/exercises/catalog/candidates.json": "322496d29b36e88903da57cda9bebb00c10478a3021374cb67766095e90e79be",
+    "data/exercises/sources/free_exercise_db_media.json": "32a113a3e73beea5aac8e0e8ca8debafabcabfbcade01ddf4473091bb4a5486e"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "fefcf028acfdb600f25d3b114b5d5cee6e992b02dda0f0d6a52983f17c77aafe",
+    "data/exercises/engagement_profiles.json": "e7eeb3bd1f58032d7cd0c902fff1046647dbe3a228d0b578b3f0c9fa1fc435e3",
+    "data/exercises/catalog/candidates.json": "52a095ebb7e8d003efc08b74012c2585a826aa29aa784e8b361083a9710dca34",
+    "data/exercises/sources/free_exercise_db_media.json": "13e586eea95cf467e5c19954d8843c7375235a903b56bd914818abd387953012"
+  }
+}

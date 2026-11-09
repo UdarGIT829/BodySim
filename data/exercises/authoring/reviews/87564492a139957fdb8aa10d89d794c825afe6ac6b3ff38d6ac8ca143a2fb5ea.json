@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "87564492a139957fdb8aa10d89d794c825afe6ac6b3ff38d6ac8ca143a2fb5ea",
+  "status": "accepted",
+  "updated_at_unix": 1794184656.03384,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184645.12487,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "Only elbow_extension is listed. The machine dip is a compound downward press, so a push family could also apply. Families are search labels only and do not change the traced muscles.",
+          "suggested_correction": "Optionally add vertical_push or horizontal_push as a secondary family; elbow_extension is acceptable as the primary label."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Pectoralis major, especially the sternocostal head, may contribute more than the assist-weighted glenohumeral extension implies. The source cues emphasise triceps, so the current weighting is defensible.",
+          "suggested_correction": "No change needed. A future revision could consider glenohumeral adduction as an assist if frames show the arms pressing inward."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRHQDmd1PXtCyuBSGEW",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7715.0,
+          "output_tokens": 1218.0
+        }
+      },
+      "summary": "The definition matches the source frames and instructions. A seated, back-supported, bilateral machine dip has both hands pushing handles downward with the elbows kept in. Elbow extension as the primary action gives triceps heads as the only primary movers (lateral and medial 0.9, long 0.8). Glenohumeral extension and scapular depression as assists add latissimus, teres major, posterior deltoid and pectoralis contributions at synergist level, which is reasonable for a dip-pattern press. The seat back and belt support the torso, so omitting bracing and postural demands is justified. Grip and wrist_stability fit the loaded handles. The open-chain label and the bilateral, empty one_sided_limbs settings are appropriate. The tracer output has no materially wrong muscle pattern."
+    }
+  }
+}

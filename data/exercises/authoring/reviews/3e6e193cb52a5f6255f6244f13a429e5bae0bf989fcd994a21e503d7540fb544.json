@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "3e6e193cb52a5f6255f6244f13a429e5bae0bf989fcd994a21e503d7540fb544",
+  "status": "accepted",
+  "updated_at_unix": 1794183977.51087,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183967.44506,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The deltoids and other shoulder-girdle muscles that hold the arms hanging under load are not credited. Only the grip and wrist demands reach the arm. This omission is minor and does not distort the trace materially.",
+          "suggested_correction": "Optionally add shoulder_position_hold or glenohumeral_stabilization in a future revision if arm-hang loading should be represented."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "The open_chain label is arguable because the feet are fixed on the floor. The load does move with the hands and shoulder girdle, so the label is defensible. It is a catalog label only and does not change the traced muscles.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQRT14omyWqMMXumc8Q",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8842.0,
+          "output_tokens": 1151.0
+        }
+      },
+      "summary": "The frames show a standing, bilateral barbell shrug with the bar hanging at mid-thigh, straight elbows and the shoulders elevated in frame 2. Scapulothoracic elevation as the only primary action matches this. It makes the upper trapezius and levator scapulae primary, with the rhomboids as synergists at 0.4 via the table. The demands fit the biomechanics. Grip and wrist_stability apply because the load is held in the hands. anti_flexion_spine covers the slight forward trunk inclination. postural_stabilization covers standing. Elbow flexion and triple extension are correctly left out, since the arms act as hooks and the instructions give no jump or hip drive. The labels (open_chain, scapular_elevation, bilateral) are reasonable."
+    }
+  }
+}

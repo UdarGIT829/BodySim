@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "f37c93b60ac6237c4e3665d7d2fafb1eaebca411edee7f60ada9d904ea342f0a",
+  "status": "accepted",
+  "updated_at_unix": 1794184270.8465,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184257.27992,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.assumptions[1]",
+          "finding": "The source text pairs the right elbow with the left knee but also says the left knee goes toward the left shoulder. The frame shows a cross-body diagonal and the authoring response resolved this correctly. The instruction text is internally inconsistent.",
+          "suggested_correction": "Keep the cross-body diagonal assumption and note the source text inconsistency in the authoring notes."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "pelvic_alignment adds low-coefficient gluteus maximus (0.21) and longissimus thoracis (0.105) as stabilizers. This is only loosely plausible for a crunch, since the pelvis stays mostly passive. The effect is small and does not change the main muscle pattern.",
+          "suggested_correction": "Optionally review whether pelvic_alignment is needed at all, since the rectus abdominis and obliques already carry the pelvic and trunk work."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The hip and knee flexion assists bring in hamstrings, gastrocnemius heads, plantaris and popliteus as low synergists. This follows from how the tracer maps knee flexion and is not a definition error. It also treats the knee bend as a trunk-linked action, though the support leg stays mostly flat.",
+          "suggested_correction": "No change required. If revised later, keep the hip and knee flexion actions at assist emphasis."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The families trunk_flexion, core_rotation and hip_flexion are reasonable. hip_flexion is secondary here, since the leg only accompanies the trunk curl.",
+          "suggested_correction": "Optionally drop hip_flexion and keep trunk_flexion and core_rotation."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQnr5UG6AgFnxwkBv6V",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 6389.0,
+          "output_tokens": 1709.0
+        }
+      },
+      "summary": "The definition fits the source and frames. The alternating cross-body crunch is modeled as bilateral trunk flexion plus rotation (primary), with assist-level hip and knee flexion for the drawn-in leg. The tracer output is a plausible pattern: rectus abdominis and both obliques are primary, hip flexors and hamstrings are low-level synergists, and a few low-coefficient stabilizers appear. The frames show a supine setup, hands behind the head, and the elbow meeting the opposite knee, which supports the identity, laterality and kinetic-chain label. Remaining concerns are minor and non-blocking."
+    }
+  }
+}

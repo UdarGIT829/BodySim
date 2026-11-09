@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "d3153add0c66cfa56868a2ff504b8221905c7f4c691cae4be609712b6d2d2a2f",
+  "status": "accepted",
+  "updated_at_unix": 1794183448.73776,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183434.76862,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "The `shoulder_raise` family describes lifting the arms in front or to the side (front and lateral raises). It is a loose fit for a reverse fly, and `horizontal_pull` is the better primary label. This is a catalog label only and does not change the traced muscles.",
+          "suggested_correction": "Consider keeping only `horizontal_pull`, or dropping `shoulder_raise` unless the catalog wants rear-delt movements to be searchable under it."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "`postural_stabilization` adds a broad lower-body and trunk stabilizer pattern (quadriceps, soleus, gluteus maximus, hamstrings, erectors) at low coefficients of about 0.07 to 0.28. This is acceptable for a standing cable exercise and is not materially wrong, but it is a diffuse contribution.",
+          "suggested_correction": "No change required. A future revision could consider whether `anti_rotation_torso` or a narrower trunk demand better reflects the standing cable stance."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPkBc1jRq2mxrH4SMn8",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9876.0,
+          "output_tokens": 1583.0
+        }
+      },
+      "summary": "The definition matches the source. It is a standing, bilateral, straight-arm cable reverse fly from crossed high pulleys, with both arms sweeping back and outward. The frames show a fixed elbow position, hands holding the handles, and the arms ending roughly horizontal at the sides. Glenohumeral horizontal abduction as the primary action correctly makes the scapular spinal deltoid the primary mover on both sides, with infraspinatus, teres minor, acromial deltoid and the scapular retractors as synergists. Scapular retraction as an assist is sensible, because the scapulae are drawn back at the end range without being the main driver. The demands fit: grip and wrist stability for the handles held in the hands, elbow joint integrity for the locked elbows, and postural stabilization for standing. Bilateral laterality with empty one_sided_limbs is correct."
+    }
+  }
+}

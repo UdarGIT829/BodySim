@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "28622a41bb1209278d073a7021609628b5465cfb15cff0efdc823983c6276c8c",
+  "revision_id": "Cable_Seated_Lateral_Raise@28622a41bb12",
+  "exercise_id": "exercise.cable_seated_lateral_raise.bent_over_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Seated_Lateral_Raise",
+  "mapped_muscles": 60,
+  "promoted_at_unix": 1794183544.6606555,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "198084d2e531da78b7706abd907ef0bb3c40647e26363d8ea8b42616193bec35",
+    "data/exercises/engagement_profiles.json": "05217fda9942a5ad3eb6f913ef1380da5a5e40a624b287d87994b83aa23bb7d1",
+    "data/exercises/catalog/candidates.json": "fec173a32e3cebd3dcc5ea170a53839c7eebad792d29a10f21e2387b5ed0a6f9",
+    "data/exercises/sources/free_exercise_db_media.json": "b69a96425b8c03636a80713bf65ae917065abcd5e7cb58581ea75ba664124aa1"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "d6728d72df1100e881283c5e9010b3690de7b0abe56eeda6f99f29486eeb921a",
+    "data/exercises/engagement_profiles.json": "11365b0887c9b1a8672e54309f298c43475476ed8f236e8d7fe923db765bdfc5",
+    "data/exercises/catalog/candidates.json": "658e614fef823386d54b646a3815fb636c63e772ed2840969bfc7e2cdb8a98bc",
+    "data/exercises/sources/free_exercise_db_media.json": "12f8c9cd43908609e8d2e19dab43cdaed9e6268003a8673a43b70dbda4cdb7fb"
+  }
+}

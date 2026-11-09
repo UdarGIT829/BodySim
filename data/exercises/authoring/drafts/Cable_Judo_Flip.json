@@ -1,0 +1,108 @@
+{
+  "additional_context": "",
+  "authoring_response": {
+    "assumptions": [],
+    "classification": "ambiguous",
+    "classification_reasons": [
+      "The text and the demonstration conflict on pulley height and resistance path. The instructions place the cable at the lowest pulley, yet say the cable is pulled downward over the shoulder. The contact sheet shows the cable arm raised, with the rope held at chest or shoulder height in frame 1.",
+      "A low-to-high path would be a trunk rotation with hip and shoulder extension. A high-to-low path would be a trunk rotation and flexion with shoulder extension or adduction. These give materially different joint actions and muscle credit.",
+      "The trunk may rotate, flex, or both, and the instructions do not say which dominates. The 'twist and crunch forward' cue plus the deep forward bend in frame 2 suggest a hip hinge as well, so the hip actions are also unclear.",
+      "Laterality is unclear. The set is performed on one side and then repeated on the other, so it is unclear whether to author a left or right side-specific variant or a generic one. The pulley side is also not clear from the frames.",
+      "Two frames cannot show the full path of the rope over the shoulder, so the arm contribution (pulling versus holding the rope in place) cannot be established."
+    ],
+    "field_confidence": {
+      "input_mode": "medium",
+      "kinetic_chain_type": "medium",
+      "laterality": "low",
+      "primary_joint_actions": "low",
+      "stabilization_demands": "low",
+      "variant": "low"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "cable_judo_flip"
+      ],
+      "id": "exercise.cable_judo_flip.standard",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "primary_joint_actions": [],
+        "stabilization_demands": []
+      },
+      "laterality": "bilateral",
+      "movement_families": [],
+      "name": "Cable Judo Flip",
+      "variant": "standard"
+    },
+    "questions_requiring_context": [
+      "Is the cable anchored at the lowest pulley, as the text says, or at a high pulley, as the frames suggest? Does the rope travel from low to high or from high to low?",
+      "Which direction does the rope pull, and does the working side's shoulder extend or adduct against the cable, or do the arms just hold the rope close to the shoulder?",
+      "Is the trunk movement mainly rotation, forward flexion (crunch), or both? Is there a hip hinge, or is the forward bend mostly from the spine?",
+      "Should the definition be authored as a single-side variant (left or right, with the side facing the pulley specified) or as a generic unilateral variant?",
+      "Is the exercise rep-based or timed? The text says repeat until failure."
+    ]
+  },
+  "candidate_trace_report": {},
+  "catalog_id": "catalog.free_exercise_db.Cable_Judo_Flip",
+  "format_version": 1,
+  "provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1,
+      "frame_count": 2,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Cable_Judo_Flip/0.jpg",
+        "Cable_Judo_Flip/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [],
+      "classification": "ambiguous",
+      "classification_reasons": [
+        "The text and the demonstration conflict on pulley height and resistance path. The instructions place the cable at the lowest pulley, yet say the cable is pulled downward over the shoulder. The contact sheet shows the cable arm raised, with the rope held at chest or shoulder height in frame 1.",
+        "A low-to-high path would be a trunk rotation with hip and shoulder extension. A high-to-low path would be a trunk rotation and flexion with shoulder extension or adduction. These give materially different joint actions and muscle credit.",
+        "The trunk may rotate, flex, or both, and the instructions do not say which dominates. The 'twist and crunch forward' cue plus the deep forward bend in frame 2 suggest a hip hinge as well, so the hip actions are also unclear.",
+        "Laterality is unclear. The set is performed on one side and then repeated on the other, so it is unclear whether to author a left or right side-specific variant or a generic one. The pulley side is also not clear from the frames.",
+        "Two frames cannot show the full path of the rope over the shoulder, so the arm contribution (pulling versus holding the rope in place) cannot be established."
+      ],
+      "field_confidence": {
+        "input_mode": "medium",
+        "kinetic_chain_type": "medium",
+        "laterality": "low",
+        "primary_joint_actions": "low",
+        "stabilization_demands": "low",
+        "variant": "low"
+      },
+      "proposed_definition": null,
+      "questions_requiring_context": [
+        "Is the cable anchored at the lowest pulley, as the text says, or at a high pulley, as the frames suggest? Does the rope travel from low to high or from high to low?",
+        "Which direction does the rope pull, and does the working side's shoulder extend or adduct against the cable, or do the arms just hold the rope close to the shoulder?",
+        "Is the trunk movement mainly rotation, forward flexion (crunch), or both? Is there a hip hinge, or is the forward bend mostly from the spine?",
+        "Should the definition be authored as a single-side variant (left or right, with the side facing the pulley specified) or as a generic unilateral variant?",
+        "Is the exercise rep-based or timed? The text says repeat until failure."
+      ]
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgrLmTzBbwakvHKDdaigm",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 16554.0,
+      "input_tokens": 1748.0,
+      "output_tokens": 1159.0
+    }
+  },
+  "saved_at_unix": 1794181102.55096,
+  "source_id": "Cable_Judo_Flip",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "authoring_draft",
+  "validation_errors": [
+    "proposed_definition: must be null unless classification is supported",
+    "classification: ambiguous proposals cannot advance to definition_candidate"
+  ]
+}

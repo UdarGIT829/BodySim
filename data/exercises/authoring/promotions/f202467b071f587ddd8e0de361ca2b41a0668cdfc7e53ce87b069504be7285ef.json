@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "f202467b071f587ddd8e0de361ca2b41a0668cdfc7e53ce87b069504be7285ef",
+  "revision_id": "Barbell_Shoulder_Press@f202467b071f",
+  "exercise_id": "exercise.barbell_shoulder_press.seated_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Shoulder_Press",
+  "mapped_muscles": 96,
+  "promoted_at_unix": 1794105437.4724424,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "d9130ff5a2d0bbd9531deebddbc650c307b5a60693278e1382d5c7b274f7be87",
+    "data/exercises/engagement_profiles.json": "21c9c43041d2290bf13e173c0172aff3e8f8f93194a6745e14f24bb7d0a03320",
+    "data/exercises/catalog/candidates.json": "b932d301fce0f547e71c61e1799e0b8059d857a4390756309b215ad6280627b7",
+    "data/exercises/sources/free_exercise_db_media.json": "55c3fb9bf0944c6e059edea6dfe047eb82116bba448317e030d822dc2b99f20a"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "7760c08f4b5026ed868e6ee08f1f2c04a21157c46eaae26864ae2ca92cd41c1e",
+    "data/exercises/engagement_profiles.json": "0e06a3a0fb6a4aa894c53a61823d25fe88c5156f8ae87764589a14a30bf08d8d",
+    "data/exercises/catalog/candidates.json": "0c5d34259d4884887e5bfb3aabd904ae5262f99c9bdcc39399c40c5f97c18e82",
+    "data/exercises/sources/free_exercise_db_media.json": "1b6eda50af50001f0ef10b495cf8e04af5d9bffdbcac95f86c5d2daac3fd77c1"
+  }
+}

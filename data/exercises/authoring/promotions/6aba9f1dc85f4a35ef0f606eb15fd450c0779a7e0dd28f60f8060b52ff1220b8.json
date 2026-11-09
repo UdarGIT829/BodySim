@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "6aba9f1dc85f4a35ef0f606eb15fd450c0779a7e0dd28f60f8060b52ff1220b8",
+  "revision_id": "Backward_Drag@6aba9f1dc85f",
+  "exercise_id": "exercise.backward_sled_drag.rope_strap",
+  "source_catalog_id": "catalog.free_exercise_db.Backward_Drag",
+  "mapped_muscles": 148,
+  "promoted_at_unix": 1794179203.0947728,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "9192a2037ba38f1d7fd39c1ff7d81a02d484e2b1ec19842441ed54fa73c87696",
+    "data/exercises/engagement_profiles.json": "bf84079aab3ab230bae98d2c94b78882d3fc260248d32860dd35edcb648c172e",
+    "data/exercises/catalog/candidates.json": "5a8f29f812cfd46fcd46df3afef0e804cbfb210228a3ca6fabe568348d939459",
+    "data/exercises/sources/free_exercise_db_media.json": "b0a724b480afced53c0c01a2207bd29d6dfa72cd43f060a8c2b7a0bdf1d7b8bf"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "7ea65fa6bdca04d58e3999d8f81bf876cc505721e4862b099f383768a41ed093",
+    "data/exercises/engagement_profiles.json": "7966b831857f9957e1814fb2226912719c7e0c78baa3a5a664ffee154fd5fead",
+    "data/exercises/catalog/candidates.json": "f09764f91252cb1f7946536e5c232111ea27f2fa5343cabb5905b06b853e5e7e",
+    "data/exercises/sources/free_exercise_db_media.json": "b6aca0dcd58d9249a7d94e8b821e12cc697b45d2db1b782479f863fa12568963"
+  }
+}

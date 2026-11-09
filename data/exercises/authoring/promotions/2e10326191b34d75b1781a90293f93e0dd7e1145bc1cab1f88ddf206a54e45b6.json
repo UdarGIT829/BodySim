@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "2e10326191b34d75b1781a90293f93e0dd7e1145bc1cab1f88ddf206a54e45b6",
+  "revision_id": "Donkey_Calf_Raises@2e10326191b3",
+  "exercise_id": "exercise.donkey_calf_raise.bent_over_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Donkey_Calf_Raises",
+  "mapped_muscles": 54,
+  "promoted_at_unix": 1794184711.029368,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "2f5cc6f15119c4811aa83cb1f102afcc1c76156996e05d2ceb51dfa6b38eb594",
+    "data/exercises/engagement_profiles.json": "73179f6ee83f5214ef2281275d00968cb9a086ef784c41584d93ade3ea01b9d2",
+    "data/exercises/catalog/candidates.json": "fa6bf94cce2d6dc64e02756718b8f03a279a724ae73838297b9eb0a0f3bd8a1a",
+    "data/exercises/sources/free_exercise_db_media.json": "8c688f9b650de540105639b6a6e7eb9812edf39dc1a65a1e5d35a58634da57b7"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "64459f028996a0c1a1f166c429df6c82a1fae7d18238cb146c0a8f95f1b2f64d",
+    "data/exercises/engagement_profiles.json": "5ddcc008a3ed582241c8dbc89ae7dae49e0d2b1d5167b2ecabd60e166672058a",
+    "data/exercises/catalog/candidates.json": "fc47aba6d1500f9973e8d285d6bb08e4b181e7797902d8c9dc6df8c81d922c96",
+    "data/exercises/sources/free_exercise_db_media.json": "54d890212998013c349bd2f4f82083cb2377f454a90fb1d77b28f7d6ea39ac9b"
+  }
+}

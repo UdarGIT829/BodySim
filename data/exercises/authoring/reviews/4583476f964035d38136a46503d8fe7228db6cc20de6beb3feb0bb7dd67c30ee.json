@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "4583476f964035d38136a46503d8fe7228db6cc20de6beb3feb0bb7dd67c30ee",
+  "status": "accepted",
+  "updated_at_unix": 1794183415.90379,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183400.25043,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The cable pulls the pinned upper arm toward shoulder flexion, so the muscles resisting that pull are shoulder extensors (latissimus, teres major, posterior deltoid). shoulder_position_hold credits mainly the clavicular deltoid (0.35), a shoulder flexor, and no lat or teres major activity appears. This is a modelling approximation under the existing demand vocabulary, not a material error for an isolation elbow-extension exercise.",
+          "suggested_correction": "A future revision could add glenohumeral_joint/extension with emphasis assist and sides working to credit the lats and teres major holding the upper arm."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization spreads low-coefficient stabilizer credit across both legs and the trunk. This is plausible for an upright standing cable exercise, and it is a general tracer pattern rather than a definition error.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "proposed_definition.laterality",
+          "finding": "The frames show one standing pose and do not show which arm works, but the instructions specify the right hand and the same-side repetition on the other arm, so unilateral with the right side working is reasonable.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPhe49rezSs9bkCzXct",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7669.0,
+          "output_tokens": 1900.0
+        }
+      },
+      "summary": "The definition matches the source. It is a standing single-arm high-pulley triceps pushdown with a supinated grip and the upper arm pinned at the side. The only moving joint is the elbow, which extends against the cable. Elbow extension as the sole working-side primary action correctly yields the three triceps heads as primaries and the anconeus as a synergist. Unilateral laterality with one_sided_limbs [\"arm\"] keeps the unloaded arm at zero. Grip and wrist_stability fit a handle held in the hand, shoulder_position_hold fits the pinned upper arm, and postural_stabilization fits the upright stance. The open_chain and elbow_extension labels are appropriate. The remaining concerns are minor and non-blocking."
+    }
+  }
+}

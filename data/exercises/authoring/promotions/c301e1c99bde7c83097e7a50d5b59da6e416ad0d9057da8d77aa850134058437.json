@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "c301e1c99bde7c83097e7a50d5b59da6e416ad0d9057da8d77aa850134058437",
+  "revision_id": "Bench_Sprint@c301e1c99bde",
+  "exercise_id": "exercise.bench_sprint.alternating_foot_switch",
+  "source_catalog_id": "catalog.free_exercise_db.Bench_Sprint",
+  "mapped_muscles": 80,
+  "promoted_at_unix": 1794182787.1602414,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "b3f84937d568ea79cf8a69e9ff2bc56c74cf811c7125f03ed929a41cadceb412",
+    "data/exercises/engagement_profiles.json": "cc9772778eba3b78a93ec23334fa98a330d35241259520fca174a6527f826b58",
+    "data/exercises/catalog/candidates.json": "daab8688803560c30dfe5d4dbf9f7496718c666fd163ff2ba583ac90c6ea78ec",
+    "data/exercises/sources/free_exercise_db_media.json": "c606afc64e76c5ca6c4fcf71480f1aa3eb615d9984c20a1df8df87b898ba9fb1"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "c54412ad4493c24b526a954f2dd29596c2091264c5d3494d19ae36b3d0344eac",
+    "data/exercises/engagement_profiles.json": "4f5239cc9d5ab00f9ae6c86409d9587e775c8a88ce1edf26d3eed5ccec1e84a8",
+    "data/exercises/catalog/candidates.json": "94f2715132853bdc5a589b59b54906e886fd928390f2e336299c0cc306f4f06f",
+    "data/exercises/sources/free_exercise_db_media.json": "27eb9f322025cb5190abb652afe19814996a325788df5afc5a7401d5124d176b"
+  }
+}

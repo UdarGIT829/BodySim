@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "79d0d8a58bb88584d7da367ef3974f087669615b4c3967d63a877ae485652c01",
+  "status": "accepted",
+  "updated_at_unix": 1794179342.47759,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179331.68046,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Rotator cuff centring of the humeral head under a heavy bar is not credited. Infraspinatus, supraspinatus, teres minor and subscapularis are explicit zeros. This is a minor omission and does not make the pattern materially wrong.",
+          "suggested_correction": "A future revision could add humeral_head_stabilization or glenohumeral_stabilization if rotator cuff involvement should appear in the profile."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The incline press is labelled both horizontal_push and vertical_push. This is a catalog label only and does not change the traced muscles. Both are defensible for a 30-45 degree incline.",
+          "suggested_correction": "Optionally keep a single closest primary family. This is not required."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist",
+          "finding": "Abdominal pectoralis major is a 0.5 synergist, which is somewhat generous for an incline press, where the clavicular fibres dominate. This comes from the table weight for horizontal adduction and is acceptable.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJXjJZEv4u3S67S9KC6",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9459.0,
+          "output_tokens": 1282.0
+        }
+      },
+      "summary": "The definition matches the frames and instructions: a bilateral barbell incline press from upper chest to lockout. The prior blocking issue is resolved, because scapular protraction is now an assist action. Serratus anterior is a 0.4 synergist and pectoralis minor is 0.2. The true movers are primary: clavicular deltoid at 1.0, sternocostal pectoralis major at 1.0, clavicular pectoralis major at 0.8, and the triceps at 0.8 to 0.9. Grip, wrist stability and scapular demands are placed correctly for a bar held in the hands with the scapulae pinned to the bench. Only minor, non-blocking refinements remain."
+    }
+  }
+}

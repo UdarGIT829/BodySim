@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "610e7abaaee36dfcba5c1d0116f66a63cd2dc727de125a6dad0a6319ec773ca7",
+  "status": "accepted",
+  "updated_at_unix": 1794184899.76388,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184890.3789,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.synergist",
+          "finding": "Latissimus dorsi is traced at 0.4 only because the table gives it a weight of 1.0 for glenohumeral extension. This is the highest synergist value and may look high for a curl variant. It follows from the assist weighting and cannot be reduced by any choice of emphasis or sides.",
+          "suggested_correction": "No change needed. Keep glenohumeral extension as an assist."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "No supination action or demand is listed. The supinated grip is held rather than actively rotated, and the biceps are already primary, so this is a reasonable simplification.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRbV1zeHoePbpBvWUsZ",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9789.0,
+          "output_tokens": 1043.0
+        }
+      },
+      "summary": "The definition matches the source instructions and frames. A standing, bilateral, supinated barbell curl is shown, with the bar kept against the torso and the elbows travelling backward. Elbow flexion as the primary action correctly makes brachialis, brachioradialis and both biceps heads the primary movers. Glenohumeral extension as an assist is a reasonable credit for the backward elbow drag. It leaves the lats, teres major and posterior deltoid as synergists without making them primary, and the instruction not to lift the shoulders is respected by omitting scapular elevation. Grip and wrist_stability fit a bar held in the hands. postural_stabilization fits the standing stance. Laterality, the empty one_sided_limbs list, the open_chain label and the elbow_flexion family are all appropriate."
+    }
+  }
+}

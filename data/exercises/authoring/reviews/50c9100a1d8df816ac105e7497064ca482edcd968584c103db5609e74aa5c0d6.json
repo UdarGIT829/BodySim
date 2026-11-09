@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "50c9100a1d8df816ac105e7497064ca482edcd968584c103db5609e74aa5c0d6",
+  "status": "accepted",
+  "updated_at_unix": 1794183850.32532,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183839.30643,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.synergist (short_head_of_biceps_brachii, coracobrachialis)",
+          "finding": "Small synergist credit to the short head of biceps and coracobrachialis comes from the horizontal_adduction table weights. This is a tracer-table artifact, not a definition error.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions (hip_joint/extension, knee_joint/extension)",
+          "finding": "The staggered, stepping stance is only partly captured by bilateral working-side leg actions. The frames do not resolve per-leg loading, so the assist-level credit is reasonable but approximate.",
+          "suggested_correction": "Optionally note in the assumptions that the leg drive is approximated as symmetric assist extension."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQG127o63oXkDts9dhg",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 11151.0,
+          "output_tokens": 1310.0
+        }
+      },
+      "summary": "The definition fits the source. The instructions and frames show a three-point crouch with the ball in front, then a pull of the ball to the chest and an explosive two-handed forward release over two steps. A bilateral laterality and an open-chain label suit a released ball. Elbow extension and horizontal shoulder adduction as primary actions give a sensible chest-pass pattern: pectoralis major and triceps are the primary movers, with anterior deltoid and serratus anterior as synergists. Assist-weighted hip, knee and ankle extension credits the leg drive from the stance and steps without making the legs primary. Grip and wrist_stability fit the ball held in both hands before release. Postural_stabilization and scapular_anchoring give a plausible trunk and scapular base. The movement-family labels (jump_and_throw, horizontal_push) are reasonable. No biomechanically material claim is unsupported or contradicted."
+    }
+  }
+}

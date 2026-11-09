@@ -1,0 +1,68 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "5c65885f1907dd002114308d294ffa3712ec15a93244e5c8536ab00b89076dd5",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105009.53113,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794104988.74887,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "There is no elbow action. The frames show the arms wrapped around the plate with the elbows flexed under load, so the elbow flexors are doing real holding work. Brachialis, long and short head of biceps brachii and brachioradialis all have zero involvement in the trace. The assumption that the arms hold isometrically does not justify zeroing them, because the table can credit a muscle only through a listed action or demand.",
+          "suggested_correction": "Add elbow_joint/flexion for the hug and hold, with emphasis 'assist' or 'primary' as appropriate, so the elbow flexors appear as synergists or movers."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Hugging the implement into the chest is a squeeze with the arms adducted and pulled in against the load. No glenohumeral action reaches the pectoralis major heads, latissimus dorsi or teres major. They appear as zero or only as 0.07 to 0.14 stabilizers (pectoralis) via shoulder_position_hold, which understates the chest and lat contribution to the hug. The assumption text explicitly omits any glenohumeral action.",
+          "suggested_correction": "Add glenohumeral_joint/adduction and/or horizontal_adduction (assist or primary) to represent the hugging squeeze. Consider glenohumeral_joint/extension if the arm pull from below the knees is meant to be modelled."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The trunk erectors (longissimus thoracis, iliocostalis lumborum, multifidus) contribute only as 0.25 to 0.32 stabilizers through anti_flexion_spine. The first frame shows a deep hinge with a rounded back, and the lift is a heavy pull from the floor, so back extension is a major demand. This is a judgment call rather than clearly wrong.",
+          "suggested_correction": "Consider lumbar_spine/extension as an assist action if the back is meant to contribute actively to the lift."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "Only hip_hinge is listed, yet knee extension is a primary action and the source says to finish by extending through the hips and knees. A squat or lift-type component is not acknowledged, and a pull component is not either (the catalog force is 'pull').",
+          "suggested_correction": "Review whether the vocabulary supports an additional family, such as squat or pull, that matches the knee-extension phase and the pull from the floor."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The wrist and forearm flexors that grip the plate edge are covered by grip, but glenohumeral_stabilization is absent. The rotator cuff has no involvement even though the arms bear a heavy load in front of the body.",
+          "suggested_correction": "Consider adding glenohumeral_stabilization if rotator cuff involvement is intended."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011Cgpg3b9StweQz9q6VMjTw",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 10169.0,
+          "output_tokens": 2491.0
+        }
+      },
+      "summary": "The hip and knee extension drive is well supported by the frames: a closed-chain bilateral floor lift with a hip-hinged start and a more upright finish. The upper-body claim is not. The athlete wraps both arms around the plate and hugs it to the chest, so the elbows stay flexed and the arms adduct against the load. The definition models the arms only through grip, scapular stabilization and shoulder position hold. As a result the elbow flexors (brachialis, biceps, brachioradialis) and the hugging adductors (pectoralis major, latissimus dorsi, teres major) are explicit zeros or token stabilizers. That is a materially wrong muscle pattern, and the tracer vocabulary can represent it, so a better definition would fix it."
+    }
+  }
+}

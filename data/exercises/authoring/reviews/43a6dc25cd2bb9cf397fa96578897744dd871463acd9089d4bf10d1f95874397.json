@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "43a6dc25cd2bb9cf397fa96578897744dd871463acd9089d4bf10d1f95874397",
+  "status": "accepted",
+  "updated_at_unix": 1794184947.1055,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184936.06986,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Scapular control is credited through the general scapular_stabilization demand. In a bench press the scapulae are held retracted against the bench, so the rhomboids and mid-trapezius would be better served by scapular_retraction_stability. The current choice still engages them at modest stabilizer levels, so the pattern is not materially wrong.",
+          "suggested_correction": "Optionally add scapular_retraction_stability to represent the retracted scapular base against the bench."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Horizontal adduction is the primary shoulder action. Pectoralis major clavicular and sternocostal heads and the abdominal part come out at 0.8, 1.0 and 0.5, which is plausible. The abdominal head being a synergist is a tracer weighting effect, not a definition error.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrResPEioMiYzkea2ng9",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9453.0,
+          "output_tokens": 1306.0
+        }
+      },
+      "summary": "The definition matches the frames and instructions: a flat-bench, bilateral, simultaneous dumbbell press from chest level to lockout over the shoulders. Primary movers are the pectoralis major heads (horizontal adduction) and the three triceps heads (elbow extension). The anterior deltoid, abdominal pec major, coracobrachialis, serratus anterior and biceps appear as synergists via the assist-weighted flexion and protraction. The rotator cuff, scapular muscles and hand/forearm muscles appear as stabilizers via the listed demands. The back is supported by the bench and the feet are planted, so omitting postural and bracing demands is reasonable. The glute, hamstring, lat and posterior-deltoid zeros are appropriate."
+    }
+  }
+}

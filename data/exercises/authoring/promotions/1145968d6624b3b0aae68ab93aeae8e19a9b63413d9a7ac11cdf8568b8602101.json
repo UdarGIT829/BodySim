@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "1145968d6624b3b0aae68ab93aeae8e19a9b63413d9a7ac11cdf8568b8602101",
+  "revision_id": "Band_Skull_Crusher@1145968d6624",
+  "exercise_id": "exercise.band_skull_crusher.supine_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Band_Skull_Crusher",
+  "mapped_muscles": 70,
+  "promoted_at_unix": 1794105211.6683934,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "75fdf5604d62487dfb3605022e11501cfff700ee21cef996e578d4e9cc41da2a",
+    "data/exercises/engagement_profiles.json": "257ea1683a8a2dff2ba902f962a991237901619437a437fe242577b78a9cded9",
+    "data/exercises/catalog/candidates.json": "40dd59dfe1c2ec8129de6f3d1f7c3403593692a38707e1fc90daf7bca7e2b229",
+    "data/exercises/sources/free_exercise_db_media.json": "b5775e31ac3df2a1e9b7f3ff267cdaefea9809d018c77c5d46fa906b3db9d2dd"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "43e55c882ecdaf1511ba69b539a9c9f57dcbfd42fe3fd9e975bce75d19a92588",
+    "data/exercises/engagement_profiles.json": "f48b8ed13d4cba382b3de417819180ca90eb14430b03fe14038ab7a9e1664cf7",
+    "data/exercises/catalog/candidates.json": "8b0cba89be14595743f7113dcae336bda3f38e68ced0f7260439d33f4a476a2d",
+    "data/exercises/sources/free_exercise_db_media.json": "6beaf393012e30a8812e858434995385c00e9c50c23613b74adfaceb3cfa0712"
+  }
+}

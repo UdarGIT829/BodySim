@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "ddaade41d13b829bedf8b3d3eefbf8603ecc5f534dc814f1252f6000a2b68323",
+  "revision_id": "Circus_Bell@ddaade41d13b",
+  "exercise_id": "exercise.circus_bell_clean_and_press.single_arm",
+  "source_catalog_id": "catalog.free_exercise_db.Circus_Bell",
+  "mapped_muscles": 118,
+  "promoted_at_unix": 1794183900.1463342,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "0f9fdadcbc8e1f145d61523522d6da9f5efeda9352ca616bfc95c28e98b516d8",
+    "data/exercises/engagement_profiles.json": "c6fedfb89e85349d8e6c1f194cd9225b29faecd3a404b5174e8df87520c18df4",
+    "data/exercises/catalog/candidates.json": "342e1f5ce2b76311e458edcb475aed2df5069b253397fa7005c047c914c47d5e",
+    "data/exercises/sources/free_exercise_db_media.json": "fd8303b6e4b93aea8d9db27a79ddcc065be15a7981ab804c9a81f1d364608c64"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "9fbc6d54f70b09868f506ac71153473f9ddbdb45b49c899ac99933e679f830c0",
+    "data/exercises/engagement_profiles.json": "1dfd33c0d1c0b7024c17ba61779fe8202a78ac9e57d3e65b9fadd6bef59f04e7",
+    "data/exercises/catalog/candidates.json": "f5ee43a15da2c8a63f3f54e8e0e3398fe3ea1d761f67b3a123520d34b13af13c",
+    "data/exercises/sources/free_exercise_db_media.json": "812d6ac44095492aa07b591ac49576c934d46552a3f8c03e0db9ed628f6e5a80"
+  }
+}

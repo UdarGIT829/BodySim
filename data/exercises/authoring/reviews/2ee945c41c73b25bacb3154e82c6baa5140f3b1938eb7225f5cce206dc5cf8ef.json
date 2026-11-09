@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "2ee945c41c73b25bacb3154e82c6baa5140f3b1938eb7225f5cce206dc5cf8ef",
+  "status": "accepted",
+  "updated_at_unix": 1794183090.30043,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183077.66896,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.primary_joint_actions[hip_joint/extension]",
+          "finding": "The tracer scores the hamstrings (long head of biceps femoris, semimembranosus, semitendinosus) at 0.7 and labels them primary movers. In a squat they are moderate hip-extension synergists. This follows from the weight table, and lowering hip extension to assist would wrongly demote gluteus maximus to a synergist. The definition cannot change it, so it is a tracer limitation.",
+          "suggested_correction": "No change to the definition. Treat the hamstring primary label as a known tracer artifact of the 0.7 hip-extension weight."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "The cue to push the knees out has no explicit hip external-rotation or abduction contribution. Gluteus medius is only a weak 0.2 synergist, and the knee_joint_stability demand adds only small stabilizer weights. This is minor and not materially wrong for an unloaded squat.",
+          "suggested_correction": "Optionally add hip_joint/external_rotation or abduction as an assist action in a future revision to reflect the knees-out cue."
+        },
+        {
+          "field_path": "assumptions",
+          "finding": "The hands-behind-head position is held isometrically with the elbows wide, as the frames show. It involves light deltoid and scapular work, which the profile does not credit. The instructions make it optional and there is no external load, so omitting it is acceptable.",
+          "suggested_correction": "No change needed. A future revision could add a light scapular_retraction_stability or shoulder_position_hold demand if the hands-behind-head variant is to be modeled explicitly."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPHs8YATeHRpm47weds",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 6700.0,
+          "output_tokens": 1568.0
+        }
+      },
+      "summary": "The definition matches the instructions and both frames: a bilateral bodyweight squat with a shoulder-width stance, hands behind the head, and a knee-and-hip bend to depth with a return to standing. Knee extension and hip extension as primary actions give the correct main movers (quadriceps, gluteus maximus, adductor magnus). Ankle plantarflexion as assist correctly keeps the calves as synergists. The spinal, knee and postural stabilizers fit an unloaded squat held upright. Laterality, one_sided_limbs (empty), closed_chain and the squat family are all appropriate. The remaining issues are non-blocking."
+    }
+  }
+}

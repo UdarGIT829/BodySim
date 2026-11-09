@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "e30cf24e82724b56d156bf265ca39fbf718361a2d7f7683e240e30fe8fa215c5",
+  "revision_id": "Downward_Facing_Balance@e30cf24e8272",
+  "exercise_id": "exercise.downward_facing_balance.exercise_ball_prone_hold",
+  "source_catalog_id": "catalog.free_exercise_db.Downward_Facing_Balance",
+  "mapped_muscles": 96,
+  "promoted_at_unix": 1794184887.432955,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "497b06a00c91aad849e54c4265e3b6d18acc94224df4db33abdfff78758bb60b",
+    "data/exercises/engagement_profiles.json": "4208a3786f2c29d0be311a27cf675bdbf04c960db64f3c22c02970b1e9bd3084",
+    "data/exercises/catalog/candidates.json": "de5a3ea21df5d7af8862a3dd0356dc5743a9383dce636647027450d7126e5a80",
+    "data/exercises/sources/free_exercise_db_media.json": "c111230535ffdfd0e3bc5ed4e9a3baf8c67311ce90af1360f8c8796c4ba162fc"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "1fc7d10407179660e78d73ca8b6159cf477f44b67bfa6b51e7b3bdc78bc18e1e",
+    "data/exercises/engagement_profiles.json": "5a767a4a3de36b59f1bf813d36131a7f26e5e5ebe1835db8397f9761e97b63ea",
+    "data/exercises/catalog/candidates.json": "8c614907af993b785228c80bf043cb00d858ad67a886f1ace047364e20f4e7a7",
+    "data/exercises/sources/free_exercise_db_media.json": "11f8039f88aa6a0beed950555e25596e0ed954952530f38528bed224bb21dcc1"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "8a06e4d5c73b984f40a4c1dabf475c901a0d4d26bde4c8e57a6afc9d54d461d2",
+  "status": "accepted",
+  "updated_at_unix": 1794184424.78275,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184412.66058,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.primary_joint_actions",
+          "finding": "Calf plantarflexion and lat shoulder extension (keeping the bar close) are not listed. Soleus and gastrocnemius still receive small credit through postural_stabilization. The lats get only 0.08, through the retraction assist. This understates the lats a little but is not materially wrong.",
+          "suggested_correction": "Optionally add ankle_joint/plantarflexion as an assist and consider lumbar_fascia_tension to represent lat and thoracolumbar tension."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "scapular_stabilization gives small stabilizer credit to serratus anterior, pectoralis minor and subclavius. These are plausible but minor, and the credit is low-confidence.",
+          "suggested_correction": "Keep as is, or drop scapular_stabilization if the retraction assist is judged sufficient."
+        },
+        {
+          "field_path": "kinematic_profile.kinetic_chain_type",
+          "finding": "closed_chain is a defensible catalog label, since the feet are fixed on the floor, but some catalogs treat a barbell pull from the floor as open chain. This label does not change the traced muscles.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQzGd9PyQS3ZvKQH2q8",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10901.0,
+          "output_tokens": 1521.0
+        }
+      },
+      "summary": "The definition fits the frames and instructions: a bilateral, two-handed overhand barbell deadlift from the floor with short bands looped over the bar. Hip extension and knee extension as primary actions give the expected glute, hamstring, adductor magnus and quadriceps pattern. Scapular retraction as an assist matches the lockout cue and does not move the load. The elbows stay straight and the spine stays braced and neutral, so listing no elbow action and no lumbar action is correct. The erectors are credited as stabilizers through anti_flexion_spine, which fits their isometric role. Grip and wrist_stability are correct for a load held in the hands, and the bands add resistance without changing the movement."
+    }
+  }
+}

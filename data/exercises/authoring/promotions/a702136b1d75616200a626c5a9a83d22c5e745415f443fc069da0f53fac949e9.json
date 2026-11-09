@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "a702136b1d75616200a626c5a9a83d22c5e745415f443fc069da0f53fac949e9",
+  "revision_id": "Single-Arm_Push-Up@a702136b1d75",
+  "exercise_id": "exercise.single_arm_push_up.bodyweight_unilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Single-Arm_Push-Up",
+  "mapped_muscles": 68,
+  "promoted_at_unix": 1794179447.6111896,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "ea1fab69ff47c52baf36a7a8419882b86929701f7e7c6ee590b7a22812e6285f",
+    "data/exercises/engagement_profiles.json": "fd80824c6b3d06b8a765acfd87c6df269ea241e20f68f92b1831c31fca6d3ec3",
+    "data/exercises/catalog/candidates.json": "614ea6c18179dd204f045890872fa12f895b006ed41ded7548f0040d00f4699d",
+    "data/exercises/sources/free_exercise_db_media.json": "a70a123edd76d5dd586f847f1ec0938674db8e580ece397141e122eed96d2e19"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "662529520fab0cf8993f60838c96a3ee768d22f98bd9acd83ddcb0db42a1981b",
+    "data/exercises/engagement_profiles.json": "475c4dfbe1f1fb38979d45c72fb7225b5763b0b266b579e15754871deb4a862a",
+    "data/exercises/catalog/candidates.json": "844e834b35e6f85562e397639ed2e74966462d292f3f7c2060758b21b0cadc57",
+    "data/exercises/sources/free_exercise_db_media.json": "cea3b2d939c4490ce0c6252bc98f88be8943f41f1f49ddbad1bc5c1173d5bee2"
+  }
+}

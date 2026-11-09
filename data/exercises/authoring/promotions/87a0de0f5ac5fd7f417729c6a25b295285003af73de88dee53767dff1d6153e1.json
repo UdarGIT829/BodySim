@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "87a0de0f5ac5fd7f417729c6a25b295285003af73de88dee53767dff1d6153e1",
+  "revision_id": "Calf-Machine_Shoulder_Shrug@87a0de0f5ac5",
+  "exercise_id": "exercise.shoulder_shrug.calf_machine",
+  "source_catalog_id": "catalog.free_exercise_db.Calf-Machine_Shoulder_Shrug",
+  "mapped_muscles": 50,
+  "promoted_at_unix": 1794183599.5132694,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "11c671f22489a1c39fdaee91ff2acc70028559f9af323dbe0a3a4dc2b1ec44ae",
+    "data/exercises/engagement_profiles.json": "bda5f7cece3eb40c3624e6edfa6de887edd9a100ddb860ae238aecbcfa3aa134",
+    "data/exercises/catalog/candidates.json": "faa813d7061dee1b34856cd9d37cd8ffba0f3e37b36bc3b059779af0307aab65",
+    "data/exercises/sources/free_exercise_db_media.json": "23008ad71638ec70b7e9873429ba1f575b30329af31397248702823c5cd1a2d1"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "acc62f46d86b92ca2ef0bb66278730f0e65c566087e14fc13a5aeca11c6bbc38",
+    "data/exercises/engagement_profiles.json": "f03d919004461948b8319995d5eb7e2a99ab251d43edfd0c626b605d0acf99f8",
+    "data/exercises/catalog/candidates.json": "928548b23008865eafef851b27b2ba4a2bdcddb8094a729082a64eabdcd50b31",
+    "data/exercises/sources/free_exercise_db_media.json": "f8a6bdd78b3bf8d444667f534fb3ff678db39ef22607200c8bee7c796adf8d07"
+  }
+}

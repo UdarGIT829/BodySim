@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "0a83ec2215880965308042e878b06fa194f8fd43091b5956380ef66b3ab118fb",
+  "status": "accepted",
+  "updated_at_unix": 1794183559.72236,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183546.92374,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.assumptions[3]",
+          "finding": "The assumption says scapular upward rotation is omitted, but the proposed definition does include it as an assist action. This is an inconsistency in the prose only, not in the definition.",
+          "suggested_correction": "Reword the assumption to say scapular upward rotation is included as an assist."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.primary (clavicular_head_of_pectoralis_major)",
+          "finding": "The upper pectoralis major reaches primary status at 0.7 through glenohumeral flexion. This comes from the table weight rather than the definition and is a minor overstatement for an overhead press. No choice of actions would change it without under-crediting the anterior deltoid.",
+          "suggested_correction": "No change needed. Treat this as a tracer table limitation."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer (postural_stabilization)",
+          "finding": "postural_stabilization adds many low-coefficient leg and trunk stabilizers, such as the quadriceps, soleus and hamstrings. This is plausible for a standing press and the coefficients are small.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPtTDMFjp6ThCnfEwqW",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 11037.0,
+          "output_tokens": 1538.0
+        }
+      },
+      "summary": "The definition matches the source. It is a standing, bilateral, two-handle cable overhead press from shoulder height to overhead lockout, and the frames show both arms pressing symmetrically. Elbow extension plus glenohumeral flexion and abduction are the primary actions, so the deltoids, triceps and supraspinatus come out as primary movers. Scapular upward rotation is a deliberate assist, giving serratus anterior and trapezius a synergist role, which is appropriate. The demands fit: grip and wrist stability for handles held in the hands, anti-extension for the overhead press, rotator cuff stabilization, and standing posture. Bilateral laterality with empty one_sided_limbs correctly counts both arms. The traced pattern shows no materially wrong muscle."
+    }
+  }
+}

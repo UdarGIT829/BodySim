@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "220cc73fe95eff377de5ba80b5aa3bc5f222c19f0e86ca73fb42b4946ccfffc7",
+  "status": "accepted",
+  "updated_at_unix": 1794184300.61366,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184289.88604,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The band pulls the arms back into horizontal abduction, so rotator cuff centring work is plausible, but `glenohumeral_stabilization` is not listed. This is a minor omission. The primary mover pattern is correct without it.",
+          "suggested_correction": "Optionally add `glenohumeral_stabilization` in a future revision if rotator cuff involvement should be shown."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "`horizontal_push` is a reasonable catalog label for a pec-dominant fly pattern, though it is not a literal push. The label does not affect the traced muscles.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQqDqDEZFKJsCq5REvp",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10402.0,
+          "output_tokens": 1241.0
+        }
+      },
+      "summary": "The definition matches the source frames and instructions: a standing, bilateral band crossover. The band is anchored behind the lifter. The arms start abducted in a T with a slight fixed elbow bend and sweep horizontally across the chest. Glenohumeral horizontal adduction as the primary action correctly makes both pectoralis major heads (sternocostal 1.0, clavicular 0.8) the primary movers. Clavicular deltoid, abdominal pectoralis major, coracobrachialis and short head of biceps come in as synergists, which is plausible. Serratus anterior and pectoralis minor come in through the assist-level protraction. The grip, wrist, elbow stability and shoulder position hold demands fit a load held in the hands with the arms kept straight. The standing posture and the backward pull of the band justify the postural and anti-extension trunk demands. The elbow is not a moving joint, so leaving out elbow actions is consistent with the 'keep your arms straight' cue. I found no biomechanically material problem."
+    }
+  }
+}

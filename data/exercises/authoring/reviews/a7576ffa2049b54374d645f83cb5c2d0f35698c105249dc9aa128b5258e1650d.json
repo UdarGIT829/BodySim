@@ -1,0 +1,68 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "a7576ffa2049b54374d645f83cb5c2d0f35698c105249dc9aa128b5258e1650d",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105124.78766,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105102.17482,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Hip extension is a real, sustained action. The hips are lifted and held in a bridge throughout the set, and the hamstrings and glutes work against the ball. Omitting it leaves gluteus maximus as only a 0.21 stabilizer and gives the adductor magnus and hamstring hip-extensor role nothing, so the muscle pattern understates the glutes. The assumption that hip extension is isometric and therefore represented by pelvic_alignment is not an adequate substitute under the tracer table.",
+          "suggested_correction": "Add hip_joint/extension with emphasis \"assist\" and sides \"both\", so the bridge hold counts as a deliberate but secondary action. This would make gluteus maximus a synergist and keep knee flexion as the primary action."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "anti_extension_spine makes rectus_abdominis (0.35), the obliques and transversus abdominis the strongest stabilizers. The frames show a neutral bridge on a rolling ball, where the demand is holding hip and trunk position by the posterior chain, not resisting a plank-like extension pull. The abdominals are therefore overstated while the glutes and spinal extensors are understated. The weak pelvic_alignment demand does not correct this.",
+          "suggested_correction": "Remove or justify anti_extension_spine. Represent the bridge through hip extension and, if needed, a posterior-chain demand such as postural_stabilization or anti_flexion_spine, with less abdominal emphasis."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "closed_chain is justified by saying the feet stay in contact with a moving, rolling support. That reasoning contradicts the classification. The distal segments (shanks and feet) move freely with the ball while the knee flexes, and the load is not a fixed-foot, weight-bearing push or pull. This is conventionally an open-chain knee flexion. The field is marked only medium confidence.",
+          "suggested_correction": "Reclassify as open_chain, or give a rationale showing the feet are fixed relative to a stable support. Do not rely on mere contact with a rolling ball."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "iliacus, psoas_major, tensor_fasciae_latae and the vasti appear as low-level stabilizers through pelvic_alignment, knee_joint_stability and ankle_stability. These are only marginally plausible here, but the weights are small and arise from how the tracer maps those demands.",
+          "suggested_correction": "After adding hip extension, reassess whether knee_joint_stability and ankle_stability are both needed, since they add vastus and gluteus medius contributions."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The ankle is held near neutral or dorsiflexed against the ball, but ankle_stability alone gives tibialis posterior and the fibularis muscles more weight than the soleus and calf role would warrant. The effect is small.",
+          "suggested_correction": "Keep ankle_stability only if it is justified by the frames, or lower its emphasis in the revision."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgBx22sWVoXPfb6GsWR",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 6191.0,
+          "output_tokens": 2653.0
+        }
+      },
+      "summary": "The core identity is supported by the frames and instructions: a bilateral supine heels-on-ball leg curl with the hips lifted, and knee flexion as the exertion phase. The hamstring primaries and the gastrocnemius, gracilis and sartorius synergists fit. The tracer profile still misrepresents the bridge-hold component. The instructions say to raise the hips and keep weight on the shoulder blades and feet, so hip extension is a real, sustained demand. It is left out of the actions, so the glutes appear only as a weak pelvic_alignment stabilizer (0.21). The largest stabilizers are rectus abdominis (0.35) and the obliques, which come from anti_extension_spine, a demand that does not describe this bridge posture. The closed-chain classification is also weakly justified."
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c92fb230f0d36bc6ee2d0c192fe10229157521ceb78a579febb2de679b5318e2",
+  "status": "accepted",
+  "updated_at_unix": 1794179189.17582,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179174.95196,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The spinal erectors, which are a major isometric contributor in a deadlift, reach only 0.315 for longissimus and 0.28 for iliocostalis lumborum. This follows from crediting them through anti_flexion_spine (0.35 x demand weight). Because the instructions say to keep the back arched and not to extend the lumbar spine, this is the right choice and the low coefficient is a tracer limitation.",
+          "suggested_correction": "No change needed. Optionally add postural_stabilization if a higher trunk-extensor contribution is wanted."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Ankle plantarflexion is omitted, so the calves are explicit zeros. The shin and heel drive makes this a minor contribution, but a deliberate assist would be defensible.",
+          "suggested_correction": "Optionally add ankle_joint/plantarflexion with emphasis 'assist', or keep it omitted as the assumptions state."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The upper trapezius and lats holding the bar against the body, and the wrist stabilizers during a heavy axle hold, are lightly or not credited. This is only a minor underestimate of upper-body isometric work.",
+          "suggested_correction": "Optionally add wrist_stability or a small assist action if this is wanted. It is not required."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "hip_hinge is an acceptable primary family label. The knee-dominant start from the floor makes a secondary family arguable, but labels do not affect the trace.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJLBHfXEzjEpfVXSGNj",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9069.0,
+          "output_tokens": 1666.0
+        }
+      },
+      "summary": "The definition fits the frames and instructions: a bilateral, two-handed floor pull with a hip-hinged start and an upright finish. Hip extension and knee extension move the load, so the glutes, hamstrings, adductor magnus and quadriceps are primary or synergist as expected. The previous scapular-retraction concern is resolved. Marking retraction as assist gives the transverse trapezius 0.4, rhomboid major 0.36, rhomboid minor 0.28 and the lats 0.08, all synergists that do not overstate the brief lockout cue. Grip, bracing and anti-flexion demands are placed correctly. The remaining gaps are minor and not acceptance-blocking."
+    }
+  }
+}

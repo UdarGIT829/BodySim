@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "562b8f46672ec658c55a5936959c53d4efe51b9ce13cea5e09b4c433ef915fb8",
+  "status": "accepted",
+  "updated_at_unix": 1794179391.41151,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179368.84503,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer[rectus_abdominis, transversus_abdominis, external_abdominal_oblique, internal_abdominal_oblique]",
+          "finding": "The abdominals, the main target of a rollout, come out as stabilizers at about 0.28-0.35, while the lats are primary at 1.0. The tracer credits an isometric anti-extension role only through demands at 0.35 x demand weight. Since the cues rule out lumbar flexion, no choice of actions or demands can raise this without listing a motion the lifter avoids.",
+          "suggested_correction": "No change to this definition. Treat the abdominal weighting as a tracer limitation, applied the same way in every review."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The cue 'extend through the hips to slowly roll the bar forward' is covered only by hip flexors resisting extension. Glutes and hamstrings (hip extension) are explicit zeros. The roll-out is largely gravity-driven and eccentrically controlled, so omitting them is defensible but not certain.",
+          "suggested_correction": "A future revision could consider an assist-level hip_joint/extension if the roll-out is judged to involve active hip extension."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[hip_joint/flexion]",
+          "finding": "Hip flexion assist and the anti_extension_hip demand both credit the same hip flexors (iliacus, psoas, rectus femoris). This is a mild double count, but the net effect is only synergist-level weights.",
+          "suggested_correction": "Optionally keep only one of the two representations if the hip-flexor weights look too high."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "core_anti_extension is correct as the main label. Shoulder extension on the return is not labeled, but families are catalog labels only and do not change the traced muscles.",
+          "suggested_correction": "Optionally add a secondary family such as hip_flexion or vertical_pull-like shoulder extension if catalog search should reflect it."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJaU5cKC2Ta5znn8n3a",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 11706.0,
+          "output_tokens": 2650.0
+        }
+      },
+      "summary": "The definition fits the source. The setup is a bilateral kneeling bench rollout with the bar on the floor. The trunk stays rigid and the arms stay extended, so the core is credited through anti-extension and bracing, and no lumbar flexion is listed. The return phase is credited as primary glenohumeral extension (lats, teres major, posterior deltoid), with hip flexion as an assist alongside the anti_extension_hip demand. Grip, wrist, scapular and elbow demands match a load held in the hands. Prior council concerns about lumbar flexion, the movement family and over-weighted hip flexors have been addressed. Remaining issues are limitations of the tracer or judgment calls, not blocking."
+    }
+  }
+}

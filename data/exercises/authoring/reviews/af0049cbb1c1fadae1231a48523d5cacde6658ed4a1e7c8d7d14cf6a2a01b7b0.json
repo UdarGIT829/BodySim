@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "af0049cbb1c1fadae1231a48523d5cacde6658ed4a1e7c8d7d14cf6a2a01b7b0",
+  "status": "accepted",
+  "updated_at_unix": 1794182692.56265,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182677.83511,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "`loaded_carry` is a defensible catalog label for sled drags, but the movement is a loaded quadruped crawl with a lunge-like alternating leg drive. `lunge` could be added as a secondary family. This does not change the traced muscles.",
+          "suggested_correction": "Optionally add `lunge` alongside `loaded_carry`."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The rectus abdominis, which resists lumbar extension and pelvic tilt under the harness pull, is only lightly engaged. There is no `anti_extension_spine` or `pelvic_alignment` demand, so the trace under-represents it slightly. The flat-back cue is mostly covered by `anti_flexion_spine`, so this is not material.",
+          "suggested_correction": "Optionally consider `pelvic_alignment` or `anti_extension_spine` if future review wants more anterior core credit."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The arms alternate between support and pulling. Modeling them as an assist at `glenohumeral_joint/extension` with `sides: working` and bilateral laterality counts both arms. This is acceptable and is a modeling simplification, not an error.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrNnPTbA3Fym8Umr3EbF",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10671.0,
+          "output_tokens": 1675.0
+        }
+      },
+      "summary": "The definition fits the source text and frames: a bilateral, closed-chain bear crawl with a trailing harnessed sled. The frames show hands on the ground, a flat bent-knee posture, and a strap running back to the sled. Hip and knee extension as primary actions, calf plantarflexion as an assist, and glenohumeral extension as an assist are reasonable. The hands pull and balance but do not grip a bar or handle, so omitting `grip` is correct. The listed demands (trunk anti-flexion and anti-rotation, scapular anchoring, shoulder position hold, elbow integrity, wrist stability, knee stability) suit loaded quadruped locomotion. The traced pattern is plausible: quadriceps, glutes and hamstrings lead, calves and lats assist, and the trunk and arm stabilizers sit at low coefficients. I found no materially wrong or missing muscle group."
+    }
+  }
+}

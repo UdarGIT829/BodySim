@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "8bb1b8a89476bf4524587fbd90cd2740e036ebec943026828fab6a988499aaaa",
+  "revision_id": "Alternating_Hang_Clean@8bb1b8a89476",
+  "exercise_id": "exercise.kettlebell_hang_clean.alternating_double_bell",
+  "source_catalog_id": "catalog.free_exercise_db.Alternating_Hang_Clean",
+  "mapped_muscles": 154,
+  "promoted_at_unix": 1794179070.507489,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "362a574fad2ab29ea0665e48dd9b1a0f7fa27687ece7bda412f3c676619e5697",
+    "data/exercises/engagement_profiles.json": "e7f0eb65c2c82c43ed899df3f626563661a8a01274816e0b1769ec1687ffd6cb",
+    "data/exercises/catalog/candidates.json": "a7ff7cf36f58808e95c3de3aa01aade1ffb0fa157c4394152ab98ee437f47578",
+    "data/exercises/sources/free_exercise_db_media.json": "e717fa55af7f009978d41c07f0b48049783b19d6f18f58805a1a5950b8dec67f"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "1c4bd0f341bf498501c19f1ada5b0864b290bd3dc68a6ada1ca0191f8df2291e",
+    "data/exercises/engagement_profiles.json": "89391029387e67e20c8be6f70975a8d490c6481563edbb8addaea2c287c0dc0f",
+    "data/exercises/catalog/candidates.json": "2e82c0eba5b92be6edbc6126889e38b5526d344cbd28f361c0572100865a6ebf",
+    "data/exercises/sources/free_exercise_db_media.json": "fc20f16cf332d331b4074016d1a7248ada2ea5434ddb4e8b0f1b7406ee74a737"
+  }
+}

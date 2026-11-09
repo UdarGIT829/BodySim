@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "8a9b42f1f7c44794e9028948df4f060c225b4ab017b988862c61e819c92a5b51",
+  "status": "accepted",
+  "updated_at_unix": 1794183264.38583,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183252.50678,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "No family names a chest fly exactly. horizontal_push is a reasonable catalog approximation, and it is only a label that does not change the traced muscles.",
+          "suggested_correction": "Keep horizontal_push, or add a dedicated fly or horizontal-adduction family if the catalog gains one."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The fixed slight elbow bend is held isometrically against the cable load, and the rotator cuff centres the humeral head. These are only weakly credited, through elbow_stability and the incidental biceps/subscapularis contributions from the adduction action. This is a minor under-crediting that does not make the muscle pattern materially wrong.",
+          "suggested_correction": "Optionally consider glenohumeral_stabilization or an elbow-flexion assist in a later revision."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPWkptgdMKfAdQ9cmfM",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 11380.0,
+          "output_tokens": 1437.0
+        }
+      },
+      "summary": "The frames show a standing, staggered-stance, bilateral high-pulley cable fly. Both arms sweep from wide to hands together in front of the torso, with a small fixed elbow bend and a slight forward lean. Primary horizontal adduction plus assist adduction (high pulleys, hands travel inward and down) gives a plausible muscle pattern. Both pectoralis major heads are primary, with anterior deltoid, lats, teres major and coracobrachialis as synergists. The grip, wrist, elbow, scapular and postural demands are sensible for the load held in the hands and the upright stance. The text-versus-image ordering of start and end positions does not change the exertion phase."
+    }
+  }
+}

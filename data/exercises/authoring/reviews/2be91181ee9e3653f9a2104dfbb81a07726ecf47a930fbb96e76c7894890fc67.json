@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "2be91181ee9e3653f9a2104dfbb81a07726ecf47a930fbb96e76c7894890fc67",
+  "status": "accepted",
+  "updated_at_unix": 1794182805.08069,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182789.09869,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "vertical_pull is only an approximate label. The bar arcs overhead to over the chest in a supine position and no exact pullover family exists. Labels do not change the traced muscles.",
+          "suggested_correction": "Keep vertical_pull, or consider adding horizontal_pull or similar only if catalog search needs it. No change is required."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Serratus anterior, pec minor and the lower scapular stabilizers are not engaged. Scapular control during the overhead arc is real but secondary and not clearly visible in the frames. The omission is declared in the assumptions.",
+          "suggested_correction": "Optionally add scapular_stabilization in a future revision if scapular control is judged material."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.primary",
+          "finding": "scapular_spinal_part_of_deltoid (0.7) appears as a primary mover only because the table assigns it to glenohumeral extension. Its true contribution in a bent-arm pullover is likely lower than the lats and teres major. No emphasis or action choice in the vocabulary fixes this without under-crediting the lats, so it is a tracer limitation.",
+          "suggested_correction": "No definition change. Treat as a tracer limitation."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrNvb8HNkDi4c7xuQjGf",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7820.0,
+          "output_tokens": 1810.0
+        }
+      },
+      "summary": "The frames and instructions show a supine bent-arm barbell pullover: the bar arcs behind the head with a fixed elbow bend, then returns over the chest. Glenohumeral extension as the primary action fits this and gives lats, teres major and sternocostal and abdominal pec major, with long head triceps as a synergist. Elbow extension as an assist is a reasonable way to credit the triceps holding the elbow angle against the bar. Grip and wrist_stability are correctly placed because the bar is held in the hands. anti_extension_spine fits the lumbar and core resistance as the bar goes behind the head. Bilateral laterality and open_chain are correct, and the traced pattern is plausible. The remaining concerns are minor and non-blocking."
+    }
+  }
+}

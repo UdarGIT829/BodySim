@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "f370870b68604c4232af1acd704a2169ded672582355a4a80b17bed02cac3dde",
+  "revision_id": "Decline_Smith_Press@f370870b6860",
+  "exercise_id": "exercise.smith_machine_bench_press.decline_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Decline_Smith_Press",
+  "mapped_muscles": 88,
+  "promoted_at_unix": 1794184611.4249074,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "7f5be945a8af01f2d8bb3d69eb6b18640048b598ce4bb6c5ff13ef8c36a96f41",
+    "data/exercises/engagement_profiles.json": "7874a396dbbe404957c50e3e5601984b7e885d9423b207e7d3d8266f19a50d83",
+    "data/exercises/catalog/candidates.json": "7a2f73968bcedebf316de60995303dfa78ab6c703c3898738041759de6cf50e5",
+    "data/exercises/sources/free_exercise_db_media.json": "f6f2db2f8e42a2e9b18d57e5fed099e2f0148d6c3e5a1dba696a8a1a6a473aae"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "33512c7e4522b61f54ab71af89383e826750bc698372ffdf24e3e2f524eb5ed0",
+    "data/exercises/engagement_profiles.json": "da4646022617e2c44a033c7bdfd9d1f9405cad955eb8929f74af769ab65ee7ca",
+    "data/exercises/catalog/candidates.json": "b596e1dc6498937464da4e9b879e0bb52f8c29a9e7f0fafd579cb85b07b42df5",
+    "data/exercises/sources/free_exercise_db_media.json": "e01f86de0d1de2b8f770f6d1fbadd246b1115dddf799499aacc65b05f12e8058"
+  }
+}

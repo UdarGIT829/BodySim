@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "a3e32d02f5013931688707602cb96e34f10ef316a0f764459361074fd997db73",
+  "status": "accepted",
+  "updated_at_unix": 1794179217.24284,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179204.0166,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The trunk extends from the forward-bent bottom position with the hip drive, but no lumbar extension action is listed. Spinal erectors are credited only as stabilizers (about 0.28-0.32) through anti_flexion_spine. This is a defensible simplification, though a small assist-level lumbar extension would better reflect the hinge-to-upright drive.",
+          "suggested_correction": "Optionally add lumbar_spine/extension with emphasis assist and sides both."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Overhead reach and release involve scapular upward rotation and some elevation, which are omitted. Serratus anterior and trapezius are only covered through the scapular_stabilization demand. This is acceptable, but upward rotation as an assist would be more complete.",
+          "suggested_correction": "Optionally add scapulothoracic_joint/upward_rotation with emphasis assist and sides both."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "closed_chain fits the planted feet, but the ball is released at the end, so the upper limbs are open chain. This is a catalog label only and does not change the traced muscles.",
+          "suggested_correction": "Keep closed_chain, or consider open_chain if the catalog convention for throws prefers it."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJNKDi2utuGpU842MSD",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 12752.0,
+          "output_tokens": 1554.0
+        }
+      },
+      "summary": "The definition fits the source instructions and frames: a bilateral squat to a ball held between the legs, then a forceful full-extension drive that throws the ball overhead and backward. Hip and knee extension and glenohumeral flexion are the primary actions, and the tracer output reflects them. That gives glutes, hamstrings, quadriceps and anterior deltoid/clavicular pectoralis as primary movers. The calves and triceps are correctly marked assist, as the prior council feedback asked. Grip and wrist stability are credited for the hands-held start. Core bracing and spinal and postural demands are placed sensibly. No biomechanically material claim is unsupported or contradictory."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "58f6976517d581f155f667bbd056cec816c07284e70b02287a42e73d436b148c",
+  "revision_id": "Clock_Push-Up@58f6976517d5",
+  "exercise_id": "exercise.clock_push_up.plyometric_lateral_hop",
+  "source_catalog_id": "catalog.free_exercise_db.Clock_Push-Up",
+  "mapped_muscles": 76,
+  "promoted_at_unix": 1794184090.1804254,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "2a9c2986578237d308e3f397a2c4d77f4fddf452f1cf46ae8b7eaf6ff778d551",
+    "data/exercises/engagement_profiles.json": "d25c54f2d515c749c034348189cc12d16a5cfd192fa1c730617d4ba80350a0ca",
+    "data/exercises/catalog/candidates.json": "5f00a3bd5414233286eca4dcb2c1c0f4c7652d8ab0af7809c2e190c08d80440e",
+    "data/exercises/sources/free_exercise_db_media.json": "c050246c1a1e0ac707be1d739f53a70fc5af0166935d3056943076a89c33e309"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "5f9c3d4bfafa59e3ed9908dc8ae2fe8dd3f8d7c27f53e465b5c0cccc35dfe72f",
+    "data/exercises/engagement_profiles.json": "8a4b37347b4523bd9d1afb95fd50f6eb27537471a92e4996de1b4b884ead4533",
+    "data/exercises/catalog/candidates.json": "563cc5aa0c4b8633067bc3715738a957293d942b86a6da739c91ddfde73ed5fc",
+    "data/exercises/sources/free_exercise_db_media.json": "28694da2046b4590520749b6eab9ec0e0cb007d2b1531a96115484263ccd3275"
+  }
+}

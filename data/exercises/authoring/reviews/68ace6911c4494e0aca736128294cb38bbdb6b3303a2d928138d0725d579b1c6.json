@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "68ace6911c4494e0aca736128294cb38bbdb6b3303a2d928138d0725d579b1c6",
+  "status": "accepted",
+  "updated_at_unix": 1794183324.53609,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183311.94477,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.stabilization_demands[pelvic_leveling_frontal]",
+          "finding": "pelvic_leveling_frontal is not a limb-restricted demand, so it and postural_stabilization count on both sides. The working (right) leg's gluteus medius, minimus and the postural muscles therefore show stabilizer credit, even though the standing (left) leg does most of this work. This comes from how the tracer handles these demands and no choice of one_sided_limbs can change it.",
+          "suggested_correction": "No change required."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "The standing leg also needs some ankle and knee control in single-leg stance (for example ankle_stability or knee_joint_stability). postural_stabilization partly covers this through soleus, gastrocnemius and the quadriceps, so the omission is minor.",
+          "suggested_correction": "Optionally consider ankle_stability for the stance leg, though it is not needed for acceptance."
+        },
+        {
+          "field_path": "source.source_muscle_tags",
+          "finding": "The catalog tag 'quadriceps' as primary is wrong for hip adduction. The authoring response correctly ignored it as untrusted metadata. The small quadriceps stabilizer credit comes only from postural_stabilization.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPb8aTWx6Cw4Wy6pySE",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 6181.0,
+          "output_tokens": 1573.0
+        }
+      },
+      "summary": "The frames show a standing, ankle-cuffed low-pulley cable exercise. The cuffed leg is pulled toward the stack, then drawn in and across in front of the standing leg, with hands on hips and the trunk upright. The 'abduct' wording in the instructions conflicts with the exercise name, the inner-thigh cue and the frames, so treating it as hip adduction is well supported. A single working-side hip_joint/adduction at primary emphasis gives adductor magnus, longus and brevis as primary movers. Adductor minimus, pectineus, gracilis, gluteus maximus, obturator externus and quadratus femoris come out as synergists, which is a plausible pattern. Unilateral laterality with one_sided_limbs ['leg'], open_chain and the hip_abduction_adduction family all fit. pelvic_leveling_frontal credits the standing-leg gluteus medius, minimus and quadratus lumborum for frontal-plane pelvic control. postural_stabilization credits standing antigravity work. No grip or wrist demand is listed, which matches the hands resting on the hips. No spinal action is listed, which matches the still trunk."
+    }
+  }
+}

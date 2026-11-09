@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "7d8283850984a563c1cbff20e76f26cb6e1e128beec2eb1a67f0e49833be53ac",
+  "status": "accepted",
+  "updated_at_unix": 1794184727.50149,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184713.89809,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The pulling arm's work to keep the bell close and guide it into the rack, through the lats and deltoids, is credited only at low stabilizer levels. This is a minor omission. A shoulder or scapular assist action could be added in a later revision, but the low weighting is acceptable for a hip-driven clean.",
+          "suggested_correction": "Optionally add glenohumeral_joint/extension or glenohumeral_joint/abduction as an assist action if the authors want the lats or deltoids shown as synergists."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "closed_chain is a catalog label for a standing lift with the feet planted. The bells move freely, so open_chain could also be argued. The label does not change the traced muscles and is not plainly wrong.",
+          "suggested_correction": "No change required."
+        },
+        {
+          "field_path": "proposed_definition.laterality",
+          "finding": "Bilateral with the sides set to working is reasonable because both arms hold and move a bell each rep. The alternating rack and hang pattern is covered by the anti_rotation_torso demand.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRNUGzeamM3ubXTSRGM",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 11817.0,
+          "output_tokens": 1639.0
+        }
+      },
+      "summary": "The definition fits the frames and instructions: two kettlebells start low between the feet from a hip-hinged hang. One bell is cleaned to the shoulder rack while the other hangs, and the arms then alternate. Hip and knee extension are correctly the primary drivers. Calf plantarflexion, shrug and elbow flexion are correctly marked assist. Grip, wrist stability, anti-flexion spine and anti-rotation torso suit the held, asymmetric loads. Shoulder position hold covers the racked bell. The traced profile has glutes, hamstrings and quads as primary movers, calves, traps and elbow flexors as synergists, and trunk, forearm and shoulder muscles as stabilizers, which is plausible. No biomechanically material claim is unsupported or contradicted."
+    }
+  }
+}

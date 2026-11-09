@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "4f92c41d4c842bf351dc65adb543727629866f95543ef5696e0e74f6bc23cf1e",
+  "revision_id": "Atlas_Stones@4f92c41d4c84",
+  "exercise_id": "exercise.atlas_stone_lift.lap_to_platform",
+  "source_catalog_id": "catalog.free_exercise_db.Atlas_Stones",
+  "mapped_muscles": 135,
+  "promoted_at_unix": 1794179174.0442998,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "fd12e2117b6bbb4a668d308ca0303f00f7df61659d75cb2dd911ea3a0ee79a64",
+    "data/exercises/engagement_profiles.json": "af504ef14238eb1043115feb3a8b88d91f9cf36ea19f759eb30cdd2015e3b6bd",
+    "data/exercises/catalog/candidates.json": "81b56d9a29f334e2b19f19768cc5c0d4ed54c6542a00f24f3f3ee80180d9d888",
+    "data/exercises/sources/free_exercise_db_media.json": "458869362f03bb3a7c5cb2a76e7cb7393832144c1c323345ce5af5805f2d8068"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "3986ccf909f0d8efa56d74e6e2c0479a70b417d819ac0e9868af34cb7f127e2d",
+    "data/exercises/engagement_profiles.json": "608be1d4578c5efec0b2c5ba654209f476433bf59925de6cb929655f49010701",
+    "data/exercises/catalog/candidates.json": "543a7f816b46f52ce9381daab45396a09c53f5b3544e2cb31bd0ea108942504a",
+    "data/exercises/sources/free_exercise_db_media.json": "74370db1fbd69f2d5d69c58606839c8572128a672ff27da1b212016afb3c6e04"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c357dfbf16eb7453c62fb31bf8f2c3e967e3ff4342af0fbb6a4a9553267c7663",
+  "status": "changes_requested",
+  "updated_at_unix": 1794183532.122,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183514.90104,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands[postural_stabilization]",
+          "finding": "`postural_stabilization` models antigravity standing posture, but the lifter is seated on a bench with the pelvis supported and the feet only resting on the floor. The demand lights up 42 muscles that the frames do not support: soleus 0.28, both gastrocnemius heads, the vasti, rectus femoris, hamstrings and gluteus maximus. It also credits longissimus, iliocostalis and multifidus as stabilizers even though the trunk is actively flexing against the load and these muscles act as antagonists. This misrepresents the exercise as an upright, loaded, weight-bearing posture and puts material stabilizer weight on the calves and quads.",
+          "suggested_correction": "Remove `postural_stabilization`. If trunk bracing needs crediting, use `intra_abdominal_pressure` rather than a standing-posture demand."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "`closed_chain` is questionable. The lifter is seated, with the pelvis supported and the feet merely resting, and the load is moved through the hands and trunk. It is arguably `open_chain`, though the fixed-pelvis reasoning is not plainly wrong. The label is catalog-only and does not change the traced muscles.",
+          "suggested_correction": "Consider `open_chain`, or justify the closed-chain label."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands[shoulder_position_hold]",
+          "finding": "`shoulder_position_hold` is defensible because the arms keep the rope fixed at the shoulders while the trunk curls. The elbows do travel toward the hips with the trunk, so the deltoid coefficients (clavicular 0.35) are modest and acceptable.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "demand": "postural_stabilization",
+          "op": "remove_stabilization_demand"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPr6cJdbd1qhsjTW3um",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 6363.0,
+          "output_tokens": 2049.0
+        }
+      },
+      "summary": "The core action is correct: lumbar flexion with the rope held over the shoulders and the hips stationary correctly makes the rectus abdominis primary and the obliques and psoas synergists. However, the `postural_stabilization` demand creates a materially wrong stabilizer pattern. It credits standing-posture muscles (soleus, gastrocnemii, vasti, hamstrings, gluteus maximus) in a seated crunch. It also credits the spinal extensors as stabilizers, although they are the lengthening antagonists of the crunch."
+    }
+  }
+}

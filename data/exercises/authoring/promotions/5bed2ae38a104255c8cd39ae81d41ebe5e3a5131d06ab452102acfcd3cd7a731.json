@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "5bed2ae38a104255c8cd39ae81d41ebe5e3a5131d06ab452102acfcd3cd7a731",
+  "revision_id": "Calf_Raise_On_A_Dumbbell@5bed2ae38a10",
+  "exercise_id": "exercise.dumbbell_calf_raise.bilateral_rolling_handle",
+  "source_catalog_id": "catalog.free_exercise_db.Calf_Raise_On_A_Dumbbell",
+  "mapped_muscles": 56,
+  "promoted_at_unix": 1794183681.5239131,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "a6c776fb72a6524e87c976ae5e9a17fc101d1c1d2b801fdbff194e9b6efe4e61",
+    "data/exercises/engagement_profiles.json": "f8a7e707d1672fdf7ece404db8ee8375e5c064461e46cdce5b64e0709db38718",
+    "data/exercises/catalog/candidates.json": "a1c07fe30664765f27b727d3181b5ed5f7447776aa97a0d66d66103d35c7c2be",
+    "data/exercises/sources/free_exercise_db_media.json": "6ddad1a5608688c1d3fe5e2f807f6825c59baccee9fa36c0253d0a96c90954e7"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "cbd15cb865bbc9e98f46f7a4f7c27c7a376c41a81209cc313f7f87717a86c3e0",
+    "data/exercises/engagement_profiles.json": "bc2d756f3bf1fadaa2229881e619bb3e76a14eecb1037d1f6b8453be21c44b7e",
+    "data/exercises/catalog/candidates.json": "7c93c687634badb91a026154b4d2269775d6af6d7aaa5ea57381d45b4a83426f",
+    "data/exercises/sources/free_exercise_db_media.json": "6d0988e798594488082e0e991a3ce291a8309245036a3726a4c3195021c29614"
+  }
+}

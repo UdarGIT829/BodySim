@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "427f45653deb317fc5e2b78a36df755e6d255ec32a1ec4cfafef2ac76f01c4be",
+  "revision_id": "Catch_and_Overhead_Throw@427f45653deb",
+  "exercise_id": "exercise.medicine_ball_overhead_throw.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Catch_and_Overhead_Throw",
+  "mapped_muscles": 130,
+  "promoted_at_unix": 1794183799.3867133,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "2c1a717be08387008409428551f0f10f1da3627f9b641033ce159adc6ccbde44",
+    "data/exercises/engagement_profiles.json": "a1dcaed92fc3e1a7f7998c8dfd9cda5710806fb4f1ad542f5095ffb64b97cb49",
+    "data/exercises/catalog/candidates.json": "2981d8b205dec4ddf1d13c6b2661fa753ebc3dbd063aeaf5f5dd22ec529dc966",
+    "data/exercises/sources/free_exercise_db_media.json": "e4ff6fb3ee9de4d78c859189e1698476e3776216fe628cb28e89e14f77718ebb"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "6c88a2346f201ecb1d7d92736cfb523f6217e20de1ffd490bb48ac412cb3f9cf",
+    "data/exercises/engagement_profiles.json": "f97cd5bb95f543099fad8eefd50aeea5caf90293ad83e2b428c191ad549206f4",
+    "data/exercises/catalog/candidates.json": "a9e79139bc6548b3927fc4689b6f6462b5ababa331c587731575e480c1835bef",
+    "data/exercises/sources/free_exercise_db_media.json": "6581515bcecd04cb883368f738a5d1fd39ded6769e4d0e7811b9a924dce6be1b"
+  }
+}

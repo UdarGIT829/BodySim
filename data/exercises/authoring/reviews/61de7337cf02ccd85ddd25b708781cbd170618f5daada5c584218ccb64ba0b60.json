@@ -1,0 +1,68 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "61de7337cf02ccd85ddd25b708781cbd170618f5daada5c584218ccb64ba0b60",
+  "status": "changes_requested",
+  "updated_at_unix": 1794104950.04709,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794104930.98955,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The frames show a straight-body plank on the toes with a wide stance. The instructions say to keep the body straight and extended and to widen the feet for support. No hip, pelvic or leg demand is present, so glutes, hip flexors, quadriceps, hamstrings and calf/ankle muscles are all explicit zeros. The legs and hips hold the body line against gravity and resist rotation during each row, so this is a materially wrong muscle pattern.",
+          "suggested_correction": "Add demands that reach the lower body. Options are pelvic_alignment, anti_extension_hip and, for the plank-holding legs, knee_joint_stability, ankle_stability or femoral_head_stabilization, plus intra_abdominal_pressure if bracing is intended. Choose whichever fits the evidence. Consider an isometric knee-extension or hip-extension hold only if it can be justified."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The assumptions say the support-side push into the floor is treated as stabilization, but no demand covers it. The supporting arm holds a locked-out, loaded plank position. The frames show the elbow extended and the shoulder under compression. The tracer gives the triceps lateral and medial heads, clavicular deltoid and clavicular pectoralis major no involvement, and the long head of triceps and sternocostal pectoralis only incidental synergist credit from glenohumeral extension.",
+          "suggested_correction": "Add support-arm demands such as shoulder_position_hold and elbow_joint_integrity or elbow_stability, so the pressing/bracing role of the supporting side is represented. Keep wrist_stability and grip. Consider whether an isometric elbow extension action with assist emphasis is warranted."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.laterality",
+          "finding": "Bilateral is defensible because the arms alternate across repetitions. It means both rowing arms and both supporting arms are credited at full strength simultaneously. The profile therefore does not distinguish the row side from the support side within a rep.",
+          "suggested_correction": "Keep bilateral if per-set aggregation is intended, but document it in the assumptions. Otherwise consider a unilateral/side-specific representation with one_sided_limbs."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "The classification is mixed. The hand and feet are fixed on the supporting side, while the rowing hand moves a free kettlebell. Open_chain is reasonable for the working limb, and the author's own confidence is medium.",
+          "suggested_correction": "Briefly justify open_chain in the assumptions, or reconsider if the vocabulary offers a mixed option."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "Only horizontal_pull is listed. The exercise also has a substantial anti-rotation and plank (core stability) component that the movement family list does not reflect.",
+          "suggested_correction": "Add a core anti-rotation/plank family if the vocabulary supports one."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpfyL6DxdbanoixqH4n6",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 9964.0,
+          "output_tokens": 2246.0
+        }
+      },
+      "summary": "The identity and the rowing-arm actions (elbow flexion, glenohumeral extension, scapular retraction) are well supported by the instructions and frames. The stabilization set leaves out two parts of the plank-based exercise: the legs and hips that hold the straight body line, and the supporting arm that pushes into the floor. Glutes, quadriceps, calves and the triceps heads other than the long head all come out as explicit zeros, which is a materially incomplete tracer profile that a better definition could fix."
+    }
+  }
+}

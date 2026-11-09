@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "660c9c314d7f7f5ff35f62452bf94efa6dfc90ce41857ead4628ce13d3b01443",
+  "revision_id": "Box_Squat@660c9c314d7f",
+  "exercise_id": "exercise.barbell_box_squat.bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Box_Squat",
+  "mapped_muscles": 85,
+  "promoted_at_unix": 1794183166.5155876,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "2496030332bf288cacd7746a7ed5788b1f9b642871b2a8bafebe08fe8ca94ab3",
+    "data/exercises/engagement_profiles.json": "77360ab1b18b716b0afcf07ea6c092f2d0cb5fb230930e8ed6babd75e8648d5d",
+    "data/exercises/catalog/candidates.json": "7a3399ef9067600fe331233b5e66383d9fad2fa0815e58dbe7a197239ef4229c",
+    "data/exercises/sources/free_exercise_db_media.json": "761872dd6c1111acf841988ad1491c1336d943c8eb7a7ae4a3f988afaa5902f1"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "a1c6db9df12040c42142545d64387c4fb1facaf80f68767088c7b7a31eeab9d3",
+    "data/exercises/engagement_profiles.json": "e9d1a30dc6dc86459dcd7299c4522bc7b516be6c663b8cbcae816ec835883864",
+    "data/exercises/catalog/candidates.json": "61cab1b91d115909dd7ad7a76739b823ca1ef87521ad9d9e5acc21ecbd3c3c99",
+    "data/exercises/sources/free_exercise_db_media.json": "38a679f161009adb0274d55a0d27520dab8cbca2ddf5d4ce9f88dc73df4aebd3"
+  }
+}

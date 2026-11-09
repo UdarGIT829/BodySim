@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "922b11f7055ba86caf16c64f1a06749e5201c2ed24f120db5fd460258e0e1ee3",
+  "status": "accepted",
+  "updated_at_unix": 1794184227.49615,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184215.12764,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The instructions say the arms travel back over the head, but frame 2 shows the hands wrapped around the shins. The arm role is ambiguous. With no external load, its contribution to the traced profile is small enough that omitting it does not make the muscle pattern materially wrong.",
+          "suggested_correction": "If a future revision commits to a specific arm path, it could add a light assist action, such as glenohumeral flexion for the overhead reach. Otherwise keep the arms omitted and document the ambiguity."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions[2]",
+          "finding": "Knee flexion at assist credits the hamstrings and gastrocnemius as light synergists. The tuck is mostly a passive consequence of hip flexion, so this slightly overstates hamstring involvement. It is defensible as a deliberate synergist.",
+          "suggested_correction": "Keep as assist, or drop it if a future reviewer judges the knee tuck fully passive."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "The labels trunk_flexion and hip_flexion are appropriate catalog labels. They do not affect the tracer.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQjiHaC2Js8k6uGkogK",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 5278.0,
+          "output_tokens": 1489.0
+        }
+      },
+      "summary": "The definition fits a bilateral, bodyweight, supine knee-tuck crunch. Lumbar flexion and hip flexion are the two primary actions and match the pelvic curl and knee tuck in the frames. The tracer output has rectus abdominis, psoas, iliacus and rectus femoris as primaries, with obliques, pectineus, TFL, sartorius and adductors as synergists. That is a plausible pattern with no materially wrong muscle. Treating knee flexion as an assist is reasonable because the tuck is largely passive, though it does credit the hamstrings as light synergists. No external load or bracing demand is needed."
+    }
+  }
+}

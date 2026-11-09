@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "830cc48ee89e69f594a22e5f3f45b2a86b9506e15541de491c5814f322a0d04a",
+  "status": "accepted",
+  "updated_at_unix": 1794183177.56819,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183168.60458,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The instructions cue pushing the knees out and a wide stance, so hip abduction or external rotation would be a minor assist contribution. It is not listed. Gluteus medius is already engaged at 0.2 through hip extension and knee_joint_stability, so the omission is not materially wrong.",
+          "suggested_correction": "Optionally add hip_joint/external_rotation as an assist action in a future revision."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.primary",
+          "finding": "The hamstrings (0.7) and adductor magnus (0.6) score high through hip extension. This comes from the tracer's single-joint action table, which does not model their lengthening at the knee, and no choice of actions or demands would change it.",
+          "suggested_correction": "None; this is a tracer limitation."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPQZbJ9F8tNL3oEG2vX",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8523.0,
+          "output_tokens": 991.0
+        }
+      },
+      "summary": "The definition fits a bilateral barbell back squat to a box with band tension. The frames show the bar on the upper back in a power rack, with a standing start and a seated pause on the box. Knee extension and hip extension as primary actions give the expected quadriceps, glute and hamstring pattern, with adductor magnus as a synergist. Ankle plantarflexion as an assist is appropriate, since the calves do not move the load. The demands match the source: spinal bracing and anti-flexion for the arched back, scapular retraction for the bar shelf, and knee stability for the instruction to push the knees out. Grip and wrist demands are correctly left out because the bar rests on the back. Laterality, one_sided_limbs [], the squat family and closed_chain are all consistent with the source."
+    }
+  }
+}

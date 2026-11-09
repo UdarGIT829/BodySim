@@ -1,0 +1,52 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "1145968d6624b3b0aae68ab93aeae8e19a9b63413d9a7ac11cdf8568b8602101",
+  "status": "accepted",
+  "updated_at_unix": 1794105211.51644,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105198.16072,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The band is anchored low beyond the head, so it pulls the upper arms toward the anchor. Resisting that pull would involve shoulder extensor work from the lats, teres major and pectoral heads. The chosen shoulder_position_hold demand only reaches the deltoid and pectoral heads at low coefficients, and the demand vocabulary has no closer fit. The pattern is reasonable and not materially wrong.",
+          "suggested_correction": "Optionally consider whether an assist-level glenohumeral_joint/extension is justified by the frames. Leaving it out is also defensible, since the frames do not clearly show a large shoulder extension demand."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "The open_chain classification is correct because the hands move freely against band resistance, but the stated reasoning ('not against a fixed surface') is loosely worded. The classification rests on distal segment mobility, not on whether there is external resistance.",
+          "suggested_correction": "Phrase the assumption as: the distal segment (hands) moves freely, so the movement is open chain."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgK2c4Mm7kAdFVofkBJ",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 7201.0,
+          "output_tokens": 1475.0
+        }
+      },
+      "summary": "The definition matches the instructions and both frames. A supine lifter holds a band anchored low at the head end of the bench with both hands. The elbows go from flexed to extended while the upper arms stay roughly in place. Bilateral laterality, a single primary elbow extension, and an open-chain classification are supported. Grip and wrist_stability fit a band held in the hands, and shoulder_position_hold fits an upper arm held still against a load acting further down the limb. The tracer output puts the three triceps heads as primaries (long head 0.8) and anconeus as a synergist. Hand, wrist and anterior shoulder muscles appear only as low-coefficient stabilizers. Nothing is wrongly primary and no major muscle pattern is wrong. The remaining issues are minor."
+    }
+  }
+}

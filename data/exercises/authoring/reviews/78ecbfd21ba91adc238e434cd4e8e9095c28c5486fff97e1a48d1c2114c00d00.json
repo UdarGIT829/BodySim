@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "78ecbfd21ba91adc238e434cd4e8e9095c28c5486fff97e1a48d1c2114c00d00",
+  "status": "accepted",
+  "updated_at_unix": 1794184342.77146,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184330.24345,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.assumptions[3]",
+          "finding": "The assumption says the legs are passive support with no stabilization demand, yet pelvic_alignment is listed and produces glute, hamstring and iliacus stabilizers. The two statements are inconsistent, although the demand itself is defensible for holding the posterior pelvic tilt.",
+          "suggested_correction": "Reword the assumption to say that pelvic_alignment represents the held posterior pelvic tilt and the light pressure of the feet on the ball, not passive legs."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[0]",
+          "finding": "The cue says the lower back stays on the floor and only the shoulders and upper trunk curl up, so the motion is mostly thoracic. The vocabulary has only lumbar_spine/flexion for trunk flexion. This is a tracer vocabulary limitation, and the resulting muscle pattern is still correct.",
+          "suggested_correction": "None needed. Keep lumbar_spine/flexion as the closest available trunk flexion action."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist",
+          "finding": "psoas_major appears as a 0.2 synergist because the table lists it under lumbar_spine/flexion. The assumptions say the hip flexors do not drive the movement. This comes from the table, and no choice of action or demand in the definition would change it.",
+          "suggested_correction": "None needed."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "open_chain is acceptable because the trunk moves while the feet only rest on the ball. The feet are in contact with a surface, so a closed_chain label could also be argued. The label does not change the traced muscles.",
+          "suggested_correction": "None needed. The label may be revisited for catalog consistency."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQtC39yMfwJJcim53By",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 4257.0,
+          "output_tokens": 1583.0
+        }
+      },
+      "summary": "The frames and instructions show a bilateral supine crunch with the lower legs resting on a stability ball and the shoulders lifting about four inches. Modeling it as lumbar_spine/flexion primary, bilateral, with the trunk_flexion family, matches the source. The trace has rectus abdominis as the primary mover and both obliques as synergists, which is the correct pattern for a crunch. The pelvic_alignment demand fits the cue to push the small of the back into the floor, a posterior pelvic tilt held by the glutes, hamstrings and abdominals. It adds only low-coefficient stabilizers. Nothing material is unsupported or wrong."
+    }
+  }
+}

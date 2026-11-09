@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "58f6976517d581f155f667bbd056cec816c07284e70b02287a42e73d436b148c",
+  "status": "accepted",
+  "updated_at_unix": 1794184089.69476,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184079.83968,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "closed_chain is reasonable for the hands-on-floor push-up phases, but the airborne hop briefly makes the chain open. This is a catalog label only and does not change the traced muscles.",
+          "suggested_correction": "Keep closed_chain; no change needed."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "The frames show only the standard push-up start and bottom positions, not the airborne hop or lateral shift. The jump_and_throw label rests on the text alone, but it is a defensible secondary label.",
+          "suggested_correction": "Optionally keep horizontal_push as the sole family if the plyometric component is judged minor."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQZjcfQJzcCeoGTkWsM",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7916.0,
+          "output_tokens": 1159.0
+        }
+      },
+      "summary": "The definition is a faithful, bilateral hands-and-toes push-up with an explosive hop. Elbow extension and glenohumeral horizontal adduction are correctly primary, scapular protraction is correctly an assist, and the trunk is held rigid. The anti-extension spine, hip and pelvic demands, the wrist and scapular demands on the floor-supported hands, and the elbow integrity demand are all consistent with the frames and text. The traced pattern is plausible: pectoralis major and triceps are primary, the anterior deltoid, serratus, coracobrachialis and anconeus are synergists, and the core, hip, wrist and scapular muscles are stabilizers. Nothing material is unsupported or contradictory."
+    }
+  }
+}

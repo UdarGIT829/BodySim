@@ -1,0 +1,104 @@
+{
+  "additional_context": "",
+  "authoring_response": {
+    "assumptions": [],
+    "classification": "ambiguous",
+    "classification_reasons": [
+      "The exercise has two distinct phases: a stepping explosive medicine-ball chest push, then a 10-yard sprint after release. The sprint would add hip extension, knee extension and ankle plantarflexion on alternating legs, so including or excluding it materially changes the joint actions.",
+      "The instructions describe a step-and-push, but the frames show only a squat-like athletic stance and a staggered stance holding the ball at the chest. The push itself and the sprint are not shown, so the leg drive in the push and the sprint cannot be confirmed from the images.",
+      "Laterality of the lead step is unspecified. Whether the legs should be treated as bilateral or one-sided depends on how the step is modeled.",
+      "The sprint is a cyclical, alternating-leg locomotion pattern, and the metadata does not say whether it belongs in the catalog definition or the entry should cover only the chest pass."
+    ],
+    "field_confidence": {
+      "input_mode": "medium",
+      "kinetic_chain_type": "medium",
+      "laterality": "medium",
+      "primary_joint_actions": "low",
+      "stabilization_demands": "medium",
+      "variant": "low"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "chest_push_with_run_release"
+      ],
+      "id": "exercise.chest_push_with_run_release.standard",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "primary_joint_actions": [],
+        "stabilization_demands": []
+      },
+      "laterality": "bilateral",
+      "movement_families": [],
+      "name": "Chest Push with Run Release",
+      "variant": "standard"
+    },
+    "questions_requiring_context": [
+      "Should the definition cover only the step-and-chest-push, or also the 10-yard sprint after release?",
+      "If the sprint is excluded, should the lower-body drive during the push (hip and knee extension, ankle plantarflexion) be modeled as assist actions?",
+      "Which leg steps first, or should the step be treated as alternating or side-agnostic with bilateral laterality?",
+      "Is the input mode repetitions (one push and sprint per rep) or duration?"
+    ]
+  },
+  "candidate_trace_report": {},
+  "catalog_id": "catalog.free_exercise_db.Chest_Push_with_Run_Release",
+  "format_version": 1,
+  "provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1,
+      "frame_count": 2,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Chest_Push_with_Run_Release/0.jpg",
+        "Chest_Push_with_Run_Release/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [],
+      "classification": "ambiguous",
+      "classification_reasons": [
+        "The exercise has two distinct phases: a stepping explosive medicine-ball chest push, then a 10-yard sprint after release. The sprint would add hip extension, knee extension and ankle plantarflexion on alternating legs, so including or excluding it materially changes the joint actions.",
+        "The instructions describe a step-and-push, but the frames show only a squat-like athletic stance and a staggered stance holding the ball at the chest. The push itself and the sprint are not shown, so the leg drive in the push and the sprint cannot be confirmed from the images.",
+        "Laterality of the lead step is unspecified. Whether the legs should be treated as bilateral or one-sided depends on how the step is modeled.",
+        "The sprint is a cyclical, alternating-leg locomotion pattern, and the metadata does not say whether it belongs in the catalog definition or the entry should cover only the chest pass."
+      ],
+      "field_confidence": {
+        "input_mode": "medium",
+        "kinetic_chain_type": "medium",
+        "laterality": "medium",
+        "primary_joint_actions": "low",
+        "stabilization_demands": "medium",
+        "variant": "low"
+      },
+      "proposed_definition": null,
+      "questions_requiring_context": [
+        "Should the definition cover only the step-and-chest-push, or also the 10-yard sprint after release?",
+        "If the sprint is excluded, should the lower-body drive during the push (hip and knee extension, ankle plantarflexion) be modeled as assist actions?",
+        "Which leg steps first, or should the step be treated as alternating or side-agnostic with bilateral laterality?",
+        "Is the input mode repetitions (one push and sprint per rep) or duration?"
+      ]
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgrMCu9Tb2vwEwTMj9zUD",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 16554.0,
+      "input_tokens": 1127.0,
+      "output_tokens": 1030.0
+    }
+  },
+  "saved_at_unix": 1794181446.2694,
+  "source_id": "Chest_Push_with_Run_Release",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "authoring_draft",
+  "validation_errors": [
+    "proposed_definition: must be null unless classification is supported",
+    "classification: ambiguous proposals cannot advance to definition_candidate"
+  ]
+}

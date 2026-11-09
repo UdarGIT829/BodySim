@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "4953a979c9151d9f9087e5ae1fd320ff7df45768ee779ac1b94120a40de98094",
+  "status": "accepted",
+  "updated_at_unix": 1794179402.3204,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179392.61606,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions[ankle_joint/plantarflexion]",
+          "finding": "With the knee bent about 90 degrees, the gastrocnemius is shortened and the soleus does most of the work. The tracer scores the gastrocnemius heads at 0.7 and 0.8 as primary, and no choice of action, emphasis, side or demand can express this knee-position effect. The authoring assumptions already acknowledge this.",
+          "suggested_correction": "No change is needed. This is a tracer limitation, so treat it as non-blocking."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "The closed_chain label is arguable. The feet are planted on the block, but the load rests on the thighs, not through the feet from above, as in a standing calf raise. The label does not change the traced muscles and is not plainly wrong.",
+          "suggested_correction": "Keep closed_chain, or use open_chain if the catalog convention prefers it for seated, thigh-loaded work."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJcE9FusxNr8iGMLYbu",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 4599.0,
+          "output_tokens": 1051.0
+        }
+      },
+      "summary": "The definition matches the source. It is a bilateral seated calf raise with the bar on the thighs and the balls of both feet on a block. The frames show lowered heels at the start and raised heels at the end. Ankle plantarflexion is the only moving joint action, and the knees and hips stay fixed at about 90 degrees. The previous grip and wrist_stability demands were rightly removed, since the thighs carry the bar and the hands only steady it. The tracer output fits this: soleus and both gastrocnemius heads are primary, the fibularis muscles, deep toe flexors, tibialis posterior and plantaris are synergists, and tibialis anterior is a light stabilizer from ankle_stability. No unrelated muscles are engaged."
+    }
+  }
+}

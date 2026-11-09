@@ -1,0 +1,84 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "b859df0203dc994b831e5441d07a0d2b7e4b4bbd0e7fdacee5c30b3856878071",
+  "status": "changes_requested",
+  "updated_at_unix": 1794183651.10797,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183630.81005,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The frames and instructions show the knees held fixed near extension while the platform load pushes them toward flexion, so the quadriceps work isometrically. The assumption 'no knee action is listed' leaves this out. Vastus intermedius and rectus femoris come out as explicit zeros, and vastus lateralis and medialis appear only as weak stabilizers (0.105-0.14). The hip extensors, which resist the platform pushing the thighs toward the trunk, are also missing.",
+          "suggested_correction": "Add knee_joint/extension as an assist action, so the quadriceps become synergists, and hip_joint/extension as an assist action, with sides 'both' or working (bilateral laterality counts both). Keep ankle plantarflexion as the only primary action."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "knee_joint_stability is used to represent a knee held extended under load, but that demand covers valgus/varus and rotational control. Nothing in the source shows such control as a requirement. It engages the hamstrings, popliteus, gracilis, gluteus medius, TFL and sartorius as stabilizers, which is a misleading pattern for a stationary, near-straight knee. Sagittal load resistance is better expressed through the knee extension and hip extension assist actions.",
+          "suggested_correction": "Remove knee_joint_stability once the knee extension and hip extension assist actions are added. Keep ankle_stability."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[1]",
+          "finding": "The assist toe_joints/flexion is a reasonable synergist, since the ball of the foot and toes press on the platform. It produces many small intrinsic-foot synergists, which is a tracer property and not an error.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "ankle_stability gives tibialis anterior stabilizer credit at 0.14. This is plausible co-contraction and is acceptable.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "emphasis": "assist",
+          "joint": "knee_joint",
+          "movement": "extension",
+          "op": "add_joint_action",
+          "sides": "working"
+        },
+        {
+          "emphasis": "assist",
+          "joint": "hip_joint",
+          "movement": "extension",
+          "op": "add_joint_action",
+          "sides": "working"
+        },
+        {
+          "demand": "knee_joint_stability",
+          "op": "remove_stabilization_demand"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPzdo1LUfHUoHxoQN6h",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7307.0,
+          "output_tokens": 2550.0
+        }
+      },
+      "summary": "The core ankle-plantarflexion pattern is well supported: soleus and both gastrocnemius heads are primary, and the toe-flexor assist is reasonable. Two problems remain. First, the knees and hips hold the platform load isometrically, but the definition credits no knee or hip extensor action, so the quadriceps (vastus intermedius, rectus femoris) and hip extensors get zero or only token credit. Second, the knee-held-extended load is modelled with the knee_joint_stability demand, which is meant for valgus/varus and rotation control. It credits hamstrings, popliteus, gracilis, gluteus medius, TFL and sartorius as knee stabilizers while under-crediting the quadriceps that actually resist the load."
+    }
+  }
+}

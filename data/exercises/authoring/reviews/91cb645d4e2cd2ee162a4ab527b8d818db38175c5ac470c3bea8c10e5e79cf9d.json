@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "91cb645d4e2cd2ee162a4ab527b8d818db38175c5ac470c3bea8c10e5e79cf9d",
+  "status": "accepted",
+  "updated_at_unix": 1794184564.66619,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184554.91221,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.assumptions[2]",
+          "finding": "The text describes one hand beside the head and the other on the thigh, while frame 2 shows both hands behind the head. The definition treats this as a hand-placement difference. That is reasonable because neither placement loads the arms or changes the joint actions.",
+          "suggested_correction": "No change needed. Optionally note in the assumptions that both hand placements are unloaded."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "The label open_chain is defensible because the trunk moves freely over fixed feet. Some catalogs would call the secured-feet position closed_chain. This is only a catalog label and does not change the traced muscles.",
+          "suggested_correction": "Keep open_chain, or reconsider the label for consistency with other secured-feet trunk exercises."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[2]",
+          "finding": "Hip flexion is marked as an assist because the secured feet let the hip flexors help raise the torso. The resulting low-coefficient synergists (psoas, iliacus, rectus femoris, TFL, sartorius) are plausible. Contribution varies with technique and bench angle.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRAkaRx5hnTQg6tfZJ4",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 5188.0,
+          "output_tokens": 1204.0
+        }
+      },
+      "summary": "The definition matches the source. The lifter lies supine on a decline bench with the feet secured, curls the trunk up and twists toward the opposite knee. Lumbar flexion and lumbar rotation as primary actions give rectus abdominis at 1.0 and both obliques at 0.9, the correct primary movers. Hip flexion as an assist is reasonable for secured feet and yields only synergist-level psoas, iliacus and rectus femoris (0.28-0.4). Bilateral laterality fits because spinal actions count on both sides and the twist direction alternates by set. Leaving out stabilization demands is defensible: the arms carry no load, the feet are pad-fixed, and no heavy bracing is cued. Minor label and source-inconsistency notes are non-blocking."
+    }
+  }
+}

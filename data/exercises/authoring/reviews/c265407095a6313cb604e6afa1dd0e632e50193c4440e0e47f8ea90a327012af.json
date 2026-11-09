@@ -1,0 +1,58 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c265407095a6313cb604e6afa1dd0e632e50193c4440e0e47f8ea90a327012af",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105321.28408,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105306.05505,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[3] (scapulothoracic_joint/protraction)",
+          "finding": "Protraction is declared at full primary emphasis, so serratus_anterior becomes a primary mover at 1.0 and pectoralis_minor becomes a 0.5 synergist. In the frames the scapulae stay pinned against the incline bench and only protract slightly at lockout, which the definition's own assumptions concede. Serratus anterior should not be rated equal to the clavicular deltoid and pectoralis major in this press, so the muscle pattern is materially wrong.",
+          "suggested_correction": "Mark scapulothoracic_joint/protraction with emphasis 'assist' (serratus about 0.4 as a synergist) or drop it and cover the serratus through the scapular_stabilization demand. Keep the true movers (glenohumeral horizontal adduction and flexion, elbow extension) at primary emphasis."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands (anti_extension_spine)",
+          "finding": "The back is fully supported by the incline bench and the feet are planted. The trunk is not resisting an extension load the way it does in a standing overhead press, yet this demand gives rectus_abdominis 0.35 and the obliques and transversus abdominis smaller stabilizer coefficients. That overstates abdominal involvement.",
+          "suggested_correction": "Remove anti_extension_spine, or justify it with evidence of a trunk-bracing demand. A supported bench press needs at most minimal trunk stabilization."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands (scapular_stabilization)",
+          "finding": "The scapulae are held retracted and fixed against the bench under the bar. The general scapular_stabilization demand engages levator_scapulae, descending trapezius and ascending trapezius at modest levels, and it under-weights the rhomboids and transverse trapezius that hold the shelf.",
+          "suggested_correction": "Consider scapular_retraction_stability in place of or alongside scapular_stabilization. It maps better to retraction against the bench, with serratus anterior covered at a modest level."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgSykshTSFHwiwQ99Eh",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 9928.0,
+          "output_tokens": 1889.0
+        }
+      },
+      "summary": "Identity, bilateral laterality, open-chain classification, the pressing actions (glenohumeral horizontal adduction and flexion, elbow extension) and the grip and wrist demands are supported by the instructions and both frames. One blocking problem: scapulothoracic protraction is declared at full `primary` emphasis, which makes serratus anterior a coefficient-1.0 primary mover equal to the pectoralis and deltoid. The definition's own assumptions say the scapula is largely stabilized against the bench and that protraction matters only at end-range lockout, so the tracer output contradicts them. Two non-blocking issues concern the trunk and scapular demands."
+    }
+  }
+}

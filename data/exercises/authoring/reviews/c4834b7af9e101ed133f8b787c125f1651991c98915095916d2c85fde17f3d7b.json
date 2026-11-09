@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c4834b7af9e101ed133f8b787c125f1651991c98915095916d2c85fde17f3d7b",
+  "status": "accepted",
+  "updated_at_unix": 1794179355.57875,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179343.66634,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.laterality",
+          "finding": "The lifter does reps on one leg and then the other. The definition is bilateral with both legs credited as working, a catalog-level simplification that the assumptions state openly. The rear leg also contributes to the push-off and balance, so crediting both sides is defensible.",
+          "suggested_correction": "No change needed. Alternating-leg variants could be authored separately if a unilateral profile is ever wanted."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist[muscle.gluteus_medius]",
+          "finding": "Gluteus medius is scored 0.2 through its weak hip-extension weight, which takes precedence over its 1.0 weight in `pelvic_leveling_frontal` (0.35 as a stabilizer). This follows from how the tracer takes the highest action score first, and no choice of actions or demands changes it.",
+          "suggested_correction": "None required. Treat this as a tracer limitation, as in every review."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The rectus abdominis and external oblique are explicit zeros, and the abdominals appear only through transversus abdominis and internal oblique under postural stabilization. A back-loaded lunge asks for modest anti-extension bracing, so this is a minor omission and not materially wrong.",
+          "suggested_correction": "Optionally consider `anti_extension_spine` or `intra_abdominal_pressure` in a future revision for heavy loads."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJYcSaa7xewoaihvEmf",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8153.0,
+          "output_tokens": 1468.0
+        }
+      },
+      "summary": "The definition fits a back-loaded barbell forward lunge. The frames show the bar across the upper back and a split-stance lunge with an upright torso. Hip and knee extension as primary actions and ankle plantarflexion as assist match the drive from the bottom position, and the tracer output follows: glutes, hamstrings, adductor magnus and quadriceps lead, and the calves are low-level synergists. The earlier feedback is resolved: `grip` is gone, so the hand and forearm muscles are zeros, and `scapular_retraction_stability` now credits the trapezius and rhomboids for the bar shelf. No biomechanically material claim is unsupported or contradicted."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "92a637a53f2f0963f36b790f7c1fd12fd98df503fb18e81ba70e5872f9d9167a",
+  "status": "changes_requested",
+  "updated_at_unix": 1794179129.90996,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179102.03432,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions[glenohumeral_joint/internal_rotation]",
+          "finding": "Glenohumeral internal rotation contradicts the frames. The forearms stay vertical while the elbows move from in front of the torso (frame 1) to out to the sides (frame 2). That is humeral external rotation with horizontal abduction. The palm rotation is a forearm pronation, already modelled by radioulnar_joint/pronation, not shoulder internal rotation. The internal rotation action wrongly makes teres major, latissimus dorsi, the sternocostal and abdominal pectoralis major heads and subscapularis synergists in an overhead press.",
+          "suggested_correction": "Remove glenohumeral_joint/internal_rotation. Optionally add glenohumeral_joint/external_rotation with assist emphasis on the working sides, so infraspinatus and teres minor get synergist credit. Keep radioulnar_joint/pronation as assist."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "No trunk bracing is listed. The seated back-supported position reduces the demand, but an overhead press still resists lumbar extension, so omitting it is a defensible simplification and not a clear error.",
+          "suggested_correction": "Consider anti_extension_spine in a later revision if trunk involvement is wanted."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The horizontal abduction component of the elbows opening outward is not modelled. Its effect is partly covered by shoulder abduction and the rotator cuff stabilization demand, so the omission is minor.",
+          "suggested_correction": "Optionally add glenohumeral_joint/horizontal_abduction with assist emphasis."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "internal_rotation",
+          "op": "remove_joint_action"
+        },
+        {
+          "emphasis": "assist",
+          "joint": "glenohumeral_joint",
+          "movement": "external_rotation",
+          "op": "add_joint_action",
+          "sides": "working"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJEoJhA9wPLKepHmXvT",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10928.0,
+          "output_tokens": 3422.0
+        }
+      },
+      "summary": "The seated bilateral identity, vertical_push label, open-chain type and bilateral laterality are supported. Elbow extension, shoulder flexion and abduction, assist-level scapular upward rotation, and the grip and wrist demands are also supported. The assist-level forearm pronation is correct, since the palms go from facing the body (supinated) to facing forward. The assist-level glenohumeral internal rotation is the wrong direction. In both frames the forearms stay vertical while the elbows swing from forward (frame 1) to out to the sides (frame 2). That sweep is humeral external rotation with horizontal abduction. The palm rotation described in the instructions happens at the forearm, not the humerus. Internal rotation therefore wrongly engages teres major, latissimus dorsi, sternocostal and abdominal pectoralis major and subscapularis as synergists, while leaving the external rotators with only stabilizer-level credit."
+    }
+  }
+}

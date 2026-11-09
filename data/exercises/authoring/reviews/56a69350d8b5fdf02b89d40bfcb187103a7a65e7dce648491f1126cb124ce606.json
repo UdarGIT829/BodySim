@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "56a69350d8b5fdf02b89d40bfcb187103a7a65e7dce648491f1126cb124ce606",
+  "status": "accepted",
+  "updated_at_unix": 1794184254.17965,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184244.40342,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The upper arm rests on the thigh, so the isometric shoulder load is lower than in a free-hanging curl. The anterior deltoid credit from shoulder_position_hold (0.35) is modest, and it is acceptable under the curl guidance for that demand.",
+          "suggested_correction": "No change required. A future revision could drop shoulder_position_hold if the thigh support is judged to remove the shoulder demand, but keeping it is defensible."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.primary",
+          "finding": "Brachioradialis is traced as a primary mover (0.7) because of the table weight for elbow flexion. This is a tracer table property, not a choice made in the definition, and the supinated grip would arguably reduce its role.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQms6huawy8DP9Jm8r7",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 5569.0,
+          "output_tokens": 1097.0
+        }
+      },
+      "summary": "The definition fits the source instructions and both frames: a seated single-arm dumbbell concentration curl with the right upper arm braced on the inner thigh, the forearm doing the moving, and the left side as a mirrored repetition. Elbow flexion as the primary action, supination as an assist, unilateral laterality with one_sided_limbs [\"arm\"], and the grip, wrist_stability and shoulder_position_hold demands all match the traced output. Brachialis, both biceps heads and brachioradialis are primary movers, supinator and pronator teres are synergists, and the hand, forearm and anterior deltoid stabilizers are small and plausible. The legs and trunk are correctly left out, since they are only seated support."
+    }
+  }
+}

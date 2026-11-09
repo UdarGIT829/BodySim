@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "dafe380dda58fb3c97b0c62451462646f94944176ec305211fe326e8283da525",
+  "status": "accepted",
+  "updated_at_unix": 1794184779.50221,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184766.38243,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The rotator cuff (infraspinatus, subscapularis) shows no involvement. Only supraspinatus is engaged, via the assist abduction. Overhead kettlebell pressing involves some cuff centring, but the frames and instructions do not clearly make it a primary demand.",
+          "suggested_correction": "A future revision could add glenohumeral_stabilization or humeral_head_stabilization if the authors want cuff work represented."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[1]",
+          "finding": "Hip extension marked primary pushes the hamstrings to 0.7, which makes them primary movers. In a shallow dip-and-drive their role is likely modest. This follows the table weights, and the glutes plainly drive the hips, so it is not blocking.",
+          "suggested_correction": "Optionally keep hip extension primary, and accept the hamstring weighting as a table limitation."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The label is vertical_push only. The leg dip-and-drive could justify a secondary squat label, but this is a catalog label and does not change the traced muscles.",
+          "suggested_correction": "Optionally add squat as a secondary family."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRSLfTv2eweBhUPJGSd",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 12713.0,
+          "output_tokens": 1636.0
+        }
+      },
+      "summary": "The definition fits a bilateral standing double kettlebell push press. Both bells start in the front rack, the lifter dips a few inches, then drives up and presses overhead. Knee and hip extension are primary for the leg drive, and ankle plantarflexion is correctly an assist. Shoulder flexion and elbow extension are primary for the press, with scapular upward rotation and shoulder abduction as assists. Grip and wrist stability fit loads held in the hands. Spinal bracing and standing posture are covered by anti_extension_spine, intra_abdominal_pressure and postural_stabilization. Laterality and one_sided_limbs are correct for a bilateral lift. The tracer output is plausible: quads, glutes, anterior deltoid and triceps lead. The remaining concerns are minor and non-blocking."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "f8f4538bcc0e56605e1145577b282128369761d0ac0ea874c137ac919b03836f",
+  "revision_id": "Bent_Over_Two-Dumbbell_Row_With_Palms_In@f8f4538bcc0e",
+  "exercise_id": "exercise.bent_over_dumbbell_row.palms_in_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Bent_Over_Two-Dumbbell_Row_With_Palms_In",
+  "mapped_muscles": 143,
+  "promoted_at_unix": 1794182945.1172113,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "354cb43abd71b26a6287468f497d5eb41440ee93458cb4ab7cf77c5ac9628521",
+    "data/exercises/engagement_profiles.json": "ad1e899e6566b21009dd1509bc9cef38c3be4362e23d5ea7e67aa731277358bc",
+    "data/exercises/catalog/candidates.json": "caf432196739607b7875d083602e4106550bf7e7078354619e2de35600af6422",
+    "data/exercises/sources/free_exercise_db_media.json": "a546d25624e4c7d40f2c2fc1539630919df1cc41637b7c60bf9108c888dceb1b"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "e1590a5aeaa336a1dc5e74d6aa33c9a94a644ddfe6366e7f419ec09e82359ded",
+    "data/exercises/engagement_profiles.json": "6c54cca28aafdba72dbe18090463f820904bc1c12b46c76cb41bdd83aa5e1563",
+    "data/exercises/catalog/candidates.json": "5d0fa1c4b66b92325295ea104d18244894363d3481249b8b8ec9f8fb16487124",
+    "data/exercises/sources/free_exercise_db_media.json": "cc002cace3643eaddd6de4875b8f3e4da8a58a2a06da47aaf95cfd15aa55bb66"
+  }
+}

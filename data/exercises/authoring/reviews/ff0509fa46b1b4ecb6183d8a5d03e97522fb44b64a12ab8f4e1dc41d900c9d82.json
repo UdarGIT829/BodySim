@@ -1,0 +1,73 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "ff0509fa46b1b4ecb6183d8a5d03e97522fb44b64a12ab8f4e1dc41d900c9d82",
+  "status": "changes_requested",
+  "updated_at_unix": 1794184764.90215,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184746.51463,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Glenohumeral abduction is omitted, and the assumption justifying the omission is unsupported. The frames show the elbows out from the torso in the rack position, and lockout overhead is scapular-plane elevation, not pure sagittal flexion. As a result the acromial deltoid is only a 0.2 synergist, though it is a main mover of overhead pressing, and supraspinatus has no involvement.",
+          "suggested_correction": "Add glenohumeral_joint/abduction with emphasis assist and sides working. The sides value follows the other limb actions in this bilateral definition. This raises the acromial deltoid to about 0.4 and engages supraspinatus without displacing flexion as the main press action."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The rotator cuff (infraspinatus, subscapularis, teres minor) works to centre the humeral head under the overhead load but is not credited. glenohumeral_stabilization would reach it.",
+          "suggested_correction": "Consider adding glenohumeral_stabilization in a future revision."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.primary",
+          "finding": "Hamstrings (0.7) and the clavicular head of pectoralis major (0.7) appear as primary movers. This comes from the table weights for hip extension and shoulder flexion, not from a definition choice, so it is a tracer limitation.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "The closed_chain label is debatable because the hands move the loads freely overhead. The feet are fixed during the leg drive, so the label is defensible and does not change the traced muscles.",
+          "suggested_correction": "Optional; keep as is."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "emphasis": "assist",
+          "joint": "glenohumeral_joint",
+          "movement": "abduction",
+          "op": "add_joint_action",
+          "sides": "working"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRQskBdKY1WT7nCqV14",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 12479.0,
+          "output_tokens": 2278.0
+        }
+      },
+      "summary": "The definition correctly reads this as a bilateral standing double-kettlebell push press: leg dip-and-drive, then a press to overhead lockout. The legs, triceps, grip and bracing are credited sensibly. The shoulder component is incomplete. The overhead press has no shoulder abduction, so the acromial (middle) deltoid, a principal mover in an overhead press, is only a 0.2 synergist and supraspinatus is an explicit zero. The assumption that the press path is too unclear to claim abduction does not hold. Reaching lockout with both arms overhead from a rack position with the elbows out from the torso needs scapular-plane elevation. The fix is a single added joint action."
+    }
+  }
+}

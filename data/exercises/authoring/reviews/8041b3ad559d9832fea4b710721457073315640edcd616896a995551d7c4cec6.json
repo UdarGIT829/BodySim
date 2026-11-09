@@ -1,0 +1,90 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "8041b3ad559d9832fea4b710721457073315640edcd616896a995551d7c4cec6",
+  "status": "changes_requested",
+  "updated_at_unix": 1794184375.4985,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184358.1488,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[glenohumeral_joint/abduction].emphasis",
+          "finding": "The instructions end with pressing the dumbbells overhead, and the deltoid and supraspinatus do most of that lift. Marking glenohumeral abduction as assist caps the acromial deltoid at 0.4 and supraspinatus at 0.28. Because the action score overrides the stabilizer score, the deltoid is understated in the tracer profile.",
+          "suggested_correction": "Set glenohumeral_joint/abduction to emphasis primary (acromial deltoid 1.0, supraspinatus 0.7). Add glenohumeral_joint/flexion as an assist so the clavicular deltoid is credited."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[scapulothoracic_joint/upward_rotation].emphasis",
+          "finding": "Scapular upward rotation is a major mover during an overhead press, not an incidental accompaniment. As assist it leaves serratus anterior at 0.4 and the upper and lower trapezius at 0.28, which undersells them.",
+          "suggested_correction": "Set scapulothoracic_joint/upward_rotation to emphasis primary."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Anterior deltoid and shoulder flexion work is missing. The clavicular deltoid appears only at 0.12, even though the arms move to overhead.",
+          "suggested_correction": "Add glenohumeral_joint/flexion with emphasis assist and sides working."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The families vertical_push and shoulder_rotation are reasonable catalog labels. Both apply because the exercise combines rotation with an overhead press.",
+          "suggested_correction": "No change required."
+        },
+        {
+          "field_path": "source.source_images",
+          "finding": "The frames show the scarecrow-type start and the end of the rotation, with forearms vertical. The overhead lockout is not shown and rests on the text only.",
+          "suggested_correction": "None required. The text clearly describes the press."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "emphasis": "primary",
+          "joint": "glenohumeral_joint",
+          "movement": "abduction",
+          "op": "set_action_emphasis"
+        },
+        {
+          "emphasis": "primary",
+          "joint": "scapulothoracic_joint",
+          "movement": "upward_rotation",
+          "op": "set_action_emphasis"
+        },
+        {
+          "emphasis": "assist",
+          "joint": "glenohumeral_joint",
+          "movement": "flexion",
+          "op": "add_joint_action",
+          "sides": "working"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQvFP7rxoWt9h8dwSUM",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 11750.0,
+          "output_tokens": 2329.0
+        }
+      },
+      "summary": "The two-phase path (external rotation of the shoulders, then an overhead press) matches the instructions and frames. The tracer output is materially wrong for the press phase, though. Shoulder abduction and scapular upward rotation are marked assist, so the deltoids, serratus anterior and upper/lower trapezius appear only as weak synergists (acromial deltoid 0.4, clavicular deltoid 0.12, serratus 0.4). The overhead press is moved mainly by these muscles alongside the triceps. Triceps and rotator cuff come out as the only primary movers, which is not a credible pattern for this exercise."
+    }
+  }
+}

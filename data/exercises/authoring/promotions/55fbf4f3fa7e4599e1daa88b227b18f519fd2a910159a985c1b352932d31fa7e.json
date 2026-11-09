@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "55fbf4f3fa7e4599e1daa88b227b18f519fd2a910159a985c1b352932d31fa7e",
+  "revision_id": "Barbell_Side_Split_Squat@55fbf4f3fa7e",
+  "exercise_id": "exercise.barbell_side_split_squat.back_loaded",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Side_Split_Squat",
+  "mapped_muscles": 68,
+  "promoted_at_unix": 1794179420.616823,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "6d2b2e72b49c052f0750ec2cc46cedd08a283cef273f9090b897bc7adedb8f60",
+    "data/exercises/engagement_profiles.json": "b476c454ee6dcd0a48514a0be5b1b7c4f1c99e4101210bc91463e61d5b1da8e4",
+    "data/exercises/catalog/candidates.json": "e12a3484b2d2ceb96859af24332137f5b7e00509bcec5a482e9100cc7566d764",
+    "data/exercises/sources/free_exercise_db_media.json": "843462ada2917f0f89d415d78436ecc35fda079c095b33d6671745e24f2ef96a"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "4d76d36834eb9330a6774c248212c7474cd770e577f323e1e13a8a33d0c6eb9a",
+    "data/exercises/engagement_profiles.json": "b0d8c53249b6813876423c2eef631040c858d6258ffae503d5e958183a31cc7d",
+    "data/exercises/catalog/candidates.json": "6aa31af08b3c38379306ed6549a9261a94f24fd04e75ea227c10ad3ae00d8dd1",
+    "data/exercises/sources/free_exercise_db_media.json": "eee4c8cde0782d9138d4be9bcf060a4e9da75d55507ede0c204a1e200dcd0ecb"
+  }
+}

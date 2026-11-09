@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "610e7abaaee36dfcba5c1d0116f66a63cd2dc727de125a6dad0a6319ec773ca7",
+  "revision_id": "Drag_Curl@610e7abaaee3",
+  "exercise_id": "exercise.barbell_drag_curl.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Drag_Curl",
+  "mapped_muscles": 114,
+  "promoted_at_unix": 1794184900.447127,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "1fc7d10407179660e78d73ca8b6159cf477f44b67bfa6b51e7b3bdc78bc18e1e",
+    "data/exercises/engagement_profiles.json": "5a767a4a3de36b59f1bf813d36131a7f26e5e5ebe1835db8397f9761e97b63ea",
+    "data/exercises/catalog/candidates.json": "8c614907af993b785228c80bf043cb00d858ad67a886f1ace047364e20f4e7a7",
+    "data/exercises/sources/free_exercise_db_media.json": "11f8039f88aa6a0beed950555e25596e0ed954952530f38528bed224bb21dcc1"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "7bf96b3d5390d2f78d63b6e1808ad60ec709a689a7ce79406a8cc36d6c72dbd2",
+    "data/exercises/engagement_profiles.json": "4eea6438c2914f8ea9f7729a88490d0bfc23b090aa32e0d686dcc4c4f6ffa26a",
+    "data/exercises/catalog/candidates.json": "bdce5144337bec33b5fd4c804257bb983581212b78e9712d4a438ae5969e8994",
+    "data/exercises/sources/free_exercise_db_media.json": "ccafffbc1ee4313a2277c823d769ab8ea47e695bf21044f5d38778fcf700c741"
+  }
+}

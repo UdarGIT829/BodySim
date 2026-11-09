@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "5799351a63cd86ee7cb26d5dba83cd23527bdbd4d03918ac9df07e136c37bd8c",
+  "status": "accepted",
+  "updated_at_unix": 1794184121.71159,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184106.49522,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[glenohumeral_joint/horizontal_adduction]",
+          "finding": "With the elbows tucked close to the torso, shoulder motion is partly flexion as well as horizontal adduction. The definition omits glenohumeral flexion, though the anterior deltoid is already credited as a synergist at 0.6.",
+          "suggested_correction": "Optionally add glenohumeral_joint/flexion as an assist to reflect the tucked-elbow path. It is not required for acceptance."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands[pelvic_alignment]",
+          "finding": "The hip-extension assist action and the pelvic_alignment demand both credit the posterior hip muscles for holding the hips. This is slightly redundant but gives a plausible low-level pattern. The hamstrings and glutes are weighted modestly.",
+          "suggested_correction": "No change needed. If simplifying, keep either the hip-extension assist or pelvic_alignment, not both."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQbhLZ1oxrMyRksSnN8",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7725.0,
+          "output_tokens": 1921.0
+        }
+      },
+      "summary": "The definition is supported by the instructions and frames. A lifter lies across a flat bench with only the shoulders supported, hips lowered and feet planted. Both hands press a single vertical dumbbell from the chest by extending the elbows. Elbow extension and horizontal adduction as primary actions give the right press pattern: triceps heads, sternocostal and clavicular pectoralis, and anterior deltoid as synergist. Protraction as an assist credits serratus anterior and pectoralis minor without making them movers. The hip-extension assist and pelvic_alignment credit the glutes, hamstrings and trunk for holding the hips level below the bench, which is visible in the frames. wrist_stability fits a load pressed through the palms. scapular_retraction_stability fits the bench contact. grip is correctly omitted. The open_chain, bilateral and horizontal_push labels are appropriate, and the tracer output has no materially wrong muscle pattern."
+    }
+  }
+}

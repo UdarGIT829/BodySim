@@ -1,0 +1,68 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "13cbff0cff529a2788586128199024448f5837a11d66e2493f7cf811741102b9",
+  "status": "changes_requested",
+  "updated_at_unix": 1794104988.34758,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794104967.07707,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The step-2 instruction ('raise the dumbbells as you rotate the palms of your hands until they are facing forward') and the step-4 tip describing opposite rotation of each arm make rotation the defining feature of this exercise. Frame 1 shows palms toward the face with elbows forward, and frame 2 shows palms forward with elbows out. The definition omits forearm pronation and glenohumeral rotation entirely, so pronator_quadratus, the pronator teres heads and subscapularis (internal rotation) are explicit zeros. This is a real, deliberately described action rather than a negligible one, and the tracer has a vocabulary for it, so the omission is a definition error, not a tracer limitation.",
+          "suggested_correction": "Add radioulnar_joint/pronation (emphasis assist or primary as judged) and consider glenohumeral_joint/internal_rotation with emphasis assist. This keeps the rotation from being modelled as primary while still engaging the pronator muscles and subscapularis."
+        },
+        {
+          "field_path": "authoring_response.assumptions[1]",
+          "finding": "The assumption that palm rotation is 'a minor forearm and shoulder rotation component and is not modelled' contradicts the source instructions, which present it as a core part of the movement. The decision is therefore an unsupported material claim, not a justified simplification, and it directly causes the missing pronator and internal-rotator muscle pattern.",
+          "suggested_correction": "Revise the assumption to state that the supinated-to-pronated palm rotation is part of the concentric phase, and model it with assist-level actions in the next authoring revision."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "There is no glenohumeral_stabilization or humeral_head_stabilization demand, so infraspinatus, teres_minor and subscapularis show no involvement despite loaded dumbbells being controlled overhead through a large range. A rotator cuff role is reasonable here. Supraspinatus is already primary via abduction.",
+          "suggested_correction": "Consider adding glenohumeral_stabilization or humeral_head_stabilization."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands[0]",
+          "finding": "anti_extension_spine yields rectus abdominis, obliques and transversus abdominis as stabilizers at moderate coefficients, even though the back is supported by an upright bench. The demand is reasonable for an overhead press, but its magnitude is probably high for a supported seat. The rectus abdominis coefficient of 0.35 is the largest among the trunk stabilizers.",
+          "suggested_correction": "Keep it, but note that the trunk demand is reduced by the back support, or confirm the inclusion with context about bench incline."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "The family list is acceptable, but 'elbow_extension' is secondary and redundant with the vertical_push compound pattern. No horizontal or rotational family captures the Arnold rotation.",
+          "suggested_correction": "Optionally keep the families as is, since the rotation is better captured through the joint actions."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011Cgpg1zyMTfpMzqwtGwSag",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 9156.0,
+          "output_tokens": 2643.0
+        }
+      },
+      "summary": "The seated, back-supported bilateral dumbbell press from a front rack to overhead lockout is supported by both frames. Bilateral laterality, open chain, vertical_push, glenohumeral flexion/abduction, elbow extension and scapular upward rotation all fit, and the main deltoid, serratus, trapezius, triceps and supraspinatus pattern is plausible. However, the instructions define the movement by the palm rotation from palms facing the body to palms facing forward. The definition deliberately leaves that action out, so the pronators and internal rotators come out as explicit zeros and the output profile is that of a plain overhead press."
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "b874babe1f3b298059b21b04f4c5990acb7234fa306de337dd2a07636bd4eb84",
+  "status": "accepted",
+  "updated_at_unix": 1794179157.67574,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179145.49119,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "hip_hinge is a defensible primary label, but the finish is a combined hip and knee extension with a squat-like sit-back or lap phase, so the label is not wholly complete. The label does not change the traced muscles.",
+          "suggested_correction": "Consider adding squat as a secondary family in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Scapular and upper-trapezius work is absent, so the traps are not credited for supporting the load hanging from the arms and held against the chest. The arms mostly hold the implement against the torso, so the omission is minor.",
+          "suggested_correction": "Optionally add scapular_stabilization, or a low-weight scapular action at assist level, in a future authoring pass."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJJ1BeSg2RW1Dd56cLp",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 12046.0,
+          "output_tokens": 1297.0
+        }
+      },
+      "summary": "The frozen definition fits the source instructions and frames: a bilateral bar-end hug lift from the floor, with hips and knees extending to raise the load. Hip extension and knee extension are primary, so the glutes, hamstrings and quadriceps appear as movers. Assist-level elbow flexion and glenohumeral adduction/horizontal adduction credit the arm-hug muscles (brachialis, biceps, pectoralis major, lats, teres major) as synergists, which resolves the earlier council feedback. Grip, anti_flexion_spine, intra_abdominal_pressure and postural_stabilization are reasonable demands for a heavy front-loaded lift from the floor. The trace puts no muscle in a materially wrong role."
+    }
+  }
+}

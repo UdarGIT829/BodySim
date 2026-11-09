@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "33f73e3f8b8467a7da499c28239e2601f645ce566a4ddd20fa82021b493d7d3a",
+  "revision_id": "Dumbbell_Clean@33f73e3f8b84",
+  "exercise_id": "exercise.dumbbell_clean.bilateral_floor",
+  "source_catalog_id": "catalog.free_exercise_db.Dumbbell_Clean",
+  "mapped_muscles": 123,
+  "promoted_at_unix": 1794184978.2985785,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "02c21dd1e22ce5524bb982e294353ffee159918c2f43e3566739fa1538219453",
+    "data/exercises/engagement_profiles.json": "33e23ed7fcb4dd22361f0ed9f17c58a85b761984969232e3fa786db706358b15",
+    "data/exercises/catalog/candidates.json": "6259d1a9845b7316492df650b2488d3b4ecc78cecaad529b942324e19ba173ab",
+    "data/exercises/sources/free_exercise_db_media.json": "bcfd2bc847ab2e43229a08e5c3888d511b17e01b54cd6e03895e16ab21decd5d"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "9401936fed38509dce0922313089527422300e6197e01d80ca1d41d101c0f172",
+    "data/exercises/engagement_profiles.json": "007c9acc1c551f51022ad4867a57a1d977fe0dd4c63a932a25ed6e93be781cdb",
+    "data/exercises/catalog/candidates.json": "99711d70b3eeedaefda572b4ad778258bcf5a96150bff09d56ade16df9967899",
+    "data/exercises/sources/free_exercise_db_media.json": "c7622d1964ce93e7bf330dbcb72cdb3fb56d7ef58b729f6c575e2f10091789d4"
+  }
+}

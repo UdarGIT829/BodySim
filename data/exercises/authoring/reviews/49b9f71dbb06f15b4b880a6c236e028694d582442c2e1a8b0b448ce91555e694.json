@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "49b9f71dbb06f15b4b880a6c236e028694d582442c2e1a8b0b448ce91555e694",
+  "status": "accepted",
+  "updated_at_unix": 1794184538.24946,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184527.68258,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "The hand and forearm stabilizers from grip and wrist_stability are numerous but low-coefficient (at most 0.35), so they do not compete with the triceps as primary movers. This is an acceptable consequence of the demand tables.",
+          "suggested_correction": "No change required."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Optional: the rotator cuff and lats act isometrically to hold the humerus against the load, and the definition does not credit them. A glenohumeral_stabilization or humeral_head_stabilization demand could add them, but their role is minor and the existing profile is defensible.",
+          "suggested_correction": "Optionally consider humeral_head_stabilization in a future revision; not required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrR8kGnDq1cfozhht5F8",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7452.0,
+          "output_tokens": 1131.0
+        }
+      },
+      "summary": "The frames and instructions show a bilateral decline dumbbell lying triceps extension. The lifter is supine on a decline bench with a neutral grip and a dumbbell in each hand, the upper arms stay near-vertical and stationary, and the forearms flex and extend at the elbows until the dumbbells reach ear level. The definition's single primary action, elbow_joint/extension on both sides, correctly makes the three triceps heads primary and anconeus a synergist. The shoulder_position_hold demand is appropriate for the static upper arm and credits the deltoid and pectoralis major as light stabilizers. The grip and wrist_stability demands fit dumbbells held in the hands. No postural or spinal demands are needed because the bench supports the trunk. The labels (open_chain, bilateral, elbow_extension, one_sided_limbs empty) are correct, and the resulting muscle pattern is plausible."
+    }
+  }
+}

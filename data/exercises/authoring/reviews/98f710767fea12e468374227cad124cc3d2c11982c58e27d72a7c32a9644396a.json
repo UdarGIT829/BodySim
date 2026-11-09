@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "98f710767fea12e468374227cad124cc3d2c11982c58e27d72a7c32a9644396a",
+  "status": "accepted",
+  "updated_at_unix": 1794184447.44831,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184428.10894,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The lats isometrically hold the bar close to the body, but they only reach 0.08 through the scapular retraction assist. The upper trapezius and levator scapulae are also low (descending trapezius 0.12, levator scapulae 0.105) even though they resist the bar's downward pull on the shoulder girdle.",
+          "suggested_correction": "In a future revision, consider adding glenohumeral_joint/extension with emphasis assist to credit the lats and teres major, and possibly scapulothoracic_joint/elevation with emphasis assist for the upper trapezius."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "shoulder_position_hold mainly credits the clavicular deltoid (0.35). In a deadlift with straight, hanging arms this is a weak fit, because the arm is held by the lats and scapular muscles and the anterior deltoid is not a major contributor.",
+          "suggested_correction": "Consider replacing or supplementing shoulder_position_hold with the assist glenohumeral extension action. This would give a more accurate shoulder pattern."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "There is no ankle plantarflexion action, so the calves are zero except for soleus-like contribution through nothing. The ankle contributes little, but the heels do drive through the floor.",
+          "suggested_correction": "Optionally add ankle_joint/plantarflexion with emphasis assist, or leave it out as the assumptions state."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "hip_hinge is a reasonable label. The conventional floor deadlift has substantial knee extension, so the label is acceptable but not exhaustive.",
+          "suggested_correction": "No change needed, since movement_families is only a catalog label."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrR1RYx3NGNvAWtbvi2f",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9901.0,
+          "output_tokens": 2429.0
+        }
+      },
+      "summary": "The definition fits a conventional bilateral barbell deadlift with chains. The frames show a hip-width stance, a double-handed grip on the bar at shin level, and a standing lockout with straight arms. Hip extension (gluteus maximus primary, hamstrings and adductor magnus as drivers or synergists) and knee extension (quadriceps primary) are the right prime movers. The spinal erectors are credited through anti_flexion_spine, which is correct because the spine is held neutral and rigid rather than moving. Grip and intra_abdominal_pressure suit a heavy bar held in the hands with a big-breath brace. Scapular retraction at lockout is marked assist, as the instructions describe. The remaining concerns are minor and do not make the muscle pattern materially wrong."
+    }
+  }
+}

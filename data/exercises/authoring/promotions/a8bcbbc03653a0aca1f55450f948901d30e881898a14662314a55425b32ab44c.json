@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "a8bcbbc03653a0aca1f55450f948901d30e881898a14662314a55425b32ab44c",
+  "revision_id": "Barbell_Step_Ups@a8bcbbc03653",
+  "exercise_id": "exercise.barbell_step_up.back_loaded_unilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Step_Ups",
+  "mapped_muscles": 67,
+  "promoted_at_unix": 1794182643.155186,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "662529520fab0cf8993f60838c96a3ee768d22f98bd9acd83ddcb0db42a1981b",
+    "data/exercises/engagement_profiles.json": "475c4dfbe1f1fb38979d45c72fb7225b5763b0b266b579e15754871deb4a862a",
+    "data/exercises/catalog/candidates.json": "844e834b35e6f85562e397639ed2e74966462d292f3f7c2060758b21b0cadc57",
+    "data/exercises/sources/free_exercise_db_media.json": "cea3b2d939c4490ce0c6252bc98f88be8943f41f1f49ddbad1bc5c1173d5bee2"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "1dd1a309314795f50c3f66659e2c142eb839c6ad1bd2487e8589fdcfcec33438",
+    "data/exercises/engagement_profiles.json": "8e60cc80634bcbd459b9e52523b41c5c2f9e92ef4275d938d001ce2a1774f897",
+    "data/exercises/catalog/candidates.json": "77a7aedf093257f74bb98d57b5b72d3b083c519bc57d694e541b2c621d548528",
+    "data/exercises/sources/free_exercise_db_media.json": "ef2e2dc673b3b89735e9966d7278d4de56a056f895104700b5e11cad0f892287"
+  }
+}

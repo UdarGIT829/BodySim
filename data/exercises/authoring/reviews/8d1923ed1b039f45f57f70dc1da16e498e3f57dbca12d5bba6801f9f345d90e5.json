@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "8d1923ed1b039f45f57f70dc1da16e498e3f57dbca12d5bba6801f9f345d90e5",
+  "status": "accepted",
+  "updated_at_unix": 1794182770.4303,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182757.7283,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The instructions cue leg drive and an arched setup, but the legs and hips (glutes, hamstrings, quads) are traced as zero. The authoring assumptions acknowledge this and omit it deliberately. The legs are not the load-moving joints, so this is an acceptable simplification, though a low-weight hip extension assist could credit the isometric leg drive.",
+          "suggested_correction": "Optionally add hip_joint/extension with emphasis assist and sides both to credit the isometric leg drive, or leave it as is."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Serratus anterior and scapular protraction are not credited. The instructions cue avoiding protraction, so omission is defensible. The short-head biceps synergist at 0.2 comes from the horizontal_adduction table weights and is a tracer artifact, not a definition error.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The horizontal_push family is appropriate. This catalog label does not affect the traced muscles.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrNtGvqzsDzZbjWELYEx",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9545.0,
+          "output_tokens": 1433.0
+        }
+      },
+      "summary": "The definition fits a flat barbell bench press with chains. The frames show a supine lifter on a bench inside a rack, pressing a bar with hanging chains. Horizontal adduction and elbow extension at the working joints give sternocostal and clavicular pectoralis major and all three triceps heads as primary movers. Clavicular deltoid, abdominal pectoralis major, coracobrachialis, anconeus and short-head biceps appear as synergists, which is a reasonable pattern. The stabilization demands cover the retracted scapular shelf, rotator cuff, bar grip, wrist position and bracing. The bilateral label, empty one_sided_limbs, open-chain type and horizontal_push family are all correct. No biomechanically material claim is unsupported or contradicted."
+    }
+  }
+}

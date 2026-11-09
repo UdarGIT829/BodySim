@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "6376bf734a5ebdebd32d24c7c83369ca40b1e8fd29b19aa8c91ee7db91f1eb6f",
+  "status": "accepted",
+  "updated_at_unix": 1794184184.17898,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184165.0842,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[scapulothoracic_joint/retraction]",
+          "finding": "Retraction as primary puts transverse trapezius at 1.0 and rhomboid major at 0.9 on a par with the latissimus. The instructions do cue squeezing the shoulder blades together at the contracted position, so this is defensible. However, the dominant scapular motion in a pulldown is depression and downward rotation, and retraction is a finishing component. A future revision could consider retraction as assist.",
+          "suggested_correction": "Consider setting scapulothoracic_joint/retraction to assist, or keep it primary and document the end-range squeeze cue explicitly."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The lifter leans back about 30 degrees and holds the torso stationary against the cable load, but no trunk demand is listed. The trace therefore shows no spinal or abdominal involvement. This is a minor omission and does not make the traced pattern materially wrong.",
+          "suggested_correction": "Optionally add a light trunk demand such as postural_stabilization or anti_extension_spine."
+        },
+        {
+          "field_path": "assumptions[0]",
+          "finding": "The frames look like a medium-to-shoulder-width grip rather than a clearly narrower one. The author notes this, and grip width does not change the traced muscles.",
+          "suggested_correction": "No change needed. Optionally relabel the variant if the source frames are judged not to show a close grip."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQg2DxiR6K1DXJGDZ6x",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8662.0,
+          "output_tokens": 2318.0
+        }
+      },
+      "summary": "The definition matches the source instructions and frames: a seated, bilateral, pronated-grip pulldown with a stationary torso. Shoulder extension and adduction as the primary actions give latissimus dorsi, teres major and the posterior deltoid, with pectoralis major as a secondary contributor. Elbow flexion is correctly marked assist given the cue to pull with the shoulders and upper arms, and grip is the only hand demand, as the instructions specify. Laterality and one_sided_limbs are consistent (bilateral, no one-sided limbs). The vertical_pull and open_chain labels fit. The remaining issues are non-blocking."
+    }
+  }
+}

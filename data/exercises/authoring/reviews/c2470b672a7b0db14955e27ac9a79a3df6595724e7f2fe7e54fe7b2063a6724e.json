@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c2470b672a7b0db14955e27ac9a79a3df6595724e7f2fe7e54fe7b2063a6724e",
+  "status": "accepted",
+  "updated_at_unix": 1794179086.44251,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179071.33177,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "open_chain is a judgment call. Both feet and the support hand stay fixed on the floor, so the exercise could equally be labelled closed_chain. The label does not change the traced muscles.",
+          "suggested_correction": "Optionally relabel as closed_chain if the catalog convention treats a planted plank base as the defining chain."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The frames show the hips somewhat piked rather than a perfectly straight plank. Spinal extensor involvement (longissimus, iliocostalis) is only incidental, via pelvic_alignment. That is acceptable for a neutral-spine hold.",
+          "suggested_correction": "No change required. Optionally add anti_flexion_spine if the erectors should be credited more strongly."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "core_rotation is a catalog label for resisting rotation. It applies here but is secondary to horizontal_pull and core_anti_extension.",
+          "suggested_correction": "Keep as is, or drop core_rotation if the catalog prefers fewer families."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJCY7poqYAXVQUZ1jGx",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 15446.0,
+          "output_tokens": 1815.0
+        }
+      },
+      "summary": "The frames show a wide-stance toe plank with hands on two kettlebell handles, and one kettlebell rowed to the hip while the other hand presses into the floor. This matches the instructions. The definition describes the row with elbow flexion, glenohumeral extension and scapular retraction, so the lats, teres major, posterior deltoid, rhomboids, middle trapezius and biceps/brachialis group come out as primary movers. The previous blocking gaps are fixed. The lower body now gets pelvic_alignment, anti_extension_hip, femoral_head_stabilization, knee_joint_stability and ankle_stability, and the trunk gets anti_extension_spine, anti_rotation_torso and intra_abdominal_pressure. The support arm is covered by assist-level elbow extension, shoulder_position_hold, elbow_joint_integrity and scapular_anchoring. Bilateral laterality with an empty one_sided_limbs list is appropriate because the arms alternate across the set. Stabilizer coefficients for the legs and trunk are modest and plausible. No muscle pattern is materially wrong."
+    }
+  }
+}

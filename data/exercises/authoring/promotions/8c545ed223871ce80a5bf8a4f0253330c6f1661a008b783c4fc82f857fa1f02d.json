@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "8c545ed223871ce80a5bf8a4f0253330c6f1661a008b783c4fc82f857fa1f02d",
+  "revision_id": "Cable_Hammer_Curls_-_Rope_Attachment@8c545ed22387",
+  "exercise_id": "exercise.cable_hammer_curl.rope_standing",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Hammer_Curls_-_Rope_Attachment",
+  "mapped_muscles": 114,
+  "promoted_at_unix": 1794183309.7335296,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "eb6aa287654347a9be1ede2e13fb0e1d3fc15eabc49102707d57853f920d756c",
+    "data/exercises/engagement_profiles.json": "7edc82186af097cb4ecaff042281817bc5afecd2ed9531174104a3b63447cc68",
+    "data/exercises/catalog/candidates.json": "0cace294092dd0a82272e7807769f68323d21a9c2e0861aeefa63a5d34847ee2",
+    "data/exercises/sources/free_exercise_db_media.json": "01e865817264e6f9282341a0989f7f9e03e8a2a845128267ba46398a014f5574"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "8d7e96516e13d0f771cb734645cb19b9fd49031f2ae8d077a7c239c61fa05391",
+    "data/exercises/engagement_profiles.json": "c93f656bf1d413acb19b7afa71b627167d0bc6e9790c6711fc23402739d6db18",
+    "data/exercises/catalog/candidates.json": "ab5919a5d6f6e208069daf3afd183cb1f5706863724f8e43ddc083d4fe8b5a5f",
+    "data/exercises/sources/free_exercise_db_media.json": "d611a594877242a28f8ce18e260254f9bd286a4fb1c23dcc3f32f484fefe377e"
+  }
+}

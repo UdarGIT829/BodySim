@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "ccd05a09e37454627e0decf61c817d84d98802caf2154c85ca4e13fcaad670f4",
+  "revision_id": "Barbell_Walking_Lunge@ccd05a09e374",
+  "exercise_id": "exercise.barbell_walking_lunge.back_loaded_alternating",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Walking_Lunge",
+  "mapped_muscles": 78,
+  "promoted_at_unix": 1794182659.2783754,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "1dd1a309314795f50c3f66659e2c142eb839c6ad1bd2487e8589fdcfcec33438",
+    "data/exercises/engagement_profiles.json": "8e60cc80634bcbd459b9e52523b41c5c2f9e92ef4275d938d001ce2a1774f897",
+    "data/exercises/catalog/candidates.json": "77a7aedf093257f74bb98d57b5b72d3b083c519bc57d694e541b2c621d548528",
+    "data/exercises/sources/free_exercise_db_media.json": "ef2e2dc673b3b89735e9966d7278d4de56a056f895104700b5e11cad0f892287"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "3c5c112b8e509a44230b56db06e1907ec2ca273afc968b768a3b9dd0ddcc87a8",
+    "data/exercises/engagement_profiles.json": "b0e1f4f7114db07c913522244e19ca7c27d0242ba54cc8aea012865c81df5187",
+    "data/exercises/catalog/candidates.json": "7542bf3aeb3ddb541a859851c85585066460a8a5d2813602399c2519826304bf",
+    "data/exercises/sources/free_exercise_db_media.json": "9a3700709eeb94aeacce9f21f7192f0d1b1fd7bc3caafc82975bbf16d6c63521"
+  }
+}

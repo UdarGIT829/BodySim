@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "49682f775c88c391bb83dc7a4901e8585e5fa64e1c82f02ca1e65a26aacb8e0d",
+  "status": "accepted",
+  "updated_at_unix": 1794183432.08729,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183418.5497,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.assumptions[2]",
+          "finding": "The assumption says forearm supination is held and treated as an assist, but primary_joint_actions lists no radioulnar_joint/supination. The text and the definition disagree. The effect is small because both biceps heads are already primary, and only supinator (about 0.32 as an assist) is missing.",
+          "suggested_correction": "Either remove the supination assumption or add radioulnar_joint/supination with emphasis assist in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "shoulder_position_hold is justified by the claim that the pad blocks upper-arm motion, but a pad that supports the arm lowers isometric deltoid demand. The credit is modest (clavicular deltoid 0.35, other shoulder muscles at or below 0.14) and has medium confidence, so it is not a materially wrong pattern.",
+          "suggested_correction": "Consider whether shoulder_position_hold should be kept, and reword the rationale as light isometric shoulder control rather than the pad blocking motion."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.primary",
+          "finding": "Brachioradialis is traced as primary at 0.7. In a supinated-grip preacher curl it contributes less than in a neutral grip. This comes from the fixed table weight, which no choice of action or emphasis can change.",
+          "suggested_correction": "No change to the definition is needed. This is a tracer limitation."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPizPJiZVSbMvPPmDxc",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7456.0,
+          "output_tokens": 1651.0
+        }
+      },
+      "summary": "The frames show a seated bilateral preacher curl with a straight bar on a low cable. The upper arms rest on the pad and the elbows go from near full extension to deep flexion. Elbow flexion as the only primary joint action, bilateral laterality, an empty one_sided_limbs, the elbow_flexion family and open_chain are all supported. The tracer output is a sensible pattern: brachialis, both biceps heads and brachioradialis as primary movers, with grip and wrist muscles as low-coefficient stabilizers. The remaining issues are minor and do not materially change the muscle pattern."
+    }
+  }
+}

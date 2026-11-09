@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "c2470b672a7b0db14955e27ac9a79a3df6595724e7f2fe7e54fe7b2063a6724e",
+  "revision_id": "Alternating_Renegade_Row@c2470b672a7b",
+  "exercise_id": "exercise.kettlebell_renegade_row.alternating_plank",
+  "source_catalog_id": "catalog.free_exercise_db.Alternating_Renegade_Row",
+  "mapped_muscles": 189,
+  "promoted_at_unix": 1794179086.6296663,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "1c4bd0f341bf498501c19f1ada5b0864b290bd3dc68a6ada1ca0191f8df2291e",
+    "data/exercises/engagement_profiles.json": "89391029387e67e20c8be6f70975a8d490c6481563edbb8addaea2c287c0dc0f",
+    "data/exercises/catalog/candidates.json": "2e82c0eba5b92be6edbc6126889e38b5526d344cbd28f361c0572100865a6ebf",
+    "data/exercises/sources/free_exercise_db_media.json": "fc20f16cf332d331b4074016d1a7248ada2ea5434ddb4e8b0f1b7406ee74a737"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "48bad80e42f1f744b2a71ad66e5fad8765da1e133c700f0877d16d5cdf1efa4d",
+    "data/exercises/engagement_profiles.json": "5f30b106e31232db57667d18cf304d986fbe80ce8fb1c05d2fd666ec00bf849e",
+    "data/exercises/catalog/candidates.json": "d257ffd2b1133c7e24cecef1d8f63da3d83c7aa44754529f353ee8275102afbe",
+    "data/exercises/sources/free_exercise_db_media.json": "981c708f0f1b0c463273be1a8fefa96004be15a5ca72cccfe370daca39e833a4"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "cc15e054d4d5fc016eb44cee295276352ccfbdd4890ddf0bc438f7200b8f9044",
+  "status": "accepted",
+  "updated_at_unix": 1794179050.59288,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179034.83928,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Transversus abdominis and the diaphragm have zero involvement, although controlled exhalation and bracing are part of the cue. Under `pelvic_alignment`, longissimus thoracis becomes a low-weight (0.105) stabilizer, which is slightly odd for a supine crunch where the back is pressed down.",
+          "suggested_correction": "A future revision could add `intra_abdominal_pressure` at low weight if the council wants deep-core credit. Dropping `pelvic_alignment` is not clearly needed, because the glutes and abdominals do hold the posterior pelvic tilt."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[knee_joint/flexion]",
+          "finding": "Assist-weight knee flexion gives the gastrocnemii, plantaris and popliteus small synergist coefficients (0.04 to 0.12). Calf involvement is probably negligible here, but it is a small side effect of the tracer's knee-flexion row.",
+          "suggested_correction": "No change needed. It is a deliberate assist action and the coefficients are very low."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[lumbar_spine/rotation]",
+          "finding": "Trunk rotation in the crunch is mostly thoracolumbar, but the vocabulary offers only `lumbar_spine/rotation`. This is a vocabulary limit, and the obliques are credited correctly.",
+          "suggested_correction": "None required."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The family labels `trunk_flexion`, `core_rotation` and `hip_flexion` suit the exercise. They are catalog labels only and do not change the trace.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJ9qyHamUCanRFAhJah",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7665.0,
+          "output_tokens": 2067.0
+        }
+      },
+      "summary": "The definition fits the supine alternating bicycle crunch shown in the frames and described in the instructions. Trunk flexion and rotation drive the crunch, and hip flexion holds and draws in the legs. The two earlier blocking concerns are resolved: knee flexion and extension are now `assist`, so the hamstrings and vasti appear only as low synergists, and the knee-extensor and knee-flexor patterns are balanced. The primary movers are the rectus abdominis, obliques, psoas major, iliacus and rectus femoris, which is correct. Only minor, non-blocking refinements remain."
+    }
+  }
+}

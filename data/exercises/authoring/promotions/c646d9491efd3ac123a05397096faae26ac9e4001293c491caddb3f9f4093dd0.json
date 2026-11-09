@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "c646d9491efd3ac123a05397096faae26ac9e4001293c491caddb3f9f4093dd0",
+  "revision_id": "Depth_Jump_Leap@c646d9491efd",
+  "exercise_id": "exercise.depth_jump_leap.box_to_box",
+  "source_catalog_id": "catalog.free_exercise_db.Depth_Jump_Leap",
+  "mapped_muscles": 72,
+  "promoted_at_unix": 1794184642.2560422,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "7fdfe079340b3c3af5c6febdcf407309375a41ebbd3838afd34d4ccf9cad57da",
+    "data/exercises/engagement_profiles.json": "e9376b7ebb8bbbe86e36a532a4467a18218f08490a2824ee0bc082705f29af24",
+    "data/exercises/catalog/candidates.json": "ef31025789763d57e659d8562635149f9eb4e16941a9009080bee36ad6d0aabd",
+    "data/exercises/sources/free_exercise_db_media.json": "5a6df69ee1dc9a3fdef00d475cc317a78f1b8c784bda6bbd0670581f7a65cb44"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "bbf93812b666316debc3aa356b2d35c1a8b2586c0a7813ac5dc26576e1491488",
+    "data/exercises/engagement_profiles.json": "ce322a3023553f805813ccd45edad7e6722d062206af4fbb34bec5bf1219b83e",
+    "data/exercises/catalog/candidates.json": "354f5f2114a62ae1771a2eb03bd7200fa5143b6b6126722f6f363597a45ba31d",
+    "data/exercises/sources/free_exercise_db_media.json": "fafda495e2e68290b641118a5dc5e3ad37e73989526b879f6c38032f1af0e378"
+  }
+}

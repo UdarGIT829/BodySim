@@ -1,0 +1,57 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "314a6aa12db31906100814527bb64e2be1019e70582c501d260d454f2f063832",
+  "status": "accepted",
+  "updated_at_unix": 1794105305.11756,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105292.35993,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Lower-body and bracing demands are deliberately omitted. The feet are planted and some leg drive and trunk tension is plausible, but the frames do not clearly show either, and a flat bench press does not require them for a correct profile.",
+          "suggested_correction": "Optionally add a modest postural_stabilization or intra_abdominal_pressure demand in a future revision only if the source frames or context clearly show leg drive or deliberate bracing."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Minor scapular protraction at lockout is omitted (documented in the assumptions). Serratus anterior and pectoralis minor therefore have no involvement, though both are probably slightly active in practice.",
+          "suggested_correction": "Leave as is, or add scapulothoracic_joint/protraction with emphasis 'assist' if a future revision wants serratus anterior represented."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "The many small hand muscles (interossei, lumbricals, thumb intrinsics) appear as low-coefficient stabilizers. This comes from the table's grip and wrist_stability weighting and is a tracer characteristic, not a definition error.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgRycRJHpcJM2FDSF4P",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 8311.0,
+          "output_tokens": 1414.0
+        }
+      },
+      "summary": "The frames show a bilateral flat-bench barbell press in which the bar is lowered to the neck or upper chest with flared elbows and pressed to lockout. The definition models this as horizontal glenohumeral adduction plus elbow extension, both as primary actions. That is a faithful representation and gives the expected pectoralis major (sternocostal and clavicular), triceps, anterior deltoid and short-head biceps pattern. The stabilization demands are placed correctly: rotator cuff centering, grip and wrist stability for a load held in the hands, and scapular retraction for the scapulae pinned against the bench. Open-chain, bilateral, horizontal_push and the id/variant are all consistent with the source. The leftover issues are minor and would not make the muscle pattern materially wrong."
+    }
+  }
+}

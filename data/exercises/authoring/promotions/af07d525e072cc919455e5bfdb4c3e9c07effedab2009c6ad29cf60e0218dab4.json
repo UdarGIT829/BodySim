@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "af07d525e072cc919455e5bfdb4c3e9c07effedab2009c6ad29cf60e0218dab4",
+  "revision_id": "Clean@af07d525e072",
+  "exercise_id": "exercise.barbell_clean.full_squat_catch",
+  "source_catalog_id": "catalog.free_exercise_db.Clean",
+  "mapped_muscles": 143,
+  "promoted_at_unix": 1794183916.0176392,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "9fbc6d54f70b09868f506ac71153473f9ddbdb45b49c899ac99933e679f830c0",
+    "data/exercises/engagement_profiles.json": "1dfd33c0d1c0b7024c17ba61779fe8202a78ac9e57d3e65b9fadd6bef59f04e7",
+    "data/exercises/catalog/candidates.json": "f5ee43a15da2c8a63f3f54e8e0e3398fe3ea1d761f67b3a123520d34b13af13c",
+    "data/exercises/sources/free_exercise_db_media.json": "812d6ac44095492aa07b591ac49576c934d46552a3f8c03e0db9ed628f6e5a80"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "c69aeca15eb5cad64473a06e5d29adc484d7432c3096ee471e6a8522433de09c",
+    "data/exercises/engagement_profiles.json": "712f9f0ac40ff85e353af28ee60f17019ede21a3193cb1616150af2f64f585d1",
+    "data/exercises/catalog/candidates.json": "4733817477244b9ac803c41be2719d90f00dfffc118f5cae9a44086ad36f42b8",
+    "data/exercises/sources/free_exercise_db_media.json": "98a914ffa49cfee3797c8f1b39d5ea9aeba98e2fef6ecd97c30a275bd66ce8b8"
+  }
+}

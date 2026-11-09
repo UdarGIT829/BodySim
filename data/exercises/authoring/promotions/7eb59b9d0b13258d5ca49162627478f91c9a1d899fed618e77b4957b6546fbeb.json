@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "7eb59b9d0b13258d5ca49162627478f91c9a1d899fed618e77b4957b6546fbeb",
+  "revision_id": "Butt-Ups@7eb59b9d0b13",
+  "exercise_id": "exercise.butt_ups.forearm_pike",
+  "source_catalog_id": "catalog.free_exercise_db.Butt-Ups",
+  "mapped_muscles": 69,
+  "promoted_at_unix": 1794183221.4482243,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "3f94fc1de8df5da79410b3b3137407c6590e020daf7a7f1fb1485b78b3ff5554",
+    "data/exercises/engagement_profiles.json": "6246ee0654f8d5ebb81114bd5c58db6c8c5e00e0f290a310b64cd62ee6a413a6",
+    "data/exercises/catalog/candidates.json": "b4630448e67e61d99a9a3f854a32a17470c6bc1b3f3f96bbc7fa8592d9fe417e",
+    "data/exercises/sources/free_exercise_db_media.json": "8ee8056e042d027400a6ec01f03fedbaa85b2e4f03c90955517ee619404c2038"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "4eafaffa6cf7ce1c24dbc1c7baa7a137a8f51c2fe2a29b51f8432dd54ea48448",
+    "data/exercises/engagement_profiles.json": "aaddae3f61e6cfd116541d07b21fcc903b36d71e639079e2d1b5b932805506de",
+    "data/exercises/catalog/candidates.json": "d232d55a153a7b13fbf90714fafdd5558f5b9792940e21b9fc15adc3e001eb69",
+    "data/exercises/sources/free_exercise_db_media.json": "e43a465541b3121eb1b7b2123b9d89013ec8958b1930edcc3b17d86a2a8cc6e0"
+  }
+}

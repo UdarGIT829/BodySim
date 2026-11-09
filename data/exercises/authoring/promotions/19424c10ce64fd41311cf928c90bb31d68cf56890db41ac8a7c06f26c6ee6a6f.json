@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "19424c10ce64fd41311cf928c90bb31d68cf56890db41ac8a7c06f26c6ee6a6f",
+  "revision_id": "Cable_Rope_Overhead_Triceps_Extension@19424c10ce64",
+  "exercise_id": "exercise.cable_rope_overhead_triceps_extension.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Rope_Overhead_Triceps_Extension",
+  "mapped_muscles": 116,
+  "promoted_at_unix": 1794183476.7582202,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "d70682a425703a602d19f5a5a1bbd0a2db47ca4f56c6351dc35b3c0a8f42676d",
+    "data/exercises/engagement_profiles.json": "46b20ae8f4044af5db015f5941ce5728617fbe445e71c2da36c24360d1e4f35a",
+    "data/exercises/catalog/candidates.json": "4708b9e9bfefcb0f7f512da8f70b2c8156e6d69cf7153099d21f629ef6cc7ad7",
+    "data/exercises/sources/free_exercise_db_media.json": "2dcdedd0cbd390104ab3fbbd37db5e2c839f69551b5052be64deeea1b4eeaeb6"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "7b241087c8af1467db3ddf710088d8a2762efc1d5fa553859e390f9029148acb",
+    "data/exercises/engagement_profiles.json": "5f32ea3d236beac59b1446343e49834349ed6a65c0cd81e4bca74132632a9252",
+    "data/exercises/catalog/candidates.json": "4214be0ac516e01fbb20874d2140316c7ae6964f5bfdf0943a8a4494b2847345",
+    "data/exercises/sources/free_exercise_db_media.json": "c49692ff4045cfe409825fcd39e88c4051652c776c03d67d0e8137581764a959"
+  }
+}

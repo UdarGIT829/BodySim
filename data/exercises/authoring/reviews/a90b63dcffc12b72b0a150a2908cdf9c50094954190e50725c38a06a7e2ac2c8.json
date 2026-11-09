@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "a90b63dcffc12b72b0a150a2908cdf9c50094954190e50725c38a06a7e2ac2c8",
+  "status": "accepted",
+  "updated_at_unix": 1794184286.68044,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184273.91056,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[1]",
+          "finding": "The glenohumeral horizontal_adduction assist brings the pectoralis major heads in as synergists (sternocostal 0.4, clavicular 0.32). That is somewhat generous for a curl in which the upper arm stays near the torso, though the cross-body path justifies some contribution. Glenohumeral internal rotation could be a more apt assist, but this is a judgment call and not an error.",
+          "suggested_correction": "Optionally keep the assist as is, or consider glenohumeral internal_rotation as an assist in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The slight trunk anti-rotation demand from the cross-body path is not credited. The effect is minor for a light, upright curl, so omitting it does not distort the muscle pattern.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQp36n8DfxP3MwZzHo8",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10109.0,
+          "output_tokens": 1515.0
+        }
+      },
+      "summary": "The frames show an upright stance, a dumbbell in each hand, and the forearm held neutral while the curled dumbbell travels toward the opposite shoulder. Elbow flexion as the primary action correctly puts brachialis, brachioradialis and both biceps heads in the primary role. The small shoulder horizontal adduction assist reasonably represents the cross-body path without making the pectorals primary movers. Grip and wrist_stability cover the dumbbells held in the hands, shoulder_position_hold covers the upper arm kept still against the load, and postural_stabilization covers standing. The bilateral laterality, empty one_sided_limbs and open_chain label suit an alternating exercise. No radioulnar action is listed, which matches the no-twist cue. The resulting muscle pattern is plausible."
+    }
+  }
+}

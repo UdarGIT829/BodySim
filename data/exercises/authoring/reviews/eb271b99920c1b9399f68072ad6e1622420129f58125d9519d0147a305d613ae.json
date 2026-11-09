@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "eb271b99920c1b9399f68072ad6e1622420129f58125d9519d0147a305d613ae",
+  "status": "accepted",
+  "updated_at_unix": 1794185008.34825,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184994.34414,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The elbow is held isometrically against the dumbbell torque, and the instructions mention biceps tendon stress. The elbow flexors (brachialis, long head of biceps) get no credit, because elbow_stability only reaches anconeus and brachioradialis at small weights. This is a modest underrepresentation and does not make the muscle pattern materially wrong.",
+          "suggested_correction": "Optionally add elbow_joint/flexion with emphasis assist to credit the isometric elbow flexor hold, or accept the current profile as is."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "horizontal_push is the closest available label for a fly, since the vocabulary has no horizontal adduction or fly family. It is acceptable as a catalog label.",
+          "suggested_correction": "No change required."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The supine lifter likely holds the scapulae retracted on the bench. scapular_stabilization covers this adequately, although scapular_retraction_stability would credit the rhomboids and trapezius more precisely. The current choice is defensible.",
+          "suggested_correction": "Optional: consider scapular_retraction_stability in place of scapular_stabilization; no change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRj9YCEnj8NC197SHUK",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8363.0,
+          "output_tokens": 1625.0
+        }
+      },
+      "summary": "The flat-bench dumbbell fly is well supported. The frames show a supine lifter with a neutral-grip dumbbell in each hand, and the instructions describe a wide arc with a fixed slight elbow bend and motion only at the shoulder. Bilateral laterality, open_chain and empty one_sided_limbs are correct. Glenohumeral horizontal adduction as the only joint action is the right primary mover. It gives the expected result: pectoralis major heads as primary movers, with anterior deltoid, coracobrachialis and short-head biceps as synergists. The grip, wrist, elbow and scapular demands are reasonable for a load held in the hands. The remaining differences are minor and non-blocking."
+    }
+  }
+}

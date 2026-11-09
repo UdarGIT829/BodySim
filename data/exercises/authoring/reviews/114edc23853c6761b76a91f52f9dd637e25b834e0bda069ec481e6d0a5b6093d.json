@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "114edc23853c6761b76a91f52f9dd637e25b834e0bda069ec481e6d0a5b6093d",
+  "status": "accepted",
+  "updated_at_unix": 1794184579.41681,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184567.96255,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Several stabilizers appear at very low coefficients (pyramidalis, pubo_analis, coccygeus and iliococcygeus, from intra_abdominal_pressure). The tracer's demand table produces these, and no choice of demands would change that. They are not material.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Serratus anterior reaches only 0.4 (synergist) because protraction is marked assist. This is defensible for a push-up with a mostly fixed scapula. The anchoring role is also covered by scapular_anchoring.",
+          "suggested_correction": "Optional: none required."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "horizontal_push is the correct primary family. A secondary core_anti_extension label could be added but is not needed.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRBirXLzWPm3uuoziLu",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8825.0,
+          "output_tokens": 1448.0
+        }
+      },
+      "summary": "The definition matches the source. It is a bilateral, closed-chain, feet-elevated push-up with hands on the floor and a rigid plank from the box to the chest near the floor. Elbow extension and shoulder horizontal adduction are primary. Shoulder flexion is a reasonable assist for the decline angle, and scapular protraction is a reasonable assist at the top. The trunk and legs are credited through anti-extension, bracing and pelvic-alignment demands, with no lumbar flexion or hip extension listed, which fits the frames. The traced pattern is plausible: sternocostal and clavicular pectoralis, the triceps heads, and anterior deltoid and serratus anterior as synergists. Core, glute, hamstring, scapular and wrist muscles appear as low-coefficient stabilizers. Grip is correctly left out, and wrist_stability is appropriate for hands bearing load on the floor."
+    }
+  }
+}

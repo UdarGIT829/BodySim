@@ -1,0 +1,57 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "f202467b071f587ddd8e0de361ca2b41a0668cdfc7e53ce87b069504be7285ef",
+  "status": "accepted",
+  "updated_at_unix": 1794105437.30184,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105421.63977,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions[0]",
+          "finding": "Glenohumeral flexion at full weight makes the clavicular head of pectoralis major a 0.7 primary mover. In a strict vertical press its role is probably smaller than the deltoids and triceps, so this is somewhat generous. The table assigns this weight to the action, and the frames show a front-of-body, scapular-plane path, so the result is defensible.",
+          "suggested_correction": "If a future revision wants less pectoral emphasis, consider treating flexion as an assist action or relying more on scapular-plane abduction. This is optional."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist",
+          "finding": "Long head and short head of biceps brachii and coracobrachialis appear as 0.3 synergists, from the shoulder flexion table weights. Their real contribution to a seated overhead press is small. This comes from the tracer's table and is not a definition error.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "No trunk demands are listed. The bench has back support, so the omission is reasonable, but light trunk and anti-extension work is not captured. The assumption is stated openly and the frames show a supported seat, so this is acceptable.",
+          "suggested_correction": "Optionally add a light anti_extension_spine demand if reviewers want the trunk bracing represented."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgbWHPJgKV3qk8Ms9mK",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 8849.0,
+          "output_tokens": 1822.0
+        }
+      },
+      "summary": "The definition correctly identifies a seated, bilateral barbell overhead press with a pronated grip, supported by both frames (shoulder-height rack position to overhead lockout on a back-supported bench). Bilateral laterality, open-chain classification, vertical_push family, glenohumeral flexion and abduction, elbow extension and scapular upward rotation all fit the movement. The grip and wrist_stability demands fit a load held in the hands, and the rotator-cuff and scapular demands fit overhead pressing. The tracer pattern is plausible: deltoids, triceps, serratus anterior and upper trapezius are primary, with rotator cuff and forearm muscles as stabilizers. Nothing material is wrong or missing."
+    }
+  }
+}

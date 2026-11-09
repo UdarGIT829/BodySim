@@ -1,0 +1,80 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "ee96366fb7734178d7f1f51f7166d6d2cee4c638d534058ff9a96d7845151cea",
+  "status": "changes_requested",
+  "updated_at_unix": 1794183738.4075,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183714.46554,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Assumption 4 says shoulder positions are held isometrically, but the frames show the plate rotating through a large arc, with one hand near the top and the other near the bottom of the plate. This means a real glenohumeral abduction/elevation and adduction excursion on each arm. With only lumbar_spine/rotation listed, the muscles that move the arms (acromial deltoid, supraspinatus, latissimus, pectoralis, teres major) are stabilizer-level or zero.",
+          "suggested_correction": "Add glenohumeral_joint/abduction and glenohumeral_joint/adduction as assist actions with sides both, so the shoulder movement is credited as a deliberate synergist without outranking trunk rotation."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Rectus abdominis is zero in the trace. A forward-held plate with a wide stance may need mild anti-extension, but the load is light and the instructions do not call for bracing.",
+          "suggested_correction": "Optionally consider anti_extension_spine if the plate is meant to be heavy."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "core_rotation is acceptable. The catalog primary tag of shoulders is untrusted. A shoulder_raise secondary label could also be justified, but it is not required.",
+          "suggested_correction": "No change required."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "open_chain is acceptable: the hands move the plate freely while the feet are planted for standing support.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "emphasis": "assist",
+          "joint": "glenohumeral_joint",
+          "movement": "abduction",
+          "op": "add_joint_action",
+          "sides": "both"
+        },
+        {
+          "emphasis": "assist",
+          "joint": "glenohumeral_joint",
+          "movement": "adduction",
+          "op": "add_joint_action",
+          "sides": "both"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQ6oWKi6BWsM7ycARNF",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9914.0,
+          "output_tokens": 2819.0
+        }
+      },
+      "summary": "Trunk rotation as the primary action is reasonable given the torso twist in both frames, and the postural, grip and wrist demands suit a two-handed plate hold. However, the definition assumes the shoulders are held isometrically, and the frames contradict this. The hands travel around the plate's circumference, with one hand high near 12 o'clock and the other low, so each shoulder moves through elevation/abduction and adduction. The traced profile therefore shows no deltoid or supraspinatus driving, no rotator cuff involvement and no lat or pec involvement beyond small stabilizer values. The deltoids and shoulder-girdle muscles appear only as stabilizers at low coefficients (clavicular deltoid 0.35, acromial deltoid 0.14). This is a definition choice a better authoring pass would fix."
+    }
+  }
+}

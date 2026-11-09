@@ -1,0 +1,68 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "47996ccce67786e3552cd478339681fa505bfd91865374bf6964028c7892bdfa",
+  "status": "changes_requested",
+  "updated_at_unix": 1794183615.90636,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183601.73926,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The knees are held nearly straight while the entire stack load is pressed through the platform. The quadriceps work isometrically against this load for the whole set, but no knee_joint/extension action is listed. Vastus intermedius and rectus femoris are therefore explicit zeros, and vastus lateralis and medialis are only 0.105 and 0.14 stabilizers. The assumption that knee extension is only a setup step ignores this sustained resisting role.",
+          "suggested_correction": "Add knee_joint/extension with emphasis assist and sides both. This credits the quadriceps as holding the knee against the load without making them primary movers."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "knee_joint_stability credits hamstrings, gluteus medius, gracilis, sartorius, TFL and popliteus at low coefficients. These muscles contribute little in a seated, fixed-knee calf press, so the stabilizer pattern is somewhat diffuse. Once knee extension is added, this demand may be redundant.",
+          "suggested_correction": "Consider removing knee_joint_stability after adding the knee extension assist, if re-review shows the stabilizer set is too broad."
+        },
+        {
+          "field_path": "authoring_response.assumptions",
+          "finding": "The assumption that knee extension is only a setup phase and that the knees stay fixed does not account for the isometric quadriceps load.",
+          "suggested_correction": "Revise the assumption to say the knees are held nearly extended under load, with the quadriceps working isometrically."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "emphasis": "assist",
+          "joint": "knee_joint",
+          "movement": "extension",
+          "op": "add_joint_action",
+          "sides": "both"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPxVeoC6j5iudF7A11S",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 6355.0,
+          "output_tokens": 1768.0
+        }
+      },
+      "summary": "The seated calf press identity, bilateral laterality, closed chain, and ankle plantarflexion as the primary action are supported by the instructions and frames. The tracer output omits the quadriceps work that holds the knees nearly straight under the full stack load. Vastus intermedius and rectus femoris come out as explicit zeros, and vastus lateralis and medialis appear only as weak stabilizers. The definition's own assumption dismisses knee extension as setup only, which is not biomechanically sound for this exercise."
+    }
+  }
+}

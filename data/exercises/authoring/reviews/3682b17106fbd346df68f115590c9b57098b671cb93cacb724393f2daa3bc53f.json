@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "3682b17106fbd346df68f115590c9b57098b671cb93cacb724393f2daa3bc53f",
+  "status": "accepted",
+  "updated_at_unix": 1794182962.8673,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182947.20047,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "hip_hinge is a weak fit as a family label. The trunk mainly side-bends with a modest hip shift rather than hinging with a neutral spine. The catalog label does not change the traced muscles.",
+          "suggested_correction": "Consider dropping hip_hinge and keeping vertical_push and trunk_lateral_flexion as the primary families."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "open_chain is defensible because the loaded arm moves freely overhead, but the feet are planted and the free hand touches the floor. This is a label judgment only.",
+          "suggested_correction": "No change is needed. Keep open_chain, or note the mixed chain in the assumptions."
+        },
+        {
+          "field_path": "proposed_definition.laterality",
+          "finding": "The frames show the bell on one side, but the definition does not state which side. Unilateral with the right side working is a tracer convention, so left and right muscle assignments are mirrored by convention rather than shown by the source.",
+          "suggested_correction": "No change is needed. The assumptions already state that the bell's side was not used."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrP8FC4z66nvs5A7pEAD",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10098.0,
+          "output_tokens": 1825.0
+        }
+      },
+      "summary": "The definition matches the source instructions and frames: a standing one-arm kettlebell bent press, with the bell pressed to lockout overhead as the trunk side-bends away and the free hand reaches toward the floor. Elbow extension and glenohumeral abduction are credited as the load-moving actions, and scapular upward rotation and hip extension are assist. Lumbar lateral flexion is credited on both sides, which suits the lean and the return to upright. Grip, wrist stability, shoulder position hold, glenohumeral stabilization, scapular stabilization, anti-rotation and postural stabilization reach the muscles that hold the load. The traced pattern is right-sided for the arm and bilateral for the trunk and legs, with no material misattribution. Remaining disagreements concern labels and minor judgment calls only."
+    }
+  }
+}

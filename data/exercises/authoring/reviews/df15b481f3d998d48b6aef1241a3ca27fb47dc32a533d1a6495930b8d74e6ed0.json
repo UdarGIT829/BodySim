@@ -1,0 +1,49 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "df15b481f3d998d48b6aef1241a3ca27fb47dc32a533d1a6495930b8d74e6ed0",
+  "status": "accepted",
+  "updated_at_unix": 1794182864.13143,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182853.14489,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "shoulder_raise is a reasonable closest family. Horizontal_pull could also apply to a rear-delt raise, but these labels do not change the traced muscles.",
+          "suggested_correction": "No change needed. Optionally add horizontal_pull as a secondary label."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrP1K1ZLQLgVfKDZiNd3",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8180.0,
+          "output_tokens": 1312.0
+        }
+      },
+      "summary": "The definition matches the source. The instructions and both frames show a single-arm low-pulley raise from a bent-over hinge, with the right arm moving out to the side until it is parallel to the floor and the elbow slightly bent. Glenohumeral horizontal abduction is the right primary action for that path. It makes the scapular spinal deltoid the primary mover, with infraspinatus, teres minor and acromial deltoid as synergists. Scapular retraction marked as assist gives the rhomboids and transverse trapezius a plausible synergist role without making them primary. The demands match the setup: anti_flexion_spine and postural_stabilization for the held hinge, grip and wrist_stability for the handle, elbow_stability for the fixed slight bend, and glenohumeral_stabilization for the cuff. Unilateral laterality with arm-only one-sided limbs keeps the free left arm unloaded, as in the frames where it rests on the thigh. The tracer output is a believable pattern, with the rear delt as the only primary mover and the hinge and grip muscles as low-coefficient stabilizers."
+    }
+  }
+}

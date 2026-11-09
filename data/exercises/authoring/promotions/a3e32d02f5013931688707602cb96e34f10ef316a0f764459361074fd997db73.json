@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "a3e32d02f5013931688707602cb96e34f10ef316a0f764459361074fd997db73",
+  "revision_id": "Backward_Medicine_Ball_Throw@a3e32d02f501",
+  "exercise_id": "exercise.medicine_ball_throw.backward_overhead",
+  "source_catalog_id": "catalog.free_exercise_db.Backward_Medicine_Ball_Throw",
+  "mapped_muscles": 159,
+  "promoted_at_unix": 1794179217.4532022,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "7ea65fa6bdca04d58e3999d8f81bf876cc505721e4862b099f383768a41ed093",
+    "data/exercises/engagement_profiles.json": "7966b831857f9957e1814fb2226912719c7e0c78baa3a5a664ffee154fd5fead",
+    "data/exercises/catalog/candidates.json": "f09764f91252cb1f7946536e5c232111ea27f2fa5343cabb5905b06b853e5e7e",
+    "data/exercises/sources/free_exercise_db_media.json": "b6aca0dcd58d9249a7d94e8b821e12cc697b45d2db1b782479f863fa12568963"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "3b939c98b8b108850e32e543680627ebeee71106c2467b6380b36ce4b480cd9a",
+    "data/exercises/engagement_profiles.json": "8f72d4ed221fa087ac84b01dd66d18bc997e105f2ef907b68f852f224c8af09e",
+    "data/exercises/catalog/candidates.json": "47eadaace398a29a045d78f9f7a24890dbba5e126848de66ad910a015dd8ef2f",
+    "data/exercises/sources/free_exercise_db_media.json": "5cfc102182ace11fcc7ee0970f7b2ec94f706f3804daad7f8655efe94d5159b7"
+  }
+}

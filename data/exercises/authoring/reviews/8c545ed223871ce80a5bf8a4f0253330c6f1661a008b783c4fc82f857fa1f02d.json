@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "8c545ed223871ce80a5bf8a4f0253330c6f1661a008b783c4fc82f857fa1f02d",
+  "status": "accepted",
+  "updated_at_unix": 1794183309.36942,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183298.6334,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.primary",
+          "finding": "The long and short biceps heads score 0.8 and so land as primary movers, even though the neutral grip normally shifts load toward brachialis and brachioradialis. This follows from the tracer's weight table for elbow flexion. No choice of actions or emphasis in this definition would change it.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist",
+          "finding": "superficial_head_of_pronator_teres (0.2) and extensor_carpi_radialis_longus (0.1) appear as elbow-flexion synergists. These are table artifacts of elbow_joint/flexion and are minor.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization recruits many leg and trunk muscles at low stabilizer coefficients (0.07 to 0.28). This is consistent with standing curls, but the leg coefficients may slightly overstate involvement.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPa9XDheoKKzHwvmUuh",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9889.0,
+          "output_tokens": 1278.0
+        }
+      },
+      "summary": "The definition matches the source: a standing, bilateral low-pulley rope hammer curl with a neutral grip, elbows pinned at the sides, a still torso, and only the forearms moving. Both frames show the same stance and elbow position. Elbow flexion is the only moving joint, and listing it as primary on both sides is right. The stabilization demands fit the load path. Grip and wrist_stability cover the rope held in the hands. shoulder_position_hold covers the upper arm kept still against the cable pull. postural_stabilization covers standing. Omitting radioulnar action is consistent with the neutral grip held throughout, and no trunk or hip action is listed, consistent with the stationary torso. The kinetic_chain_type, laterality, one_sided_limbs and movement_families labels are all appropriate. The tracer output shows the expected pattern: brachialis, brachioradialis and both biceps heads as primary movers, with hand, forearm, deltoid and postural muscles as low-coefficient stabilizers."
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c301e1c99bde7c83097e7a50d5b59da6e416ad0d9057da8d77aa850134058437",
+  "status": "accepted",
+  "updated_at_unix": 1794182786.88035,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182772.55595,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.assumptions[2]",
+          "finding": "The frames show a vigorous alternating arm swing with the elbows bent near 90 degrees. The definition treats the arms as momentum only and lists no arm actions. This is a reasonable simplification for a lower-body plyometric, and the omission does not make the muscle pattern materially wrong.",
+          "suggested_correction": "Optionally note the arm swing as a minor contributor. No change to the traced profile is needed."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[3]",
+          "finding": "The opposite-leg knee drive is clearly visible in the frames, so hip flexion at assist weighting (psoas 0.4, iliacus 0.36) is a defensible but conservative choice. Rectus femoris is already primary through knee extension.",
+          "suggested_correction": "Keep as assist. Raising the emphasis is not necessary."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.primary",
+          "finding": "Hamstrings reach primary status (0.7) through the hip extension action weights. This follows from the table and is biomechanically plausible for a sprint-like drive.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrNuNSmXjF8MTwLYZ4XT",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7085.0,
+          "output_tokens": 1558.0
+        }
+      },
+      "summary": "The definition matches the source. The instructions and both frames show an alternating bench-top foot switch with a drive-leg push-off and a high-knee swing of the opposite leg. Hip and knee extension as primary actions give the expected glute, quadriceps and hamstring pattern. Ankle plantarflexion and hip flexion as assists correctly keep the calves and hip flexors as synergists. The stabilization demands add a plausible trunk and ankle/knee control layer. The closed-chain, bilateral and family labels are acceptable. No biomechanically material claim is unsupported or contradicted."
+    }
+  }
+}

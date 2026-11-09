@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "1656956b52ab53c5f2bc120b4010fdcf1018cc4a169cc4c863081fc78d00a5f0",
+  "status": "accepted",
+  "updated_at_unix": 1794183880.22569,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183869.10462,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Trunk extensors (longissimus, iliocostalis) and postural muscles are absent, although the upright kneeling torso must resist the explosive hip drive. This is a minor omission, since the anterior core is credited via anti_extension_spine.",
+          "suggested_correction": "A future revision could add postural_stabilization or anti_flexion_spine at low weight if deeper trunk coverage is wanted."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "open_chain is defensible because the ball is released and the arms are free. The hips drive from a kneeling base on the floor, so the label is somewhat ambiguous. It is a catalog label only and does not change the traced muscles.",
+          "suggested_correction": "Keep open_chain, or note the kneeling base in the assumptions."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist",
+          "finding": "Gluteus medius appears as a 0.2 synergist from hip extension. This is a tracer table artifact and no choice of actions or demands changes it. It is physiologically minor.",
+          "suggested_correction": "None needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQJCTWZcNeRddc9KfF8",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7675.0,
+          "output_tokens": 1284.0
+        }
+      },
+      "summary": "The frames show a bilateral kneeling medicine-ball chest pass. The ball starts at the chest and is released forward from both hands, with the lifter staying on the knees. Hip extension, horizontal shoulder adduction and elbow extension are the main drivers, with assist-level scapular protraction. This matches the instructions and the tracer output: glutes and hamstrings, pectoralis major, anterior deltoid and triceps lead, with serratus anterior, trapezius/rhomboids, the abdominal wall and wrist stabilizers in support. The follow-through fall is reasonably excluded from the model. No biomechanically material claim is unsupported or contradicted."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "a562c7e1505e44ebcb3babcb20f36fe214f9a918ac209f899d575c7652fb728e",
+  "revision_id": "Calf_Raises_-_With_Bands@a562c7e1505e",
+  "exercise_id": "exercise.banded_calf_raise.standing_shoulder_rack",
+  "source_catalog_id": "catalog.free_exercise_db.Calf_Raises_-_With_Bands",
+  "mapped_muscles": 130,
+  "promoted_at_unix": 1794183697.194998,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "cbd15cb865bbc9e98f46f7a4f7c27c7a376c41a81209cc313f7f87717a86c3e0",
+    "data/exercises/engagement_profiles.json": "bc2d756f3bf1fadaa2229881e619bb3e76a14eecb1037d1f6b8453be21c44b7e",
+    "data/exercises/catalog/candidates.json": "7c93c687634badb91a026154b4d2269775d6af6d7aaa5ea57381d45b4a83426f",
+    "data/exercises/sources/free_exercise_db_media.json": "6d0988e798594488082e0e991a3ce291a8309245036a3726a4c3195021c29614"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "68961c3702b239477a4a1ac3e57c988dab567f7f6fc0eb711fd55418445a6087",
+    "data/exercises/engagement_profiles.json": "f634ee968bd2d8e3af6c2a9847a7e55e9fc846136362a49e5e17e38cf2528de5",
+    "data/exercises/catalog/candidates.json": "8742f28d13ccbc1eef80516fa75ebcbef718eeffc7a1dc085fe576c44a282c06",
+    "data/exercises/sources/free_exercise_db_media.json": "bf22aebc3512b60475a06cd536a32be2d1b62d0f4243320d1259d197e7d911ea"
+  }
+}

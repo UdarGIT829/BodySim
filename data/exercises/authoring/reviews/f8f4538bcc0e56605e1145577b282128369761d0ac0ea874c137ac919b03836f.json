@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "f8f4538bcc0e56605e1145577b282128369761d0ac0ea874c137ac919b03836f",
+  "status": "accepted",
+  "updated_at_unix": 1794182944.79385,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182929.5572,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.primary_joint_actions",
+          "finding": "The hips are held isometrically in the hinge, and the hamstrings and glutes get only small stabilizer coefficients (about 0.14 to 0.28) via pelvic_alignment and postural_stabilization. An assist-level hip extension could give them more credit, but the current treatment is a defensible, documented choice.",
+          "suggested_correction": "Optionally add hip_joint/extension as an assist action to raise isometric hamstring and glute credit in the hinge."
+        },
+        {
+          "field_path": "kinematic_profile.primary_joint_actions[glenohumeral_joint/extension]",
+          "finding": "The glenohumeral extension action also brings in the pectoralis major heads (0.4 to 0.5, synergist) and the long head of triceps. This is a tracer table limitation of the extension action and cannot be avoided by a different choice of actions, so it is not blocking.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "kinematic_profile.primary_joint_actions[elbow_joint/flexion]",
+          "finding": "Elbow flexion at primary emphasis makes the biceps heads and brachioradialis primary (0.7 to 0.8) and gives superficial pronator teres a small synergist role. This is acceptable, since the elbow genuinely flexes to move the load, but biceps involvement is likely somewhat lower than the lats and scapular retractors.",
+          "suggested_correction": "Optionally consider assist emphasis for elbow flexion if the cue is to lead with the elbows."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrP6wyCEMZZnM36Py3Sc",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 11826.0,
+          "output_tokens": 1743.0
+        }
+      },
+      "summary": "The definition matches the instructions and both frames: a standing, bilateral, hip-hinged row with two dumbbells held palms-in, the torso held still, and the dumbbells pulled to the sides with a shoulder-blade squeeze. The three primary actions (shoulder extension, scapular retraction, elbow flexion) are the real movers. The tracer output follows from them: lats, teres major, posterior deltoid, rhomboids and middle trapezius lead, with brachialis, biceps and brachioradialis on the elbow. The torso, hip and grip demands credit the held hinge posture and the dumbbells in the hands. Laterality, open-chain label and horizontal_pull family are appropriate. No biomechanically material claim is unsupported or contradicted, and the muscle pattern is not materially wrong."
+    }
+  }
+}

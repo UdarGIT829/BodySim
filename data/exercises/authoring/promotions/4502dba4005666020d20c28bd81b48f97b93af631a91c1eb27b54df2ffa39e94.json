@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "4502dba4005666020d20c28bd81b48f97b93af631a91c1eb27b54df2ffa39e94",
+  "revision_id": "Close-Grip_Standing_Barbell_Curl@4502dba40056",
+  "exercise_id": "exercise.barbell_curl.standing_close_grip",
+  "source_catalog_id": "catalog.free_exercise_db.Close-Grip_Standing_Barbell_Curl",
+  "mapped_muscles": 116,
+  "promoted_at_unix": 1794184212.5712242,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "b84d6acb2220b960e7f5539f250d699b4eda7a1e298bb613fae063e57139fee9",
+    "data/exercises/engagement_profiles.json": "5f1a87b6399cb5471752190f4666ade1c7b1274e37e3080c60056dea75abb008",
+    "data/exercises/catalog/candidates.json": "1a039de4f58aa0c436a62c40ae71a1c0d004eeffa87e115f14315bc0edc9196e",
+    "data/exercises/sources/free_exercise_db_media.json": "7a3a5fff8dc7d898537ab7144f2495437fe415a04f2fe5712d5dbb95bfdae2fa"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "9d3c4ec453538c33b05a556d5371655ff417b658839909717d8c4f79509537c7",
+    "data/exercises/engagement_profiles.json": "100e83fc66b5df91a0cd7c09d988504b1bbcd1f13819a48f0cf846b1695e423c",
+    "data/exercises/catalog/candidates.json": "67f7d5a2e5f742aed0651c37cb78d2d6056fdc664f5be8b805f3ada936ee1c10",
+    "data/exercises/sources/free_exercise_db_media.json": "2c13e84b1f2c4517976249b0b8d01029e77cbcb47f50cff4a742154d1488a3ed"
+  }
+}

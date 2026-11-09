@@ -1,0 +1,62 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "ddcea7f211c666e015274b90c74b60d8f88cc0f043aa5dfe3c85087454965b1b",
+  "status": "accepted",
+  "updated_at_unix": 1794105260.70043,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105237.24323,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[1]",
+          "finding": "The trunk work in a rollout is mostly isometric or eccentric anti-extension, with only slight posterior pelvic tilt or lumbar flexion. Marking lumbar_spine/flexion as a full primary action overstates actual spinal motion. It is a pragmatic way to make rectus abdominis primary, and the profile still matches the exercise's core-dominant character.",
+          "suggested_correction": "Keep the action but consider documenting it as a posterior-pelvic-tilt proxy. Alternatively use emphasis 'assist' and rely on anti_extension_spine for the rest of the trunk, if the resulting abdominal coefficients are acceptable."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The hip flexors and rectus femoris also resist hip extension at the stretched position, and the rotator cuff and humeral head need control with the arms overhead. The definition models the hip flexors only through concentric hip flexion and omits glenohumeral or humeral head stabilization. Rotator cuff and anterior deltoid involvement is therefore absent, though it is modest.",
+          "suggested_correction": "Consider adding anti_extension_hip, and glenohumeral_stabilization or shoulder_position_hold, in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "Only trunk_flexion is listed, although the exercise also involves a shoulder extension and pull pattern and a hip flexion component. The family list is narrower than the joint actions it declares.",
+          "suggested_correction": "Add a shoulder extension or pull family and a hip flexion family if the vocabulary allows, or justify the single-family choice."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "Closed_chain is debatable because the hands roll the bar along the floor and are not fixed in space, so the chain is semi-closed. The tracer output does not depend on this field, so it is low impact.",
+          "suggested_correction": "State why closed_chain was chosen, or use a more suitable chain type if one exists for a rolling implement."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgMudweChdnjt6VK7CF",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 10008.0,
+          "output_tokens": 2756.0
+        }
+      },
+      "summary": "The frames and instructions support a bilateral kneeling barbell rollout: both hands on a barbell, both knees on a mat, and the body extended forward over the bar with extended elbows. The return phase, modeled as glenohumeral extension, hip flexion and trunk flexion with an anti-extension demand, gives a plausible tracer profile. Lats, teres major and the scapular deltoid are primary at the shoulder, hip flexors and rectus femoris are primary at the hip, and rectus abdominis is primary at the trunk. Obliques and transversus abdominis are engaged, and the hands, wrists and scapulae are stabilizers. No materially unsupported or contradictory claim blocks acceptance, but several modeling choices are debatable and listed as non-blocking."
+    }
+  }
+}

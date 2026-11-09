@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "6d398b28161bce3e095d460c9590692caa22b2022c81a4e80d1bc1fda44df644",
+  "revision_id": "Dumbbell_Lunges@6d398b28161b",
+  "exercise_id": "exercise.dumbbell_lunge.forward_step",
+  "source_catalog_id": "catalog.free_exercise_db.Dumbbell_Lunges",
+  "mapped_muscles": 100,
+  "promoted_at_unix": 1794185054.4974353,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "be5211f0899c06ba5d4269bd06ce8c899a1d5e5a9de00dc484ecd0f871fbcccf",
+    "data/exercises/engagement_profiles.json": "fbab22a2541ac93b0f4e307def809bd780f3cbaf067416cd7d1d723da53f8f44",
+    "data/exercises/catalog/candidates.json": "3da286de29fb045291fa317e085e5c617e81fec257fa934c8a1f5e8498fefffd",
+    "data/exercises/sources/free_exercise_db_media.json": "a91676c67fa5c26e7a904358c9780ad9912a5634e510af390442f0071463c8d4"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "f2aa3abcbc13094066a0cf108dd5c1027105a5c5ef23a52cb60e71d456f06d44",
+    "data/exercises/engagement_profiles.json": "cd7d098210fa858ee7eef1f9441b7a8cdbfe8a9cc79a8544aa907e4e0ceb74e4",
+    "data/exercises/catalog/candidates.json": "22b5263d095946cf715d98a822afe01cdf2cecc97eb9ec71e43aaf929d65fe95",
+    "data/exercises/sources/free_exercise_db_media.json": "c899a2aa8be732ae290ce9517772129cb68bd824b0add1a690de93b386a159ec"
+  }
+}

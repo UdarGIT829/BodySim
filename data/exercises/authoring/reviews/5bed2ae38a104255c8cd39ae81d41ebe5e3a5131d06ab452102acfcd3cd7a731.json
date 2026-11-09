@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "5bed2ae38a104255c8cd39ae81d41ebe5e3a5131d06ab452102acfcd3cd7a731",
+  "status": "accepted",
+  "updated_at_unix": 1794183681.09014,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183669.16547,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.synergist (fibularis_longus, fibularis_brevis, tibialis_posterior)",
+          "finding": "The rolling handle makes these muscles important for ankle stability. Because they already receive plantarflexion action scores of 0.2, the tracer uses that score and does not credit the higher stabilizer weight from ankle_stability (up to 0.7). Their coefficients therefore look low. This comes from how the tracer scores muscles.",
+          "suggested_correction": "No change required. A future revision could add a subtalar eversion/inversion assist action to better represent frontal-plane balance on the roller."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The frames show a slight forward trunk lean with the hands on the rack bar. The broad postural_stabilization demand credits many hip, knee and trunk muscles at low coefficients. These values are plausible but may slightly overstate quadriceps and hamstring involvement during a straight-knee calf raise.",
+          "suggested_correction": "Optional: keep as is, or narrow the trunk and hip credit to a single demand if later evidence shows less involvement."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQ3TdQgcEP3BhaWW9kF",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 6193.0,
+          "output_tokens": 1449.0
+        }
+      },
+      "summary": "The definition matches the source and frames. Both feet are on a dumbbell handle and the lifter rises onto the balls of the feet. Bilateral laterality, closed-chain, the ankle_plantarflexion family and the primary ankle plantarflexion action are all supported. Soleus and both gastrocnemius heads come out as primary movers. The ankle stabilizers appear as synergists. The hands rest on a fixed rack bar for balance only, so omitting grip, wrist and shoulder demands is reasonable. The trunk and hip stabilizer pattern follows from ankle_stability and postural_stabilization for upright standing and is plausible, not materially wrong."
+    }
+  }
+}

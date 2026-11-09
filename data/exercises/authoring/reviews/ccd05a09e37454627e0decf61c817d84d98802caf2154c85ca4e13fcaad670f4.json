@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "ccd05a09e37454627e0decf61c817d84d98802caf2154c85ca4e13fcaad670f4",
+  "status": "accepted",
+  "updated_at_unix": 1794182659.01395,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182644.98887,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.primary_joint_actions[hip_joint/extension]",
+          "finding": "The table gives the hamstrings a weight of 0.7 for hip extension, so semitendinosus, semimembranosus and the long head of biceps femoris trace as primary movers. In a lunge they are more accurately synergists to the glutes and quadriceps. Down-weighting hip extension to assist would wrongly demote gluteus maximus, so no choice of actions, emphasis or demands corrects this. It is a tracer limitation.",
+          "suggested_correction": "No change needed. Keep hip extension as primary so the glutes are credited correctly."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "Nothing is listed for the bar steadied in the hands, and the hand and forearm muscles trace as zero. This is a defensible choice because the bar rests on the back and the hands only guide it. A light grip demand could arguably be added but is not required.",
+          "suggested_correction": "Optional: leave as is. The assumptions already document the choice not to use grip."
+        },
+        {
+          "field_path": "movement_families",
+          "finding": "The label 'lunge' is correct. 'squat' could be added as a secondary label for catalog search, but it is not needed.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrNjxrgzaAps5npudZrB",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7677.0,
+          "output_tokens": 1572.0
+        }
+      },
+      "summary": "The definition matches the source text and frames: a barbell on the upper back, an upright torso, and an alternating forward step into a split-stance lunge. Hip and knee extension are correctly the primary actions, ankle plantarflexion is correctly an assist, and the stabilization demands suit a back-loaded, split-stance, alternating pattern. The traced profile is plausible, with quadriceps and gluteus maximus leading, adductor magnus, soleus and the gastrocnemii as synergists, and trunk extensors, scapular retractors and hip, knee and ankle stabilizers as stabilizers. No blocking problems found."
+    }
+  }
+}

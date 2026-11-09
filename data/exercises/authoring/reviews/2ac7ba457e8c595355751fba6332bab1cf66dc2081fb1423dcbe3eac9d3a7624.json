@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "2ac7ba457e8c595355751fba6332bab1cf66dc2081fb1423dcbe3eac9d3a7624",
+  "status": "accepted",
+  "updated_at_unix": 1794182755.59891,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182744.19849,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "No rotator-cuff demand such as glenohumeral_stabilization is listed, so infraspinatus, supraspinatus, teres minor and subscapularis show as zero. A bench press loads the cuff modestly as a humeral-head stabilizer, but this omission is a minor choice and does not materially misstate the pattern.",
+          "suggested_correction": "Optionally add glenohumeral_stabilization in a future revision if cuff involvement should be represented."
+        },
+        {
+          "field_path": "assumptions[2]",
+          "finding": "The band and its anchor under the head-end bench leg are not visible in the frames. The instructions state the anchor, and the frames show a barbell rack in the background that is not part of the exercise. The band resistance is therefore taken from the instructions, not the images, but this does not change the traced muscles.",
+          "suggested_correction": "None required; keep the anchoring detail attributed to the instructions."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrNsHfyanjUPU9rAo21f",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8300.0,
+          "output_tokens": 1327.0
+        }
+      },
+      "summary": "The definition fits a bilateral flat-bench band press. Both frames show a supine lifter with the elbows bent at the bottom and the arms extended at the top. Horizontal adduction and elbow extension as primary actions put the pectoralis major heads and triceps in the primary role, and the anterior deltoid, coracobrachialis, and short head of biceps in the synergist role. Scapular protraction marked as assist reasonably adds serratus anterior and pectoralis minor as minor synergists. The scapular retraction demand covers the scapulae held against the bench. Grip and wrist stability fit a load held in the hands. The tracer output matches the expected bench-press pattern, and the labels (open chain, bilateral, horizontal_push) are appropriate."
+    }
+  }
+}

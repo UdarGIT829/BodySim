@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "168f806cac76ccae94a5c02e011b44a182f13abea117372e974687d40493a3f9",
+  "revision_id": "Bodyweight_Mid_Row@168f806cac76",
+  "exercise_id": "exercise.bodyweight_mid_row.inverted_hang_pronated",
+  "source_catalog_id": "catalog.free_exercise_db.Bodyweight_Mid_Row",
+  "mapped_muscles": 116,
+  "promoted_at_unix": 1794183075.638339,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "3a593cd98b623233b8005a2b8bab7056980b4ce8b79b555cb2234f7f75a1947f",
+    "data/exercises/engagement_profiles.json": "2e9740df7d39f0aeab8a57330af966c8ae00d51361976d52002a17cf4ca9e0cd",
+    "data/exercises/catalog/candidates.json": "f1c1d5d868890bdfac10de48f8a9e70aa318a99867667bc62f65b578924c2228",
+    "data/exercises/sources/free_exercise_db_media.json": "c59ba22b86ae9bb25128321a2f4b7546d793d7cdc2dd95b3feac69451716ef81"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "95914e27dbe84cb548e807f0eb811a3c3bc976d3ff84972acee7b50932d78ca8",
+    "data/exercises/engagement_profiles.json": "6757a1da32d2e43e67b63b4cf0a93a93fd86c0f2565c54e2eda99eea9ba11c4a",
+    "data/exercises/catalog/candidates.json": "7ad0d41ddff52268553f260930f92f065d3df8311ac3c56fc2cb9232694f2bd5",
+    "data/exercises/sources/free_exercise_db_media.json": "252bcaea33f099bd34bf0cb4d9077e67a7a9b669814b3b33f7e5874185259d3b"
+  }
+}

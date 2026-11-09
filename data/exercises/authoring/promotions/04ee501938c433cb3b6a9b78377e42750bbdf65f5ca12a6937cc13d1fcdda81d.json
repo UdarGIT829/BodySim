@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "04ee501938c433cb3b6a9b78377e42750bbdf65f5ca12a6937cc13d1fcdda81d",
+  "revision_id": "Decline_Crunch@04ee501938c4",
+  "exercise_id": "exercise.decline_crunch.bodyweight_bench",
+  "source_catalog_id": "catalog.free_exercise_db.Decline_Crunch",
+  "mapped_muscles": 8,
+  "promoted_at_unix": 1794184491.996809,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "0d664443be209300cb37f624a278c3b70d060933c4591af6f28766d0b70ee4a6",
+    "data/exercises/engagement_profiles.json": "b6871602a83493913ffe18769077971d9d8863ee9a5b4df05bd377b9e834d34a",
+    "data/exercises/catalog/candidates.json": "ad141293bd615808fde0a906a31bc09cbe0d17a48e790001bb0a7a896eacf972",
+    "data/exercises/sources/free_exercise_db_media.json": "79aa1cbe9e79ee62b00930f64be17cc5547fdb98aafb154e5167a9ffd862fa36"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "f68ea60c67463dd209f41f8a33b003142be729b9449033c0bc4c29c5ec49877b",
+    "data/exercises/engagement_profiles.json": "f459e3e096d875e5e6ee57ca24655cc854c2bcac910941b7a3dab498ec4c0705",
+    "data/exercises/catalog/candidates.json": "1cccf317383720f0ad195a68e9402a0a2200e099efece6e0f4c4617479c7c288",
+    "data/exercises/sources/free_exercise_db_media.json": "466febc537f3eb0dd9237cd27623851ba38c4cc0118563700496717a08d9f2e7"
+  }
+}

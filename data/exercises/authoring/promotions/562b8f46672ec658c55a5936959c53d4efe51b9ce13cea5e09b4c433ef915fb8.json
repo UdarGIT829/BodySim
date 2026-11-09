@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "562b8f46672ec658c55a5936959c53d4efe51b9ce13cea5e09b4c433ef915fb8",
+  "revision_id": "Barbell_Rollout_from_Bench@562b8f46672e",
+  "exercise_id": "exercise.barbell_rollout.bench_kneeling",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Rollout_from_Bench",
+  "mapped_muscles": 125,
+  "promoted_at_unix": 1794179391.635361,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "6f2f0478ed9679eaf93ad890a4ba755ea744ee08e284938fb951f9586d7ed3c9",
+    "data/exercises/engagement_profiles.json": "7800e71a8f9b6440c596d8d905dcf69e58521a2a7eefc3200aee1b8f30449853",
+    "data/exercises/catalog/candidates.json": "c37b56a5f171136fa471ec52bfd0430f847baa0bf4830eeeb4e23c6206a762ff",
+    "data/exercises/sources/free_exercise_db_media.json": "ec527cf5de31ab295fa4262f78b86aa7b1d6ca4f8b6761654f91d2001b9e32ba"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "eaf2ac73ac806f4697a06f6ff89618e1bde26c4937bc1942ca1730a185833eb3",
+    "data/exercises/engagement_profiles.json": "fd0a6d54abfe30b175bdc2086b1dbe4dc04ac5eb8b74738b6bf79836d3fb8d36",
+    "data/exercises/catalog/candidates.json": "1240ade066485dd37e747a1eabeaab3db7a6741d20888100a3023e8007d8b4a9",
+    "data/exercises/sources/free_exercise_db_media.json": "ee6567c298d7ee8cf319be978580aaf309afcd617d538ef691542fb80e384cb5"
+  }
+}

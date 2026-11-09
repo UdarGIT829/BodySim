@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "2e32b439f75add4235f270c1cad4ab48eae9399e6e78fb47fc9363281cf9bd84",
+  "status": "accepted",
+  "updated_at_unix": 1794182926.43174,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182912.84984,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.primary_joint_actions[glenohumeral_joint/extension]",
+          "finding": "The tracer's shoulder-extension table also engages the pectoralis major heads (sternocostal 0.5, abdominal 0.4) as synergists. The pecs are not meaningful rowing movers. This is a limitation of the table weights, and no choice of actions in the definition would remove it.",
+          "suggested_correction": "None required. Treat it as a tracer artifact, consistent with other rowing and pulldown reviews."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "Deliberate bracing (intra_abdominal_pressure) and rotator cuff or scapular stabilizers are not listed. Their absence is defensible for a light-to-moderate, supported row, and the trunk is already credited through anti_flexion_spine.",
+          "suggested_correction": "Optionally consider adding intra_abdominal_pressure or scapular_stabilization in a future revision if the authors judge trunk bracing or scapular control to be material."
+        },
+        {
+          "field_path": "movement_families",
+          "finding": "hip_hinge could be added as a secondary catalog label because the torso is held in a hinged position. horizontal_pull is the correct primary family.",
+          "suggested_correction": "Optionally add hip_hinge. This is a label only and does not affect the traced muscles."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrP5iU4Lu7g27AcJP8XA",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9652.0,
+          "output_tokens": 1527.0
+        }
+      },
+      "summary": "The definition matches the source text and both frames. Both arms row symmetrically from a hinged, stationary torso with neutral-grip dumbbells and elbows close to the body. Glenohumeral extension and scapular retraction are correctly the primary movers, which makes lats, teres major, rear deltoid, rhomboids and mid-trapezius primary. Elbow flexion is a reasonable assist, giving brachialis, biceps and brachioradialis as synergists. The hip extension assist credits the isometric hamstring and glute hold in the hinge. The spinal erectors are covered through anti_flexion_spine. The grip and wrist_stability demands sit correctly because the load is held in the hands. Laterality, one_sided_limbs, kinetic_chain_type and the horizontal_pull family are appropriate."
+    }
+  }
+}

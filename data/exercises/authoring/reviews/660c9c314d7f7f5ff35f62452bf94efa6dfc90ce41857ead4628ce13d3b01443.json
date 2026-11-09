@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "660c9c314d7f7f5ff35f62452bf94efa6dfc90ce41857ead4628ce13d3b01443",
+  "status": "accepted",
+  "updated_at_unix": 1794183166.18489,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183153.70361,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The cue to push the knees and feet out and the wide stance suggest hip abductor and external rotator demand, which the definition does not credit beyond a 0.2 gluteus medius contribution from hip extension. The tracer also gives gluteus medius no frontal-plane or femoral-head role. This is a modest omission, not a material misrepresentation.",
+          "suggested_correction": "Consider adding femoral_head_stabilization (or a hip external_rotation assist) in a future revision to credit the deep hip rotators and gluteus medius/minimus."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Hip extension at primary emphasis makes the hamstrings (long head of biceps femoris, semimembranosus, semitendinosus) primary at 0.7. This is a plausible, table-driven outcome for a wide-stance, hip-dominant box squat, but hamstring contribution to squatting is probably lower than the quadriceps and gluteus maximus.",
+          "suggested_correction": "No change is required. The hamstring weighting comes from the tracer table, not the definition."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The 'squat' family is correct. Because the box squat is hip-dominant with a sit-back motion, 'hip_hinge' could be added as a secondary label, but this is optional and does not change traced muscles.",
+          "suggested_correction": "Keep ['squat']. Optionally add 'hip_hinge'."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPPUHHoSGLrqU6zUtWz",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8012.0,
+          "output_tokens": 1518.0
+        }
+      },
+      "summary": "The definition matches the source and frames: a bilateral, closed-chain barbell back squat to a box in a power rack, with the bar across the upper back. Hip and knee extension are rightly primary, ankle plantarflexion is rightly an assist, and the demands are placed where the load is held. Bar support uses scapular_retraction_stability rather than grip or wrist_stability, as the guidance requires. The tracer output is consistent. The quadriceps and gluteus maximus are primary, hamstrings and adductor magnus follow from hip extension, and the calves are synergists at assist weight. The erectors, trunk bracing muscles and rhomboids/trapezius appear as stabilizers. No blocking problem would be fixed by a better definition."
+    }
+  }
+}

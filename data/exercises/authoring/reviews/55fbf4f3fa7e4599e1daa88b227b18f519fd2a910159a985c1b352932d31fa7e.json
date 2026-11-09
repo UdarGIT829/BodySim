@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "55fbf4f3fa7e4599e1daa88b227b18f519fd2a910159a985c1b352932d31fa7e",
+  "status": "accepted",
+  "updated_at_unix": 1794179420.39504,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179403.494,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions[hip_joint/adduction]",
+          "finding": "The trailing straight leg's adductors are loaded eccentrically and isometrically as the body shifts to the lead side. Under the working-side convention they get only minimal postural credit. This is a limitation of how the tracer handles one-sided limbs and does not make the definition wrong.",
+          "suggested_correction": "No change required. Optionally consider whether trailing-leg adductor involvement merits modeling in a future revision."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "The only label is `lunge`. `squat` also loosely describes the back-loaded bilateral-stance pattern. This is a catalog label only and does not change the traced muscles.",
+          "suggested_correction": "Optionally add `squat` as a secondary family."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJd25Fb4Kf6wmHcG4TU",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7957.0,
+          "output_tokens": 2063.0
+        }
+      },
+      "summary": "The frames show a bar on the upper back in a wide stance. The lifter lowers over one bent lead leg while the trailing leg stays nearly straight, then returns by extending the hip and knee of the lead leg. The unilateral laterality with one_sided_limbs [\"leg\"] fits this. The earlier council issues are resolved: grip and wrist_stability are removed, scapular_retraction_stability covers the bar shelf, and hip adduction is added for the lead-leg adductors. The traced pattern is plausible. The lead-side quadriceps, gluteus maximus, hamstrings and adductors are primary. The calves are a light synergist. Spinal erectors, trunk muscles and scapular retractors are stabilizers. The hands and forearms are correctly zero."
+    }
+  }
+}

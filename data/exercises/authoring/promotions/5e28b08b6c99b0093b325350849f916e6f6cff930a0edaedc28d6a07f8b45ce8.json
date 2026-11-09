@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "5e28b08b6c99b0093b325350849f916e6f6cff930a0edaedc28d6a07f8b45ce8",
+  "revision_id": "Close-Grip_Push-Up_off_of_a_Dumbbell@5e28b08b6c99",
+  "exercise_id": "exercise.close_grip_push_up.dumbbell_elevated",
+  "source_catalog_id": "catalog.free_exercise_db.Close-Grip_Push-Up_off_of_a_Dumbbell",
+  "mapped_muscles": 80,
+  "promoted_at_unix": 1794184198.5992494,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "66d3ff2d616336332d4aea0969679fc743dc987e0e4b599e2b03268d0a7623c5",
+    "data/exercises/engagement_profiles.json": "37d3da4f244f1b973ce810508a4f1030f903fd9659f552884accfd2c66187225",
+    "data/exercises/catalog/candidates.json": "641b8cc7f3c34a982659b927a14381c02d64b339cbfdc54e1ab8af9dd2241b89",
+    "data/exercises/sources/free_exercise_db_media.json": "20f4d1d55159b60da22e0671bc96fcff1e3b5f1ccbbab1bc32f0532ab06f691e"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "b84d6acb2220b960e7f5539f250d699b4eda7a1e298bb613fae063e57139fee9",
+    "data/exercises/engagement_profiles.json": "5f1a87b6399cb5471752190f4666ade1c7b1274e37e3080c60056dea75abb008",
+    "data/exercises/catalog/candidates.json": "1a039de4f58aa0c436a62c40ae71a1c0d004eeffa87e115f14315bc0edc9196e",
+    "data/exercises/sources/free_exercise_db_media.json": "7a3a5fff8dc7d898537ab7144f2495437fe415a04f2fe5712d5dbb95bfdae2fa"
+  }
+}

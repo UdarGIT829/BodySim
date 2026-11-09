@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "43a6dc25cd2bb9cf397fa96578897744dd871463acd9089d4bf10d1f95874397",
+  "revision_id": "Dumbbell_Bench_Press@43a6dc25cd2b",
+  "exercise_id": "exercise.dumbbell_bench_press.flat_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Dumbbell_Bench_Press",
+  "mapped_muscles": 100,
+  "promoted_at_unix": 1794184947.8161845,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "266133bac68e825667ee7b7c91b90fbdb3e3b9d84efb9d47f6ba790e9a624278",
+    "data/exercises/engagement_profiles.json": "f74143cb844dc2470cf6db314ef38373061968d594bc3ff1298bf3ab5e8a23ef",
+    "data/exercises/catalog/candidates.json": "6b876535feba27df79846a179137a1a9350a58097781ab859e0a3de485ce8a89",
+    "data/exercises/sources/free_exercise_db_media.json": "8930e499d9f9fc5ab5cdc120b11a64f140a651525fe4e87abc493de0657427fd"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "e0c98a4747dea33eb42a98f8691dd4a4a3058255ecc5503b2fb042e3e5e200c7",
+    "data/exercises/engagement_profiles.json": "578c3b92638294d92afb4230bfe54637882a442d351b2766e721f6abee4f62b1",
+    "data/exercises/catalog/candidates.json": "9dc33979dbccb5e2a26c4e32c7f7ca88bfbe7677ae4bb17f2720ca8532cac9f7",
+    "data/exercises/sources/free_exercise_db_media.json": "1e7f8c75ec5161e5fd7ef60bdb0002dcf3eac978bd7d74f8a31722a93a75ef7d"
+  }
+}

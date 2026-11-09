@@ -1,0 +1,84 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "af369411e9e1b6ad08bdc442d1db50ad4a4b216fc3ef4080deab5614a5278a93",
+  "status": "changes_requested",
+  "updated_at_unix": 1794183784.30528,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183762.92923,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[glenohumeral_joint/flexion]",
+          "finding": "Glenohumeral flexion is listed as the primary driver of the throw. The throw starts with the ball behind the head and the arms in full overhead flexion, then swings forward and down, with elbow extension at release. The humerus moves from end-range overhead toward the horizontal, which is shoulder extension from an overhead position (pullover pattern), not further flexion. Flexion only describes raising the ball overhead in the wind-up, visible in the right frame.",
+          "suggested_correction": "Make glenohumeral extension the primary shoulder action for the throw. Keep flexion only as an assist for the overhead wind-up."
+        },
+        {
+          "field_path": "engaged_muscles_by_role (latissimus_dorsi, teres_major, sternocostal_head_of_pectoralis_major)",
+          "finding": "These muscles drive the overhead throw (arm pull-down plus elbow extension), yet latissimus dorsi, teres major and sternocostal pectoralis major have no involvement. At the same time clavicular_part_of_deltoid (1.0) and clavicular_head_of_pectoralis_major (0.7) are primary because of the flexion action. The tracer output therefore misstates the upper-body pattern.",
+          "suggested_correction": "Add glenohumeral_joint/extension as a primary action so that latissimus dorsi, teres major, posterior deltoid, sternocostal pec and the long head of triceps are engaged. Re-weight flexion to assist."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The left frame shows a marked forward hip hinge with the trunk inclined, and the release involves trunk flexion. The trunk is modeled only through anti_extension_spine and postural_stabilization. This is a reasonable simplification given that the trunk path is not fully resolved.",
+          "suggested_correction": "Optionally add intra_abdominal_pressure for bracing. Not required."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "jump_and_throw is appropriate. vertical_push is a possible secondary label for the overhead arm action but is not necessary.",
+          "suggested_correction": "Optionally add vertical_push as a secondary family."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "closed_chain is acceptable for a throw with the feet planted during the drive. The feet are only briefly unloaded if the throw ends on the toes, as in the right frame.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "emphasis": "primary",
+          "joint": "glenohumeral_joint",
+          "movement": "extension",
+          "op": "add_joint_action",
+          "sides": "working"
+        },
+        {
+          "emphasis": "assist",
+          "joint": "glenohumeral_joint",
+          "movement": "flexion",
+          "op": "set_action_emphasis"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQANbE9qUecDD8HcFnF",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9920.0,
+          "output_tokens": 2683.0
+        }
+      },
+      "summary": "The frames and the lower-body drive (hip, knee, ankle) are well supported. The shoulder pattern is not. The instruction is to throw the ball forward from behind the head, which is a pullover-style downward and forward arm swing driven by shoulder extension from an overhead position. The definition models this as primary glenohumeral flexion. As a result the anterior deltoid and clavicular pec are primary movers, while latissimus dorsi, teres major and sternocostal pectoralis major are explicit zeros. This is a materially wrong upper-body muscle pattern that a better definition can fix."
+    }
+  }
+}

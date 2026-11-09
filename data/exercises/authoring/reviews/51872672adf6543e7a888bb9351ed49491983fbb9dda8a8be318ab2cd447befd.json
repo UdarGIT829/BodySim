@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "51872672adf6543e7a888bb9351ed49491983fbb9dda8a8be318ab2cd447befd",
+  "status": "accepted",
+  "updated_at_unix": 1794184869.07167,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184858.56572,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "The jump takeoff and landing are closed chain, but the tuck happens in flight with the feet off the ground. This is a catalog label only and does not change the traced muscles. closed_chain is defensible.",
+          "suggested_correction": "No change required. Optionally note the mixed chain character in the assumptions."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Landing absorption is eccentric quadriceps, glute and calf work, and the definition models only the concentric takeoff. The tracer cannot distinguish concentric from eccentric work, and the listed demands cover the landing stabilizers adequately.",
+          "suggested_correction": "No change required."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Hamstrings reach primary status (0.7) through hip extension, even though their role in a vertical jump is moderate and they also contribute to the tuck. This follows from how the table weights hip extension and is acceptable.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRZ92AiN5SVq5rz99q7",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7000.0,
+          "output_tokens": 1261.0
+        }
+      },
+      "summary": "The definition fits a bilateral countermovement vertical jump with a mid-air heel tuck. The instructions and both frames agree: a quick squat, an explosive jump, and the heels tucked toward the buttocks during flight. Hip and knee extension are rightly primary, so glutes, quadriceps and hamstrings come out as primary movers. Ankle plantarflexion is correctly an assist, which makes the calves synergists. The tuck's knee flexion is also an assist, which is reasonable because it happens in flight. The stabilizers for landing and posture (ankle stability, knee joint stability, postural stabilization) give a plausible trunk and lower-leg pattern. Laterality is bilateral with no one-sided limbs, and the jump_and_throw family fits. Nothing biomechanically material is unsupported or contradicted."
+    }
+  }
+}

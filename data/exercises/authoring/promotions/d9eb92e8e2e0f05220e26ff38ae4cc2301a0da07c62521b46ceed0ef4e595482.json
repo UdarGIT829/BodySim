@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "d9eb92e8e2e0f05220e26ff38ae4cc2301a0da07c62521b46ceed0ef4e595482",
+  "revision_id": "Band_Pull_Apart@d9eb92e8e2e0",
+  "exercise_id": "exercise.band_pull_apart.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Band_Pull_Apart",
+  "mapped_muscles": 116,
+  "promoted_at_unix": 1794105197.483231,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "f41a6f5533d7356c960c86023e0690da94981bd90ad414732830ed6100271b9e",
+    "data/exercises/engagement_profiles.json": "6d37c8ff3fdfc018eab6987f546e1e4ad5921e2b245cf1025eb211a9ed522022",
+    "data/exercises/catalog/candidates.json": "fa6956b783d350960ae6cb41e930b4f737ca3b883e34f1b00d949055b14b2235",
+    "data/exercises/sources/free_exercise_db_media.json": "7e13d45a8cf5a212b23a085f2f96026000bcc5e4573340662fa8ed635eddd774"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "75fdf5604d62487dfb3605022e11501cfff700ee21cef996e578d4e9cc41da2a",
+    "data/exercises/engagement_profiles.json": "257ea1683a8a2dff2ba902f962a991237901619437a437fe242577b78a9cded9",
+    "data/exercises/catalog/candidates.json": "40dd59dfe1c2ec8129de6f3d1f7c3403593692a38707e1fc90daf7bca7e2b229",
+    "data/exercises/sources/free_exercise_db_media.json": "b5775e31ac3df2a1e9b7f3ff267cdaefea9809d018c77c5d46fa906b3db9d2dd"
+  }
+}

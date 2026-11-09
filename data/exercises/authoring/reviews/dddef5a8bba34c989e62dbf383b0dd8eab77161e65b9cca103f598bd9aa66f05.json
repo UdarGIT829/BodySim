@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "dddef5a8bba34c989e62dbf383b0dd8eab77161e65b9cca103f598bd9aa66f05",
+  "status": "accepted",
+  "updated_at_unix": 1794182850.79972,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182838.57428,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The hinged stance is held by hip extensors (glutes, hamstrings), which show no involvement in the trace. Their isometric role is real but modest, since the head rests on the bench and the load is light.",
+          "suggested_correction": "Optionally add pelvic_alignment or a postural demand in a future revision if the hinge-holding hip extensors should appear at low coefficients."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Grip and wrist_stability produce many small hand and forearm stabilizer entries, with flexor digitorum profundus at 0.35. This follows from how the tracer expands those demands and is acceptable for dumbbells held in the hands.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "open_chain is reasonable because the loaded arms move freely while the feet are planted. The label does not affect the trace.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrNzEwTtBmft6S8VewsH",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8604.0,
+          "output_tokens": 1345.0
+        }
+      },
+      "summary": "The definition matches the instructions and both frames: a bilateral, torso-fixed, head-supported bent-over raise with the arms moving out to the sides to about parallel with the floor. Glenohumeral horizontal abduction as the primary action correctly makes the posterior deltoid the sole primary mover on both sides, with infraspinatus, teres minor, the acromial deltoid and the scapular retractors as synergists. Scapular retraction is rightly marked assist, and no elbow or lumbar action is listed, consistent with the fixed slight elbow bend and stationary torso. Grip and wrist_stability fit dumbbells held in the hands. anti_flexion_spine fits the hinged torso, and elbow_stability fits the fixed elbow. The resulting muscle pattern is plausible and nothing biomechanically material is unsupported."
+    }
+  }
+}

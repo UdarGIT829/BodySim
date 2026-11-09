@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "65e183031b9cd1a528c5998d849589c229cecd6b35ef2f22bbd68b975e2bfe36",
+  "revision_id": "Double_Kettlebell_Jerk@65e183031b9c",
+  "exercise_id": "exercise.double_kettlebell_jerk.split_catch",
+  "source_catalog_id": "catalog.free_exercise_db.Double_Kettlebell_Jerk",
+  "mapped_muscles": 153,
+  "promoted_at_unix": 1794184743.6419275,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "2433fd2af1e3d5c3d9aabcfdebf3a8fa5b29f86cc27545684a2ff5ea6206c3e6",
+    "data/exercises/engagement_profiles.json": "9885cba99b650a4b3facb5736b77addd10ca6871efb40d362972e54c7f4a68e9",
+    "data/exercises/catalog/candidates.json": "ce887bc6e57d093aa562e1f0c328fe3d53d8997b96c745b1de13f4cf8bf62938",
+    "data/exercises/sources/free_exercise_db_media.json": "6c063e73a6a7824adfc01c5c2d276f5a65f57edb4e716568631229d7afc8c149"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "c9d4a7522925dd7609bd6b168efdee1cb680c5b4174a964c77089ef84b27fa8b",
+    "data/exercises/engagement_profiles.json": "3700d9cab5d1e044ea6da42479ee8b29bc2cd35351f307efb6af35fbaa67c243",
+    "data/exercises/catalog/candidates.json": "9c5878ff32716d94012d8de4df4df00bfbdf1ea54a675f2d844fbe977855cc4b",
+    "data/exercises/sources/free_exercise_db_media.json": "02b822fce841058537771dba3f0c0b4500959e6ebdf6a203579c33e0a5724451"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "b59e099d8d226d58afbe6c5e53e3fb0afa9a98aaed6251ac7aae26e2d3524496",
+  "status": "accepted",
+  "updated_at_unix": 1794184551.54974,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184541.59379,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The deliberate rotator-cuff and scapular control during the movement is not represented, so those muscles are explicit zeros. This is a minor omission and the pattern is defensible for an isolation exercise.",
+          "suggested_correction": "Optionally add glenohumeral_stabilization if the authors want rotator-cuff involvement shown. It is not required."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "'elbow_extension' is the correct primary label. No additional family is needed.",
+          "suggested_correction": "None."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrR9n4TGYfbDw9rn8uDx",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7517.0,
+          "output_tokens": 1055.0
+        }
+      },
+      "summary": "The definition fits the source instructions and both frames: a supine decline-bench EZ-bar triceps extension, with the bar over the chest and then lowered to the forehead. The upper arms stay roughly stationary and the elbow is the moving joint. Elbow extension as the only primary action correctly makes all three triceps heads primary on both sides, with anconeus as a synergist. Bilateral laterality, empty one_sided_limbs and sides 'working' are consistent, because the tracer counts both sides for a bilateral exercise. The demands are placed where the load is held: grip and wrist_stability for the bar in the hands, shoulder_position_hold for the fixed upper arms (clavicular deltoid leads), and elbow_joint_integrity for the elbow. Leaving out postural_stabilization and intra_abdominal_pressure is right, since the bench supports the trunk. Omitting radioulnar action is consistent with the static semi-pronated EZ-bar grip. The tracer output shows no materially wrong muscle pattern."
+    }
+  }
+}

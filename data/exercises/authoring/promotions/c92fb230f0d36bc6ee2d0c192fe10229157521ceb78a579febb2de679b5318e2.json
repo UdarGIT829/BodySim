@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "c92fb230f0d36bc6ee2d0c192fe10229157521ceb78a579febb2de679b5318e2",
+  "revision_id": "Axle_Deadlift@c92fb230f0d3",
+  "exercise_id": "exercise.axle_deadlift.conventional",
+  "source_catalog_id": "catalog.free_exercise_db.Axle_Deadlift",
+  "mapped_muscles": 93,
+  "promoted_at_unix": 1794179189.3756647,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "3986ccf909f0d8efa56d74e6e2c0479a70b417d819ac0e9868af34cb7f127e2d",
+    "data/exercises/engagement_profiles.json": "608be1d4578c5efec0b2c5ba654209f476433bf59925de6cb929655f49010701",
+    "data/exercises/catalog/candidates.json": "543a7f816b46f52ce9381daab45396a09c53f5b3544e2cb31bd0ea108942504a",
+    "data/exercises/sources/free_exercise_db_media.json": "74370db1fbd69f2d5d69c58606839c8572128a672ff27da1b212016afb3c6e04"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "9192a2037ba38f1d7fd39c1ff7d81a02d484e2b1ec19842441ed54fa73c87696",
+    "data/exercises/engagement_profiles.json": "bf84079aab3ab230bae98d2c94b78882d3fc260248d32860dd35edcb648c172e",
+    "data/exercises/catalog/candidates.json": "5a8f29f812cfd46fcd46df3afef0e804cbfb210228a3ca6fabe568348d939459",
+    "data/exercises/sources/free_exercise_db_media.json": "b0a724b480afced53c0c01a2207bd29d6dfa72cd43f060a8c2b7a0bdf1d7b8bf"
+  }
+}

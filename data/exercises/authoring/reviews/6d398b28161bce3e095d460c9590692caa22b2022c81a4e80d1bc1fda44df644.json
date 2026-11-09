@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "6d398b28161bce3e095d460c9590692caa22b2022c81a4e80d1bc1fda44df644",
+  "status": "accepted",
+  "updated_at_unix": 1794185053.78489,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794185042.01211,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.primary_joint_actions[hip_joint/extension]",
+          "finding": "Hip extension at primary emphasis puts the hamstrings at 0.7, so they count as primary movers. In a lunge the hamstrings act more as hip extensor assistants and knee-control muscles. This follows from the table weights rather than a choice the definition could change without understating gluteus maximus and adductor magnus.",
+          "suggested_correction": "Optional: keep as is. Reducing hip extension to assist would understate the gluteus maximus."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "Dumbbells hang at the sides, which loads the upper-trapezius and scapular region and the shoulder position slightly. No scapular or shoulder-position demand is listed. The effect is small and the omission is acceptable.",
+          "suggested_correction": "Optionally consider shoulder_position_hold or scapular_stabilization at low weight if heavy loads are expected."
+        },
+        {
+          "field_path": "movement_families",
+          "finding": "The family 'lunge' is correct. The kinetic chain label 'closed_chain' is also appropriate. Both are catalog labels only.",
+          "suggested_correction": "None needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRnfByyayLBQqi4Aq8Z",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9025.0,
+          "output_tokens": 1321.0
+        }
+      },
+      "summary": "The definition fits a two-dumbbell forward-step lunge, with right-leg reps and then left-leg reps. Hip extension and knee extension are the primary drivers, and ankle plantarflexion is an assist, which matches the instruction to push up through the heel. Bilateral laterality with empty one_sided_limbs is a reasonable representation of a set covering both legs. The tracer output is plausible: quadriceps, gluteus maximus and hamstrings are the main muscles, with adductor magnus, the calves and gluteus medius as synergists. Grip, knee control, patellar tracking, frontal-plane pelvic leveling and trunk posture are covered by stabilization demands. Nothing biomechanically material is unsupported or contradictory."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "dcaedb373e9cedd8d230d2784924065a854115f9e8c962a56988fbb6b6784f2d",
+  "revision_id": "Alternating_Kettlebell_Row@dcaedb373e9c",
+  "exercise_id": "exercise.alternating_kettlebell_row.bent_over_alternating",
+  "source_catalog_id": "catalog.free_exercise_db.Alternating_Kettlebell_Row",
+  "mapped_muscles": 132,
+  "promoted_at_unix": 1794104930.3883667,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "9ddf515a2e3a747dbad6c53bc860564e0033cf404ac88b9ee970909e4290a4f2",
+    "data/exercises/engagement_profiles.json": "a2e8ad21a98d38d12fb8612b4d3c2a547a59da3e1a0be3e59cfb71197a09d513",
+    "data/exercises/catalog/candidates.json": "9f42f33891c3dccd7cb3b3ad44d5c172deb259b65571aef448a62daa57007af8",
+    "data/exercises/sources/free_exercise_db_media.json": "beccb46130c615cab01317bc285facc2c0cd8727b735206bff7b4e2dcb38d4bd"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "3fa96e0f77fa164e1c32110dac803415ef6807788085a9e24e7261b4890bf96c",
+    "data/exercises/engagement_profiles.json": "0bada83d6549ae9d5f1ef3ca91e897091acafe0c239e2a7c33a3d5210ca05aa1",
+    "data/exercises/catalog/candidates.json": "32bd6663f79a5e2cf7ca602136aedaf2229efe21ed7d634c876a46d7953cd237",
+    "data/exercises/sources/free_exercise_db_media.json": "f63319b985eca0fc13516187fc40ae249e57bc6428f573b328b35ade42c82a65"
+  }
+}

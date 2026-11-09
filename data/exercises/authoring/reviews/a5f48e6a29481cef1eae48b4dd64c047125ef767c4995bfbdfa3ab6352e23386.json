@@ -1,0 +1,80 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "a5f48e6a29481cef1eae48b4dd64c047125ef767c4995bfbdfa3ab6352e23386",
+  "status": "changes_requested",
+  "updated_at_unix": 1794184833.93648,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184807.67485,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The assumptions say sideways trunk bending is not modeled. The right-hand frame clearly shows substantial lateral trunk flexion, with the torso tilted sideways toward the floor bell under an overhead load. Because lumbar_spine/lateral_flexion is missing, quadratus lumborum is a 0.105 stabilizer and the obliques are only 0.35 and 0.315 stabilizers. The pattern under-credits the trunk side-flexor and oblique work that defines a windmill and treats the core as a bystander.",
+          "suggested_correction": "Add lumbar_spine/lateral_flexion as a primary action so the quadratus lumborum and obliques are credited as movers or controllers of the side-bend."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The overhead elbow is held locked out under load throughout, but no action or demand credits the triceps, so all three heads are explicit zeros. An isometric lockout against a load needs the muscle credited. A demand alone (elbow_joint_integrity) would give only a trivial 0.07 to the medial head.",
+          "suggested_correction": "Add elbow_joint/extension with emphasis assist so the triceps register as synergists for the lockout."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "hip_hinge is the right primary family. The trunk side-bend and anti-rotation component could also be labeled core_rotation or trunk_lateral_flexion for catalog search; this is only a label.",
+          "suggested_correction": "Optionally add trunk_lateral_flexion to movement_families."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Frontal-plane hip control in the wide windmill stance is not represented, so gluteus medius is only a 0.2 synergist. This is minor and arguably covered by the hip actions.",
+          "suggested_correction": "Optionally consider pelvic_leveling_frontal or femoral_head_stabilization if the authors judge frontal hip control material."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "emphasis": "primary",
+          "joint": "lumbar_spine",
+          "movement": "lateral_flexion",
+          "op": "add_joint_action",
+          "sides": "working"
+        },
+        {
+          "emphasis": "assist",
+          "joint": "elbow_joint",
+          "movement": "extension",
+          "op": "add_joint_action",
+          "sides": "working"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRVPbuZVsAUUss3eV2L",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10556.0,
+          "output_tokens": 3133.0
+        }
+      },
+      "summary": "The two-bell windmill is correctly read as a bilateral hip hinge with one bell locked out overhead and one reached to the floor. The frames show the trunk side-bending toward the floor bell, but the definition lists no trunk lateral-flexion action. It also credits no triceps for the loaded, locked-out overhead elbow. Both gaps are expressible with the edit operations. The hinge, the demands and the labels are otherwise reasonable."
+    }
+  }
+}

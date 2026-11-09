@@ -1,0 +1,104 @@
+{
+  "additional_context": "",
+  "authoring_response": {
+    "assumptions": [],
+    "classification": "ambiguous",
+    "classification_reasons": [
+      "The exercise combines two distinct movements: a cable crunch over a Bosu ball performed to failure, then alternating side bends with the arms straight down at the sides.",
+      "The contact sheet shows only the crunch phase, so it cannot resolve the side-bend finisher.",
+      "The finisher's body position is unclear. 'Plank position' with the back off the Bosu, arms lowered, and reaching for the heels does not describe a clear setup or range of motion.",
+      "Including or omitting lumbar lateral flexion would materially change the traced muscles, especially the obliques and quadratus lumborum.",
+      "The two-phase structure cannot be faithfully represented as one definition without deciding which phase is the target."
+    ],
+    "field_confidence": {
+      "input_mode": "high",
+      "kinetic_chain_type": "medium",
+      "laterality": "medium",
+      "primary_joint_actions": "low",
+      "stabilization_demands": "medium",
+      "variant": "low"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "bosu_ball_cable_crunch_with_side_bends"
+      ],
+      "id": "exercise.bosu_ball_cable_crunch_with_side_bends.standard",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "primary_joint_actions": [],
+        "stabilization_demands": []
+      },
+      "laterality": "bilateral",
+      "movement_families": [],
+      "name": "Bosu Ball Cable Crunch With Side Bends",
+      "variant": "standard"
+    },
+    "questions_requiring_context": [
+      "Should the definition model only the cable crunch over the Bosu ball, or both the crunch and the side-bend finisher?",
+      "If the side bends are included, what is the body position (seated V-up, upright, or other) and is the cable still held, or are the arms free and unloaded?",
+      "Is the exercise performed for repetitions in both phases, or is the finisher a timed hold?"
+    ]
+  },
+  "candidate_trace_report": {},
+  "catalog_id": "catalog.free_exercise_db.Bosu_Ball_Cable_Crunch_With_Side_Bends",
+  "format_version": 1,
+  "provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1,
+      "frame_count": 2,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Bosu_Ball_Cable_Crunch_With_Side_Bends/0.jpg",
+        "Bosu_Ball_Cable_Crunch_With_Side_Bends/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [],
+      "classification": "ambiguous",
+      "classification_reasons": [
+        "The exercise combines two distinct movements: a cable crunch over a Bosu ball performed to failure, then alternating side bends with the arms straight down at the sides.",
+        "The contact sheet shows only the crunch phase, so it cannot resolve the side-bend finisher.",
+        "The finisher's body position is unclear. 'Plank position' with the back off the Bosu, arms lowered, and reaching for the heels does not describe a clear setup or range of motion.",
+        "Including or omitting lumbar lateral flexion would materially change the traced muscles, especially the obliques and quadratus lumborum.",
+        "The two-phase structure cannot be faithfully represented as one definition without deciding which phase is the target."
+      ],
+      "field_confidence": {
+        "input_mode": "high",
+        "kinetic_chain_type": "medium",
+        "laterality": "medium",
+        "primary_joint_actions": "low",
+        "stabilization_demands": "medium",
+        "variant": "low"
+      },
+      "proposed_definition": null,
+      "questions_requiring_context": [
+        "Should the definition model only the cable crunch over the Bosu ball, or both the crunch and the side-bend finisher?",
+        "If the side bends are included, what is the body position (seated V-up, upright, or other) and is the cable still held, or are the arms free and unloaded?",
+        "Is the exercise performed for repetitions in both phases, or is the finisher a timed hold?"
+      ]
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgrLTnfbFU6oX7qNCWMGz",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 16554.0,
+      "input_tokens": 1493.0,
+      "output_tokens": 798.0
+    }
+  },
+  "saved_at_unix": 1794180859.86286,
+  "source_id": "Bosu_Ball_Cable_Crunch_With_Side_Bends",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "authoring_draft",
+  "validation_errors": [
+    "proposed_definition: must be null unless classification is supported",
+    "classification: ambiguous proposals cannot advance to definition_candidate"
+  ]
+}

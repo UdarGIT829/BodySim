@@ -1,0 +1,78 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "081ddacb17bdf46ce9f6f1221128fc01aec42096a966a40315b04c032ffd99d1",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105403.21875,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105377.095,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[lumbar_spine/flexion]",
+          "finding": "The instructions never ask for spinal flexion. They say to extend through the hips, flex the shoulder to roll the bar overhead, and keep the arms extended. The frames show a long, rigid trunk in the extended position, and the core's job is to resist lumbar extension. Listing lumbar flexion as a primary mover makes rectus abdominis primary at 1.0 and both obliques synergists at 0.6. That is a wrong muscle pattern for a movement where the trunk is held isometrically against extension. The assumption that the trunk flexes against the load on return is not supported by the source.",
+          "suggested_correction": "Remove lumbar_spine/flexion as a primary action. Represent the core role through anti_extension_spine and intra_abdominal_pressure, plus anti_rotation_torso only if justified. Rectus abdominis and the obliques would then be stabilizers, which matches the anti-extension role."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The only family is trunk_flexion, which is not the dominant movement. The movement is driven by shoulder and hip excursion while the trunk stays rigid. Using trunk_flexion as the sole family mischaracterizes the exercise and contradicts the source cues. It also omits the shoulder-extension and hip components the definition itself claims.",
+          "suggested_correction": "Replace or supplement trunk_flexion with families that match the actual movement: shoulder extension/pulling and hip flexion/extension, with anti-extension core stabilization expressed through the stabilization demands."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[hip_joint/flexion]",
+          "finding": "Hip flexion is asserted as a primary mover on the return phase, giving psoas_major 1.0, iliacus 0.9 and rectus_femoris 0.7 as primary. The source describes the hips extending to roll out and gives no cue that the hip flexors drive the return. The frames show the hips moving from a flexed to a near-neutral line. The hip flexors mainly resist hip extension eccentrically, and this definition lacks the anti_extension_hip demand that would capture that role. This marks the hip-flexor primary pattern as insufficiently supported, and it also leaves the extension phase with no representation.",
+          "suggested_correction": "Justify hip flexion as a real return-phase mover, or mark it emphasis 'assist'. Add anti_extension_hip to reflect hip flexors resisting extension. Clarify in the assumptions how the rollout (hip extension, shoulder flexion) phase is handled."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "Closed_chain is debatable. The hands are fixed to a bar that rolls on the floor and the knees are fixed on the bench, so the chain is plausible. But the bar is a freely moving, rolling implement, so the classification is somewhat ambiguous. Confidence is medium.",
+          "suggested_correction": "Briefly justify the closed_chain choice (hands loaded against the floor via the bar, knees fixed on the bench) or reconsider it."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The arms stay locked out under heavy load, but elbow_stability or elbow_joint_integrity is absent. The elbows are a held joint, so these demands would add small isometric work in the triceps, anconeus and brachioradialis. shoulder_position_hold could also be considered for the overhead arm position.",
+          "suggested_correction": "Consider adding elbow_stability or elbow_joint_integrity, and glenohumeral_stabilization or shoulder_position_hold if supported by the frames."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[glenohumeral_joint/extension]",
+          "finding": "Glenohumeral extension is reasonable for the return phase and makes lats and teres major primary. However, the instructed rollout action is shoulder flexion, which the definition omits, so the model covers only half of the cycle. The posterior deltoid (scapular_spinal_part_of_deltoid, 0.7) as a primary mover is a side effect of the extension weighting and is questionable here.",
+          "suggested_correction": "Keep the return-phase extension and clarify the phase convention. Consider whether the posterior deltoid should be primary."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "Pelvic-floor muscles and pyramidalis appear as stabilizers through intra_abdominal_pressure. This follows how the tracer maps that demand and is not a definition error. Several have low or medium confidence.",
+          "suggested_correction": "None required; this is a tracer mapping property."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgYDdhhECUUSVgxpfKG",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 10245.0,
+          "output_tokens": 3278.0
+        }
+      },
+      "summary": "The definition has the right overall exercise identity (bilateral kneeling barbell rollout from a bench), and lats, teres major, hip flexors and grip are plausible contributors. However, the central trunk claim is unsupported: lumbar flexion as a primary action and trunk_flexion as the sole movement family contradict the source. The source and frames show a rigid, neutral trunk that resists extension while the hips and shoulders move. This pushes rectus abdominis to primary at 1.0 and the obliques to synergist at 0.6, which misrepresents an anti-extension exercise. The hip-flexor and family claims are also weakly supported."
+    }
+  }
+}

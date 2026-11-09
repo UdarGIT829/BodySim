@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "1cc2169672801910b6d7fa3b4814b9a633d534e5174222b4fa69ec4ad5c530d2",
+  "status": "accepted",
+  "updated_at_unix": 1794183105.98442,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183092.91548,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.synergist[muscle.gluteus_medius]",
+          "finding": "Gluteus medius is only a 0.2 synergist, from its minor hip-extension weight. The pelvic_leveling_frontal demand would give it 0.35 x 1.0, but the tracer uses the higher action score instead. Frontal-plane pelvic control in a lunge is real but modest, so this is a tracer limitation rather than a definition error.",
+          "suggested_correction": "No change needed. Optionally add hip_joint/abduction as an assist action if a higher gluteus medius coefficient is wanted."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Hip flexion of the trailing leg during the step-through is not listed, so the hip flexors (psoas, iliacus) are explicit zeros. This is a minor accompanying motion, and omitting it is defensible.",
+          "suggested_correction": "Optionally add hip_joint/flexion as an assist with sides working if the swing-leg phase should be represented."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[0].sides",
+          "finding": "Actions use sides 'working' while laterality is bilateral. This traces correctly to both legs, but the label is slightly redundant with the alternating pattern.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "The chain is labelled closed_chain, but the step-through includes a brief swing phase with the foot off the floor. Overall the exercise is stance-dominant, so the label is acceptable.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPJz43KqJKevEgDkYe6",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 6974.0,
+          "output_tokens": 1561.0
+        }
+      },
+      "summary": "The definition matches the source and the contact sheet: a bodyweight alternating walking lunge with hands on hips, an upright torso, a forward step, the rear knee lowered toward the floor, a drive through the lead heel, then a step through. Hip and knee extension are rightly primary and ankle plantarflexion is rightly an assist. Bilateral laterality with empty one_sided_limbs is sensible because both legs alternate as the lead leg, and the traced muscles appear symmetrically on both sides. The tracer output is plausible: glutes, quadriceps, hamstrings and adductor magnus lead, the calves assist, and the trunk and pelvis stabilize. No biomechanically material claim is unsupported or contradicted."
+    }
+  }
+}

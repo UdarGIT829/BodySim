@@ -1,0 +1,73 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "feed64260ad7cd7ac07947b0b04e57b1d8f90a461c241662bcc0d79da33162bf",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105491.86901,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105464.88702,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands[grip]",
+          "finding": "The barbell rests on the upper back (shelf across the upper back/shoulders in both frames); the hands only steady the bar and do not carry the load. `grip` is for loads held in the hands. It engages about 32 muscles across both hands and forearms (flexor_digitorum_profundus 0.35, flexor pollicis, thenar and hypothenar muscles, interossei, lumbricals). That is a materially wrong muscle pattern for a back squat variant.",
+          "suggested_correction": "Remove `grip`. The bar-on-back load is covered by `scapular_retraction_stability`, which is already listed."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands[wrist_stability]",
+          "finding": "The wrists are not loaded against a hand-held weight. The bar sits on the back, so `wrist_stability` is unsupported. It engages the wrist flexors and extensors on both arms (extensor_carpi_radialis_brevis 0.28, flexor_carpi_radialis 0.21, ulnar heads and others) as stabilizers.",
+          "suggested_correction": "Remove `wrist_stability`. Keep the shelf demand `scapular_retraction_stability` for the upper-back bar position."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The assumptions deliberately omit lead-leg hip adduction. In a side split squat the lead leg ends the rise abducted and flexed at the bottom, and it must return the body toward the midline. That is a real, load-moving action. The output gives adductor_longus, adductor_brevis, pectineus, adductor_minimus and gracilis no action score; they are zero or only weakly engaged. Only adductor_magnus reaches synergist level, through hip extension.",
+          "suggested_correction": "Add `hip_joint/adduction` (the working-side lead leg, possibly with `emphasis: \"primary\"` or `\"assist\"` as the author judges), so the adductors that drive the return are represented."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.primary[long_head_of_biceps_femoris, semimembranosus, semitendinosus]",
+          "finding": "The hamstrings come out primary (0.7) only because the table weights hip extension at 0.7 for them. This is a tracer scoring pattern. The movement is quad- and glute-dominant, so it is not a definition error.",
+          "suggested_correction": "No change is needed beyond the blocking corrections. If the authors prefer, treat hip extension for the hamstrings as a deliberate synergist role."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "`squat` alone is acceptable, but the lateral lunge pattern with a single bent lead leg and a straight trailing leg could arguably also be tagged as lunge/split-stance. This is a classification nuance and not a blocking issue.",
+          "suggested_correction": "Consider adding the split-stance or lunge family if the vocabulary has one."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The trailing straight leg is under a stretch load, but only the generic bilateral demands cover it. Pelvic frontal-plane control (`pelvic_leveling_frontal`) is not included, though this is minor in a wide stance.",
+          "suggested_correction": "Optionally consider `pelvic_leveling_frontal` or `femoral_head_stabilization` if the authors want to represent lead-leg frontal-plane hip control."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgegnFfcn3tcsQgSFzT",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 9778.0,
+          "output_tokens": 3280.0
+        }
+      },
+      "summary": "The core identity is supported: a back-loaded barbell, a wide stance, and a lunge to one side, with the lead hip and knee extending on the rise. Laterality and closed-chain classification are reasonable. However, `grip` and `wrist_stability` are demands for loads held in the hands, and the frames show the bar resting on the upper back. They flood both forearms and hands with stabilizer coefficients, and the muscle pattern is materially wrong as a result. The lead-leg hip adduction on the return is also omitted, so the adductors outside adductor magnus are explicit zeros."
+    }
+  }
+}

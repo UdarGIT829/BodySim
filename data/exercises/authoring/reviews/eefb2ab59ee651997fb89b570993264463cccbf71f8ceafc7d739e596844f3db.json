@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "eefb2ab59ee651997fb89b570993264463cccbf71f8ceafc7d739e596844f3db",
+  "status": "accepted",
+  "updated_at_unix": 1794184076.84468,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184060.40851,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The catch is a front-rack position with the elbows held up and the bar on the shoulders. No demand credits the isometric anterior deltoid hold, such as shoulder_position_hold. The rack hold is brief compared with the pull and recovery, so this is minor.",
+          "suggested_correction": "A future revision could add shoulder_position_hold to reflect the elbows-up rack position."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "The spinal erectors appear only as low-coefficient stabilizers (about 0.25 to 0.3), although they work hard in the first pull. This comes from crediting them through anti_flexion_spine, which fits the instruction to keep the back angle, and is consistent with how the tracer treats isometric spinal work elsewhere.",
+          "suggested_correction": "No change needed. An optional lumbar_spine/extension assist could raise erector credit, but it is not required."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "closed_chain is a catalog label and is acceptable because the feet stay planted, apart from a possible small jump at full extension. It does not change the traced muscles.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQYJM6ncmMVYEL97nfs",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 11447.0,
+          "output_tokens": 1906.0
+        }
+      },
+      "summary": "The definition fits a bilateral barbell clean from blocks. The frames show a hip-hinged start with an overhand grip on a bar resting on blocks, then the top of the pull with the shoulders shrugged and the elbows out. The bar is near the upper thighs and the legs are extended. Hip and knee extension as primary actions give glutes, hamstrings and quadriceps as primary movers. The shrug as primary gives the upper trapezius and levator scapulae, and calf plantarflexion and the arm actions are correctly weighted as assists. The held back angle is credited through anti_flexion_spine, with bracing, grip and knee stability as demands. This produces a plausible tracer profile, with no biomechanically material unsupported claim and no materially wrong muscle pattern."
+    }
+  }
+}

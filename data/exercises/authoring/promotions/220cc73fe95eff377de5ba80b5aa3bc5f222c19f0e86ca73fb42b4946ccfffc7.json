@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "220cc73fe95eff377de5ba80b5aa3bc5f222c19f0e86ca73fb42b4946ccfffc7",
+  "revision_id": "Cross_Over_-_With_Bands@220cc73fe95e",
+  "exercise_id": "exercise.band_crossover.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Cross_Over_-_With_Bands",
+  "mapped_muscles": 122,
+  "promoted_at_unix": 1794184301.132663,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "d58747a2f225d849ed51a926b4207f786328ccfd19e02e36a09b229935bdc4eb",
+    "data/exercises/engagement_profiles.json": "21de38874e1440dfa3d8e25d681805cbd718d239d01b1b3e033514e54d0bbbca",
+    "data/exercises/catalog/candidates.json": "adc7e57d3e6306807f3be184ecc5bd1913fd9412975988df79133aba81de9dee",
+    "data/exercises/sources/free_exercise_db_media.json": "f34b3eab2d4a542a1e40af7253a05db15c7742514f77bfd3c8654909382c4778"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "7b94456d2dba7d291ad6f4be2355de5fb4bb07d83f8680ee342f39463d7c7465",
+    "data/exercises/engagement_profiles.json": "4dc2c466e1cc87f4dc42dada7401bc2ef803f02ab8addb71837cb8678db86b9b",
+    "data/exercises/catalog/candidates.json": "735ac547a57753c0a49c67e4f1463d5440c294805fdf5eecb595d5ba8234579b",
+    "data/exercises/sources/free_exercise_db_media.json": "bdeb801cb00aa1139504e9b2c0f1c7290a150df0f25d8b2ec5ac2f0573dd3309"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "77c3b9bbb56733a19c55b6d4d5e33a0d0b9b13759b165347cb138c1cc2949549",
+  "status": "accepted",
+  "updated_at_unix": 1794184327.06376,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184317.33413,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.synergist[psoas_major]",
+          "finding": "Psoas major appears as a 0.2 synergist because the table lists it under lumbar_spine/flexion. This comes from the tracer's weighting. With feet flat and no hip flexion action in the definition, no authoring choice would change it, so it is a tracer limitation.",
+          "suggested_correction": "None required. Treat this tracer limitation the same way in every review."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "open_chain is a defensible label because the feet are not loaded against a fixed support. The feet are in contact with the floor, so some reviewers might prefer closed_chain. This label does not change the traced muscles.",
+          "suggested_correction": "Keep open_chain, or note that the feet-on-floor contact is incidental."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQsFRGXjP1SEYwpxFnP",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 4124.0,
+          "output_tokens": 1085.0
+        }
+      },
+      "summary": "The frozen definition matches the source instructions and both frames: a bilateral, bodyweight supine crunch with knees bent, feet flat and arms held overhead in line with the head. lumbar_spine/flexion as the primary action correctly gives rectus abdominis as primary and the obliques as synergists. shoulder_position_hold is a reasonable way to credit the arms held overhead against gravity as the torso curls up. It yields only low-coefficient shoulder stabilizers, with the clavicular deltoid highest at 0.35, and no grip or arm-joint muscles are wrongly engaged. The tracer profile has no materially wrong muscle pattern."
+    }
+  }
+}

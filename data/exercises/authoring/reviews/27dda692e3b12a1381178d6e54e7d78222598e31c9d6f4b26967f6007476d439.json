@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "27dda692e3b12a1381178d6e54e7d78222598e31c9d6f4b26967f6007476d439",
+  "status": "accepted",
+  "updated_at_unix": 1794183951.37646,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183935.52154,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.primary_joint_actions",
+          "finding": "There is no ankle plantarflexion action, so soleus and the gastrocnemii are explicit zeros. The assumptions justify this by the 'drive through the heels' cue. Calf involvement in a clean-style pull is small but nonzero, so an assist-level plantarflexion would be defensible. Omitting it is a reasonable judgment call.",
+          "suggested_correction": "Optionally add ankle_joint/plantarflexion with emphasis assist if the author wants calf contribution represented."
+        },
+        {
+          "field_path": "kinematic_profile.primary_joint_actions[glenohumeral_joint/extension]",
+          "finding": "The table gives glenohumeral extension some pectoralis major weight (sternocostal and abdominal heads), so pectoralis major appears as a weak synergist (0.16–0.2). Pec involvement in a deadlift is negligible. This is a side effect of how the tracer maps the action that credits the lats and teres major, which hold the bar close. It is not a definition error.",
+          "suggested_correction": "None required. Treat as a tracer limitation."
+        },
+        {
+          "field_path": "movement_families",
+          "finding": "The family labels hip_hinge and olympic_lift are acceptable. The setup is squat-like with substantial knee extension in the first pull, but no explosive pull, shrug or catch is performed, so olympic_lift is a loose search label here. Labels do not change the traced muscles.",
+          "suggested_correction": "Optionally consider whether the hip_hinge label alone is sufficient."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQP6QGc1YLb2rgFQYeT",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9887.0,
+          "output_tokens": 2004.0
+        }
+      },
+      "summary": "The frames and instructions show a bilateral conventional barbell pull from the floor to hip and knee lockout. The definition fits this: hip and knee extension as primary movers, bilateral laterality, closed chain, and hip_hinge plus olympic_lift as labels. The glutes, hamstrings, adductor magnus and quadriceps are primary or synergist as expected. The spinal erectors and abdominals are stabilizers through anti_flexion_spine and intra_abdominal_pressure, which suits a rigid neutral spine. Grip is credited with the load held in the hands. The assisting scapular retraction and glenohumeral extension credit the traps, rhomboids and lats that keep the straight arms and bar close. No biomechanically material claim is unsupported or contradicted, and none of the traced muscle patterns is materially wrong. The findings below are minor and non-blocking."
+    }
+  }
+}

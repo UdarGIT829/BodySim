@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "036719a83d36895ea8e15b48e7a971fa400537583c0c1436e7af55e7600bd1fd",
+  "status": "accepted",
+  "updated_at_unix": 1794184103.37795,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184092.7339,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "scapular_stabilization is a general demand. With the shoulder blades pinned against the bench, scapular_retraction_stability would credit the rhomboids and mid-trapezius somewhat more specifically. The current choice still engages these muscles at modest stabilizer levels and is not materially wrong.",
+          "suggested_correction": "Optionally consider adding scapular_retraction_stability alongside or instead of scapular_stabilization in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The labels horizontal_push and elbow_extension fit. Labels do not change the traced muscles, and horizontal_push is the closest primary family.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQagfbeUz9x6v2htB86",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9476.0,
+          "output_tokens": 1341.0
+        }
+      },
+      "summary": "The definition matches the source instructions and the frames. A bilateral flat-bench barbell press is shown with a close grip, elbows tucked, and a descent to the mid chest. Elbow extension is primary and ranks the three triceps heads as primary movers, matching the triceps emphasis. Horizontal adduction is primary and flexion is assist, which credits the sternocostal and clavicular pectoralis major as primary and the anterior deltoid as a synergist. This is the right pattern for a press, since the chest still contributes heavily to a close-grip press. Protraction as an assist is a reasonable minor accompanying motion. Grip and wrist_stability fit a bar held in the hands, glenohumeral_stabilization covers the rotator cuff, and omitting postural and spinal demands is consistent with the bench supporting the back and hips. The bilateral setup with empty one_sided_limbs is correct."
+    }
+  }
+}

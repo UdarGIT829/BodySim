@@ -1,0 +1,58 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "6756ffa47ac388e857dbefefba6f3a89397e73a5a36eef68b22f3ae09ac5765a",
+  "status": "changes_requested",
+  "updated_at_unix": 1794104966.63081,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794104950.4303,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Only elbow_joint/extension is listed. In frame 1 the upper arms angle down and forward from the shoulders with the bar near the chest. In frame 2 the arms are straight and roughly horizontal, with the bar out in front of the head. The upper arm therefore moves through a clear arc of shoulder flexion against gravity, so the 'upper arms stay roughly fixed' assumption does not match the frames. The 'arms parallel to the ground' cue describes the end position, not a fixed upper-arm angle. Omitting glenohumeral_joint/flexion leaves the anterior deltoid and clavicular pectoralis only as weak isometric stabilizers.",
+          "suggested_correction": "Add glenohumeral_joint/flexion to primary_joint_actions, probably with emphasis 'assist' or 'primary' as judged from the range of motion. Keep elbow_joint/extension as the main action."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.assumptions",
+          "finding": "The assumption that glenohumeral movement is minimal and the shoulder works only isometrically conflicts with the frames. The source tags list shoulders as primary, but those tags are untrusted and were not used as evidence here.",
+          "suggested_correction": "Revise the assumption to say the shoulder flexes through part of the range, with the bar travelling forward and up while the elbows extend."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "scapular_stabilization pulls in minor muscles such as subclavius, pectoralis minor and levator scapulae. It also gives the scapular retractors only low stabilizer coefficients, although the chest-supported scapulae must hold position under the load. This is a modest imprecision and does not make the pattern materially wrong.",
+          "suggested_correction": "Consider scapular_retraction_stability, or scapular_anchoring, in place of or alongside scapular_stabilization, depending on what the frames show."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpfzmM2qn5h22hnsEWgR",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 8341.0,
+          "output_tokens": 1951.0
+        }
+      },
+      "summary": "Elbow extension as the main action, bilateral laterality, open chain, chest-supported setup, and grip and wrist demands are all supported. The claim that the upper arms stay fixed and glenohumeral movement is minimal is not supported by the frames. The shoulder flexion that drives the bar from under the chest to out in front of the head is missing from the actions, so the deltoid and shoulder-flexor pattern is understated."
+    }
+  }
+}

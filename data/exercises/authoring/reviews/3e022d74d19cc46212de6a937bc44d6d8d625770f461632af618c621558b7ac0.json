@@ -1,0 +1,65 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "3e022d74d19cc46212de6a937bc44d6d8d625770f461632af618c621558b7ac0",
+  "status": "changes_requested",
+  "updated_at_unix": 1794183513.80461,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183494.54126,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "`grip` is listed, but the assumptions explicitly state grip is omitted as a minor demand. This contradiction puts finger flexors and hand intrinsics into the output as stabilizers, with flexor digitorum profundus at 0.35 and many other hand muscles. That is out of proportion for a rope held against the shoulders while the trunk does the work.",
+          "suggested_correction": "Remove `grip` from stabilization_demands so the definition matches its stated assumption. Keep `shoulder_position_hold` for the upper arms held fixed at the shoulders and `postural_stabilization`."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "The closed_chain label is debatable. The feet are planted but the distal hands move the load against a cable, and the trunk flexion is the movement. This is only a catalog label and does not affect the traced muscles.",
+          "suggested_correction": "Consider open_chain, or leave closed_chain as is, since the pelvis is fixed on the bench and the feet are planted."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "`postural_stabilization` gives small stabilizer credit to the legs and posterior chain: soleus, gluteus maximus, quadriceps and hamstrings at about 0.1 to 0.28. This is plausible for anchoring the body on the bench against the cable pull, but it is generous for a seated exercise. The erector spinae credit is reasonable for the eccentric control from the slightly extended start.",
+          "suggested_correction": "Acceptable as is. Optionally review whether the leg credit is appropriate for a seated trunk exercise."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "demand": "grip",
+          "op": "remove_stabilization_demand"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPpbL9YuceYHmaqjiE7",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8321.0,
+          "output_tokens": 2344.0
+        }
+      },
+      "summary": "The core action is right: lumbar_spine/flexion for a seated high-pulley rope crunch with stationary hips gives rectus abdominis as primary and both obliques as synergists, which matches the frames and instructions. However, the definition contradicts its own assumptions about grip. The assumptions say grip is a minor demand and is omitted, yet `grip` is listed in stabilization_demands. As a result, the tracer engages about 32 hand and forearm muscles (flexor digitorum profundus at 0.35, the same as the clavicular deltoid), and these come from a demand the author said was left out. The frames show the rope held at the shoulders and face, so the load acts through the trunk rather than through a gripped hand."
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "5f3fbb84548943e0f357661aaf7ae068840bbab9daffb71d1bb5cded7e5b25f5",
+  "status": "accepted",
+  "updated_at_unix": 1794185085.84608,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794185074.88035,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "shoulder_raise is a reasonable primary label. The pattern also resembles a horizontal-pull-type reverse fly, but families are catalog labels only and do not change the traced muscles.",
+          "suggested_correction": "Optionally consider adding horizontal_pull as a secondary label in a future revision. This is not required."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The elbows are held isometrically in slight flexion and the triceps and brachioradialis probably do minor isometric work. This is a small contribution and its omission does not materially change the profile.",
+          "suggested_correction": "Optionally add a low-weight elbow_stability demand if finer fidelity is wanted."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRq69Ubv84fiDQR8KTD",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7545.0,
+          "output_tokens": 1319.0
+        }
+      },
+      "summary": "The frames show a bilateral, chest-supported dumbbell rear lateral raise on a slightly inclined bench. The arms move from hanging to a horizontal, abducted position with the elbows fixed in slight flexion. Glenohumeral horizontal abduction as the primary action correctly makes both posterior deltoids the primary movers. Infraspinatus, teres minor and the acromial deltoid appear as synergists, which is plausible. Scapular retraction marked as an assist credits the rhomboids and transverse trapezius without making them primary. Grip and wrist_stability fit dumbbells held in the hands. The omission of postural and trunk demands is justified because the chest and legs are supported. The bilateral laterality, empty one_sided_limbs, open_chain label and shoulder_raise family are all reasonable. The closing 'switch to the other arm' line contradicts the frames and is correctly treated as boilerplate. The tracer output has no materially wrong muscle pattern."
+    }
+  }
+}

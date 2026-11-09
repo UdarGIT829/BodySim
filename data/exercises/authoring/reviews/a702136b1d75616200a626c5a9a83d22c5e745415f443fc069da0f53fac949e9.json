@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "a702136b1d75616200a626c5a9a83d22c5e745415f443fc069da0f53fac949e9",
+  "status": "accepted",
+  "updated_at_unix": 1794179447.37986,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179432.16959,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The quadriceps and calves, which hold the legs rigid on the toes, are not engaged. No available leg demand maps cleanly to a prone plank, so this is mostly a vocabulary limitation, and the pelvis and hip holding is credited through `pelvic_alignment` and `anti_extension_hip`.",
+          "suggested_correction": "No change required. A future revision could credit knee extension or ankle plantarflexion as assist actions if a rigid-leg plank is judged to need them."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "`core_rotation` is included even though the assumptions treat the visible body rotation as compensation. The family's description covers resisting rotation, which is what `anti_rotation_torso` models, so the label is acceptable. It only affects catalog grouping and not the traced muscles.",
+          "suggested_correction": "Optionally keep `core_rotation` as a secondary label for the anti-rotation demand, or drop it if the catalog prefers a pure push and anti-extension grouping."
+        },
+        {
+          "field_path": "proposed_definition.field_confidence.laterality",
+          "finding": "Laterality is correctly `unilateral` with the right arm working. The hip and trunk demands remain bilateral, which is appropriate for a symmetric plank base and does not misrepresent the free side.",
+          "suggested_correction": "None."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJf8hRdkpVuNWH78HRz",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8113.0,
+          "output_tokens": 1853.0
+        }
+      },
+      "summary": "The definition matches the source and frames: a one-arm bodyweight push-up from a plank with the free hand behind the back and a wide foot base. The primary movers (elbow extension and shoulder horizontal adduction on the working side) give right-side triceps and pectoralis major as primary, with anterior deltoid as synergist. The assist-weighted scapular protraction correctly puts serratus anterior and pectoralis minor in the synergist role. The `one_sided_limbs: [\"arm\"]` setting now confines the glenohumeral, scapular and wrist demands to the working arm, so the earlier objection about loaded free-arm muscles is resolved. Trunk and hip demands are bilateral, which suits a rigid plank that resists rotation and extension. Remaining concerns are minor and non-blocking."
+    }
+  }
+}

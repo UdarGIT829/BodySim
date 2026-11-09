@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "58fc29bbc4bd7709fd40e2ad39b939d6a86e79d8ec5a78d4ee33acfd1ec6bd59",
+  "revision_id": "Barbell_Squat_To_A_Bench@58fc29bbc4bd",
+  "exercise_id": "exercise.barbell_squat.to_bench",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Squat_To_A_Bench",
+  "mapped_muscles": 91,
+  "promoted_at_unix": 1794179431.1888137,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "4d76d36834eb9330a6774c248212c7474cd770e577f323e1e13a8a33d0c6eb9a",
+    "data/exercises/engagement_profiles.json": "b0d8c53249b6813876423c2eef631040c858d6258ffae503d5e958183a31cc7d",
+    "data/exercises/catalog/candidates.json": "6aa31af08b3c38379306ed6549a9261a94f24fd04e75ea227c10ad3ae00d8dd1",
+    "data/exercises/sources/free_exercise_db_media.json": "eee4c8cde0782d9138d4be9bcf060a4e9da75d55507ede0c204a1e200dcd0ecb"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "ea1fab69ff47c52baf36a7a8419882b86929701f7e7c6ee590b7a22812e6285f",
+    "data/exercises/engagement_profiles.json": "fd80824c6b3d06b8a765acfd87c6df269ea241e20f68f92b1831c31fca6d3ec3",
+    "data/exercises/catalog/candidates.json": "614ea6c18179dd204f045890872fa12f895b006ed41ded7548f0040d00f4699d",
+    "data/exercises/sources/free_exercise_db_media.json": "a70a123edd76d5dd586f847f1ec0938674db8e580ece397141e122eed96d2e19"
+  }
+}

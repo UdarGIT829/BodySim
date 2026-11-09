@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "1cc2169672801910b6d7fa3b4814b9a633d534e5174222b4fa69ec4ad5c530d2",
+  "revision_id": "Bodyweight_Walking_Lunge@1cc216967280",
+  "exercise_id": "exercise.walking_lunge.bodyweight_alternating",
+  "source_catalog_id": "catalog.free_exercise_db.Bodyweight_Walking_Lunge",
+  "mapped_muscles": 68,
+  "promoted_at_unix": 1794183106.326534,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "b82fbec73c8b04ddbff46ad3d227572dd7b3f87d534a924e4531f907297fa2b8",
+    "data/exercises/engagement_profiles.json": "987597dc42bc77b4be196b42285cf9fb5dfb5d314df8e9354f5a5b463cd0748f",
+    "data/exercises/catalog/candidates.json": "619ea2eea9668a8f7124168302404de672cb858bd71f278678b207f406a0af18",
+    "data/exercises/sources/free_exercise_db_media.json": "521c675853e2d9998cc952a92f25f0fd1be66267e17cd33c03d5c27e0e2dfe13"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "64b4b50a04c035a859391170cf709e65d6c75084eda774d68c04bef6c9063251",
+    "data/exercises/engagement_profiles.json": "18a2baca0b312a7af97e20be8c668ebf9c120ea2d4cc24a79b5ccdc1ae9e7938",
+    "data/exercises/catalog/candidates.json": "83c2b2f174303622778daff7e380dabb75b8507511114b5d6b6bcc3f503ab1d8",
+    "data/exercises/sources/free_exercise_db_media.json": "74a880978eeb573c588e7ab5bbfdb8ad9aeaf9bf847762320c3e929c8578c4fe"
+  }
+}

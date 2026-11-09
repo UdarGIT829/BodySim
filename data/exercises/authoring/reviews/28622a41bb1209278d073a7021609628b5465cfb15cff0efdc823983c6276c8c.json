@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "28622a41bb1209278d073a7021609628b5465cfb15cff0efdc823983c6276c8c",
+  "status": "accepted",
+  "updated_at_unix": 1794183544.22515,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183533.62648,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The shoulder_raise family is a loose fit for what is biomechanically a bent-over horizontal abduction (rear-delt raise). The vocabulary has no better family, and catalog labels do not change the traced muscles.",
+          "suggested_correction": "No change is required. Keep shoulder_raise, or add horizontal_pull only if the catalog convention for rear-delt work calls for it."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "wrist_stability could also be added, since the wrist holds neutral against the cable load in the hands. Its omission is minor and does not distort the primary pattern.",
+          "suggested_correction": "Optionally add wrist_stability in a future revision."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPsUE5y4KfHuaRTiZuX",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 6885.0,
+          "output_tokens": 1257.0
+        }
+      },
+      "summary": "The definition matches the source instructions and frames. Both frames show a seated, torso-supported, bent-over position, with the arms rising from a hanging start to roughly shoulder height at the sides. Both arms work symmetrically with a fixed slight elbow bend. Glenohumeral horizontal abduction as the primary action correctly makes the posterior deltoid the primary mover, with infraspinatus, teres minor and acromial deltoid as synergists. Scapular retraction as an assist action credits the rhomboids and middle trapezius as synergists without making them primary, which suits a rear-delt raise. The fixed elbow is credited through elbow_stability and the handle hold through grip. The torso rests on the thighs, so no spinal action, postural demand or bracing demand is needed. Laterality, one_sided_limbs and the open_chain label are all correct. The tracer output shows no materially wrong muscle pattern."
+    }
+  }
+}

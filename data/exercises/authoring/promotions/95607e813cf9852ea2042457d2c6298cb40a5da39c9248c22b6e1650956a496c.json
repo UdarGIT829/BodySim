@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "95607e813cf9852ea2042457d2c6298cb40a5da39c9248c22b6e1650956a496c",
+  "revision_id": "Barbell_Full_Squat@95607e813cf9",
+  "exercise_id": "exercise.barbell_full_squat.back_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Full_Squat",
+  "mapped_muscles": 77,
+  "promoted_at_unix": 1794105275.6592758,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "4af37a0b6f45612a7b49562172fbd94a051b4ee4aaa332210a5edb0ac1a2e7e4",
+    "data/exercises/engagement_profiles.json": "f939e5f458702801b99d6d2a810234bbe219ddecaaaef3155383300261cdc1ea",
+    "data/exercises/catalog/candidates.json": "d0185f2da9f2bfeb1ec99770636e352da44ebfe1c3475d307f2e950b96144f02",
+    "data/exercises/sources/free_exercise_db_media.json": "ee224f85f31fed2a8ef37633858e47c5bc6c205fb9c29a6da9c63aa36123d4b7"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "698f6942713e2647f17af4de5011b5b5252f0c0bf638d811e024f1d578bcd594",
+    "data/exercises/engagement_profiles.json": "ea9d1b3b522a8dd5ef3ff8822de7d6e9bf832de1eb92820ab9f94f85191d07e3",
+    "data/exercises/catalog/candidates.json": "6bad3fbb492ffa623ffbf808126e77ba38e067b6aa61f4c6c4625853dfd6b43f",
+    "data/exercises/sources/free_exercise_db_media.json": "35417a96f2b0da588ea5ed49a543cd7f06487df2ba78d3f1b496e5ee2eb94106"
+  }
+}

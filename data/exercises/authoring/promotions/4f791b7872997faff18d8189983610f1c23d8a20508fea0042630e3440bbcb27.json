@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "4f791b7872997faff18d8189983610f1c23d8a20508fea0042630e3440bbcb27",
+  "revision_id": "Bent_Over_One-Arm_Long_Bar_Row@4f791b787299",
+  "exercise_id": "exercise.long_bar_row.bent_over_one_arm",
+  "source_catalog_id": "catalog.free_exercise_db.Bent_Over_One-Arm_Long_Bar_Row",
+  "mapped_muscles": 85,
+  "promoted_at_unix": 1794182881.6022575,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "5664e6702ec878439c0bb28ba5c56ff0ef11c84a54fe5f9622442261adc70fb9",
+    "data/exercises/engagement_profiles.json": "6efb86a93a803daefac1e23139b2fa2de76976ebbf993a66c413db369bdb7964",
+    "data/exercises/catalog/candidates.json": "61cbec735cf1bc61e192737379ed87467147cebd6144075ebec00f7c58da2359",
+    "data/exercises/sources/free_exercise_db_media.json": "efc12fe175a2b1a62bdeac1ed8675e2bdab53fc5537539c0939e5df5f3bafa4f"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "2fe56a9b34e3afe0725d872030d121522a79c454d9ba785ae6ae4d0e1c7edb10",
+    "data/exercises/engagement_profiles.json": "9ca24ffd8fefe448f9bc39f56022a067c1771c72bc10b6017b5748a68d14db70",
+    "data/exercises/catalog/candidates.json": "d85fbeba38269f3f248cc8120f862fcd65524f7073d31292865ca3099d0964ce",
+    "data/exercises/sources/free_exercise_db_media.json": "687e85eff61baf14a5934bf8b39950abe958a354140ff0f924a4a262eca5452d"
+  }
+}

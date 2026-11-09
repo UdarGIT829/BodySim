@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "2be91181ee9e3653f9a2104dfbb81a07726ecf47a930fbb96e76c7894890fc67",
+  "revision_id": "Bent-Arm_Barbell_Pullover@2be91181ee9e",
+  "exercise_id": "exercise.barbell_pullover.bent_arm_flat_bench",
+  "source_catalog_id": "catalog.free_exercise_db.Bent-Arm_Barbell_Pullover",
+  "mapped_muscles": 76,
+  "promoted_at_unix": 1794182805.3788724,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "c54412ad4493c24b526a954f2dd29596c2091264c5d3494d19ae36b3d0344eac",
+    "data/exercises/engagement_profiles.json": "4f5239cc9d5ab00f9ae6c86409d9587e775c8a88ce1edf26d3eed5ccec1e84a8",
+    "data/exercises/catalog/candidates.json": "94f2715132853bdc5a589b59b54906e886fd928390f2e336299c0cc306f4f06f",
+    "data/exercises/sources/free_exercise_db_media.json": "27eb9f322025cb5190abb652afe19814996a325788df5afc5a7401d5124d176b"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "922955f83ab8722673c1989ec55260d2aacdbeae0d8f29b4e9b04b75f068ae5c",
+    "data/exercises/engagement_profiles.json": "47ead7f35a91dfcb19e8e4ea7368c9990d5350e2d336db9b573e89cc05c5f4c1",
+    "data/exercises/catalog/candidates.json": "777b549bbf3a379784075fca0bc305d2b0aa001a3aef99192a85e781cf913f17",
+    "data/exercises/sources/free_exercise_db_media.json": "46cf4b0126e700028cc8c50a7411d8da185a18a9335a3561fe5554244e777f5c"
+  }
+}

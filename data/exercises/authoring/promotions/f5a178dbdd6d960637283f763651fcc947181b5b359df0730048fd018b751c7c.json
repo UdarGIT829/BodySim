@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "f5a178dbdd6d960637283f763651fcc947181b5b359df0730048fd018b751c7c",
+  "revision_id": "Cable_Incline_Pushdown@f5a178dbdd6d",
+  "exercise_id": "exercise.cable_incline_pushdown.incline_bench_straight_bar",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Incline_Pushdown",
+  "mapped_muscles": 86,
+  "promoted_at_unix": 1794183341.8943658,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "7b6ce46e58ac76d3d0df5ea67a14a2d8f3bf83326fe367f41a65687e2f439c0f",
+    "data/exercises/engagement_profiles.json": "1da83a6f9d8a5128178d6b38496b437745f92be3a2785d7324bd80d806eda32a",
+    "data/exercises/catalog/candidates.json": "2cb10ae8c964312e8b54ea4b92239d4f4150e83a411749080b48961a2065cfcd",
+    "data/exercises/sources/free_exercise_db_media.json": "2549879347895e3710b43cf9013f62b466086e8d4a9cc1d631d5f7eabe66abd9"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "7dfc9167fbcaf86ea370ce868ead646220c2a33085800688a13fb0031086aa0f",
+    "data/exercises/engagement_profiles.json": "30c68dcc66554d5b092a7094ff4e7c6bd539713d792296956aa6cbf037e359a2",
+    "data/exercises/catalog/candidates.json": "0cbf6d04188182068eca54947db3985ce27711faf78a5bc238c6d6dca4c67159",
+    "data/exercises/sources/free_exercise_db_media.json": "cf610279bc049c1a5ee41cebf8823f1a66c9ea57839581baf2d868b7ea4294cb"
+  }
+}

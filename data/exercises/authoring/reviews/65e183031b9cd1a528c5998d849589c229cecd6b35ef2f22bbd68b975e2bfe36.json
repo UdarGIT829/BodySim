@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "65e183031b9cd1a528c5998d849589c229cecd6b35ef2f22bbd68b975e2bfe36",
+  "status": "accepted",
+  "updated_at_unix": 1794184743.00142,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184730.91053,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The overhead lockout and split catch load the rotator cuff, but glenohumeral_stabilization is not listed, so supraspinatus, infraspinatus and teres minor are explicit zeros. This is a modest omission, not a materially wrong pattern.",
+          "suggested_correction": "Consider adding glenohumeral_stabilization in a future revision for the overhead catch and lockout."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The split-stance landing is treated as a catch only, so front-leg hip flexion and the single-leg stance demands (pelvic_leveling_frontal, knee_joint_stability) are not represented. This is a reasonable simplification given the bilateral tracer, and the assumptions state it explicitly.",
+          "suggested_correction": "Optionally note the split catch as a minor contribution in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "closed_chain is a catalog label. It fits the leg drive with the feet planted, though the kettlebells move freely overhead.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRPjeVMqwpcwix8jW9g",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 12726.0,
+          "output_tokens": 1458.0
+        }
+      },
+      "summary": "The definition matches the source instructions and frames. The frames show a bilateral double-kettlebell rack position and the start of the dip. The traced actions are leg drive (knee and hip extension, with ankle plantarflexion as assist) and overhead press (shoulder flexion and elbow extension, with scapular upward rotation as assist). Grip, wrist stability, bracing and anti-extension demands are credited where the load is held. The resulting muscle pattern is plausible: quadriceps, glutes, hamstrings, anterior deltoid and triceps are primary, calves and scapular rotators are synergists, and core and forearm muscles are stabilizers. The remaining gaps are minor and do not block acceptance."
+    }
+  }
+}

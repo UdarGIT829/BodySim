@@ -1,0 +1,67 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "5efd1fba005e56398fcb92380269ffcadca3455c5fba21d66292e5fbb4d014e4",
+  "status": "changes_requested",
+  "updated_at_unix": 1794179292.12724,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179263.88893,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[glenohumeral_joint/extension].emphasis",
+          "finding": "Glenohumeral extension is marked primary, making the latissimus dorsi (1.0), teres major (0.7) and posterior deltoid (0.7) primary movers. The instructions say to keep the arms perpendicular to the floor, and that deviating from this works the shoulders and back more than the abs. So lat-driven shoulder extension is a compensation the exercise tries to avoid, not the load-moving action. The frames show the arms held roughly vertical with the shoulder acting as a fixed base. The resulting tracer output puts shoulder and back muscles above the abdominals, which are the intended target, and is materially wrong.",
+          "suggested_correction": "Demote glenohumeral_joint/extension to emphasis assist. The lats, teres major and posterior deltoid then become synergists at 0.4 x weight, and the hip flexors stay as the primary movers. Keep shoulder_position_hold for the arm base."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The abdominals are only stabilizers, with rectus abdominis at 0.35. The source describes an abdominal contraction at the top. Anti-extension and bracing demands are the right way to express trunk work, and the spine is supposed to stay in a slight arch, so lumbar flexion is correctly omitted. The abdominal rank may look low relative to the hip flexors, but this follows from the tracer's stabilizer weighting.",
+          "suggested_correction": "No change required. Optionally keep the existing anti_extension_spine, intra_abdominal_pressure and pelvic_alignment demands."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The families core_anti_extension and hip_flexion are acceptable catalog labels for a pike rollout. They do not affect the traced muscles.",
+          "suggested_correction": "None needed."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "emphasis": "assist",
+          "joint": "glenohumeral_joint",
+          "movement": "extension",
+          "op": "set_action_emphasis"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJSj9Ex6rHwrbjhouHh",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 12575.0,
+          "output_tokens": 3336.0
+        }
+      },
+      "summary": "The definition builds a mostly wrong dominant pattern. Glenohumeral extension is listed as a primary action, so the latissimus dorsi (1.0), teres major and posterior deltoid become primary movers. They out-rank the abdominals, which are only stabilizers at about 0.35. The source says the arms must stay perpendicular to the floor, and warns that otherwise the shoulders and back work more than the abs. It also gives no support for the lats as the main driver. In the frames the arms stay near vertical and the hands stay fixed on the bar while the hips rise, so the shoulder is mainly holding position, not driving the load. The hip-flexion action, closed-chain label, bilateral laterality and demands are reasonable. The fix is a re-weighting that the edit operations can express."
+    }
+  }
+}

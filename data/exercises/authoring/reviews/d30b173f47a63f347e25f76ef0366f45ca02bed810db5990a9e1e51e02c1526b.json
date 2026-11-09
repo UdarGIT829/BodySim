@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "d30b173f47a63f347e25f76ef0366f45ca02bed810db5990a9e1e51e02c1526b",
+  "status": "accepted",
+  "updated_at_unix": 1794184057.41098,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184044.41341,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[scapulothoracic_joint/upward_rotation]",
+          "finding": "Scapular upward rotation during the overhead press is modeled as assist, so serratus anterior and the trapezius parts land as synergists (about 0.4 or below). This is a defensible reading of an accompanying motion and is not a material error.",
+          "suggested_correction": "No change required. A future revision could weigh upward rotation more heavily if the press phase is meant to be scapular-dominant."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "olympic_lift with vertical_push is reasonable. The exercise combines a clean and a strict press, and the labels do not change the traced muscles.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQX8Smf1nBA9Y66qynd",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 14507.0,
+          "output_tokens": 1545.0
+        }
+      },
+      "summary": "The definition matches the source. The lifter pulls a barbell from the floor, catches it at the shoulders, then presses it overhead without moving the feet. The pattern is bilateral and closed chain, so the laterality, empty one_sided_limbs and closed_chain label all fit. Hip and knee extension are primary and drive the pull, which engages the glutes, hamstrings, adductor magnus and quadriceps. Ankle plantarflexion, the shrug, scapular upward rotation and elbow flexion are assist, which suits motions that accompany the lift. The press is covered by primary glenohumeral flexion and abduction plus elbow extension. This engages the deltoids, supraspinatus, triceps and clavicular pectoralis major, and the traps and serratus come in as synergists. Grip, wrist_stability, shoulder_position_hold, glenohumeral_stabilization, spinal anti-flexion and anti-extension, bracing and postural_stabilization are placed where the load is actually held. The tracer output is consistent with this and shows no materially wrong muscle pattern."
+    }
+  }
+}

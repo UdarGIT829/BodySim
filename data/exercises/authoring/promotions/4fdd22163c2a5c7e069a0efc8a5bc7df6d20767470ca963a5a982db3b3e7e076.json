@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "4fdd22163c2a5c7e069a0efc8a5bc7df6d20767470ca963a5a982db3b3e7e076",
+  "revision_id": "Band_Good_Morning_Pull_Through@4fdd22163c2a",
+  "exercise_id": "exercise.band_good_morning.standing_neck_loop",
+  "source_catalog_id": "catalog.free_exercise_db.Band_Good_Morning_Pull_Through",
+  "mapped_muscles": 44,
+  "promoted_at_unix": 1794105182.3597715,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "c263a65377ad4c19a95e65b68185464f02ae82b599bb38e1db79316797bfac6a",
+    "data/exercises/engagement_profiles.json": "7bf33f64baaa5803ca1587a7724aa926ffc3b5e03989971dd7aba3b1cd8cf39f",
+    "data/exercises/catalog/candidates.json": "db10fc4bbdfe11a1dfc5786b1451b2ef8dd2408d801ea069539f76996a43d5b4",
+    "data/exercises/sources/free_exercise_db_media.json": "99a602e51ef0535f8d8441d5e4ee74e3d624fd67d70c49b35b5300fcf57b55ba"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "f41a6f5533d7356c960c86023e0690da94981bd90ad414732830ed6100271b9e",
+    "data/exercises/engagement_profiles.json": "6d37c8ff3fdfc018eab6987f546e1e4ad5921e2b245cf1025eb211a9ed522022",
+    "data/exercises/catalog/candidates.json": "fa6956b783d350960ae6cb41e930b4f737ca3b883e34f1b00d949055b14b2235",
+    "data/exercises/sources/free_exercise_db_media.json": "7e13d45a8cf5a212b23a085f2f96026000bcc5e4573340662fa8ed635eddd774"
+  }
+}

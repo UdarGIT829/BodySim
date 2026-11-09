@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "98f710767fea12e468374227cad124cc3d2c11982c58e27d72a7c32a9644396a",
+  "revision_id": "Deadlift_with_Chains@98f710767fea",
+  "exercise_id": "exercise.barbell_deadlift.chains",
+  "source_catalog_id": "catalog.free_exercise_db.Deadlift_with_Chains",
+  "mapped_muscles": 113,
+  "promoted_at_unix": 1794184448.0520082,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "3165855ea66514d5fdf2dfe30d41d189108666afc8124c123d150bb2dad6734e",
+    "data/exercises/engagement_profiles.json": "2ad7c6323b0d8ddba4bcd99b75e6303c76980e638871194c8c6dd6cf2e655859",
+    "data/exercises/catalog/candidates.json": "9758eefca307d6db807d96725ce41fdbe42463cc05d7d7b190215a41425bc231",
+    "data/exercises/sources/free_exercise_db_media.json": "0b79b272b46bd249e706b6214ce71ee9133f3b57c48e53c9d337ad7946c7e1d8"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "482f7fd1c3cf444bf0b58d93cce3bbb48d50b599de067e09717c63123c103127",
+    "data/exercises/engagement_profiles.json": "472bf6b5f80dd134af2c411904108545a0fb7aca021451826375d7285684ce8c",
+    "data/exercises/catalog/candidates.json": "c217dbdbc85d4ae45d059c1d148c6fa9f5480d22fcccd341badb62b2d14f243e",
+    "data/exercises/sources/free_exercise_db_media.json": "2e58c384cd1b79e2b50a982ef93cb9e0ce378d51fa87db7adfc8e8d0852bf572"
+  }
+}

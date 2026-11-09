@@ -1,0 +1,66 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "834452000af0e3b0fd08c318e349d020c7c571e1bddefce38d5744a6b6f63b3e",
+  "status": "changes_requested",
+  "updated_at_unix": 1794179331.11237,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179292.64351,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[glenohumeral_joint/extension]",
+          "finding": "The source says the arms stay perpendicular to the floor throughout and warns against shoulder and back involvement. The frames show near-vertical arms in both positions with no lat-driven shoulder sweep. Listing glenohumeral extension, even as assist, invents a dynamic shoulder action. It makes latissimus dorsi (0.4), teres major (0.28), scapular spinal deltoid (0.28), sternocostal and abdominal pectoralis major, and long head of triceps (0.16) synergists. The arm is a held strut, not a mover, and shoulder_position_hold plus scapular_stabilization already cover it.",
+          "suggested_correction": "Remove glenohumeral_joint/extension so the shoulder girdle is credited only through the existing static demands (shoulder_position_hold, scapular_stabilization, elbow_joint_integrity, grip, wrist_stability)."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "core_anti_extension and hip_flexion are acceptable labels for a barbell pike roll-in. They are catalog labels only and do not change the traced muscles.",
+          "suggested_correction": "No change required."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Abdominal work appears as stabilizers (rectus abdominis 0.35, obliques, transversus abdominis) rather than primary movers. This is consistent with the instruction to keep a slight arch and avoid lumbar flexion, and with the tracer's demand-weight scaling. It is a tracer limitation, not a defect in the definition.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "joint": "glenohumeral_joint",
+          "movement": "extension",
+          "op": "remove_joint_action"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJUrFvmvfyBimuyE3Th",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 12626.0,
+          "output_tokens": 4856.0
+        }
+      },
+      "summary": "The pike hip flexion, the closed-chain label, bilateral laterality, and the grip, wrist, elbow, scapular and shoulder-hold demands are well supported by the frames and text. The remaining shoulder action is not. Glenohumeral extension is listed as a moving joint action, but the instructions say the arms stay perpendicular to the floor throughout and warn that otherwise the shoulders and back work more than the abs. Both frames show the arms near-vertical with a roughly constant arm-to-trunk angle, so the visible change is at the hip. The action turns the lats, teres major, posterior deltoid and triceps long head into synergists. That is a materially wrong muscle pattern. The shoulder load is already credited through shoulder_position_hold, elbow_joint_integrity and scapular_stabilization."
+    }
+  }
+}

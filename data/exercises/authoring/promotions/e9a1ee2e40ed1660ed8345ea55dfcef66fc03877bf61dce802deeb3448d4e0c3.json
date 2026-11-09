@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "e9a1ee2e40ed1660ed8345ea55dfcef66fc03877bf61dce802deeb3448d4e0c3",
+  "revision_id": "Chest_Push_multiple_response@e9a1ee2e40ed",
+  "exercise_id": "exercise.medicine_ball_chest_pass.kneeling_rebound",
+  "source_catalog_id": "catalog.free_exercise_db.Chest_Push_multiple_response",
+  "mapped_muscles": 104,
+  "promoted_at_unix": 1794183866.7507696,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "e08910ba58c4e7036ea8a86fae8c84c4b82cdb406748e752e408e2708e828dd3",
+    "data/exercises/engagement_profiles.json": "52d29bde113507b7ca31969bc1ed9105aa267f5a52908c3a61b7304bc619c928",
+    "data/exercises/catalog/candidates.json": "a5554b417c0dc52cecf272339372ab45236111511143d34578ad71a722bc8541",
+    "data/exercises/sources/free_exercise_db_media.json": "1d279e224edd53033da1b19d957a7708b7405041e5075bf36df2bc392cadb339"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "c60fb376c6a6c7b12d70c4959c93f293b4cf928295d37330f3f5ca4f323b9a80",
+    "data/exercises/engagement_profiles.json": "fc8bfb43730c5a73f9a13b1cfb0f2327fed0ecfb180292e2bfb0605b48b775ac",
+    "data/exercises/catalog/candidates.json": "90bffe694bf92bf05f9c4a20e07c13d21df3d11ebb496d3d2df0e860a4f2e0c3",
+    "data/exercises/sources/free_exercise_db_media.json": "c15c7e2bc9e2ab86c62fe584551979da74ae7cbbd7c5e99b24486ce595a1eda8"
+  }
+}

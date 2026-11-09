@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "94122944495f50639305ade7b7842a203f50bbfc8c5f01651859d4d4610ef36b",
+  "revision_id": "Butterfly@94122944495f",
+  "exercise_id": "exercise.pec_deck_fly.seated_machine",
+  "source_catalog_id": "catalog.free_exercise_db.Butterfly",
+  "mapped_muscles": 70,
+  "promoted_at_unix": 1794183250.3161697,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "7f80e7691085f30b40891ebd70cfa5471ee6ed2101b20fd44cc0428a67a52016",
+    "data/exercises/engagement_profiles.json": "d1a73d5a7b183e38172236a7d16d319f1e7981973945b71f1602fffa1526b07a",
+    "data/exercises/catalog/candidates.json": "d0b35b1963a428e4c8f8e98f4cfe7521ec7c9d55756cdee728b51796b3c9ead2",
+    "data/exercises/sources/free_exercise_db_media.json": "b60f4a9adaba42ca146909fbb615a5dfb989ae1fa3a5e38a5e636d175645c1cd"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "fa14e10b71ad3822f75d239851405b464f9643d504c117e05e0f5177197b4a5c",
+    "data/exercises/engagement_profiles.json": "546831187791bd40b3543135d32772afffdea88b0a50cf78b3c416b82b6e30c3",
+    "data/exercises/catalog/candidates.json": "218fc97b76bab111ed89d542c18d0b5099759a2a4c4984eed2ff8c2864cf91d1",
+    "data/exercises/sources/free_exercise_db_media.json": "1d612b20d64392fa6d234bc4adc13f9132af8dacee5add60a58d3d070936f84c"
+  }
+}

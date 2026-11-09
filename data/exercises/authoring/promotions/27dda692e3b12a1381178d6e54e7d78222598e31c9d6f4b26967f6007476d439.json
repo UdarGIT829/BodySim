@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "27dda692e3b12a1381178d6e54e7d78222598e31c9d6f4b26967f6007476d439",
+  "revision_id": "Clean_Deadlift@27dda692e3b1",
+  "exercise_id": "exercise.clean_deadlift.conventional_barbell",
+  "source_catalog_id": "catalog.free_exercise_db.Clean_Deadlift",
+  "mapped_muscles": 113,
+  "promoted_at_unix": 1794183951.8499045,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "c69aeca15eb5cad64473a06e5d29adc484d7432c3096ee471e6a8522433de09c",
+    "data/exercises/engagement_profiles.json": "712f9f0ac40ff85e353af28ee60f17019ede21a3193cb1616150af2f64f585d1",
+    "data/exercises/catalog/candidates.json": "4733817477244b9ac803c41be2719d90f00dfffc118f5cae9a44086ad36f42b8",
+    "data/exercises/sources/free_exercise_db_media.json": "98a914ffa49cfee3797c8f1b39d5ea9aeba98e2fef6ecd97c30a275bd66ce8b8"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "5ddbd54252c88af7db751c887fa567bae62bec96addfdca5f829074a3a86431e",
+    "data/exercises/engagement_profiles.json": "18244710710e996cfaa7137a27f04b3f88be06a9e393f6defa11b0e96db67e02",
+    "data/exercises/catalog/candidates.json": "7d7616546638684f228f9634465b6b07e2640c28d13de49e865936ce049c5849",
+    "data/exercises/sources/free_exercise_db_media.json": "fcb65dc020135d396ea7624be6578cfd822e090d2e3c1690998bf453faabf0e2"
+  }
+}

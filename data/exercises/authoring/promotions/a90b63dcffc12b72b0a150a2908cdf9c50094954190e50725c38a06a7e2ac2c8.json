@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "a90b63dcffc12b72b0a150a2908cdf9c50094954190e50725c38a06a7e2ac2c8",
+  "revision_id": "Cross_Body_Hammer_Curl@a90b63dcffc1",
+  "exercise_id": "exercise.cross_body_hammer_curl.standing_alternating",
+  "source_catalog_id": "catalog.free_exercise_db.Cross_Body_Hammer_Curl",
+  "mapped_muscles": 116,
+  "promoted_at_unix": 1794184287.2079809,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "249a57a1f944744f46e63455fcbe5c5fc098ca2863d60b3c0a30e17659896252",
+    "data/exercises/engagement_profiles.json": "f7265bf32ce5e2ca16e1c574207d0d48e450ce28341dbcb45cc07a94122f81da",
+    "data/exercises/catalog/candidates.json": "bc9a745826c10a756168e96dcb2fde415a976cec184e3c40b43f38b3be8ece59",
+    "data/exercises/sources/free_exercise_db_media.json": "e9cf4ba3872eab9ffdb6a83a3ff70e972d2cb2b51bd7f46d48bd105e97eae8a5"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "d58747a2f225d849ed51a926b4207f786328ccfd19e02e36a09b229935bdc4eb",
+    "data/exercises/engagement_profiles.json": "21de38874e1440dfa3d8e25d681805cbd718d239d01b1b3e033514e54d0bbbca",
+    "data/exercises/catalog/candidates.json": "adc7e57d3e6306807f3be184ecc5bd1913fd9412975988df79133aba81de9dee",
+    "data/exercises/sources/free_exercise_db_media.json": "f34b3eab2d4a542a1e40af7253a05db15c7742514f77bfd3c8654909382c4778"
+  }
+}

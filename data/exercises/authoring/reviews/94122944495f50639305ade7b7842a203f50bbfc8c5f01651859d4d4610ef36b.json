@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "94122944495f50639305ade7b7842a203f50bbfc8c5f01651859d4d4610ef36b",
+  "status": "accepted",
+  "updated_at_unix": 1794183249.96891,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183237.9288,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "movement_families",
+          "finding": "`horizontal_push` is a loose label for a fly. The movement is horizontal adduction, and the source tags the force as 'pull'. No fly or adduction family exists, so this is the closest option, and catalog labels do not change the traced muscles.",
+          "suggested_correction": "Keep `horizontal_push`, or use a dedicated fly family if the vocabulary adds one later."
+        },
+        {
+          "field_path": "stabilization_demands",
+          "finding": "The `scapular_stabilization` demand brings in muscles such as pectoralis minor, levator scapulae and descending trapezius at low coefficients, and `grip` spreads small coefficients across many hand intrinsics. These come from how the demand tables are weighted, so no choice of actions or demands changes them. The coefficients are small and the pattern does not mislead.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "kinematic_profile.primary_joint_actions",
+          "finding": "Short head of biceps appears as a 0.2 synergist only because the table lists it under horizontal adduction. It is not an elbow-flexion contribution. This is a tracer table artifact and is harmless at that weight.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPVgDHzem3o87moFLbg",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7240.0,
+          "output_tokens": 1404.0
+        }
+      },
+      "summary": "The definition fits the source. The frames show a seated, back-supported machine fly with both arms sweeping the handles together at about shoulder height, while the elbows stay at a roughly fixed bend. Bilateral horizontal adduction at the glenohumeral joint is the correct primary action. The tracer output matches it: the clavicular and sternocostal pectoralis major are primary, and the anterior deltoid, abdominal pectoralis major, coracobrachialis and short head of biceps are synergists. The elbow, grip and scapular demands are modest and plausible, and they produce low-coefficient stabilizers only. Nothing biomechanically material is unsupported or contradicted."
+    }
+  }
+}

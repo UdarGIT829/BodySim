@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "56a69350d8b5fdf02b89d40bfcb187103a7a65e7dce648491f1126cb124ce606",
+  "revision_id": "Concentration_Curls@56a69350d8b5",
+  "exercise_id": "exercise.dumbbell_concentration_curl.seated_unilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Concentration_Curls",
+  "mapped_muscles": 37,
+  "promoted_at_unix": 1794184254.6887202,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "168b3fe60072eed9d1a01bc260e57450aad3e53817b2372ea9ebd5f2749651ed",
+    "data/exercises/engagement_profiles.json": "b81cb53039c7b549be1fb4032f3bc9be0101a4b0bad9abf5657837fabb84428e",
+    "data/exercises/catalog/candidates.json": "a6b22300a65cf6b96f584df569d24423e77fb0b5a17d278dae9b972a8c920f9d",
+    "data/exercises/sources/free_exercise_db_media.json": "d5e7d0b77811d9527d231a71a462bf4693bda746e745dd395232475c9bb1406b"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "8e11c6fd749d4060371c4555d897ad248cf7baf78e453017635f2762deb996e9",
+    "data/exercises/engagement_profiles.json": "5df8999932ad2abb373afe397dc6c4f28b2639d2001ae2fb9eb674cf04016d0e",
+    "data/exercises/catalog/candidates.json": "d2036f5fbf442f2b35c9791afc6710b9085e2f6eec75308a5d55a57f93c97071",
+    "data/exercises/sources/free_exercise_db_media.json": "8faa6929ef39e73fc919e7ca21fe89fd3f1e14711fb960c488017685ed222d00"
+  }
+}

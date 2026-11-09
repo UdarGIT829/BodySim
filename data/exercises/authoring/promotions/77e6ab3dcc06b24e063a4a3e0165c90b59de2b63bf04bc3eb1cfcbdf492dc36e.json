@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "77e6ab3dcc06b24e063a4a3e0165c90b59de2b63bf04bc3eb1cfcbdf492dc36e",
+  "revision_id": "Car_Deadlift@77e6ab3dcc06",
+  "exercise_id": "exercise.car_deadlift.neutral_grip_handles",
+  "source_catalog_id": "catalog.free_exercise_db.Car_Deadlift",
+  "mapped_muscles": 111,
+  "promoted_at_unix": 1794183712.1479146,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "68961c3702b239477a4a1ac3e57c988dab567f7f6fc0eb711fd55418445a6087",
+    "data/exercises/engagement_profiles.json": "f634ee968bd2d8e3af6c2a9847a7e55e9fc846136362a49e5e17e38cf2528de5",
+    "data/exercises/catalog/candidates.json": "8742f28d13ccbc1eef80516fa75ebcbef718eeffc7a1dc085fe576c44a282c06",
+    "data/exercises/sources/free_exercise_db_media.json": "bf22aebc3512b60475a06cd536a32be2d1b62d0f4243320d1259d197e7d911ea"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "2c1a717be08387008409428551f0f10f1da3627f9b641033ce159adc6ccbde44",
+    "data/exercises/engagement_profiles.json": "a1dcaed92fc3e1a7f7998c8dfd9cda5710806fb4f1ad542f5095ffb64b97cb49",
+    "data/exercises/catalog/candidates.json": "2981d8b205dec4ddf1d13c6b2661fa753ebc3dbd063aeaf5f5dd22ec529dc966",
+    "data/exercises/sources/free_exercise_db_media.json": "e4ff6fb3ee9de4d78c859189e1698476e3776216fe628cb28e89e14f77718ebb"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "06cf4cd58d23c7220556c0c88f2dc4686cbe8bd523f9dd20f33ec2a3342e3d38",
+  "status": "changes_requested",
+  "updated_at_unix": 1794183761.39093,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183739.59596,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The arms are held extended forward at shoulder height against the plate's load, but no glenohumeral flexion action is listed. The clavicular deltoid, the main muscle holding the arms forward, is reduced to a 0.12 synergist through the abduction and adduction assists. The `shoulder_position_hold` demand cannot restore it, because an action score replaces the stabilizer credit. Clavicular pectoralis major (0.12) and the biceps long and short heads (0.08) are similarly understated.",
+          "suggested_correction": "Add glenohumeral_joint/flexion with emphasis assist and sides both, so the forward arm hold is credited. This raises the clavicular deltoid to about 0.4 and the clavicular pectoralis major to about 0.28."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions[0]",
+          "finding": "Lumbar rotation is credited as primary with the obliques at 0.9. The plate is light, and the rotation is probably shared between trunk and shoulder-girdle steering. The frames do show clear torso rotation, so this is defensible.",
+          "suggested_correction": "No change is required. A future revision could note the relative contribution of trunk and arm steering in the assumptions."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "core_rotation is acceptable. shoulder_raise could be added as a secondary label, but it does not affect the traced muscles.",
+          "suggested_correction": "Optional: keep core_rotation as the primary family."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "emphasis": "assist",
+          "joint": "glenohumeral_joint",
+          "movement": "flexion",
+          "op": "add_joint_action",
+          "sides": "both"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQ8enFcF3BF9geUbSx3",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 11211.0,
+          "output_tokens": 2783.0
+        }
+      },
+      "summary": "The trunk-rotation core is supported by the frames: the torso turns to opposite sides while the plate is steered. Standing, grip and wrist demands are also appropriate. The definition does not credit the main static shoulder task, which is holding both arms flexed forward at shoulder height against the plate's load. `shoulder_position_hold` is listed, but the abduction and adduction assists give the clavicular deltoid a higher action score. That replaces its stabilizer credit (0.35) with a 0.12 synergist score, so the tracer shows the anterior deltoid as less engaged than the standing leg stabilizers (0.28 and above). Adding a shoulder flexion assist fixes this."
+    }
+  }
+}

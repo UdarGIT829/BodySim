@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "7eb59b9d0b13258d5ca49162627478f91c9a1d899fed618e77b4957b6546fbeb",
+  "status": "accepted",
+  "updated_at_unix": 1794183221.08545,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183206.88245,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[0]",
+          "finding": "Lumbar flexion is a modest range here. The frames show a fairly straight pike spine, and the text asks for only a slight arch, so the action is supported but small. The primary weighting makes rectus abdominis a 1.0 primary, which is acceptable because the cue is explicitly to squeeze the abs.",
+          "suggested_correction": "No change needed. If the authors want more conservative scoring, consider marking lumbar_spine/flexion as assist in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The labels trunk_flexion and hip_flexion fit. The rigid-trunk, forearm-plank starting position could also justify core_anti_extension as a catalog label. Labels do not change the traced muscles.",
+          "suggested_correction": "Optionally add core_anti_extension as a secondary family."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The straight-knee legs and the slightly dorsiflexed ankles have only minor isometric demands, such as quadriceps, calves and tibialis anterior. Leaving them out is a defensible simplification and does not materially distort the profile.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPTPSgSJhNyt12NkMT4",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7043.0,
+          "output_tokens": 1684.0
+        }
+      },
+      "summary": "The definition matches the source text and both frames. The forearms and feet stay planted, so the chain is closed and bilateral. The hips rise from a forearm plank into an inverted-V pike. Hip flexion and lumbar flexion are the primary movers, which matches the cue to squeeze the abs and close the ribcage-to-hip distance. The tracer therefore makes the iliacus, psoas major, rectus femoris and rectus abdominis primary, with the obliques as synergists. Shoulder flexion is a real but minor action as the torso tilts over the fixed forearms, so marking it assist is sound. The scapular and shoulder-hold demands put the serratus, trapezius, rhomboids and deltoids in the right stabilizer and synergist roles. No materially wrong muscle pattern appears."
+    }
+  }
+}

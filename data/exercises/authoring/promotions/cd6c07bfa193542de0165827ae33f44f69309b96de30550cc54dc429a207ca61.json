@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "cd6c07bfa193542de0165827ae33f44f69309b96de30550cc54dc429a207ca61",
+  "revision_id": "Bent-Arm_Dumbbell_Pullover@cd6c07bfa193",
+  "exercise_id": "exercise.dumbbell_pullover.bent_arm_cross_bench",
+  "source_catalog_id": "catalog.free_exercise_db.Bent-Arm_Dumbbell_Pullover",
+  "mapped_muscles": 82,
+  "promoted_at_unix": 1794182823.1446874,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "922955f83ab8722673c1989ec55260d2aacdbeae0d8f29b4e9b04b75f068ae5c",
+    "data/exercises/engagement_profiles.json": "47ead7f35a91dfcb19e8e4ea7368c9990d5350e2d336db9b573e89cc05c5f4c1",
+    "data/exercises/catalog/candidates.json": "777b549bbf3a379784075fca0bc305d2b0aa001a3aef99192a85e781cf913f17",
+    "data/exercises/sources/free_exercise_db_media.json": "46cf4b0126e700028cc8c50a7411d8da185a18a9335a3561fe5554244e777f5c"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "200311b7a6d9dc6f1545d41e1f1f3ad2087718c6762ff11bd5699ac1d8787e80",
+    "data/exercises/engagement_profiles.json": "1ffe2a812888ab4e0d7441dccf81f7c8629d442296e05e47485e786b1b49e1c6",
+    "data/exercises/catalog/candidates.json": "b754e163e9b06a862cc97956bde23ead961dd9b87887f1734a5da1064715265c",
+    "data/exercises/sources/free_exercise_db_media.json": "ce24b8e1ecbee3de9edd6fd9ab1ec10b1a676783a7eaa0b81e1e0d816d8834ea"
+  }
+}

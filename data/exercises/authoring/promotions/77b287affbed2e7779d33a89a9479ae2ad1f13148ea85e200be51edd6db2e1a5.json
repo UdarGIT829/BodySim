@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "77b287affbed2e7779d33a89a9479ae2ad1f13148ea85e200be51edd6db2e1a5",
+  "revision_id": "Back_Flyes_-_With_Bands@77b287affbed",
+  "exercise_id": "exercise.band_back_fly.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Back_Flyes_-_With_Bands",
+  "mapped_muscles": 118,
+  "promoted_at_unix": 1794105057.8645804,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "3fa96e0f77fa164e1c32110dac803415ef6807788085a9e24e7261b4890bf96c",
+    "data/exercises/engagement_profiles.json": "0bada83d6549ae9d5f1ef3ca91e897091acafe0c239e2a7c33a3d5210ca05aa1",
+    "data/exercises/catalog/candidates.json": "32bd6663f79a5e2cf7ca602136aedaf2229efe21ed7d634c876a46d7953cd237",
+    "data/exercises/sources/free_exercise_db_media.json": "f63319b985eca0fc13516187fc40ae249e57bc6428f573b328b35ade42c82a65"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "c263a65377ad4c19a95e65b68185464f02ae82b599bb38e1db79316797bfac6a",
+    "data/exercises/engagement_profiles.json": "7bf33f64baaa5803ca1587a7724aa926ffc3b5e03989971dd7aba3b1cd8cf39f",
+    "data/exercises/catalog/candidates.json": "db10fc4bbdfe11a1dfc5786b1451b2ef8dd2408d801ea069539f76996a43d5b4",
+    "data/exercises/sources/free_exercise_db_media.json": "99a602e51ef0535f8d8441d5e4ee74e3d624fd67d70c49b35b5300fcf57b55ba"
+  }
+}

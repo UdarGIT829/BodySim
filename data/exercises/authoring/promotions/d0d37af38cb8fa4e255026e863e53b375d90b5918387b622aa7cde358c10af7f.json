@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "d0d37af38cb8fa4e255026e863e53b375d90b5918387b622aa7cde358c10af7f",
+  "revision_id": "Chain_Press@d0d37af38cb8",
+  "exercise_id": "exercise.chain_press.flat_bench",
+  "source_catalog_id": "catalog.free_exercise_db.Chain_Press",
+  "mapped_muscles": 88,
+  "promoted_at_unix": 1794183821.156906,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "975ae179ea9a4dab3e7e1ef09545b11d97921f2439fdd42646cdb47c5a7cb953",
+    "data/exercises/engagement_profiles.json": "9a8d7cec725ffa4ef306102b55b75f40c0d3946ab1fb9f0052236ad1fb91a19c",
+    "data/exercises/catalog/candidates.json": "2b1f3b7cd27f8b76b5f8b59494ddec0329dd3ccb8b5cdd516c65a9415e9e423e",
+    "data/exercises/sources/free_exercise_db_media.json": "abaec1c5e12b7169d5cc5e522d746159dea34e0e8e422edb858f14893546aa3e"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "48460d6712c4158bf8eb594d4c48baea00ca4459500276fe7cd87af850e20556",
+    "data/exercises/engagement_profiles.json": "f9972beac116e9972a61d9a1d3fc2621c6692ece642f220ca808a466ae8615d5",
+    "data/exercises/catalog/candidates.json": "a654346200dff68f25b4dffb5569d8431c0a8402f67c89ac4f1177ca9f12f10e",
+    "data/exercises/sources/free_exercise_db_media.json": "3a1ba3d45f2e51e5c6b7fa2509605db5e4d3157c4bb8685d652ebad659472122"
+  }
+}

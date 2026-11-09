@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "4502dba4005666020d20c28bd81b48f97b93af631a91c1eb27b54df2ffa39e94",
+  "status": "accepted",
+  "updated_at_unix": 1794184212.06275,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184201.36225,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.primary[muscle.brachioradialis]",
+          "finding": "Brachioradialis is traced as a primary mover at 0.7 because of the table weight for elbow flexion. In a supinated curl it is typically less active than in a neutral or pronated grip. No choice of actions or emphasis in this definition could change that, so it is a tracer table limitation.",
+          "suggested_correction": "No change to the definition. Any adjustment belongs in the muscle-action table."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist[muscle.superficial_head_of_pronator_teres]",
+          "finding": "Pronator teres appears as a 0.2 synergist because the elbow flexion table assigns it a small weight. It is not an active mover in a supinated curl. This is a tracer table artifact with negligible effect.",
+          "suggested_correction": "No change to the definition."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization spreads low coefficients across many leg and trunk muscles, for example soleus 0.28, gluteus maximus 0.28 and the vasti. This is plausible for standing and it is low-weight, so it does not misrepresent the exercise.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQih4P9Bcz8RDDVfSrT",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9956.0,
+          "output_tokens": 1381.0
+        }
+      },
+      "summary": "The definition matches the source instructions and both frames. A standing, bilateral, supinated close-grip barbell curl with the upper arms stationary and only the forearms moving is supported. Elbow flexion as the primary action puts brachialis, both biceps heads and brachioradialis in the primary role. Supination as an assist is a reasonable deliberate synergist for a supinated grip, and it adds only the supinator at a low weight. The demands sit where the load is held: grip and wrist_stability for the bar in the hands, shoulder_position_hold for the fixed upper arms (anterior deltoid), and postural_stabilization for standing. No trunk or hip motion is listed, which agrees with the instruction to avoid swinging. The tracer profile is plausible: the biceps and brachialis are strongest, the forearm and hand muscles are low-level stabilizers, and the trunk and leg muscles are minor postural contributors."
+    }
+  }
+}

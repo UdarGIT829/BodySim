@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "52769d130a5b3893ee40a88aec3ceee99f10be947fa98bc5e3939831aae2669a",
+  "status": "accepted",
+  "updated_at_unix": 1794183372.78654,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183359.7356,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The pinned upper arm is held against the side while the cable pulls, which could be credited with shoulder_position_hold. Omitting it is defensible because the main shoulder muscles are already credited through the internal rotation action.",
+          "suggested_correction": "Optionally consider shoulder_position_hold or a glenohumeral adduction assist in a future revision. It is not required."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "The grip and wrist demands give many forearm and hand muscles small stabilizer coefficients, and the anti_rotation_torso demand credits both sides of the trunk. This is consistent with a held handle and a trunk resisting a sideways pull. The frames show the left arm working while the tracer displays the right side; that is a tracer convention, not a definition error.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPeeqx65vk8KPpcHfT5",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 6243.0,
+          "output_tokens": 1466.0
+        }
+      },
+      "summary": "The definition matches the instructions and both frames: a seated, sideways, single-arm cable internal rotation with the elbow pinned at about 90 degrees and the forearm sweeping across the abdomen. Glenohumeral internal rotation as the sole primary action is correct. The tracer output follows from it: subscapularis is the primary mover, and teres major, latissimus, pectoralis major and clavicular deltoid are synergists. Omitting an elbow action is justified by the fixed 90-degree elbow. The demands fit the load path: grip and wrist_stability for the handle, elbow_stability for the pinned elbow, and anti_rotation_torso for the sideways cable pull on an upright trunk. Laterality, one_sided_limbs [arm], the open-chain label and the shoulder_rotation family are all appropriate."
+    }
+  }
+}

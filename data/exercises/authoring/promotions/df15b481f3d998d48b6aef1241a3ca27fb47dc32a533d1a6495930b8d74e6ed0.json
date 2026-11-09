@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "df15b481f3d998d48b6aef1241a3ca27fb47dc32a533d1a6495930b8d74e6ed0",
+  "revision_id": "Bent_Over_Low-Pulley_Side_Lateral@df15b481f3d9",
+  "exercise_id": "exercise.low_pulley_bent_over_lateral_raise.bent_over_unilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Bent_Over_Low-Pulley_Side_Lateral",
+  "mapped_muscles": 83,
+  "promoted_at_unix": 1794182864.4299452,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "de1190f6ade26d491256a10403237cfcc4ef9675eee74a520cdce734228ee1cb",
+    "data/exercises/engagement_profiles.json": "00667205c9dd7ba48a3613d266e79cebe603602da31603f834f0f3fefa4758ff",
+    "data/exercises/catalog/candidates.json": "eb7a06d5802ac5d798d5fcca3641e0d7b88c325217cf6e48f8354312a9176dd2",
+    "data/exercises/sources/free_exercise_db_media.json": "a14ea4c1d2396731a7208a962b8ea7fdb9ef15ae6625f8d5da195e10cf002ff4"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "5664e6702ec878439c0bb28ba5c56ff0ef11c84a54fe5f9622442261adc70fb9",
+    "data/exercises/engagement_profiles.json": "6efb86a93a803daefac1e23139b2fa2de76976ebbf993a66c413db369bdb7964",
+    "data/exercises/catalog/candidates.json": "61cbec735cf1bc61e192737379ed87467147cebd6144075ebec00f7c58da2359",
+    "data/exercises/sources/free_exercise_db_media.json": "efc12fe175a2b1a62bdeac1ed8675e2bdab53fc5537539c0939e5df5f3bafa4f"
+  }
+}

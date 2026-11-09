@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "ddee631ac60c76f12c1db111f716502a1ab9ad680238ff35ca01f954246e29a4",
+  "revision_id": "Barbell_Rear_Delt_Row@ddee631ac60c",
+  "exercise_id": "exercise.barbell_rear_delt_row.bent_over_wide_overhand",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Rear_Delt_Row",
+  "mapped_muscles": 102,
+  "promoted_at_unix": 1794179367.8846412,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "3af7a13189f86898e3ee40a21854be211f561e1a066b6c2156bd682709680526",
+    "data/exercises/engagement_profiles.json": "c541fe94757ca9491a53d21d55c71ed1720be698c537f5ac63814d61e492801b",
+    "data/exercises/catalog/candidates.json": "cd458fed005255e37d048d2b9c020bd361091711f42f65028fc9641f11135410",
+    "data/exercises/sources/free_exercise_db_media.json": "0c68c3eb60aea501f5d8844856e7a5bd13997e0a223c4b580d53125988f329c7"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "6f2f0478ed9679eaf93ad890a4ba755ea744ee08e284938fb951f9586d7ed3c9",
+    "data/exercises/engagement_profiles.json": "7800e71a8f9b6440c596d8d905dcf69e58521a2a7eefc3200aee1b8f30449853",
+    "data/exercises/catalog/candidates.json": "c37b56a5f171136fa471ec52bfd0430f847baa0bf4830eeeb4e23c6206a762ff",
+    "data/exercises/sources/free_exercise_db_media.json": "ec527cf5de31ab295fa4262f78b86aa7b1d6ca4f8b6761654f91d2001b9e32ba"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "19424c10ce64fd41311cf928c90bb31d68cf56890db41ac8a7c06f26c6ee6a6f",
+  "status": "accepted",
+  "updated_at_unix": 1794183476.34031,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183466.82346,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Scapular control with the loaded arms overhead is not credited, for example through scapular_stabilization. This is a minor omission. The trace is already acceptable, and the frames do not clearly show a deliberate scapular demand.",
+          "suggested_correction": "Optionally add scapular_stabilization in a future revision if the scapular role is judged material."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "The stabilizer list is long (108 muscles). Many hand, forearm, and lower-limb muscles sit at coefficients of 0.07-0.35. This follows from the tracer's broad demand tables (grip, postural_stabilization) and is not something a different choice of actions or demands would fix.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPnYcNn97QNAHwZEdny",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9979.0,
+          "output_tokens": 1145.0
+        }
+      },
+      "summary": "The frozen definition matches the source instructions and both frames: a standing, two-handed rope overhead triceps extension from a low pulley. The upper arms stay fixed beside the head and only the elbows move. Elbow extension is the sole primary action, applied to both arms, so the triceps heads are primary and the anconeus is a synergist. The demands fit where the load acts. Grip and wrist_stability cover the rope in the hands, shoulder_position_hold covers the overhead upper arms, anti_extension_spine covers resisting lumbar extension, and postural_stabilization covers standing. The labels (bilateral, open_chain, elbow_extension) are reasonable. The stabilizer pattern is broad but low-coefficient, and it comes from the tracer's demand tables."
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "b90c9685ff78f51d49f32132fca4cb2e8647489274f9840c0b4d0e61061e553f",
+  "status": "accepted",
+  "updated_at_unix": 1794184387.6822,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184376.87019,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The return phase of the movement (eccentric internal rotation) and the isometric holding of the dumbbells in the scarecrow position are not modeled, so subscapularis gets no credit. This is a minor omission, not a materially wrong pattern.",
+          "suggested_correction": "Optionally add glenohumeral_joint/internal_rotation as assist, or glenohumeral_stabilization, in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The labels vertical_push and shoulder_rotation are reasonable. Cuban press is a hybrid, so shoulder_raise would also be defensible. The labels do not change the traced muscles.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQwdUCN3Pe2V7miei4C",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 12087.0,
+          "output_tokens": 1293.0
+        }
+      },
+      "summary": "The definition matches the source text and both frames: a bilateral standing dumbbell exercise with external rotation of the humerus at shoulder height (the scarecrow position), followed by an overhead press. External rotation (infraspinatus, teres minor) and elbow extension (all three triceps heads) are correctly primary. Shoulder abduction and scapular upward rotation as primary credit the overhead press phase, with the deltoid, supraspinatus, serratus anterior and upper and lower trapezius engaged. Glenohumeral flexion is correctly marked assist, which keeps the clavicular deltoid and clavicular pectoralis major as synergists. The demands are placed where the load is held: grip and wrist_stability for the dumbbells, shoulder_position_hold for the upper arms held at shoulder height, and anti_extension_spine and postural_stabilization for the standing overhead press. The tracer output shows no materially wrong muscle pattern."
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "ddaade41d13b829bedf8b3d3eefbf8603ecc5f534dc814f1252f6000a2b68323",
+  "status": "accepted",
+  "updated_at_unix": 1794183899.67583,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183883.10599,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Rotator cuff muscles (supraspinatus, infraspinatus, teres minor, subscapularis) are zero, although they centre the humeral head during a heavy single-arm overhead press. The omission is modest and does not misrepresent the main movers.",
+          "suggested_correction": "Consider adding glenohumeral_stabilization (or humeral_head_stabilization) in a future revision."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The clean includes a shrug-like finish and the press has some abduction in the scapular plane. Upper trapezius and the middle deltoid are only lightly credited, through the scapular upward-rotation assist and the 0.2 weight from glenohumeral flexion.",
+          "suggested_correction": "Optionally add scapulothoracic elevation as assist and glenohumeral abduction as assist."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The slight lean away from the bell is handled only by anti_rotation_torso. Frontal-plane resistance from the quadratus lumborum and obliques is lightly represented.",
+          "suggested_correction": "Optionally consider lumbar_spine/lateral_flexion as assist, or accept the current torso demands."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "Catalog labels olympic_lift and vertical_push are reasonable. The exercise is a clean plus press rather than a pure Olympic lift.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQKEDxL4ek9f22Tyr3W",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10566.0,
+          "output_tokens": 2033.0
+        }
+      },
+      "summary": "The definition fits the frames and instructions: a two-handed floor-to-shoulder clean followed by a single-arm dip-and-drive overhead press of a thick-handled oversized dumbbell. Hip and knee extension are primary on both legs, and calf plantarflexion is assist. Shoulder flexion and elbow extension are primary on the working arm only, with scapular upward rotation as assist. Unilateral laterality with one_sided_limbs [\"arm\"] keeps the free arm unloaded, and the two-legged drive is correctly marked sides: both. The demands for spine, bracing, grip, wrist and shoulder hold match where the load is held. The resulting tracer profile is plausible: glutes, hamstrings, quadriceps and the working-side deltoid and triceps lead, with trunk and forearm stabilizers behind them. The remaining gaps are minor and non-blocking."
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "04c02220a82bf2113a7152e63259d8e60e0dcd8f014e592a5efed02e73fb0517",
+  "status": "accepted",
+  "updated_at_unix": 1794183836.47527,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183823.57793,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.primary_joint_actions[hip_joint/extension]",
+          "finding": "Hip extension at primary weight makes the three hamstrings primary movers at 0.7. Hamstring involvement in a squat is modest, but this follows from the weighted table for any squat definition that credits the glutes as primary. It is a tracer limitation and not an authoring error.",
+          "suggested_correction": "No change required. Leave hip extension as primary so the gluteus maximus and adductor magnus are credited."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "A loaded back squat involves trunk bracing. The rectus abdominis, obliques and transversus abdominis have no involvement in the output. The Smith machine's fixed bar path lowers the stability demand, so this omission is defensible.",
+          "suggested_correction": "Optionally add intra_abdominal_pressure or postural_stabilization in a future revision if heavier bracing is intended."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "patellar_tracking is not listed. The vastus medialis is already primary, so the effect on the output is negligible.",
+          "suggested_correction": "Optional: add patellar_tracking."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQEqsvUbjunaww5jp4R",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 6357.0,
+          "output_tokens": 1519.0
+        }
+      },
+      "summary": "The definition matches the source. It is a bilateral, closed-chain, Smith-machine back squat with the feet placed forward of the bar and the bar across the upper back. Both frames show the bar on the shoulders with the hands only steadying it. They show a standing start and a bottom position at or slightly below parallel. Knee extension and hip extension as primary actions give a sound quadriceps, gluteus maximus and adductor magnus pattern. Ankle plantarflexion as assist is appropriate for the calves. Grip and wrist demands are correctly omitted for a load on the back, and scapular_retraction_stability correctly credits the bar shelf. anti_flexion_spine credits the erectors, and the squat family and closed_chain labels are right. The remaining issues are minor and non-blocking."
+    }
+  }
+}

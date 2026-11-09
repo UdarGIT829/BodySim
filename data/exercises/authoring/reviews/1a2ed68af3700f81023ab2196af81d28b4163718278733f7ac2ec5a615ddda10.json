@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "1a2ed68af3700f81023ab2196af81d28b4163718278733f7ac2ec5a615ddda10",
+  "status": "accepted",
+  "updated_at_unix": 1794185071.10142,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794185057.51806,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "The family 'shoulder_raise' is acceptable for a rear lateral raise. It is a catalog label only and does not change the traced muscles. A reverse-fly or pull-type family would also be defensible.",
+          "suggested_correction": "No change required. Optionally consider adding 'horizontal_pull' if the catalog wants to reflect the rear-delt pulling pattern."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The free hand holding the bench leg is optional in the instructions and is not modeled, which is reasonable. Supraspinatus and middle-deltoid abduction contribution at the top is only partially captured, through the acromial deltoid synergist at 0.3. This is a minor omission and not material.",
+          "suggested_correction": "Optionally add glenohumeral_joint/abduction with emphasis 'assist' and sides 'working' in a future revision. This is not required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRooteqxV2GERGtUhEr",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 5317.0,
+          "output_tokens": 1611.0
+        }
+      },
+      "summary": "The definition matches the instructions and both frames. The lifter lies chest-down on a slightly inclined bench and raises one dumbbell-loaded arm out to the side with a slightly bent, fixed elbow. This is glenohumeral horizontal abduction, so the scapular spinal deltoid is the primary mover (1.0), with infraspinatus, teres minor and the acromial deltoid as synergists. The bench supports the torso, so omitting postural_stabilization is justified. Scapular retraction held at the top is credited as a stabilizer demand (transverse trapezius, rhomboids), which is appropriate. The dumbbell is held in the hand, so grip and wrist_stability are placed correctly. Arm demands and the abduction are restricted to the working arm via one_sided_limbs ['arm'] and sides 'working'. Elbow flexion and extension are correctly left out, since the elbow stays fixed. The tracer output is consistent with the exercise and has no materially wrong pattern."
+    }
+  }
+}

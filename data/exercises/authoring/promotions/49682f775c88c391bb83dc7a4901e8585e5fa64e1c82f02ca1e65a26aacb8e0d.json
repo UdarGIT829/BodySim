@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "49682f775c88c391bb83dc7a4901e8585e5fa64e1c82f02ca1e65a26aacb8e0d",
+  "revision_id": "Cable_Preacher_Curl@49682f775c88",
+  "exercise_id": "exercise.cable_preacher_curl.seated_straight_bar",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Preacher_Curl",
+  "mapped_muscles": 72,
+  "promoted_at_unix": 1794183432.4660904,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "d21bc52da4824c6460395b70bcfdc745a15240e51d98d53f958eeb6e46bd4dd2",
+    "data/exercises/engagement_profiles.json": "c70bc3552d1ee3af329907312645d1089a87cf564a1bfaa1b16aed3ec35cc8cb",
+    "data/exercises/catalog/candidates.json": "e5ca37f5e1f4b317c712029378ecb6216cf0c9601d327f56705966a8541daf33",
+    "data/exercises/sources/free_exercise_db_media.json": "b94d5672c9fdaffa850e3d7bc6bd0c8051f383952cd237516104e74f434cc8f8"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "f38c5cd549712dcd0d8127add4b79025f5d1283469954de64c450ee10230d5fd",
+    "data/exercises/engagement_profiles.json": "8fc57275677e4f72762b8633f333c5211e473544f233e7fb34be96dcc909f19f",
+    "data/exercises/catalog/candidates.json": "215e8d9b2695c2d3a33d7d1d4d796df4bdde8093caae3ed93acfd6b6d388b057",
+    "data/exercises/sources/free_exercise_db_media.json": "7f33a7578998165cd16338fa20784898093755979e93dcebccd57d72901f4cf3"
+  }
+}

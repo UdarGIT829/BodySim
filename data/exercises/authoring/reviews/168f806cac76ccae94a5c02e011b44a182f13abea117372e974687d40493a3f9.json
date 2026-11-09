@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "168f806cac76ccae94a5c02e011b44a182f13abea117372e974687d40493a3f9",
+  "status": "accepted",
+  "updated_at_unix": 1794183075.31695,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183062.51119,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The label horizontal_pull is arguable. The lifter hangs inverted and raises the body toward the bar, which is closer to a vertical pull. The catalog label does not change the traced muscles.",
+          "suggested_correction": "Consider vertical_pull, or add it as a secondary family, in a future authoring pass."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[3]",
+          "finding": "Assist knee flexion with sides=both gives the hamstrings about 0.32 and the gastrocnemius heads and gracilis lower synergist scores. This is a plausible but modest account of the hooked-leg hold, and it is hard to confirm from the frames.",
+          "suggested_correction": "No change required. A future revision could confirm the leg hold from video."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPGjzPwqC56rhj4QtVT",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9664.0,
+          "output_tokens": 1533.0
+        }
+      },
+      "summary": "The frames and instructions show a bilateral pronated-grip inverted hang with the legs hooked over the bar. The body is raised by elbow flexion, shoulder extension and scapular retraction. The definition covers these as primary actions, so the lats, rhomboids, middle trapezius, biceps, brachialis and brachioradialis are credited as movers. The hooked-leg hold is modeled as assist knee flexion with hip and trunk anti-extension demands, which is a reasonable account of the legs and trunk. Grip and wrist_stability fit a load held in the hands. No biomechanically material claim is unsupported or contradictory, and the tracer output has no materially wrong muscle pattern."
+    }
+  }
+}

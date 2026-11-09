@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "5799351a63cd86ee7cb26d5dba83cd23527bdbd4d03918ac9df07e136c37bd8c",
+  "revision_id": "Close-Grip_Dumbbell_Press@5799351a63cd",
+  "exercise_id": "exercise.dumbbell_close_grip_press.cross_bench_hips_lowered",
+  "source_catalog_id": "catalog.free_exercise_db.Close-Grip_Dumbbell_Press",
+  "mapped_muscles": 74,
+  "promoted_at_unix": 1794184122.2061703,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "254109931bbee89eb87fd0ee8cb309704926e146507e3824ec8f63ae4d728954",
+    "data/exercises/engagement_profiles.json": "b4c62f6e2b67170ceef46953a1c0c514046778ae33473c07f8b23596ceb38538",
+    "data/exercises/catalog/candidates.json": "1501d461095b383d268626921a37c1f4d8660d6f1d91adb5ec5d5a621a5c0dc4",
+    "data/exercises/sources/free_exercise_db_media.json": "5c70a1d60a35bce23f42b60dce8e7fb8fd29a68ccbe5eb4452c2331d2a3494cd"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "b0e470ce5fe62582e5f60c8d9eb7173d3e1330f5eb34ab9471259b64f50820cb",
+    "data/exercises/engagement_profiles.json": "d1ff8d0eef5d4f5445129685a4c76b934eb4eccfb7b1bb367c41a61da6a671c1",
+    "data/exercises/catalog/candidates.json": "b6c59eb45900cd326eb5a422d84350400157bbc9605f79fbe87015d4aff63060",
+    "data/exercises/sources/free_exercise_db_media.json": "3e3033fe34cc82a9b8616f2f8369407ec610e3a27f1c99ae40a6bd2a6cd2ac91"
+  }
+}

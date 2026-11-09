@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "a8bcbbc03653a0aca1f55450f948901d30e881898a14662314a55425b32ab44c",
+  "status": "accepted",
+  "updated_at_unix": 1794182642.92109,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182618.24093,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.stabilization_demands[postural_stabilization]",
+          "finding": "postural_stabilization is not a limb demand, so it counts on both sides. This gives the unloaded trailing leg small stabilizer values (left soleus 0.28, left gluteus_maximus 0.28, left vastus_lateralis 0.21). This follows from how the tracer handles the demand, so it is not a flaw in the definition.",
+          "suggested_correction": "No change needed. Be aware that this demand cannot be made single-sided."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands[pelvic_leveling_frontal]",
+          "finding": "pelvic_leveling_frontal also counts bilaterally. Left gluteus_medius shows 0.35 as a stabilizer, while right (stance-side) gluteus_medius is only a 0.2 synergist from the hip-extension action. This is a tracer limitation, because the demand cannot be restricted to the working leg.",
+          "suggested_correction": "No change needed. The same limitation should be treated the same way in every review."
+        },
+        {
+          "field_path": "assumptions[3]",
+          "finding": "The frames show the trailing knee lifted at the top, so some left hip flexion occurs as the knee comes up. It is a minor accompanying motion and the omission is defensible.",
+          "suggested_correction": "Optionally add left hip_joint/flexion as an assist, but this is not required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrNi1CXDQrs56245wWoP",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7143.0,
+          "output_tokens": 2181.0
+        }
+      },
+      "summary": "The definition fits a back-loaded barbell step-up with the right leg working. The frames show the bar on the upper back, the right foot on the box and the left knee lifted at the top, which matches the instructions. Hip and knee extension as primary actions give the expected glute, hamstring and quadriceps pattern on the right side. Ankle plantarflexion is correctly an assist, because the instructions say to lift mainly with the heel. one_sided_limbs is [\"leg\"], and laterality and kinetic_chain_type are plausible. scapular_retraction_stability suits a bar resting on the back, and grip and wrist demands are rightly omitted. The 'lunge' label covers step-ups. No material biomechanical claim is unsupported or contradicted."
+    }
+  }
+}

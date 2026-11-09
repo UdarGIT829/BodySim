@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "036719a83d36895ea8e15b48e7a971fa400537583c0c1436e7af55e7600bd1fd",
+  "revision_id": "Close-Grip_Barbell_Bench_Press@036719a83d36",
+  "exercise_id": "exercise.barbell_bench_press.close_grip_flat",
+  "source_catalog_id": "catalog.free_exercise_db.Close-Grip_Barbell_Bench_Press",
+  "mapped_muscles": 100,
+  "promoted_at_unix": 1794184103.8756979,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "5f9c3d4bfafa59e3ed9908dc8ae2fe8dd3f8d7c27f53e465b5c0cccc35dfe72f",
+    "data/exercises/engagement_profiles.json": "8a4b37347b4523bd9d1afb95fd50f6eb27537471a92e4996de1b4b884ead4533",
+    "data/exercises/catalog/candidates.json": "563cc5aa0c4b8633067bc3715738a957293d942b86a6da739c91ddfde73ed5fc",
+    "data/exercises/sources/free_exercise_db_media.json": "28694da2046b4590520749b6eab9ec0e0cb007d2b1531a96115484263ccd3275"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "254109931bbee89eb87fd0ee8cb309704926e146507e3824ec8f63ae4d728954",
+    "data/exercises/engagement_profiles.json": "b4c62f6e2b67170ceef46953a1c0c514046778ae33473c07f8b23596ceb38538",
+    "data/exercises/catalog/candidates.json": "1501d461095b383d268626921a37c1f4d8660d6f1d91adb5ec5d5a621a5c0dc4",
+    "data/exercises/sources/free_exercise_db_media.json": "5c70a1d60a35bce23f42b60dce8e7fb8fd29a68ccbe5eb4452c2331d2a3494cd"
+  }
+}

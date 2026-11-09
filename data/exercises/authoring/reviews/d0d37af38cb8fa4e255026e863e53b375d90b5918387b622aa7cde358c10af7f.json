@@ -1,0 +1,49 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "d0d37af38cb8fa4e255026e863e53b375d90b5918387b622aa7cde358c10af7f",
+  "status": "accepted",
+  "updated_at_unix": 1794183820.70915,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183812.89936,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The grip and wrist demands add many small hand and forearm stabilizer coefficients. This is typical for any handle-held press and is not materially wrong.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQE47b7JLMsgA3J4XYK",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8417.0,
+          "output_tokens": 943.0
+        }
+      },
+      "summary": "The frames and instructions show a bilateral supine flat-bench press with a handle in each hand. The elbows flex to about 90 degrees, then extend to lockout, with the arms roughly perpendicular to the floor. Elbow extension and glenohumeral horizontal adduction are the right primary actions. They give the pectoralis major (sternocostal and clavicular heads) and the three triceps heads as primary movers, with anterior deltoid, abdominal pec major, coracobrachialis and short-head biceps as synergists. Protraction as an assist is appropriate for a pressing motion. Grip and wrist_stability fit the handles held in the hands, and scapular_stabilization fits the scapular control the bench provides. The trunk is supported, so omitting postural and core demands is reasonable. Bilateral laterality, empty one_sided_limbs, open_chain and horizontal_push are all consistent with the frames. The chain's accommodating resistance changes the load but not the joint actions. The resulting tracer profile is sensible."
+    }
+  }
+}

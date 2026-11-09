@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "34329ed49f85ffd63c52f628f97ec1c54135a860752ba9c4a8c85056b64d32fe",
+  "status": "accepted",
+  "updated_at_unix": 1794185099.05999,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794185089.77446,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization adds many low-coefficient bilateral lower-limb and trunk stabilizers (e.g. adductor_magnus, rectus_femoris, hamstrings). This is the tracer's generic standing-posture spread, is minor in magnitude, and is acceptable for a standing exercise.",
+          "suggested_correction": "No change needed. Optionally weigh whether anti_extension_spine and postural_stabilization are both needed for a light single-arm load."
+        },
+        {
+          "field_path": "assumptions",
+          "finding": "The source text allows the free hand to support the upper arm or hold a fixed surface, but the frames show it resting unloaded on the hip. The definition follows the frames, which is reasonable and consistent with one_sided_limbs [\"arm\"].",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRrBUyTeuPfFnVvujvK",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8601.0,
+          "output_tokens": 1162.0
+        }
+      },
+      "summary": "The definition matches the source frames and instructions. It is a standing single-arm overhead dumbbell triceps extension with the upper arm fixed beside the head and the free hand resting on the hip. Elbow extension is the only joint action, listed as primary on the working side, so the three triceps heads are primary and anconeus is a synergist. Arm demands (shoulder_position_hold, scapular_stabilization, grip, wrist_stability) are limited to the working arm by one_sided_limbs [\"arm\"]. Anti-extension bracing and postural_stabilization fit an overhead load held standing. The resulting tracer profile has no materially wrong muscle pattern."
+    }
+  }
+}

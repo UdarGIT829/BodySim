@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "52301941ca6d88af65b7548d053b1a76382a0b0872140e3b51e1a01f769873ea",
+  "revision_id": "Ball_Leg_Curl@52301941ca6d",
+  "exercise_id": "exercise.ball_leg_curl.bilateral_supine",
+  "source_catalog_id": "catalog.free_exercise_db.Ball_Leg_Curl",
+  "mapped_muscles": 46,
+  "promoted_at_unix": 1794179235.69784,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "3b939c98b8b108850e32e543680627ebeee71106c2467b6380b36ce4b480cd9a",
+    "data/exercises/engagement_profiles.json": "8f72d4ed221fa087ac84b01dd66d18bc997e105f2ef907b68f852f224c8af09e",
+    "data/exercises/catalog/candidates.json": "47eadaace398a29a045d78f9f7a24890dbba5e126848de66ad910a015dd8ef2f",
+    "data/exercises/sources/free_exercise_db_media.json": "5cfc102182ace11fcc7ee0970f7b2ec94f706f3804daad7f8655efe94d5159b7"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "1bcc2c1e0897865f12a412fe87eef803e147d062c764359f5087c059ad3e41c4",
+    "data/exercises/engagement_profiles.json": "d0192f1ce824121a6ab9f1f879d8100e728e64c26e2ec18680ec9e2826be2cda",
+    "data/exercises/catalog/candidates.json": "840a84dfe2d4b1520249767f9d4f5d711ee26544e6a0d750a6827970e9276498",
+    "data/exercises/sources/free_exercise_db_media.json": "d135c0a974b09b1a5bf3617d61db9d40bc05b22091969a0f296e99ddcdc217bc"
+  }
+}

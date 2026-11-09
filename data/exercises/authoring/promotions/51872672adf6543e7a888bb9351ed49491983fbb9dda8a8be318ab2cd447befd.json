@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "51872672adf6543e7a888bb9351ed49491983fbb9dda8a8be318ab2cd447befd",
+  "revision_id": "Double_Leg_Butt_Kick@51872672adf6",
+  "exercise_id": "exercise.double_leg_butt_kick.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Double_Leg_Butt_Kick",
+  "mapped_muscles": 68,
+  "promoted_at_unix": 1794184869.7636428,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "fefcf028acfdb600f25d3b114b5d5cee6e992b02dda0f0d6a52983f17c77aafe",
+    "data/exercises/engagement_profiles.json": "e7eeb3bd1f58032d7cd0c902fff1046647dbe3a228d0b578b3f0c9fa1fc435e3",
+    "data/exercises/catalog/candidates.json": "52a095ebb7e8d003efc08b74012c2585a826aa29aa784e8b361083a9710dca34",
+    "data/exercises/sources/free_exercise_db_media.json": "13e586eea95cf467e5c19954d8843c7375235a903b56bd914818abd387953012"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "497b06a00c91aad849e54c4265e3b6d18acc94224df4db33abdfff78758bb60b",
+    "data/exercises/engagement_profiles.json": "4208a3786f2c29d0be311a27cf675bdbf04c960db64f3c22c02970b1e9bd3084",
+    "data/exercises/catalog/candidates.json": "de5a3ea21df5d7af8862a3dd0356dc5743a9383dce636647027450d7126e5a80",
+    "data/exercises/sources/free_exercise_db_media.json": "c111230535ffdfd0e3bc5ed4e9a3baf8c67311ce90af1360f8c8796c4ba162fc"
+  }
+}

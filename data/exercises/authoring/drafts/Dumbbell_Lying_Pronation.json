@@ -1,0 +1,102 @@
+{
+  "additional_context": "",
+  "authoring_response": {
+    "assumptions": [],
+    "classification": "ambiguous",
+    "classification_reasons": [
+      "The exercise name, 'Dumbbell Lying Pronation', implies forearm rotation at the radioulnar joint, but the instructions describe shoulder external rotation with the upper arm abducted to 90 degrees and the elbow held at 90 degrees.",
+      "The contact sheet is hard to read against the instructions. In frame 1 the dumbbell is held vertically with the hand at the bench edge, and in frame 2 it is tilted and rotated. This could be a forearm pronation/supination rotation or a shoulder external rotation arc. The two stills do not show whether the upper arm is abducted and elevated or resting on the bench.",
+      "The primary joint action differs completely between the two readings (radioulnar_joint pronation/supination versus glenohumeral_joint external_rotation). Different muscles would be traced, so no faithful definition can be proposed."
+    ],
+    "field_confidence": {
+      "input_mode": "high",
+      "kinetic_chain_type": "high",
+      "laterality": "medium",
+      "primary_joint_actions": "low",
+      "stabilization_demands": "low",
+      "variant": "low"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "dumbbell_lying_pronation"
+      ],
+      "id": "exercise.dumbbell_lying_pronation.standard",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "primary_joint_actions": [],
+        "stabilization_demands": []
+      },
+      "laterality": "bilateral",
+      "movement_families": [],
+      "name": "Dumbbell Lying Pronation",
+      "variant": "standard"
+    },
+    "questions_requiring_context": [
+      "Is the intended movement forearm rotation (pronation or supination at the radioulnar joint), or shoulder external rotation with the upper arm abducted to 90 degrees and the elbow bent to 90 degrees?",
+      "Is the upper arm supported on the bench or held out in the air at the start of the movement?",
+      "Does the working forearm start vertical, and does it rotate through about 90 degrees toward horizontal?",
+      "Is the exercise performed with one arm at a time, and which side is the working side?"
+    ]
+  },
+  "candidate_trace_report": {},
+  "catalog_id": "catalog.free_exercise_db.Dumbbell_Lying_Pronation",
+  "format_version": 1,
+  "provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1,
+      "frame_count": 2,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Dumbbell_Lying_Pronation/0.jpg",
+        "Dumbbell_Lying_Pronation/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [],
+      "classification": "ambiguous",
+      "classification_reasons": [
+        "The exercise name, 'Dumbbell Lying Pronation', implies forearm rotation at the radioulnar joint, but the instructions describe shoulder external rotation with the upper arm abducted to 90 degrees and the elbow held at 90 degrees.",
+        "The contact sheet is hard to read against the instructions. In frame 1 the dumbbell is held vertically with the hand at the bench edge, and in frame 2 it is tilted and rotated. This could be a forearm pronation/supination rotation or a shoulder external rotation arc. The two stills do not show whether the upper arm is abducted and elevated or resting on the bench.",
+        "The primary joint action differs completely between the two readings (radioulnar_joint pronation/supination versus glenohumeral_joint external_rotation). Different muscles would be traced, so no faithful definition can be proposed."
+      ],
+      "field_confidence": {
+        "input_mode": "high",
+        "kinetic_chain_type": "high",
+        "laterality": "medium",
+        "primary_joint_actions": "low",
+        "stabilization_demands": "low",
+        "variant": "low"
+      },
+      "proposed_definition": null,
+      "questions_requiring_context": [
+        "Is the intended movement forearm rotation (pronation or supination at the radioulnar joint), or shoulder external rotation with the upper arm abducted to 90 degrees and the elbow bent to 90 degrees?",
+        "Is the upper arm supported on the bench or held out in the air at the start of the movement?",
+        "Does the working forearm start vertical, and does it rotate through about 90 degrees toward horizontal?",
+        "Is the exercise performed with one arm at a time, and which side is the working side?"
+      ]
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgrNHQEAm2rwr1ZpNJpxS",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 16554.0,
+      "input_tokens": 1923.0,
+      "output_tokens": 1248.0
+    }
+  },
+  "saved_at_unix": 1794182295.3943,
+  "source_id": "Dumbbell_Lying_Pronation",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "authoring_draft",
+  "validation_errors": [
+    "proposed_definition: must be null unless classification is supported",
+    "classification: ambiguous proposals cannot advance to definition_candidate"
+  ]
+}

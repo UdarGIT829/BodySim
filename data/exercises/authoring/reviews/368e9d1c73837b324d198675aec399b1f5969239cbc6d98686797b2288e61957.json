@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "368e9d1c73837b324d198675aec399b1f5969239cbc6d98686797b2288e61957",
+  "status": "accepted",
+  "updated_at_unix": 1794183235.41837,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183223.61256,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.primary_joint_actions[0]",
+          "finding": "The table gives the hamstrings 0.7 for hip extension, which crosses the primary-mover threshold, so they are traced as primary alongside the glute max. In a bridge they are closer to strong synergists. This comes from the table weight, and no choice of emphasis or sides in this definition would fix it without under-crediting the glutes.",
+          "suggested_correction": "No change needed. This is a tracer limitation."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "The planted feet and heel drive give the soleus, tibialis, fibularis and the deeper quadriceps (vastus intermedius, rectus femoris) no credit. Their isometric role is small and the existing demands already cover the main stabilizers, so this is not material.",
+          "suggested_correction": "Optionally consider ankle_stability in a later revision, but it is not required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPUcz3aEcG9o7j84kwe",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 4986.0,
+          "output_tokens": 1281.0
+        }
+      },
+      "summary": "The definition fits a bodyweight bilateral glute bridge. Hip extension is the only primary joint action and is correctly weighted, so the glutes and hamstrings are the movers. Knee angle stays roughly fixed, so no knee action is listed. The back is meant to stay straight, so lumbar extension is correctly left out. The hands are unloaded, so no arm demands are listed. Using knee_joint_stability and pelvic_alignment as demands gives the quads, abdominals and hip flexors only low stabilizer credit, which is reasonable. The hip_bridge family and closed_chain label are appropriate."
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "d1923a896089dcfaadff2d550ae4a2bb9b81b75398f6646302e9a9660e6972ad",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105026.74784,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105009.92898,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The hugging and pulling-in action of the arms is not represented. The frames show elbows flexed, the stone clasped against the abdomen and chest, and the arms squeezing it. The instructions say to pull the stone into the torso and then get it high onto the chest. The assumption that arm work can be modeled only through stabilization demands is unsupported. The chosen demands (elbow_stability, shoulder_position_hold, grip, wrist_stability) do not reach the elbow flexors or the adductors and extensors of the shoulder. As a result brachialis, long and short heads of biceps brachii, latissimus dorsi, teres major and the sternocostal pectoralis major are zero or near zero, although they are clearly loaded when a heavy stone is hugged and lifted.",
+          "suggested_correction": "Add the arm actions that hold and pull the stone in, with emphasis set to assist if they are not the main movers. Elbow_joint/flexion would cover brachialis and biceps. Glenohumeral_joint/adduction and/or horizontal_adduction would cover latissimus dorsi, teres major and pectoralis major. Glenohumeral_joint/extension could cover the pull into the torso. Use sides both for these bilateral actions."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Shoulder_position_hold gives the clavicular deltoid a coefficient of 0.35, which is more than most of the arm muscles carrying the load. The arms hug the stone in front of the body, so an upper arm held still against a load further down the limb does not describe it well. Elbow_stability is a weak fit for the same reason, because the elbow is the flexed, load-bearing joint holding the stone.",
+          "suggested_correction": "After adding the hugging actions, reconsider whether shoulder_position_hold and elbow_stability are still needed, or reduce reliance on them. Consider adding glenohumeral_stabilization for the rotator cuff, and scapular_anchoring or scapular_retraction_stability if the shelf of the stone against the torso is meant to be modeled."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Plantarflexion is omitted even though the instructions cue driving through the back half of the feet. The calves appear only as small postural stabilizers. Lumbar extension is listed as a primary action although much of the spinal role is isometric holding, which anti_flexion_spine already covers.",
+          "suggested_correction": "Consider adding ankle_joint/plantarflexion with emphasis assist, and consider whether lumbar_spine/extension should be assist instead of primary."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011Cgpg59cbNbfezLRvKD96o",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 12202.0,
+          "output_tokens": 2058.0
+        }
+      },
+      "summary": "The lower-body and trunk extensor pattern (hip, knee and lumbar extension, with bracing) is supported by the instructions and both frames. The arm role is not. In both frames the stone is hugged against the torso with the elbows flexed and the arms wrapped around it, and the instructions say to pull the stone into the torso. The definition treats the arms purely as stabilizers, and the stabilization demands it chose cannot reach the muscles that do the hugging, so biceps brachii, brachialis, latissimus dorsi and teres major are explicit zeros and pectoralis major is nearly zero. That is a materially wrong upper-body muscle pattern that a better definition could fix."
+    }
+  }
+}

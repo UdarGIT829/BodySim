@@ -1,0 +1,67 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "140dce3556ac2442d74e14babf8c4257c79352983e065e054fc697a8fbfd9162",
+  "status": "changes_requested",
+  "updated_at_unix": 1794182911.93319,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182897.32095,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[elbow_joint/flexion].emphasis",
+          "finding": "Elbow flexion is marked primary, but the source instructions say not to exert any force with the forearm beyond holding the weights. The load is moved by shoulder extension and scapular retraction, so elbow flexion only accompanies the lift. The tracer consequently shows brachialis at 1.0, both biceps heads at 0.8 and brachioradialis at 0.7 as primary movers, overstating the arm flexors in a back-dominant row.",
+          "suggested_correction": "Mark elbow_joint/flexion as emphasis 'assist' so the arm flexors become synergists (about 0.4 or lower) and the lats, rhomboids, middle trapezius and rear deltoid remain the primary movers."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "Only horizontal_pull is listed. The loaded isometric hip hinge is a defining feature of the setup, but this is a catalog label and does not change the traced muscles.",
+          "suggested_correction": "Optionally add hip_hinge as a secondary family."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist",
+          "finding": "Pectoralis major (sternocostal and abdominal heads) and the long head of triceps appear as synergists through the glenohumeral extension table weights. This is a limitation of the tracer's action table and no choice of actions or demands would remove it while shoulder extension is credited.",
+          "suggested_correction": "No change needed; this is a tracer artifact."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "emphasis": "assist",
+          "joint": "elbow_joint",
+          "movement": "flexion",
+          "op": "set_action_emphasis"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrP4ZqNYKPLuRwdtoiYx",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9592.0,
+          "output_tokens": 1857.0
+        }
+      },
+      "summary": "The identity, bilateral laterality, open-chain label, hinge-hold stabilization (anti_flexion_spine, grip, wrist_stability) and the hip-extension assist are supported by the instructions and frames. One biomechanically material problem remains. The source cue says to keep the elbows close and 'not exert any force with the forearm other than holding the weights', so the arms act as hooks. Elbow flexion is therefore a motion that accompanies the pull, not a driver of it. Marked primary, it makes brachialis (1.0), biceps (0.8) and brachioradialis (0.7) primary movers on a par with the lats and rhomboids, which contradicts that cue."
+    }
+  }
+}

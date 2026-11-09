@@ -1,0 +1,57 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "7316e4710d3da86d9811ec77297c2e725c4a858300cae6c230a2e26acbeebe07",
+  "status": "accepted",
+  "updated_at_unix": 1794105463.93539,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105450.17414,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "vertical_pull is a loose fit for a shrug. The authoring response says the schema has no shrug or scapular-elevation family, so this is only a discoverability choice and does not change the tracer output.",
+          "suggested_correction": "If a scapular-elevation or shrug family is added to the schema, use it instead of vertical_pull."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Postural_stabilization is correct for standing, but it spreads many low-coefficient stabilizers across the legs and trunk, such as the quadriceps, hamstrings, soleus and gastrocnemius. Hand intrinsics are likewise spread thin by the grip demand. This comes from how the tracer weights those demands. The only alternative is omitting a demand that is actually present, so it is not a definition defect.",
+          "suggested_correction": "None required. Keep the demands as they are."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The behind-the-back bar position holds the shoulders slightly extended, and the arms stay locked out. No shoulder or elbow demand was added. Adding shoulder_position_hold would overstate the anterior deltoid at weight 1.0, so omitting it is defensible. The omission is not blocking.",
+          "suggested_correction": "Optionally consider scapular_retraction_stability if a future revision wants to credit the mild retraction posture. Do not add shoulder_position_hold."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgdbtJKLTLLbeT1gbMT",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 8914.0,
+          "output_tokens": 1571.0
+        }
+      },
+      "summary": "The frozen definition matches the source. The frames show a bilateral standing shrug with the bar held behind the thighs in a power rack, arms straight, using a pronated grip. The instructions say the shoulders rise with the arms kept stretched out, so scapulothoracic elevation is the only moving joint action. The tracer output is plausible: descending trapezius (1.0) and levator scapulae (0.7) are primary, and the rhomboids are synergists at 0.4. The grip, wrist and postural stabilizer pattern follows from the declared demands for a barbell held in the hands. No muscle pattern is materially wrong, and no biomechanically material claim is unsupported or contradicted."
+    }
+  }
+}

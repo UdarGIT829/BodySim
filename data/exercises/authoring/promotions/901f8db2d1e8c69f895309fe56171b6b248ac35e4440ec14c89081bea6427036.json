@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "901f8db2d1e8c69f895309fe56171b6b248ac35e4440ec14c89081bea6427036",
+  "revision_id": "Bench_Jump@901f8db2d1e8",
+  "exercise_id": "exercise.bench_jump.two_foot_over_bench",
+  "source_catalog_id": "catalog.free_exercise_db.Bench_Jump",
+  "mapped_muscles": 80,
+  "promoted_at_unix": 1794182727.7719545,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "effd2f287b6b8aedb0a3c7ab0f6b2766eafa5eafa175715cf2851977ba399ad7",
+    "data/exercises/engagement_profiles.json": "a7291b33ba55f8bf13e1c4701f1b82b586ea46ade8f6ba3a36f132b5d03b1c01",
+    "data/exercises/catalog/candidates.json": "e780e2a486217bef6b37f22624de9e1ad2b8ba2379266617deba8f469acc689c",
+    "data/exercises/sources/free_exercise_db_media.json": "cf330fe0e5f86d5056d6208d7be6a746264b6dc3044e794ad582aeecbe32876d"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "c39c8e8090ee9b36ac2f8287f5c831e09e1923b4466a4122de28625f716f5a50",
+    "data/exercises/engagement_profiles.json": "bdb97b7cda7bf83481c9ae66696fd520452c292c2e828c785b1d79cec96c5c98",
+    "data/exercises/catalog/candidates.json": "aabf1bb96e5c2a5a77f284368fc0d2cb519634d7b3860f6725a8483be08b85e4",
+    "data/exercises/sources/free_exercise_db_media.json": "4c6ac7008a2354527e7de0d42173473bb494eac2715d61c0a9926998bf22df95"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "7d249c27bdf11c75e19a5ca504ec0199ae549cf06cc21da32a4b80e05c05e1d9",
+  "revision_id": "Band_Good_Morning@7d249c27bdf1",
+  "exercise_id": "exercise.band_good_morning.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Band_Good_Morning",
+  "mapped_muscles": 52,
+  "promoted_at_unix": 1794179262.9728165,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "f07d28058739c43dc7a0816b33a7fe370403c6de2cd27567d13f50188407fa67",
+    "data/exercises/engagement_profiles.json": "388039a6f9d904cddd65cac9c1af26774c3a0bb3f68a129372808e610a83d865",
+    "data/exercises/catalog/candidates.json": "0e14a56ebd82f95baed0b00e9cccd6b0e316e4e10dbcf8603b395b9eef4c3a46",
+    "data/exercises/sources/free_exercise_db_media.json": "c31ca3f8c10274d4d47a93d92bf632cb343f5d07aa8e722eec8bbb15b35314f7"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "b7e7453b86644928e6504f5059798d3d07fd5b8589895d5f5356fb4271915e33",
+    "data/exercises/engagement_profiles.json": "56bf622ddce697c0de5af015e5bffea42a3b8f12ee0f60d05c6c6dcbed2a5292",
+    "data/exercises/catalog/candidates.json": "840c400f7d6d45bb852ba6be8f0b6bb9c9a8bbe7e598ebb4c1fbfacee4171554",
+    "data/exercises/sources/free_exercise_db_media.json": "9f2c6080b0d500a05088c873b917ace214171ad2c6c715f05fa97ed582d544d1"
+  }
+}

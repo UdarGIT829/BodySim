@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "0fbc8bfd139991ffcc20b41aa89351abcafdca972a10dd38632cf413c8e292b0",
+  "status": "accepted",
+  "updated_at_unix": 1794184674.46784,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184659.51938,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[glenohumeral_joint/horizontal_adduction]",
+          "finding": "The humerus moves from extension at the bottom back to neutral at the top, so the concentric motion is arguably glenohumeral flexion from an extended position. Horizontal adduction is a pragmatic proxy for chest emphasis with flared elbows. The resulting pec and anterior deltoid pattern is plausible, and latissimus and teres major involvement is credited only at low levels.",
+          "suggested_correction": "In a future revision, consider whether a glenohumeral adduction or extension assist would better represent the lat and teres major contribution at the bottom range."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "A dip is often catalogued as a vertical or downward-pressing pattern, though 'horizontal_push' is defensible for the chest-emphasis lean. This label does not change the traced muscles.",
+          "suggested_correction": "Optionally add 'vertical_push' as a secondary family if the catalog convention treats dips that way."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "No trunk demand is listed, although the leaned torso and free-hanging legs imply light trunk and pelvic control. This is a minor omission that does not materially alter the profile.",
+          "suggested_correction": "Optionally consider 'postural_stabilization' or 'anti_extension_spine' as a minor demand in a future revision."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRJTqLzGe7oSXXAtAm3",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9131.0,
+          "output_tokens": 1719.0
+        }
+      },
+      "summary": "The definition is supported by the instructions and both frames. They show a bilateral bodyweight dip on fixed parallel bars with a forward torso lean, slightly flared elbows and free-hanging legs. Closed-chain bilateral laterality is correct, and the elbow extension, horizontal adduction and shoulder flexion actions plus scapular depression are reasonable. The tracer gives the expected pattern: triceps heads and both pectoralis major heads as primary, anterior deltoid and the remaining pectoralis fibers as synergists, and grip, wrist and scapular stabilizers. No materially wrong muscle pattern is exposed, so nothing blocks acceptance."
+    }
+  }
+}

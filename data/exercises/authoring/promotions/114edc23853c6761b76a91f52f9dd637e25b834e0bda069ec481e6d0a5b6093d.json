@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "114edc23853c6761b76a91f52f9dd637e25b834e0bda069ec481e6d0a5b6093d",
+  "revision_id": "Decline_Push-Up@114edc23853c",
+  "exercise_id": "exercise.push_up.decline_feet_elevated",
+  "source_catalog_id": "catalog.free_exercise_db.Decline_Push-Up",
+  "mapped_muscles": 93,
+  "promoted_at_unix": 1794184580.033616,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "fe364a5fb508f35e5bece780c6ef8382204743cfc251337ccf49170e7cd99a3a",
+    "data/exercises/engagement_profiles.json": "42e424f21b35920b6328236d2b3addead193ae2cf916c8b307f63d079bf9d7e3",
+    "data/exercises/catalog/candidates.json": "4d7202260ba71d0173de280637de69986fe63e6837e8772095ac69555d9924f4",
+    "data/exercises/sources/free_exercise_db_media.json": "79614e490f49722812d75f69b7e86913873b517705ae15ea89faab88c8813e5e"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "34dee3169a23a52dfb574a472bda1324d6c15c3c45e8421088cbfe5dc58628fe",
+    "data/exercises/engagement_profiles.json": "c02bc4d482b8bc494e918b8b0e93f7d19243fd14298bce85594da5d9e92bf657",
+    "data/exercises/catalog/candidates.json": "83417917f393c8087ac5a782dd7c12c004cc2068c13b2e53c07380a0ead1a666",
+    "data/exercises/sources/free_exercise_db_media.json": "ad4e1c7a89d48d659235cda5327bdb837681d8fc2000c5b49a73ff85ea92406f"
+  }
+}

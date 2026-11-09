@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "52769d130a5b3893ee40a88aec3ceee99f10be947fa98bc5e3939831aae2669a",
+  "revision_id": "Cable_Internal_Rotation@52769d130a5b",
+  "exercise_id": "exercise.cable_internal_rotation.seated_unilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Internal_Rotation",
+  "mapped_muscles": 53,
+  "promoted_at_unix": 1794183373.1780155,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "5d7959a3ef359b2f0d677cd2e05d112ce1656f981308d264192dada9b5e17c44",
+    "data/exercises/engagement_profiles.json": "43bee273d913e0fdf1894d129455a1a1abfc7ca3c1840b08260d9560c5543d3f",
+    "data/exercises/catalog/candidates.json": "2e52640115cecac6eecda44723226324953a2f2ff82e4c674d89be2c379d080a",
+    "data/exercises/sources/free_exercise_db_media.json": "7df4a82e78543fc8e13e7e41f2e0915779627c8aed39b6d0f3ce8471cbcb6f4f"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "845eb54bc87401d60dbc929b40a33dde9c587d75f600d6a8d2c0d739a4873f73",
+    "data/exercises/engagement_profiles.json": "b950f0bc5153841d8b300167d8a9c7b3e22119d5d7b7bb847e5a443ad86209d5",
+    "data/exercises/catalog/candidates.json": "f76c2be07e54c2e84b5b4f9e6a998447bd36ea8f063591fdfe9cb063d6b511f8",
+    "data/exercises/sources/free_exercise_db_media.json": "cd4bf70f2777cb9000bce3fb4dc9869e0c638dfd364bcbcdef82bf0df8147f10"
+  }
+}

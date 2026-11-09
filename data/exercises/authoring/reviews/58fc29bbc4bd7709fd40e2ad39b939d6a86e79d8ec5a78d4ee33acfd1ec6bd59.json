@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "58fc29bbc4bd7709fd40e2ad39b939d6a86e79d8ec5a78d4ee33acfd1ec6bd59",
+  "status": "accepted",
+  "updated_at_unix": 1794179430.96173,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179421.60029,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.assumptions[4]",
+          "finding": "The second frame shows the lifter seated on the plate-topped box at the bottom, so the stated light touch is not clearly visible. This does not change the traced muscles.",
+          "suggested_correction": "Optionally reword to say the lifter touches or briefly sits on the box before driving up without fully relaxing."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.primary",
+          "finding": "The hamstrings (biceps femoris long head, semimembranosus, semitendinosus) come out as primary at 0.7 because of the table weight for hip extension. In a squat they are likely less active than the gluteus maximus and quadriceps. This comes from the tracer table, and no choice of actions or emphasis would change it without under-crediting hip extension.",
+          "suggested_correction": "None needed; this is a tracer limitation."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The lifter steadies the bar with both hands, and the forearm and shoulder muscles work lightly. Omitting them is acceptable, and the tracer shows them as zero.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJeMf1neuaeFsLWmypY",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9634.0,
+          "output_tokens": 1158.0
+        }
+      },
+      "summary": "The definition matches the source: a bilateral high-bar barbell back squat to a box or bench, with the bar on the upper back, shoulder-width stance, and a light touch on the box. The previous council's blockers are fixed. Ankle plantarflexion is now assist, grip and wrist_stability are removed, and scapular_retraction_stability covers the bar shelf. Knee extension and hip extension as primary actions give a plausible pattern: quadriceps and gluteus maximus lead, hamstrings and adductor magnus follow, and calves are synergists. The trunk bracing and postural demands are sensible for a heavy axial load."
+    }
+  }
+}

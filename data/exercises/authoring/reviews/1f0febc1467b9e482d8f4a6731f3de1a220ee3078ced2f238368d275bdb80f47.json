@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "1f0febc1467b9e482d8f4a6731f3de1a220ee3078ced2f238368d275bdb80f47",
+  "status": "accepted",
+  "updated_at_unix": 1794183491.87144,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183479.02337,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "Closed_chain is defensible because the feet are planted, but the hands move a cable handle against external resistance, so open_chain could also be argued. This is a catalog label and does not change the traced muscles.",
+          "suggested_correction": "Keep closed_chain, or consider open_chain if the catalog convention follows the loaded hand-held implement."
+        },
+        {
+          "field_path": "proposed_definition.laterality",
+          "finding": "The set is performed to one side at a time and then repeated on the other side. Bilateral is reasonable because spinal actions count on both sides and the limbs do symmetric work, but the cable load is one-sided in each set.",
+          "suggested_correction": "No change needed; bilateral is acceptable given the alternate-side repetition."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Anti-rotation or intra-abdominal bracing is not listed. The instructions say 'abs engaged', but the rotation action already credits the obliques as primary, so the output is not materially wrong.",
+          "suggested_correction": "Optionally add intra_abdominal_pressure if future revisions want transversus abdominis credited."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPoSoeimvbFKZRcLJGo",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9654.0,
+          "output_tokens": 1584.0
+        }
+      },
+      "summary": "The definition matches the source instructions and frames: supine on a stability ball, both hands holding a cable handle with arms extended over the chest, hips held up, and the torso rotated a quarter turn away from the pulley. Lumbar rotation as the primary action puts the external and internal obliques at 0.9, which is the right primary pattern. The hip extension assist covers the held bridge and brings in gluteus maximus and hamstrings as synergists, with pelvic_alignment adding trunk and hip support. Grip, wrist_stability, shoulder_position_hold, scapular_stabilization and elbow_joint_integrity credit the arms for holding the cable load with fixed, extended arms. No material wrong or missing muscle pattern is exposed, so nothing blocks acceptance."
+    }
+  }
+}

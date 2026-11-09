@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "f370870b68604c4232af1acd704a2169ded672582355a4a80b17bed02cac3dde",
+  "status": "accepted",
+  "updated_at_unix": 1794184610.76732,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184599.99019,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Decline press shifts load toward the sternocostal and abdominal pec major, but the table gives the clavicular head 0.8 under horizontal adduction, so it is primary. This follows from the tracer's fixed weights and no choice of action or emphasis would change it meaningfully.",
+          "suggested_correction": "None required; this is a tracer limitation."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The Smith machine fixes the bar path, so wrist stability and scapular stabilization are less demanding than with a free barbell. Their stabilizer coefficients are small and consistent with this, so this is only a note.",
+          "suggested_correction": "No change needed; optionally drop wrist_stability in a future revision if the authoring team wants a more conservative stabilizer profile."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRE5Ns96DC4kuwgWYvN",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8600.0,
+          "output_tokens": 1247.0
+        }
+      },
+      "summary": "The definition matches the source text and frames: a bilateral Smith machine press on a decline bench with a wide pronated grip, the bar lowered to the lower chest and pressed back up. Glenohumeral horizontal adduction and elbow extension as primary actions give the expected pattern. The pec major heads and all three triceps heads are primary movers, and the anterior deltoid, coracobrachialis, abdominal pec major and short head of biceps are synergists. Scapular protraction as an assist is reasonable and only adds low-level serratus anterior and pectoralis minor. Grip and wrist stability are correctly placed because the bar is held in the hands, and scapular stabilization fits the scapulae being pinned against the bench. Leaving out spinal and lower-body demands is consistent with a supported, braced-on-bench press. The labels (horizontal_push, open_chain, bilateral, empty one_sided_limbs) are appropriate. No biomechanically material claim is unsupported or contradicted, and the tracer output has no materially wrong muscle pattern."
+    }
+  }
+}

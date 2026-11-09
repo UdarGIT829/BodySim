@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "cd6c07bfa193542de0165827ae33f44f69309b96de30550cc54dc429a207ca61",
+  "status": "accepted",
+  "updated_at_unix": 1794182822.85814,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794182807.34758,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "movement_families",
+          "finding": "vertical_pull is only the closest catalog label. The load moves in an overhead-to-chest arc through shoulder extension, which is not a classic pull-down or pull-up. This label does not change the traced muscles.",
+          "suggested_correction": "Keep vertical_pull, or consider adding a second family if the catalog later offers a better fit."
+        },
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "The triceps are credited only lightly (medial head via elbow_joint_integrity, long head via shoulder extension) even though they work isometrically to hold the bent elbow against the load. This is a small shortfall and does not materially distort the pattern.",
+          "suggested_correction": "Optionally add an assist elbow_joint/extension action in a future revision if the elbow-holding triceps work should be weighted more."
+        },
+        {
+          "field_path": "kinematic_profile.kinetic_chain_type",
+          "finding": "The feet are planted but the load moves freely in the hands, so open_chain is defensible. It is only a catalog label.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrNww86n37dHEMRttuMx",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8202.0,
+          "output_tokens": 1613.0
+        }
+      },
+      "summary": "The definition matches the source frames and instructions: a cross-bench bent-arm pullover with both hands under one dumbbell plate, hips below the bench and feet planted. Glenohumeral extension is correctly the primary action, which makes latissimus dorsi, teres major and posterior deltoid the primary movers. Pectoralis major and the triceps long head appear as synergists, as expected for a pullover. The fixed elbow is covered by elbow demands, hip extension is an assist for the held hip position, and the trunk demands fit the arched, braced torso. No materially wrong muscle pattern appears in the tracer output."
+    }
+  }
+}

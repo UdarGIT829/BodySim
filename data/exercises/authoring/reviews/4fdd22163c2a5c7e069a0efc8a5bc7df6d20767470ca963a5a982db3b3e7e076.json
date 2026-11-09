@@ -1,0 +1,62 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "4fdd22163c2a5c7e069a0efc8a5bc7df6d20767470ca963a5a982db3b3e7e076",
+  "status": "accepted",
+  "updated_at_unix": 1794105182.1996,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105168.1175,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "kinematic_profile.stabilization_demands",
+          "finding": "The band sits on the back of the neck and the hands steady it behind the head. Minor upper-back and scapular demands, and possibly shoulder position hold, are not modeled. They are low-load and ambiguous from the frames, and the assumptions explicitly set them aside.",
+          "suggested_correction": "Optionally add a light scapular_stabilization or shoulder_position_hold demand in a future revision if upper-back involvement is considered meaningful."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.synergist",
+          "finding": "Gluteus medius appears as a 0.2 synergist because the table gives it a weak hip extension weight. Its role here is marginal. This follows from the tracer table and not from a definition choice.",
+          "suggested_correction": "None required; treat as a tracer-table artifact."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "The spinal erectors (longissimus thoracis, iliocostalis lumborum, multifidus) work hard isometrically in a good morning, but the tracer can only list them as stabilizers with coefficients of 0.35 times the demand weight. Their coefficients are therefore low relative to their real contribution. No action or demand choice in the current vocabulary can change this.",
+          "suggested_correction": "None required; this is a tracer limitation."
+        },
+        {
+          "field_path": "kinematic_profile.primary_joint_actions",
+          "finding": "Frame 1 shows more knee flexion than the instruction's 'slightly bent', so some quadriceps eccentric work is visible. Listing the quads only as stabilizers via postural_stabilization is acceptable.",
+          "suggested_correction": "Optionally add an assist-level knee extension action if the knee bend is intended to be part of the movement."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgGpS1YYuRZPmWeyeQU",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 5354.0,
+          "output_tokens": 1637.0
+        }
+      },
+      "summary": "The definition is supported by the instructions and both frames. A band anchored low at the post loops behind the neck and pulls the torso forward and down. The lifter hinges at the hips with the knees only moderately bent and the back flat, then drives the hips through to stand. Bilateral, closed_chain, hip_hinge and a single primary hip extension action all fit this. The traced pattern is plausible: glutes and hamstrings are primary, adductor magnus is a synergist, and the spinal erectors, deep trunk muscles, quads and calves appear as stabilizers. The erectors are the main load-bearing isometric muscles but appear only as stabilizers, which is a tracer limitation for this action vocabulary and not a definition error."
+    }
+  }
+}

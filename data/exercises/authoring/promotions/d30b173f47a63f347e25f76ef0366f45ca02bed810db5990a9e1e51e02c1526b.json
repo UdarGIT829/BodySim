@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "d30b173f47a63f347e25f76ef0366f45ca02bed810db5990a9e1e51e02c1526b",
+  "revision_id": "Clean_and_Press@d30b173f47a6",
+  "exercise_id": "exercise.barbell_clean_and_press.bilateral_standing",
+  "source_catalog_id": "catalog.free_exercise_db.Clean_and_Press",
+  "mapped_muscles": 173,
+  "promoted_at_unix": 1794184057.8934956,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "a3137acd7aaaf5cc96dc6756139bd5f831c6cf5cdbce3402cd20e7f5f31a879e",
+    "data/exercises/engagement_profiles.json": "765787d21ddc5ea8aed857325e16065842ef061baccb5c1ef17feec237deed42",
+    "data/exercises/catalog/candidates.json": "da2664f3e654c39afd6f705839c9464c987d18400c3c97403c8425a38cdd94cf",
+    "data/exercises/sources/free_exercise_db_media.json": "6dc22ffc3f9990fcd91de8224261e756d62707493a09fcbe01e0cf342722704e"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "dd5311d8a1ccfa732d2c28dee1b50adbd5702845f072c79a2fafd9b8e0c99ee5",
+    "data/exercises/engagement_profiles.json": "57151f4541213eb12cb78ed512ea656da82080836a381130fa31af3c53e85579",
+    "data/exercises/catalog/candidates.json": "d568d13e40bd6036348ace719f252ddad25f8b6af89b55ec66a8114c256c512c",
+    "data/exercises/sources/free_exercise_db_media.json": "f465c03382f487b13fe550d69fdc4667c0fb27ddda09b3b31ec8cd2ec10ebc97"
+  }
+}

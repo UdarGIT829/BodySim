@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "368e9d1c73837b324d198675aec399b1f5969239cbc6d98686797b2288e61957",
+  "revision_id": "Butt_Lift_Bridge@368e9d1c7383",
+  "exercise_id": "exercise.glute_bridge.bodyweight_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Butt_Lift_Bridge",
+  "mapped_muscles": 38,
+  "promoted_at_unix": 1794183235.770244,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "4eafaffa6cf7ce1c24dbc1c7baa7a137a8f51c2fe2a29b51f8432dd54ea48448",
+    "data/exercises/engagement_profiles.json": "aaddae3f61e6cfd116541d07b21fcc903b36d71e639079e2d1b5b932805506de",
+    "data/exercises/catalog/candidates.json": "d232d55a153a7b13fbf90714fafdd5558f5b9792940e21b9fc15adc3e001eb69",
+    "data/exercises/sources/free_exercise_db_media.json": "e43a465541b3121eb1b7b2123b9d89013ec8958b1930edcc3b17d86a2a8cc6e0"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "7f80e7691085f30b40891ebd70cfa5471ee6ed2101b20fd44cc0428a67a52016",
+    "data/exercises/engagement_profiles.json": "d1a73d5a7b183e38172236a7d16d319f1e7981973945b71f1602fffa1526b07a",
+    "data/exercises/catalog/candidates.json": "d0b35b1963a428e4c8f8e98f4cfe7521ec7c9d55756cdee728b51796b3c9ead2",
+    "data/exercises/sources/free_exercise_db_media.json": "b60f4a9adaba42ca146909fbb615a5dfb989ae1fa3a5e38a5e636d175645c1cd"
+  }
+}

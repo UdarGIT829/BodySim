@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "61c9115a6ee48e3015cdbb3feee00dfbf99c4238f9b23826cbfd7ac411bca0e9",
+  "revision_id": "Bottoms-Up_Clean_From_The_Hang_Position@61c9115a6ee4",
+  "exercise_id": "exercise.bottoms_up_kettlebell_clean.hang_unilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Bottoms-Up_Clean_From_The_Hang_Position",
+  "mapped_muscles": 104,
+  "promoted_at_unix": 1794183124.3942063,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "64b4b50a04c035a859391170cf709e65d6c75084eda774d68c04bef6c9063251",
+    "data/exercises/engagement_profiles.json": "18a2baca0b312a7af97e20be8c668ebf9c120ea2d4cc24a79b5ccdc1ae9e7938",
+    "data/exercises/catalog/candidates.json": "83c2b2f174303622778daff7e380dabb75b8507511114b5d6b6bcc3f503ab1d8",
+    "data/exercises/sources/free_exercise_db_media.json": "74a880978eeb573c588e7ab5bbfdb8ad9aeaf9bf847762320c3e929c8578c4fe"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "63e383b5f1926d15e20f4998ece0c97a0140bfae87d9e61c8985c062c8681250",
+    "data/exercises/engagement_profiles.json": "af5d071563393e8d8580d89840378fe25eb523e4861f9ec1694e36dc73cfdd1a",
+    "data/exercises/catalog/candidates.json": "57b3b7fa00f24ca1ef564eaedc49de7780f765a6645c786b1b93e0fd8d307f7f",
+    "data/exercises/sources/free_exercise_db_media.json": "defd544fcdfe3be6378168f927db0e68b136bee83dc124990293eca518560798"
+  }
+}

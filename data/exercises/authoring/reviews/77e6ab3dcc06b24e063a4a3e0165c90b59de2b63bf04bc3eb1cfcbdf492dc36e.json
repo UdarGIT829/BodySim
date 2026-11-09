@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "77e6ab3dcc06b24e063a4a3e0165c90b59de2b63bf04bc3eb1cfcbdf492dc36e",
+  "status": "accepted",
+  "updated_at_unix": 1794183711.6906,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183699.55097,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Calf plantarflexion is omitted, so soleus and the gastrocnemius heads are explicit zeros. They contribute little during the drive through the heels, so this is a minor under-crediting.",
+          "suggested_correction": "A future revision could add ankle_joint/plantarflexion with emphasis assist and sides both."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The lats hold the bar close to the body isometrically, but they only reach 0.08 through scapular retraction. This is a minor under-crediting.",
+          "suggested_correction": "A future revision could add glenohumeral_joint/extension with emphasis assist and sides both to credit lat and posterior deltoid isometric work."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The knee bend is deep, so the lift sits between hip_hinge and squat. hip_hinge is a reasonable catalog label for a deadlift variant.",
+          "suggested_correction": "No change needed. The label could optionally add squat."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQ5hbqKJZtfHkwnwihY",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9705.0,
+          "output_tokens": 1351.0
+        }
+      },
+      "summary": "The frames and instructions show a bilateral floor-to-lockout lift with a neutral-grip frame. The definition models it with hip and knee extension as primary, a brief scapular retraction assist at lockout, and spinal bracing and hand demands. The tracer output follows this: glutes, hamstrings, quadriceps and adductor magnus drive the lift, erectors and the abdominal wall stabilize the trunk, and the forearm and hand muscles hold the load. No biomechanically material claim is unsupported, contradictory or ambiguous."
+    }
+  }
+}

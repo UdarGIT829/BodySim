@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "c8074cb21a64223cdb5dabf6a27a4b8f471ce66f22a32ad1f63242e0e5227a3b",
+  "revision_id": "Crucifix@c8074cb21a64",
+  "exercise_id": "exercise.crucifix_hold.standing_bilateral",
+  "source_catalog_id": "catalog.free_exercise_db.Crucifix",
+  "mapped_muscles": 126,
+  "promoted_at_unix": 1794184314.6795166,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "7b94456d2dba7d291ad6f4be2355de5fb4bb07d83f8680ee342f39463d7c7465",
+    "data/exercises/engagement_profiles.json": "4dc2c466e1cc87f4dc42dada7401bc2ef803f02ab8addb71837cb8678db86b9b",
+    "data/exercises/catalog/candidates.json": "735ac547a57753c0a49c67e4f1463d5440c294805fdf5eecb595d5ba8234579b",
+    "data/exercises/sources/free_exercise_db_media.json": "bdeb801cb00aa1139504e9b2c0f1c7290a150df0f25d8b2ec5ac2f0573dd3309"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "fc98c7ee145550a27704c7850377e97cb2162769cc021a9dfe2448551e2a2201",
+    "data/exercises/engagement_profiles.json": "d98365b296c205d5f3492d00aee8864224fdf5bf810867cc680c75576b362407",
+    "data/exercises/catalog/candidates.json": "f50228bfc0b5d8226eba9b0d21485a525b692eb5579641db484262fca5ae352f",
+    "data/exercises/sources/free_exercise_db_media.json": "e488eb185179933578077a107af1baa4a2ab9cb0b2fa560d578d02838d88fd9b"
+  }
+}

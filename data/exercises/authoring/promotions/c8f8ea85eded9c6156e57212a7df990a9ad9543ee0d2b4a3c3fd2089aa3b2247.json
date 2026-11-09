@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "c8f8ea85eded9c6156e57212a7df990a9ad9543ee0d2b4a3c3fd2089aa3b2247",
+  "revision_id": "Board_Press@c8f8ea85eded",
+  "exercise_id": "exercise.board_press.barbell_bench",
+  "source_catalog_id": "catalog.free_exercise_db.Board_Press",
+  "mapped_muscles": 86,
+  "promoted_at_unix": 1794182977.4997044,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "b9ecd022ebe4c5a5f6457722e75bbd2fad9f65d3ba5152c4d2885a93a8c74b65",
+    "data/exercises/engagement_profiles.json": "6b1aabf42732780466a510f83c23b133b35402fd77d6e8c8b91bfec964e40630",
+    "data/exercises/catalog/candidates.json": "540ef9d27d711d8340b816069bfd90123ee8518ad5d810e1624b75718741b8cd",
+    "data/exercises/sources/free_exercise_db_media.json": "14ff5095342e01ef938cc57a9f36a7ef5f83bb2ae23390d270051ba8e7aadadc"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "4c4da077fff5b927681104a474a6c92ff033a111358211c75928db1f041337d3",
+    "data/exercises/engagement_profiles.json": "6afd0b9604198b4f26f8a879e4b550798d487fc2e3f6f8e203b0ca21483f2249",
+    "data/exercises/catalog/candidates.json": "c70e1f2968e81a424d2931e4f78014f05fcd68580f027b86bbc7db7e3ad71faf",
+    "data/exercises/sources/free_exercise_db_media.json": "f6700bf0f019edd72736d28c3c00721f36cf458fef0fd6e8654e051889c26a18"
+  }
+}

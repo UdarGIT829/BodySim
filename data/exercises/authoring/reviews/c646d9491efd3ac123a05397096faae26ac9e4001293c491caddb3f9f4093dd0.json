@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "c646d9491efd3ac123a05397096faae26ac9e4001293c491caddb3f9f4093dd0",
+  "status": "accepted",
+  "updated_at_unix": 1794184641.63383,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184630.50136,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[ankle_joint/plantarflexion]",
+          "finding": "Plantarflexion is marked assist, so the soleus and gastrocnemii appear only as low-coefficient synergists (0.28 to 0.4). In a maximal-effort jump the calves contribute substantially. This is still consistent with the guidance that calf plantarflexion in squats, cleans and throws is an assist, so it is a judgment call and not an error.",
+          "suggested_correction": "Optionally keep as assist; no change is required."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "Trunk bracing is not represented. The landing and takeoff involve some anterior core and postural control, but the source does not call for deliberate heavy bracing, so omitting it is defensible.",
+          "suggested_correction": "Optionally consider postural_stabilization in a future revision; not required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRGLM59mLAqUstxYmrB",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7354.0,
+          "output_tokens": 1274.0
+        }
+      },
+      "summary": "The definition matches the source: a bilateral two-foot drop from the lower box, a rebound takeoff, and an arm swing toward the higher box. Hip and knee extension are correctly primary. The tracer output follows from that: gluteus maximus, hamstrings and quadriceps are primary movers, and the calves and shoulder flexors are synergists. Weighting the calves and arm swing as assists is consistent with the guidance for jumps. The landing demands (ankle, knee, spine) fit the instruction to let the legs absorb impact, and they credit the trunk extensors and knee/ankle stabilizers. The labels (bilateral, closed chain, jump_and_throw) are appropriate. I found no unsupported or contradicted claims."
+    }
+  }
+}

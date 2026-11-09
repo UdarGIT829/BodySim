@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "f67097437f00b794cc2d0a4a85a6a82295fbb836c414068aace8b82c56ccd82c",
+  "revision_id": "Cable_Reverse_Crunch@f67097437f00",
+  "exercise_id": "exercise.cable_reverse_crunch.lying_ankle_strap",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_Reverse_Crunch",
+  "mapped_muscles": 44,
+  "promoted_at_unix": 1794183464.569351,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "6feadcf614b5cbff17df1a32ad756d985357f7b238a769e7c7af0aef5f45ac09",
+    "data/exercises/engagement_profiles.json": "b9bf089ef31cb191a589e88db5898ac0bdee62347b6a8923f6f50647d2ca67d6",
+    "data/exercises/catalog/candidates.json": "1dee2093629d1ca0ceb33a2bec10384aefd4e801589b574b0186bc7bbc235604",
+    "data/exercises/sources/free_exercise_db_media.json": "349d83ffc1efa56765bc70aed46c4086d11292d7c1c5182a946be7010162bc13"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "d70682a425703a602d19f5a5a1bbd0a2db47ca4f56c6351dc35b3c0a8f42676d",
+    "data/exercises/engagement_profiles.json": "46b20ae8f4044af5db015f5941ce5728617fbe445e71c2da36c24360d1e4f35a",
+    "data/exercises/catalog/candidates.json": "4708b9e9bfefcb0f7f512da8f70b2c8156e6d69cf7153099d21f629ef6cc7ad7",
+    "data/exercises/sources/free_exercise_db_media.json": "2dcdedd0cbd390104ab3fbbd37db5e2c839f69551b5052be64deeea1b4eeaeb6"
+  }
+}

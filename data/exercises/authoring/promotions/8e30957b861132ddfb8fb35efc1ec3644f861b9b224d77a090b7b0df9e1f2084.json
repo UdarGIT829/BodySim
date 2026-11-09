@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "8e30957b861132ddfb8fb35efc1ec3644f861b9b224d77a090b7b0df9e1f2084",
+  "revision_id": "Calf_Press_On_The_Leg_Press_Machine@8e30957b8611",
+  "exercise_id": "exercise.leg_press_calf_press.seated_machine",
+  "source_catalog_id": "catalog.free_exercise_db.Calf_Press_On_The_Leg_Press_Machine",
+  "mapped_muscles": 66,
+  "promoted_at_unix": 1794183666.881993,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "424021aea680ccd53270d01099c1e5ac531a7ff7c58256681345ea59377c19b4",
+    "data/exercises/engagement_profiles.json": "59b153afd367459284dd4cf8f8a3eac0dea8e5b6f9b81c16b7c94462649c4399",
+    "data/exercises/catalog/candidates.json": "776c5112fefb3e57c956bcc316be0f06d2b5fd0b5ef9e3aa8515c5c290936e77",
+    "data/exercises/sources/free_exercise_db_media.json": "a4d50662ad2c2fb27c62b045d3dcfc3341d4cbcfd7ddec2693a17d220619359e"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "a6c776fb72a6524e87c976ae5e9a17fc101d1c1d2b801fdbff194e9b6efe4e61",
+    "data/exercises/engagement_profiles.json": "f8a7e707d1672fdf7ece404db8ee8375e5c064461e46cdce5b64e0709db38718",
+    "data/exercises/catalog/candidates.json": "a1c07fe30664765f27b727d3181b5ed5f7447776aa97a0d66d66103d35c7c2be",
+    "data/exercises/sources/free_exercise_db_media.json": "6ddad1a5608688c1d3fe5e2f807f6825c59baccee9fa36c0253d0a96c90954e7"
+  }
+}

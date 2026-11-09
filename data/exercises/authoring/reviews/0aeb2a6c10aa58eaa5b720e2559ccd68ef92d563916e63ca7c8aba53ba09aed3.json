@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "0aeb2a6c10aa58eaa5b720e2559ccd68ef92d563916e63ca7c8aba53ba09aed3",
+  "status": "accepted",
+  "updated_at_unix": 1794183282.78596,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183266.86065,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "closed_chain is debatable. The knees and shins are fixed on the mat, but the moving segment is the trunk, with the hands loaded through a cable. This is a catalog label only and does not change the traced muscles.",
+          "suggested_correction": "Consider open_chain, or keep closed_chain if the catalog convention treats a fixed kneeling base as closed. Either is acceptable."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "pelvic_alignment is the best available proxy for the hips resisting the cable pull. It routes small coefficients to the hamstrings, glute max and erectors, which is plausible isometric hip-holding. The source cue about not letting the lower back do the work argues against crediting erectors heavily, and the current weights are low enough that this is not material.",
+          "suggested_correction": "No change needed. In a future revision, optionally state in the assumptions that pelvic_alignment stands in for hip-position holding."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "The grip and shoulder_position_hold demands spread low coefficients over many hand intrinsics and shoulder muscles. This follows the tracer's weighted demand table and is not something a different choice of actions or demands would remove.",
+          "suggested_correction": "None required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPXokHX7pDTnvcTDi2b",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7574.0,
+          "output_tokens": 1843.0
+        }
+      },
+      "summary": "The kneeling rope cable crunch is supported by the source instructions and both frames. Frame 1 shows an upright kneel with the rope at the face, and frame 2 shows the trunk curled forward over the thighs. Lumbar flexion as the sole primary action puts rectus abdominis at 1.0 as primary and the obliques at 0.6 and psoas at 0.2 as synergists. This fits the cue to flex the waist with the hips stationary. The demands (grip, shoulder_position_hold, intra_abdominal_pressure, pelvic_alignment) fit the rope held in the hands, the upper arms held still at the face, the brace, and the hips held in place. The stabilizer output is small and plausible. No materially wrong muscle pattern appears."
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "0cadcae30f4eb1411470004ed276fd160dfe968937aa3e4f19b94cfb805071d3",
+  "status": "accepted",
+  "updated_at_unix": 1794183204.38461,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183191.82342,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[glenohumeral_joint/flexion]",
+          "finding": "Flexion at full weight makes the clavicular head of pectoralis major a primary mover (0.7). Its role in an overhead press is secondary. This follows from how the table assigns flexion weights and is a tracer limitation, not a clear authoring error. The long and short heads of biceps and coracobrachialis also appear as synergists through the same action.",
+          "suggested_correction": "No change needed. A future revision could set glenohumeral flexion to assist only if the deltoid pattern stays primary through abduction."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Scapular elevation is not listed. The descending trapezius is only a 0.28 synergist, although the upper trapezius works at overhead lockout. The upward rotation assist covers the scapular motion reasonably well, so this is a minor under-crediting.",
+          "suggested_correction": "Optionally add scapulothoracic_joint/elevation as an assist action."
+        },
+        {
+          "field_path": "proposed_definition.assumptions[4]",
+          "finding": "The assumption says glenohumeral stabilization covers external rotation behind the head. The behind-the-head path is only described in the text and is not shown in the frames. Infraspinatus and teres minor appear only as low-coefficient stabilizers, which is acceptable for this alternating exercise.",
+          "suggested_correction": "No change required."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPSHAP5JzvAeEJkKAyN",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 9608.0,
+          "output_tokens": 1521.0
+        }
+      },
+      "summary": "The definition fits a seated, bilateral, barbell Bradford press. The frames show a pronated wide grip with the bar at shoulder level, then locked out overhead with the trunk upright against a back pad. The actions (elbow extension, glenohumeral flexion and abduction, assisted scapular upward rotation) put the deltoids, triceps and supraspinatus in the primary role and serratus anterior and trapezius as synergists. The demands (anti-extension spine, glenohumeral stabilization, grip, scapular stabilization, wrist stability) put the bar load where it is held. No biomechanically material claim is unsupported or contradicted, so there are no blocking problems."
+    }
+  }
+}

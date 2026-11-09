@@ -1,0 +1,54 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "0d50e76ab00ff445550799cf563b9b08c6360da15b1e3d19687a34c4b12d2985",
+  "status": "accepted",
+  "updated_at_unix": 1794183296.08622,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183285.30843,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The arms hang straight against the cable load, and no demand credits scapular or shoulder-girdle control. The upper trapezius, lats and wrist stabilizers are therefore zero. This is a minor omission, similar to the scapular role at a deadlift lockout, and does not make the muscle pattern materially wrong.",
+          "suggested_correction": "In a future revision, consider adding scapular_stabilization or an assist-level scapular action, and wrist_stability, to credit hanging-arm control."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "Listing both hip_hinge and squat is defensible. The start frame is a fairly deep, upright hip-and-knee bend, and the source calls the movement a deadlift. The labels do not change the traced muscles.",
+          "suggested_correction": "No change needed. hip_hinge as the first family is acceptable."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPZAgeV31bQvoK66pj7",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7751.0,
+          "output_tokens": 1241.0
+        }
+      },
+      "summary": "The frozen definition matches the source. Both frames show a bilateral standing lift with a handle in each hand from low cable pulleys, rising from a hip-and-knee bend to full standing. Hip and knee extension are rightly primary, and calf plantarflexion is rightly an assist. The spine stays neutral with the head and chest up, so anti_flexion_spine is appropriate and lumbar actions are correctly left out. Grip fits the handles held at the sides. The traced pattern is plausible: glutes, hamstrings and quadriceps are primary, adductor magnus and the calves are synergists, erectors and grip muscles are stabilizers. No materially wrong or missing muscle group is evident, and the open points below are minor."
+    }
+  }
+}

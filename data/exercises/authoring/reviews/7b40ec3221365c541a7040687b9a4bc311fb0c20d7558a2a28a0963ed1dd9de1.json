@@ -1,0 +1,81 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "7b40ec3221365c541a7040687b9a4bc311fb0c20d7558a2a28a0963ed1dd9de1",
+  "status": "changes_requested",
+  "updated_at_unix": 1794183061.54993,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183042.93925,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The assumption says the hooked, tucked leg position is held isometrically and is not modeled. Both frames show the knees hooked over the bar, anchoring the body to it for the whole rep. The hamstrings and other knee flexors resisting the hook are explicit zeros in the trace.",
+          "suggested_correction": "Add knee_joint/flexion with emphasis assist and sides both, so the hook-holding hamstrings are credited as synergists without becoming primary."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "In the inverted tuck, gravity pulls the torso away from the hooked legs, so the hip flexors must resist hip extension. The trunk also has to stay a rigid link between the hands and the hooks. The trace gives no credit to the iliopsoas, rectus abdominis or obliques (all zero), although the body path depends on them.",
+          "suggested_correction": "Add the stabilization demands anti_extension_hip and anti_extension_spine."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "edits_resolve_all_blocking_findings": true,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "horizontal_pull is a reasonable catalog label. The body is lifted toward the bar from an inverted hang, so vertical_pull is arguable, but the label does not change the traced muscles.",
+          "suggested_correction": "Optionally keep horizontal_pull as the primary family and consider adding vertical_pull."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[2]",
+          "finding": "Scapular retraction is marked primary because the instructions cue it. It is a plausible primary action, but retraction contributes less than the elbow and shoulder action in practice, so the trapezius and rhomboid coefficients may read slightly high.",
+          "suggested_correction": "Consider whether scapulothoracic retraction should be assist if the intent is a lat-dominant pattern."
+        }
+      ],
+      "proposed_edits": [
+        {
+          "emphasis": "assist",
+          "joint": "knee_joint",
+          "movement": "flexion",
+          "op": "add_joint_action",
+          "sides": "both"
+        },
+        {
+          "demand": "anti_extension_hip",
+          "op": "add_stabilization_demand"
+        },
+        {
+          "demand": "anti_extension_spine",
+          "op": "add_stabilization_demand"
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPFJNFii8danYTo9KfE",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7577.0,
+          "output_tokens": 2319.0
+        }
+      },
+      "summary": "The upper-body pull is well supported. Pronated grip, elbow flexion, shoulder extension and scapular retraction are all consistent with the instructions and both frames, and grip and wrist_stability are placed correctly for a load held in the hands. The legs, however, are visibly hooked over the bar and carry part of the inverted body's weight throughout, with the hips flexed and the trunk held as a rigid link between hands and hooks. The definition explicitly leaves this out, so hamstrings, hip flexors and the trunk are all explicit zeros. A joint held still against load still needs its muscles credited, so this is a materially wrong muscle pattern. The fix can be made with the available edit operations."
+    }
+  }
+}

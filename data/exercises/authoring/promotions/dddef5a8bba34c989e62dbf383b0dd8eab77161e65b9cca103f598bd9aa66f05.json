@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "dddef5a8bba34c989e62dbf383b0dd8eab77161e65b9cca103f598bd9aa66f05",
+  "revision_id": "Bent_Over_Dumbbell_Rear_Delt_Raise_With_Head_On_Bench@dddef5a8bba3",
+  "exercise_id": "exercise.dumbbell_rear_delt_raise.bent_over_head_supported",
+  "source_catalog_id": "catalog.free_exercise_db.Bent_Over_Dumbbell_Rear_Delt_Raise_With_Head_On_Bench",
+  "mapped_muscles": 86,
+  "promoted_at_unix": 1794182851.0949948,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "cb6fb72b0ffe9f3b8539caa50de94fe7ed22f4db558825836069a3d46629abde",
+    "data/exercises/engagement_profiles.json": "70a1658cee8fe10d41044d3702bfdd3de2c48e093b2e41064b219e90dcad55f5",
+    "data/exercises/catalog/candidates.json": "3f85c135ea36f1188a8902e993a4c787992d1515ed1264ae4425c33fa0befac6",
+    "data/exercises/sources/free_exercise_db_media.json": "3196327cf56cd332f4ed98f8f9b261e450a49e132232d45292271d3794047e53"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "de1190f6ade26d491256a10403237cfcc4ef9675eee74a520cdce734228ee1cb",
+    "data/exercises/engagement_profiles.json": "00667205c9dd7ba48a3613d266e79cebe603602da31603f834f0f3fefa4758ff",
+    "data/exercises/catalog/candidates.json": "eb7a06d5802ac5d798d5fcca3641e0d7b88c325217cf6e48f8354312a9176dd2",
+    "data/exercises/sources/free_exercise_db_media.json": "a14ea4c1d2396731a7208a962b8ea7fdb9ef15ae6625f8d5da195e10cf002ff4"
+  }
+}

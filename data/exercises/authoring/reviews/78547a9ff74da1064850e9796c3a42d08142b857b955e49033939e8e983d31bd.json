@@ -1,0 +1,68 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "78547a9ff74da1064850e9796c3a42d08142b857b955e49033939e8e983d31bd",
+  "status": "changes_requested",
+  "updated_at_unix": 1794105167.68286,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105147.83775,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The `grip` demand is unsupported as a load-holding demand. The instructions place the band behind the neck, so the resistance acts through the neck and upper back. The frames show the hands resting at the hips only steadying the band. The tracer therefore gives the finger and thumb flexors sizeable stabilizer coefficients (flexor digitorum profundus 0.35, humero-ulnar flexor digitorum superficialis 0.28, flexor pollicis longus 0.21). This contradicts the definition's own assumption of only light grip demand.",
+          "suggested_correction": "Remove `grip`. Model the band shelf on the upper back and neck with `scapular_retraction_stability` or `scapular_stabilization`, so the trapezius and rhomboids carry the load. Do not rely on hand demands, since the tracer cannot express light grip."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "The tracer output omits the upper-back muscles that hold the band across the neck and trapezius. These are the transverse and descending trapezius and the rhomboids. It also includes dozens of low-value hand intrinsics that come from the unsupported grip demand. The stabilizer profile is skewed toward the hands and away from the actual shelf.",
+          "suggested_correction": "Replace the grip demand with a scapular shelf demand, so the trapezius and rhomboids are engaged and the hand muscles go to zero."
+        }
+      ],
+      "confidence": "medium",
+      "decision": "reject",
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "`knee_joint_stability` is weakly supported. The instructions say to keep the legs straight, and no knee valgus or rotation challenge is visible. It adds popliteus and vastus stabilizers that are marginal for this movement.",
+          "suggested_correction": "Consider dropping `knee_joint_stability`, or confirm it from the frames. `postural_stabilization` already covers the standing leg and ankle muscles."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "`pelvic_alignment` activates rectus abdominis and the obliques as sagittal pelvic-tilt holders. In a good morning the pelvis is deliberately anteriorly tilted while the spine stays neutral, so this demand is questionable. The coefficients are small.",
+          "suggested_correction": "Consider removing `pelvic_alignment`, or justify it. `anti_flexion_spine` already captures the key trunk demand."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The definition lists only concentric hip extension. This matches the tracer's convention, so it is acceptable. The hinge's eccentric phase is not modelled separately.",
+          "suggested_correction": "No change required; this is a tracer limitation."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgFKHoCc6YyEoJiVdCb",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 8246.0,
+          "output_tokens": 2460.0
+        }
+      },
+      "summary": "The core identity is supported: a bilateral standing hip hinge on a band, with hip extension as the concentric action and a neutral spine. The frames show a hinged start and an upright finish. Hip extension correctly makes the glutes and hamstrings primary and adductor magnus a synergist. The load-bearing demands are misplaced, however. The text says the band loops behind the neck, and the frames show it running up the torso to the neck while the hands only steady it at hip level. Grip is therefore modelled as a real load-holding demand, which produces about 32 hand and forearm stabilizers, including flexor digitorum profundus at 0.35. The band shelf on the neck and upper back has no scapular or upper-trapezius demand. This gives a materially wrong stabilizer pattern."
+    }
+  }
+}

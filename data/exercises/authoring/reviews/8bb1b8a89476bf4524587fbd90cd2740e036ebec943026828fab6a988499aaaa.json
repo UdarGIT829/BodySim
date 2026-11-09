@@ -1,0 +1,64 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "8bb1b8a89476bf4524587fbd90cd2740e036ebec943026828fab6a988499aaaa",
+  "status": "accepted",
+  "updated_at_unix": 1794179070.32545,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179051.59669,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The source says to rotate the wrist during the clean, but no radioulnar action is listed. The justification is now honest because the frames do not show the rotation direction, and the net rotation is small. The forearm rotators are therefore left at zero, apart from a small pronator teres contribution via elbow flexion.",
+          "suggested_correction": "A future revision could add radioulnar_joint/pronation as an assist action if the end-range forearm orientation at the rack can be confirmed from the source."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The rotator cuff (infraspinatus, subscapularis, supraspinatus, teres minor) and the latissimus dorsi trace to zero. A heavy bell hanging and being pulled close to the body plausibly engages the cuff modestly. The profile is still reasonable, since the cuff is a minor contributor.",
+          "suggested_correction": "Optionally add glenohumeral_stabilization or humeral_head_stabilization for modest cuff credit."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "closed_chain is a catalog label. The feet are planted, but the bell moves freely in the hands, so open_chain could also be argued for the upper limb. The label is acceptable and does not affect the trace.",
+          "suggested_correction": "No change needed."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "olympic_lift and hip_hinge are reasonable catalog labels for a kettlebell hang clean. The label choice does not change the traced muscles.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJB5h4VWQyLhHSJQ4g9",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 13582.0,
+          "output_tokens": 2217.0
+        }
+      },
+      "summary": "The definition fits the demonstrated movement: an alternating single-bell clean from a double-kettlebell hang, with one bell racked at the shoulder and the other hanging. Hip and knee extension are the primary drivers, so the glutes, hamstrings and quadriceps come out primary. The calf plantarflexion, elbow flexion, glenohumeral flexion and shrug are correctly marked assist, so the biceps, brachialis, anterior deltoid and upper trapezius are synergists rather than primary. The spine and trunk are covered through anti_flexion_spine, anti_rotation_torso and postural_stabilization. Grip, wrist_stability, shoulder_position_hold and scapular_stabilization cover the held and racked load, which fixes the earlier gap where the shoulder girdle returned zero. Bilateral laterality with empty one_sided_limbs suits alternating sides, and the radioulnar omission is now justified without any false claim about the vocabulary. Remaining points are non-blocking refinements."
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "e4bac6441ddc4f9414a80d44f25f668f04d261bd96afd1d15accc9513d3fe24f",
+  "status": "accepted",
+  "updated_at_unix": 1794179250.44334,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179236.64073,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "The hands are fixed on the bar and the body moves, which supports closed_chain. Some conventions call a pull-up open chain because the distal end is free. This is a catalog label only and does not change the traced muscles.",
+          "suggested_correction": "Keep closed_chain, or adjust to match the catalog's convention for hanging pulls."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "Scapular retraction is not listed as an assist, so middle trapezius is an explicit zero, and rotator cuff centering is not credited. Both are minor contributors in a pull-up.",
+          "suggested_correction": "A future revision could add scapulothoracic_joint/retraction as assist and glenohumeral_stabilization as a demand if more complete scapular and cuff coverage is wanted."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.primary",
+          "finding": "Pectoralis major heads reach 0.7-0.8 as primary movers through glenohumeral adduction. This is a table property of the adduction action, which is a legitimate pull-up action, so the pattern is acceptable.",
+          "suggested_correction": "No change needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJQis57AsDsCxdb9fEc",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8185.0,
+          "output_tokens": 1709.0
+        }
+      },
+      "summary": "The definition fits the source. It is a bilateral, pronated, medium-to-wide grip vertical pull from a fixed bar. Both frames show the overhand grip, the hanging start and the chin-to-bar finish. One knee rests passively in the band loop, so the legs are correctly not modeled as working. The primary actions (glenohumeral adduction and extension, elbow flexion, scapular depression) move the load and give the expected primaries: latissimus dorsi, teres major, brachialis, biceps, brachioradialis, posterior deltoid and lower trapezius. The earlier concern about downward rotation is resolved because it is now marked assist, so rhomboids and levator scapulae are synergists at about 0.3. Grip and anti-extension of the spine correctly cover the hands and trunk. No blocking problems remain."
+    }
+  }
+}

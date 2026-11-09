@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "eefb2ab59ee651997fb89b570993264463cccbf71f8ceafc7d739e596844f3db",
+  "revision_id": "Clean_from_Blocks@eefb2ab59ee6",
+  "exercise_id": "exercise.barbell_clean.from_blocks",
+  "source_catalog_id": "catalog.free_exercise_db.Clean_from_Blocks",
+  "mapped_muscles": 135,
+  "promoted_at_unix": 1794184077.3340876,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "dd5311d8a1ccfa732d2c28dee1b50adbd5702845f072c79a2fafd9b8e0c99ee5",
+    "data/exercises/engagement_profiles.json": "57151f4541213eb12cb78ed512ea656da82080836a381130fa31af3c53e85579",
+    "data/exercises/catalog/candidates.json": "d568d13e40bd6036348ace719f252ddad25f8b6af89b55ec66a8114c256c512c",
+    "data/exercises/sources/free_exercise_db_media.json": "f465c03382f487b13fe550d69fdc4667c0fb27ddda09b3b31ec8cd2ec10ebc97"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "2a9c2986578237d308e3f397a2c4d77f4fddf452f1cf46ae8b7eaf6ff778d551",
+    "data/exercises/engagement_profiles.json": "d25c54f2d515c749c034348189cc12d16a5cfd192fa1c730617d4ba80350a0ca",
+    "data/exercises/catalog/candidates.json": "5f00a3bd5414233286eca4dcb2c1c0f4c7652d8ab0af7809c2e190c08d80440e",
+    "data/exercises/sources/free_exercise_db_media.json": "c050246c1a1e0ac707be1d739f53a70fc5af0166935d3056943076a89c33e309"
+  }
+}

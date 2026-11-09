@@ -1,0 +1,49 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "91abccaba9a281ab0c6f449d43050b6c02eca247359833844d91631686ba0540",
+  "status": "accepted",
+  "updated_at_unix": 1794183809.95824,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183801.77684,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "No scapular stabilization demand is listed, although the scapulae are mildly stabilized against the bench with the arms held overhead. This is a minor omission that does not materially distort the traced pattern.",
+          "suggested_correction": "Optionally consider adding scapular_stabilization in a future revision if deliberate scapular control is wanted in the profile."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrQDEmn4tEsoibkYiyPj",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 7198.0,
+          "output_tokens": 917.0
+        }
+      },
+      "summary": "The frames show a supine bilateral lying triceps extension. Both elbows flex with the handles behind the head, then extend to a vertical lockout. The upper arms stay roughly vertical and still, which matches the instructions. Elbow extension, bilateral with sides working, is the only moving action and correctly makes all three triceps heads primary and anconeus a synergist. The grip and wrist_stability demands fit the handles held in the hands. The shoulder_position_hold demand fits the upper arms held still against a load acting from the forearm, and it credits the anterior deltoid. The open_chain and elbow_extension labels are appropriate. The traced profile has no materially wrong muscles."
+    }
+  }
+}

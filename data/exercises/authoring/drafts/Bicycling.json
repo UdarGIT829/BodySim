@@ -1,0 +1,104 @@
+{
+  "additional_context": "",
+  "authoring_response": {
+    "assumptions": [],
+    "classification": "ambiguous",
+    "classification_reasons": [
+      "The only instruction is to sit on the bike and adjust the seat height, which describes setup and not a pedaling movement.",
+      "The frames show a man fastening a bike helmet chinstrap and a hand adjusting a seat-post quick-release. Neither frame shows riding or any exertion path.",
+      "Bicycling could be represented as a closed-chain, alternating, duration-based leg exercise. But the type of bike, riding posture, resistance, and whether pedaling is intended all change the joint actions, and none of these are given.",
+      "Source text and images show only setup and do not demonstrate the exercise named Bicycling, so a faithful kinematic definition cannot be proposed."
+    ],
+    "field_confidence": {
+      "input_mode": "medium",
+      "kinetic_chain_type": "medium",
+      "laterality": "medium",
+      "primary_joint_actions": "low",
+      "stabilization_demands": "low",
+      "variant": "low"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "bicycling"
+      ],
+      "id": "exercise.bicycling.standard",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "primary_joint_actions": [],
+        "stabilization_demands": []
+      },
+      "laterality": "bilateral",
+      "movement_families": [],
+      "name": "Bicycling",
+      "variant": "standard"
+    },
+    "questions_requiring_context": [
+      "Is this meant to be pedaling on a road/mountain bike or a stationary bike, and should it be recorded as duration?",
+      "What riding posture is intended (seated upright, seated forward-leaning on handlebars, or standing out of the saddle)?",
+      "Should the definition cover steady seated pedaling at moderate resistance, or climbing or sprinting with higher hip and knee demands?",
+      "Is the bicycle exercise the pedaling itself, or just the setup shown (helmet and seat adjustment)?"
+    ]
+  },
+  "candidate_trace_report": {},
+  "catalog_id": "catalog.free_exercise_db.Bicycling",
+  "format_version": 1,
+  "provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1,
+      "frame_count": 2,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Bicycling/0.jpg",
+        "Bicycling/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [],
+      "classification": "ambiguous",
+      "classification_reasons": [
+        "The only instruction is to sit on the bike and adjust the seat height, which describes setup and not a pedaling movement.",
+        "The frames show a man fastening a bike helmet chinstrap and a hand adjusting a seat-post quick-release. Neither frame shows riding or any exertion path.",
+        "Bicycling could be represented as a closed-chain, alternating, duration-based leg exercise. But the type of bike, riding posture, resistance, and whether pedaling is intended all change the joint actions, and none of these are given.",
+        "Source text and images show only setup and do not demonstrate the exercise named Bicycling, so a faithful kinematic definition cannot be proposed."
+      ],
+      "field_confidence": {
+        "input_mode": "medium",
+        "kinetic_chain_type": "medium",
+        "laterality": "medium",
+        "primary_joint_actions": "low",
+        "stabilization_demands": "low",
+        "variant": "low"
+      },
+      "proposed_definition": null,
+      "questions_requiring_context": [
+        "Is this meant to be pedaling on a road/mountain bike or a stationary bike, and should it be recorded as duration?",
+        "What riding posture is intended (seated upright, seated forward-leaning on handlebars, or standing out of the saddle)?",
+        "Should the definition cover steady seated pedaling at moderate resistance, or climbing or sprinting with higher hip and knee demands?",
+        "Is the bicycle exercise the pedaling itself, or just the setup shown (helmet and seat adjustment)?"
+      ]
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgrLLWBCSozCMHmur4cjz",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 16554.0,
+      "input_tokens": 1564.0,
+      "output_tokens": 499.0
+    }
+  },
+  "saved_at_unix": 1794180759.26142,
+  "source_id": "Bicycling",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "authoring_draft",
+  "validation_errors": [
+    "proposed_definition: must be null unless classification is supported",
+    "classification: ambiguous proposals cannot advance to definition_candidate"
+  ]
+}

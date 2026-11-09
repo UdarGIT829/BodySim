@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "a49d4d446702d2c589442a7312b53583595810e3acdbfd2f6bf18b38ac2c5925",
+  "status": "accepted",
+  "updated_at_unix": 1794183189.33645,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794183179.97339,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "engaged_muscles_by_role.primary",
+          "finding": "The hamstrings (long head of biceps femoris, semimembranosus, semitendinosus) come out as primary movers at 0.7 through hip extension. This follows the table weight for hip extension and cannot be changed by any choice of action or emphasis, so it is a tracer limitation.",
+          "suggested_correction": "None needed. Treat it as a tracer limitation."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The cue to push the knees out is not modelled as hip abduction or external rotation. The glute medius is credited only weakly (0.2) through hip extension. This is a minor omission.",
+          "suggested_correction": "A future revision could add hip_joint/external_rotation or abduction with emphasis assist, but it is not required."
+        },
+        {
+          "field_path": "engaged_muscles_by_role.stabilizer",
+          "finding": "The bar rests on the upper trapezius, but the descending trapezius is not engaged. The available demands do not reach it, so this is a tracer vocabulary limitation.",
+          "suggested_correction": "None needed."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrPRQe4bV7p9Bnsi72Gn",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 8415.0,
+          "output_tokens": 1077.0
+        }
+      },
+      "summary": "The definition fits a bilateral barbell box squat with accommodating chain resistance. The frames show the bar on the upper back, standing in the first frame and seated on a box in the second. Hip extension and knee extension are primary, which gives the glutes, quadriceps and adductor magnus the expected pattern. Ankle plantarflexion is correctly marked assist. The bar sits on the back rather than in the hands, so scapular retraction stability is right and grip and wrist demands are correctly absent. Spinal bracing, knee stability and standing posture are credited through demands. The squat family and closed-chain labels are appropriate."
+    }
+  }
+}

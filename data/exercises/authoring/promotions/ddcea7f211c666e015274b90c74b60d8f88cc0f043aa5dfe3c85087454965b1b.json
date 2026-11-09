@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "ddcea7f211c666e015274b90c74b60d8f88cc0f043aa5dfe3c85087454965b1b",
+  "revision_id": "Barbell_Ab_Rollout_-_On_Knees@ddcea7f211c6",
+  "exercise_id": "exercise.barbell_ab_rollout.kneeling",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Ab_Rollout_-_On_Knees",
+  "mapped_muscles": 116,
+  "promoted_at_unix": 1794105260.8615875,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "43e55c882ecdaf1511ba69b539a9c9f57dcbfd42fe3fd9e975bce75d19a92588",
+    "data/exercises/engagement_profiles.json": "f48b8ed13d4cba382b3de417819180ca90eb14430b03fe14038ab7a9e1664cf7",
+    "data/exercises/catalog/candidates.json": "8b0cba89be14595743f7113dcae336bda3f38e68ced0f7260439d33f4a476a2d",
+    "data/exercises/sources/free_exercise_db_media.json": "6beaf393012e30a8812e858434995385c00e9c50c23613b74adfaceb3cfa0712"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "4af37a0b6f45612a7b49562172fbd94a051b4ee4aaa332210a5edb0ac1a2e7e4",
+    "data/exercises/engagement_profiles.json": "f939e5f458702801b99d6d2a810234bbe219ddecaaaef3155383300261cdc1ea",
+    "data/exercises/catalog/candidates.json": "d0185f2da9f2bfeb1ec99770636e352da44ebfe1c3475d307f2e950b96144f02",
+    "data/exercises/sources/free_exercise_db_media.json": "ee224f85f31fed2a8ef37633858e47c5bc6c205fb9c29a6da9c63aa36123d4b7"
+  }
+}

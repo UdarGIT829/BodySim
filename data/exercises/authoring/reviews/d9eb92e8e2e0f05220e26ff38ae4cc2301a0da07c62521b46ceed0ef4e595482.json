@@ -1,0 +1,57 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "d9eb92e8e2e0f05220e26ff38ae4cc2301a0da07c62521b46ceed0ef4e595482",
+  "status": "accepted",
+  "updated_at_unix": 1794105197.3331,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105183.16248,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The arms are held abducted at shoulder height against band tension and gravity for the whole set. No shoulder-level hold demand is included, so the isometric deltoid contribution (clavicular and acromial parts) is only partly captured. Supraspinatus is also absent, although it assists with the arm held at about 90 degrees.",
+          "suggested_correction": "Consider adding shoulder_position_hold and/or glenohumeral_stabilization in a future revision, so the deltoid hold and the rotator cuff centring role at shoulder height are represented."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization spreads many low-coefficient stabilizers across the legs and trunk (vasti, soleus, gluteus maximus, hamstrings, erector spinae). This is defensible for standing, but it adds many small entries to a low-load upper-back isolation exercise. It comes from how the tracer maps the demand, not from a wrong definition choice.",
+          "suggested_correction": "No change is required. If a leaner profile is wanted, consider whether postural_stabilization is needed at all."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "Open chain is reasonable because the hands move freely against the band. The band does give closed-loop resistance, which is why the authoring confidence for this field is medium.",
+          "suggested_correction": "None required. Keep open_chain."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgHvrk5V55UQTfPH9UV",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 9830.0,
+          "output_tokens": 1679.0
+        }
+      },
+      "summary": "The definition matches the instructions and frames: a standing, bilateral, open-chain band pull apart with straight arms at shoulder height. The hands move apart in the horizontal plane against the band, with the shoulders held back. Horizontal glenohumeral abduction plus scapular retraction correctly makes the rear (scapular spinal) deltoid, transverse trapezius, and both rhomboids primary. Infraspinatus, teres minor, acromial deltoid, ascending and descending trapezius, and latissimus dorsi are sensible low-coefficient synergists. Grip and wrist_stability fit a band held in the hands, and elbow_joint_integrity fits the locked elbows. Postural_stabilization fits upright standing. The resulting tracer profile has no materially wrong muscle pattern. The remaining points are minor refinements."
+    }
+  }
+}

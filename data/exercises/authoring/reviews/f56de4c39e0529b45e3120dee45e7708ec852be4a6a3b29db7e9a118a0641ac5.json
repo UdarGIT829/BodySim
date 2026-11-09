@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "f56de4c39e0529b45e3120dee45e7708ec852be4a6a3b29db7e9a118a0641ac5",
+  "status": "accepted",
+  "updated_at_unix": 1794184804.14624,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184782.93199,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The latissimus dorsi, which restrains the bells close to the body in the backswing and pull, is an explicit zero. The upper-trapezius shrug of the pull phase is only credited indirectly, through scapular upward rotation at 0.28. This is a modest under-crediting, not a materially wrong pattern.",
+          "suggested_correction": "Consider an assist-level glenohumeral extension or a humeral_head_stabilization demand to credit the lats, and an assist-level scapulothoracic elevation to credit the upper trapezius and levator scapulae."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The overhead path is represented by shoulder flexion alone, so the acromial deltoid gets only 0.2 and the clavicular head of pectoralis major lands exactly at the 0.7 primary threshold. A snatch finishes in a slightly abducted overhead lockout.",
+          "suggested_correction": "Optionally add glenohumeral abduction at assist level to raise the acromial deltoid and supraspinatus."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.kinetic_chain_type",
+          "finding": "closed_chain is defensible because the feet are fixed, but the loaded hands move freely, so open_chain would also be defensible for the upper body. This is a catalog label and does not change the traced muscles.",
+          "suggested_correction": "Leave as is, or document the rationale."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRTZxCH6wfq3skwkUmv",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 13331.0,
+          "output_tokens": 2597.0
+        }
+      },
+      "summary": "The definition fits a bilateral double-kettlebell snatch: a hip-hinge backswing, an explosive hip and knee extension drive, and an overhead lockout. The tracer output follows from it. The glutes, hamstrings, adductor magnus and quadriceps are primary or synergist movers. The anterior deltoid and clavicular pectoralis major are primary movers through shoulder flexion, with triceps, serratus anterior, trapezius and calves as synergists. Trunk, rotator cuff, scapular and grip muscles are credited as stabilizers. Calf plantarflexion, elbow extension and scapular upward rotation are correctly marked assist. Laterality, one_sided_limbs and the trunk demands are consistent with the frames and instructions. The remaining concerns are minor and non-blocking."
+    }
+  }
+}

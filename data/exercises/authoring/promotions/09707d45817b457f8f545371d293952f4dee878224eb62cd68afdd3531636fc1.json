@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "09707d45817b457f8f545371d293952f4dee878224eb62cd68afdd3531636fc1",
+  "revision_id": "Dead_Bug@09707d45817b",
+  "exercise_id": "exercise.dead_bug.alternating_leg_extension",
+  "source_catalog_id": "catalog.free_exercise_db.Dead_Bug",
+  "mapped_muscles": 57,
+  "promoted_at_unix": 1794184409.9498892,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "882258dc1f2560018956cc42f175e022d35a6705f7e7c27796b973c888de5ffc",
+    "data/exercises/engagement_profiles.json": "d13070d5e6b7bee3dc8a14c4fc42199bf042b81b08ac0d673dd8967e68fa8b82",
+    "data/exercises/catalog/candidates.json": "a0ef1a6bf62f4b5a1efb6684f874301c91b403fe10a02f9a9e26d7b624b8d3d2",
+    "data/exercises/sources/free_exercise_db_media.json": "d67f6472b87a488fbc5ea2c728c41e1c98bedf673987a341deab9bc0ddb4589e"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "b11e5b709e802ff57994329815b36a611d7d4036c9ff251692ccff1e37c10b8c",
+    "data/exercises/engagement_profiles.json": "e42aeb253f6461de2d76c743f7c49b0416138021987ceaa232be7ff08875d8c7",
+    "data/exercises/catalog/candidates.json": "ad9ab055dc73883298eb7efec556356997a40ade52d7fd62f83fe17ea6040997",
+    "data/exercises/sources/free_exercise_db_media.json": "575dc01a3c8363de3b0b0d783b8de925b91e56c7a977e7c9b4e8794d750c6359"
+  }
+}

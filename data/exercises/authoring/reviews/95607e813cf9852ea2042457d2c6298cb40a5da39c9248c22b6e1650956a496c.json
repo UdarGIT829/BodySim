@@ -1,0 +1,52 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "95607e813cf9852ea2042457d2c6298cb40a5da39c9248c22b6e1650956a496c",
+  "status": "accepted",
+  "updated_at_unix": 1794105275.5003,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794105261.56333,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The ankle moves through dorsiflexion on the descent and plantarflexion on the ascent, but neither is listed. The calves therefore appear only through postural_stabilization (soleus 0.28, gastrocnemii about 0.105), and tibialis anterior is zero. This is a modest underrepresentation, not a materially wrong pattern.",
+          "suggested_correction": "Optionally add ankle_joint/plantarflexion with emphasis 'assist' and sides 'both' so the calves are low-weight synergists. Avoid listing it as primary."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions[hip_joint/extension]",
+          "finding": "The tracer makes the hamstrings primary movers (0.7) through hip extension, which is somewhat high for a deep squat where they act mainly as hip extensors with little length change. This follows from the muscle-action table, and no choice of actions or demands would change it without dropping the hip extension the squat needs.",
+          "suggested_correction": "No change required. Treat this as a tracer table limitation."
+        }
+      ],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgpgPhhuQebFSjY2FaYzL",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 12174.0,
+          "input_tokens": 8723.0,
+          "output_tokens": 1769.0
+        }
+      },
+      "summary": "The frames and instructions support a bilateral, closed-chain barbell back squat with the bar on the upper back. Knee extension and hip extension as primary actions match the ascent. The demands are placed where the load acts: scapular_retraction_stability for the bar shelf, and anti_flexion_spine, intra_abdominal_pressure, knee_joint_stability and postural_stabilization for the trunk and legs. Grip, wrist_stability and shoulder_position_hold are correctly omitted, so the forearm and hand muscles stay at zero. The tracer output is plausible: quadriceps and gluteus maximus are primary, adductor magnus is a synergist, and the erectors, abdominal wall, pelvic floor, scapular retractors and soleus are stabilizers. No biomechanically material claim is unsupported or contradictory."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "88ff287e58e4e7b024df0e8adc5331f8dd5f7c2fbe6e9122143777cffda76f4c",
+  "revision_id": "Barbell_Incline_Shoulder_Raise@88ff287e58e4",
+  "exercise_id": "exercise.barbell_incline_shoulder_raise.incline_bench",
+  "source_catalog_id": "catalog.free_exercise_db.Barbell_Incline_Shoulder_Raise",
+  "mapped_muscles": 78,
+  "promoted_at_unix": 1794105335.111402,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "266c4f05a75064972e24a12dc20e8a12146be899cdda2b0969d437cdf6779ab9",
+    "data/exercises/engagement_profiles.json": "d1e4e2af627fe0755576303ce07a7b3839b81a49e1facd38b1fd17fd55589556",
+    "data/exercises/catalog/candidates.json": "822ef36eda6334d3d67d02c5df82de0a7452a9fc17b26d62f7346ed739d240c6",
+    "data/exercises/sources/free_exercise_db_media.json": "f6a852088ce9c279d94b7817eb6e5d7fe5d0517e19b2540e6f02d8f21b29b917"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "d9130ff5a2d0bbd9531deebddbc650c307b5a60693278e1382d5c7b274f7be87",
+    "data/exercises/engagement_profiles.json": "21c9c43041d2290bf13e173c0172aff3e8f8f93194a6745e14f24bb7d0a03320",
+    "data/exercises/catalog/candidates.json": "b932d301fce0f547e71c61e1799e0b8059d857a4390756309b215ad6280627b7",
+    "data/exercises/sources/free_exercise_db_media.json": "55c3fb9bf0944c6e059edea6dfe047eb82116bba448317e030d822dc2b99f20a"
+  }
+}

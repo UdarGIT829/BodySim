@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "f214078f3bdc7974419a3a6e5442c5dbe7ade3d252666ef7f90eab0835d8892a",
+  "status": "accepted",
+  "updated_at_unix": 1794184932.44779,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794184920.96441,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "authoring_response.proposed_definition.laterality",
+          "finding": "Bilateral laterality with sides 'working' is a reasonable model for alternating arms, since both arms perform the same work across a set. A single-arm snapshot would differ, but this is a modelling convention and not an error.",
+          "suggested_correction": "No change needed. Optionally state in the assumptions that bilateral is used so both arms are credited equally across a set."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "postural_stabilization adds many low-coefficient lower-body and trunk stabilizers (glutes, quads, soleus, spinal extensors). This is acceptable for an unbraced standing exercise, but it dilutes the profile slightly with weak coefficients of about 0.1 to 0.3.",
+          "suggested_correction": "No change required. This is a catalog-level convention for standing exercises."
+        },
+        {
+          "field_path": "authoring_response.proposed_definition.movement_families",
+          "finding": "The elbow_flexion label is appropriate. The forearm supination is not a separate family and is already captured by the joint actions.",
+          "suggested_correction": "None."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrRdjyUnn1ms49ccAFNB",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 10160.0,
+          "output_tokens": 1208.0
+        }
+      },
+      "summary": "The definition matches the standing alternating dumbbell curl in the instructions and both frames. The upright torso, elbows kept beside the body, one dumbbell curled while the other hangs, and palms rotating from facing the thighs to facing forward all agree with the listed actions. Elbow flexion and forearm supination, both marked primary on the working side, correctly produce brachialis, biceps heads, brachioradialis and supinator as primary movers, with pronator teres and extensor carpi radialis longus as minor synergists. The shoulder_position_hold, grip, wrist_stability and postural_stabilization demands are placed where the load is held and give a plausible low-level stabilizer pattern. The tracer output shows no materially wrong muscle pattern."
+    }
+  }
+}

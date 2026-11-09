@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "b90c9685ff78f51d49f32132fca4cb2e8647489274f9840c0b4d0e61061e553f",
+  "revision_id": "Cuban_Press@b90c9685ff78",
+  "exercise_id": "exercise.cuban_press.standing_dumbbell",
+  "source_catalog_id": "catalog.free_exercise_db.Cuban_Press",
+  "mapped_muscles": 144,
+  "promoted_at_unix": 1794184388.215038,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "5dcf84b9c02ac9f95c23894c2b60487fc3c09f7496f8646c0573859241909a74",
+    "data/exercises/engagement_profiles.json": "d77ec6892c971d8da0ef4a97f84159bce160acfdc6828e010a23e1618c208143",
+    "data/exercises/catalog/candidates.json": "5f36a69842d6e2d69b191cdd10255d29e92883484514ff41196e8f4c58b4e91f",
+    "data/exercises/sources/free_exercise_db_media.json": "99c798fdbf880fc32c5a6b6a54e063ba382a9780dc1a6dcfdd7f22fbf8975a5b"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "882258dc1f2560018956cc42f175e022d35a6705f7e7c27796b973c888de5ffc",
+    "data/exercises/engagement_profiles.json": "d13070d5e6b7bee3dc8a14c4fc42199bf042b81b08ac0d673dd8967e68fa8b82",
+    "data/exercises/catalog/candidates.json": "a0ef1a6bf62f4b5a1efb6684f874301c91b403fe10a02f9a9e26d7b624b8d3d2",
+    "data/exercises/sources/free_exercise_db_media.json": "d67f6472b87a488fbc5ea2c728c41e1c98bedf673987a341deab9bc0ddb4589e"
+  }
+}

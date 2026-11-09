@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "4583476f964035d38136a46503d8fe7228db6cc20de6beb3feb0bb7dd67c30ee",
+  "revision_id": "Cable_One_Arm_Tricep_Extension@4583476f9640",
+  "exercise_id": "exercise.cable_one_arm_triceps_extension.standing_underhand",
+  "source_catalog_id": "catalog.free_exercise_db.Cable_One_Arm_Tricep_Extension",
+  "mapped_muscles": 77,
+  "promoted_at_unix": 1794183416.284874,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "ed13f16db433e01ba5c9113a63b384e70a4c96c3846d0983dd077111c20ab51d",
+    "data/exercises/engagement_profiles.json": "fa60903d224539629c9c84b6ef45b0a03a009d5800bd86d4b410a97b6a954519",
+    "data/exercises/catalog/candidates.json": "247189583dadcd528f1ad03160d51855bd275d1fdae4b7f899403a2e6d3649cc",
+    "data/exercises/sources/free_exercise_db_media.json": "b84e683d8b9d412667979af6d78cc4a10b87a3c8f446f332c461717dff0a1d1f"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "d21bc52da4824c6460395b70bcfdc745a15240e51d98d53f958eeb6e46bd4dd2",
+    "data/exercises/engagement_profiles.json": "c70bc3552d1ee3af329907312645d1089a87cf564a1bfaa1b16aed3ec35cc8cb",
+    "data/exercises/catalog/candidates.json": "e5ca37f5e1f4b317c712029378ecb6216cf0c9601d327f56705966a8541daf33",
+    "data/exercises/sources/free_exercise_db_media.json": "b94d5672c9fdaffa850e3d7bc6bd0c8051f383952cd237516104e74f434cc8f8"
+  }
+}

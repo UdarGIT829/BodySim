@@ -1,0 +1,106 @@
+{
+  "additional_context": "",
+  "authoring_response": {
+    "assumptions": [],
+    "classification": "ambiguous",
+    "classification_reasons": [
+      "The instructions describe only the right foot stepping behind with a knee pull and a left arm held up. A carioca normally alternates sides while travelling laterally, so it is unclear whether the exercise is right-only, left-only, alternating or bilateral. Laterality changes which limb joints count.",
+      "The text does not say whether the exercise is counted in repetitions or timed, so input_mode cannot be set.",
+      "The two frames show a high knee on one side and a foot behind the body, but not the crossing step or the hip rotation and abduction/adduction path between them. The mix of hip flexion, abduction/adduction and rotation, and ankle work, is not determined by the instructions.",
+      "The text says the knee goes straight up and down and the feet do not turn. This conflicts somewhat with the lateral crossover travel of a standard carioca, so the variant is unclear.",
+      "No enum family cleanly fits a low-amplitude agility step. The choice among hip_flexion, lunge and jump_and_throw would be a guess, and it depends on whether the drill involves a flight phase."
+    ],
+    "field_confidence": {
+      "input_mode": "low",
+      "kinetic_chain_type": "medium",
+      "laterality": "low",
+      "primary_joint_actions": "low",
+      "stabilization_demands": "low",
+      "variant": "low"
+    },
+    "proposed_definition": {
+      "aliases": [
+        "carioca_quick_step"
+      ],
+      "id": "exercise.carioca_quick_step.standard",
+      "input_mode": "repetitions",
+      "kinematic_profile": {
+        "kinetic_chain_type": "open_chain",
+        "primary_joint_actions": [],
+        "stabilization_demands": []
+      },
+      "laterality": "bilateral",
+      "movement_families": [],
+      "name": "Carioca Quick Step",
+      "variant": "standard"
+    },
+    "questions_requiring_context": [
+      "Is this a continuous alternating carioca (both legs stepping behind in turn, travelling sideways) or a single-side step-behind-and-knee-drive repeated on the right leg only?",
+      "Is the exercise prescribed in repetitions or in duration (time or distance)?",
+      "Is there a true crossover step with hip rotation while travelling laterally, or an in-place step with a straight vertical knee drive?",
+      "Is there a flight or hop phase, or is one foot always in contact with the ground?"
+    ]
+  },
+  "candidate_trace_report": {},
+  "catalog_id": "catalog.free_exercise_db.Carioca_Quick_Step",
+  "format_version": 1,
+  "provider_metadata": {
+    "effort": "high",
+    "input_contact_sheet": {
+      "api_image_inputs": 1,
+      "frame_count": 2,
+      "layout": "chronological_left_to_right",
+      "source_images": [
+        "Carioca_Quick_Step/0.jpg",
+        "Carioca_Quick_Step/1.jpg"
+      ]
+    },
+    "model": "claude-sonnet-5-5",
+    "provider": "anthropic",
+    "raw_authoring_response": {
+      "assumptions": [],
+      "classification": "ambiguous",
+      "classification_reasons": [
+        "The instructions describe only the right foot stepping behind with a knee pull and a left arm held up. A carioca normally alternates sides while travelling laterally, so it is unclear whether the exercise is right-only, left-only, alternating or bilateral. Laterality changes which limb joints count.",
+        "The text does not say whether the exercise is counted in repetitions or timed, so input_mode cannot be set.",
+        "The two frames show a high knee on one side and a foot behind the body, but not the crossing step or the hip rotation and abduction/adduction path between them. The mix of hip flexion, abduction/adduction and rotation, and ankle work, is not determined by the instructions.",
+        "The text says the knee goes straight up and down and the feet do not turn. This conflicts somewhat with the lateral crossover travel of a standard carioca, so the variant is unclear.",
+        "No enum family cleanly fits a low-amplitude agility step. The choice among hip_flexion, lunge and jump_and_throw would be a guess, and it depends on whether the drill involves a flight phase."
+      ],
+      "field_confidence": {
+        "input_mode": "low",
+        "kinetic_chain_type": "medium",
+        "laterality": "low",
+        "primary_joint_actions": "low",
+        "stabilization_demands": "low",
+        "variant": "low"
+      },
+      "proposed_definition": null,
+      "questions_requiring_context": [
+        "Is this a continuous alternating carioca (both legs stepping behind in turn, travelling sideways) or a single-side step-behind-and-knee-drive repeated on the right leg only?",
+        "Is the exercise prescribed in repetitions or in duration (time or distance)?",
+        "Is there a true crossover step with hip rotation while travelling laterally, or an in-place step with a straight vertical knee drive?",
+        "Is there a flight or hop phase, or is one foot always in contact with the ground?"
+      ]
+    },
+    "request_id": "",
+    "requested_model": "claude-sonnet-5-5",
+    "response_id": "msg_011CgrM547FDjqyTswJFrgC9",
+    "served_by_fallback": false,
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0.0,
+      "cache_read_input_tokens": 16554.0,
+      "input_tokens": 1685.0,
+      "output_tokens": 936.0
+    }
+  },
+  "saved_at_unix": 1794181339.16802,
+  "source_id": "Carioca_Quick_Step",
+  "source_snapshot_sha256": "d68a817484964095e6af0be2cdcbcc2c2504168d1d190c7d5c725ce52f3ae1f4",
+  "status": "authoring_draft",
+  "validation_errors": [
+    "proposed_definition: must be null unless classification is supported",
+    "classification: ambiguous proposals cannot advance to definition_candidate"
+  ]
+}

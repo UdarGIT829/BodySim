@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "c79cf1fc40612751665ae0b52edad39111623c4a8cddb6cbf4aa6937bc079997",
+  "revision_id": "Dumbbell_Floor_Press@c79cf1fc4061",
+  "exercise_id": "exercise.dumbbell_floor_press.bilateral_supine",
+  "source_catalog_id": "catalog.free_exercise_db.Dumbbell_Floor_Press",
+  "mapped_muscles": 82,
+  "promoted_at_unix": 1794184991.273641,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "9401936fed38509dce0922313089527422300e6197e01d80ca1d41d101c0f172",
+    "data/exercises/engagement_profiles.json": "007c9acc1c551f51022ad4867a57a1d977fe0dd4c63a932a25ed6e93be781cdb",
+    "data/exercises/catalog/candidates.json": "99711d70b3eeedaefda572b4ad778258bcf5a96150bff09d56ade16df9967899",
+    "data/exercises/sources/free_exercise_db_media.json": "c7622d1964ce93e7bf330dbcb72cdb3fb56d7ef58b729f6c575e2f10091789d4"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "f5e5bfda4c479dd085717f739d33aef61d83a66b89d8a678bf095317137f5a98",
+    "data/exercises/engagement_profiles.json": "6c64b8c25987150470cdf5372309f234f4b18274bbd15185857fba584710e58f",
+    "data/exercises/catalog/candidates.json": "d474a4a8157a57825740e5ef2f2f1280e29a622e4978bea41ec3f76bbff61edd",
+    "data/exercises/sources/free_exercise_db_media.json": "850af200afe7b41df747adeed8b484deadc4517f9cccc3a2e3b33c3bce04d1e3"
+  }
+}

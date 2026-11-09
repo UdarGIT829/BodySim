@@ -1,0 +1,59 @@
+{
+  "controlled_review_context": "",
+  "format_version": 1.0,
+  "revision_sha256": "4f92c41d4c842bf351dc65adb543727629866f95543ef5696e0e74f6bc23cf1e",
+  "status": "accepted",
+  "updated_at_unix": 1794179173.84295,
+  "votes": {
+    "human_owner": {
+      "auto_mode": true,
+      "blocking_findings": [],
+      "confidence": "high",
+      "decision": "accept",
+      "non_blocking_findings": [],
+      "recorded_at_unix": 1794179158.77773,
+      "summary": "Approved in advance by the owner through auto mode; the Claude reviewer decides."
+    },
+    "model_reviewer": {
+      "blocking_findings": [],
+      "confidence": "medium",
+      "decision": "accept",
+      "edits_resolve_all_blocking_findings": false,
+      "non_blocking_findings": [
+        {
+          "field_path": "proposed_definition.kinematic_profile.stabilization_demands",
+          "finding": "The scapular retractors and stabilizers (rhomboids, middle and lower trapezius, serratus anterior) are zero, although a heavy stone is hugged and pulled in. The final phase also holds the stone high on the chest with the shoulders partly flexed, and the anterior deltoid is zero. These are plausible but secondary contributions.",
+          "suggested_correction": "Consider adding scapular_stabilization and/or shoulder_position_hold in a future revision to credit the scapular and anterior deltoid holding work."
+        },
+        {
+          "field_path": "proposed_definition.kinematic_profile.primary_joint_actions",
+          "finding": "The lap phase involves sitting back and pulling the stone onto the thighs, which has some hip flexor and anti-extension demand. This is not represented and is minor next to the extension-dominant lift.",
+          "suggested_correction": "Optionally add anti_extension_hip if the lap phase is judged material."
+        },
+        {
+          "field_path": "proposed_definition.movement_families",
+          "finding": "The labels hip_hinge and squat are reasonable catalog labels. The explosive lift to a platform could also be described as olympic_lift-like, but the current labels are not plainly wrong.",
+          "suggested_correction": "No change required; the families are catalog labels only."
+        }
+      ],
+      "proposed_edits": [],
+      "provider_metadata": {
+        "effort": "high",
+        "model": "claude-sonnet-5-5",
+        "provider": "anthropic",
+        "request_id": "",
+        "requested_model": "claude-sonnet-5-5",
+        "response_id": "msg_011CgrJJyx18qtxUf5krRHbL",
+        "served_by_fallback": false,
+        "stop_reason": "end_turn",
+        "usage": {
+          "cache_creation_input_tokens": 0.0,
+          "cache_read_input_tokens": 18256.0,
+          "input_tokens": 12015.0,
+          "output_tokens": 1733.0
+        }
+      },
+      "summary": "The definition is supported by the instructions and both frames. The setup is a bilateral hip hinge with the stone between the feet, and the second frame shows a deep squat with the stone hugged against the abdomen and chest. Hip and knee extension are correctly primary, and the calves are correctly assist. The previous council's objection is resolved, because the arm hug and pull-in is now credited through assist actions at the elbow and shoulder. The spinal erectors are credited through anti_flexion_spine and intra_abdominal_pressure, and the hands through grip, as the guidance for rigid-trunk lifts and held loads directs. The traced pattern (glutes, hamstrings and quadriceps primary; erectors, abdominals and finger flexors as stabilizers; elbow flexors, lats and pectoralis as synergists) is plausible. The remaining gaps are minor refinements and not materially wrong."
+    }
+  }
+}

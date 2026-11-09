@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "promoter": "promotion_v1",
+  "revision_sha256": "2a29b7bcab3d895d924477fb065d9d56cd915f1a38cc05ef89028bd91eb4b5cd",
+  "revision_id": "Bench_Press_-_Powerlifting@2a29b7bcab3d",
+  "exercise_id": "exercise.barbell_bench_press.powerlifting_flat",
+  "source_catalog_id": "catalog.free_exercise_db.Bench_Press_-_Powerlifting",
+  "mapped_muscles": 78,
+  "promoted_at_unix": 1794182742.3698354,
+  "files_before_sha256": {
+    "data/exercises/exercises.json": "c39c8e8090ee9b36ac2f8287f5c831e09e1923b4466a4122de28625f716f5a50",
+    "data/exercises/engagement_profiles.json": "bdb97b7cda7bf83481c9ae66696fd520452c292c2e828c785b1d79cec96c5c98",
+    "data/exercises/catalog/candidates.json": "aabf1bb96e5c2a5a77f284368fc0d2cb519634d7b3860f6725a8483be08b85e4",
+    "data/exercises/sources/free_exercise_db_media.json": "4c6ac7008a2354527e7de0d42173473bb494eac2715d61c0a9926998bf22df95"
+  },
+  "files_after_sha256": {
+    "data/exercises/exercises.json": "127b6831935e7ec491bec9f650305676d6acea4268872cedf2f9c0ab39657ded",
+    "data/exercises/engagement_profiles.json": "55d3e5bb2939b67a94899a88e59d2632334e014da5173dfd373af7935f5c14c7",
+    "data/exercises/catalog/candidates.json": "e2d75b08afaa080553dbf8c019c57b3aa003e7ab29d944c91396a145bfe7a939",
+    "data/exercises/sources/free_exercise_db_media.json": "94eea660a29c411ad4b343bc064934eb743022f7e116c2d88b6cfee4c8902403"
+  }
+}
