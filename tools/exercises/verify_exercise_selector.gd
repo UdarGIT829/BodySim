@@ -83,6 +83,15 @@ func run_verification() -> void:
 	selector.image_modal.hide()
 	require(not selector.select_exercise("exercise.not_supported"), "Selector must reject unsupported IDs")
 
+	# The web build's compact profiles load to exactly the same data as the full file.
+	var compact_path := ProjectSettings.globalize_path("user://verify_compact_profiles.json")
+	var output: Array = []
+	var code := OS.execute("python3", PackedStringArray([ProjectSettings.globalize_path("res://tools/web/compact_profiles.py"), "--output", compact_path]), output, true)
+	require(code == 0, "compact_profiles.py failed: %s" % " ".join(output))
+	var compact_profiles := ProfileStore.load_profiles(compact_path)
+	require(JSON.stringify(compact_profiles) == JSON.stringify(selector.profiles_by_exercise), "compact profiles must expand to the full profiles")
+	DirAccess.remove_absolute(compact_path)
+
 	if failures.is_empty():
 		print("Exercise selector passed: %s" % expected_summary)
 		quit(0)

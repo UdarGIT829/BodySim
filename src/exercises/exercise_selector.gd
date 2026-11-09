@@ -101,16 +101,10 @@ func configure_interface() -> void:
 
 
 func load_engagement_profiles(path: String = DEFAULT_PROFILES_PATH) -> bool:
-	profiles_by_exercise.clear()
-	var file := FileAccess.open(path, FileAccess.READ)
-	if file == null:
-		push_error("ExerciseSelector: Unable to open engagement profiles %s" % path)
+	profiles_by_exercise = ProfileStore.load_profiles(path)   # full file, or the web build's compact copy
+	if profiles_by_exercise.is_empty():
+		push_error("ExerciseSelector: Unable to load engagement profiles %s" % path)
 		return false
-	var parsed = JSON.parse_string(file.get_as_text())
-	if not parsed is Dictionary or not parsed.has("profiles"):
-		push_error("ExerciseSelector: Invalid engagement profile data")
-		return false
-	profiles_by_exercise = parsed["profiles"]
 	return true
 
 

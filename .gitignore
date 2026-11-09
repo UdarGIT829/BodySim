@@ -20,3 +20,5 @@ __pycache__/
 .pytest_cache/
 /.agents/
 /.codex/
+# Web-build artifact (tools/web/compact_profiles.py, written on deploy)
+data/exercises/engagement_profiles.compact.json

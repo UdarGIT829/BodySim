@@ -48,6 +48,11 @@ SOURCE_SHA=$(git rev-parse --short HEAD)
 "$GODOT" --version | grep -q '^4\.7\.' || fail "need Godot 4.7.x, found $("$GODOT" --version)"
 
 # ── 2. Build ────────────────────────────────────────────────────────────────
+# The web build ships a compact copy of the engagement profiles (the full
+# file is excluded by the Web preset); ProfileStore reads either.
+say "Compacting the engagement profiles for the web build"
+python3 -I tools/web/compact_profiles.py || fail "could not write the compact engagement profiles"
+
 say "Exporting the Web preset to demo/"
 rm -rf "$OUT"; mkdir -p "$DEMO"
 "$GODOT" --headless --path . --export-release "Web" "$DEMO/index.html" > build/web-export.log 2>&1 \
@@ -86,8 +91,14 @@ for page in ("index.html", "demo/index.html"):
 for marker in (b"kinematic_definition_studio", b"exercise_review_council", b"claude_provider", b"run_claude"):
     if marker in pck:
         problems.append(f"authoring/review tool found in index.pck ({marker.decode()})")
+pck_mb = len(pck) / 1048576
+if b"engagement_profiles.compact.json" not in pck:
+    problems.append("index.pck lacks the compact engagement profiles")
+if pck_mb > 90:
+    problems.append(f"index.pck is {pck_mb:.0f} MB, close to GitHub's 100 MB file limit")
 if problems:
     print("\n".join(problems)); sys.exit(1)
+print(f"index.pck: {pck_mb:.1f} MB")
 print("ok: no API keys, no authoring tools, all files under 100 MB")
 PY
 

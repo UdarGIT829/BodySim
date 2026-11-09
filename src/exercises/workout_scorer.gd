@@ -36,11 +36,7 @@ func load_data(
 		return false
 
 	# 2. Load profiles
-	var prof_file := FileAccess.open(profiles_path, FileAccess.READ)
-	if prof_file != null:
-		var prof_parsed = JSON.parse_string(prof_file.get_as_text())
-		if prof_parsed is Dictionary and prof_parsed.has("profiles"):
-			engagement_profiles = prof_parsed["profiles"]
+	engagement_profiles = ProfileStore.load_profiles(profiles_path)   # full file, or the web build's compact copy
 
 	# 3. Load OpenSim anchors
 	var opensim_file := FileAccess.open(opensim_path, FileAccess.READ)
